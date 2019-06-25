@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>赤赤的象牙塔</title>
+    <link>/zh/</link>
+    <description>Recent content on 赤赤的象牙塔</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 24 Jun 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/zh/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>建站记</title>
+      <link>/zh/18284/</link>
+      <pubDate>Sat, 22 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/zh/18284/</guid>
+      <description>很早就想建一个自己的博客了，每每看到别人的好看的博客就心里痒痒. 高中及以前写过一些回忆录都发表在 QQ 空间上，高中以来有意识地进行一些</description>
+    </item>
+    
+    <item>
+      <title>我的电子生活法则</title>
+      <link>/zh/23536/</link>
+      <pubDate>Mon, 24 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/zh/23536/</guid>
+      <description>我一向认为明文的法则是能让人的生活有条不紊的，它也让人不会迷失在选择和犹豫中，我想这是把复杂问题变简单的办法. 我无数次在幻想中想象</description>
+    </item>
+    
+    <item>
+      <title>一些不错的网站</title>
+      <link>/zh/71828/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/zh/71828/</guid>
+      <description>收集整理值得一看的网站，并给出链接.</description>
+    </item>
+    
+    <item>
+      <title>关于本站</title>
+      <link>/zh/about/site/</link>
+      <pubDate>Fri, 21 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/zh/about/site/</guid>
+      <description>标签 分类 等. 本站使用 Hugo 生成，部署在 GitHub Pages，有关建站的细节请参考这里.</description>
+    </item>
+    
+    <item>
+      <title>表示论学习笔记</title>
+      <link>/zh/59045/</link>
+      <pubDate>Thu, 20 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/zh/59045/</guid>
+      <description>这里是表示论的笔记，是我2019年春季学期旁听研究生的课的课堂笔记，有些地方还没有整理完，以后有时间慢慢整理.</description>
+    </item>
+    
+    <item>
+      <title>关于我</title>
+      <link>/zh/about/me/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/zh/about/me/</guid>
+      <description>栏目该有还是要有，但关于我——无可奉告.</description>
+    </item>
+    
+  </channel>
+</rss>
