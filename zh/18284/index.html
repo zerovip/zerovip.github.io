@@ -116,7 +116,7 @@
         建站记
     </div>
     <div class="title_des">
-        2019-06-22 - 4341 字
+        2019-06-22 - 4611 字
     </div>
 </div>
 
@@ -139,11 +139,11 @@
 
 <h1 id="主题的制作">主题的制作</h1>
 
-<p>由于 Hugo 没有默认的主题，所以在安装的第三步需要到网络上寻找一个主题使用. 实际上，我找了很久很久，都没有找到称心如意的主题. 根据我对博客结构的设计，它应该像现在呈现的这样有多级 section 并保持按分级陈列在导航栏中固定住，而 categories、tags、series 的分类方法应当隐藏于某一个页面中. 而网络上大多数可以用作博客的主题的导航栏并没有按 section 进行陈列，即便有也只有一级 section，不能满足我的需要；且外观上鲜有我喜欢的样式——唯一的例外来自<a href="https://themes.gohugo.io/cupper-hugo-theme/">名为 cupper 的主题</a>，但以它为基础进行修改并不可取，尤其是我对 Hugo 还什么都不懂——在这样的情况下学习并去读别人的代码（我开始真的是这样做的）令人烦躁. 于是决定学习 Hugo，完完全全自己动手写一个我想要的主题（不过基本的外观还是借鉴了 cupper 这个主题而并非原创，致谢！）.</p>
+<p>由于 Hugo 没有默认的主题，所以在安装的第三步需要到<a href="https://themes.hugo.io">网络</a>上寻找一个主题使用. 实际上，我找了很久很久，都没有找到称心如意的主题. 根据我对博客结构的设计，它应该像现在呈现的这样有多级 section 并保持按分级陈列在导航栏中固定住，而 categories、tags、series 的分类方法应当隐藏于某一个页面中. 而网络上大多数可以用作博客的主题的导航栏并没有按 section 进行陈列，即便有也只有一级 section，不能满足我的需要；且外观上鲜有我喜欢的样式——唯一的例外来自<a href="https://themes.gohugo.io/cupper-hugo-theme/">名为 cupper 的主题</a>，但以它为基础进行修改并不可取，尤其是我对 Hugo 还什么都不懂——在这样的情况下学习并去读别人的代码（我开始真的是这样做的）令人烦躁. 于是决定学习 Hugo，完完全全自己动手写一个我想要的主题（不过基本的外观还是借鉴了 cupper 这个主题而并非原创，致谢！）.</p>
 
 <h2 id="学习-hugo-是如何运作的">学习 Hugo 是如何运作的</h2>
 
-<p>这里我主要参考了 <a href="https://www.zeolearn.com/magazine/develop-a-theme-for-hugo">Yash Agarwal, Develop a Theme for Hugo</a>，这篇文章对内容管理同样做了非常细致的说明和区分. 可能是因为我会 Django，而 Hugo 处理网页的方式和 Django 类似<small>（不同之处在于，由于 Python 是解释型语言，Django 会在客户端访问时对客户端访问的*一个*网页进行渲染并发回客户端；而 GoLang 是编译型的，只好编译成 Hugo 供人们在每写完一篇文章后对整个网站的*所有*网页重新渲染好，成为静态网页后进行发布）</small>，我读起来非常顺利，也觉得非常简单. 但无论如何，这篇文章非常友好，通读下来就能对 Hugo 的运作方式有一个最基本的了解（比如有主页 (index.html)、列表页 (list.html) 和文章页 (single.html) 三个最基本的页面是分别做什么的，它们分别在什么地方，怎么在一个固定的 HTML 模板中写入不同的内容，逻辑运算以什么方式写进去，静态文件比如 CSS、JS 以及图片等可提供下载的文件放在哪里以及如何引用，等等）. 我按照它的步骤完全进行了一遍，这也就标志着我制作我自己的主题正式开始了.</p>
+<p>这里我主要参考了 <a href="https://www.zeolearn.com/magazine/develop-a-theme-for-hugo">Yash Agarwal, Develop a Theme for Hugo</a>，这篇文章对内容管理同样做了非常细致的说明和区分. 可能是因为我会 Django，而 Hugo 处理网页的方式和 Django 类似<small>（不同之处在于，由于 Python 是解释型语言，Django 会在客户端访问时对客户端访问的</small><strong>一个</strong><small>网页进行渲染并发回客户端；而 GoLang 是编译型的，只好编译成 Hugo 供人们在每写完一篇文章后对整个网站的</small><strong>所有</strong><small>网页重新渲染好，成为静态网页后进行发布）</small>，我读起来非常顺利，也觉得非常简单. 但无论如何，这篇文章非常友好，通读下来就能对 Hugo 的运作方式有一个最基本的了解（比如有主页 (index.html)、列表页 (list.html) 和文章页 (single.html) 三个最基本的页面是分别做什么的，它们分别在什么地方，怎么在一个固定的 HTML 模板中写入不同的内容，逻辑运算以什么方式写进去，静态文件比如 CSS、JS 以及图片等可提供下载的文件放在哪里以及如何引用，等等）. 我按照它的步骤完全进行了一遍，这也就标志着我制作我自己的主题正式开始了.</p>
 
 <p>具体的过程也不多说，只要配合着官方文档基本就能搞定. 上面我参考的那篇文章中在第 3、4 小节给的调试方法：删去<code>/public</code>文件夹，使用<code>$ hugo server --watch --verbose</code>命令，是非常有用的.</p>
 
@@ -170,9 +170,17 @@
 
 <h2 id="section-的陈列">section 的陈列</h2>
 
-<p>这里选择的是使用 Menu Entry 来进行. 如果只有一个 section 的话，官方提供的<a href="https://gohugo.io/templates/menu-templates/#section-menu-for-lazy-bloggers">懒人博客方法</a>是简单有效的. 不过它对两级以上的 section 只能按第一级 section 建 menu，在它的基础上手动添加低级 section 的 menu 在我看来不如不用这个懒人方法，全部手动创建 menu.</p>
+<p>这里选择的是使用 <a href="https://gohugo.io/content-management/menus/">Menu Entry</a> 来进行. 如果只有一级 section 的话，官方提供的<a href="https://gohugo.io/templates/menu-templates/#section-menu-for-lazy-bloggers">懒人博客方法</a>是简单有效的. 不过它对两级以上的 section 只能按第一级 section 建 menu：</p>
 
-<p>正如官方文档所说，创建 menu 有两种方法：在<a href="https://gohugo.io/content-management/menus/#add-non-content-entries-to-a-menu">配置文件里写</a>或在多个 _index.md 的<a href="https://gohugo.io/content-management/menus/#add-content-to-menus"> front matter 里写</a>. 我没在网络上找到合适的例子，所以在这里摸索了一段时间，我也是在这个时候才学习了前面小节中提到的三种配置文件的语法. 这里给出我个人摸索出的成果——多语言版本的 YAML 配置文件的格式：</p>
+<blockquote>
+<p>&hellip;this enables you to creat a <em>top-level</em> menu&hellip;</p>
+</blockquote>
+
+<p>且它不能默认支持多语言. 这样看来，在它的基础上手动补充一些信息比如手动添加低级 section 的 menu 以及手动添加其他语言的 menu 在我看来就不如不用这个懒人方法，所有 menu 全部手动创建.</p>
+
+<p>正如官方文档所说，创建 menu 有两种方法：在<a href="https://gohugo.io/content-management/menus/#add-non-content-entries-to-a-menu">配置文件里写</a>或在多个 _index.md 的<a href="https://gohugo.io/content-management/menus/#add-content-to-menus"> front matter 里写</a>. 我没在网络上找到合适的例子，所以在这里摸索了一段时间，我也是在这个时候才学习了前面小节中提到的三种配置文件的语法. 这里给出我个人摸索出的成果——多语言版本的 YAML 格式配置文件的创建多级别 section 的 Menu Entry 的代码：</p>
+
+<p>（在这个问题上 gohugoio 的 hugo 官方项目的 <a href="https://github.com/gohugoio/hugo/issues/465">issue#465</a> 下的讨论尤其是 <a href="https://github.com/gohugoio/hugo/issues/465#issuecomment-121677318">vjeantet 的评论</a>中的例子给了我非常多的启发，这个例子因为部署在 GitHub 上而在四年后的今天依然是可以查看的，表示感谢！而这个特性直至四年后的今天依然没有被官方支持，表示谴责！）</p>
 
 <p>目录结构：</p>
 
@@ -189,7 +197,7 @@ content/
 '   '-- _index.en.md
 </code></pre>
 
-<p>在配置文件里写：</p>
+<p>方法一——在配置文件里写：</p>
 
 <pre><code># config.yaml
 defaultContentLanguage: zh # 默认语言是中文
@@ -238,7 +246,7 @@ languages:
           weight: 1
 </code></pre>
 
-<p>在 front matter 里写：</p>
+<p>方法二——在 front matter 里写：</p>
 
 <pre><code># config.yaml
 defaultContentLanguage: zh # 默认语言是中文
@@ -298,7 +306,7 @@ menu:
 <p>This will be non-nil if the menu entry is set via a page’s front-matter and not via the site config.</p>
 </blockquote>
 
-<p>虽然也并不知道它为什么用“non-nil”这样的措辞，就好像得到空集才是官方期望的一样. 但不管怎样，我又把 Menu Entry 的配置全部换成了在各个 _index.md 中写，倒是也不需要写明语言写明 url 了.</p>
+<p>虽然也并不知道它为什么用“non-nil”这样的措辞，就好像得到空集才是官方期望的一样. 但不管怎样，我又把 Menu Entry 的配置全部换成了在各个 _index.md 中写，倒是也不需要写明语言和写明 url 了.</p>
 
 <h2 id="数学写作的支持">数学写作的支持</h2>
 
@@ -317,17 +325,17 @@ math display mode codes
 \]
 </code></pre>
 
-<p>这也显而易见不能正确渲染——合着这一步操作唯一能做到的就是正确渲染 <code>$math inline mode codes$</code> 而不需要加反引号 <code>`$math code$`</code>，而且还不能前一个美元符后面和后一个美元符前面有空格（当然大多数数学家写 LaTex 都是这样做的），还不包括一些在导言区引入的别的包里的数学符号（比如 <code>extarrows</code> 里的 <code>$\xlongequal$</code>）. 而且那种比如我用 <code>\include{other_section}</code> 连接的多个 LaTex 文件也不容易逐一复制进去. 所以这个方案对我来说聊胜于无. 尽管如此，已经配置好的部分我也没有全部删除，如果写一些只有寥寥几个简单的数学公式的小文章兴许还能用得上.</p>
+<p>这也显而易见不能正确渲染——合着这一步操作唯一能做到的就是正确渲染 <code>$math inline mode codes$</code> 而不需要加反引号 <code>`$math code$`</code>，而且还不能前一个美元符后面和后一个美元符前面有空格（当然大多数数学家写 LaTex 就是这样做的），这还没包括一些在导言区引入的别的包里的数学符号（比如 <code>extarrows</code> 包里的 <code>$\xlongequal$</code> 就无法被渲染）. 而且那种比如我用 <code>\include{other_section}</code> 连接的多个 LaTex 文件也不容易逐一复制进去. 所以这个方案对我来说聊胜于无. 尽管如此，已经配置好的部分我也没有删除，如果写一些只有寥寥几个简单数学公式的小文章兴许还能用得上.</p>
 
 <h3 id="为什么不试试原生的-pandoc-呢">为什么不试试原生的 Pandoc 呢？</h3>
 
 <p>直接用 Pandoc 转 LaTex 呢？这样 <code>\include{other_section}</code> 连接的多个 LaTex 文件的问题也不用操心了.</p>
 
-<p>我先尝试了 LaTex 转 HTML，由于这样一个单独的网页也没有配 CSS 不好放进这个博客已有的模板中，我又尝试了 LaTex 转 Markdown，再加几行 front matter 放进 Hugo 的文件夹让 Hugo 的 blackfriday 渲染，这次的结果好看多了，但问题依然存在——</p>
+<p>我先尝试了 LaTex 转 HTML，由于这样一个单独的网页也没有配 CSS 不好放进这个博客已有的模板中，我又转而尝试了 LaTex 转 Markdown，再加几行 front matter 放进 Hugo 的文件夹让 Hugo 的 blackfriday 渲染. 这次的结果好看多了，但问题依然存在——</p>
 
 <p>用 Pandoc 转换再加几行 front matter 不是什么大不了的事，写一个脚本就能分分钟搞定，关键的问题还在数学：很多导言区的包没有支持（比如画交换图的包 <code>tikz-cd</code> ）、导言区定义的环境生成出来不好看、导言区自己定义的盒子显示不出来，很多数学符号如上一小节提到的 <code>$\xlongequal$</code> 还是不支持等等.</p>
 
-<p>到这里我便知道，世界上只有一个 LaTex，让 Pandoc 完美支持 LaTex 的所有功能简直是妄想，顶多是人们最常用的那些标准的格式. 更何况本来 Markdown 和 HTML 就没有像 LaTex 那样被设计，它们也不应该承担科学排版的责任. 这样一个“产品哲学”的问题想清楚以后，我便知道我该如何设计我的博客让它满足我心目中理想的样子.</p>
+<p>到这里我便知道，世界上只有一个 LaTex，让 Pandoc 完美支持 LaTex 的所有功能简直是妄想，顶多是能顺利搞定人们最常用的那些标准的格式. 更何况本来 Markdown 和 HTML 就没有像 LaTex 那样被设计，它们没有科学排版的初衷也不应该承担科学排版的责任. 这样一个“产品哲学”的问题想清楚以后，我便知道我该如何设计我的博客让它满足我心目中理想的样子.</p>
 
 <h3 id="硬上-pdf-呗">硬上 PDF 呗</h3>
 
@@ -350,11 +358,15 @@ file_path: name.pdf
 &lt;/div&gt;
 </code></pre>
 
+<h2 id="调整样式">调整样式</h2>
+
+<p>按照心中预计的样子编写 CSS 文件，如果需要的话也写一些 JS. 就像 HTML 语言一样，关于它们的使用方法可以在任意相关的网站上找到，不是建立本站的难点，也不会成为这篇文章的重点.</p>
+
 <h1 id="部署到-github-pages-上">部署到 GitHub Pages 上</h1>
 
 <p>按照<a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/">官方文档</a>进行部署，因为是个人博客，我用的是<a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/#github-user-or-organization-pages">第一种 User/Organization Pages 类型</a>. 操作也都极为简单，不再赘述. 如果遇到已经部署好了却打不开的情况可是尝试重新 push 一下.</p>
 
-<p>是为记.</p>
+<h1 id="是为记">是为记.</h1>
 
 <h1 id="todo-清单">TODO 清单</h1>
 
@@ -364,6 +376,7 @@ file_path: name.pdf
 <li>RSS 支持</li>
 <li>文章间的跳转</li>
 <li>文章的目录安置</li>
+<li>黑暗主题</li>
 </ol>
 
     </div>

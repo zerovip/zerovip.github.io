@@ -275,6 +275,7 @@ pre{
   padding-right: 0.3rem;
   padding-top: 0.3rem;
   padding-bottom: 0.3rem;
+  overflow-x: auto;
 }
 pre code{
   font-size: 1rem;
