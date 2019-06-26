@@ -116,7 +116,7 @@
         建站记
     </div>
     <div class="title_des">
-        2019-06-22 - 4611 字
+        2019-06-22 - 4604 字
     </div>
 </div>
 
@@ -231,8 +231,8 @@ languages:
     weight: 2
     menu:
       main:
-        - identifier: s1
-          url: /en/section1/
+        - url: /en/section1/
+          identifier: s1
           name: SECTION I
           weight: 1
         - url: /en/section2/
@@ -249,7 +249,7 @@ languages:
 <p>方法二——在 front matter 里写：</p>
 
 <pre><code># config.yaml
-defaultContentLanguage: zh # 默认语言是中文
+defaultContentLanguage: zh
 defaultContentLanguageInSubdir: true
 languages:
   zh:
@@ -268,7 +268,7 @@ languages:
 ---
 menu:
   main:
-# 不用写 url 了
+    # 不用写 url 了
     identifier: s1
     name: 第一部分
     weight: 1
@@ -280,7 +280,7 @@ menu:
 ---
 menu:
   main:
-# 不用注明语言
+    # 不用写明语言了
     identifier: s1
     name: SECTION I
     weight: 1
@@ -314,28 +314,28 @@ menu:
 
 <p>希望浏览器能支持渲染数学公式，我这里选择了 <a href="https://www.mathjax.org/">MathJax</a>. 按照其官方的文档，在模板中添加一行代码即可完成.</p>
 
-<p>我同时又希望能无缝接轨 LaTex 文件，这样我既可以自己本地编译 PDF 格式的文档，又可以让它以同样漂亮的格式显示在网页上. 关于 Markdown 的支持，这里值得参考的文章是<a href="https://yihui.name/cn/2017/04/mathjax-markdown/">谢益辉, MathJax 与 Markdown 的究极融合</a>. 不过由于数学环境在 Markdown 中不得不以代码块 <code>`$math code$`</code> 的样式用反引号将它包裹起来，而我需要的是把 LaTex 代码直接拿过来就能用，不需要再进行额外的更改，因此继续寻找更好的工具.</p>
+<p>我同时又希望能无缝接轨 LaTeX 文件，这样我既可以自己本地编译 PDF 格式的文档，又可以让它以同样漂亮的格式显示在网页上. 关于 Markdown 的支持，这里值得参考的文章是<a href="https://yihui.name/cn/2017/04/mathjax-markdown/">谢益辉, MathJax 与 Markdown 的究极融合</a>. 不过由于数学环境在 Markdown 中不得不以代码块 <code>`$math code$`</code> 的样式用反引号将它包裹起来，而我需要的是把 LaTeX 代码直接拿过来就能用，不需要再进行额外的更改，因此继续寻找更好的工具.</p>
 
 <h3 id="配合-pandoc-尝试-markdown">配合 Pandoc 尝试 Markdown</h3>
 
-<p>听闻 <a href="https://pandoc.org/">Pandoc</a> 是一个强大的工具，而 Hugo 是<a href="https://gohugo.io/content-management/formats/#additional-formats-through-external-helpers">支持</a>它的，于是进行尝试：安装 Pandoc、在 front matter 中写上 <code>markup: pandoc</code> 或 <code>markup: pdc</code> （YAML 格式）、把我已经写好的 LaTex 代码拷贝进来、渲染网页，结果极其糟糕. LaTex 代码前面的导言区完全被当成了注释不起任何作用，这就意味着整个 LaTex 完全不能用. 另外，我行间公式的书写习惯为</p>
+<p>听闻 <a href="https://pandoc.org/">Pandoc</a> 是一个强大的工具，而 Hugo 是<a href="https://gohugo.io/content-management/formats/#additional-formats-through-external-helpers">支持</a>它的，于是进行尝试：安装 Pandoc、在 front matter 中写上 <code>markup: pandoc</code> 或 <code>markup: pdc</code> （YAML 格式）、把我已经写好的 LaTeX 代码拷贝进来、渲染网页，结果极其糟糕. LaTeX 代码前面的导言区完全被当成了注释不起任何作用，这就意味着整个 LaTeX 完全不能用. 另外，我行间公式的书写习惯为</p>
 
 <pre><code>\[
 math display mode codes
 \]
 </code></pre>
 
-<p>这也显而易见不能正确渲染——合着这一步操作唯一能做到的就是正确渲染 <code>$math inline mode codes$</code> 而不需要加反引号 <code>`$math code$`</code>，而且还不能前一个美元符后面和后一个美元符前面有空格（当然大多数数学家写 LaTex 就是这样做的），这还没包括一些在导言区引入的别的包里的数学符号（比如 <code>extarrows</code> 包里的 <code>$\xlongequal$</code> 就无法被渲染）. 而且那种比如我用 <code>\include{other_section}</code> 连接的多个 LaTex 文件也不容易逐一复制进去. 所以这个方案对我来说聊胜于无. 尽管如此，已经配置好的部分我也没有删除，如果写一些只有寥寥几个简单数学公式的小文章兴许还能用得上.</p>
+<p>这也显而易见不能正确渲染——合着这一步操作唯一能做到的就是正确渲染 <code>$math inline mode codes$</code> 而不需要加反引号 <code>`$math code$`</code>，而且还不能前一个美元符后面和后一个美元符前面有空格（当然大多数数学家写 LaTeX 就是这样做的），这还没包括一些在导言区引入的别的包里的数学符号（比如 <code>extarrows</code> 包里的 <code>$\xlongequal$</code> 就无法被渲染）. 而且那种比如我用 <code>\include{other_section}</code> 连接的多个 LaTeX 文件也不容易逐一复制进去. 所以这个方案对我来说聊胜于无. 尽管如此，已经配置好的部分我也没有删除，如果写一些只有寥寥几个简单数学公式的小文章兴许还能用得上.</p>
 
 <h3 id="为什么不试试原生的-pandoc-呢">为什么不试试原生的 Pandoc 呢？</h3>
 
-<p>直接用 Pandoc 转 LaTex 呢？这样 <code>\include{other_section}</code> 连接的多个 LaTex 文件的问题也不用操心了.</p>
+<p>直接用 Pandoc 转 LaTeX 呢？这样 <code>\include{other_section}</code> 连接的多个 LaTeX 文件的问题也不用操心了.</p>
 
-<p>我先尝试了 LaTex 转 HTML，由于这样一个单独的网页也没有配 CSS 不好放进这个博客已有的模板中，我又转而尝试了 LaTex 转 Markdown，再加几行 front matter 放进 Hugo 的文件夹让 Hugo 的 blackfriday 渲染. 这次的结果好看多了，但问题依然存在——</p>
+<p>我先尝试了 LaTeX 转 HTML，由于这样一个单独的网页也没有配 CSS 不好放进这个博客已有的模板中，我又转而尝试了 LaTeX 转 Markdown，再加几行 front matter 放进 Hugo 的文件夹让 Hugo 的 blackfriday 渲染. 这次的结果好看多了，但问题依然存在——</p>
 
 <p>用 Pandoc 转换再加几行 front matter 不是什么大不了的事，写一个脚本就能分分钟搞定，关键的问题还在数学：很多导言区的包没有支持（比如画交换图的包 <code>tikz-cd</code> ）、导言区定义的环境生成出来不好看、导言区自己定义的盒子显示不出来，很多数学符号如上一小节提到的 <code>$\xlongequal$</code> 还是不支持等等.</p>
 
-<p>到这里我便知道，世界上只有一个 LaTex，让 Pandoc 完美支持 LaTex 的所有功能简直是妄想，顶多是能顺利搞定人们最常用的那些标准的格式. 更何况本来 Markdown 和 HTML 就没有像 LaTex 那样被设计，它们没有科学排版的初衷也不应该承担科学排版的责任. 这样一个“产品哲学”的问题想清楚以后，我便知道我该如何设计我的博客让它满足我心目中理想的样子.</p>
+<p>到这里我便知道，世界上只有一个 LaTeX，让 Pandoc 完美支持 LaTeX 的所有功能简直是妄想，顶多是能顺利搞定人们最常用的那些标准的格式. 更何况本来 Markdown 和 HTML 就没有像 LaTeX 那样被设计，它们没有科学排版的初衷也不应该承担科学排版的责任. 这样一个“产品哲学”的问题想清楚以后，我便知道我该如何设计我的博客让它满足我心目中理想的样子.</p>
 
 <h3 id="硬上-pdf-呗">硬上 PDF 呗</h3>
 
