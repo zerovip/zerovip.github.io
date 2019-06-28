@@ -111,19 +111,99 @@
 
 <div class='right_part'>
     
-<div class="page_title_part">
-    <div class="page_title">
-        建站记
-    </div>
-    <div class="title_des">
-        2019-06-22 - 4618 字
+    <div class="page_title_part">
+        <div class="page_title">
+            建站记
+        </div>
+        <div class="title_des">
+            2019-06-22 - 4696 字
+        </div>
+        <style>
+.toc_content ul {
+  counter-reset: section;  
+  list-style-type: none;
+  margin: 0 1rem;
+}
+.toc_content li::before {
+  counter-increment: section;
+  content: counters(section,".") " ";
+}
+.toc_part {
+  overflow-y: auto;
+  position: fixed;
+  z-index: 1;
+  right: 0;
+}
+.toc_title {
+  position: relative;
+  background-color: #6AA84F;
+  color: white;
+  padding: 1rem;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+}
+.toc_content {
+  overflow-y: scroll;
+  max-height: 30rem;
+  right: 0;
+  display: none;
+  position: relative;
+  background-color: #99CC66;
+  border-style: solid;
+  border-width: 0.3rem;
+  border-color: #66CC66;
+}
+.toc_content a {
+  color: black;
+  font-size: 1.1rem;
+  text-decoration: none;
+}
+.toc_content a:hover {
+  background-color: #CCFFCC
+}
+.toc_part:hover .toc_content {
+  display: block;
+}
+</style>
+
+<div class="toc_part">
+    <button class="toc_title">目录</button>
+    <div class="toc_content">
+        <nav id="TableOfContents">
+<ul>
+<li><a href="#构想">构想</a></li>
+<li><a href="#初期的安装与结构规划">初期的安装与结构规划</a></li>
+<li><a href="#主题的制作">主题的制作</a>
+<ul>
+<li><a href="#学习-hugo-是如何运作的">学习 Hugo 是如何运作的</a></li>
+<li><a href="#toml-yaml和json的学习">TOML、YAML和JSON的学习</a></li>
+<li><a href="#hugo-的细节学习">Hugo 的细节学习</a></li>
+<li><a href="#section-的陈列">section 的陈列</a></li>
+<li><a href="#数学写作的支持">数学写作的支持</a>
+<ul>
+<li><a href="#mathjax-的布置与-markdown-数学支持的了解">MathJax 的布置与 Markdown 数学支持的了解</a></li>
+<li><a href="#配合-pandoc-尝试-markdown">配合 Pandoc 尝试 Markdown</a></li>
+<li><a href="#为什么不试试原生的-pandoc-呢">为什么不试试原生的 Pandoc 呢？</a></li>
+<li><a href="#硬上-pdf-呗">硬上 PDF 呗</a></li>
+</ul></li>
+<li><a href="#调整样式">调整样式</a></li>
+<li><a href="#评论系统的支持">评论系统的支持</a></li>
+</ul></li>
+<li><a href="#部署到-github-pages-上">部署到 GitHub Pages 上</a></li>
+<li><a href="#是为记">是为记.</a></li>
+<li><a href="#todo-清单">TODO 清单</a></li>
+</ul>
+</nav>
     </div>
 </div>
 
+    </div>
+
     
-<div class="right_main">
-    <div class="article">
-        
+    <div class="right_main">
+        <div class="article">
+            
 
 <p>很早就想建一个自己的博客了，每每看到<a href="../../zh/71828/">别人的好看的博客</a>就心里痒痒. 高中及以前写过一些回忆录都发表在 QQ 空间上，高中以来有意识地进行一些写作，觉得不错的都发表在新浪博客上，稍短的就写成长微博. 但有时想写一些专业性（数学）的东西，新浪博客的富文本编辑器就不够用了，而微博由于国内的审查机制不明确不规范也决定放弃，并决定认真梳理我的<a href="../../zh/23536/">网络生活空间</a>. 再加上有一些亲身实践过的技术性的步骤想做个记录，于是着手进行建博客的工作.</p>
 
@@ -362,6 +442,10 @@ file_path: name.pdf
 
 <p>按照心中预计的样子编写 CSS 文件，如果需要的话也写一些 JS. 就像 HTML 语言一样，关于它们的使用方法可以在任意相关的网站上找到，不是建立本站的难点，也不会成为这篇文章的重点.</p>
 
+<h2 id="评论系统的支持">评论系统的支持</h2>
+
+<p>在这里我使用了以 GitHub issue 为工具的 <a href="https://utteranc.ce">utterances</a> 来生成评论，原理非常简单，配置也非常容易，按照其官网的说明简单操作即可. 本站的所有评论存储在<a href="https://github.com/zerovip/bcsu/issues">这里</a>.</p>
+
 <h1 id="部署到-github-pages-上">部署到 GitHub Pages 上</h1>
 
 <p>按照<a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/">官方文档</a>进行部署，因为是个人博客，我用的是<a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/#github-user-or-organization-pages">第一种 User/Organization Pages 类型</a>. 操作也都极为简单，不再赘述. 如果遇到已经部署好了却打不开的情况可是尝试重新 push 一下.</p>
@@ -371,21 +455,31 @@ file_path: name.pdf
 <h1 id="todo-清单">TODO 清单</h1>
 
 <ol>
-<li>评论系统</li>
-<li>适配手机的 CSS</li>
+<li><del>评论系统</del></li>
+<li>适配手机的 CSS (重写 CSS 计划)</li>
 <li>RSS 支持</li>
 <li>文章间的跳转</li>
-<li>文章的目录安置(右上角固定的可伸缩悬浮块)</li>
+<li><del>文章的目录安置(右上角固定的可伸缩悬浮块)</del></li>
 <li>黑暗主题</li>
 </ol>
 
+        </div>
+        <div class="special_notes">
+            
+        </div>
     </div>
-    <div class="special_notes">
+    <div class="right_comments">
         
+<script src="https://utteranc.es/client.js"
+    repo="zerovip/bcsu"
+    issue-term="pathname"
+    theme="github-light"
+    crossorigin="anonymous"
+    async>
+</script>
+
     </div>
-</div>
 
 </div>
-
 </body>
 </html>
