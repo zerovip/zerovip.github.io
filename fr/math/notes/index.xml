@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>La Tour D&#39;ivoire De HE</title>
-    <link>/fr/math/notes/</link>
+    <link>https://zerovip.github.io/fr/math/notes/</link>
     <description>Recent content on La Tour D&#39;ivoire De HE</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr-fr</language>
     
-	<atom:link href="/fr/math/notes/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://zerovip.github.io/fr/math/notes/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>

@@ -18,11 +18,11 @@
     <div class='option_part'>
         
         
-        <li><a href="../../zh/18284/">简体中文●</a></li>
+        <li><a href="https://zerovip.github.io/zh/18284/">简体中文●</a></li>
         
-        <li><a href="../../en/18284/">English●</a></li>
+        <li><a href="https://zerovip.github.io/en/18284/">English●</a></li>
         
-        <li><a href="../../fr/18284/">Français●</a></li>
+        <li><a href="https://zerovip.github.io/fr/18284/">Français●</a></li>
         
     </div>
 
@@ -116,7 +116,7 @@
             建站记
         </div>
         <div class="title_des">
-            2019-06-22 - 4696 字
+            2019-06-22 - 5020 字
         </div>
         <style>
 .toc_content ul {
@@ -189,6 +189,7 @@
 </ul></li>
 <li><a href="#调整样式">调整样式</a></li>
 <li><a href="#评论系统的支持">评论系统的支持</a></li>
+<li><a href="#自定义的-404-页面">自定义的 404 页面</a></li>
 </ul></li>
 <li><a href="#部署到-github-pages-上">部署到 GitHub Pages 上</a></li>
 <li><a href="#是为记">是为记.</a></li>
@@ -223,7 +224,7 @@
 
 <h2 id="学习-hugo-是如何运作的">学习 Hugo 是如何运作的</h2>
 
-<p>这里我主要参考了 <a href="https://www.zeolearn.com/magazine/develop-a-theme-for-hugo">Yash Agarwal, Develop a Theme for Hugo</a>，这篇文章对内容管理同样做了非常细致的说明和区分. 可能是因为我会 Django，而 Hugo 处理网页的方式和 Django 类似<small>（不同之处在于，由于 Python 是解释型语言，Django 会在客户端访问时对客户端访问的</small><strong>一个</strong><small>网页进行渲染并发回客户端；而 GoLang 是编译型的，只好编译成 Hugo 供人们在每写完一篇文章后对整个网站的</small><strong>所有</strong><small>网页重新渲染好，成为静态网页后进行发布）</small>，我读起来非常顺利，也觉得非常简单. 但无论如何，这篇文章非常友好，通读下来就能对 Hugo 的运作方式有一个最基本的了解（比如有主页 (index.html)、列表页 (list.html) 和文章页 (single.html) 三个最基本的页面是分别做什么的，它们分别在什么地方，怎么在一个固定的 HTML 模板中写入不同的内容，逻辑运算以什么方式写进去，静态文件比如 CSS、JS 以及图片等可提供下载的文件放在哪里以及如何引用，等等）. 我按照它的步骤完全进行了一遍，这也就标志着我制作我自己的主题正式开始了.</p>
+<p>这里我主要参考了 <a href="https://www.zeolearn.com/magazine/develop-a-theme-for-hugo">Yash Agarwal, Develop a Theme for Hugo</a>，这篇文章对内容管理同样做了非常细致的说明和区分. 可能是因为我会 Django，而 Hugo 处理网页的方式和 Django 类似<sup class="footnote-ref" id="fnref:1"><a href="#fn:1">1</a></sup>，我读起来非常顺利，也觉得非常简单. 但无论如何，这篇文章非常友好，通读下来就能对 Hugo 的运作方式有一个最基本的了解（比如有主页 (index.html)、列表页 (list.html) 和文章页 (single.html) 三个最基本的页面是分别做什么的，它们分别在什么地方，怎么在一个固定的 HTML 模板中写入不同的内容，逻辑运算以什么方式写进去，静态文件比如 CSS、JS 以及图片等可提供下载的文件放在哪里以及如何引用，等等）. 我按照它的步骤完全进行了一遍，这也就标志着我制作我自己的主题正式开始了.</p>
 
 <p>具体的过程也不多说，只要配合着官方文档基本就能搞定. 上面我参考的那篇文章中在第 3、4 小节给的调试方法：删去<code>/public</code>文件夹，使用<code>$ hugo server --watch --verbose</code>命令，是非常有用的.</p>
 
@@ -442,9 +443,27 @@ file_path: name.pdf
 
 <p>按照心中预计的样子编写 CSS 文件，如果需要的话也写一些 JS. 就像 HTML 语言一样，关于它们的使用方法可以在任意相关的网站上找到，不是建立本站的难点，也不会成为这篇文章的重点.</p>
 
+<p>关于目录的生成主要参考了<a href="https://www.runoob.com/css/css-dropdowns.html">菜鸟教程, CSS 下拉菜单</a>和<a href="https://clickhelp.com/clickhelp-technical-writing-blog/advanced-autonumbering-techniques-with-css/">Anastasia, Advanced Autonumbering Techniques with CSS</a>.</p>
+
 <h2 id="评论系统的支持">评论系统的支持</h2>
 
 <p>在这里我使用了以 GitHub issue 为工具的 <a href="https://utteranc.ce">utterances</a> 来生成评论，原理非常简单，配置也非常容易，按照其官网的说明简单操作即可. 本站的所有评论存储在<a href="https://github.com/zerovip/bcsu/issues">这里</a>.</p>
+
+<h2 id="自定义的-404-页面">自定义的 404 页面</h2>
+
+<p>在这里遇到一个多语言页面的问题. <a href="https://help.github.com/en/articles/creating-a-custom-404-page-for-your-github-pages-site">GitHub Page 上说</a>需要在根目录建立 404.html：</p>
+
+<blockquote>
+<p>Create a HTML file named 404.html or create a new Markdown file named 404.md at the root level of your GitHub Pages repository.</p>
+</blockquote>
+
+<p><a href="https://gohugo.io/templates/404/">Hugo 的官方</a>也是这样支持的：</p>
+
+<blockquote>
+<p>When using Hugo with GitHub Pages, you can provide your own template for a custom 404 error page by creating a 404.html template file in your /layouts folder. When Hugo generates your site, the 404.html file will be placed in the root.</p>
+</blockquote>
+
+<p>然而真正操作的时候，Hugo 把 404.html 分别放到了不同的语言文件夹下. 这样一来我虽然可以定制不同语言版本的 404 页面，却没法在 GitHub Pages 上使用. 想了想也许可以手动建一个根目录下的 404.html 并用 JS 进行重定向，但觉得不爽所以我没有这样做，目前本站还是 GitHub Pages 默认的 404 页面. 网络上<a href="https://github.com/gohugoio/hugo/issues/3075">这个 issue</a> 的解决可能是导致这个问题的根源，与此相关的还有<a href="https://discourse.gohugo.io/t/define-404-page-content-in-an-md-file-under-the-content-directory/13943">这个讨论</a>.</p>
 
 <h1 id="部署到-github-pages-上">部署到 GitHub Pages 上</h1>
 
@@ -461,7 +480,18 @@ file_path: name.pdf
 <li>文章间的跳转</li>
 <li><del>文章的目录安置(右上角固定的可伸缩悬浮块)</del></li>
 <li>黑暗主题</li>
+<li><del>Google analytics</del></li>
+<li>tags, categories, series 等</li>
 </ol>
+<div class="footnotes">
+
+<hr />
+
+<ol>
+<li id="fn:1">不同之处在于，由于 Python 是解释型语言，Django 会在客户端访问时对客户端访问的*一个*网页进行渲染并发回客户端；而 GoLang 是编译型的，只好编译成 Hugo 供人们在每写完一篇文章后对整个网站的*所有*网页重新渲染好，成为静态网页后进行发布）.
+ <a class="footnote-return" href="#fnref:1"><sup>[return]</sup></a></li>
+</ol>
+</div>
 
         </div>
         <div class="special_notes">

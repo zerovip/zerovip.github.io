@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>赤赤的象牙塔</title>
-    <link>/zh/about/</link>
+    <link>https://zerovip.github.io/zh/about/</link>
     <description>Recent content on 赤赤的象牙塔</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Fri, 21 Jun 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/zh/about/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://zerovip.github.io/zh/about/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>关于本站</title>
-      <link>/zh/about/site/</link>
+      <link>https://zerovip.github.io/zh/about/site/</link>
       <pubDate>Fri, 21 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>/zh/about/site/</guid>
+      <guid>https://zerovip.github.io/zh/about/site/</guid>
       <description>本站为个人博客站，只会发表个人的原创或翻译的文章，不转载文章，不接受投稿. 但本站绝不是一个封闭的博客站，我也绝不会封闭自己——每篇</description>
     </item>
     
     <item>
       <title>关于我</title>
-      <link>/zh/about/me/</link>
+      <link>https://zerovip.github.io/zh/about/me/</link>
       <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>/zh/about/me/</guid>
+      <guid>https://zerovip.github.io/zh/about/me/</guid>
       <description>栏目该有还是要有，但关于我——无可奉告. 不过按理来说应该没人会看到这里吧，这辣鸡破博客要是都能被搜索引擎收录了——我就会非常高兴的</description>
     </item>
     

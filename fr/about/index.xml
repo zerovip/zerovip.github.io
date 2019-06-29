@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>La Tour D&#39;ivoire De HE</title>
-    <link>/fr/about/</link>
+    <link>https://zerovip.github.io/fr/about/</link>
     <description>Recent content on La Tour D&#39;ivoire De HE</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr-fr</language>
     <lastBuildDate>Fri, 21 Jun 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/fr/about/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://zerovip.github.io/fr/about/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>À propos de ce site</title>
-      <link>/fr/about/site/</link>
+      <link>https://zerovip.github.io/fr/about/site/</link>
       <pubDate>Fri, 21 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>/fr/about/site/</guid>
+      <guid>https://zerovip.github.io/fr/about/site/</guid>
       <description>À Propos De Ce Site&amp;hellip;</description>
     </item>
     
     <item>
       <title>À propos de moi</title>
-      <link>/fr/about/me/</link>
+      <link>https://zerovip.github.io/fr/about/me/</link>
       <pubDate>Sat, 01 Jan 2000 00:00:00 +0000</pubDate>
       
-      <guid>/fr/about/me/</guid>
+      <guid>https://zerovip.github.io/fr/about/me/</guid>
       <description>Je suis très beau.</description>
     </item>
     
