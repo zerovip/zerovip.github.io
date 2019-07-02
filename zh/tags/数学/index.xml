@@ -6,7 +6,7 @@
     <description>Recent content in 数学 on 赤赤的象牙塔</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 20 Jun 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 30 Jun 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://zerovip.github.io/zh/tags/%E6%95%B0%E5%AD%A6/index.xml" rel="self" type="application/rss+xml" />
     
@@ -18,6 +18,15 @@
       
       <guid>https://zerovip.github.io/zh/71828/</guid>
       <description>收集整理值得一看的网站，并给出链接.</description>
+    </item>
+    
+    <item>
+      <title>二元生成群的子群定理</title>
+      <link>https://zerovip.github.io/zh/2874/</link>
+      <pubDate>Sun, 30 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://zerovip.github.io/zh/2874/</guid>
+      <description>这是我这个系列的第一篇文章，因此先简单介绍一下这个系列. 我于几天前在知乎上看到了对 Bogdan Grechuk, Theorems of the 21st Century 这套书的推荐，推荐中给了几张截图我</description>
     </item>
     
     <item>

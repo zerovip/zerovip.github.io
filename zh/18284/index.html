@@ -116,7 +116,7 @@
             建站记
         </div>
         <div class="title_des">
-            2019-06-22 - 5020 字
+            2019-06-22 - 5276 字
         </div>
         <style>
 .toc_content ul {
@@ -408,6 +408,14 @@ math display mode codes
 
 <p>这也显而易见不能正确渲染——合着这一步操作唯一能做到的就是正确渲染 <code>$math inline mode codes$</code> 而不需要加反引号 <code>`$math code$`</code>，而且还不能前一个美元符后面和后一个美元符前面有空格（当然大多数数学家写 LaTeX 就是这样做的），这还没包括一些在导言区引入的别的包里的数学符号（比如 <code>extarrows</code> 包里的 <code>$\xlongequal$</code> 就无法被渲染）. 而且那种比如我用 <code>\include{other_section}</code> 连接的多个 LaTeX 文件也不容易逐一复制进去. 所以这个方案对我来说聊胜于无. 尽管如此，已经配置好的部分我也没有删除，如果写一些只有寥寥几个简单数学公式的小文章兴许还能用得上.</p>
 
+<p>另一个问题是在使用 Pandoc 渲染时，文章是没有目录的. 已有人在网络上对此问题<a href="https://jdhao.github.io/2018/10/10/hexo_to_hugo/#%E5%B0%8F%E9%97%AE%E9%A2%98">进行了报告</a>：</p>
+
+<blockquote>
+<p>对于 Pandoc，无法生成 TOC 是因为 hugo 在调用 Pandoc 将 Markdown 文件转换为 HTML 的时候，只使用了 <code>--mathjax</code> 选项，没有使用 <code>--toc</code> 选项&hellip;</p>
+</blockquote>
+
+<p>我只想安安静静地跟着官方走，所以并不打算自己编译 Hugo 解决这个问题，而且 20 天前已经有相关的 <a href="https://github.com/gohugoio/hugo/pull/6026">pull request</a> 了，虽然不知道会不会 merge，什么时候 merge，什么时候编译新版本. 无论如何我就先不管这个问题了.</p>
+
 <h3 id="为什么不试试原生的-pandoc-呢">为什么不试试原生的 Pandoc 呢？</h3>
 
 <p>直接用 Pandoc 转 LaTeX 呢？这样 <code>\include{other_section}</code> 连接的多个 LaTeX 文件的问题也不用操心了.</p>
@@ -444,6 +452,8 @@ file_path: name.pdf
 <p>按照心中预计的样子编写 CSS 文件，如果需要的话也写一些 JS. 就像 HTML 语言一样，关于它们的使用方法可以在任意相关的网站上找到，不是建立本站的难点，也不会成为这篇文章的重点.</p>
 
 <p>关于目录的生成主要参考了<a href="https://www.runoob.com/css/css-dropdowns.html">菜鸟教程, CSS 下拉菜单</a>和<a href="https://clickhelp.com/clickhelp-technical-writing-blog/advanced-autonumbering-techniques-with-css/">Anastasia, Advanced Autonumbering Techniques with CSS</a>.</p>
+
+<p>然后就是我的文章排版，用了两端对齐，但是又有中文又有英文有时还有数学内容的文章就特别丑，中间的间距不均匀，我也不知道该怎么办.</p>
 
 <h2 id="评论系统的支持">评论系统的支持</h2>
 

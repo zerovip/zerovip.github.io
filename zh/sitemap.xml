@@ -19,13 +19,13 @@
   
   <url>
     <loc>https://zerovip.github.io/zh/categories/</loc>
-    <lastmod>2019-06-24T00:00:00+00:00</lastmod>
+    <lastmod>2019-06-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://zerovip.github.io/zh/</loc>
-    <lastmod>2019-06-24T00:00:00+00:00</lastmod>
+    <lastmod>2019-06-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -45,28 +45,28 @@
   </url>
   
   <url>
-    <loc>https://zerovip.github.io/zh/non-math/memos/</loc>
-    <lastmod>2019-06-24T00:00:00+00:00</lastmod>
+    <loc>https://zerovip.github.io/zh/math/stories/</loc>
+    <lastmod>2019-06-30T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://zerovip.github.io/en/non-math/memos/"
+                href="https://zerovip.github.io/en/math/stories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://zerovip.github.io/fr/non-math/memos/"
+                href="https://zerovip.github.io/fr/math/stories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://zerovip.github.io/zh/non-math/memos/"
+                href="https://zerovip.github.io/zh/math/stories/"
                 />
   </url>
   
   <url>
     <loc>https://zerovip.github.io/zh/categories/</loc>
-    <lastmod>2019-06-24T00:00:00+00:00</lastmod>
+    <lastmod>2019-06-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -87,7 +87,7 @@
   
   <url>
     <loc>https://zerovip.github.io/zh/tags/</loc>
-    <lastmod>2019-06-24T00:00:00+00:00</lastmod>
+    <lastmod>2019-06-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -103,6 +103,49 @@
                 rel="alternate"
                 hreflang="zh"
                 href="https://zerovip.github.io/zh/tags/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://zerovip.github.io/zh/2874/</loc>
+    <lastmod>2019-06-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zerovip.github.io/zh/tags/%E5%AE%9A%E7%90%86/</loc>
+    <lastmod>2019-06-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://zerovip.github.io/zh/tags/%E6%95%B0%E5%AD%A6/</loc>
+    <lastmod>2019-06-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://zerovip.github.io/zh/tags/%E7%BF%BB%E8%AF%91/</loc>
+    <lastmod>2019-06-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://zerovip.github.io/zh/non-math/memos/</loc>
+    <lastmod>2019-06-24T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://zerovip.github.io/en/non-math/memos/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://zerovip.github.io/fr/non-math/memos/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://zerovip.github.io/zh/non-math/memos/"
                 />
   </url>
   
@@ -233,12 +276,6 @@
   </url>
   
   <url>
-    <loc>https://zerovip.github.io/zh/tags/%E6%95%B0%E5%AD%A6/</loc>
-    <lastmod>2019-06-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://zerovip.github.io/zh/tags/%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2019-06-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -315,25 +352,6 @@
                 rel="alternate"
                 hreflang="zh"
                 href="https://zerovip.github.io/zh/math/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://zerovip.github.io/zh/math/stories/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://zerovip.github.io/en/math/stories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://zerovip.github.io/fr/math/stories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://zerovip.github.io/zh/math/stories/"
                 />
   </url>
   
