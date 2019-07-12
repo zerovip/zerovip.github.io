@@ -6,10 +6,19 @@
     <description>Recent content on 赤赤的象牙塔</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 20 Jun 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 12 Jul 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://zerovip.github.io/zh/math/notes/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>一阶逻辑语言学习笔记</title>
+      <link>https://zerovip.github.io/zh/66249/</link>
+      <pubDate>Fri, 12 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://zerovip.github.io/zh/66249/</guid>
+      <description>这是我这两天自学一阶逻辑语言的一份笔记，内容不多，非常简单，也非常符合直觉，主要是一些定义之类的，展示了数学是如何被建立起来的. 它</description>
+    </item>
     
     <item>
       <title>表示论学习笔记</title>
