@@ -116,7 +116,7 @@
             建站记
         </div>
         <div class="title_des">
-            2019-06-22 - 5276 字
+            2019-06-22 - 5298 字
         </div>
         <style>
 .toc_content ul {
@@ -221,6 +221,8 @@
 <h1 id="主题的制作">主题的制作</h1>
 
 <p>由于 Hugo 没有默认的主题，所以在安装的第三步需要到<a href="https://themes.hugo.io">网络</a>上寻找一个主题使用. 实际上，我找了很久很久，都没有找到称心如意的主题. 根据我对博客结构的设计，它应该像现在呈现的这样有多级 section 并保持按分级陈列在导航栏中固定住，而 categories、tags、series 的分类方法应当隐藏于某一个页面中. 而网络上大多数可以用作博客的主题的导航栏并没有按 section 进行陈列，即便有也只有一级 section，不能满足我的需要；且外观上鲜有我喜欢的样式——唯一的例外来自<a href="https://themes.gohugo.io/cupper-hugo-theme/">名为 cupper 的主题</a>，但以它为基础进行修改并不可取，尤其是我对 Hugo 还什么都不懂——在这样的情况下学习并去读别人的代码（我开始真的是这样做的）令人烦躁. 于是决定学习 Hugo，完完全全自己动手写一个我想要的主题（不过基本的外观还是借鉴了 cupper 这个主题而并非原创，致谢！）.</p>
+
+<p>我的主题完全开源，您可以在<a href="https://github.com/zerovip/hugo-theme-zero">这里</a>阅读它的代码.</p>
 
 <h2 id="学习-hugo-是如何运作的">学习 Hugo 是如何运作的</h2>
 
@@ -442,7 +444,7 @@ file_path: name.pdf
 <pre><code>&lt;!-- /themes/theme-name/layouts/_default/single.html --&gt;
 &lt;div class=&quot;pdf-part&quot;&gt;
     {{ with .Params.file_path }}
-        &lt;embed src=&quot;/{{ . }}/&quot; width=&quot;100%&quot; height=&quot;700&quot;/&gt;
+        &lt;embed src=&quot;/{{ . }}&quot; width=&quot;100%&quot; height=&quot;700&quot;/&gt;
     {{ end }}
 &lt;/div&gt;
 </code></pre>
@@ -477,7 +479,7 @@ file_path: name.pdf
 
 <h1 id="部署到-github-pages-上">部署到 GitHub Pages 上</h1>
 
-<p>按照<a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/">官方文档</a>进行部署，因为是个人博客，我用的是<a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/#github-user-or-organization-pages">第一种 User/Organization Pages 类型</a>. 操作也都极为简单，不再赘述. 如果遇到已经部署好了却打不开的情况可是尝试重新 push 一下.</p>
+<p>按照<a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/">官方文档</a>进行部署，因为是个人博客，我用的是<a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/#github-user-or-organization-pages">第一种 User/Organization Pages 类型</a>. 操作也都极为简单，不再赘述. 如果遇到已经部署好了却打不开的情况可以尝试重新 push 一下.</p>
 
 <h1 id="是为记">是为记.</h1>
 
