@@ -13,6 +13,11 @@
   </url>
   
   <url>
+    <loc>https://zerovip.github.io/zh/71828/</loc>
+    <lastmod>2019-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://zerovip.github.io/zh/categories/</loc>
     <lastmod>2019-07-12T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -334,6 +339,18 @@
                 hreflang="zh"
                 href="https://zerovip.github.io/zh/about/me/"
                 />
+  </url>
+  
+  <url>
+    <loc>https://zerovip.github.io/zh/tags/%E6%95%B4%E7%90%86/</loc>
+    <lastmod>2019-01-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://zerovip.github.io/zh/tags/%E7%BD%91%E7%AB%99/</loc>
+    <lastmod>2019-01-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
