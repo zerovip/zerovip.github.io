@@ -3,21 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://zerovip.github.io/zh/18284/</loc>
-    <lastmod>2019-06-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zerovip.github.io/zh/23536/</loc>
-    <lastmod>2019-06-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zerovip.github.io/zh/71828/</loc>
-    <lastmod>2019-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://zerovip.github.io/zh/categories/</loc>
     <lastmod>2019-07-12T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -199,6 +184,11 @@
   </url>
   
   <url>
+    <loc>https://zerovip.github.io/zh/23536/</loc>
+    <lastmod>2019-06-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://zerovip.github.io/zh/tags/%E6%B3%95%E5%88%99/</loc>
     <lastmod>2019-06-24T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -229,6 +219,29 @@
   </url>
   
   <url>
+    <loc>https://zerovip.github.io/zh/71828/</loc>
+    <lastmod>2019-06-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zerovip.github.io/zh/tags/%E5%8D%9A%E5%AE%A2/</loc>
+    <lastmod>2019-06-23T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://zerovip.github.io/zh/tags/%E6%95%B4%E7%90%86/</loc>
+    <lastmod>2019-06-23T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://zerovip.github.io/zh/tags/%E7%BD%91%E7%AB%99/</loc>
+    <lastmod>2019-06-23T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://zerovip.github.io/zh/tags/hugo/</loc>
     <lastmod>2019-06-22T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -241,9 +254,8 @@
   </url>
   
   <url>
-    <loc>https://zerovip.github.io/zh/tags/%E5%8D%9A%E5%AE%A2/</loc>
+    <loc>https://zerovip.github.io/zh/18284/</loc>
     <lastmod>2019-06-22T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -339,18 +351,6 @@
                 hreflang="zh"
                 href="https://zerovip.github.io/zh/about/me/"
                 />
-  </url>
-  
-  <url>
-    <loc>https://zerovip.github.io/zh/tags/%E6%95%B4%E7%90%86/</loc>
-    <lastmod>2019-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://zerovip.github.io/zh/tags/%E7%BD%91%E7%AB%99/</loc>
-    <lastmod>2019-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
