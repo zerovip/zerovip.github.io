@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>赤赤的象牙塔</title>
-    <link>https://zerovip.github.io/zh/non-math/journal/</link>
-    <description>Recent content on 赤赤的象牙塔</description>
+    <title>配眼镜 on 赤赤的象牙塔</title>
+    <link>https://zerovip.github.io/zh/tags/%E9%85%8D%E7%9C%BC%E9%95%9C/</link>
+    <description>Recent content in 配眼镜 on 赤赤的象牙塔</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sun, 21 Jul 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://zerovip.github.io/zh/non-math/journal/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://zerovip.github.io/zh/tags/%E9%85%8D%E7%9C%BC%E9%95%9C/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,15 +18,6 @@
       
       <guid>https://zerovip.github.io/zh/69995/</guid>
       <description>“消费指南”这个系列 因为没有钱直接去买最好的东西，没有钱直接去享受最好的服务，而我又想用有限的钱享受还算可以的服务，因此每当我消费</description>
-    </item>
-    
-    <item>
-      <title>我学习了英语词根</title>
-      <link>https://zerovip.github.io/zh/71352/</link>
-      <pubDate>Sun, 07 Jul 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://zerovip.github.io/zh/71352/</guid>
-      <description>有一些过程的记录和心得体会，但主要是词根的知识总结，干货很多，所以字数很多.</description>
     </item>
     
   </channel>
