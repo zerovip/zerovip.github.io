@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>赤赤的象牙塔</title>
-    <link>https://zerovip.github.io/zh/math/stories/</link>
-    <description>Recent content on 赤赤的象牙塔</description>
+    <title>科普 on 赤赤的象牙塔</title>
+    <link>https://zerovip.github.io/zh/tags/%E7%A7%91%E6%99%AE/</link>
+    <description>Recent content in 科普 on 赤赤的象牙塔</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sun, 14 Jul 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://zerovip.github.io/zh/math/stories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://zerovip.github.io/zh/tags/%E7%A7%91%E6%99%AE/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,15 +18,6 @@
       
       <guid>https://zerovip.github.io/zh/47093/</guid>
       <description>今天介绍的是第 7.2 节，有关代数无理数小数展开的一个定理. 基本概念 实代数数 有理系数多项式的复根叫做代数数. 代数数的等价定义是“实系数多</description>
-    </item>
-    
-    <item>
-      <title>二元生成群的子群定理- 21 世纪的定理</title>
-      <link>https://zerovip.github.io/zh/02874/</link>
-      <pubDate>Sun, 30 Jun 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://zerovip.github.io/zh/02874/</guid>
-      <description>这是我这个系列的第一篇文章，因此先简单介绍一下这个系列. 我于几天前在知乎上看到了对 Bogdan Grechuk, Theorems of the 21st Century 这套书的推荐，推荐中给了几张截图我</description>
     </item>
     
   </channel>

@@ -6,10 +6,19 @@
     <description>Recent content in 定理 on 赤赤的象牙塔</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 30 Jun 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 14 Jul 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://zerovip.github.io/zh/tags/%E5%AE%9A%E7%90%86/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>代数无理数的小数展开- 21 世纪的定理</title>
+      <link>https://zerovip.github.io/zh/47093/</link>
+      <pubDate>Sun, 14 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://zerovip.github.io/zh/47093/</guid>
+      <description>今天介绍的是第 7.2 节，有关代数无理数小数展开的一个定理. 基本概念 实代数数 有理系数多项式的复根叫做代数数. 代数数的等价定义是“实系数多</description>
+    </item>
     
     <item>
       <title>二元生成群的子群定理- 21 世纪的定理</title>
