@@ -3,12 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://zerovip.github.io/zh/categories/</loc>
-    <lastmod>2019-07-21T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://zerovip.github.io/zh/</loc>
     <lastmod>2019-07-21T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -52,7 +46,6 @@
   <url>
     <loc>https://zerovip.github.io/zh/categories/</loc>
     <lastmod>2019-07-21T00:00:00+00:00</lastmod>
-    <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -73,7 +66,6 @@
   <url>
     <loc>https://zerovip.github.io/zh/tags/</loc>
     <lastmod>2019-07-21T00:00:00+00:00</lastmod>
-    <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -94,7 +86,6 @@
   <url>
     <loc>https://zerovip.github.io/zh/tags/%E9%85%8D%E7%9C%BC%E9%95%9C/</loc>
     <lastmod>2019-07-21T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -130,13 +121,11 @@
   <url>
     <loc>https://zerovip.github.io/zh/tags/%E5%AE%9A%E7%90%86/</loc>
     <lastmod>2019-07-14T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://zerovip.github.io/zh/tags/%E7%A7%91%E6%99%AE/</loc>
     <lastmod>2019-07-14T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -167,43 +156,36 @@
   <url>
     <loc>https://zerovip.github.io/zh/tags/%E5%8E%9F%E5%88%9B/</loc>
     <lastmod>2019-07-12T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://zerovip.github.io/zh/tags/%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2019-07-12T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://zerovip.github.io/zh/categories/%E8%87%AA%E5%AD%A6%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2019-07-12T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://zerovip.github.io/zh/tags/%E8%87%AA%E5%AD%A6%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2019-07-12T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://zerovip.github.io/zh/categories/%E8%87%AA%E5%AD%A6%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2019-07-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://zerovip.github.io/zh/categories/%E5%8E%9F%E5%88%9B/</loc>
     <lastmod>2019-07-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://zerovip.github.io/zh/tags/%E5%AD%A6%E4%B9%A0/</loc>
     <lastmod>2019-07-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://zerovip.github.io/zh/categories/%E6%80%BB%E7%BB%93/</loc>
     <lastmod>2019-07-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -214,7 +196,6 @@
   <url>
     <loc>https://zerovip.github.io/zh/tags/%E8%8B%B1%E8%AF%AD/</loc>
     <lastmod>2019-07-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -225,13 +206,11 @@
   <url>
     <loc>https://zerovip.github.io/zh/tags/%E6%95%B0%E5%AD%A6/</loc>
     <lastmod>2019-06-30T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://zerovip.github.io/zh/tags/%E7%BF%BB%E8%AF%91/</loc>
     <lastmod>2019-06-30T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -262,31 +241,26 @@
   <url>
     <loc>https://zerovip.github.io/zh/tags/%E6%B3%95%E5%88%99/</loc>
     <lastmod>2019-06-24T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://zerovip.github.io/zh/tags/%E7%94%9F%E6%B4%BB/</loc>
     <lastmod>2019-06-24T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://zerovip.github.io/zh/tags/%E7%94%B5%E5%AD%90/</loc>
     <lastmod>2019-06-24T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://zerovip.github.io/zh/tags/%E7%BD%91%E7%BB%9C/</loc>
     <lastmod>2019-06-24T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://zerovip.github.io/zh/tags/%E8%A7%84%E8%8C%83/</loc>
     <lastmod>2019-06-24T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -297,31 +271,26 @@
   <url>
     <loc>https://zerovip.github.io/zh/tags/%E5%8D%9A%E5%AE%A2/</loc>
     <lastmod>2019-06-23T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://zerovip.github.io/zh/tags/%E6%95%B4%E7%90%86/</loc>
     <lastmod>2019-06-23T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://zerovip.github.io/zh/tags/%E7%BD%91%E7%AB%99/</loc>
     <lastmod>2019-06-23T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://zerovip.github.io/zh/tags/hugo/</loc>
     <lastmod>2019-06-22T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://zerovip.github.io/zh/tags/%E5%85%B3%E4%BA%8E/</loc>
     <lastmod>2019-06-22T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -332,13 +301,11 @@
   <url>
     <loc>https://zerovip.github.io/zh/tags/%E6%8A%80%E6%9C%AF/</loc>
     <lastmod>2019-06-22T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://zerovip.github.io/zh/tags/%E8%AE%B0%E5%BD%95/</loc>
     <lastmod>2019-06-22T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -384,13 +351,11 @@
   <url>
     <loc>https://zerovip.github.io/zh/categories/%E8%A1%A8%E7%A4%BA%E8%AE%BA/</loc>
     <lastmod>2019-06-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://zerovip.github.io/zh/tags/%E8%A1%A8%E7%A4%BA%E8%AE%BA/</loc>
     <lastmod>2019-06-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -401,7 +366,6 @@
   <url>
     <loc>https://zerovip.github.io/zh/tags/%E8%AF%BE%E5%A0%82/</loc>
     <lastmod>2019-06-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>

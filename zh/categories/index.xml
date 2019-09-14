@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>赤赤的象牙塔</title>
+    <title>Categories on 赤赤的象牙塔</title>
     <link>https://zerovip.github.io/zh/categories/</link>
-    <description>Recent content on 赤赤的象牙塔</description>
+    <description>Recent content in Categories on 赤赤的象牙塔</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sun, 21 Jul 2019 00:00:00 +0000</lastBuildDate>
@@ -12,57 +12,39 @@
     
     
     <item>
-      <title>配眼镜相关知识总结-消费指南</title>
-      <link>https://zerovip.github.io/zh/69995/</link>
-      <pubDate>Sun, 21 Jul 2019 00:00:00 +0000</pubDate>
+      <title>自学笔记</title>
+      <link>https://zerovip.github.io/zh/categories/%E8%87%AA%E5%AD%A6%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Fri, 12 Jul 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://zerovip.github.io/zh/69995/</guid>
-      <description>“消费指南”这个系列 因为没有钱直接去买最好的东西，没有钱直接去享受最好的服务，而我又想用有限的钱享受还算可以的服务，因此每当我消费</description>
+      <guid>https://zerovip.github.io/zh/categories/%E8%87%AA%E5%AD%A6%E7%AC%94%E8%AE%B0/</guid>
+      <description></description>
     </item>
     
     <item>
-      <title>代数无理数的小数展开- 21 世纪的定理</title>
-      <link>https://zerovip.github.io/zh/47093/</link>
-      <pubDate>Sun, 14 Jul 2019 00:00:00 +0000</pubDate>
+      <title>原创</title>
+      <link>https://zerovip.github.io/zh/categories/%E5%8E%9F%E5%88%9B/</link>
+      <pubDate>Sun, 07 Jul 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://zerovip.github.io/zh/47093/</guid>
-      <description>今天介绍的是第 7.2 节，有关代数无理数小数展开的一个定理. 基本概念 实代数数 有理系数多项式的复根叫做代数数. 代数数的等价定义是“实系数多</description>
+      <guid>https://zerovip.github.io/zh/categories/%E5%8E%9F%E5%88%9B/</guid>
+      <description></description>
     </item>
     
     <item>
-      <title>二元生成群的子群定理- 21 世纪的定理</title>
-      <link>https://zerovip.github.io/zh/02874/</link>
-      <pubDate>Sun, 30 Jun 2019 00:00:00 +0000</pubDate>
+      <title>总结</title>
+      <link>https://zerovip.github.io/zh/categories/%E6%80%BB%E7%BB%93/</link>
+      <pubDate>Sun, 07 Jul 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://zerovip.github.io/zh/02874/</guid>
-      <description>这是我这个系列的第一篇文章，因此先简单介绍一下这个系列. 我于几天前在知乎上看到了对 Bogdan Grechuk, Theorems of the 21st Century 这套书的推荐，推荐中给了几张截图我</description>
+      <guid>https://zerovip.github.io/zh/categories/%E6%80%BB%E7%BB%93/</guid>
+      <description></description>
     </item>
     
     <item>
-      <title>我的电子生活</title>
-      <link>https://zerovip.github.io/zh/23536/</link>
-      <pubDate>Mon, 24 Jun 2019 00:00:00 +0000</pubDate>
+      <title>表示论</title>
+      <link>https://zerovip.github.io/zh/categories/%E8%A1%A8%E7%A4%BA%E8%AE%BA/</link>
+      <pubDate>Thu, 20 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://zerovip.github.io/zh/23536/</guid>
-      <description>我一向认为明文的法则是能让人的生活有条不紊的，也让人不会迷失在选择和犹豫中，是把复杂问题变简单的办法. 本文将对我的电子生活做一个梳</description>
-    </item>
-    
-    <item>
-      <title>一些不错的网站</title>
-      <link>https://zerovip.github.io/zh/71828/</link>
-      <pubDate>Sun, 23 Jun 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://zerovip.github.io/zh/71828/</guid>
-      <description>收集整理值得一看的网站，并给出链接.</description>
-    </item>
-    
-    <item>
-      <title>建站记</title>
-      <link>https://zerovip.github.io/zh/18284/</link>
-      <pubDate>Sat, 22 Jun 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://zerovip.github.io/zh/18284/</guid>
-      <description>很早就想建一个自己的博客了，每每看到别人的好看的博客就心里痒痒. 高中及以前写过一些回忆录都发表在 QQ 空间上，高中以来有意识地进行一些</description>
+      <guid>https://zerovip.github.io/zh/categories/%E8%A1%A8%E7%A4%BA%E8%AE%BA/</guid>
+      <description></description>
     </item>
     
   </channel>

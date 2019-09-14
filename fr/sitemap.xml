@@ -25,7 +25,6 @@
   <url>
     <loc>https://zerovip.github.io/fr/</loc>
     <lastmod>2019-06-21T00:00:00+00:00</lastmod>
-    <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
@@ -218,7 +217,6 @@
   
   <url>
     <loc>https://zerovip.github.io/fr/categories/</loc>
-    <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
@@ -238,7 +236,6 @@
   
   <url>
     <loc>https://zerovip.github.io/fr/tags/</loc>
-    <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
