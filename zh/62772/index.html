@@ -73,7 +73,7 @@ if (!doNotTrack) {
             静态博客文章加密工具测试
         </div>
 <div class="title_des">
-            2019-12-23 - 705 字
+            2019-12-23 - 767 字
         </div>
 <div class="toc_part">
 <button class="toc_title">目录</button>
@@ -91,6 +91,7 @@ if (!doNotTrack) {
 </div>
 <div class="right_main">
 <div class="article">
+<p>一次测试.（这里是 summary 的内容.）</p>
 <h1 id="heading">介绍</h1>
 <p><a href="https://github.com/Li4n0/hugo_encryptor">Hugo encryptor</a> 是一款我偶然发现的可以给静态博客文章进行加密的小工具，配置使用很简单，可惜的是不能在本地测试.</p>
 <p>不过它足够简单，一经测试成功可以投入使用便不再需要反复测试，因此这篇博文是专门用来测试的.</p>
@@ -165,6 +166,7 @@ if (!doNotTrack) {
 <ol>
 <li>目录会出现问题. 可能是 css 标签被改了的原因，具体没有仔细看，也不着急解决这个问题.</li>
 <li>本地测试时把加密内容直接隐藏了，以至于只能先把文章写完再进行加密操作. 有个解决思路是用 <code>{{ if not .Site.IsServer }} {{ end }}</code> 在 <code>layouts/shortcodes/hugo-encryptor.html</code> 里做一下限制，不过试了一下不太会写，留待以后愿意解决再解决吧.</li>
+<li>那个 <code>&lt;!--more--&gt;</code> 的标签导致它上面的内容成为了 summary，而 front matter 里的 summary 不再起作用. 这倒不是什么大问题.</li>
 </ol>
 </div>
 <div class="special_notes">
