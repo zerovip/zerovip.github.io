@@ -21,7 +21,6 @@ if (!doNotTrack) {
 <script async="" src="https://www.google-analytics.com/analytics.js"></script>
 </head>
 <body>
-<script async="" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML"></script>
 <div class="left_bar">
 <div class="option_part">
 <li><a href="https://zerovip.github.io/zh/62772/">简体中文●</a></li>
@@ -74,17 +73,25 @@ if (!doNotTrack) {
             静态博客文章加密工具测试
         </div>
 <div class="title_des">
-            2019-12-23 - 519 字
+            2019-12-23 - 705 字
         </div>
 <div class="toc_part">
 <button class="toc_title">目录</button>
 <div class="toc_content">
+<nav id="TableOfContents">
+<ul>
+<li><a href="#heading1">未被加密的标题</a></li>
+</ul>
+<ul>
+<li><a href="#heading3">未解决的问题</a></li>
+</ul>
+</nav>
 </div>
 </div>
 </div>
 <div class="right_main">
 <div class="article">
-<h1 id="介绍">介绍</h1>
+<h1 id="heading">介绍</h1>
 <p><a href="https://github.com/Li4n0/hugo_encryptor">Hugo encryptor</a> 是一款我偶然发现的可以给静态博客文章进行加密的小工具，配置使用很简单，可惜的是不能在本地测试.</p>
 <p>不过它足够简单，一经测试成功可以投入使用便不再需要反复测试，因此这篇博文是专门用来测试的.</p>
 <p>下面加密内容的密码是【PASS3word】.</p>
@@ -94,7 +101,7 @@ if (!doNotTrack) {
 <input class="hugo-encryptor-input" id="hugo-encryptor-password" placeholder="请输入密码"/>
 <input class="hugo-encryptor-button" onclick="hugoDecrypt(CryptoJS.MD5(document.getElementById('hugo-encryptor-password').value).toString(),'input')" type="button" value="提交"/>
 </div>
-<cipher-text style="display:none;">eknMpJavDcGyIr7rL0O+sl8YsxauWb1yMEzPYejDh1itha/mdlUu3liPWUF1Fq53rPA/z/0eJPFXShGq/CXG+/+meyTB/HaGYTzZkaUBrlDzqeiagv1YShri0uDsekK84EK5kl8FAFa23QzxI9RFtT8cgUPzTrGlIw06NxBVyqe02Or5h4WIN33hZD5oShbqPahaibZdrRkeqltlynVWV/LKj8qEFzzgwcRvHlVaBTdwjD+/+uH8UJueenPUoQoSfeo6RbLUp98AaitQzhDqljPA8nNjOPXs6aepfZtJMLe7g9c2J4RjX/pXuKkCIZt+Il16lW22q9dI6m6YpWbYfZhrHHZeYbi9trQGFyCvteEF4l9mjHD7kaLXG1srRhFpldxzhJjzuaTu/XJKua35e+MMKjmxirwB7CcqOt73EE1fFcMLup8f8758spJrqFKbbctv9tKOefAmE22AObVbrlPFct1XKyGY5mH+FsGMTUrRnaoDZoo4vmu3MkzUSXSARRLG35jnwbMX9x2tC7QxOkH7LIlWtUnHWQyQgInaV900cHg6APH9E91K3aICTZLMKlGLZmrvgRRz7jpE5TQ/zXWJfHK23ILUvXEYocJ52KRf1Fo9FUBs5vEr+sdcFRPWJes42xEryMzGvopZjO8vFdKZQ5hijpBXEKtp+vgVMZ+Nrux/L5Gw6VtL4+zMOA+c2g7lMZDLsYy0JojoGMji0nCl9ivcbM2jk8ej3BrE995rolOPXR8AQbtMpC1BIl26SSTFhfR3slKliy009izeUM2XWUDIvfsW1D55HIbo8R8cNxDDht5uvG2pMBvwi1NeAb3Zq6FnEkPqLt7hBla4cMJ3c0Z2ZTc4TnvpupF4pa8EsWr6veZEeXwlPSod/ZdZqJNB8G4KhKEp9phhy/ht9gXWUmzaC5ujBLQK9nYAj9GS7Hy4ww1Z/w5orhq+pQlqg9G3COLRQkHHDcYn9YwnKDIx8FfjEtatAEND6M+FD1L9dUyM8yu5tHct7Cq1TpqMas4oIXwF0B7LAOq2Yc2ArP/GYss0/RcKWbIN/7NlqjE02gDF3cJ1nI6/cUHIUNlD0TcNO1upFhNrsvMZjTffN4BFdDP5vvjyAQGVrivfFG2aNKFBP6cTPXK1jKFMLE/v</cipher-text>
+<cipher-text style="display:none;">eknMpJavDcGyIr7rL0O+sl8YsxauWb1yMEzPYejDh1itha/mdlUu3liPWUF1Fq53rPA/z/0eJPFXShGq/CXG+/+meyTB/HaGYTzZkaUBrlDzqeiagv1YShri0uDsekK84EK5kl8FAFa23QzxI9RFtT8cgUPzTrGlIw06NxBVyqe02Or5h4WIN33hZD5oShbqPVXXqi8EqtuPkXkyk7TChvC1aK8tzRUd/GTvzw3tgKnSkxS9H0ZkE/ZbLV/FeRH/joIyAcNqhUqhpGJUpH93SPUpON3NFVizoePM1jnHKdKDg5H3nU11F9bQc9wIzW4ylgx1zg+h+yk6B3OdutdIKf/XJ080xjTwHDrlV/qxU5A+XfAixMeXUqtFNz/9dqvPo6Z55r4W08Mazr4+y5kplp0+GORKpcXuMdhRC61g3TRLBVQmSDMRtG2uo/E2Y0zyzCXyOH1ROth1Tt097Qia6QbgMDoBkmi/HTxOdOpJGrIDO7XMis9xY64zHZK0EmtmT1Oc4RNtZisn0x3LGbM8OYeqk46AbOo9+GrX3yZJOlt3CriMXbV7ID5jRCYeprTwJghDL+1AYOUbbAs8Cmox/r1Xkiaw5wryYKZhyKLw7JM9BKBv40PcxvqRemqyYKYyuwvlaZBb0eAREaeBP8FiTBXyoOzQO83N6psJWfv95H4rvjIdC6wKt/4EO2zFWIA8r6eM6ZVeJgAQ7cBMPOubvDiEOjA55jY6rSkRy6XvasXg1182+1c+xjugalVxZ/PrgYNPovtelL+Y1yNrDL+XR3zlcB1doeyoTeU96aAY6NN7MgM7QWJs+2u2LhO+zvkfY2KepcXMyA0Y7xyhFrKUAyL5tGxNoDUWvXo5MXNVojY1QsG1RFRkQS25ftYolxlgWQeiId4hgkHwLVsr5JAnzW53IK7vp+jIBcHAm+WxI1iULroPHRoiSYhl9ZQRbWqKw2oNjJfAPvO8WpFXcL5RfhVu2qwFtTBeIaU8TwEvWhSmvyFICBap7Z7MhfeU2LU/D/FgVcLGNazXGNRPO7rCxE+wkJNLsHV/6c/4hv2MAeCyXwF81sBmD0hrFjZWamj9dEzFWiWatZzwJuZ5sQZFLuxHH5WViao+5bzPiJRorORqO9nxkUELbm3P8aBiWq4UTiE2uIjwLUpD86snZ0aQVNOzoYor3htd4jQLKCWvTlOIq0twF7Ohcmb7HutKOayCJ1295MgCmlNk7OR0O4N6wfMPU0oGZGNXEeMFAfgiGjfwtzoK984j9HwOZ3BU+8q+</cipher-text>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
 <script>
       let cipher = document.getElementsByTagName("cipher-text")[0];
@@ -150,13 +157,14 @@ if (!doNotTrack) {
     };
   </script>
 </hugo-encryptor>
-<h2 id="未被加密的标题">未被加密的标题</h2>
+<h2 id="heading1">未被加密的标题</h2>
 <p>在解密前这里的序号是1.1，解密后这里的序号是3.4.</p>
-<h1 id="未被加密的一级标题">未被加密的一级标题</h1>
+<h1 id="heading2">未被加密的一级标题</h1>
 <p>在解密前这里的序号是2，解密后这里的序号是4.</p>
-<h2 id="未解决的问题">未解决的问题</h2>
-<ol type="1">
-<li>目录会出现问题.</li>
+<h2 id="heading3">未解决的问题</h2>
+<ol>
+<li>目录会出现问题. 可能是 css 标签被改了的原因，具体没有仔细看，也不着急解决这个问题.</li>
+<li>本地测试时把加密内容直接隐藏了，以至于只能先把文章写完再进行加密操作. 有个解决思路是用 <code>{{ if not .Site.IsServer }} {{ end }}</code> 在 <code>layouts/shortcodes/hugo-encryptor.html</code> 里做一下限制，不过试了一下不太会写，留待以后愿意解决再解决吧.</li>
 </ol>
 </div>
 <div class="special_notes">
