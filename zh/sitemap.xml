@@ -4,7 +4,7 @@
   
   <url>
     <loc>https://zerovip.github.io/zh/</loc>
-    <lastmod>2019-07-21T00:00:00+00:00</lastmod>
+    <lastmod>2019-12-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -24,28 +24,28 @@
   </url>
   
   <url>
-    <loc>https://zerovip.github.io/zh/non-math/journal/</loc>
-    <lastmod>2019-07-21T00:00:00+00:00</lastmod>
+    <loc>https://zerovip.github.io/zh/non-math/memos/</loc>
+    <lastmod>2019-12-23T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://zerovip.github.io/en/non-math/journal/"
+                href="https://zerovip.github.io/en/non-math/memos/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://zerovip.github.io/fr/non-math/journal/"
+                href="https://zerovip.github.io/fr/non-math/memos/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://zerovip.github.io/zh/non-math/journal/"
+                href="https://zerovip.github.io/zh/non-math/memos/"
                 />
   </url>
   
   <url>
     <loc>https://zerovip.github.io/zh/categories/</loc>
-    <lastmod>2019-07-21T00:00:00+00:00</lastmod>
+    <lastmod>2019-12-23T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -65,7 +65,7 @@
   
   <url>
     <loc>https://zerovip.github.io/zh/tags/</loc>
-    <lastmod>2019-07-21T00:00:00+00:00</lastmod>
+    <lastmod>2019-12-23T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -80,6 +80,31 @@
                 rel="alternate"
                 hreflang="zh"
                 href="https://zerovip.github.io/zh/tags/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://zerovip.github.io/zh/62772/</loc>
+    <lastmod>2019-12-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zerovip.github.io/zh/non-math/journal/</loc>
+    <lastmod>2019-07-21T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://zerovip.github.io/en/non-math/journal/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://zerovip.github.io/fr/non-math/journal/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://zerovip.github.io/zh/non-math/journal/"
                 />
   </url>
   
@@ -214,26 +239,6 @@
   </url>
   
   <url>
-    <loc>https://zerovip.github.io/zh/non-math/memos/</loc>
-    <lastmod>2019-06-24T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://zerovip.github.io/en/non-math/memos/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://zerovip.github.io/fr/non-math/memos/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://zerovip.github.io/zh/non-math/memos/"
-                />
-  </url>
-  
-  <url>
     <loc>https://zerovip.github.io/zh/23536/</loc>
     <lastmod>2019-06-24T00:00:00+00:00</lastmod>
   </url>
@@ -349,12 +354,12 @@
   </url>
   
   <url>
-    <loc>https://zerovip.github.io/zh/tags/%E8%A1%A8%E7%A4%BA%E8%AE%BA/</loc>
+    <loc>https://zerovip.github.io/zh/categories/%E8%A1%A8%E7%A4%BA%E8%AE%BA/</loc>
     <lastmod>2019-06-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://zerovip.github.io/zh/categories/%E8%A1%A8%E7%A4%BA%E8%AE%BA/</loc>
+    <loc>https://zerovip.github.io/zh/tags/%E8%A1%A8%E7%A4%BA%E8%AE%BA/</loc>
     <lastmod>2019-06-20T00:00:00+00:00</lastmod>
   </url>
   

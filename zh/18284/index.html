@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <meta name="generator" content="Hugo 0.59.1" />
+    <meta name="generator" content="Hugo 0.60.1" />
     <title>
         
     建站记
@@ -136,157 +136,73 @@ if (!doNotTrack) {
             建站记
         </div>
         <div class="title_des">
-            2019-06-22 - 5419 字
+            2019-06-22 - 5421 字
         </div>
-        <style>
-.toc_content ul {
-  counter-reset: section;  
-  list-style-type: none;
-  margin: 0 1rem;
-}
-.toc_content li::before {
-  counter-increment: section;
-  content: counters(section,".") " ";
-}
-.toc_part {
-  overflow-y: auto;
-  position: fixed;
-  z-index: 1;
-  right: 0;
-}
-.toc_title {
-  position: relative;
-  background-color: #6AA84F;
-  color: white;
-  padding: 1rem;
-  font-size: 1rem;
-  border: none;
-  cursor: pointer;
-}
-.toc_content {
-  overflow-y: scroll;
-  max-height: 30rem;
-  right: 0;
-  display: none;
-  position: relative;
-  background-color: #99CC66;
-  border-style: solid;
-  border-width: 0.3rem;
-  border-color: #66CC66;
-}
-.toc_content a {
-  color: black;
-  font-size: 1.1rem;
-  text-decoration: none;
-}
-.toc_content a:hover {
-  background-color: #CCFFCC
-}
-.toc_part:hover .toc_content {
-  display: block;
-}
-</style>
-
-<div class="toc_part">
+        <div class="toc_part">
     <button class="toc_title">目录</button>
     <div class="toc_content">
         <nav id="TableOfContents">
-<ul>
-<li><a href="#构想">构想</a></li>
-<li><a href="#初期的安装与结构规划">初期的安装与结构规划</a></li>
-<li><a href="#主题的制作">主题的制作</a>
-<ul>
-<li><a href="#学习-hugo-是如何运作的">学习 Hugo 是如何运作的</a></li>
-<li><a href="#toml-yaml和json的学习">TOML、YAML和JSON的学习</a></li>
-<li><a href="#hugo-的细节学习">Hugo 的细节学习</a></li>
-<li><a href="#section-的陈列">section 的陈列</a></li>
-<li><a href="#数学写作的支持">数学写作的支持</a>
-<ul>
-<li><a href="#mathjax-的布置与-markdown-数学支持的了解">MathJax 的布置与 Markdown 数学支持的了解</a></li>
-<li><a href="#配合-pandoc-尝试-markdown">配合 Pandoc 尝试 Markdown</a></li>
-<li><a href="#为什么不试试原生的-pandoc-呢">为什么不试试原生的 Pandoc 呢？</a></li>
-<li><a href="#硬上-pdf-呗">硬上 PDF 呗</a></li>
-</ul></li>
-<li><a href="#调整样式">调整样式</a></li>
-<li><a href="#评论系统的支持">评论系统的支持</a></li>
-<li><a href="#自定义的-404-页面">自定义的 404 页面</a></li>
-</ul></li>
-<li><a href="#部署到-github-pages-上">部署到 GitHub Pages 上</a></li>
-<li><a href="#是为记">是为记.</a></li>
-<li><a href="#todo-清单">TODO 清单</a></li>
-</ul>
+  <ul>
+    <li><a href="#-hugo-">学习 Hugo 是如何运作的</a></li>
+    <li><a href="#tomlyamljson">TOML、YAML和JSON的学习</a></li>
+    <li><a href="#hugo-">Hugo 的细节学习</a></li>
+    <li><a href="#section-">section 的陈列</a></li>
+    <li><a href="#heading3">数学写作的支持</a>
+      <ul>
+        <li><a href="#mathjax--markdown-">MathJax 的布置与 Markdown 数学支持的了解</a></li>
+        <li><a href="#-pandoc--markdown">配合 Pandoc 尝试 Markdown</a></li>
+        <li><a href="#-pandoc-">为什么不试试原生的 Pandoc 呢？</a></li>
+        <li><a href="#-pdf-">硬上 PDF 呗</a></li>
+      </ul>
+    </li>
+    <li><a href="#heading4">调整样式</a></li>
+    <li><a href="#heading5">评论系统的支持</a></li>
+    <li><a href="#-404-">自定义的 404 页面</a></li>
+  </ul>
 </nav>
     </div>
 </div>
+
 
     </div>
 
     
     <div class="right_main">
         <div class="article">
-            
-
-<p>很早就想建一个自己的博客了，每每看到别人的好看的博客就心里痒痒. 高中及以前写过一些回忆录都发表在 QQ 空间上，高中以来有意识地进行一些写作，觉得不错的都发表在新浪博客上，稍短的就写成长微博. 但有时想写一些专业性（数学）的东西，新浪博客的富文本编辑器就不够用了，而微博由于国内的审查机制不明确不规范也决定放弃，并决定认真梳理我的<a href="../../zh/23536/">网络生活空间</a>. 再加上有一些亲身实践过的技术性的步骤想做个记录，于是着手进行建博客的工作.</p>
-
-<h1 id="构想">构想</h1>
-
+            <p>很早就想建一个自己的博客了，每每看到别人的好看的博客就心里痒痒. 高中及以前写过一些回忆录都发表在 QQ 空间上，高中以来有意识地进行一些写作，觉得不错的都发表在新浪博客上，稍短的就写成长微博. 但有时想写一些专业性（数学）的东西，新浪博客的富文本编辑器就不够用了，而微博由于国内的审查机制不明确不规范也决定放弃，并决定认真梳理我的<a href="../../zh/23536/">网络生活空间</a>. 再加上有一些亲身实践过的技术性的步骤想做个记录，于是着手进行建博客的工作.</p>
+<h1 id="heading">构想</h1>
 <p>大一、大二的时候在学校一个学生组织的网络技术工作站做过两年的后端，那时构想的博客就是租一台<a href="https://zh.wikipedia.org/wiki/%E8%99%9A%E6%8B%9F%E4%B8%93%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8">VPS</a>，用学到的技术 [Django (Python) + MySQL] 做一个超级棒的网站，想实现什么功能就实现什么功能. 后来一门心思学数学后发现我时间有限，于是发现了静态博客这种东西，经过比较选择了 <a href="https://gohugo.io">Hugo</a> + <a href="https://pages.github.com">GitHub Pages</a>. 优点是我不用租 VPS 了，甚至不用申请域名，访问快速，安全，对我来说也比较简单省时间.</p>
-
-<h1 id="初期的安装与结构规划">初期的安装与结构规划</h1>
-
+<h1 id="heading1">初期的安装与结构规划</h1>
 <p>在网络上可以找到大量关于此的教程与文章，我在这里主要参考了官方的文档来<a href="https://gohugo.io/getting-started/quick-start/">安装</a>.</p>
-
 <p>之后粗略读了一下 Hugo 的<a href="https://gohugo.io/content-management/">内容管理</a>，主要是第一部分<a href="https://gohugo.io/content-management/organization/">内容组织</a>（下面的章节中提到的一篇文章也是对同样的内容进行了讲解），知道了它是完全按照文件夹的目录层次进行组织划分的，每一个目录叫做一个 section（对应一个 type） ，除此之外还有 categories 【以方便进行更细致的分类】（方括号里的内容是我对该设计的理解，并不是官方的说法，下同）、tags 【以方便做更立体更全面可交叉的分类】和 series 【以方便把过长的文章打散或聚合可以合并到同一个系列的文章】. 于是我便开始设计我的博客结构. 现在这个网站呈现的样子就恰恰是我当时设想的样子.</p>
-
-<h1 id="主题的制作">主题的制作</h1>
-
+<h1 id="heading2">主题的制作</h1>
 <p>由于 Hugo 没有默认的主题，所以在安装的第三步需要到<a href="https://themes.hugo.io">网络</a>上寻找一个主题使用. 实际上，我找了很久很久，都没有找到称心如意的主题. 根据我对博客结构的设计，它应该像现在呈现的这样有多级 section 并保持按分级陈列在导航栏中固定住，而 categories、tags、series 的分类方法应当隐藏于某一个页面中. 而网络上大多数可以用作博客的主题的导航栏并没有按 section 进行陈列，即便有也只有一级 section，不能满足我的需要；且外观上鲜有我喜欢的样式——唯一的例外来自<a href="https://themes.gohugo.io/cupper-hugo-theme/">名为 cupper 的主题</a>，但以它为基础进行修改并不可取，尤其是我对 Hugo 还什么都不懂——在这样的情况下学习并去读别人的代码（我开始真的是这样做的）令人烦躁. 于是决定学习 Hugo，完完全全自己动手写一个我想要的主题（不过基本的外观还是借鉴了 cupper 这个主题而并非原创，致谢！）.</p>
-
 <p>我的主题完全开源，您可以在<a href="https://github.com/zerovip/hugo-theme-zero">这里</a>阅读它的代码.</p>
-
-<h2 id="学习-hugo-是如何运作的">学习 Hugo 是如何运作的</h2>
-
-<p>这里我主要参考了 <a href="https://www.zeolearn.com/magazine/develop-a-theme-for-hugo">Yash Agarwal, Develop a Theme for Hugo</a>，这篇文章对内容管理同样做了非常细致的说明和区分. 可能是因为我会 Django，而 Hugo 处理网页的方式和 Django 类似<sup class="footnote-ref" id="fnref:1"><a href="#fn:1">1</a></sup>，我读起来非常顺利，也觉得非常简单. 但无论如何，这篇文章非常友好，通读下来就能对 Hugo 的运作方式有一个最基本的了解（比如有主页 (index.html)、列表页 (list.html) 和文章页 (single.html) 三个最基本的页面是分别做什么的，它们分别在什么地方，怎么在一个固定的 HTML 模板中写入不同的内容，逻辑运算以什么方式写进去，静态文件比如 CSS、JS 以及图片等可提供下载的文件放在哪里以及如何引用，等等）. 我按照它的步骤完全进行了一遍，这也就标志着我制作我自己的主题正式开始了.</p>
-
+<h2 id="-hugo-">学习 Hugo 是如何运作的</h2>
+<p>这里我主要参考了 <a href="https://www.zeolearn.com/magazine/develop-a-theme-for-hugo">Yash Agarwal, Develop a Theme for Hugo</a>，这篇文章对内容管理同样做了非常细致的说明和区分. 可能是因为我会 Django，而 Hugo 处理网页的方式和 Django 类似<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>，我读起来非常顺利，也觉得非常简单. 但无论如何，这篇文章非常友好，通读下来就能对 Hugo 的运作方式有一个最基本的了解（比如有主页 (index.html)、列表页 (list.html) 和文章页 (single.html) 三个最基本的页面是分别做什么的，它们分别在什么地方，怎么在一个固定的 HTML 模板中写入不同的内容，逻辑运算以什么方式写进去，静态文件比如 CSS、JS 以及图片等可提供下载的文件放在哪里以及如何引用，等等）. 我按照它的步骤完全进行了一遍，这也就标志着我制作我自己的主题正式开始了.</p>
 <p>具体的过程也不多说，只要配合着官方文档基本就能搞定. 上面我参考的那篇文章中在第 3、4 小节给的调试方法：删去<code>/public</code>文件夹，使用<code>$ hugo server --watch --verbose</code>命令，是非常有用的.</p>
-
-<h2 id="toml-yaml和json的学习">TOML、YAML和JSON的学习</h2>
-
+<h2 id="tomlyamljson">TOML、YAML和JSON的学习</h2>
 <p>Hugo 的配置文件支持这三种格式. 尽管官方文档给出的例子大多数都是三种格式都有，但仅仅是官方的例子并不足够使用；又考虑到在进行检索时网络上的各位博主也是用什么的都有，且大多数博主记录自己的建站过程肯定不会像官方那样提供三个格式的配置；这三种格式的转化并不是显而易见地见几个例子就能触类旁通（比如 TOML 中的双中括号 <code>[[something]]</code> 就不是很容易猜到 ）：因此对这三种格式进行学习是有必要的. 这里我主要参考了如下几篇文章：</p>
-
 <ol>
 <li><a href="https://github.com/LongTengDao/TOML/wiki">龙腾道, TOML 教程</a>;</li>
 <li><a href="https://github.com/LongTengDao/TOML/blob/%E9%BE%99%E8%85%BE%E9%81%93-%E8%AF%91/versions/cn/toml-v0.5.0.md">龙腾道, TOML v0.5.0</a>;</li>
 <li><a href="https://www.ruanyifeng.com/blog/2016/07/yaml.html">阮一峰, YAML 语言教程</a>;</li>
 <li><a href="https://www.runoob.com/json/json-tutorial.html">菜鸟教程, JSON 教程</a>.</li>
 </ol>
-
 <p><a href="https://toolkit.site/zh/format.html">一个可以进行在线格式转换的网站</a>也是非常非常有帮助的.</p>
-
-<h2 id="hugo-的细节学习">Hugo 的细节学习</h2>
-
+<h2 id="hugo-">Hugo 的细节学习</h2>
 <p>Hugo 的<a href="https://gohugo.io/templates">模板部分</a>当然要理解清楚（把需要用到的理解清楚即可），逻辑的部分更为重要一些. <a href="https://gohugo.io/functions">通用的函数</a>非常有价值，熟读后对细节的处理可以更高效.</p>
-
 <p>其中最重要的是 <a href="https://gohugo.io/functions/where"><code>where</code> 函数</a>，它在列表页 (list.html) 对文章的筛选和排序起着重要的作用.</p>
-
 <p>另外，就像任何一门语言一样，确定好数据类型、确定好对象，针对不同的对象使用该对象拥有的方法是非常重要的，尤其是写了 <code>{{ range ... }}</code> 之后更要注意遍历的是什么类型的对象. 我这次在这一点上走了很多弯路，不注意对象是什么就把知道的方法乱用一气，把 menu 的方法和 page 的方法弄混了，看着报错信息怀疑人生，不知道出了什么错误. 所有的对象以及它们的参数/方法都可以在<a href="https://gohugo.io/variables">这里</a>找到，至少以我的经验来看，Site、Page、Menu Entry 这三个是最最常用的，把这三种对象的参数/方法熟读后对怎么解决问题就会反应得比较快.</p>
-
-<h2 id="section-的陈列">section 的陈列</h2>
-
+<h2 id="section-">section 的陈列</h2>
 <p>这里选择的是使用 <a href="https://gohugo.io/content-management/menus/">Menu Entry</a> 来进行. 如果只有一级 section 的话，官方提供的<a href="https://gohugo.io/templates/menu-templates/#section-menu-for-lazy-bloggers">懒人博客方法</a>是简单有效的. 不过它对两级以上的 section 只能按第一级 section 建 menu：</p>
-
 <blockquote>
 <p>&hellip;this enables you to creat a <em>top-level</em> menu&hellip;</p>
 </blockquote>
-
 <p>且它不能默认支持多语言. 这样看来，在它的基础上手动补充一些信息比如手动添加低级 section 的 menu 以及手动添加其他语言的 menu 在我看来就不如不用这个懒人方法，所有 menu 全部手动创建.</p>
-
 <p>正如官方文档所说，创建 menu 有两种方法：在<a href="https://gohugo.io/content-management/menus/#add-non-content-entries-to-a-menu">配置文件里写</a>或在多个 _index.md 的<a href="https://gohugo.io/content-management/menus/#add-content-to-menus"> front matter 里写</a>. 我没在网络上找到合适的例子，所以在这里摸索了一段时间，我也是在这个时候才学习了前面小节中提到的三种配置文件的语法. 这里给出我个人摸索出的成果——多语言版本的 YAML 格式配置文件的创建多级别 section 的 Menu Entry 的代码：</p>
-
 <p>（在这个问题上 gohugoio 的 hugo 官方项目的 <a href="https://github.com/gohugoio/hugo/issues/465">issue#465</a> 下的讨论尤其是 <a href="https://github.com/gohugoio/hugo/issues/465#issuecomment-121677318">vjeantet 的评论</a>中的例子给了我非常多的启发，这个例子因为部署在 GitHub 上而在四年后的今天依然是可以查看的，表示感谢！而这个特性直至四年后的今天依然没有被官方支持，表示谴责！）</p>
-
 <p>目录结构：</p>
-
 <pre><code>$ tree -a content/
 content/
 |-- section1
@@ -298,10 +214,7 @@ content/
 |-- section2
 |   |-- _index.md
 '   '-- _index.en.md
-</code></pre>
-
-<p>方法一——在配置文件里写：</p>
-
+</code></pre><p>方法一——在配置文件里写：</p>
 <pre><code># config.yaml
 defaultContentLanguage: zh # 默认语言是中文
 defaultContentLanguageInSubdir: true # 所以下面的 url 里即便是默认的中文也带着/zh/
@@ -347,10 +260,7 @@ languages:
           parent: s1
           name: SECTION I PART I
           weight: 1
-</code></pre>
-
-<p>方法二——在 front matter 里写：</p>
-
+</code></pre><p>方法二——在 front matter 里写：</p>
 <pre><code># config.yaml
 defaultContentLanguage: zh
 defaultContentLanguageInSubdir: true
@@ -365,9 +275,7 @@ languages:
     languageName: English
     title: Site's Name
     weight: 2
-</code></pre>
-
-<pre><code># /content/section1/_index.md
+</code></pre><pre><code># /content/section1/_index.md
 ---
 menu:
   main:
@@ -377,9 +285,7 @@ menu:
     weight: 1
 ---
 可写一些内容
-</code></pre>
-
-<pre><code># /content/section1/_index.en.md
+</code></pre><pre><code># /content/section1/_index.en.md
 ---
 menu:
   main:
@@ -389,9 +295,7 @@ menu:
     weight: 1
 ---
 Optional content here
-</code></pre>
-
-<pre><code># /content/section1/section11/_index.md
+</code></pre><pre><code># /content/section1/section11/_index.md
 ---
 menu:
   main:
@@ -401,57 +305,33 @@ menu:
       weight: 1
 ---
 可写一些内容
-</code></pre>
-
-<p>因为我想做一个支持中英法三语的博客，而把 Menu Entry 的配置写在那么多分散的文件里显然是过于麻烦而又不好管理，所以一开始在这里我毫不犹豫地选择了在配置文件中写. 然而，后来在做一级 section 的 list 的时候，我却找不到办法完成这件事，因为筛选文章、排序文章这种事都是 Page 对象的方法，确定 section 却是 Menu Entry 对象做的，然而在所有的 <a href="https://gohugo.io/variables/menus/">Menu Entry 方法</a>中，只有 <code>.Page</code> 是唯一可以把 Menu Entry 对象转化为 Page 对象的方法——可是它上面赫然写着（至少截至到2019-06-25）：</p>
-
+</code></pre><p>因为我想做一个支持中英法三语的博客，而把 Menu Entry 的配置写在那么多分散的文件里显然是过于麻烦而又不好管理，所以一开始在这里我毫不犹豫地选择了在配置文件中写. 然而，后来在做一级 section 的 list 的时候，我却找不到办法完成这件事，因为筛选文章、排序文章这种事都是 Page 对象的方法，确定 section 却是 Menu Entry 对象做的，然而在所有的 <a href="https://gohugo.io/variables/menus/">Menu Entry 方法</a>中，只有 <code>.Page</code> 是唯一可以把 Menu Entry 对象转化为 Page 对象的方法——可是它上面赫然写着（至少截至到2019-06-25）：</p>
 <blockquote>
 <p>This will be non-nil if the menu entry is set via a page’s front-matter and not via the site config.</p>
 </blockquote>
-
 <p>虽然也并不知道它为什么用“non-nil”这样的措辞，就好像得到空集才是官方期望的一样. 但不管怎样，我又把 Menu Entry 的配置全部换成了在各个 _index.md 中写，倒是也不需要写明语言和写明 url 了.</p>
-
-<h2 id="数学写作的支持">数学写作的支持</h2>
-
-<h3 id="mathjax-的布置与-markdown-数学支持的了解">MathJax 的布置与 Markdown 数学支持的了解</h3>
-
+<h2 id="heading3">数学写作的支持</h2>
+<h3 id="mathjax--markdown-">MathJax 的布置与 Markdown 数学支持的了解</h3>
 <p>希望浏览器能支持渲染数学公式，我这里选择了 <a href="https://www.mathjax.org/">MathJax</a>. 按照其官方的文档，在模板中添加一行代码即可完成.</p>
-
 <p>我同时又希望能无缝接轨 LaTeX 文件，这样我既可以自己本地编译 PDF 格式的文档，又可以让它以同样漂亮的格式显示在网页上. 关于 Markdown 的支持，这里值得参考的文章是<a href="https://yihui.name/cn/2017/04/mathjax-markdown/">谢益辉, MathJax 与 Markdown 的究极融合</a>. 不过由于数学环境在 Markdown 中不得不以代码块 <code>`$math code$`</code> 的样式用反引号将它包裹起来，而我需要的是把 LaTeX 代码直接拿过来就能用，不需要再进行额外的更改，因此继续寻找更好的工具.</p>
-
-<h3 id="配合-pandoc-尝试-markdown">配合 Pandoc 尝试 Markdown</h3>
-
+<h3 id="-pandoc--markdown">配合 Pandoc 尝试 Markdown</h3>
 <p>听闻 <a href="https://pandoc.org/">Pandoc</a> 是一个强大的工具，而 Hugo 是<a href="https://gohugo.io/content-management/formats/#additional-formats-through-external-helpers">支持</a>它的，于是进行尝试：安装 Pandoc、在 front matter 中写上 <code>markup: pandoc</code> 或 <code>markup: pdc</code> （YAML 格式）、把我已经写好的 LaTeX 代码拷贝进来、渲染网页，结果极其糟糕. LaTeX 代码前面的导言区完全被当成了注释不起任何作用，这就意味着整个 LaTeX 完全不能用. 另外，我行间公式的书写习惯为</p>
-
 <pre><code>\[
 math display mode codes
 \]
-</code></pre>
-
-<p>这也显而易见不能正确渲染——合着这一步操作唯一能做到的就是正确渲染 <code>$math inline mode codes$</code> 而不需要加反引号 <code>`$math code$`</code>，而且还不能前一个美元符后面和后一个美元符前面有空格（当然大多数数学家写 LaTeX 就是这样做的），这还没包括一些在导言区引入的别的包里的数学符号（比如 <code>extarrows</code> 包里的 <code>$\xlongequal$</code> 就无法被渲染）. 而且那种比如我用 <code>\include{other_section}</code> 连接的多个 LaTeX 文件也不容易逐一复制进去. 所以这个方案对我来说聊胜于无. 尽管如此，已经配置好的部分我也没有删除，如果写一些只有寥寥几个简单数学公式的小文章兴许还能用得上.</p>
-
+</code></pre><p>这也显而易见不能正确渲染——合着这一步操作唯一能做到的就是正确渲染 <code>$math inline mode codes$</code> 而不需要加反引号 <code>`$math code$`</code>，而且还不能前一个美元符后面和后一个美元符前面有空格（当然大多数数学家写 LaTeX 就是这样做的），这还没包括一些在导言区引入的别的包里的数学符号（比如 <code>extarrows</code> 包里的 <code>$\xlongequal$</code> 就无法被渲染）. 而且那种比如我用 <code>\include{other_section}</code> 连接的多个 LaTeX 文件也不容易逐一复制进去. 所以这个方案对我来说聊胜于无. 尽管如此，已经配置好的部分我也没有删除，如果写一些只有寥寥几个简单数学公式的小文章兴许还能用得上.</p>
 <p>另一个问题是在使用 Pandoc 渲染时，文章是没有目录的. 已有人在网络上对此问题<a href="https://jdhao.github.io/2018/10/10/hexo_to_hugo/#%E5%B0%8F%E9%97%AE%E9%A2%98">进行了报告</a>：</p>
-
 <blockquote>
 <p>对于 Pandoc，无法生成 TOC 是因为 hugo 在调用 Pandoc 将 Markdown 文件转换为 HTML 的时候，只使用了 <code>--mathjax</code> 选项，没有使用 <code>--toc</code> 选项&hellip;</p>
 </blockquote>
-
 <p>我只想安安静静地跟着官方走，所以并不打算自己编译 Hugo 解决这个问题，而且 20 天前已经有相关的 <a href="https://github.com/gohugoio/hugo/pull/6026">pull request</a> 了，虽然不知道会不会 merge，什么时候 merge，什么时候编译新版本. 无论如何我就先不管这个问题了.</p>
-
-<h3 id="为什么不试试原生的-pandoc-呢">为什么不试试原生的 Pandoc 呢？</h3>
-
+<h3 id="-pandoc-">为什么不试试原生的 Pandoc 呢？</h3>
 <p>直接用 Pandoc 转 LaTeX 呢？这样 <code>\include{other_section}</code> 连接的多个 LaTeX 文件的问题也不用操心了.</p>
-
 <p>我先尝试了 LaTeX 转 HTML，由于这样一个单独的网页也没有配 CSS 不好放进这个博客已有的模板中，我又转而尝试了 LaTeX 转 Markdown，再加几行 front matter 放进 Hugo 的文件夹让 Hugo 的 blackfriday 渲染. 这次的结果好看多了，但问题依然存在——</p>
-
 <p>用 Pandoc 转换再加几行 front matter 不是什么大不了的事，写一个脚本就能分分钟搞定，关键的问题还在数学：很多导言区的包没有支持（比如画交换图的包 <code>tikz-cd</code> ）、导言区定义的环境生成出来不好看、导言区自己定义的盒子显示不出来，很多数学符号如上一小节提到的 <code>$\xlongequal$</code> 还是不支持等等.</p>
-
 <p>到这里我便知道，世界上只有一个 LaTeX，让 Pandoc 完美支持 LaTeX 的所有功能简直是妄想，顶多是能顺利搞定人们最常用的那些标准的格式. 更何况本来 Markdown 和 HTML 就没有像 LaTeX 那样被设计，它们没有科学排版的初衷也不应该承担科学排版的责任. 这样一个“产品哲学”的问题想清楚以后，我便知道我该如何设计我的博客让它满足我心目中理想的样子.</p>
-
-<h3 id="硬上-pdf-呗">硬上 PDF 呗</h3>
-
+<h3 id="-pdf-">硬上 PDF 呗</h3>
 <p>在网页中内嵌一个 PDF 文件对象成了我唯一的选择. 我的操作是在 <code>/static/</code> 中建立一个到我原始文件的硬链接 <code>$ ln /path/of/my/original/file.pdf /static/name.pdf</code>，这样原始文件更新时这里可以同步更新（当然还需要用 Hugo 重新渲染再提交）. 然后在相应的文章的 front matter 中加上一些额外的识别参数，在文章页 (single.html) 对其进行判断：</p>
-
 <pre><code># /content/section1/section2/file_name.md
 ---
 title: 文章题目
@@ -459,52 +339,32 @@ title: 文章题目
 file_path: name.pdf
 ---
 一些介绍性的文字（可选）.
-</code></pre>
-
-<pre><code>&lt;!-- /themes/theme-name/layouts/_default/single.html --&gt;
+</code></pre><pre><code>&lt;!-- /themes/theme-name/layouts/_default/single.html --&gt;
 &lt;div class=&quot;pdf-part&quot;&gt;
     {{ with .Params.file_path }}
         &lt;embed src=&quot;/{{ . }}&quot; width=&quot;100%&quot; height=&quot;700&quot;/&gt;
     {{ end }}
 &lt;/div&gt;
-</code></pre>
-
-<h2 id="调整样式">调整样式</h2>
-
+</code></pre><h2 id="heading4">调整样式</h2>
 <p>按照心中预计的样子编写 CSS 文件，如果需要的话也写一些 JS. 就像 HTML 语言一样，关于它们的使用方法可以在任意相关的网站上找到，不是建立本站的难点，也不会成为这篇文章的重点.</p>
-
 <p>关于目录的生成主要参考了<a href="https://www.runoob.com/css/css-dropdowns.html">菜鸟教程, CSS 下拉菜单</a>和<a href="https://clickhelp.com/clickhelp-technical-writing-blog/advanced-autonumbering-techniques-with-css/">Anastasia, Advanced Autonumbering Techniques with CSS</a>.</p>
-
 <p>然后就是我的文章排版，用了两端对齐，但是又有中文又有英文有时还有数学内容的文章就特别丑，中间的间距不均匀，我也不知道该怎么办.</p>
-
-<h2 id="评论系统的支持">评论系统的支持</h2>
-
+<h2 id="heading5">评论系统的支持</h2>
 <p>在这里我使用了以 GitHub issue 为工具的 <a href="https://utteranc.ce">utterances</a> 来生成评论，原理非常简单，配置也非常容易，按照其官网的说明简单操作即可. 本站的所有评论存储在<a href="https://github.com/zerovip/bcsu/issues">这里</a>.</p>
-
-<h2 id="自定义的-404-页面">自定义的 404 页面</h2>
-
+<h2 id="-404-">自定义的 404 页面</h2>
 <p>在这里遇到一个多语言页面的问题. <a href="https://help.github.com/en/articles/creating-a-custom-404-page-for-your-github-pages-site">GitHub Page 上说</a>需要在根目录建立 404.html：</p>
-
 <blockquote>
 <p>Create a HTML file named 404.html or create a new Markdown file named 404.md at the root level of your GitHub Pages repository.</p>
 </blockquote>
-
 <p><a href="https://gohugo.io/templates/404/">Hugo 的官方</a>也是这样支持的：</p>
-
 <blockquote>
 <p>When using Hugo with GitHub Pages, you can provide your own template for a custom 404 error page by creating a 404.html template file in your /layouts folder. When Hugo generates your site, the 404.html file will be placed in the root.</p>
 </blockquote>
-
 <p>然而真正操作的时候，Hugo 把 404.html 分别放到了不同的语言文件夹下. 这样一来我虽然可以定制不同语言版本的 404 页面，却没法在 GitHub Pages 上使用. 想了想也许可以手动建一个根目录下的 404.html 并用 JS 进行重定向，但觉得不爽所以我没有这样做，目前本站还是 GitHub Pages 默认的 404 页面. 网络上<a href="https://github.com/gohugoio/hugo/issues/3075">这个 issue</a> 的解决可能是导致这个问题的根源，与此相关的还有<a href="https://discourse.gohugo.io/t/define-404-page-content-in-an-md-file-under-the-content-directory/13943">这个讨论</a>.</p>
-
-<h1 id="部署到-github-pages-上">部署到 GitHub Pages 上</h1>
-
+<h1 id="-github-pages-">部署到 GitHub Pages 上</h1>
 <p>按照<a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/">官方文档</a>进行部署，因为是个人博客，我用的是<a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/#github-user-or-organization-pages">第一种 User/Organization Pages 类型</a>. 操作也都极为简单，不再赘述. 如果遇到已经部署好了却打不开的情况可以尝试重新 push 一下.</p>
-
-<h1 id="是为记">是为记.</h1>
-
-<h1 id="todo-清单">TODO 清单</h1>
-
+<h1 id="heading6">是为记.</h1>
+<h1 id="todo-">TODO 清单</h1>
 <ol>
 <li><del>评论系统</del></li>
 <li>适配手机的 CSS (重写 CSS 计划)</li>
@@ -522,15 +382,14 @@ file_path: name.pdf
 <li><del>把 head 中的标题改一下，在搜索引擎中显得好看一点</del></li>
 <li>list 中写 head 标题的方法过于暴力，需要简化</li>
 </ol>
-<div class="footnotes">
-
-<hr />
-
+<section class="footnotes" role="doc-endnotes">
+<hr>
 <ol>
-<li id="fn:1">不同之处在于，由于 Python 是解释型语言，Django 会在客户端访问时对客户端访问的*一个*网页进行渲染并发回客户端；而 GoLang 是编译型的，只好编译成 Hugo 供人们在每写完一篇文章后对整个网站的*所有*网页重新渲染好，成为静态网页后进行发布）.
- <a class="footnote-return" href="#fnref:1"><sup>[return]</sup></a></li>
+<li id="fn:1" role="doc-endnote">
+<p>不同之处在于，由于 Python 是解释型语言，Django 会在客户端访问时对客户端访问的<em>一个</em>网页进行渲染并发回客户端；而 GoLang 是编译型的，只好编译成 Hugo 供人们在每写完一篇文章后对整个网站的<em>所有</em>网页重新渲染好，成为静态网页后进行发布）.<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#8617;</a></p>
+</li>
 </ol>
-</div>
+</section>
 
         </div>
         <div class="special_notes">

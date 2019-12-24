@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="generator" content="Hugo 0.60.1" />
+    <title>
+        
+    静态博客文章加密工具测试
+ | 赤赤的象牙塔
+    </title>
+    <link rel="stylesheet" type="text/css" href="../../css/base.css">
+    
+    
+    
+        
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-143006759-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+    
+</head>
+
+<body>
+
+
+
+
+<div class='left_bar'>
+
+    
+    <div class='option_part'>
+        
+        
+        <li><a href="https://zerovip.github.io/zh/62772/">简体中文●</a></li>
+        
+        <li><a href="https://zerovip.github.io/en/62772/">English●</a></li>
+        
+        <li><a href="https://zerovip.github.io/fr/62772/">Français●</a></li>
+        
+    </div>
+
+    
+    <div class='title_part'>
+        <div class='title'><a href="../../zh/">赤赤的象牙塔</a></div>
+        <div class='subtitle'>(●’◡’●)ﾉ</div>
+    </div>
+
+    
+    
+    <div class='main_part'>
+        
+         
+	        <div  class="h1 ">
+                <a href="../../zh/math/">数学</a>
+            </div>
+            
+                
+                    
+                        <div class="h2 ">
+                            <a href="../../zh/math/notes/">数学笔记 </a>
+                        </div>
+                    
+                
+                    
+                        <div class="h2 ">
+                            <a href="../../zh/math/stories/">数学科普 </a>
+                        </div>
+                    
+                
+            
+         
+	        <div  class="h1 active">
+                <a href="../../zh/non-math/">非数学</a>
+            </div>
+            
+                
+                    
+                        <div class="h2 ">
+                            <a href="../../zh/non-math/journal/">日志 </a>
+                        </div>
+                    
+                
+                    
+                        <div class="h2 ">
+                            <a href="../../zh/non-math/travels/">游记 </a>
+                        </div>
+                    
+                
+                    
+                        <div class="h2 active">
+                            <a href="../../zh/non-math/memos/">备忘 </a>
+                        </div>
+                    
+                
+            
+         
+	        <div  class="h1 ">
+                <a href="../../zh/about/">关于</a>
+            </div>
+            
+                
+                    
+                        <div class="h2 ">
+                            <a href="../../zh/about/me/">关于我 </a>
+                        </div>
+                    
+                
+                    
+                        <div class="h2 ">
+                            <a href="../../zh/about/site/">关于本站 </a>
+                        </div>
+                    
+                
+            
+        
+    </div>
+</div>
+
+
+<div class='footer_part'>
+    <div class='copyright'>©2019 版权所有.</div>
+</div>
+
+
+<div class='right_part'>
+    
+    <div class="page_title_part">
+        <div class="page_title">
+            静态博客文章加密工具测试
+        </div>
+        <div class="title_des">
+            2019-12-23 - 364 字
+        </div>
+        <div class="toc_part">
+    <button class="toc_title">目录</button>
+    <div class="toc_content">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#heading1">二级标题</a></li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+
+    </div>
+
+    
+    <div class="right_main">
+        <div class="article">
+            <h1 id="heading"></h1>
+<p><a href="https://github.com/Li4n0/hugo_encryptor">Hugo encryptor</a> 是一款我偶然发现的可以给静态博客文章进行加密的小工具，配置使用很简单，可惜的是不能在本地测试.</p>
+<p>不过它足够简单，一经测试成功可以投入使用便不再需要反复测试，因此这篇博文是专门用来测试的.</p>
+<p>下面加密内容的密码是【PASS3word】.</p>
+<hugo-encryptor>
+  
+  <p>以下内容被密码保护</p>
+  
+  <div class='hugo-encryptor-form'>
+    <input
+      class="hugo-encryptor-input"
+      id="hugo-encryptor-password"
+      placeholder='请输入密码'
+    />
+    <input
+      class="hugo-encryptor-button"
+      type="button"
+      value='提交'
+      onclick="hugoDecrypt(CryptoJS.MD5(document.getElementById('hugo-encryptor-password').value).toString(),'input')"
+    />
+  </div>
+  <cipher-text data-password="PASS3word" style="display:none;">
+    <p id="verifyText" style="display:none;">
+      The quick brown fox jumps over the lazy dog
+    </p>
+    <p>这里是测试内容.</p>
+<h1 id="heading">标题二</h1>
+<p>一些内容.</p>
+<h1 id="heading1"></h1>
+<p>还是一些内容.</p>
+<h2 id="heading2"></h2>
+<p>仍是一些内容.</p>
+<p>其他结构待测试.</p>
+
+  </cipher-text>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
+  <script>
+      let cipher = document.getElementsByTagName("cipher-text")[0];
+      const storageKey = location.pathname + "password";
+      const userStorage =  window['sessionStorage'] ;
+      
+
+      const decrypt = function(cipher_text, password) {
+        let key = CryptoJS.enc.Utf8.parse(password);
+        let iv = CryptoJS.enc.Utf8.parse(password.substr(16));
+
+        let decryptedData = CryptoJS.AES.decrypt(cipher_text, key, {
+          iv: iv,
+          mode: CryptoJS.mode.CBC,
+          padding: CryptoJS.pad.Pkcs7
+        });
+        return decryptedData.toString(CryptoJS.enc.Utf8);
+      };
+      
+
+      const hugoDecrypt = function(password, type) {
+        try {
+          let cipher_text = cipher.innerText;
+          let decrypted_text = decrypt(cipher_text, password);
+          if (
+            decrypted_text.includes("The quick brown fox jumps over the lazy dog")
+          ) {
+            cipher.parentElement.outerHTML = decrypted_text;
+            userStorage.setItem(storageKey, password);
+            document.getElementById("verifyText").outerHTML = "";
+          } else {
+            if (type === "input") {
+              alert('密码错误');
+            } else if (type === "storage") {
+              userStorage.removeItem(storageKey);
+            }
+          }
+        } catch (error) {
+          
+          if (type === "input") {
+            alert('密码错误');
+          } else if (type === "storage") {
+            userStorage.removeItem(location.pathname + "password");
+          }
+        }
+      };
+  </script>
+  <script>
+    window.onload = () => {
+      if (userStorage.getItem(storageKey)) {
+        hugoDecrypt(userStorage.getItem(storageKey), "storage");
+      }
+    };
+  </script>
+</hugo-encryptor>
+
+<h2 id="heading1">二级标题</h2>
+<p>没有被加密的内容.</p>
+<h1 id="heading2">一级标题</h1>
+<p>另一些没有被加密的内容.</p>
+        </div>
+        <div class="special_notes">
+            
+        </div>
+    </div>
+    <div class="right_comments">
+        
+<script src="https://utteranc.es/client.js"
+    repo="zerovip/bcsu"
+    issue-term="pathname"
+    theme="github-light"
+    crossorigin="anonymous"
+    async>
+</script>
+
+    </div>
+
+</div>
+
+</body>
+</html>
