@@ -27,14 +27,12 @@
             
         
     
-
  | 赤赤的象牙塔
     </title>
+    
     <link rel="stylesheet" type="text/css" href="../../css/base.css" />
-    <link rel="stylesheet" media="screen and (max-device-width: 600px)" type="text/css" href="../../css/small.css" />
-    <link rel="stylesheet" media="screen and (min-width: 600px)" type="text/css" href="../../css/normal.css" />
-
-
+    <link rel="stylesheet" media="screen and (max-width: 800px)" type="text/css" href="../../css/small.css" />
+    <link rel="stylesheet" media="screen and (min-width: 800px)" type="text/css" href="../../css/normal.css" />
     
     
         
@@ -50,6 +48,15 @@ if (!doNotTrack) {
 <script async src='https://www.google-analytics.com/analytics.js'></script>
 
     
+    
+    <script>
+        function ChangeClassLeft(){
+            document.getElementById("left").classList.toggle("left_show");
+            }
+        function ChangeClassTOC(){
+            document.getElementById("toc").classList.toggle("toc_show");
+            }
+    </script>
 </head>
 
 <body>
@@ -57,107 +64,122 @@ if (!doNotTrack) {
 
 
 
-<div class='left_bar'>
-
-    
-    <div class='option_part'>
-        
-        
-        <li><a href="https://zerovip.github.io/zh/non-math/">简体中文●</a></li>
-        
-        <li><a href="https://zerovip.github.io/en/non-math/">English●</a></li>
-        
-        <li><a href="https://zerovip.github.io/fr/non-math/">Français●</a></li>
-        
+<div class='bar_for_phone'>
+    <div class='bar_left_button'>
+        <button class='left_button_for_bar' onclick="ChangeClassLeft()">●●●</button>
     </div>
-
-    
-    <div class='title_part'>
-        <div class='title'><a href="../../zh/">赤赤的象牙塔</a></div>
-        <div class='subtitle'>(●’◡’●)ﾉ</div>
+    <div class='bar_title'>
+        <a href="../../zh/">赤赤的象牙塔</a>
     </div>
-
-    
-    
-    <div class='main_part'>
-        
-         
-	        <div  class="h1 ">
-                <a href="../../zh/math/">数学</a>
-            </div>
-            
-                
-                    
-                        <div class="h2 ">
-                            <a href="../../zh/math/notes/">数学笔记 </a>
-                        </div>
-                    
-                
-                    
-                        <div class="h2 ">
-                            <a href="../../zh/math/stories/">数学科普 </a>
-                        </div>
-                    
-                
-            
-         
-	        <div  class="h1 active">
-                <a href="../../zh/non-math/">非数学</a>
-            </div>
-            
-                
-                    
-                        <div class="h2 ">
-                            <a href="../../zh/non-math/journal/">日志 </a>
-                        </div>
-                    
-                
-                    
-                        <div class="h2 ">
-                            <a href="../../zh/non-math/travels/">游记 </a>
-                        </div>
-                    
-                
-                    
-                        <div class="h2 ">
-                            <a href="../../zh/non-math/memos/">备忘 </a>
-                        </div>
-                    
-                
-            
-         
-	        <div  class="h1 ">
-                <a href="../../zh/about/">关于</a>
-            </div>
-            
-                
-                    
-                        <div class="h2 ">
-                            <a href="../../zh/about/me/">关于我 </a>
-                        </div>
-                    
-                
-                    
-                        <div class="h2 ">
-                            <a href="../../zh/about/site/">关于本站 </a>
-                        </div>
-                    
-                
-            
+    <div class='bar_right_button'>
         
     </div>
 </div>
 
 
-<div class='footer_part'>
-    <div class='copyright'>©2019 版权所有.</div>
-</div>
-
-
-<div class='right_part'>
+<div class='body_for_pc'>
     
-<div class="page_title_part">
-    <div class="page_title">
+    <div class='left' id='left'>
+
+        
+        <div class='left_non-footer'>
+            
+            <div class='left_non-footer_option'>
+                
+                
+                <li><a href="https://zerovip.github.io/zh/non-math/">简体中文●</a></li>
+                
+                <li><a href="https://zerovip.github.io/en/non-math/">English●</a></li>
+                
+                <li><a href="https://zerovip.github.io/fr/non-math/">Français●</a></li>
+                
+            </div>
+            
+            <div class='left_non-footer_head'>
+                <div class='left_non-footer_head_title'><a href="../../zh/">赤赤的象牙塔</a></div>
+                <div class='left_non-footer_head_subtitle'>(●’◡’●)ﾉ</div>
+            </div>
+            
+            
+            <div class='left_non-footer_main'>
+                
+                 
+                    <div  class="h1 ">
+                        <a href="../../zh/math/">数学</a>
+                    </div>
+                    
+                        
+                            
+                                <div class="h2 ">
+                                    <a href="../../zh/math/notes/">数学笔记 </a>
+                                </div>
+                            
+                        
+                            
+                                <div class="h2 ">
+                                    <a href="../../zh/math/stories/">数学科普 </a>
+                                </div>
+                            
+                        
+                    
+                 
+                    <div  class="h1 active">
+                        <a href="../../zh/non-math/">非数学</a>
+                    </div>
+                    
+                        
+                            
+                                <div class="h2 ">
+                                    <a href="../../zh/non-math/journal/">日志 </a>
+                                </div>
+                            
+                        
+                            
+                                <div class="h2 ">
+                                    <a href="../../zh/non-math/travels/">游记 </a>
+                                </div>
+                            
+                        
+                            
+                                <div class="h2 ">
+                                    <a href="../../zh/non-math/memos/">备忘 </a>
+                                </div>
+                            
+                        
+                    
+                 
+                    <div  class="h1 ">
+                        <a href="../../zh/about/">关于</a>
+                    </div>
+                    
+                        
+                            
+                                <div class="h2 ">
+                                    <a href="../../zh/about/me/">关于我 </a>
+                                </div>
+                            
+                        
+                            
+                                <div class="h2 ">
+                                    <a href="../../zh/about/site/">关于本站 </a>
+                                </div>
+                            
+                        
+                    
+                
+            </div>
+
+        </div>
+        
+        <div class='left_footer'>
+            <div class='copyright'>©2019 版权所有.</div>
+        </div>
+    </div>
+    
+    <div class='right'>
+        
+<div class="right_head">
+    <div class="right_head_title">
         
         
                 
@@ -181,13 +203,13 @@ if (!doNotTrack) {
                 
         
     </div>
-    <div class="title_des">
+    <div class="right_head_des">
         <p>非数学分区，记录我个人的生活、感想等. 分为日志、游记和备忘三部分.</p>
 
     </div>
 </div>
 
-    
+        
 <div class="right_main">
     
     
@@ -202,78 +224,78 @@ if (!doNotTrack) {
         
             
                 <a href="https://zerovip.github.io/zh/62772/">
-<div class="article_title">
+<div class="right_main_article-title">
     ■静态博客文章加密工具测试
 </div>
-<div class="article_des">
+<div class="right_main_article-des">
     2019-12-23 - 阅读时间: 2分钟
 </div>
-<div class="article_sum">
+<div class="right_main_article-sum">
     <p>一次测试.（这里是 summary 的内容.）</p>...
 </div>
 </a>
 
             
                 <a href="https://zerovip.github.io/zh/69995/">
-<div class="article_title">
+<div class="right_main_article-title">
     ■配眼镜相关知识总结-消费指南
 </div>
-<div class="article_des">
+<div class="right_main_article-des">
     2019-07-21 - 阅读时间: 22分钟
 </div>
-<div class="article_sum">
+<div class="right_main_article-sum">
     “消费指南”这个系列 因为没有钱直接去买最好的东西，没有钱直接去享受最好的服务，而我又想用有限的钱享受还算可以的服务，因此每当我消费...
 </div>
 </a>
 
             
                 <a href="https://zerovip.github.io/zh/71352/">
-<div class="article_title">
+<div class="right_main_article-title">
     ■我学习了英语词根
 </div>
-<div class="article_des">
+<div class="right_main_article-des">
     2019-07-07 - 阅读时间: 28分钟
 </div>
-<div class="article_sum">
+<div class="right_main_article-sum">
     有一些过程的记录和心得体会，但主要是词根的知识总结，干货很多，所以字数很多....
 </div>
 </a>
 
             
                 <a href="https://zerovip.github.io/zh/23536/">
-<div class="article_title">
+<div class="right_main_article-title">
     ■我的电子生活
 </div>
-<div class="article_des">
+<div class="right_main_article-des">
     2019-06-24 - 阅读时间: 10分钟
 </div>
-<div class="article_sum">
+<div class="right_main_article-sum">
     我一向认为明文的法则是能让人的生活有条不紊的，也让人不会迷失在选择和犹豫中，是把复杂问题变简单的办法. 本文将对我的电子生活做一个梳...
 </div>
 </a>
 
             
                 <a href="https://zerovip.github.io/zh/71828/">
-<div class="article_title">
+<div class="right_main_article-title">
     ■一些不错的网站
 </div>
-<div class="article_des">
+<div class="right_main_article-des">
     2019-06-23 - 阅读时间: 1分钟
 </div>
-<div class="article_sum">
+<div class="right_main_article-sum">
     收集整理值得一看的网站，并给出链接....
 </div>
 </a>
 
             
                 <a href="https://zerovip.github.io/zh/18284/">
-<div class="article_title">
+<div class="right_main_article-title">
     ■建站记
 </div>
-<div class="article_des">
+<div class="right_main_article-des">
     2019-06-22 - 阅读时间: 11分钟
 </div>
-<div class="article_sum">
+<div class="right_main_article-sum">
     很早就想建一个自己的博客了，每每看到别人的好看的博客就心里痒痒. 高中及以前写过一些回忆录都发表在 QQ 空间上，高中以来有意识地进行一些...
 </div>
 </a>
@@ -291,7 +313,9 @@ if (!doNotTrack) {
     
 </div>
 
+    </div>
+    
+    
 </div>
-
 </body>
 </html>

@@ -8,11 +8,10 @@
     配眼镜相关知识总结-消费指南
  | 赤赤的象牙塔
     </title>
+    
     <link rel="stylesheet" type="text/css" href="../../css/base.css" />
-    <link rel="stylesheet" media="screen and (max-device-width: 600px)" type="text/css" href="../../css/small.css" />
-    <link rel="stylesheet" media="screen and (min-width: 600px)" type="text/css" href="../../css/normal.css" />
-
-
+    <link rel="stylesheet" media="screen and (max-width: 800px)" type="text/css" href="../../css/small.css" />
+    <link rel="stylesheet" media="screen and (min-width: 800px)" type="text/css" href="../../css/normal.css" />
     
     
         
@@ -28,6 +27,15 @@ if (!doNotTrack) {
 <script async src='https://www.google-analytics.com/analytics.js'></script>
 
     
+    
+    <script>
+        function ChangeClassLeft(){
+            document.getElementById("left").classList.toggle("left_show");
+            }
+        function ChangeClassTOC(){
+            document.getElementById("toc").classList.toggle("toc_show");
+            }
+    </script>
 </head>
 
 <body>
@@ -35,196 +43,134 @@ if (!doNotTrack) {
 
 
 
-<div class='left_bar'>
-
-    
-    <div class='option_part'>
-        
-        
-        <li><a href="https://zerovip.github.io/zh/69995/">简体中文●</a></li>
-        
-        <li><a href="https://zerovip.github.io/en/69995/">English●</a></li>
-        
-        <li><a href="https://zerovip.github.io/fr/69995/">Français●</a></li>
-        
+<div class='bar_for_phone'>
+    <div class='bar_left_button'>
+        <button class='left_button_for_bar' onclick="ChangeClassLeft()">●●●</button>
     </div>
-
-    
-    <div class='title_part'>
-        <div class='title'><a href="../../zh/">赤赤的象牙塔</a></div>
-        <div class='subtitle'>(●’◡’●)ﾉ</div>
+    <div class='bar_title'>
+        <a href="../../zh/">赤赤的象牙塔</a>
     </div>
+    <div class='bar_right_button'>
+        
+    <button class='toc_title_for_bar' onclick="ChangeClassTOC()">目录</button>
 
-    
-    
-    <div class='main_part'>
-        
-         
-	        <div  class="h1 ">
-                <a href="../../zh/math/">数学</a>
-            </div>
-            
-                
-                    
-                        <div class="h2 ">
-                            <a href="../../zh/math/notes/">数学笔记 </a>
-                        </div>
-                    
-                
-                    
-                        <div class="h2 ">
-                            <a href="../../zh/math/stories/">数学科普 </a>
-                        </div>
-                    
-                
-            
-         
-	        <div  class="h1 active">
-                <a href="../../zh/non-math/">非数学</a>
-            </div>
-            
-                
-                    
-                        <div class="h2 active">
-                            <a href="../../zh/non-math/journal/">日志 </a>
-                        </div>
-                    
-                
-                    
-                        <div class="h2 ">
-                            <a href="../../zh/non-math/travels/">游记 </a>
-                        </div>
-                    
-                
-                    
-                        <div class="h2 ">
-                            <a href="../../zh/non-math/memos/">备忘 </a>
-                        </div>
-                    
-                
-            
-         
-	        <div  class="h1 ">
-                <a href="../../zh/about/">关于</a>
-            </div>
-            
-                
-                    
-                        <div class="h2 ">
-                            <a href="../../zh/about/me/">关于我 </a>
-                        </div>
-                    
-                
-                    
-                        <div class="h2 ">
-                            <a href="../../zh/about/site/">关于本站 </a>
-                        </div>
-                    
-                
-            
-        
     </div>
 </div>
 
 
-<div class='footer_part'>
-    <div class='copyright'>©2019 版权所有.</div>
-</div>
-
-
-<div class='right_part'>
+<div class='body_for_pc'>
     
-    <div class="page_title_part">
-        <div class="page_title">
+    <div class='left' id='left'>
+
+        
+        <div class='left_non-footer'>
+            
+            <div class='left_non-footer_option'>
+                
+                
+                <li><a href="https://zerovip.github.io/zh/69995/">简体中文●</a></li>
+                
+                <li><a href="https://zerovip.github.io/en/69995/">English●</a></li>
+                
+                <li><a href="https://zerovip.github.io/fr/69995/">Français●</a></li>
+                
+            </div>
+            
+            <div class='left_non-footer_head'>
+                <div class='left_non-footer_head_title'><a href="../../zh/">赤赤的象牙塔</a></div>
+                <div class='left_non-footer_head_subtitle'>(●’◡’●)ﾉ</div>
+            </div>
+            
+            
+            <div class='left_non-footer_main'>
+                
+                 
+                    <div  class="h1 ">
+                        <a href="../../zh/math/">数学</a>
+                    </div>
+                    
+                        
+                            
+                                <div class="h2 ">
+                                    <a href="../../zh/math/notes/">数学笔记 </a>
+                                </div>
+                            
+                        
+                            
+                                <div class="h2 ">
+                                    <a href="../../zh/math/stories/">数学科普 </a>
+                                </div>
+                            
+                        
+                    
+                 
+                    <div  class="h1 active">
+                        <a href="../../zh/non-math/">非数学</a>
+                    </div>
+                    
+                        
+                            
+                                <div class="h2 active">
+                                    <a href="../../zh/non-math/journal/">日志 </a>
+                                </div>
+                            
+                        
+                            
+                                <div class="h2 ">
+                                    <a href="../../zh/non-math/travels/">游记 </a>
+                                </div>
+                            
+                        
+                            
+                                <div class="h2 ">
+                                    <a href="../../zh/non-math/memos/">备忘 </a>
+                                </div>
+                            
+                        
+                    
+                 
+                    <div  class="h1 ">
+                        <a href="../../zh/about/">关于</a>
+                    </div>
+                    
+                        
+                            
+                                <div class="h2 ">
+                                    <a href="../../zh/about/me/">关于我 </a>
+                                </div>
+                            
+                        
+                            
+                                <div class="h2 ">
+                                    <a href="../../zh/about/site/">关于本站 </a>
+                                </div>
+                            
+                        
+                    
+                
+            </div>
+
+        </div>
+        
+        <div class='left_footer'>
+            <div class='copyright'>©2019 版权所有.</div>
+        </div>
+    </div>
+    
+    <div class='right'>
+        
+    <div class="right_head">
+        <div class="right_head_title">
             配眼镜相关知识总结-消费指南
         </div>
-        <div class="title_des">
+        <div class="right_head_des">
             2019-07-21 - 10619 字
         </div>
-        <div class="toc_part">
-    <button class="toc_title">目录</button>
-    <div class="toc_content">
-        <nav id="TableOfContents">
-  <ul>
-    <li><a href="#heading2">知识</a></li>
-    <li><a href="#heading3">验光数据</a>
-      <ul>
-        <li><a href="#ssph">球镜（S、Sph）</a></li>
-        <li><a href="#ccyl">柱镜（C、Cyl）</a></li>
-        <li><a href="#axax">轴位（A、X、Ax）</a></li>
-        <li><a href="#pd">瞳距（PD）</a></li>
-        <li><a href="#add">下加光（ADD）</a></li>
-      </ul>
-    </li>
-    <li><a href="#heading4">流程</a>
-      <ul>
-        <li><a href="#heading5">客观验光</a></li>
-        <li><a href="#heading6">主觉验光</a></li>
-      </ul>
-    </li>
-    <li><a href="#heading9">资质</a></li>
-    <li><a href="#heading10">参考</a></li>
-  </ul>
-
-  <ul>
-    <li><a href="#heading12">形状</a></li>
-    <li><a href="#heading13">颜色</a></li>
-    <li><a href="#heading14">材质</a>
-      <ul>
-        <li><a href="#heading15">天然（不常用）</a></li>
-        <li><a href="#heading18">塑料</a></li>
-        <li><a href="#heading26">金属</a></li>
-      </ul>
-    </li>
-    <li><a href="#heading31">尺寸</a>
-      <ul>
-        <li><a href="#lens-size">镜片宽度（Lens Size）</a></li>
-        <li><a href="#bridge-size">鼻梁宽度（Bridge Size）</a></li>
-        <li><a href="#arm-size">镜腿长（Arm Size）</a></li>
-      </ul>
-    </li>
-    <li><a href="#heading32">参考</a></li>
-  </ul>
-
-  <ul>
-    <li><a href="#heading34">参数</a>
-      <ul>
-        <li><a href="#heading35">形状</a></li>
-        <li><a href="#heading36">材质</a></li>
-        <li><a href="#heading37">折射率</a></li>
-        <li><a href="#heading38">阿贝数</a></li>
-        <li><a href="#heading39">比重</a></li>
-        <li><a href="#heading40">膜层</a></li>
-        <li><a href="#heading41">现片范围与车房范围</a></li>
-      </ul>
-    </li>
-    <li><a href="#heading42">品牌</a></li>
-    <li><a href="#heading43">参考</a></li>
-  </ul>
-
-  <ul>
-    <li><a href="#heading45">流程</a>
-      <ul>
-        <li><a href="#heading46">可行性分析</a></li>
-        <li><a href="#heading47">准备</a></li>
-        <li><a href="#heading48">磨边</a></li>
-        <li><a href="#heading49">适当修整</a></li>
-        <li><a href="#heading50">装入镜架</a></li>
-      </ul>
-    </li>
-    <li><a href="#heading51">资质</a></li>
-    <li><a href="#heading52">参考</a></li>
-  </ul>
-</nav>
-    </div>
-</div>
-
-
     </div>
 
-    
+        
     <div class="right_main">
-        <div class="article">
+        <div class="right_main_article">
             <h1 id="heading">“消费指南”这个系列</h1>
 <p>因为没有钱直接去买最好的东西，没有钱直接去享受最好的服务，而我又想用有限的钱享受还算可以的服务，因此每当我消费（买电脑、买手机、买雨伞、买笔、买衣服、买鞋，预感未来买汽车、买房子……）之前我都要深入了解有关的一切信息，然后作出最适合自己的决定，这样的流程让我深入了解了各行各业. 贫穷 + 不妥协 = 浪费时间. 然而这些浪费的时间只在消费当时发挥作用，多年后再次消费同类产品时往往还要再次浪费时间——除了随着科技进步的业界革新之外，更重要的原因是过一段时间后这些学到的知识就被我忘记了，因为不是专业人士，不常用也无需复习. 为了减少之后重新学习的时间成本，也为了给其他有同样需求的人一定的参考，我开设了这个系列.</p>
 <p>【这个系列的内容都是偏向于客观的知识的阐述，列出的参考中会有一部分偏方法论的内容.】</p>
@@ -497,7 +443,7 @@ if (!doNotTrack) {
 <p>我选择的这位老板最后事实证明确实很靠谱，我的眼镜的定配据说是由镜片品牌的原厂进行的加工，我也提前主动告知了我的要求：尖边槽前面 40%、后面 60%，最后要求老板轻微倒边不割手即可，不抛光. 最后拿到眼镜十分满意.</p>
 
         </div>
-        <div class="special_notes">
+        <div class="right_main_notes">
             
         </div>
     </div>
@@ -513,7 +459,96 @@ if (!doNotTrack) {
 
     </div>
 
-</div>
+    </div>
+    
+    
+    <div class='toc' id='toc'>
+        <button class='toc_title'>目录</button>
+        <div class='toc_content'>
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#heading">“消费指南”这个系列</a></li>
+    <li><a href="#heading1">验光</a>
+      <ul>
+        <li><a href="#heading2">知识</a></li>
+        <li><a href="#heading3">验光数据</a>
+          <ul>
+            <li><a href="#ssph">球镜（S、Sph）</a></li>
+            <li><a href="#ccyl">柱镜（C、Cyl）</a></li>
+            <li><a href="#axax">轴位（A、X、Ax）</a></li>
+            <li><a href="#pd">瞳距（PD）</a></li>
+            <li><a href="#add">下加光（ADD）</a></li>
+          </ul>
+        </li>
+        <li><a href="#heading4">流程</a>
+          <ul>
+            <li><a href="#heading5">客观验光</a></li>
+            <li><a href="#heading6">主觉验光</a></li>
+          </ul>
+        </li>
+        <li><a href="#heading9">资质</a></li>
+        <li><a href="#heading10">参考</a></li>
+      </ul>
+    </li>
+    <li><a href="#heading11">镜架</a>
+      <ul>
+        <li><a href="#heading12">形状</a></li>
+        <li><a href="#heading13">颜色</a></li>
+        <li><a href="#heading14">材质</a>
+          <ul>
+            <li><a href="#heading15">天然（不常用）</a></li>
+            <li><a href="#heading18">塑料</a></li>
+            <li><a href="#heading26">金属</a></li>
+          </ul>
+        </li>
+        <li><a href="#heading31">尺寸</a>
+          <ul>
+            <li><a href="#lens-size">镜片宽度（Lens Size）</a></li>
+            <li><a href="#bridge-size">鼻梁宽度（Bridge Size）</a></li>
+            <li><a href="#arm-size">镜腿长（Arm Size）</a></li>
+          </ul>
+        </li>
+        <li><a href="#heading32">参考</a></li>
+      </ul>
+    </li>
+    <li><a href="#heading33">镜片</a>
+      <ul>
+        <li><a href="#heading34">参数</a>
+          <ul>
+            <li><a href="#heading35">形状</a></li>
+            <li><a href="#heading36">材质</a></li>
+            <li><a href="#heading37">折射率</a></li>
+            <li><a href="#heading38">阿贝数</a></li>
+            <li><a href="#heading39">比重</a></li>
+            <li><a href="#heading40">膜层</a></li>
+            <li><a href="#heading41">现片范围与车房范围</a></li>
+          </ul>
+        </li>
+        <li><a href="#heading42">品牌</a></li>
+        <li><a href="#heading43">参考</a></li>
+      </ul>
+    </li>
+    <li><a href="#heading44">定配</a>
+      <ul>
+        <li><a href="#heading45">流程</a>
+          <ul>
+            <li><a href="#heading46">可行性分析</a></li>
+            <li><a href="#heading47">准备</a></li>
+            <li><a href="#heading48">磨边</a></li>
+            <li><a href="#heading49">适当修整</a></li>
+            <li><a href="#heading50">装入镜架</a></li>
+          </ul>
+        </li>
+        <li><a href="#heading51">资质</a></li>
+        <li><a href="#heading52">参考</a></li>
+      </ul>
+    </li>
+    <li><a href="#heading53">我的经历</a></li>
+  </ul>
+</nav>
+        </div>
+    </div>
 
+</div>
 </body>
 </html>

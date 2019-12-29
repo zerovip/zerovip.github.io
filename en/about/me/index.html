@@ -8,11 +8,10 @@
     About me
  | Zero&#39;s Ivory Tower
     </title>
+    
     <link rel="stylesheet" type="text/css" href="../../../css/base.css" />
-    <link rel="stylesheet" media="screen and (max-device-width: 600px)" type="text/css" href="../../../css/small.css" />
-    <link rel="stylesheet" media="screen and (min-width: 600px)" type="text/css" href="../../../css/normal.css" />
-
-
+    <link rel="stylesheet" media="screen and (max-width: 800px)" type="text/css" href="../../../css/small.css" />
+    <link rel="stylesheet" media="screen and (min-width: 800px)" type="text/css" href="../../../css/normal.css" />
     
     
         
@@ -28,6 +27,15 @@ if (!doNotTrack) {
 <script async src='https://www.google-analytics.com/analytics.js'></script>
 
     
+    
+    <script>
+        function ChangeClassLeft(){
+            document.getElementById("left").classList.toggle("left_show");
+            }
+        function ChangeClassTOC(){
+            document.getElementById("toc").classList.toggle("toc_show");
+            }
+    </script>
 </head>
 
 <body>
@@ -35,129 +43,138 @@ if (!doNotTrack) {
 
 
 
-<div class='left_bar'>
-
-    
-    <div class='option_part'>
-        
-        
-        <li><a href="https://zerovip.github.io/zh/about/me/">简体中文●</a></li>
-        
-        <li><a href="https://zerovip.github.io/en/about/me/">English●</a></li>
-        
-        <li><a href="https://zerovip.github.io/fr/about/me/">Français●</a></li>
-        
+<div class='bar_for_phone'>
+    <div class='bar_left_button'>
+        <button class='left_button_for_bar' onclick="ChangeClassLeft()">●●●</button>
     </div>
-
-    
-    <div class='title_part'>
-        <div class='title'><a href="../../../en/">Zero&#39;s Ivory Tower</a></div>
-        <div class='subtitle'>(●’◡’●)ﾉ</div>
+    <div class='bar_title'>
+        <a href="../../../en/">Zero&#39;s Ivory Tower</a>
     </div>
+    <div class='bar_right_button'>
+        
+    <button class='toc_title_for_bar' onclick="ChangeClassTOC()">Table of Content</button>
 
-    
-    
-    <div class='main_part'>
-        
-         
-	        <div  class="h1 ">
-                <a href="../../../en/math/">MATHEMATICS</a>
-            </div>
-            
-                
-                    
-                        <div class="h2 ">
-                            <a href="../../../en/math/notes/">Math Noes </a>
-                        </div>
-                    
-                
-                    
-                        <div class="h2 ">
-                            <a href="../../../en/math/stories/">Math Stories </a>
-                        </div>
-                    
-                
-            
-         
-	        <div  class="h1 ">
-                <a href="../../../en/non-math/">NON-MATHMATICS</a>
-            </div>
-            
-                
-                    
-                        <div class="h2 ">
-                            <a href="../../../en/non-math/journal/">Journal </a>
-                        </div>
-                    
-                
-                    
-                        <div class="h2 ">
-                            <a href="../../../en/non-math/travels/">Travels </a>
-                        </div>
-                    
-                
-                    
-                        <div class="h2 ">
-                            <a href="../../../en/non-math/memos/">Memos </a>
-                        </div>
-                    
-                
-            
-         
-	        <div  class="h1 active">
-                <a href="../../../en/about/">ABOUT</a>
-            </div>
-            
-                
-                    
-                        <div class="h2 active">
-                            <a href="../../../en/about/me/">About Me </a>
-                        </div>
-                    
-                
-                    
-                        <div class="h2 ">
-                            <a href="../../../en/about/site/">About The Site </a>
-                        </div>
-                    
-                
-            
-        
     </div>
 </div>
 
 
-<div class='footer_part'>
-    <div class='copyright'>©2019 All Right Reserved.</div>
-</div>
-
-
-<div class='right_part'>
+<div class='body_for_pc'>
     
-    <div class="page_title_part">
-        <div class="page_title">
+    <div class='left' id='left'>
+
+        
+        <div class='left_non-footer'>
+            
+            <div class='left_non-footer_option'>
+                
+                
+                <li><a href="https://zerovip.github.io/zh/about/me/">简体中文●</a></li>
+                
+                <li><a href="https://zerovip.github.io/en/about/me/">English●</a></li>
+                
+                <li><a href="https://zerovip.github.io/fr/about/me/">Français●</a></li>
+                
+            </div>
+            
+            <div class='left_non-footer_head'>
+                <div class='left_non-footer_head_title'><a href="../../../en/">Zero&#39;s Ivory Tower</a></div>
+                <div class='left_non-footer_head_subtitle'>(●’◡’●)ﾉ</div>
+            </div>
+            
+            
+            <div class='left_non-footer_main'>
+                
+                 
+                    <div  class="h1 ">
+                        <a href="../../../en/math/">MATHEMATICS</a>
+                    </div>
+                    
+                        
+                            
+                                <div class="h2 ">
+                                    <a href="../../../en/math/notes/">Math Noes </a>
+                                </div>
+                            
+                        
+                            
+                                <div class="h2 ">
+                                    <a href="../../../en/math/stories/">Math Stories </a>
+                                </div>
+                            
+                        
+                    
+                 
+                    <div  class="h1 ">
+                        <a href="../../../en/non-math/">NON-MATHMATICS</a>
+                    </div>
+                    
+                        
+                            
+                                <div class="h2 ">
+                                    <a href="../../../en/non-math/journal/">Journal </a>
+                                </div>
+                            
+                        
+                            
+                                <div class="h2 ">
+                                    <a href="../../../en/non-math/travels/">Travels </a>
+                                </div>
+                            
+                        
+                            
+                                <div class="h2 ">
+                                    <a href="../../../en/non-math/memos/">Memos </a>
+                                </div>
+                            
+                        
+                    
+                 
+                    <div  class="h1 active">
+                        <a href="../../../en/about/">ABOUT</a>
+                    </div>
+                    
+                        
+                            
+                                <div class="h2 active">
+                                    <a href="../../../en/about/me/">About Me </a>
+                                </div>
+                            
+                        
+                            
+                                <div class="h2 ">
+                                    <a href="../../../en/about/site/">About The Site </a>
+                                </div>
+                            
+                        
+                    
+                
+            </div>
+
+        </div>
+        
+        <div class='left_footer'>
+            <div class='copyright'>©2019 All Right Reserved.</div>
+        </div>
+    </div>
+    
+    <div class='right'>
+        
+    <div class="right_head">
+        <div class="right_head_title">
             About me
         </div>
-        <div class="title_des">
+        <div class="right_head_des">
             2000-01-01 - 6 words
         </div>
-        <div class="toc_part">
-    <button class="toc_title">Table of Content</button>
-    <div class="toc_content">
-        <nav id="TableOfContents"></nav>
-    </div>
-</div>
-
-
     </div>
 
-    
+        
     <div class="right_main">
-        <div class="article">
+        <div class="right_main_article">
             <p>You shouldn't try to know me.</p>
 
         </div>
-        <div class="special_notes">
+        <div class="right_main_notes">
             
         </div>
     </div>
@@ -173,7 +190,16 @@ if (!doNotTrack) {
 
     </div>
 
-</div>
+    </div>
+    
+    
+    <div class='toc' id='toc'>
+        <button class='toc_title'>Table of Content</button>
+        <div class='toc_content'>
+            <nav id="TableOfContents"></nav>
+        </div>
+    </div>
 
+</div>
 </body>
 </html>

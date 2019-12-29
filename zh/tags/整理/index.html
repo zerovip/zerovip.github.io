@@ -33,14 +33,12 @@
             
         
     
-
  | 赤赤的象牙塔
     </title>
+    
     <link rel="stylesheet" type="text/css" href="../../../css/base.css" />
-    <link rel="stylesheet" media="screen and (max-device-width: 600px)" type="text/css" href="../../../css/small.css" />
-    <link rel="stylesheet" media="screen and (min-width: 600px)" type="text/css" href="../../../css/normal.css" />
-
-
+    <link rel="stylesheet" media="screen and (max-width: 800px)" type="text/css" href="../../../css/small.css" />
+    <link rel="stylesheet" media="screen and (min-width: 800px)" type="text/css" href="../../../css/normal.css" />
     
     
         
@@ -56,6 +54,15 @@ if (!doNotTrack) {
 <script async src='https://www.google-analytics.com/analytics.js'></script>
 
     
+    
+    <script>
+        function ChangeClassLeft(){
+            document.getElementById("left").classList.toggle("left_show");
+            }
+        function ChangeClassTOC(){
+            document.getElementById("toc").classList.toggle("toc_show");
+            }
+    </script>
 </head>
 
 <body>
@@ -63,107 +70,122 @@ if (!doNotTrack) {
 
 
 
-<div class='left_bar'>
-
-    
-    <div class='option_part'>
-        
-        
-        <li><a href="https://zerovip.github.io/zh/tags/%E6%95%B4%E7%90%86/">简体中文●</a></li>
-        
-        <li><a href="https://zerovip.github.io/en/tags/%E6%95%B4%E7%90%86/">English●</a></li>
-        
-        <li><a href="https://zerovip.github.io/fr/tags/%E6%95%B4%E7%90%86/">Français●</a></li>
-        
+<div class='bar_for_phone'>
+    <div class='bar_left_button'>
+        <button class='left_button_for_bar' onclick="ChangeClassLeft()">●●●</button>
     </div>
-
-    
-    <div class='title_part'>
-        <div class='title'><a href="../../../zh/">赤赤的象牙塔</a></div>
-        <div class='subtitle'>(●’◡’●)ﾉ</div>
+    <div class='bar_title'>
+        <a href="../../../zh/">赤赤的象牙塔</a>
     </div>
-
-    
-    
-    <div class='main_part'>
-        
-         
-	        <div  class="h1 ">
-                <a href="../../../zh/math/">数学</a>
-            </div>
-            
-                
-                    
-                        <div class="h2 ">
-                            <a href="../../../zh/math/notes/">数学笔记 </a>
-                        </div>
-                    
-                
-                    
-                        <div class="h2 ">
-                            <a href="../../../zh/math/stories/">数学科普 </a>
-                        </div>
-                    
-                
-            
-         
-	        <div  class="h1 ">
-                <a href="../../../zh/non-math/">非数学</a>
-            </div>
-            
-                
-                    
-                        <div class="h2 ">
-                            <a href="../../../zh/non-math/journal/">日志 </a>
-                        </div>
-                    
-                
-                    
-                        <div class="h2 ">
-                            <a href="../../../zh/non-math/travels/">游记 </a>
-                        </div>
-                    
-                
-                    
-                        <div class="h2 ">
-                            <a href="../../../zh/non-math/memos/">备忘 </a>
-                        </div>
-                    
-                
-            
-         
-	        <div  class="h1 ">
-                <a href="../../../zh/about/">关于</a>
-            </div>
-            
-                
-                    
-                        <div class="h2 ">
-                            <a href="../../../zh/about/me/">关于我 </a>
-                        </div>
-                    
-                
-                    
-                        <div class="h2 ">
-                            <a href="../../../zh/about/site/">关于本站 </a>
-                        </div>
-                    
-                
-            
+    <div class='bar_right_button'>
         
     </div>
 </div>
 
 
-<div class='footer_part'>
-    <div class='copyright'>©2019 版权所有.</div>
-</div>
-
-
-<div class='right_part'>
+<div class='body_for_pc'>
     
-<div class="page_title_part">
-    <div class="page_title">
+    <div class='left' id='left'>
+
+        
+        <div class='left_non-footer'>
+            
+            <div class='left_non-footer_option'>
+                
+                
+                <li><a href="https://zerovip.github.io/zh/tags/%E6%95%B4%E7%90%86/">简体中文●</a></li>
+                
+                <li><a href="https://zerovip.github.io/en/tags/%E6%95%B4%E7%90%86/">English●</a></li>
+                
+                <li><a href="https://zerovip.github.io/fr/tags/%E6%95%B4%E7%90%86/">Français●</a></li>
+                
+            </div>
+            
+            <div class='left_non-footer_head'>
+                <div class='left_non-footer_head_title'><a href="../../../zh/">赤赤的象牙塔</a></div>
+                <div class='left_non-footer_head_subtitle'>(●’◡’●)ﾉ</div>
+            </div>
+            
+            
+            <div class='left_non-footer_main'>
+                
+                 
+                    <div  class="h1 ">
+                        <a href="../../../zh/math/">数学</a>
+                    </div>
+                    
+                        
+                            
+                                <div class="h2 ">
+                                    <a href="../../../zh/math/notes/">数学笔记 </a>
+                                </div>
+                            
+                        
+                            
+                                <div class="h2 ">
+                                    <a href="../../../zh/math/stories/">数学科普 </a>
+                                </div>
+                            
+                        
+                    
+                 
+                    <div  class="h1 ">
+                        <a href="../../../zh/non-math/">非数学</a>
+                    </div>
+                    
+                        
+                            
+                                <div class="h2 ">
+                                    <a href="../../../zh/non-math/journal/">日志 </a>
+                                </div>
+                            
+                        
+                            
+                                <div class="h2 ">
+                                    <a href="../../../zh/non-math/travels/">游记 </a>
+                                </div>
+                            
+                        
+                            
+                                <div class="h2 ">
+                                    <a href="../../../zh/non-math/memos/">备忘 </a>
+                                </div>
+                            
+                        
+                    
+                 
+                    <div  class="h1 ">
+                        <a href="../../../zh/about/">关于</a>
+                    </div>
+                    
+                        
+                            
+                                <div class="h2 ">
+                                    <a href="../../../zh/about/me/">关于我 </a>
+                                </div>
+                            
+                        
+                            
+                                <div class="h2 ">
+                                    <a href="../../../zh/about/site/">关于本站 </a>
+                                </div>
+                            
+                        
+                    
+                
+            </div>
+
+        </div>
+        
+        <div class='left_footer'>
+            <div class='copyright'>©2019 版权所有.</div>
+        </div>
+    </div>
+    
+    <div class='right'>
+        
+<div class="right_head">
+    <div class="right_head_title">
         
         
                 
@@ -193,12 +215,12 @@ if (!doNotTrack) {
                 
         
     </div>
-    <div class="title_des">
+    <div class="right_head_des">
         
     </div>
 </div>
 
-    
+        
 <div class="right_main">
     
     
@@ -230,7 +252,9 @@ if (!doNotTrack) {
     
 </div>
 
+    </div>
+    
+    
 </div>
-
 </body>
 </html>

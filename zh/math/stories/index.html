@@ -35,14 +35,12 @@
             
         
     
-
  | 赤赤的象牙塔
     </title>
+    
     <link rel="stylesheet" type="text/css" href="../../../css/base.css" />
-    <link rel="stylesheet" media="screen and (max-device-width: 600px)" type="text/css" href="../../../css/small.css" />
-    <link rel="stylesheet" media="screen and (min-width: 600px)" type="text/css" href="../../../css/normal.css" />
-
-
+    <link rel="stylesheet" media="screen and (max-width: 800px)" type="text/css" href="../../../css/small.css" />
+    <link rel="stylesheet" media="screen and (min-width: 800px)" type="text/css" href="../../../css/normal.css" />
     
     
         
@@ -58,6 +56,15 @@ if (!doNotTrack) {
 <script async src='https://www.google-analytics.com/analytics.js'></script>
 
     
+    
+    <script>
+        function ChangeClassLeft(){
+            document.getElementById("left").classList.toggle("left_show");
+            }
+        function ChangeClassTOC(){
+            document.getElementById("toc").classList.toggle("toc_show");
+            }
+    </script>
 </head>
 
 <body>
@@ -65,107 +72,122 @@ if (!doNotTrack) {
 
 
 
-<div class='left_bar'>
-
-    
-    <div class='option_part'>
-        
-        
-        <li><a href="https://zerovip.github.io/zh/math/stories/">简体中文●</a></li>
-        
-        <li><a href="https://zerovip.github.io/en/math/stories/">English●</a></li>
-        
-        <li><a href="https://zerovip.github.io/fr/math/stories/">Français●</a></li>
-        
+<div class='bar_for_phone'>
+    <div class='bar_left_button'>
+        <button class='left_button_for_bar' onclick="ChangeClassLeft()">●●●</button>
     </div>
-
-    
-    <div class='title_part'>
-        <div class='title'><a href="../../../zh/">赤赤的象牙塔</a></div>
-        <div class='subtitle'>(●’◡’●)ﾉ</div>
+    <div class='bar_title'>
+        <a href="../../../zh/">赤赤的象牙塔</a>
     </div>
-
-    
-    
-    <div class='main_part'>
-        
-         
-	        <div  class="h1 active">
-                <a href="../../../zh/math/">数学</a>
-            </div>
-            
-                
-                    
-                        <div class="h2 ">
-                            <a href="../../../zh/math/notes/">数学笔记 </a>
-                        </div>
-                    
-                
-                    
-                        <div class="h2 active">
-                            <a href="../../../zh/math/stories/">数学科普 </a>
-                        </div>
-                    
-                
-            
-         
-	        <div  class="h1 ">
-                <a href="../../../zh/non-math/">非数学</a>
-            </div>
-            
-                
-                    
-                        <div class="h2 ">
-                            <a href="../../../zh/non-math/journal/">日志 </a>
-                        </div>
-                    
-                
-                    
-                        <div class="h2 ">
-                            <a href="../../../zh/non-math/travels/">游记 </a>
-                        </div>
-                    
-                
-                    
-                        <div class="h2 ">
-                            <a href="../../../zh/non-math/memos/">备忘 </a>
-                        </div>
-                    
-                
-            
-         
-	        <div  class="h1 ">
-                <a href="../../../zh/about/">关于</a>
-            </div>
-            
-                
-                    
-                        <div class="h2 ">
-                            <a href="../../../zh/about/me/">关于我 </a>
-                        </div>
-                    
-                
-                    
-                        <div class="h2 ">
-                            <a href="../../../zh/about/site/">关于本站 </a>
-                        </div>
-                    
-                
-            
+    <div class='bar_right_button'>
         
     </div>
 </div>
 
 
-<div class='footer_part'>
-    <div class='copyright'>©2019 版权所有.</div>
-</div>
-
-
-<div class='right_part'>
+<div class='body_for_pc'>
     
-<div class="page_title_part">
-    <div class="page_title">
+    <div class='left' id='left'>
+
+        
+        <div class='left_non-footer'>
+            
+            <div class='left_non-footer_option'>
+                
+                
+                <li><a href="https://zerovip.github.io/zh/math/stories/">简体中文●</a></li>
+                
+                <li><a href="https://zerovip.github.io/en/math/stories/">English●</a></li>
+                
+                <li><a href="https://zerovip.github.io/fr/math/stories/">Français●</a></li>
+                
+            </div>
+            
+            <div class='left_non-footer_head'>
+                <div class='left_non-footer_head_title'><a href="../../../zh/">赤赤的象牙塔</a></div>
+                <div class='left_non-footer_head_subtitle'>(●’◡’●)ﾉ</div>
+            </div>
+            
+            
+            <div class='left_non-footer_main'>
+                
+                 
+                    <div  class="h1 active">
+                        <a href="../../../zh/math/">数学</a>
+                    </div>
+                    
+                        
+                            
+                                <div class="h2 ">
+                                    <a href="../../../zh/math/notes/">数学笔记 </a>
+                                </div>
+                            
+                        
+                            
+                                <div class="h2 active">
+                                    <a href="../../../zh/math/stories/">数学科普 </a>
+                                </div>
+                            
+                        
+                    
+                 
+                    <div  class="h1 ">
+                        <a href="../../../zh/non-math/">非数学</a>
+                    </div>
+                    
+                        
+                            
+                                <div class="h2 ">
+                                    <a href="../../../zh/non-math/journal/">日志 </a>
+                                </div>
+                            
+                        
+                            
+                                <div class="h2 ">
+                                    <a href="../../../zh/non-math/travels/">游记 </a>
+                                </div>
+                            
+                        
+                            
+                                <div class="h2 ">
+                                    <a href="../../../zh/non-math/memos/">备忘 </a>
+                                </div>
+                            
+                        
+                    
+                 
+                    <div  class="h1 ">
+                        <a href="../../../zh/about/">关于</a>
+                    </div>
+                    
+                        
+                            
+                                <div class="h2 ">
+                                    <a href="../../../zh/about/me/">关于我 </a>
+                                </div>
+                            
+                        
+                            
+                                <div class="h2 ">
+                                    <a href="../../../zh/about/site/">关于本站 </a>
+                                </div>
+                            
+                        
+                    
+                
+            </div>
+
+        </div>
+        
+        <div class='left_footer'>
+            <div class='copyright'>©2019 版权所有.</div>
+        </div>
+    </div>
+    
+    <div class='right'>
+        
+<div class="right_head">
+    <div class="right_head_title">
         
         
                 
@@ -197,13 +219,13 @@ if (!doNotTrack) {
                 
         
     </div>
-    <div class="title_des">
+    <div class="right_head_des">
         <p>数学科普部分，是一些我觉得有意思可以让每个读者都搞明白的问题，建站时开这个栏目是想严谨地科普一些大问题，这里“科普”的意思是力求全面地陈述问题，必要的前置知识都会进行陈述，可能任何有兴趣的人都可以读懂.</p>
 
     </div>
 </div>
 
-    
+        
 <div class="right_main">
     
     
@@ -214,26 +236,26 @@ if (!doNotTrack) {
                 
                     
                         <a href="https://zerovip.github.io/zh/47093/">
-<div class="article_title">
+<div class="right_main_article-title">
     ■代数无理数的小数展开- 21 世纪的定理
 </div>
-<div class="article_des">
+<div class="right_main_article-des">
     2019-07-14 - 阅读时间: 6分钟
 </div>
-<div class="article_sum">
+<div class="right_main_article-sum">
     今天介绍的是第 7.2 节，有关代数无理数小数展开的一个定理. 基本概念 实代数数 有理系数多项式的复根叫做代数数. 代数数的等价定义是“实系数多...
 </div>
 </a>
 
                     
                         <a href="https://zerovip.github.io/zh/02874/">
-<div class="article_title">
+<div class="right_main_article-title">
     ■二元生成群的子群定理- 21 世纪的定理
 </div>
-<div class="article_des">
+<div class="right_main_article-des">
     2019-06-30 - 阅读时间: 8分钟
 </div>
-<div class="article_sum">
+<div class="right_main_article-sum">
     这是我这个系列的第一篇文章，因此先简单介绍一下这个系列. 我于几天前在知乎上看到了对 Bogdan Grechuk, Theorems of the 21st Century 这套书的推荐，推荐中给了几张截图我...
 </div>
 </a>
@@ -263,7 +285,9 @@ if (!doNotTrack) {
     
 </div>
 
+    </div>
+    
+    
 </div>
-
 </body>
 </html>

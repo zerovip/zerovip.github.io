@@ -8,11 +8,10 @@
     我的电子生活
  | 赤赤的象牙塔
     </title>
+    
     <link rel="stylesheet" type="text/css" href="../../css/base.css" />
-    <link rel="stylesheet" media="screen and (max-device-width: 600px)" type="text/css" href="../../css/small.css" />
-    <link rel="stylesheet" media="screen and (min-width: 600px)" type="text/css" href="../../css/normal.css" />
-
-
+    <link rel="stylesheet" media="screen and (max-width: 800px)" type="text/css" href="../../css/small.css" />
+    <link rel="stylesheet" media="screen and (min-width: 800px)" type="text/css" href="../../css/normal.css" />
     
     
         
@@ -28,6 +27,15 @@ if (!doNotTrack) {
 <script async src='https://www.google-analytics.com/analytics.js'></script>
 
     
+    
+    <script>
+        function ChangeClassLeft(){
+            document.getElementById("left").classList.toggle("left_show");
+            }
+        function ChangeClassTOC(){
+            document.getElementById("toc").classList.toggle("toc_show");
+            }
+    </script>
 </head>
 
 <body>
@@ -35,198 +43,134 @@ if (!doNotTrack) {
 
 
 
-<div class='left_bar'>
-
-    
-    <div class='option_part'>
-        
-        
-        <li><a href="https://zerovip.github.io/zh/23536/">简体中文●</a></li>
-        
-        <li><a href="https://zerovip.github.io/en/23536/">English●</a></li>
-        
-        <li><a href="https://zerovip.github.io/fr/23536/">Français●</a></li>
-        
+<div class='bar_for_phone'>
+    <div class='bar_left_button'>
+        <button class='left_button_for_bar' onclick="ChangeClassLeft()">●●●</button>
     </div>
-
-    
-    <div class='title_part'>
-        <div class='title'><a href="../../zh/">赤赤的象牙塔</a></div>
-        <div class='subtitle'>(●’◡’●)ﾉ</div>
+    <div class='bar_title'>
+        <a href="../../zh/">赤赤的象牙塔</a>
     </div>
+    <div class='bar_right_button'>
+        
+    <button class='toc_title_for_bar' onclick="ChangeClassTOC()">目录</button>
 
-    
-    
-    <div class='main_part'>
-        
-         
-	        <div  class="h1 ">
-                <a href="../../zh/math/">数学</a>
-            </div>
-            
-                
-                    
-                        <div class="h2 ">
-                            <a href="../../zh/math/notes/">数学笔记 </a>
-                        </div>
-                    
-                
-                    
-                        <div class="h2 ">
-                            <a href="../../zh/math/stories/">数学科普 </a>
-                        </div>
-                    
-                
-            
-         
-	        <div  class="h1 active">
-                <a href="../../zh/non-math/">非数学</a>
-            </div>
-            
-                
-                    
-                        <div class="h2 ">
-                            <a href="../../zh/non-math/journal/">日志 </a>
-                        </div>
-                    
-                
-                    
-                        <div class="h2 ">
-                            <a href="../../zh/non-math/travels/">游记 </a>
-                        </div>
-                    
-                
-                    
-                        <div class="h2 active">
-                            <a href="../../zh/non-math/memos/">备忘 </a>
-                        </div>
-                    
-                
-            
-         
-	        <div  class="h1 ">
-                <a href="../../zh/about/">关于</a>
-            </div>
-            
-                
-                    
-                        <div class="h2 ">
-                            <a href="../../zh/about/me/">关于我 </a>
-                        </div>
-                    
-                
-                    
-                        <div class="h2 ">
-                            <a href="../../zh/about/site/">关于本站 </a>
-                        </div>
-                    
-                
-            
-        
     </div>
 </div>
 
 
-<div class='footer_part'>
-    <div class='copyright'>©2019 版权所有.</div>
-</div>
-
-
-<div class='right_part'>
+<div class='body_for_pc'>
     
-    <div class="page_title_part">
-        <div class="page_title">
+    <div class='left' id='left'>
+
+        
+        <div class='left_non-footer'>
+            
+            <div class='left_non-footer_option'>
+                
+                
+                <li><a href="https://zerovip.github.io/zh/23536/">简体中文●</a></li>
+                
+                <li><a href="https://zerovip.github.io/en/23536/">English●</a></li>
+                
+                <li><a href="https://zerovip.github.io/fr/23536/">Français●</a></li>
+                
+            </div>
+            
+            <div class='left_non-footer_head'>
+                <div class='left_non-footer_head_title'><a href="../../zh/">赤赤的象牙塔</a></div>
+                <div class='left_non-footer_head_subtitle'>(●’◡’●)ﾉ</div>
+            </div>
+            
+            
+            <div class='left_non-footer_main'>
+                
+                 
+                    <div  class="h1 ">
+                        <a href="../../zh/math/">数学</a>
+                    </div>
+                    
+                        
+                            
+                                <div class="h2 ">
+                                    <a href="../../zh/math/notes/">数学笔记 </a>
+                                </div>
+                            
+                        
+                            
+                                <div class="h2 ">
+                                    <a href="../../zh/math/stories/">数学科普 </a>
+                                </div>
+                            
+                        
+                    
+                 
+                    <div  class="h1 active">
+                        <a href="../../zh/non-math/">非数学</a>
+                    </div>
+                    
+                        
+                            
+                                <div class="h2 ">
+                                    <a href="../../zh/non-math/journal/">日志 </a>
+                                </div>
+                            
+                        
+                            
+                                <div class="h2 ">
+                                    <a href="../../zh/non-math/travels/">游记 </a>
+                                </div>
+                            
+                        
+                            
+                                <div class="h2 active">
+                                    <a href="../../zh/non-math/memos/">备忘 </a>
+                                </div>
+                            
+                        
+                    
+                 
+                    <div  class="h1 ">
+                        <a href="../../zh/about/">关于</a>
+                    </div>
+                    
+                        
+                            
+                                <div class="h2 ">
+                                    <a href="../../zh/about/me/">关于我 </a>
+                                </div>
+                            
+                        
+                            
+                                <div class="h2 ">
+                                    <a href="../../zh/about/site/">关于本站 </a>
+                                </div>
+                            
+                        
+                    
+                
+            </div>
+
+        </div>
+        
+        <div class='left_footer'>
+            <div class='copyright'>©2019 版权所有.</div>
+        </div>
+    </div>
+    
+    <div class='right'>
+        
+    <div class="right_head">
+        <div class="right_head_title">
             我的电子生活
         </div>
-        <div class="title_des">
+        <div class="right_head_des">
             2019-06-24 - 4783 字
         </div>
-        <div class="toc_part">
-    <button class="toc_title">目录</button>
-    <div class="toc_content">
-        <nav id="TableOfContents">
-  <ul>
-    <li><a href="#heading1">根本原则：注重个人隐私.</a>
-      <ul>
-        <li><a href="#heading2">隐私界限</a></li>
-        <li><a href="#heading3">措施</a></li>
-      </ul>
-    </li>
-    <li><a href="#heading4">另一个原则：注意时间控制.</a>
-      <ul>
-        <li><a href="#heading5">网络的角色</a></li>
-        <li><a href="#heading6">措施</a></li>
-      </ul>
-    </li>
-    <li><a href="#heading7">具体的常用网络软件使用守则</a>
-      <ul>
-        <li><a href="#heading8">微博</a></li>
-        <li><a href="#twitter">Twitter</a></li>
-        <li><a href="#heading9">豆瓣</a></li>
-        <li><a href="#heading10">知乎</a></li>
-        <li><a href="#qq">QQ</a></li>
-        <li><a href="#heading11">微信</a></li>
-        <li><a href="#telegram">Telegram</a></li>
-        <li><a href="#bilibili">bilibili</a></li>
-        <li><a href="#heading12">懂球帝</a></li>
-        <li><a href="#heading13">网易云音乐</a></li>
-        <li><a href="#reddit">Reddit</a></li>
-        <li><a href="#facebookmessengerinstagram">Facebook、Messenger、Instagram</a></li>
-      </ul>
-    </li>
-  </ul>
-
-  <ul>
-    <li><a href="#heading15">系统</a>
-      <ul>
-        <li><a href="#manjaro">主要使用的计算机操作系统：Manjaro</a></li>
-        <li><a href="#windows">次要使用的计算机操作系统：Windows</a></li>
-        <li><a href="#android">主要使用的手机操作系统：Android</a></li>
-      </ul>
-    </li>
-    <li><a href="#heading16">工具类软件</a>
-      <ul>
-        <li><a href="#linux-">Linux 上常用的工具</a></li>
-        <li><a href="#kdenlive">视频剪辑：Kdenlive</a></li>
-        <li><a href="#filegee">备份软件：FileGee</a></li>
-        <li><a href="#heading17">输入法：小鹤双拼</a></li>
-        <li><a href="#sofascore">知晓体育比分：SofaScore</a></li>
-        <li><a href="#instapaper">收藏文章稍后阅读：Instapaper</a></li>
-        <li><a href="#stack-exchange">问答网站：Stack Exchange</a></li>
-        <li><a href="#rss-inoreader">RSS 阅读器：Inoreader</a></li>
-        <li><a href="#aritymod">画数学曲线：ArityMOD</a></li>
-        <li><a href="#outlook">手机查看邮件：Outlook</a></li>
-        <li><a href="#authy">二次验证软件：Authy</a></li>
-        <li><a href="#google-">备份照片：(Google) 相册</a></li>
-        <li><a href="#heading18">扫描与备份手写笔记：扫描全能王</a></li>
-        <li><a href="#heading19">跑步：悦跑圈</a></li>
-        <li><a href="#project-v">突破互联网限制的技术：Project V</a></li>
-        <li><a href="#-vpsjuicessh">连接 VPS：JuiceSSH</a></li>
-        <li><a href="#mdict">手机查词典：MDict</a></li>
-        <li><a href="#goldendict">电脑查词典：GoldenDict</a></li>
-        <li><a href="#qbittorrent">做种：qBittorrent</a></li>
-        <li><a href="#anki">背单词：Anki</a></li>
-        <li><a href="#steam">游戏平台：Steam</a></li>
-      </ul>
-    </li>
-    <li><a href="#heading20">（会长期玩的）游戏</a>
-      <ul>
-        <li><a href="#heading21">坎巴拉太空计划</a></li>
-        <li><a href="#heading22">侠盗猎车手</a></li>
-        <li><a href="#ingress">Ingress</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
-    </div>
-</div>
-
-
     </div>
 
-    
+        
     <div class="right_main">
-        <div class="article">
+        <div class="right_main_article">
             <p>我一向认为明文的法则是能让人的生活有条不紊的，也让人不会迷失在选择和犹豫中，是把复杂问题变简单的办法. 本文将对我的电子生活做一个梳理. 关于网络生活，希望自己遵守且容易忘记的部分形成明文的法则；非网络部分的电子生活中，对我个人常用的工具类产品的使用方法做一个整理（同时也可以看作是安利）. 两部分都将会常常更新，记录我最新做出的决定.</p>
 <h1 id="heading">网络生活法则</h1>
 <h2 id="heading1">根本原则：注重个人隐私.</h2>
@@ -339,7 +283,7 @@ if (!doNotTrack) {
 <p>那就这样，再见 ingress ！XM 能量与我再无关，启蒙军是什么，我再不知道了.（补充于 2019 年 7 月 18 日）</p>
 
         </div>
-        <div class="special_notes">
+        <div class="right_main_notes">
             
         </div>
     </div>
@@ -355,7 +299,94 @@ if (!doNotTrack) {
 
     </div>
 
-</div>
+    </div>
+    
+    
+    <div class='toc' id='toc'>
+        <button class='toc_title'>目录</button>
+        <div class='toc_content'>
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#heading">网络生活法则</a>
+      <ul>
+        <li><a href="#heading1">根本原则：注重个人隐私.</a>
+          <ul>
+            <li><a href="#heading2">隐私界限</a></li>
+            <li><a href="#heading3">措施</a></li>
+          </ul>
+        </li>
+        <li><a href="#heading4">另一个原则：注意时间控制.</a>
+          <ul>
+            <li><a href="#heading5">网络的角色</a></li>
+            <li><a href="#heading6">措施</a></li>
+          </ul>
+        </li>
+        <li><a href="#heading7">具体的常用网络软件使用守则</a>
+          <ul>
+            <li><a href="#heading8">微博</a></li>
+            <li><a href="#twitter">Twitter</a></li>
+            <li><a href="#heading9">豆瓣</a></li>
+            <li><a href="#heading10">知乎</a></li>
+            <li><a href="#qq">QQ</a></li>
+            <li><a href="#heading11">微信</a></li>
+            <li><a href="#telegram">Telegram</a></li>
+            <li><a href="#bilibili">bilibili</a></li>
+            <li><a href="#heading12">懂球帝</a></li>
+            <li><a href="#heading13">网易云音乐</a></li>
+            <li><a href="#reddit">Reddit</a></li>
+            <li><a href="#facebookmessengerinstagram">Facebook、Messenger、Instagram</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#heading14">与网络关系不大的部分</a>
+      <ul>
+        <li><a href="#heading15">系统</a>
+          <ul>
+            <li><a href="#manjaro">主要使用的计算机操作系统：Manjaro</a></li>
+            <li><a href="#windows">次要使用的计算机操作系统：Windows</a></li>
+            <li><a href="#android">主要使用的手机操作系统：Android</a></li>
+          </ul>
+        </li>
+        <li><a href="#heading16">工具类软件</a>
+          <ul>
+            <li><a href="#linux-">Linux 上常用的工具</a></li>
+            <li><a href="#kdenlive">视频剪辑：Kdenlive</a></li>
+            <li><a href="#filegee">备份软件：FileGee</a></li>
+            <li><a href="#heading17">输入法：小鹤双拼</a></li>
+            <li><a href="#sofascore">知晓体育比分：SofaScore</a></li>
+            <li><a href="#instapaper">收藏文章稍后阅读：Instapaper</a></li>
+            <li><a href="#stack-exchange">问答网站：Stack Exchange</a></li>
+            <li><a href="#rss-inoreader">RSS 阅读器：Inoreader</a></li>
+            <li><a href="#aritymod">画数学曲线：ArityMOD</a></li>
+            <li><a href="#outlook">手机查看邮件：Outlook</a></li>
+            <li><a href="#authy">二次验证软件：Authy</a></li>
+            <li><a href="#google-">备份照片：(Google) 相册</a></li>
+            <li><a href="#heading18">扫描与备份手写笔记：扫描全能王</a></li>
+            <li><a href="#heading19">跑步：悦跑圈</a></li>
+            <li><a href="#project-v">突破互联网限制的技术：Project V</a></li>
+            <li><a href="#-vpsjuicessh">连接 VPS：JuiceSSH</a></li>
+            <li><a href="#mdict">手机查词典：MDict</a></li>
+            <li><a href="#goldendict">电脑查词典：GoldenDict</a></li>
+            <li><a href="#qbittorrent">做种：qBittorrent</a></li>
+            <li><a href="#anki">背单词：Anki</a></li>
+            <li><a href="#steam">游戏平台：Steam</a></li>
+          </ul>
+        </li>
+        <li><a href="#heading20">（会长期玩的）游戏</a>
+          <ul>
+            <li><a href="#heading21">坎巴拉太空计划</a></li>
+            <li><a href="#heading22">侠盗猎车手</a></li>
+            <li><a href="#ingress">Ingress</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+        </div>
+    </div>
 
+</div>
 </body>
 </html>

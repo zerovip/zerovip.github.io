@@ -9,8 +9,8 @@
  | 赤赤的象牙塔
     </title>
 <link href="../../css/base.css" rel="stylesheet" type="text/css"/>
-<link href="../../css/small.css" media="screen and (max-device-width: 600px)" rel="stylesheet" type="text/css"/>
-<link href="../../css/normal.css" media="screen and (min-width: 600px)" rel="stylesheet" type="text/css"/>
+<link href="../../css/small.css" media="screen and (max-width: 800px)" rel="stylesheet" type="text/css"/>
+<link href="../../css/normal.css" media="screen and (min-width: 800px)" rel="stylesheet" type="text/css"/>
 <script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
@@ -21,19 +21,40 @@ if (!doNotTrack) {
 }
 </script>
 <script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script>
+        function ChangeClassLeft(){
+            document.getElementById("left").classList.toggle("left_show");
+            }
+        function ChangeClassTOC(){
+            document.getElementById("toc").classList.toggle("toc_show");
+            }
+    </script>
 </head>
 <body>
-<div class="left_bar">
-<div class="option_part">
+<div class="bar_for_phone">
+<div class="bar_left_button">
+<button class="left_button_for_bar" onclick="ChangeClassLeft()">●●●</button>
+</div>
+<div class="bar_title">
+<a href="../../zh/">赤赤的象牙塔</a>
+</div>
+<div class="bar_right_button">
+<button class="toc_title_for_bar" onclick="ChangeClassTOC()">目录</button>
+</div>
+</div>
+<div class="body_for_pc">
+<div class="left" id="left">
+<div class="left_non-footer">
+<div class="left_non-footer_option">
 <li><a href="https://zerovip.github.io/zh/62772/">简体中文●</a></li>
 <li><a href="https://zerovip.github.io/en/62772/">English●</a></li>
 <li><a href="https://zerovip.github.io/fr/62772/">Français●</a></li>
 </div>
-<div class="title_part">
-<div class="title"><a href="../../zh/">赤赤的象牙塔</a></div>
-<div class="subtitle">(●’◡’●)ﾉ</div>
+<div class="left_non-footer_head">
+<div class="left_non-footer_head_title"><a href="../../zh/">赤赤的象牙塔</a></div>
+<div class="left_non-footer_head_subtitle">(●’◡’●)ﾉ</div>
 </div>
-<div class="main_part">
+<div class="left_non-footer_main">
 <div class="h1">
 <a href="../../zh/math/">数学</a>
 </div>
@@ -66,33 +87,21 @@ if (!doNotTrack) {
 </div>
 </div>
 </div>
-<div class="footer_part">
+<div class="left_footer">
 <div class="copyright">©2019 版权所有.</div>
 </div>
-<div class="right_part">
-<div class="page_title_part">
-<div class="page_title">
+</div>
+<div class="right">
+<div class="right_head">
+<div class="right_head_title">
             静态博客文章加密工具测试
         </div>
-<div class="title_des">
+<div class="right_head_des">
             2019-12-23 - 767 字
         </div>
-<div class="toc_part">
-<button class="toc_title">目录</button>
-<div class="toc_content">
-<nav id="TableOfContents">
-<ul>
-<li><a href="#heading1">未被加密的标题</a></li>
-</ul>
-<ul>
-<li><a href="#heading3">未解决的问题</a></li>
-</ul>
-</nav>
-</div>
-</div>
 </div>
 <div class="right_main">
-<div class="article">
+<div class="right_main_article">
 <p>一次测试.（这里是 summary 的内容.）</p>
 <h1 id="heading">介绍</h1>
 <p><a href="https://github.com/Li4n0/hugo_encryptor">Hugo encryptor</a> 是一款我偶然发现的可以给静态博客文章进行加密的小工具，配置使用很简单，可惜的是不能在本地测试.</p>
@@ -171,12 +180,32 @@ if (!doNotTrack) {
 <li>那个 <code>&lt;!--more--&gt;</code> 的标签导致它上面的内容成为了 summary，而 front matter 里的 summary 不再起作用. 这倒不是什么大问题.</li>
 </ol>
 </div>
-<div class="special_notes">
+<div class="right_main_notes">
 </div>
 </div>
 <div class="right_comments">
 <script async="" crossorigin="anonymous" issue-term="pathname" repo="zerovip/bcsu" src="https://utteranc.es/client.js" theme="github-light">
 </script>
+</div>
+</div>
+<div class="toc" id="toc">
+<button class="toc_title">目录</button>
+<div class="toc_content">
+<nav id="TableOfContents">
+<ul>
+<li><a href="#heading">介绍</a>
+<ul>
+<li><a href="#heading1">未被加密的标题</a></li>
+</ul>
+</li>
+<li><a href="#heading2">未被加密的一级标题</a>
+<ul>
+<li><a href="#heading3">未解决的问题</a></li>
+</ul>
+</li>
+</ul>
+</nav>
+</div>
 </div>
 </div>
 </body>
