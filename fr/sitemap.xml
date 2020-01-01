@@ -178,6 +178,25 @@
   </url>
   
   <url>
+    <loc>https://zerovip.github.io/fr/non-math/literature/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://zerovip.github.io/zh/non-math/literature/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://zerovip.github.io/en/non-math/literature/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://zerovip.github.io/fr/non-math/literature/"
+                />
+  </url>
+  
+  <url>
     <loc>https://zerovip.github.io/fr/non-math/memos/</loc>
     <xhtml:link
                 rel="alternate"
@@ -193,63 +212,6 @@
                 rel="alternate"
                 hreflang="fr"
                 href="https://zerovip.github.io/fr/non-math/memos/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://zerovip.github.io/fr/non-math/travels/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://zerovip.github.io/zh/non-math/travels/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://zerovip.github.io/en/non-math/travels/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://zerovip.github.io/fr/non-math/travels/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://zerovip.github.io/fr/categories/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://zerovip.github.io/zh/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://zerovip.github.io/en/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://zerovip.github.io/fr/categories/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://zerovip.github.io/fr/tags/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://zerovip.github.io/zh/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://zerovip.github.io/en/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://zerovip.github.io/fr/tags/"
                 />
   </url>
   
