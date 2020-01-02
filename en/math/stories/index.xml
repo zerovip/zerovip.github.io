@@ -1,14 +1,113 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Zero&#39;s Ivory Tower</title>
-    <link>https://zerovip.github.io/en/math/stories/</link>
-    <description>Recent content on Zero&#39;s Ivory Tower</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    
-	<atom:link href="https://zerovip.github.io/en/math/stories/index.xml" rel="self" type="application/rss+xml" />
+    <channel>
+        <title>
     
     
-  </channel>
-</rss>
+        
+            
+                
+            
+                
+                    Math Stories
+                
+            
+        
+    
+        
+            
+                
+            
+                
+            
+                
+            
+        
+    
+        
+            
+                
+            
+                
+            
+        
+    
+ | Zero&#39;s Ivory Tower</title>
+        <link>https://zerovip.github.io/en/math/stories/</link>
+        <description>
+            Recent Content | 
+    
+    
+        
+            
+                
+            
+                
+                    Math Stories
+                
+            
+        
+    
+        
+            
+                
+            
+                
+            
+                
+            
+        
+    
+        
+            
+                
+            
+                
+            
+        
+    
+ | Zero&#39;s Ivory Tower
+        </description>
+        <generator>Hugo -- gohugo.io</generator>
+        
+            <language>en-us</language>
+        
+        
+        
+        
+        
+        
+        
+    
+    
+        
+            
+                
+            
+                
+                    
+                
+            
+        
+    
+        
+            
+                
+            
+                
+            
+                
+            
+        
+    
+        
+            
+                
+            
+                
+            
+        
+    
+
+    </channel>
+</rss> 

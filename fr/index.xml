@@ -1,33 +1,42 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>La Tour D&#39;ivoire De Zéro</title>
-    <link>https://zerovip.github.io/fr/</link>
-    <description>Recent content on La Tour D&#39;ivoire De Zéro</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>fr-fr</language>
-    <lastBuildDate>Fri, 21 Jun 2019 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://zerovip.github.io/fr/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>À propos de ce site</title>
-      <link>https://zerovip.github.io/fr/about/site/</link>
-      <pubDate>Fri, 21 Jun 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://zerovip.github.io/fr/about/site/</guid>
-      <description>À Propos De Ce Site&amp;hellip;</description>
-    </item>
-    
-    <item>
-      <title>À propos de moi</title>
-      <link>https://zerovip.github.io/fr/about/me/</link>
-      <pubDate>Sat, 01 Jan 2000 00:00:00 +0000</pubDate>
-      
-      <guid>https://zerovip.github.io/fr/about/me/</guid>
-      <description>Je suis très beau.</description>
-    </item>
-    
-  </channel>
+    <channel>
+        <title>La Tour D&#39;ivoire De Zéro</title>
+        <link>https://zerovip.github.io/fr/</link>
+        <description>Contenu Récent | La Tour D&#39;ivoire De Zéro</description>
+        <generator>Hugo -- gohugo.io</generator>
+        
+            <language>fr-fr</language>
+        
+        
+        
+        
+        
+            <lastBuildDate>
+                2019-01-01
+            </lastBuildDate>
+        
+        
+        
+            <item>
+                <title>À propos de ce site</title>
+                <link>https://zerovip.github.io/fr/about/site/</link>
+                <pubDate>2019-01-01</pubDate>
+                
+                <guid>https://zerovip.github.io/fr/about/site/</guid>
+                <description>&lt;p&gt;À Propos De Ce Site&amp;hellip;&lt;/p&gt;
+</description>
+            </item>
+        
+            <item>
+                <title>À propos de moi</title>
+                <link>https://zerovip.github.io/fr/about/me/</link>
+                <pubDate>2000-01-01</pubDate>
+                
+                <guid>https://zerovip.github.io/fr/about/me/</guid>
+                <description>&lt;p&gt;Je suis très beau.&lt;/p&gt;
+</description>
+            </item>
+        
+    </channel>
 </rss>

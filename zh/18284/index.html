@@ -67,6 +67,8 @@ if (!doNotTrack) {
         <div class='left_non-footer'>
             
             <div class='left_non-footer_option'>
+                <li><a href="https://zerovip.github.io/zh/18284/index.xml">RSS 订阅<img src="../../images/rss.png" /></a></li>
+                <li><br /></li>
                 
                 
                 <li><a href="https://zerovip.github.io/zh/18284/">简体中文●</a></li>
@@ -165,7 +167,7 @@ if (!doNotTrack) {
             建站记
         </div>
         <div class="right_head_des">
-            2019-06-22 - 6138 字
+            2019-06-22 - 6237 字
         </div>
     </div>
 
@@ -183,7 +185,7 @@ if (!doNotTrack) {
 <p>我的主题完全开源，您可以在<a href="https://github.com/zerovip/hugo-theme-zero">这里</a>阅读它的代码甚至使用.</p>
 <h2 id="how">学习 Hugo 是如何运作的</h2>
 <p>这里我主要参考了 <a href="https://www.zeolearn.com/magazine/develop-a-theme-for-hugo">Yash Agarwal, Develop a Theme for Hugo</a>，这篇文章对内容管理同样做了非常细致的说明和区分. 可能是因为我会 Django，而 Hugo 处理网页的方式和 Django 类似<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>，我读起来非常顺利，也觉得非常简单. 但无论如何，这篇文章非常友好，通读下来就能对 Hugo 的运作方式有一个最基本的了解——比如主页 (index.html)、列表页 (list.html) 和文章页 (single.html) 这三个最基本的页面是分别做什么的，它们分别在什么地方，怎么在一个固定的 HTML 模板中写入不同的内容，逻辑运算以什么方式写进去，静态文件比如 CSS、JS 以及图片等可提供下载的文件放在哪里以及如何引用，等等. 我按照它的步骤完全进行了一遍，这也就标志着我制作我自己的主题正式开始了.</p>
-<p>具体的过程也不多说，只要配合着官方文档基本就能搞定. 上面我参考的那篇文章中在第 3、4 小节给的调试方法：删去<code>/public</code>文件夹，使用<code>$ hugo server --watch --verbose</code>命令，是非常有用的.</p>
+<p>具体的过程也不多说，只要配合着官方文档基本就能搞定. 这一步需要参考的更细致的内容主要是<a href="https://gohugo.io/templates/">模板</a>一章，不仅是前面提到的三个最基本页面，所有有可能用到的模板都在这一章介绍得很清楚，另外就是<a href="https://gohugo.io/lookup-order/">查找顺序</a>非常非常重要，提前规划好可以最大程度地复用代码，减少工作量. 上面我参考的那篇文章中在第 3、4 小节给出的调试方法：删去<code>/public</code>文件夹，使用<code>$ hugo server --watch --verbose</code>命令，是非常有用的.</p>
 <h2 id="tomlyamljson">TOML、YAML和JSON的学习</h2>
 <p>Hugo 的配置文件支持这三种格式. 尽管官方文档给出的例子大多数都是三种格式都有，但仅仅是官方的例子并不足够使用；又考虑到在进行检索时网络上的各位博主也是用什么的都有，且大多数博主记录自己的建站过程肯定不会像官方那样提供三个格式的配置；这三种格式的转化并不是显而易见地见几个例子就能触类旁通（比如 TOML 中的双中括号 <code>[[something]]</code> 就不是很容易猜到 ）：因此对这三种格式进行学习是有必要的. 这里我主要参考了如下几篇文章：</p>
 <ol>
@@ -372,7 +374,7 @@ file_path: name.pdf
 <ol>
 <li><del>评论系统</del></li>
 <li><del>适配手机的 CSS (重写 CSS 计划)</del></li>
-<li>RSS 支持</li>
+<li><del>RSS 支持</del></li>
 <li>文章间的跳转</li>
 <li><del>文章的目录安置(右上角固定的可伸缩悬浮块)</del></li>
 <li><del>黑暗主题</del>（不再考虑）</li>

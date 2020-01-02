@@ -129,8 +129,13 @@
   </url>
   
   <url>
+    <loc>https://zerovip.github.io/zh/59045/</loc>
+    <lastmod>2019-06-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://zerovip.github.io/zh/about/</loc>
-    <lastmod>2019-06-21T00:00:00+00:00</lastmod>
+    <lastmod>2019-01-01T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -146,31 +151,6 @@
                 hreflang="zh"
                 href="https://zerovip.github.io/zh/about/"
                 />
-  </url>
-  
-  <url>
-    <loc>https://zerovip.github.io/zh/about/site/</loc>
-    <lastmod>2019-06-21T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://zerovip.github.io/en/about/site/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://zerovip.github.io/fr/about/site/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://zerovip.github.io/zh/about/site/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://zerovip.github.io/zh/59045/</loc>
-    <lastmod>2019-06-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -190,6 +170,26 @@
                 rel="alternate"
                 hreflang="zh"
                 href="https://zerovip.github.io/zh/about/me/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://zerovip.github.io/zh/about/site/</loc>
+    <lastmod>2019-01-01T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://zerovip.github.io/en/about/site/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://zerovip.github.io/fr/about/site/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://zerovip.github.io/zh/about/site/"
                 />
   </url>
   

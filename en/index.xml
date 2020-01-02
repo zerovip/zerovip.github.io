@@ -1,33 +1,44 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Zero&#39;s Ivory Tower</title>
-    <link>https://zerovip.github.io/en/</link>
-    <description>Recent content on Zero&#39;s Ivory Tower</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Fri, 21 Jun 2019 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://zerovip.github.io/en/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>About the site</title>
-      <link>https://zerovip.github.io/en/about/site/</link>
-      <pubDate>Fri, 21 Jun 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://zerovip.github.io/en/about/site/</guid>
-      <description>Tags Categories So on.</description>
-    </item>
-    
-    <item>
-      <title>About me</title>
-      <link>https://zerovip.github.io/en/about/me/</link>
-      <pubDate>Sat, 01 Jan 2000 00:00:00 +0000</pubDate>
-      
-      <guid>https://zerovip.github.io/en/about/me/</guid>
-      <description>You shouldn&#39;t try to know me.</description>
-    </item>
-    
-  </channel>
+    <channel>
+        <title>Zero&#39;s Ivory Tower</title>
+        <link>https://zerovip.github.io/en/</link>
+        <description>Recent Content | Zero&#39;s Ivory Tower</description>
+        <generator>Hugo -- gohugo.io</generator>
+        
+            <language>en-us</language>
+        
+        
+        
+        
+        
+            <lastBuildDate>
+                2019-01-01
+            </lastBuildDate>
+        
+        
+        
+            <item>
+                <title>About the site</title>
+                <link>https://zerovip.github.io/en/about/site/</link>
+                <pubDate>2019-01-01</pubDate>
+                
+                <guid>https://zerovip.github.io/en/about/site/</guid>
+                <description>&lt;p&gt;Tags
+Categories
+So on.&lt;/p&gt;
+</description>
+            </item>
+        
+            <item>
+                <title>About me</title>
+                <link>https://zerovip.github.io/en/about/me/</link>
+                <pubDate>2000-01-01</pubDate>
+                
+                <guid>https://zerovip.github.io/en/about/me/</guid>
+                <description>&lt;p&gt;You shouldn&#39;t try to know me.&lt;/p&gt;
+</description>
+            </item>
+        
+    </channel>
 </rss>
