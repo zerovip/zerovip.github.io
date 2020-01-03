@@ -25,7 +25,7 @@
                 
                 <guid>https://zerovip.github.io/zh/69995/</guid>
                 <description>&lt;h1 id=&#34;heading&#34;&gt;“消费指南”这个系列&lt;/h1&gt;
-&lt;p&gt;因为没有钱直接去买最好的东西，没有钱直接去享受最好的服务，而我又想用有限的钱享受还算可以的服务，因此每当我消费（买电脑、买手机、买雨伞、买笔、买衣服、买鞋，预感未来买汽车、买房子……）之前我都要深入了解有关的一切信息，然后作出最适合自己的决定，这样的流程让我深入了解了各行各业. 贫穷 + 不妥协 = 浪费时间. 然而这些浪费的时间只在消费当时发挥作用，多年后再次消费同类产品时往往还要再次浪费时间——除了随着科技进步的业界革新之外，更重要的原因是过一段时间后这些学到的知识就被我忘记了，因为不是专业人士，不常用也无需复习. 为了减少之后重新学习的时间成本，也为了给其他有同样需求的人一定的参考，我开设了这个系列.&lt;/p&gt;
+&lt;p&gt;因为没有钱直接去买最好的东西，又想用有限的钱享受还算可以的服务，所以每次消费之前我都要深入了解有关的一切信息，然后作出最适合自己的选择，这样的流程让我深入了解了各行各业——没钱 + 不妥协 = 浪费时间. 然而这些浪费的时间只在消费当时发挥了作用，多年后再次消费同类产品时往往还要再浪费一次时间——除了科技进步、产业革新，更重要的原因是一段时间后这些当时学到的知识就被我忘记了，毕竟平时生活里并不会密集地消费同样的产品，不常用也无需复习. 为了减少之后重新学习的时间成本，也为了给其他有同样需求的人一定的参考，我开设了这个系列.&lt;/p&gt;
 &lt;p&gt;【这个系列的内容都是偏向于客观的知识的阐述，列出的参考中会有一部分偏方法论的内容.】&lt;/p&gt;
 &lt;p&gt;第一篇介绍配眼镜. 配眼镜有四个步骤：验光、选镜架、选镜片和定配.&lt;/p&gt;
 &lt;h1 id=&#34;heading-1&#34;&gt;验光&lt;/h1&gt;
@@ -304,6 +304,8 @@
                 
                 <guid>https://zerovip.github.io/zh/47093/</guid>
                 <description>&lt;p&gt;今天介绍的是第 7.2 节，有关代数无理数小数展开的一个定理.&lt;/p&gt;
+&lt;h1 id=&#34;前置知识&#34;&gt;前置知识&lt;/h1&gt;
+&lt;p&gt;了解极限语言的含义. 测试题：下面这个式子是什么意思？ &lt;span class=&#34;math display&#34;&gt;\[\lim_{n\to\infty}\frac{2n^2-n+1}{n^2+n-2}=2\]&lt;/span&gt;.&lt;/p&gt;
 &lt;h1 id=&#34;基本概念&#34;&gt;基本概念&lt;/h1&gt;
 &lt;h2 id=&#34;实代数数&#34;&gt;实代数数&lt;/h2&gt;
 &lt;p&gt;有理系数多项式的复根叫做&lt;strong&gt;代数数&lt;/strong&gt;.&lt;/p&gt;
@@ -710,12 +712,18 @@
                 <description>&lt;p&gt;这是我这个系列的第一篇文章，因此先简单介绍一下这个系列.&lt;/p&gt;
 &lt;p&gt;我于几天前在知乎上看到了&lt;a href=&#34;https://zhuanlan.zhihu.com/p/69063049&#34;&gt;对 Bogdan Grechuk, &lt;em&gt;Theorems of the 21st Century&lt;/em&gt; 这套书的推荐&lt;/a&gt;，推荐中给了几张截图我大致看了一下，觉得是非常有意思的书，并决定要读一读. 这几天这个新博客初步建成，建站时也规划了数学科普的部分. 于是拿这套书中的材料作为这个博客的数学科普部分的开端再合适不过.&lt;/p&gt;
 &lt;p&gt;这套书由 Springer 出版发行，目前只有第一卷，且还没有纸质版出售（截至到 2019-06-30 ）. 如果您学校的图书馆购买了 Springer 数据库，则您可以到上面免费下载，当然您也可以在&lt;a href=&#34;https://link.springer.com/book/10.1007/978-3-030-19096-5&#34;&gt;这里&lt;/a&gt;购买.&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34; role=&#34;doc-noteref&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;【本段内容来自前言&lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34; role=&#34;doc-noteref&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;】这套书的目的是介绍那些——新世纪发表在顶级数学期刊上的、（证明起来）对数学家都非常有难度的、同时却是可以以相对简单的形式（把内容）呈现给一般读者、让本科生以及理想情况下的高中生都能大致理解内容的重要定理. 这套书以年度划分章节，目前已出的第一卷介绍了共计 106 个 2001 年到 2010 年发表在 &lt;em&gt;Annals of Mathematics&lt;/em&gt; 上的定理（有很多定理由多个主要的结果组成，这种情况下选择其中最重要或最容易接受的一个作为主要定理来讲，偶尔会再简单介绍一下其他的结果），每个定理一个小节，同一年的定理组成一章，共 10 章. 对每个定理会用 3-4 页的篇幅介绍它的形式以及它的重要性，每个定理均可单独阅读. 容易一些的定理起点很低，不需要太多前置内容；而难一点的定理至少需要本科生水平. 同时，数学的严谨性没有丢失，定理叙述本身涉及到的概念均有严格的定义，但定理的证明不在这本书的讨论范围内；不过每一节的最后会给出包含定理证明的参考文献可供深入阅读. 这本书当然还是有很多非常重要的定理没有包含进来，比如 Perelman 证明的 Poincaré 猜想因为没有发表在 &lt;em&gt;Annals of Mathmatics&lt;/em&gt; 上&lt;a href=&#34;#fn3&#34; class=&#34;footnote-ref&#34; id=&#34;fnref3&#34; role=&#34;doc-noteref&#34;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt;没有收录进来，还有一些是实在是太难了不好解释，2011 年及以后的也都不在这本书的计划里，看看本套书的后面几卷会不会计划一下.&lt;/p&gt;
+&lt;p&gt;【本段内容来自前言】这套书的目的是介绍那些——新世纪发表在顶级数学期刊上的、（证明起来）对数学家都非常有难度的、同时却是可以以相对简单的形式（把内容）呈现给一般读者、让本科生以及理想情况下的高中生都能大致理解内容的重要定理. 这套书以年度划分章节，目前已出的第一卷介绍了共计 106 个 2001 年到 2010 年发表在 &lt;em&gt;Annals of Mathematics&lt;/em&gt; 上的定理（有很多定理由多个主要的结果组成，这种情况下选择其中最重要或最容易接受的一个作为主要定理来讲，偶尔会再简单介绍一下其他的结果），每个定理一个小节，同一年的定理组成一章，共 10 章. 对每个定理会用 3-4 页的篇幅介绍它的形式以及它的重要性，每个定理均可单独阅读. 容易一些的定理起点很低，不需要太多前置内容；而难一点的定理至少需要本科生水平. 同时，数学的严谨性没有丢失，定理叙述本身涉及到的概念均有严格的定义，但定理的证明不在这本书的讨论范围内；不过每一节的最后会给出包含定理证明的参考文献可供深入阅读. 这本书当然还是有很多非常重要的定理没有包含进来，比如 Perelman 证明的 Poincaré 猜想因为没有发表在 &lt;em&gt;Annals of Mathmatics&lt;/em&gt; 上&lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34; role=&#34;doc-noteref&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;没有收录进来，还有一些是实在是太难了不好解释，2011 年及以后的也都不在这本书的计划里，看看本套书的后面几卷会不会计划一下.&lt;/p&gt;
 &lt;p&gt;我目前的打算是，每次我完全凭借个人喜好从目录里挑一篇我感兴趣的内容，读一读，然后如果开心的话额外找一些东西深入学习一下，然后用中文在这里写作. 从今天开始，大约一个月更新一次. 由于我可能会懒惰或者对读的定理没那么有兴趣，有可能在这里写的文章会完全是原文的翻译——尽管如此，做总比不做好吧，而且对我本人更加全面地接触数学的各个分支、领略&lt;del&gt;最&lt;/del&gt;较前沿的数学问题、扩大视野也都是有好处的吧.&lt;/p&gt;
 &lt;p&gt;这次的介绍的是 10.10 二元生成群的子群定理.&lt;/p&gt;
+&lt;h1 id=&#34;前置知识&#34;&gt;前置知识&lt;/h1&gt;
+&lt;ol type=&#34;1&#34;&gt;
+&lt;li&gt;知道群的定义，或者通过网络学习，能理解下面 2.1 给出的群的定义和子群的定义. 测试题：整数加群是什么样的群？它是有限群么？请给出一个整数加群的子群.&lt;/li&gt;
+&lt;li&gt;对下面 2.2 - 2.3 节给出的概念能理解、掌握，并能通过简单的例子巩固加深理解这两个概念. 测试题：整数加群中单位元的阶是多少？&lt;/li&gt;
+&lt;li&gt;知道什么是可数集. 测试题：有理数集是否是可数集？整数集是否是可数集？整数加群是否是可数群？&lt;/li&gt;
+&lt;/ol&gt;
 &lt;h1 id=&#34;基本概念&#34;&gt;基本概念&lt;/h1&gt;
 &lt;h2 id=&#34;群&#34;&gt;群&lt;/h2&gt;
-&lt;p&gt;群是一个集合 &lt;span class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt; 带一个运算 &lt;span class=&#34;math inline&#34;&gt;\(\cdot\colon G\times G\to G, g_1\times g_2\mapsto g_1\cdot g_2\)&lt;/span&gt;，其中 &lt;span class=&#34;math inline&#34;&gt;\(g_1, g_2\in G\)&lt;/span&gt;，运算 &lt;span class=&#34;math inline&#34;&gt;\(\cdot\)&lt;/span&gt; 满足如下四条性质：&lt;/p&gt;
+&lt;p&gt;群是一个集合 &lt;span class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt; 带一个运算 &lt;span class=&#34;math inline&#34;&gt;\(\cdot\colon G\times G\to G, (g_1, g_2)\mapsto g_1\cdot g_2\)&lt;/span&gt;，其中 &lt;span class=&#34;math inline&#34;&gt;\(g_1, g_2\in G\)&lt;/span&gt;，运算 &lt;span class=&#34;math inline&#34;&gt;\(\cdot\)&lt;/span&gt; 满足如下四条性质：&lt;/p&gt;
 &lt;ol type=&#34;1&#34;&gt;
 &lt;li&gt;（封闭）&lt;span class=&#34;math inline&#34;&gt;\(g_1\cdot g_2\in G\)&lt;/span&gt;，对任意 &lt;span class=&#34;math inline&#34;&gt;\(g_1, g_2\in G\)&lt;/span&gt; 成立；&lt;/li&gt;
 &lt;li&gt;（结合）&lt;span class=&#34;math inline&#34;&gt;\((g_1\cdot g_2)\cdot g_3 = g_1\cdot (g_2\cdot g_3)\)&lt;/span&gt;，对任意 &lt;span class=&#34;math inline&#34;&gt;\(g_1, g_2, g_3\in G\)&lt;/span&gt; 成立；&lt;/li&gt;
@@ -723,14 +731,14 @@
 &lt;li&gt;（有逆）对任意 &lt;span class=&#34;math inline&#34;&gt;\(g\in G\)&lt;/span&gt;，存在元素 &lt;span class=&#34;math inline&#34;&gt;\(g&amp;#39;\in G\)&lt;/span&gt; 使得 &lt;span class=&#34;math inline&#34;&gt;\(g\cdot g&amp;#39; = g&amp;#39;\cdot g = e\)&lt;/span&gt;，通常我们用 &lt;span class=&#34;math inline&#34;&gt;\(g^{-1}\)&lt;/span&gt; 来记这个元素.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;记为群 &lt;span class=&#34;math inline&#34;&gt;\(\left( G, \cdot\right)\)&lt;/span&gt; 或简记为群 &lt;span class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; 个相同元素 &lt;span class=&#34;math inline&#34;&gt;\(g\)&lt;/span&gt; 进行运算记为 &lt;span class=&#34;math inline&#34;&gt;\(g^n\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; 个相同元素 &lt;span class=&#34;math inline&#34;&gt;\(g\)&lt;/span&gt; 进行运算 &lt;span class=&#34;math inline&#34;&gt;\(g\cdot g\cdot ...\cdot g\)&lt;/span&gt;记为 &lt;span class=&#34;math inline&#34;&gt;\(g^n\)&lt;/span&gt;.&lt;/p&gt;
 &lt;p&gt;如果群 &lt;span class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt; 中的一个子集 &lt;span class=&#34;math inline&#34;&gt;\(H\)&lt;/span&gt; 在同样的运算下也满足这四条性质，则称 &lt;span class=&#34;math inline&#34;&gt;\(H\)&lt;/span&gt; 是 &lt;span class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt; 的子群，记作 &lt;span class=&#34;math inline&#34;&gt;\(H \le G\)&lt;/span&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;群中元素的共轭&#34;&gt;群中元素的共轭&lt;/h2&gt;
 &lt;p&gt;群 &lt;span class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt; 中两个元素 &lt;span class=&#34;math inline&#34;&gt;\(g_1, g_2\)&lt;/span&gt; 称为（互相）共轭的，如果，存在一个元素 &lt;span class=&#34;math inline&#34;&gt;\(h\in G\)&lt;/span&gt;，使得 &lt;span class=&#34;math inline&#34;&gt;\(g_1 = h\cdot g_2\cdot h^{-1}\)&lt;/span&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;群中元素的阶&#34;&gt;群中元素的阶&lt;/h2&gt;
 &lt;p&gt;对 &lt;span class=&#34;math inline&#34;&gt;\(\forall g\in G\)&lt;/span&gt;，如果 &lt;span class=&#34;math inline&#34;&gt;\(\exists r\in \mathbb{Z}^+\)&lt;/span&gt;，使得 &lt;span class=&#34;math inline&#34;&gt;\(g^r = e\)&lt;/span&gt;，且对 &lt;span class=&#34;math inline&#34;&gt;\(\forall r&amp;#39; &amp;lt; r, r&amp;#39;\in \mathbb{Z}^+\)&lt;/span&gt;，有 &lt;span class=&#34;math inline&#34;&gt;\(g^{r&amp;#39;} \neq e\)&lt;/span&gt;，则我们称 &lt;span class=&#34;math inline&#34;&gt;\(r\)&lt;/span&gt; 是元素 &lt;span class=&#34;math inline&#34;&gt;\(g\)&lt;/span&gt; 的阶. 如果对 &lt;span class=&#34;math inline&#34;&gt;\(\forall r\in \mathbb{Z}^+\)&lt;/span&gt;，有 &lt;span class=&#34;math inline&#34;&gt;\(g^r \neq e\)&lt;/span&gt;，则我们称元素 &lt;span class=&#34;math inline&#34;&gt;\(g\)&lt;/span&gt; 的阶是无穷.&lt;/p&gt;
 &lt;h2 id=&#34;pig&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(\pi(G)\)&lt;/span&gt;&lt;/h2&gt;
-&lt;p&gt;对任意群 &lt;span class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt;，我们用 &lt;span class=&#34;math inline&#34;&gt;\(\pi(G)\)&lt;/span&gt; 记 &lt;span class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt; 中所有元素的（有限的）阶数的集合，即 &lt;span class=&#34;math inline&#34;&gt;\(\pi(G) = \left\{ i | i\in \mathbb{Z}^+, \text{ 群 }G\text{ 中有 }i\text{ 阶元素 } \right\}\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;对任意群 &lt;span class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt;，我们用 &lt;span class=&#34;math inline&#34;&gt;\(\pi(G)\)&lt;/span&gt; 记 &lt;span class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt; 中所有元素的（有限的）阶数的集合，即 &lt;span class=&#34;math inline&#34;&gt;\(\pi(G) = \left\{ i | i\in \mathbb{Z}^+, \text{ 群 }G\text{ 中有 }i\text{ 阶的元素 } \right\}\)&lt;/span&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;可数群&#34;&gt;可数群&lt;/h2&gt;
 &lt;p&gt;一个集合是可数的，如果，这个集合可以与自然数集 &lt;span class=&#34;math inline&#34;&gt;\(\mathbb{N}\)&lt;/span&gt; 建立起一个一一对应. 一个群是可数群，如果，这个群只看作是集合是可数的.&lt;/p&gt;
 &lt;h2 id=&#34;二元生成群&#34;&gt;二元生成群&lt;/h2&gt;
@@ -747,13 +755,13 @@
 &lt;p&gt;二元生成群当然有含 3 个元素的生成集合、含 4 个元素的生成集合…因此二元生成群是三元生成群，三元生成群是四元生成群…&lt;/p&gt;
 &lt;h2 id=&#34;群的嵌入&#34;&gt;群的嵌入&lt;/h2&gt;
 &lt;h3 id=&#34;群同态与群同构&#34;&gt;群同态与群同构&lt;/h3&gt;
-&lt;p&gt;保持群的运算关系的两个群之间的映射叫做群同态. &lt;span class=&#34;math inline&#34;&gt;\(\phi\colon \left( G, \cdot\right)\to \left( H, \times\right)\)&lt;/span&gt; 是一个群同态，如果，&lt;span class=&#34;math inline&#34;&gt;\(\phi(g_1\cdot g_2) = \phi(g_1)\times\phi(g_2)\)&lt;/span&gt;，其中 &lt;span class=&#34;math inline&#34;&gt;\(g_1, g_2\in G\)&lt;/span&gt;. 当 &lt;span class=&#34;math inline&#34;&gt;\(\phi\)&lt;/span&gt; 是单射时称其为单同态，当 &lt;span class=&#34;math inline&#34;&gt;\(\phi\)&lt;/span&gt; 是满射时称其为满同态，当 &lt;span class=&#34;math inline&#34;&gt;\(\phi\)&lt;/span&gt; 既是单同态又是满同态时称其为群同构，也称这两个群同构，记为 &lt;span class=&#34;math inline&#34;&gt;\(G \cong H\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;保持群的运算关系的两个群之间的映射叫做群同态. &lt;span class=&#34;math inline&#34;&gt;\(\phi\colon \left( G, \cdot\right)\to \left( H, \times\right)\)&lt;/span&gt; 是一个群同态，如果，&lt;span class=&#34;math inline&#34;&gt;\(\phi(g_1\cdot g_2) = \phi(g_1)\times\phi(g_2)\)&lt;/span&gt;，其中 &lt;span class=&#34;math inline&#34;&gt;\(g_1, g_2\in G\)&lt;/span&gt;. 当 &lt;span class=&#34;math inline&#34;&gt;\(\phi\)&lt;/span&gt; 是单射时称其为单同态. 当 &lt;span class=&#34;math inline&#34;&gt;\(\phi\)&lt;/span&gt; 是满射时称其为满同态. 当 &lt;span class=&#34;math inline&#34;&gt;\(\phi\)&lt;/span&gt; 既是单同态又是满同态时称其为群同构，也称这两个群同构，记为 &lt;span class=&#34;math inline&#34;&gt;\(G \cong H\)&lt;/span&gt;.&lt;/p&gt;
 &lt;h3 id=&#34;群的嵌入-1&#34;&gt;群的嵌入&lt;/h3&gt;
 &lt;p&gt;如果 &lt;span class=&#34;math inline&#34;&gt;\(K\cong H, H \le G\)&lt;/span&gt;，我们称群 &lt;span class=&#34;math inline&#34;&gt;\(K\)&lt;/span&gt; 可以被嵌入到群 &lt;span class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt; 中.&lt;/p&gt;
 &lt;h1 id=&#34;主要定理&#34;&gt;主要定理&lt;/h1&gt;
 &lt;p&gt;任意可数群 &lt;span class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt; 都可以嵌入到一个二元生成群 &lt;span class=&#34;math inline&#34;&gt;\(C\)&lt;/span&gt; 中，使得 &lt;span class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt; 中任意两个同阶的元素在 &lt;span class=&#34;math inline&#34;&gt;\(C\)&lt;/span&gt; 中共轭，且 &lt;span class=&#34;math inline&#34;&gt;\(\pi(G) = \pi(C)\)&lt;/span&gt;.&lt;/p&gt;
 &lt;h1 id=&#34;关于这个定理的重要性完全翻译&#34;&gt;关于这个定理的重要性【完全翻译】&lt;/h1&gt;
-&lt;p&gt;这个定理是极为有用的，有一大堆有意思的推论，并且立刻解决了领域内的一些重要的开放问题. 比如，我们上面提到的，群 &lt;span class=&#34;math inline&#34;&gt;\(\mathbb{Z}/2\mathbb{Z}\)&lt;/span&gt; 恰好有 2 个共轭类，这个群只有 2 个元素，当然是平凡的二元生成群. 2010 年以前，是否存在其他的恰好有 2 个共轭类的二元生成群&lt;a href=&#34;#fn4&#34; class=&#34;footnote-ref&#34; id=&#34;fnref4&#34; role=&#34;doc-noteref&#34;&gt;&lt;sup&gt;4&lt;/sup&gt;&lt;/a&gt;还是一个开放问题.&lt;/p&gt;
+&lt;p&gt;这个定理是极为有用的，有一大堆有意思的推论，并且立刻解决了领域内的一些重要的开放问题. 比如，我们上面提到的，群 &lt;span class=&#34;math inline&#34;&gt;\(\mathbb{Z}/2\mathbb{Z}\)&lt;/span&gt; 恰好有 2 个共轭类，这个群只有 2 个元素，当然是平凡的二元生成群. 2010 年以前，是否存在其他的恰好有 2 个共轭类的二元生成群&lt;a href=&#34;#fn3&#34; class=&#34;footnote-ref&#34; id=&#34;fnref3&#34; role=&#34;doc-noteref&#34;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt;还是一个开放问题.&lt;/p&gt;
 &lt;p&gt;对任意&lt;u&gt;除单位以外的元素均是有限阶元素的群 &lt;span class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt;&lt;/u&gt;[这样的群称为无挠的 (torsion-free)]应用定理 10.10（这个定理），我们得到：任意无挠可数群可以嵌入到一个无挠的二元生成群中，而后者恰有 2 个共轭类. 进而，这蕴含了，存在一个不可数的集合，里面的元素都是无挠的、恰有 2 个共轭类的二元生成群，它们两两不同构. 当然这绝对在很强的程度上解决了上面提到的开放问题. 一些其他的这个定理的有意思的推论都呈现在这篇文章中：&lt;/p&gt;
 &lt;p&gt;Ref: D. Osin, Small cancellations over relatively hyperbolic groups and embedding theorems, Annals of Mathematics 172-1, (2010), 1–39.&lt;/p&gt;
 &lt;h1 id=&#34;深入一些&#34;&gt;深入一些&lt;/h1&gt;
@@ -776,10 +784,9 @@
 &lt;section class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
 &lt;hr /&gt;
 &lt;ol&gt;
-&lt;li id=&#34;fn1&#34; role=&#34;doc-endnote&#34;&gt;&lt;p&gt;如果您没有经济能力，可以到&lt;a href=&#34;https://www.twirpx.com/file/2863819/&#34;&gt;这里&lt;/a&gt;使用 100 积分下载，每个新注册用户都会默认赠予 100 积分. 如果您不懂俄语，上述操作可以在翻译软件的帮助下进行. 在这里给出能免费获取的方法尽管不违法，也是不道德的. 本站绝不会提供下载链接，也不会帮助任何人下载，上述链接如果失效也不再另提供方法，且本系列的文章中也不会有原文的截图.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34; role=&#34;doc-backlink&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn2&#34; role=&#34;doc-endnote&#34;&gt;&lt;p&gt;我精简了一下，还稍微调了调顺序，不是完全照翻前言.&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34; role=&#34;doc-backlink&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn3&#34; role=&#34;doc-endnote&#34;&gt;&lt;p&gt;这算什么理由？忍不住吐槽一下下…&lt;a href=&#34;#fnref3&#34; class=&#34;footnote-back&#34; role=&#34;doc-backlink&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn4&#34; role=&#34;doc-endnote&#34;&gt;&lt;p&gt;更一般地，就连除了 &lt;span class=&#34;math inline&#34;&gt;\(\mathbb{Z}/2\mathbb{Z}\)&lt;/span&gt; 以外是否还存在一个群，它是有限生成群且有 2 个共轭类都是一个开放问题！（原注）&lt;a href=&#34;#fnref4&#34; class=&#34;footnote-back&#34; role=&#34;doc-backlink&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn1&#34; role=&#34;doc-endnote&#34;&gt;&lt;p&gt;如果您没有经济能力，可以到&lt;a href=&#34;https://www.twirpx.com/file/2863819/&#34;&gt;这里&lt;/a&gt;使用 100 积分下载，每个新注册用户都会默认赠予 100 积分. 如果您不懂俄语，上述操作可以在翻译软件的帮助下进行.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34; role=&#34;doc-backlink&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn2&#34; role=&#34;doc-endnote&#34;&gt;&lt;p&gt;这算什么理由？忍不住吐槽一下下…&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34; role=&#34;doc-backlink&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn3&#34; role=&#34;doc-endnote&#34;&gt;&lt;p&gt;更一般地，就连除了 &lt;span class=&#34;math inline&#34;&gt;\(\mathbb{Z}/2\mathbb{Z}\)&lt;/span&gt; 以外是否还存在一个群，它是有限生成群且有 2 个共轭类都是一个开放问题！（原注）&lt;a href=&#34;#fnref3&#34; class=&#34;footnote-back&#34; role=&#34;doc-backlink&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/section&gt;
 </description>
@@ -791,7 +798,7 @@
                 <pubDate>2019-06-24</pubDate>
                 
                 <guid>https://zerovip.github.io/zh/23536/</guid>
-                <description>&lt;p&gt;我一向认为明文的法则是能让人的生活有条不紊的，也让人不会迷失在选择和犹豫中，是把复杂问题变简单的办法. 本文将对我的电子生活做一个梳理. 关于网络生活，希望自己遵守且容易忘记的部分形成明文的法则；非网络部分的电子生活中，对我个人常用的工具类产品的使用方法做一个整理（同时也可以看作是安利）. 两部分都将会常常更新，记录我最新做出的决定.&lt;/p&gt;
+                <description>&lt;p&gt;我一向认为明文的法则是能让人的生活有条不紊的，也让人不会迷失在选择和犹豫中，是把复杂问题变简单的办法. 本文将对我的电子生活做一个梳理. 关于网络生活，把[希望自己遵守且容易忘记的]部分形成明文的法则；非网络部分的电子生活中，对我个人常用的工具类产品的使用方法做一个整理，当然也可以看作是安利. 两部分都将会常常更新，记录我最新做出的决定.&lt;/p&gt;
 &lt;h1 id=&#34;heading&#34;&gt;网络生活法则&lt;/h1&gt;
 &lt;h2 id=&#34;heading-1&#34;&gt;根本原则：注重个人隐私.&lt;/h2&gt;
 &lt;h3 id=&#34;heading-2&#34;&gt;隐私界限&lt;/h3&gt;
@@ -835,9 +842,10 @@
 &lt;p&gt;这个部分为一些与网络关系不大的电子生活的生活方式的整理，包括做哪类事情用什么软件，怎么使用那个软件，形成文字以避免功能上的交叉重叠，也方便因为意外更换电子设备时常用环境的快速搭建.&lt;/p&gt;
 &lt;h2 id=&#34;heading-15&#34;&gt;系统&lt;/h2&gt;
 &lt;h3 id=&#34;manjaro&#34;&gt;主要使用的计算机操作系统：Manjaro&lt;/h3&gt;
-&lt;p&gt;我是一个有系统洁癖的人，不仅希望能永远首先用上最新版本的软件，同时还希望我的计算机完完全全在我的掌控之下，我希望自己知道自己的每一个操作都是在干什么. &lt;small&gt;更一般地讲，我在生活上也是一个希望清楚地知道发生了什么的人.&lt;/small&gt; 然而想要知道得越多，就需要额外花费越多的时间和精力，我的生活的本质就是在这个矛盾之间寻找一个平衡. 在系统的选择问题上，本来选择的是 &lt;a href=&#34;https://www.archlinux.org/&#34;&gt;Arch Linux&lt;/a&gt;，但其繁琐的驱动问题使得我退而求其次，选择了 &lt;a href=&#34;https://www.manjaro.org/&#34;&gt;Manjaro&lt;/a&gt;. 这是 DEY 学长在 2017 年 3 月推荐给我的，从此我一直在用，以后也会一直主要使用，非常感谢. 自我使用以来，自己写了非常多的各种软件的配置文件以及一些脚本，它们被我备份在 &lt;a href=&#34;https://github.com/zerovip/backup&#34;&gt;GitHub 仓库里&lt;/a&gt;以防出现意外后可以快速恢复出一个一模一样的环境.&lt;/p&gt;
+&lt;p&gt;我是一个有系统洁癖的人，不仅希望能永远首先用上最新版本的软件，同时还希望我的计算机完完全全在我的掌控之下，我希望自己知道自己的每一个操作都是在干什么. &lt;small&gt;更一般地讲，我在生活上也是一个希望清楚地知道发生了什么的人.&lt;/small&gt; 然而想要知道得越多，就需要额外花费越多的时间和精力，我的生活的本质就是在这个矛盾之间寻找一个平衡. 在系统的选择问题上，本来选择的是 &lt;a href=&#34;https://www.archlinux.org/&#34;&gt;Arch Linux&lt;/a&gt;，但其繁琐的驱动问题使得我退而求其次，选择了 &lt;a href=&#34;https://www.manjaro.org/&#34;&gt;Manjaro&lt;/a&gt;. 这是 DEY 学长在 2017 年 3 月推荐给我的，从此我一直在用，以后也会一直主要使用. 自我使用以来，自己写了非常多的各种软件的配置文件以及一些脚本，它们被我备份在 &lt;a href=&#34;https://github.com/zerovip/backup&#34;&gt;GitHub 仓库里&lt;/a&gt;以防出现意外后可以快速恢复出一个一模一样的环境.&lt;/p&gt;
 &lt;h3 id=&#34;windows&#34;&gt;次要使用的计算机操作系统：Windows&lt;/h3&gt;
 &lt;p&gt;很多游戏不支持 Linux，还要到 Windows 上玩，还有一些例如学校任务不得不安装的软件有时候也都没有 Linux 版本.&lt;/p&gt;
+&lt;p&gt;2020 年 1 月新规：所有游戏一律到 Windows 上玩，无论是否支持 Linux.&lt;/p&gt;
 &lt;h3 id=&#34;android&#34;&gt;主要使用的手机操作系统：Android&lt;/h3&gt;
 &lt;p&gt;我是 Google 的脑残粉啦.&lt;/p&gt;
 &lt;h2 id=&#34;heading-16&#34;&gt;工具类软件&lt;/h2&gt;
@@ -847,8 +855,11 @@
 &lt;p&gt;Linux 上的有力视频剪辑工具. 我已经不会再进行大型视频编辑了，简单的一些工作这个软件做得很好.&lt;/p&gt;
 &lt;h3 id=&#34;filegee&#34;&gt;备份软件：FileGee&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&#34;http://cn.filegee.com/&#34;&gt;FileGee&lt;/a&gt; 是我的 Windows 备份软件，它的免费版已经足够强大，可以支持硬盘备份、网盘备份. 我是用它配合百度网盘进行只增不减的备份的.&lt;/p&gt;
-&lt;h3 id=&#34;heading-17&#34;&gt;输入法：小鹤双拼&lt;/h3&gt;
+&lt;h3 id=&#34;heading-17&#34;&gt;输入法方案：小鹤双拼&lt;/h3&gt;
 &lt;p&gt;全拼感觉很慢，五笔又太难，于是学习双拼. 查的时候据说是小鹤双拼最厉害，带形还能打得更快，于是花了几天学习了一下，不熟练地用上一个月就熟练了. 我现在还没有加形.&lt;/p&gt;
+&lt;h3 id=&#34;-gboard&#34;&gt;手机输入法：&lt;del&gt;触宝&lt;/del&gt; Gboard&lt;/h3&gt;
+&lt;p&gt;&lt;del&gt;好早以前就一直在用触宝输入法，它的核心优点有：多语言，拼音打字后可以手写笔画选字，九宫格键盘的符号键背后有分门别类的特别全的符号. 而且我高中的时候发现在输入密码的时候触宝输入法直接就不起作用了，会呼出原生输入法，我把这个问题通过邮件反馈给开发人员后他们一星期内就发布了新版本解决了这个问题. 这件事让我一直对这个输入法珍爱有加，后来他们给输入法加了广告我也没有换，再后来我找到了没有广告的触宝输入法极速版并一直使用至今.&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;2020 年还是决定换一个输入法. 想换的理由是想体验一下全键盘，而触宝输入法的全键盘的符号键背后符号太少了，给开发人员发邮件希望要九宫格的符号界面却迟迟没有回复，查了一下选择了 Gboard. 结果发现 Gboard 的符号页符号也很少，还少了手写笔画选字的功能. 但无论如何还是硬着头皮用下来了.&lt;/p&gt;
 &lt;h3 id=&#34;sofascore&#34;&gt;知晓体育比分：SofaScore&lt;/h3&gt;
 &lt;p&gt;Android 软件. 功能极其全面，有各种运动类型，各种球队、球员、比赛数据，关注一些俱乐部、球员则可以收到与他们有关的事件的提醒，极为方便.&lt;/p&gt;
 &lt;h3 id=&#34;instapaper&#34;&gt;收藏文章稍后阅读：Instapaper&lt;/h3&gt;
@@ -856,11 +867,14 @@
 &lt;h3 id=&#34;stack-exchange&#34;&gt;问答网站：Stack Exchange&lt;/h3&gt;
 &lt;p&gt;Android 软件，我主要在使用数学板块 Mathmatics，但实际上我的使用方法是遇到数学问题 Google 搜，就会出这个网站的结果，点进去看，喜欢的觉得有价值的回答就收藏到那个 Instapaper 里（这也是为什么我会提建议让支持数学显示，不过即便不支持，我也是可以选择“在浏览器打开”，这样就跳转到 Stack Exchange 了）. 我还没有在上面留下过痕迹，只有 1 个声誉值，貌似只能提问题，但我有点不敢在这么专业的平台上提问题，更何况大多数问题 Google 搜就能解决了.&lt;/p&gt;
 &lt;h3 id=&#34;rss-inoreader&#34;&gt;RSS 阅读器：Inoreader&lt;/h3&gt;
-&lt;p&gt;Android 软件，用来订阅 &lt;a href=&#34;https://zh.wikipedia.org/wiki/RSS&#34;&gt;RSS&lt;/a&gt; 源. RSS 大法好，必须在这里鼓吹一波 RSS 这个上个时代的互联网技术. 我订阅的源主要有：知乎日报、Engadget、果壳精选、Mathematics-Quanta Magazine 等. 本站未来将会支持 RSS 订阅.&lt;/p&gt;
+&lt;p&gt;Android 软件，用来订阅 &lt;a href=&#34;https://zh.wikipedia.org/wiki/RSS&#34;&gt;RSS&lt;/a&gt; 源. RSS 大法好，必须在这里鼓吹一波 RSS 这个上个时代的互联网技术. 我订阅的源主要有：知乎日报、Engadget、果壳精选、Mathematics-Quanta Magazine 等. &lt;del&gt;本站未来将会支持 RSS 订阅.&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;2020 年更新：本站现已支持 RSS 订阅.&lt;/p&gt;
 &lt;h3 id=&#34;aritymod&#34;&gt;画数学曲线：ArityMOD&lt;/h3&gt;
 &lt;p&gt;强大方便.&lt;/p&gt;
-&lt;h3 id=&#34;outlook&#34;&gt;手机查看邮件：Outlook&lt;/h3&gt;
-&lt;p&gt;我常用的 163, outlook, hotmail, gmail 都可以绑定，没有广告，页面干净，显示邮件的逻辑很合理. 发邮件以及回复邮件应在电脑的官方网页端进行.&lt;/p&gt;
+&lt;h3 id=&#34;outlook-gmail&#34;&gt;手机查看邮件：&lt;del&gt;Outlook&lt;/del&gt; Gmail&lt;/h3&gt;
+&lt;p&gt;&lt;del&gt;我常用的 163, outlook, hotmail, gmail 都可以绑定，没有广告，页面干净，显示邮件的逻辑很合理. 发邮件以及回复邮件应在电脑的官方网页端进行.&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;2019 年 9 月换成了 Gmail，原因是 Outlook 收到消息后不会提醒，经测试 Gmail 提醒得很好.&lt;/p&gt;
+&lt;p&gt;2019 年 12 月更新：Gmail 在 163 邮箱收到消息后还是不会提醒，正打算再换一个.&lt;/p&gt;
 &lt;h3 id=&#34;authy&#34;&gt;二次验证软件：Authy&lt;/h3&gt;
 &lt;p&gt;有一个总的帐号，不会因为换手机而全部丢失. 千万不要用 Google 的，和 Google 帐号不绑定，换手机就全没了.&lt;/p&gt;
 &lt;h3 id=&#34;google-&#34;&gt;备份照片：(Google) 相册&lt;/h3&gt;
@@ -891,7 +905,7 @@
 &lt;p&gt;我同样也非常喜欢，在线的部分非常庞大，而且常常更新，在没有玩腻之前会一直玩.&lt;/p&gt;
 &lt;h3 id=&#34;ingress&#34;&gt;Ingress&lt;/h3&gt;
 &lt;p&gt;&lt;del&gt;一个朋友带我入的坑，是一个手机端的增强现实的游戏，佛系玩. 启蒙军才是人类的未来！&lt;/del&gt;&lt;/p&gt;
-&lt;p&gt;已废弃. 玩了也没几个月吧，我本来挺佛系的，出去吃饭就打开随手 hack，遇到中立 po 就随手插上一个脚. 有时候也还投入挺多心力的，出去走一走做 field，甚至做多重. 做多重很麻烦的，一遍一遍 hack 就为了多得到一些 key，常常一两个小时就耽误在这上面了. 我还安慰自己不能总是学习，玩这个游戏也算是多运动，很健康的.&lt;/p&gt;
+&lt;p&gt;2019 年 7 月 18 日更新：已废弃. 玩了也没几个月吧，我本来挺佛系的，出去吃饭就打开随手 hack，遇到中立 po 就随手插上一个脚. 有时候也还投入挺多心力的，出去走一走做 field，甚至做多重. 做多重很麻烦的，一遍一遍 hack 就为了多得到一些 key，常常一两个小时就耽误在这上面了. 我还安慰自己不能总是学习，玩这个游戏也算是多运动，很健康的.&lt;/p&gt;
 &lt;p&gt;我不和别人对抗. 因为只能放 2000 个道具，我得到的所有能量炮我都自己吃掉了，而不是把它们用了炸别人的 po——我只占领中立的能量塔；然而常常一个星期无人占领的中立能量塔我一占领、连线、建 field，第二天就有敌军把它们打掉了并占为他们所有. 我开始还很不爽，后来觉得毕竟也是规则的一部分，别人打掉也方便我重新占领，能得到更多的经验值，这也是游戏的乐趣所在吧，所以也坦然接受了，建 field 也都完全不加护盾，方便别人打掉. 佛系玩着，看着自己成就一点一点多起来也很快乐.&lt;/p&gt;
 &lt;p&gt;好像守 po 150 天能得到一个什么奖励，我就选了一个特别不好接近的 po 占了 5 级，定时给它充电，加上护盾，连线从来不连它以免给敌军连线造成困扰被打掉. 后来还有一个友军还帮我升了一下级，我非常感激 TA，不知道是不是 TA 猜到我想守这个 po，或者 TA 就是顺便路过而已. 总之我对它珍爱有加，把全部心力都浇筑在它上面. 同时也做好了心理准备，想象它被打掉的样子，毕竟我是想解锁成就，被敌军发现并破坏我的计划也都是正常的. 不过已经快 30 多天了，敌军都没有碰过它，我想也许不是他们没有发现，可能就是他们对新人比较有爱吧.&lt;/p&gt;
 &lt;p&gt;暑假升级到 2.25.2 之后 ingress 就一直登不上去了，一直转圈圈. 后来升级到 2.26.2 依然如此，很多天了. 在最后不得不给我守的 po 充电（因为一直不充电 7 天就掉完电变成中立 po 了）的前一天我决心解决这个问题：在网上查解决办法、清缓存、清储存、重装软件、重启手机、换梯子、等等&amp;hellip;很多个小时过去了，我没找到解决办法. 最后突然灵光一现，去 play 商店的评论区看，一下就看到一条评论：&lt;/p&gt;
@@ -900,7 +914,7 @@
 &lt;/blockquote&gt;
 &lt;p&gt;于是我又改 google 帐号名称，果然顺利解决了问题. 登进去以后赶紧从我那 200 多个 key 里找我想充电的那个. 按名称排序的话完全看不出中文的规律，按距离排序几乎就是得一个一个翻过去，完全不知道该怎么搜索，一如既往地烦躁地花了些时间后终于找到，却充不进去电！所有的 po 都充不进去！我试着到我家这边一个 po 跟前去充还是不行，这时我才发现也没法 hack，也没法插脚，所有操作都做不了了，提示的框里什么都没写，是一个空白框. 虽然我第一次遇到这样的情况，但我马上怀疑自己被封禁了，查了一下，好像和 semi-ban 的症状特别相似，也没查到有用的解封方法，都说是过几天就好了. 那我可等不起，再过几个小时我守的 po 就中立了——没有任何人打它，它就中立了.&lt;/p&gt;
 &lt;p&gt;应该说，这是压垮我的最后一根稻草. 我把游戏卸了，顿时感到一身轻松. 我不用再耽误时间，我不用再看着我占的 po 被敌军打下，我不用时时刻刻想着给我的 po 充电. 我认为游戏的意义在于放松，在于让我快乐，这个游戏唯一让我快乐的地方是我看着自己一点一点解锁新成就，期待自己在满级以后可以装逼. 这个游戏也许被更多的玩家认为是一个交友游戏，但它首先被我排除了这样的玩法——我就要 solo 玩，没有 6 级以上 po 又如何？而如今在我看来玩这个游戏窝心的程度已经远远大于让我快乐的程度，索性我离开吧. 我只有 7 级，我没有沉没成本，我还可以全身而退，除了解 passcode 没有体验过，这游戏也没有超出我认知的东西了.&lt;/p&gt;
-&lt;p&gt;那就这样，再见 ingress ！XM 能量与我再无关，启蒙军是什么，我再不知道了.（补充于 2019 年 7 月 18 日）&lt;/p&gt;
+&lt;p&gt;那就这样，再见 ingress ！XM 能量与我再无关，启蒙军与我再无关.&lt;/p&gt;
 </description>
             </item>
         
@@ -1152,7 +1166,7 @@ file_path: name.pdf
 &lt;li&gt;&lt;del&gt;评论系统&lt;/del&gt;&lt;/li&gt;
 &lt;li&gt;&lt;del&gt;适配手机的 CSS (重写 CSS 计划)&lt;/del&gt;&lt;/li&gt;
 &lt;li&gt;&lt;del&gt;RSS 支持&lt;/del&gt;&lt;/li&gt;
-&lt;li&gt;文章间的跳转&lt;/li&gt;
+&lt;li&gt;&lt;del&gt;文章间的跳转&lt;/del&gt;（不再考虑）&lt;/li&gt;
 &lt;li&gt;&lt;del&gt;文章的目录安置(右上角固定的可伸缩悬浮块)&lt;/del&gt;&lt;/li&gt;
 &lt;li&gt;&lt;del&gt;黑暗主题&lt;/del&gt;（不再考虑）&lt;/li&gt;
 &lt;li&gt;&lt;del&gt;Google analytics&lt;/del&gt;&lt;/li&gt;
@@ -1164,6 +1178,8 @@ file_path: name.pdf
 &lt;li&gt;&lt;del&gt;提交 sitemap 供搜索引擎收录&lt;/del&gt;&lt;/li&gt;
 &lt;li&gt;&lt;del&gt;把 head 中的标题改一下，在搜索引擎中显得好看一点&lt;/del&gt;&lt;/li&gt;
 &lt;li&gt;&lt;del&gt;list 中写 head 标题的方法过于暴力，需要简化&lt;/del&gt;（不再考虑）&lt;/li&gt;
+&lt;li&gt;&lt;del&gt;首页最近文章&lt;/del&gt;&lt;/li&gt;
+&lt;li&gt;QQ 浏览器、UC 浏览器等奇葩内核，&amp;lt;p&amp;gt; 完全消失以及各种 flex 显示不好的问题&lt;/li&gt;
 &lt;/ol&gt;
 &lt;section class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
 &lt;hr&gt;

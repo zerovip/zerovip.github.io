@@ -97,6 +97,8 @@
                             
                             <guid>https://zerovip.github.io/zh/47093/</guid>
                             <description>&lt;p&gt;今天介绍的是第 7.2 节，有关代数无理数小数展开的一个定理.&lt;/p&gt;
+&lt;h1 id=&#34;前置知识&#34;&gt;前置知识&lt;/h1&gt;
+&lt;p&gt;了解极限语言的含义. 测试题：下面这个式子是什么意思？ &lt;span class=&#34;math display&#34;&gt;\[\lim_{n\to\infty}\frac{2n^2-n+1}{n^2+n-2}=2\]&lt;/span&gt;.&lt;/p&gt;
 &lt;h1 id=&#34;基本概念&#34;&gt;基本概念&lt;/h1&gt;
 &lt;h2 id=&#34;实代数数&#34;&gt;实代数数&lt;/h2&gt;
 &lt;p&gt;有理系数多项式的复根叫做&lt;strong&gt;代数数&lt;/strong&gt;.&lt;/p&gt;
@@ -179,12 +181,18 @@
                             <description>&lt;p&gt;这是我这个系列的第一篇文章，因此先简单介绍一下这个系列.&lt;/p&gt;
 &lt;p&gt;我于几天前在知乎上看到了&lt;a href=&#34;https://zhuanlan.zhihu.com/p/69063049&#34;&gt;对 Bogdan Grechuk, &lt;em&gt;Theorems of the 21st Century&lt;/em&gt; 这套书的推荐&lt;/a&gt;，推荐中给了几张截图我大致看了一下，觉得是非常有意思的书，并决定要读一读. 这几天这个新博客初步建成，建站时也规划了数学科普的部分. 于是拿这套书中的材料作为这个博客的数学科普部分的开端再合适不过.&lt;/p&gt;
 &lt;p&gt;这套书由 Springer 出版发行，目前只有第一卷，且还没有纸质版出售（截至到 2019-06-30 ）. 如果您学校的图书馆购买了 Springer 数据库，则您可以到上面免费下载，当然您也可以在&lt;a href=&#34;https://link.springer.com/book/10.1007/978-3-030-19096-5&#34;&gt;这里&lt;/a&gt;购买.&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34; role=&#34;doc-noteref&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;【本段内容来自前言&lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34; role=&#34;doc-noteref&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;】这套书的目的是介绍那些——新世纪发表在顶级数学期刊上的、（证明起来）对数学家都非常有难度的、同时却是可以以相对简单的形式（把内容）呈现给一般读者、让本科生以及理想情况下的高中生都能大致理解内容的重要定理. 这套书以年度划分章节，目前已出的第一卷介绍了共计 106 个 2001 年到 2010 年发表在 &lt;em&gt;Annals of Mathematics&lt;/em&gt; 上的定理（有很多定理由多个主要的结果组成，这种情况下选择其中最重要或最容易接受的一个作为主要定理来讲，偶尔会再简单介绍一下其他的结果），每个定理一个小节，同一年的定理组成一章，共 10 章. 对每个定理会用 3-4 页的篇幅介绍它的形式以及它的重要性，每个定理均可单独阅读. 容易一些的定理起点很低，不需要太多前置内容；而难一点的定理至少需要本科生水平. 同时，数学的严谨性没有丢失，定理叙述本身涉及到的概念均有严格的定义，但定理的证明不在这本书的讨论范围内；不过每一节的最后会给出包含定理证明的参考文献可供深入阅读. 这本书当然还是有很多非常重要的定理没有包含进来，比如 Perelman 证明的 Poincaré 猜想因为没有发表在 &lt;em&gt;Annals of Mathmatics&lt;/em&gt; 上&lt;a href=&#34;#fn3&#34; class=&#34;footnote-ref&#34; id=&#34;fnref3&#34; role=&#34;doc-noteref&#34;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt;没有收录进来，还有一些是实在是太难了不好解释，2011 年及以后的也都不在这本书的计划里，看看本套书的后面几卷会不会计划一下.&lt;/p&gt;
+&lt;p&gt;【本段内容来自前言】这套书的目的是介绍那些——新世纪发表在顶级数学期刊上的、（证明起来）对数学家都非常有难度的、同时却是可以以相对简单的形式（把内容）呈现给一般读者、让本科生以及理想情况下的高中生都能大致理解内容的重要定理. 这套书以年度划分章节，目前已出的第一卷介绍了共计 106 个 2001 年到 2010 年发表在 &lt;em&gt;Annals of Mathematics&lt;/em&gt; 上的定理（有很多定理由多个主要的结果组成，这种情况下选择其中最重要或最容易接受的一个作为主要定理来讲，偶尔会再简单介绍一下其他的结果），每个定理一个小节，同一年的定理组成一章，共 10 章. 对每个定理会用 3-4 页的篇幅介绍它的形式以及它的重要性，每个定理均可单独阅读. 容易一些的定理起点很低，不需要太多前置内容；而难一点的定理至少需要本科生水平. 同时，数学的严谨性没有丢失，定理叙述本身涉及到的概念均有严格的定义，但定理的证明不在这本书的讨论范围内；不过每一节的最后会给出包含定理证明的参考文献可供深入阅读. 这本书当然还是有很多非常重要的定理没有包含进来，比如 Perelman 证明的 Poincaré 猜想因为没有发表在 &lt;em&gt;Annals of Mathmatics&lt;/em&gt; 上&lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34; role=&#34;doc-noteref&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;没有收录进来，还有一些是实在是太难了不好解释，2011 年及以后的也都不在这本书的计划里，看看本套书的后面几卷会不会计划一下.&lt;/p&gt;
 &lt;p&gt;我目前的打算是，每次我完全凭借个人喜好从目录里挑一篇我感兴趣的内容，读一读，然后如果开心的话额外找一些东西深入学习一下，然后用中文在这里写作. 从今天开始，大约一个月更新一次. 由于我可能会懒惰或者对读的定理没那么有兴趣，有可能在这里写的文章会完全是原文的翻译——尽管如此，做总比不做好吧，而且对我本人更加全面地接触数学的各个分支、领略&lt;del&gt;最&lt;/del&gt;较前沿的数学问题、扩大视野也都是有好处的吧.&lt;/p&gt;
 &lt;p&gt;这次的介绍的是 10.10 二元生成群的子群定理.&lt;/p&gt;
+&lt;h1 id=&#34;前置知识&#34;&gt;前置知识&lt;/h1&gt;
+&lt;ol type=&#34;1&#34;&gt;
+&lt;li&gt;知道群的定义，或者通过网络学习，能理解下面 2.1 给出的群的定义和子群的定义. 测试题：整数加群是什么样的群？它是有限群么？请给出一个整数加群的子群.&lt;/li&gt;
+&lt;li&gt;对下面 2.2 - 2.3 节给出的概念能理解、掌握，并能通过简单的例子巩固加深理解这两个概念. 测试题：整数加群中单位元的阶是多少？&lt;/li&gt;
+&lt;li&gt;知道什么是可数集. 测试题：有理数集是否是可数集？整数集是否是可数集？整数加群是否是可数群？&lt;/li&gt;
+&lt;/ol&gt;
 &lt;h1 id=&#34;基本概念&#34;&gt;基本概念&lt;/h1&gt;
 &lt;h2 id=&#34;群&#34;&gt;群&lt;/h2&gt;
-&lt;p&gt;群是一个集合 &lt;span class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt; 带一个运算 &lt;span class=&#34;math inline&#34;&gt;\(\cdot\colon G\times G\to G, g_1\times g_2\mapsto g_1\cdot g_2\)&lt;/span&gt;，其中 &lt;span class=&#34;math inline&#34;&gt;\(g_1, g_2\in G\)&lt;/span&gt;，运算 &lt;span class=&#34;math inline&#34;&gt;\(\cdot\)&lt;/span&gt; 满足如下四条性质：&lt;/p&gt;
+&lt;p&gt;群是一个集合 &lt;span class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt; 带一个运算 &lt;span class=&#34;math inline&#34;&gt;\(\cdot\colon G\times G\to G, (g_1, g_2)\mapsto g_1\cdot g_2\)&lt;/span&gt;，其中 &lt;span class=&#34;math inline&#34;&gt;\(g_1, g_2\in G\)&lt;/span&gt;，运算 &lt;span class=&#34;math inline&#34;&gt;\(\cdot\)&lt;/span&gt; 满足如下四条性质：&lt;/p&gt;
 &lt;ol type=&#34;1&#34;&gt;
 &lt;li&gt;（封闭）&lt;span class=&#34;math inline&#34;&gt;\(g_1\cdot g_2\in G\)&lt;/span&gt;，对任意 &lt;span class=&#34;math inline&#34;&gt;\(g_1, g_2\in G\)&lt;/span&gt; 成立；&lt;/li&gt;
 &lt;li&gt;（结合）&lt;span class=&#34;math inline&#34;&gt;\((g_1\cdot g_2)\cdot g_3 = g_1\cdot (g_2\cdot g_3)\)&lt;/span&gt;，对任意 &lt;span class=&#34;math inline&#34;&gt;\(g_1, g_2, g_3\in G\)&lt;/span&gt; 成立；&lt;/li&gt;
@@ -192,14 +200,14 @@
 &lt;li&gt;（有逆）对任意 &lt;span class=&#34;math inline&#34;&gt;\(g\in G\)&lt;/span&gt;，存在元素 &lt;span class=&#34;math inline&#34;&gt;\(g&amp;#39;\in G\)&lt;/span&gt; 使得 &lt;span class=&#34;math inline&#34;&gt;\(g\cdot g&amp;#39; = g&amp;#39;\cdot g = e\)&lt;/span&gt;，通常我们用 &lt;span class=&#34;math inline&#34;&gt;\(g^{-1}\)&lt;/span&gt; 来记这个元素.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;记为群 &lt;span class=&#34;math inline&#34;&gt;\(\left( G, \cdot\right)\)&lt;/span&gt; 或简记为群 &lt;span class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; 个相同元素 &lt;span class=&#34;math inline&#34;&gt;\(g\)&lt;/span&gt; 进行运算记为 &lt;span class=&#34;math inline&#34;&gt;\(g^n\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; 个相同元素 &lt;span class=&#34;math inline&#34;&gt;\(g\)&lt;/span&gt; 进行运算 &lt;span class=&#34;math inline&#34;&gt;\(g\cdot g\cdot ...\cdot g\)&lt;/span&gt;记为 &lt;span class=&#34;math inline&#34;&gt;\(g^n\)&lt;/span&gt;.&lt;/p&gt;
 &lt;p&gt;如果群 &lt;span class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt; 中的一个子集 &lt;span class=&#34;math inline&#34;&gt;\(H\)&lt;/span&gt; 在同样的运算下也满足这四条性质，则称 &lt;span class=&#34;math inline&#34;&gt;\(H\)&lt;/span&gt; 是 &lt;span class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt; 的子群，记作 &lt;span class=&#34;math inline&#34;&gt;\(H \le G\)&lt;/span&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;群中元素的共轭&#34;&gt;群中元素的共轭&lt;/h2&gt;
 &lt;p&gt;群 &lt;span class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt; 中两个元素 &lt;span class=&#34;math inline&#34;&gt;\(g_1, g_2\)&lt;/span&gt; 称为（互相）共轭的，如果，存在一个元素 &lt;span class=&#34;math inline&#34;&gt;\(h\in G\)&lt;/span&gt;，使得 &lt;span class=&#34;math inline&#34;&gt;\(g_1 = h\cdot g_2\cdot h^{-1}\)&lt;/span&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;群中元素的阶&#34;&gt;群中元素的阶&lt;/h2&gt;
 &lt;p&gt;对 &lt;span class=&#34;math inline&#34;&gt;\(\forall g\in G\)&lt;/span&gt;，如果 &lt;span class=&#34;math inline&#34;&gt;\(\exists r\in \mathbb{Z}^+\)&lt;/span&gt;，使得 &lt;span class=&#34;math inline&#34;&gt;\(g^r = e\)&lt;/span&gt;，且对 &lt;span class=&#34;math inline&#34;&gt;\(\forall r&amp;#39; &amp;lt; r, r&amp;#39;\in \mathbb{Z}^+\)&lt;/span&gt;，有 &lt;span class=&#34;math inline&#34;&gt;\(g^{r&amp;#39;} \neq e\)&lt;/span&gt;，则我们称 &lt;span class=&#34;math inline&#34;&gt;\(r\)&lt;/span&gt; 是元素 &lt;span class=&#34;math inline&#34;&gt;\(g\)&lt;/span&gt; 的阶. 如果对 &lt;span class=&#34;math inline&#34;&gt;\(\forall r\in \mathbb{Z}^+\)&lt;/span&gt;，有 &lt;span class=&#34;math inline&#34;&gt;\(g^r \neq e\)&lt;/span&gt;，则我们称元素 &lt;span class=&#34;math inline&#34;&gt;\(g\)&lt;/span&gt; 的阶是无穷.&lt;/p&gt;
 &lt;h2 id=&#34;pig&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(\pi(G)\)&lt;/span&gt;&lt;/h2&gt;
-&lt;p&gt;对任意群 &lt;span class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt;，我们用 &lt;span class=&#34;math inline&#34;&gt;\(\pi(G)\)&lt;/span&gt; 记 &lt;span class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt; 中所有元素的（有限的）阶数的集合，即 &lt;span class=&#34;math inline&#34;&gt;\(\pi(G) = \left\{ i | i\in \mathbb{Z}^+, \text{ 群 }G\text{ 中有 }i\text{ 阶元素 } \right\}\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;对任意群 &lt;span class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt;，我们用 &lt;span class=&#34;math inline&#34;&gt;\(\pi(G)\)&lt;/span&gt; 记 &lt;span class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt; 中所有元素的（有限的）阶数的集合，即 &lt;span class=&#34;math inline&#34;&gt;\(\pi(G) = \left\{ i | i\in \mathbb{Z}^+, \text{ 群 }G\text{ 中有 }i\text{ 阶的元素 } \right\}\)&lt;/span&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;可数群&#34;&gt;可数群&lt;/h2&gt;
 &lt;p&gt;一个集合是可数的，如果，这个集合可以与自然数集 &lt;span class=&#34;math inline&#34;&gt;\(\mathbb{N}\)&lt;/span&gt; 建立起一个一一对应. 一个群是可数群，如果，这个群只看作是集合是可数的.&lt;/p&gt;
 &lt;h2 id=&#34;二元生成群&#34;&gt;二元生成群&lt;/h2&gt;
@@ -216,13 +224,13 @@
 &lt;p&gt;二元生成群当然有含 3 个元素的生成集合、含 4 个元素的生成集合…因此二元生成群是三元生成群，三元生成群是四元生成群…&lt;/p&gt;
 &lt;h2 id=&#34;群的嵌入&#34;&gt;群的嵌入&lt;/h2&gt;
 &lt;h3 id=&#34;群同态与群同构&#34;&gt;群同态与群同构&lt;/h3&gt;
-&lt;p&gt;保持群的运算关系的两个群之间的映射叫做群同态. &lt;span class=&#34;math inline&#34;&gt;\(\phi\colon \left( G, \cdot\right)\to \left( H, \times\right)\)&lt;/span&gt; 是一个群同态，如果，&lt;span class=&#34;math inline&#34;&gt;\(\phi(g_1\cdot g_2) = \phi(g_1)\times\phi(g_2)\)&lt;/span&gt;，其中 &lt;span class=&#34;math inline&#34;&gt;\(g_1, g_2\in G\)&lt;/span&gt;. 当 &lt;span class=&#34;math inline&#34;&gt;\(\phi\)&lt;/span&gt; 是单射时称其为单同态，当 &lt;span class=&#34;math inline&#34;&gt;\(\phi\)&lt;/span&gt; 是满射时称其为满同态，当 &lt;span class=&#34;math inline&#34;&gt;\(\phi\)&lt;/span&gt; 既是单同态又是满同态时称其为群同构，也称这两个群同构，记为 &lt;span class=&#34;math inline&#34;&gt;\(G \cong H\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;保持群的运算关系的两个群之间的映射叫做群同态. &lt;span class=&#34;math inline&#34;&gt;\(\phi\colon \left( G, \cdot\right)\to \left( H, \times\right)\)&lt;/span&gt; 是一个群同态，如果，&lt;span class=&#34;math inline&#34;&gt;\(\phi(g_1\cdot g_2) = \phi(g_1)\times\phi(g_2)\)&lt;/span&gt;，其中 &lt;span class=&#34;math inline&#34;&gt;\(g_1, g_2\in G\)&lt;/span&gt;. 当 &lt;span class=&#34;math inline&#34;&gt;\(\phi\)&lt;/span&gt; 是单射时称其为单同态. 当 &lt;span class=&#34;math inline&#34;&gt;\(\phi\)&lt;/span&gt; 是满射时称其为满同态. 当 &lt;span class=&#34;math inline&#34;&gt;\(\phi\)&lt;/span&gt; 既是单同态又是满同态时称其为群同构，也称这两个群同构，记为 &lt;span class=&#34;math inline&#34;&gt;\(G \cong H\)&lt;/span&gt;.&lt;/p&gt;
 &lt;h3 id=&#34;群的嵌入-1&#34;&gt;群的嵌入&lt;/h3&gt;
 &lt;p&gt;如果 &lt;span class=&#34;math inline&#34;&gt;\(K\cong H, H \le G\)&lt;/span&gt;，我们称群 &lt;span class=&#34;math inline&#34;&gt;\(K\)&lt;/span&gt; 可以被嵌入到群 &lt;span class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt; 中.&lt;/p&gt;
 &lt;h1 id=&#34;主要定理&#34;&gt;主要定理&lt;/h1&gt;
 &lt;p&gt;任意可数群 &lt;span class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt; 都可以嵌入到一个二元生成群 &lt;span class=&#34;math inline&#34;&gt;\(C\)&lt;/span&gt; 中，使得 &lt;span class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt; 中任意两个同阶的元素在 &lt;span class=&#34;math inline&#34;&gt;\(C\)&lt;/span&gt; 中共轭，且 &lt;span class=&#34;math inline&#34;&gt;\(\pi(G) = \pi(C)\)&lt;/span&gt;.&lt;/p&gt;
 &lt;h1 id=&#34;关于这个定理的重要性完全翻译&#34;&gt;关于这个定理的重要性【完全翻译】&lt;/h1&gt;
-&lt;p&gt;这个定理是极为有用的，有一大堆有意思的推论，并且立刻解决了领域内的一些重要的开放问题. 比如，我们上面提到的，群 &lt;span class=&#34;math inline&#34;&gt;\(\mathbb{Z}/2\mathbb{Z}\)&lt;/span&gt; 恰好有 2 个共轭类，这个群只有 2 个元素，当然是平凡的二元生成群. 2010 年以前，是否存在其他的恰好有 2 个共轭类的二元生成群&lt;a href=&#34;#fn4&#34; class=&#34;footnote-ref&#34; id=&#34;fnref4&#34; role=&#34;doc-noteref&#34;&gt;&lt;sup&gt;4&lt;/sup&gt;&lt;/a&gt;还是一个开放问题.&lt;/p&gt;
+&lt;p&gt;这个定理是极为有用的，有一大堆有意思的推论，并且立刻解决了领域内的一些重要的开放问题. 比如，我们上面提到的，群 &lt;span class=&#34;math inline&#34;&gt;\(\mathbb{Z}/2\mathbb{Z}\)&lt;/span&gt; 恰好有 2 个共轭类，这个群只有 2 个元素，当然是平凡的二元生成群. 2010 年以前，是否存在其他的恰好有 2 个共轭类的二元生成群&lt;a href=&#34;#fn3&#34; class=&#34;footnote-ref&#34; id=&#34;fnref3&#34; role=&#34;doc-noteref&#34;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt;还是一个开放问题.&lt;/p&gt;
 &lt;p&gt;对任意&lt;u&gt;除单位以外的元素均是有限阶元素的群 &lt;span class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt;&lt;/u&gt;[这样的群称为无挠的 (torsion-free)]应用定理 10.10（这个定理），我们得到：任意无挠可数群可以嵌入到一个无挠的二元生成群中，而后者恰有 2 个共轭类. 进而，这蕴含了，存在一个不可数的集合，里面的元素都是无挠的、恰有 2 个共轭类的二元生成群，它们两两不同构. 当然这绝对在很强的程度上解决了上面提到的开放问题. 一些其他的这个定理的有意思的推论都呈现在这篇文章中：&lt;/p&gt;
 &lt;p&gt;Ref: D. Osin, Small cancellations over relatively hyperbolic groups and embedding theorems, Annals of Mathematics 172-1, (2010), 1–39.&lt;/p&gt;
 &lt;h1 id=&#34;深入一些&#34;&gt;深入一些&lt;/h1&gt;
@@ -245,10 +253,9 @@
 &lt;section class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
 &lt;hr /&gt;
 &lt;ol&gt;
-&lt;li id=&#34;fn1&#34; role=&#34;doc-endnote&#34;&gt;&lt;p&gt;如果您没有经济能力，可以到&lt;a href=&#34;https://www.twirpx.com/file/2863819/&#34;&gt;这里&lt;/a&gt;使用 100 积分下载，每个新注册用户都会默认赠予 100 积分. 如果您不懂俄语，上述操作可以在翻译软件的帮助下进行. 在这里给出能免费获取的方法尽管不违法，也是不道德的. 本站绝不会提供下载链接，也不会帮助任何人下载，上述链接如果失效也不再另提供方法，且本系列的文章中也不会有原文的截图.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34; role=&#34;doc-backlink&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn2&#34; role=&#34;doc-endnote&#34;&gt;&lt;p&gt;我精简了一下，还稍微调了调顺序，不是完全照翻前言.&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34; role=&#34;doc-backlink&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn3&#34; role=&#34;doc-endnote&#34;&gt;&lt;p&gt;这算什么理由？忍不住吐槽一下下…&lt;a href=&#34;#fnref3&#34; class=&#34;footnote-back&#34; role=&#34;doc-backlink&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn4&#34; role=&#34;doc-endnote&#34;&gt;&lt;p&gt;更一般地，就连除了 &lt;span class=&#34;math inline&#34;&gt;\(\mathbb{Z}/2\mathbb{Z}\)&lt;/span&gt; 以外是否还存在一个群，它是有限生成群且有 2 个共轭类都是一个开放问题！（原注）&lt;a href=&#34;#fnref4&#34; class=&#34;footnote-back&#34; role=&#34;doc-backlink&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn1&#34; role=&#34;doc-endnote&#34;&gt;&lt;p&gt;如果您没有经济能力，可以到&lt;a href=&#34;https://www.twirpx.com/file/2863819/&#34;&gt;这里&lt;/a&gt;使用 100 积分下载，每个新注册用户都会默认赠予 100 积分. 如果您不懂俄语，上述操作可以在翻译软件的帮助下进行.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34; role=&#34;doc-backlink&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn2&#34; role=&#34;doc-endnote&#34;&gt;&lt;p&gt;这算什么理由？忍不住吐槽一下下…&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34; role=&#34;doc-backlink&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn3&#34; role=&#34;doc-endnote&#34;&gt;&lt;p&gt;更一般地，就连除了 &lt;span class=&#34;math inline&#34;&gt;\(\mathbb{Z}/2\mathbb{Z}\)&lt;/span&gt; 以外是否还存在一个群，它是有限生成群且有 2 个共轭类都是一个开放问题！（原注）&lt;a href=&#34;#fnref3&#34; class=&#34;footnote-back&#34; role=&#34;doc-backlink&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/section&gt;
 </description>
