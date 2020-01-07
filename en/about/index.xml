@@ -27,7 +27,7 @@
         
     
  | Zero&#39;s Ivory Tower</title>
-        <link>https://zerovip.github.io/en/about/</link>
+        <link>/en/about/</link>
         <description>
             Recent Content | 
     
@@ -94,10 +94,10 @@
             
                 <item>
                     <title>About the site</title>
-                    <link>https://zerovip.github.io/en/about/site/</link>
+                    <link>/en/about/site/</link>
                     <pubDate>2019-01-01</pubDate>
                     
-                    <guid>https://zerovip.github.io/en/about/site/</guid>
+                    <guid>/en/about/site/</guid>
                     <description>&lt;p&gt;Tags
 Categories
 So on.&lt;/p&gt;
@@ -106,10 +106,10 @@ So on.&lt;/p&gt;
             
                 <item>
                     <title>About me</title>
-                    <link>https://zerovip.github.io/en/about/me/</link>
+                    <link>/en/about/me/</link>
                     <pubDate>2000-01-01</pubDate>
                     
-                    <guid>https://zerovip.github.io/en/about/me/</guid>
+                    <guid>/en/about/me/</guid>
                     <description>&lt;p&gt;You shouldn&#39;t try to know me.&lt;/p&gt;
 </description>
                 </item>

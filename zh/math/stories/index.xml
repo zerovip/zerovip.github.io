@@ -33,7 +33,7 @@
         
     
  | 赤赤的象牙塔</title>
-        <link>https://zerovip.github.io/zh/math/stories/</link>
+        <link>/zh/math/stories/</link>
         <description>
             近期内容 | 
     
@@ -92,10 +92,10 @@
                     
                         <item>
                             <title>代数无理数的小数展开- 21 世纪的定理</title>
-                            <link>https://zerovip.github.io/zh/47093/</link>
+                            <link>/zh/47093/</link>
                             <pubDate>2019-07-14</pubDate>
                             
-                            <guid>https://zerovip.github.io/zh/47093/</guid>
+                            <guid>/zh/47093/</guid>
                             <description>&lt;p&gt;今天介绍的是第 7.2 节，有关代数无理数小数展开的一个定理.&lt;/p&gt;
 &lt;h1 id=&#34;前置知识&#34;&gt;前置知识&lt;/h1&gt;
 &lt;p&gt;了解极限语言的含义. 测试题：下面这个式子是什么意思？ &lt;span class=&#34;math display&#34;&gt;\[\lim_{n\to\infty}\frac{2n^2-n+1}{n^2+n-2}=2\]&lt;/span&gt;.&lt;/p&gt;
@@ -174,10 +174,10 @@
                     
                         <item>
                             <title>二元生成群的子群定理- 21 世纪的定理</title>
-                            <link>https://zerovip.github.io/zh/02874/</link>
+                            <link>/zh/02874/</link>
                             <pubDate>2019-06-30</pubDate>
                             
-                            <guid>https://zerovip.github.io/zh/02874/</guid>
+                            <guid>/zh/02874/</guid>
                             <description>&lt;p&gt;这是我这个系列的第一篇文章，因此先简单介绍一下这个系列.&lt;/p&gt;
 &lt;p&gt;我于几天前在知乎上看到了&lt;a href=&#34;https://zhuanlan.zhihu.com/p/69063049&#34;&gt;对 Bogdan Grechuk, &lt;em&gt;Theorems of the 21st Century&lt;/em&gt; 这套书的推荐&lt;/a&gt;，推荐中给了几张截图我大致看了一下，觉得是非常有意思的书，并决定要读一读. 这几天这个新博客初步建成，建站时也规划了数学科普的部分. 于是拿这套书中的材料作为这个博客的数学科普部分的开端再合适不过.&lt;/p&gt;
 &lt;p&gt;这套书由 Springer 出版发行，目前只有第一卷，且还没有纸质版出售（截至到 2019-06-30 ）. 如果您学校的图书馆购买了 Springer 数据库，则您可以到上面免费下载，当然您也可以在&lt;a href=&#34;https://link.springer.com/book/10.1007/978-3-030-19096-5&#34;&gt;这里&lt;/a&gt;购买.&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34; role=&#34;doc-noteref&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;

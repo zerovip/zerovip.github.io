@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>赤赤的象牙塔</title>
-        <link>https://zerovip.github.io/zh/</link>
+        <link>/zh/</link>
         <description>近期内容 | 赤赤的象牙塔</description>
         <generator>Hugo -- gohugo.io</generator>
         
@@ -20,10 +20,10 @@
         
             <item>
                 <title>配眼镜相关知识总结-消费指南</title>
-                <link>https://zerovip.github.io/zh/69995/</link>
+                <link>/zh/69995/</link>
                 <pubDate>2019-07-21</pubDate>
                 
-                <guid>https://zerovip.github.io/zh/69995/</guid>
+                <guid>/zh/69995/</guid>
                 <description>&lt;h1 id=&#34;heading&#34;&gt;“消费指南”这个系列&lt;/h1&gt;
 &lt;p&gt;因为没有钱直接去买最好的东西，又想用有限的钱享受还算可以的服务，所以每次消费之前我都要深入了解有关的一切信息，然后作出最适合自己的选择，这样的流程让我深入了解了各行各业——没钱 + 不妥协 = 浪费时间. 然而这些浪费的时间只在消费当时发挥了作用，多年后再次消费同类产品时往往还要再浪费一次时间——除了科技进步、产业革新，更重要的原因是一段时间后这些当时学到的知识就被我忘记了，毕竟平时生活里并不会密集地消费同样的产品，不常用也无需复习. 为了减少之后重新学习的时间成本，也为了给其他有同样需求的人一定的参考，我开设了这个系列.&lt;/p&gt;
 &lt;p&gt;【这个系列的内容都是偏向于客观的知识的阐述，列出的参考中会有一部分偏方法论的内容.】&lt;/p&gt;
@@ -299,10 +299,10 @@
         
             <item>
                 <title>代数无理数的小数展开- 21 世纪的定理</title>
-                <link>https://zerovip.github.io/zh/47093/</link>
+                <link>/zh/47093/</link>
                 <pubDate>2019-07-14</pubDate>
                 
-                <guid>https://zerovip.github.io/zh/47093/</guid>
+                <guid>/zh/47093/</guid>
                 <description>&lt;p&gt;今天介绍的是第 7.2 节，有关代数无理数小数展开的一个定理.&lt;/p&gt;
 &lt;h1 id=&#34;前置知识&#34;&gt;前置知识&lt;/h1&gt;
 &lt;p&gt;了解极限语言的含义. 测试题：下面这个式子是什么意思？ &lt;span class=&#34;math display&#34;&gt;\[\lim_{n\to\infty}\frac{2n^2-n+1}{n^2+n-2}=2\]&lt;/span&gt;.&lt;/p&gt;
@@ -381,20 +381,20 @@
         
             <item>
                 <title>一阶逻辑语言学习笔记</title>
-                <link>https://zerovip.github.io/zh/66249/</link>
+                <link>/zh/66249/</link>
                 <pubDate>2019-07-12</pubDate>
                 
-                <guid>https://zerovip.github.io/zh/66249/</guid>
+                <guid>/zh/66249/</guid>
                 <description>&lt;p&gt;这是我这两天自学一阶逻辑语言的一份笔记，内容不多，非常简单，也非常符合直觉，主要是一些定义之类的，展示了数学是如何被建立起来的. 它解决了我关于命题否定的一些疑惑，对我学习数学已经完全够用了，所以更高级的内容比如哥德尔的定理等因为暂时不会影响到我学习数学，就没有再细看了，如果以后有时间看一看的话会继续在这里写. 这份笔记的亮点之一在于直接总结一阶逻辑，比较明快；我参考的书是先讲了命题逻辑，又往里加一阶逻辑，两个逻辑体系的建立有些不同所以有种做了无用功的感觉. 亮点之二在于最后一阶逻辑语言转化到数学语言的部分是我自己总结的.&lt;/p&gt;
 </description>
             </item>
         
             <item>
                 <title>我学习了英语词根</title>
-                <link>https://zerovip.github.io/zh/71352/</link>
+                <link>/zh/71352/</link>
                 <pubDate>2019-07-07</pubDate>
                 
-                <guid>https://zerovip.github.io/zh/71352/</guid>
+                <guid>/zh/71352/</guid>
                 <description>&lt;h1 id=&#34;heading&#34;&gt;背景&lt;/h1&gt;
 &lt;p&gt;这个学期我旁听了一门法语课，在某一节课上，老师问我们学得怎么样，这门课有没有达到我们预期的设想之类. 一个同学说他预期的设想是通过法语了解一些词源的知识，法语的词源或者是英语的词源. 这个回答让我印象深刻，因为其他人都是说一些想学会说法语以便去旅游、希望能认识法语以便读法语的文章云云，那个同学想学习词源，听上去就是高大上的东西. 尽管我也知道英语有很大一部分单词都来源于法语，但我从来没想过词源这回事，我一直对它有点不屑一顾，在那天之前我一直不觉得词源是一个可以特别学习的独立的知识体系的.&lt;/p&gt;
 &lt;p&gt;前几天我在背英语单词时偶然发现了一个讲单词的视频，我就试着看了看. 主讲的老师穿插着讲单词，可谓触类旁通. 然而，在他讲到单词 demonstration （游行示威）时，他说词根是 demo 样品、样本，而“你自己上街无非就是把自己像样本一样抛出去，我要把我心中所想，所想的国家、所想的制度表现出来，我要上街游行，你就是一个样本&amp;hellip;所以才有了民主那个词 democracy&amp;hellip;” 这个解释让我十分不爽，总觉得这两个意思差得太远，像是牵强附会. 于是我一边上网查“xx老师讲的词根是正确的么”（当然并没有找到有意义的结果），一边对词源、词根再次产生了巨大的好奇：如果那位老师讲的是正确的，demo “样品”到底是怎么引申出 demonstration “游行示威”的呢？&lt;/p&gt;
@@ -705,10 +705,10 @@
         
             <item>
                 <title>二元生成群的子群定理- 21 世纪的定理</title>
-                <link>https://zerovip.github.io/zh/02874/</link>
+                <link>/zh/02874/</link>
                 <pubDate>2019-06-30</pubDate>
                 
-                <guid>https://zerovip.github.io/zh/02874/</guid>
+                <guid>/zh/02874/</guid>
                 <description>&lt;p&gt;这是我这个系列的第一篇文章，因此先简单介绍一下这个系列.&lt;/p&gt;
 &lt;p&gt;我于几天前在知乎上看到了&lt;a href=&#34;https://zhuanlan.zhihu.com/p/69063049&#34;&gt;对 Bogdan Grechuk, &lt;em&gt;Theorems of the 21st Century&lt;/em&gt; 这套书的推荐&lt;/a&gt;，推荐中给了几张截图我大致看了一下，觉得是非常有意思的书，并决定要读一读. 这几天这个新博客初步建成，建站时也规划了数学科普的部分. 于是拿这套书中的材料作为这个博客的数学科普部分的开端再合适不过.&lt;/p&gt;
 &lt;p&gt;这套书由 Springer 出版发行，目前只有第一卷，且还没有纸质版出售（截至到 2019-06-30 ）. 如果您学校的图书馆购买了 Springer 数据库，则您可以到上面免费下载，当然您也可以在&lt;a href=&#34;https://link.springer.com/book/10.1007/978-3-030-19096-5&#34;&gt;这里&lt;/a&gt;购买.&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34; role=&#34;doc-noteref&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
@@ -794,10 +794,10 @@
         
             <item>
                 <title>我的电子生活</title>
-                <link>https://zerovip.github.io/zh/23536/</link>
+                <link>/zh/23536/</link>
                 <pubDate>2019-06-24</pubDate>
                 
-                <guid>https://zerovip.github.io/zh/23536/</guid>
+                <guid>/zh/23536/</guid>
                 <description>&lt;p&gt;我一向认为明文的法则是能让人的生活有条不紊的，也让人不会迷失在选择和犹豫中，是把复杂问题变简单的办法. 本文将对我的电子生活做一个梳理. 关于网络生活，把[希望自己遵守且容易忘记的]部分形成明文的法则；非网络部分的电子生活中，对我个人常用的工具类产品的使用方法做一个整理，当然也可以看作是安利. 两部分都将会常常更新，记录我最新做出的决定.&lt;/p&gt;
 &lt;h1 id=&#34;heading&#34;&gt;网络生活法则&lt;/h1&gt;
 &lt;h2 id=&#34;heading-1&#34;&gt;根本原则：注重个人隐私.&lt;/h2&gt;
@@ -920,10 +920,10 @@
         
             <item>
                 <title>一些不错的网站</title>
-                <link>https://zerovip.github.io/zh/71828/</link>
+                <link>/zh/71828/</link>
                 <pubDate>2019-06-23</pubDate>
                 
-                <guid>https://zerovip.github.io/zh/71828/</guid>
+                <guid>/zh/71828/</guid>
                 <description>&lt;p&gt;不定期更新中&amp;hellip;&lt;/p&gt;
 &lt;h1 id=&#34;heading&#34;&gt;非数学&lt;/h1&gt;
 &lt;h1 id=&#34;heading-1&#34;&gt;数学&lt;/h1&gt;
@@ -961,10 +961,10 @@
         
             <item>
                 <title>建站记</title>
-                <link>https://zerovip.github.io/zh/18284/</link>
+                <link>/zh/18284/</link>
                 <pubDate>2019-06-22</pubDate>
                 
-                <guid>https://zerovip.github.io/zh/18284/</guid>
+                <guid>/zh/18284/</guid>
                 <description>&lt;p&gt;很早就想建一个自己的博客了，每每看到别人的好看的博客就心里痒痒. 高中及以前写过一些回忆录都发表在 QQ 空间上，高中以来有意识地进行一些写作，觉得不错的都发表在新浪博客上，稍短的就写成长微博. 但有时想写一些专业性（数学）的东西，新浪博客的富文本编辑器就不够用了，而微博由于国内的审查机制不明确不规范也决定放弃，于是着手建博客.&lt;/p&gt;
 &lt;h1 id=&#34;heading&#34;&gt;构想&lt;/h1&gt;
 &lt;p&gt;大一、大二的时候在学校一个学生组织的网络技术工作站做过两年的后端，那时构想的博客就是租一台&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E8%99%9A%E6%8B%9F%E4%B8%93%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8&#34;&gt;VPS&lt;/a&gt;，用学到的技术 [Django (Python) + MySQL] 做一个超级棒的网站，想实现什么功能就实现什么功能. 后来一门心思学数学后发觉我时间有限，于是静态博客这种东西吸引了我，经过比较选择了 &lt;a href=&#34;https://gohugo.io&#34;&gt;Hugo&lt;/a&gt; + &lt;a href=&#34;https://pages.github.com&#34;&gt;GitHub Pages&lt;/a&gt;. 优点是我不用租 VPS 了，甚至不用申请域名，访问快速、安全，不用日常维护，简单、省时间.&lt;/p&gt;
@@ -1200,20 +1200,20 @@ file_path: name.pdf
         
             <item>
                 <title>表示论学习笔记</title>
-                <link>https://zerovip.github.io/zh/59045/</link>
+                <link>/zh/59045/</link>
                 <pubDate>2019-06-20</pubDate>
                 
-                <guid>https://zerovip.github.io/zh/59045/</guid>
+                <guid>/zh/59045/</guid>
                 <description>&lt;p&gt;这里是表示论的笔记，是我2019年春季学期旁听研究生的课的课堂笔记，有些地方还没有整理完，以后有时间慢慢整理.&lt;/p&gt;
 </description>
             </item>
         
             <item>
                 <title>关于我</title>
-                <link>https://zerovip.github.io/zh/about/me/</link>
+                <link>/zh/about/me/</link>
                 <pubDate>2019-01-01</pubDate>
                 
-                <guid>https://zerovip.github.io/zh/about/me/</guid>
+                <guid>/zh/about/me/</guid>
                 <description>&lt;p&gt;栏目该有还是要有，但关于我——无可奉告.&lt;/p&gt;
 &lt;p&gt;通过邮件联系我：&lt;code&gt;zer0zero-blog[AT]yahoo[DOT]com&lt;/code&gt; 或 &lt;code&gt;zer0zero[AT]sina[DOT]cn&lt;/code&gt;. 如需要给我发送加密邮件：uid: &lt;code&gt;A551B8F6A13D8A90&lt;/code&gt; (&lt;code&gt;zer0zero &amp;lt;zer0zero@yahoo.com&amp;gt;&lt;/code&gt;)，fingerprint: &lt;code&gt;AD3F 2207 E311 7C13 155D  40D1 A551 B8F6 A13D 8A90&lt;/code&gt;，public key:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;-----BEGIN PGP PUBLIC KEY BLOCK-----
@@ -1251,10 +1251,10 @@ veL/x/fXMw1e5Ou5KKhroxS6160gLopRcw==
         
             <item>
                 <title>关于本站</title>
-                <link>https://zerovip.github.io/zh/about/site/</link>
+                <link>/zh/about/site/</link>
                 <pubDate>2019-01-01</pubDate>
                 
-                <guid>https://zerovip.github.io/zh/about/site/</guid>
+                <guid>/zh/about/site/</guid>
                 <description>&lt;h1 id=&#34;heading&#34;&gt;介绍&lt;/h1&gt;
 &lt;p&gt;本站为个人博客站，只会发表个人的原创或翻译的文章，不转载文章，不接受投稿. 不过我在整理一些&lt;a href=&#34;../zh/71828&#34;&gt;优秀网站&lt;/a&gt;（包括但不限于他人的博客），欢迎把自己或他人的优秀的博客推荐给我.&lt;/p&gt;
 &lt;p&gt;本站分为数学区和非数学区.&lt;/p&gt;

@@ -27,7 +27,7 @@
         
     
  | La Tour D&#39;ivoire De Zéro</title>
-        <link>https://zerovip.github.io/fr/about/</link>
+        <link>/fr/about/</link>
         <description>
             Contenu Récent | 
     
@@ -94,20 +94,20 @@
             
                 <item>
                     <title>À propos de ce site</title>
-                    <link>https://zerovip.github.io/fr/about/site/</link>
+                    <link>/fr/about/site/</link>
                     <pubDate>2019-01-01</pubDate>
                     
-                    <guid>https://zerovip.github.io/fr/about/site/</guid>
+                    <guid>/fr/about/site/</guid>
                     <description>&lt;p&gt;À Propos De Ce Site&amp;hellip;&lt;/p&gt;
 </description>
                 </item>
             
                 <item>
                     <title>À propos de moi</title>
-                    <link>https://zerovip.github.io/fr/about/me/</link>
+                    <link>/fr/about/me/</link>
                     <pubDate>2000-01-01</pubDate>
                     
-                    <guid>https://zerovip.github.io/fr/about/me/</guid>
+                    <guid>/fr/about/me/</guid>
                     <description>&lt;p&gt;Je suis très beau.&lt;/p&gt;
 </description>
                 </item>

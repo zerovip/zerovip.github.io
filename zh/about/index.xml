@@ -27,7 +27,7 @@
         
     
  | 赤赤的象牙塔</title>
-        <link>https://zerovip.github.io/zh/about/</link>
+        <link>/zh/about/</link>
         <description>
             近期内容 | 
     
@@ -94,10 +94,10 @@
             
                 <item>
                     <title>关于我</title>
-                    <link>https://zerovip.github.io/zh/about/me/</link>
+                    <link>/zh/about/me/</link>
                     <pubDate>2019-01-01</pubDate>
                     
-                    <guid>https://zerovip.github.io/zh/about/me/</guid>
+                    <guid>/zh/about/me/</guid>
                     <description>&lt;p&gt;栏目该有还是要有，但关于我——无可奉告.&lt;/p&gt;
 &lt;p&gt;通过邮件联系我：&lt;code&gt;zer0zero-blog[AT]yahoo[DOT]com&lt;/code&gt; 或 &lt;code&gt;zer0zero[AT]sina[DOT]cn&lt;/code&gt;. 如需要给我发送加密邮件：uid: &lt;code&gt;A551B8F6A13D8A90&lt;/code&gt; (&lt;code&gt;zer0zero &amp;lt;zer0zero@yahoo.com&amp;gt;&lt;/code&gt;)，fingerprint: &lt;code&gt;AD3F 2207 E311 7C13 155D  40D1 A551 B8F6 A13D 8A90&lt;/code&gt;，public key:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;-----BEGIN PGP PUBLIC KEY BLOCK-----
@@ -135,10 +135,10 @@ veL/x/fXMw1e5Ou5KKhroxS6160gLopRcw==
             
                 <item>
                     <title>关于本站</title>
-                    <link>https://zerovip.github.io/zh/about/site/</link>
+                    <link>/zh/about/site/</link>
                     <pubDate>2019-01-01</pubDate>
                     
-                    <guid>https://zerovip.github.io/zh/about/site/</guid>
+                    <guid>/zh/about/site/</guid>
                     <description>&lt;h1 id=&#34;heading&#34;&gt;介绍&lt;/h1&gt;
 &lt;p&gt;本站为个人博客站，只会发表个人的原创或翻译的文章，不转载文章，不接受投稿. 不过我在整理一些&lt;a href=&#34;../../zh/71828&#34;&gt;优秀网站&lt;/a&gt;（包括但不限于他人的博客），欢迎把自己或他人的优秀的博客推荐给我.&lt;/p&gt;
 &lt;p&gt;本站分为数学区和非数学区.&lt;/p&gt;
