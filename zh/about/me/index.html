@@ -36,6 +36,9 @@ if (!doNotTrack) {
         function ChangeClassTOC(){
             document.getElementById("toc").classList.toggle("toc_show");
             }
+        function ChangeClassBlackBlock(wait_to_change){
+            wait_to_change.classList.toggle("black_block_show");
+            }
     </script>
 </head>
 
@@ -177,7 +180,7 @@ if (!doNotTrack) {
     <div class="right_main">
         <div class="right_main_article">
             <p>栏目该有还是要有，但关于我——无可奉告.</p>
-<p>通过邮件联系我：<code>zer0zero-blog[AT]yahoo[DOT]com</code> 或 <code>zer0zero[AT]sina[DOT]cn</code>. 如需要给我发送加密邮件：uid: <code>A551B8F6A13D8A90</code> (<code>zer0zero &lt;zer0zero@yahoo.com&gt;</code>)，fingerprint: <code>AD3F 2207 E311 7C13 155D  40D1 A551 B8F6 A13D 8A90</code>，public key:</p>
+<p>通过邮件联系我：<span style="background-color: #F2F5A9; color: black;">zer0zero-blog[AT]yahoo[DOT]com</span> 或 <span style="background-color: #F2F5A9; color: black;">zer0zero[AT]sina[DOT]cn</span>. 如需要给我发送加密邮件：uid: <code>A551B8F6A13D8A90</code> (zer0zero &lt;zer0zero@yahoo.com&gt;)，fingerprint: <code>AD3F 2207 E311 7C13 155D  40D1 A551 B8F6 A13D 8A90</code>，public key:</p>
 <pre><code>-----BEGIN PGP PUBLIC KEY BLOCK-----
 
 mQENBF4N4FIBCACzySXW+/MYM6fUPXsJj89icJ9hVfsQQldNVZ3QQeUdU5htQH4E
@@ -214,8 +217,10 @@ veL/x/fXMw1e5Ou5KKhroxS6160gLopRcw==
             
         </div>
     </div>
-    <div class="right_comments">
-        
+    
+    
+        <div class="right_comments">
+            
 <script src="https://utteranc.es/client.js"
     repo="zerovip/bcsu"
     issue-term="pathname"
@@ -224,7 +229,8 @@ veL/x/fXMw1e5Ou5KKhroxS6160gLopRcw==
     async>
 </script>
 
-    </div>
+        </div>
+    
 
     </div>
     

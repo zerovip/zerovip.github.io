@@ -75,6 +75,124 @@
         
             
                 <item>
+                    <title>静态博客文章加密工具测试</title>
+                    <link>/zh/62772/</link>
+                    <pubDate>2019-12-23</pubDate>
+                    
+                    <guid>/zh/62772/</guid>
+                    <description>&lt;p&gt;一次测试.（这里是 summary 的内容.）&lt;/p&gt;
+&lt;h1 id=&#34;heading&#34;&gt;介绍&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/Li4n0/hugo_encryptor&#34;&gt;Hugo encryptor&lt;/a&gt; 是一款我偶然发现的可以给静态博客文章进行加密的小工具，配置使用很简单，可惜的是不能在本地测试.&lt;/p&gt;
+&lt;p&gt;不过它足够简单，一经测试成功可以投入使用便不再需要反复测试，因此这篇博文是专门用来测试的.&lt;/p&gt;
+&lt;p&gt;下面加密内容的密码是【PASS3word】. 这部分内容在 RSS 中没有被加密，在&lt;a href=&#34;../../zh/non-math/memos/index.xml&#34;&gt;“备忘分区”的 RSS&lt;/a&gt; 中可以找到加密的内容.&lt;/p&gt;
+
+
+
+
+&lt;hugo-encryptor&gt;
+  
+  &lt;p&gt;以下内容被密码保护&lt;/p&gt;
+  
+  &lt;div class=&#39;hugo-encryptor-form&#39;&gt;
+    &lt;input
+      class=&#34;hugo-encryptor-input&#34;
+      id=&#34;hugo-encryptor-password&#34;
+      placeholder=&#39;请输入密码&#39;
+    /&gt;
+    &lt;input
+      class=&#34;hugo-encryptor-button&#34;
+      type=&#34;button&#34;
+      value=&#39;提交&#39;
+      onclick=&#34;hugoDecrypt(CryptoJS.MD5(document.getElementById(&#39;hugo-encryptor-password&#39;).value).toString(),&#39;input&#39;)&#34;
+    /&gt;
+  &lt;/div&gt;
+  &lt;cipher-text data-password=&#34;PASS3word&#34; style=&#34;display:none;&#34;&gt;
+    &lt;p id=&#34;verifyText&#34; style=&#34;display:none;&#34;&gt;
+      The quick brown fox jumps over the lazy dog
+    &lt;/p&gt;
+    &lt;p&gt;这里是被加密的内容.&lt;/p&gt;
+&lt;h1 id=&#34;heading&#34;&gt;这里是被加密的一个一级标题&lt;/h1&gt;
+&lt;p&gt;一些被加密的内容.&lt;/p&gt;
+&lt;h1 id=&#34;heading-1&#34;&gt;其他特性&lt;/h1&gt;
+&lt;p&gt;现在任意刷新都依然可以看到加密内容，但一旦把这个窗口关闭，再次打开就还要再次输入密码. 在新标签重新打开这个地址也依然需要输入密码.&lt;/p&gt;
+&lt;h2 id=&#34;heading-2&#34;&gt;标题是自动排列的&lt;/h2&gt;
+&lt;p&gt;比如这个标题的序号为3.1.&lt;/p&gt;
+&lt;h2 id=&#34;heading-3&#34;&gt;关于图片&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../images/example.jpeg&#34; alt=&#34;示例图片&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;heading-4&#34;&gt;数学公式&lt;/h2&gt;
+&lt;p&gt;$x^2 + y^2 = z^2$.&lt;/p&gt;
+&lt;p&gt;数学公式不会出现任何问题，但因为开了 pandoc 的 markup 会使目录不能生成，而目录会出现问题，本着把问题展示出来的原则，我关闭了 pandoc，因此这个公式会有问题.&lt;/p&gt;
+
+  &lt;/cipher-text&gt;
+  &lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js&#34;&gt;&lt;/script&gt;
+  &lt;script&gt;
+      let cipher = document.getElementsByTagName(&#34;cipher-text&#34;)[0];
+      const storageKey = location.pathname + &#34;password&#34;;
+      const userStorage =  window[&#39;sessionStorage&#39;] ;
+      
+
+      const decrypt = function(cipher_text, password) {
+        let key = CryptoJS.enc.Utf8.parse(password);
+        let iv = CryptoJS.enc.Utf8.parse(password.substr(16));
+
+        let decryptedData = CryptoJS.AES.decrypt(cipher_text, key, {
+          iv: iv,
+          mode: CryptoJS.mode.CBC,
+          padding: CryptoJS.pad.Pkcs7
+        });
+        return decryptedData.toString(CryptoJS.enc.Utf8);
+      };
+      
+
+      const hugoDecrypt = function(password, type) {
+        try {
+          let cipher_text = cipher.innerText;
+          let decrypted_text = decrypt(cipher_text, password);
+          if (
+            decrypted_text.includes(&#34;The quick brown fox jumps over the lazy dog&#34;)
+          ) {
+            cipher.parentElement.outerHTML = decrypted_text;
+            userStorage.setItem(storageKey, password);
+            document.getElementById(&#34;verifyText&#34;).outerHTML = &#34;&#34;;
+          } else {
+            if (type === &#34;input&#34;) {
+              alert(&#39;密码错误&#39;);
+            } else if (type === &#34;storage&#34;) {
+              userStorage.removeItem(storageKey);
+            }
+          }
+        } catch (error) {
+          
+          if (type === &#34;input&#34;) {
+            alert(&#39;密码错误&#39;);
+          } else if (type === &#34;storage&#34;) {
+            userStorage.removeItem(location.pathname + &#34;password&#34;);
+          }
+        }
+      };
+  &lt;/script&gt;
+  &lt;script&gt;
+    window.onload = () =&gt; {
+      if (userStorage.getItem(storageKey)) {
+        hugoDecrypt(userStorage.getItem(storageKey), &#34;storage&#34;);
+      }
+    };
+  &lt;/script&gt;
+&lt;/hugo-encryptor&gt;
+
+&lt;h2 id=&#34;heading-1&#34;&gt;未被加密的标题&lt;/h2&gt;
+&lt;p&gt;在解密前这里的序号是1.1，解密后这里的序号是3.4.&lt;/p&gt;
+&lt;h1 id=&#34;heading-2&#34;&gt;未被加密的一级标题&lt;/h1&gt;
+&lt;p&gt;在解密前这里的序号是2，解密后这里的序号是4.&lt;/p&gt;
+&lt;h2 id=&#34;heading-3&#34;&gt;未解决的问题&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;目录会出现问题. 可能是 css 标签被改了的原因，具体没有仔细看，也不着急解决这个问题.&lt;/li&gt;
+&lt;li&gt;本地测试时把加密内容直接隐藏了，以至于只能先把文章写完再进行加密操作. 有个解决思路是用 &lt;code&gt;{{ if not .Site.IsServer }} {{ end }}&lt;/code&gt; 在 &lt;code&gt;layouts/shortcodes/hugo-encryptor.html&lt;/code&gt; 里做一下限制，不过试了一下不太会写，留待以后愿意解决再解决吧.&lt;/li&gt;
+&lt;li&gt;那个 &lt;code&gt;&amp;lt;!--more--&amp;gt;&lt;/code&gt; 的标签导致它上面的内容成为了 summary，而 front matter 里的 summary 不再起作用. 这倒不是什么大问题.&lt;/li&gt;
+&lt;/ol&gt;</description>
+                </item>
+            
+                <item>
                     <title>配眼镜相关知识总结-消费指南</title>
                     <link>/zh/69995/</link>
                     <pubDate>2019-07-21</pubDate>
@@ -1021,6 +1139,7 @@ file_path: name.pdf
 &lt;p&gt;关于目录的下拉样式主要参考了&lt;a href=&#34;https://www.runoob.com/css/css-dropdowns.html&#34;&gt;菜鸟教程, CSS 下拉菜单&lt;/a&gt;，目录序号的生成主要参考了&lt;a href=&#34;https://clickhelp.com/clickhelp-technical-writing-blog/advanced-autonumbering-techniques-with-css/&#34;&gt;Anastasia, Advanced Autonumbering Techniques with CSS&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;然后就是我的文章排版，用了两端对齐，但是又有中文又有英文有时还有数学内容的文章就特别丑，中间的间距不均匀，我也不知道该怎么办.&lt;/p&gt;
 &lt;p&gt;注：2019 年 12 月 29 日我对所有的 CSS 进行了重写，使用了更为方便更为强大的 CSS3 技术，包括 flex 弹性盒子、transition 过渡动画以及 @media 多媒体查询，重新为小屏幕手机端写了新的 CSS，并做了响应式布局. 目前这个博客就更好看、更好用了——无论在电脑屏幕上还是手机屏幕上. 这里需要特别记录的一点是关于“视口”这个概念的理解，这篇&lt;a href=&#34;https://www.zhihu.com/question/35221839/answer/66825618&#34;&gt;知乎上的回答&lt;/a&gt;解答了我和提问者同样的困惑. 同时，之前的两端对齐的排版被我取消了，因为实在是太丑了，我宁愿让右侧不对齐.&lt;/p&gt;
+&lt;p&gt;再注：新的 CSS 在奇葩的内核下显示不正常，波及了 QQ 浏览器、UC 浏览器等，它们对 CSS 新特性支持得不好. 试着解决了一次，但终究找不到问题的根源，也懒得解决了，毕竟在 Firefox、Chrome 等浏览器都显示得不错，更何况这些问题就应该浏览器厂商解决，哪有留给前端解决的？留给我解决我就偏要留给用户解决. 要是所有前端都这么硬气，倒逼用户换成更现代的浏览器，我才不信浏览器厂商敢这么不作为. 反正我这个博客也没什么人看，就让用[显示不好的浏览器]的人不再来看我的博客好了.&lt;/p&gt;
 &lt;h2 id=&#34;heading-5&#34;&gt;评论系统的支持&lt;/h2&gt;
 &lt;p&gt;在这里我使用了以 GitHub issue 为工具的 &lt;a href=&#34;https://utteranc.ce&#34;&gt;utterances&lt;/a&gt; 来生成评论，原理非常简单，配置也非常容易，按照其官网的说明简单操作即可. 本站的所有评论存储在&lt;a href=&#34;https://github.com/zerovip/bcsu/issues&#34;&gt;这里&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;-404-&#34;&gt;自定义的 404 页面&lt;/h2&gt;
@@ -1033,9 +1152,27 @@ file_path: name.pdf
 &lt;p&gt;When using Hugo with GitHub Pages, you can provide your own template for a custom 404 error page by creating a 404.html template file in your /layouts folder. When Hugo generates your site, the 404.html file will be placed in the root.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;然而真正操作的时候，Hugo 把 404.html 分别放到了不同的语言文件夹下. 这样一来我虽然可以定制不同语言版本的 404 页面，却没法在 GitHub Pages 上使用. 想了想也许可以手动建一个根目录下的 404.html 并用 JS 进行重定向，但觉得不爽所以我没有这样做，目前本站还是 GitHub Pages 默认的 404 页面. 网络上&lt;a href=&#34;https://github.com/gohugoio/hugo/issues/3075&#34;&gt;这个 issue&lt;/a&gt; 的解决可能是导致这个问题的根源，与此相关的还有&lt;a href=&#34;https://discourse.gohugo.io/t/define-404-page-content-in-an-md-file-under-the-content-directory/13943&#34;&gt;这个讨论&lt;/a&gt;.&lt;/p&gt;
-&lt;h1 id=&#34;-github-pages-&#34;&gt;部署到 GitHub Pages 上&lt;/h1&gt;
+&lt;h2 id=&#34;heading-6&#34;&gt;博客文章的加密与隐藏&lt;/h2&gt;
+&lt;p&gt;2019 年 12 月有了给博客文章加密的需求，发现了 &lt;a href=&#34;https://github.com/Li4n0/hugo_encryptor&#34;&gt;Hugo encryptor&lt;/a&gt; 这款工具，试了一下，效果良好，测试文章见&lt;a href=&#34;../../zh/62772&#34;&gt;这里&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;这个工具的原理是在 layouts 目录中弄了一个 shortcodes 代码片段，里面包含了使用 &lt;a href=&#34;https://github.com/brix/crypto-js&#34;&gt;crypto-js&lt;/a&gt; 这个工具的 javascript 片段用以判断密码是否输入正确并展示被加密文字. 之后 Hugo 生成静态网页时就会把 Markdown 中需要加密的部分的明文用那部分代码片段包裹，然后用 python 强行把 Hugo 生成的 &lt;code&gt;public&lt;/code&gt; 目录下的 html 进行遍历，只要有被那个代码片段包裹的文字就直接用 python 加密替换进去，这样就完成了博客文章的加密. 上传后展示出来输入密码解密的过程就是纯 javascript 了.&lt;/p&gt;
+&lt;p&gt;而隐藏的需求就是让文章不在列表中显示出来，比如上面给出链接的那篇&lt;a href=&#34;../../zh/62772&#34;&gt;测试文章&lt;/a&gt;，它是“备忘”这个分区下的文章，却不能在分区列表页找到，也不会在首页的最近 5 篇中出现，用的是技术是在文章 Markdown 的 front matter 里引入新的参数，并在列表页用 &lt;code&gt;where&lt;/code&gt; 函数判断.&lt;/p&gt;
+&lt;p&gt;这里需要额外注意的是 RSS 页也需要进行隐藏，因为 Hugo encryptor 这个工具只对 html 文件进行了加密，没有加密 xml 文件，如果不隐藏就会导致在 RSS 中可以看到密码和加密内容. 比如对上面给出链接的测试文章我故意没有在 RSS 列表页隐藏，这样在&lt;a href=&#34;../../zh/non-math/memos/index.xml&#34;&gt;“备忘分区”的 RSS&lt;/a&gt; 中可以看到密码 &lt;code&gt;&amp;lt;cipher-text data-password=&amp;quot;PASS3word&amp;quot; style=&amp;quot;display:none;&amp;quot;&amp;gt;&lt;/code&gt; 以及加密的内容.&lt;/p&gt;
+&lt;p&gt;总而言之，列表隐藏和文字加密可随意配合使用，列表隐藏但不文字加密、文字加密但不列表隐藏、文字加密并列表隐藏，这都是可以的；但只要文字加密就必须 RSS 隐藏.&lt;/p&gt;
+&lt;h1 id=&#34;heading-7&#34;&gt;部署&lt;/h1&gt;
+&lt;h2 id=&#34;github-pages&#34;&gt;GitHub Pages&lt;/h2&gt;
 &lt;p&gt;按照&lt;a href=&#34;https://gohugo.io/hosting-and-deployment/hosting-on-github/&#34;&gt;官方文档&lt;/a&gt;进行部署，因为是个人博客，我用的是&lt;a href=&#34;https://gohugo.io/hosting-and-deployment/hosting-on-github/#github-user-or-organization-pages&#34;&gt;第一种 User/Organization Pages 类型&lt;/a&gt;. 操作也都极为简单，不再赘述. 如果遇到已经部署好了却打不开的情况可以尝试重新 push 一下.&lt;/p&gt;
-&lt;h1 id=&#34;heading-6&#34;&gt;是为记.&lt;/h1&gt;
+&lt;h2 id=&#34;netlify&#34;&gt;Netlify&lt;/h2&gt;
+&lt;p&gt;2019 年 12 月底，我发觉国内加载 Github Pages 的速度太慢了，于是有意识地寻找其他能部署的地方，发现 Netlify 也许还不错，就往这上面也部署了一份.&lt;/p&gt;
+&lt;p&gt;Netlify 支持 Github 登录，按照官方文档的说法可以把整个博客源码关联到 Netlify 网站项目上，Netlify 本身有一个环境可以运行命令生成静态文件，而且目前还可以&lt;a href=&#34;https://docs.netlify.com/configure-builds/get-started/#build-image-selection&#34;&gt;选择环境&lt;/a&gt;，比如选择了 Ubuntu Xenial 16.04 image，它支持所有版本的 Hugo，那就相当于有一个 Ubuntu 系统在帮我跑 Hugo. 但有两个问题：&lt;/p&gt;
+&lt;p&gt;第一，这个方法和 Github Pages 不兼容，因为 Github Pages 用了 submodule，相当于仓库里面还有一个仓库，而 Netlify 管 Github 要授权的时候只授权了大仓库，这导致 Netlify 运行时会产生权限的错误. &lt;a href=&#34;https://www.synesthesia.co.uk/note/2019/06/13/hugo-netlify-and-github-pages/&#34;&gt;这篇文章&lt;/a&gt;报告了这个问题并提供了一个看上去极其不自然的方法解决了这个问题. 我觉得那个方法实在是有点愚蠢，我没有更好的办法.&lt;/p&gt;
+&lt;p&gt;第二，如果让 Netlify 重新帮我用它那里的 Hugo 生成静态文件，那加密的部分怎么办？难道我要把加密的 python 文件上传到 Netlify 再设置一个钩子么？这听上去也很愚蠢，因为我已经有生成好的静态文件了，你只管帮我 host 就好了，搞这么麻烦干什么？&lt;/p&gt;
+&lt;p&gt;于是我就直接把&lt;a href=&#34;https://github.com/zerovip/zerovip.github.io&#34;&gt;静态文件的仓库&lt;/a&gt;，也就是 Github Pages 用的那个 username.github.io 那个仓库关联到 Netlify 网站项目上了，也运行得非常好. 这时我才发现 Netlify 并没有想象中那样变得加载更快，我还是要寻找更好的解决方案.&lt;/p&gt;
+&lt;h2 id=&#34;heading-8&#34;&gt;其他&lt;/h2&gt;
+&lt;p&gt;但我到最后也没找到令我满意的方案. 我理想的方案应该是，1.部署方便，直接把 Github Pages 用的仓库拿过来用就行；2.更新方便，Github 那边的仓库更新时这边也同步更新；3.自由，注册不需要手机号，不受中国大陆的监管；4.中国大陆的加载速度快. 事实证明，3 和 4 是矛盾的. 我了解过的方案有：&lt;/p&gt;
+&lt;p&gt;一，弄一个 CDN，但国外的 CDN 不满足 4，国内的 CDN 不满足 3.&lt;/p&gt;
+&lt;p&gt;二，反正是静态的博客，再找地方托管，考虑过：Firebase（不满足 1）、Gitee（不满足 3）、Coding（不满足 3）、Gitlab（不满足 4）等等.&lt;/p&gt;
+&lt;p&gt;于是干脆就不弄了.&lt;/p&gt;
+&lt;h1 id=&#34;heading-9&#34;&gt;是为记.&lt;/h1&gt;
 &lt;h1 id=&#34;todo-&#34;&gt;TODO 清单&lt;/h1&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;del&gt;评论系统&lt;/del&gt;&lt;/li&gt;
@@ -1046,7 +1183,7 @@ file_path: name.pdf
 &lt;li&gt;&lt;del&gt;黑暗主题&lt;/del&gt;（不再考虑）&lt;/li&gt;
 &lt;li&gt;&lt;del&gt;Google analytics&lt;/del&gt;&lt;/li&gt;
 &lt;li&gt;&lt;del&gt;tags, categories, series 等&lt;/del&gt;（不再考虑&lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;）&lt;/li&gt;
-&lt;li&gt;本文中提到的中英文排版问题还没有解决&lt;/li&gt;
+&lt;li&gt;&lt;del&gt;本文中提到的中英文排版问题还没有解决&lt;/del&gt;（暂且先这样）&lt;/li&gt;
 &lt;li&gt;本文中提到的 404 页面问题还没有解决&lt;/li&gt;
 &lt;li&gt;本文中提到的使用 pandoc 没有目录的问题还没有解决&lt;/li&gt;
 &lt;li&gt;&lt;del&gt;数学类 overflow-x auto 后 overflow-y 自动出现的问题&lt;/del&gt;&lt;/li&gt;
@@ -1054,7 +1191,8 @@ file_path: name.pdf
 &lt;li&gt;&lt;del&gt;把 head 中的标题改一下，在搜索引擎中显得好看一点&lt;/del&gt;&lt;/li&gt;
 &lt;li&gt;&lt;del&gt;list 中写 head 标题的方法过于暴力，需要简化&lt;/del&gt;（不再考虑）&lt;/li&gt;
 &lt;li&gt;&lt;del&gt;首页最近文章&lt;/del&gt;&lt;/li&gt;
-&lt;li&gt;QQ 浏览器、UC 浏览器等奇葩内核，&amp;lt;p&amp;gt; 完全消失以及各种 flex 显示不好的问题&lt;/li&gt;
+&lt;li&gt;&lt;del&gt;QQ 浏览器、UC 浏览器等奇葩内核，&amp;lt;p&amp;gt; 完全消失以及各种 flex 显示不好的问题&lt;/del&gt;（不再考虑）&lt;/li&gt;
+&lt;li&gt;&lt;del&gt;国内加载速度太慢的问题&lt;/del&gt;（不再考虑）&lt;/li&gt;
 &lt;/ol&gt;
 &lt;section class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
 &lt;hr&gt;
@@ -1066,7 +1204,7 @@ file_path: name.pdf
 &lt;p&gt;自 2019 年 11 月 26 日 Hugo 升级到 0.60.0 版本后，默认的渲染引擎已经从 blackfriday 换成了 goldmark. &lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li id=&#34;fn:3&#34; role=&#34;doc-endnote&#34;&gt;
-&lt;p&gt;2020 年 1 月 1 日尝试着做了一下，主要是要看官方文档&lt;a href=&#34;https://gohugo.io/templates/&#34;&gt;模板&lt;/a&gt;那一章，最重要的是&lt;a href=&#34;https://gohugo.io/templates/taxonomy-templates/&#34;&gt;分类模板&lt;/a&gt;那一节. Taxonomy 其实非常灵活，把它搞定只需要解决 3 个方面的问题：Taxonomy Term、Taxonomy List 和文章中关于 Taxonomy 的显示. Taxonomy Term 是某个分类页，比如【导演】页列出库布里克、希区柯克和黑泽明，比如【世纪】页列出 20 世纪、21 世纪，比如【标签】页列出青春、访谈、计算机；而 Taxonomy List 是具体分类项页，这是名副其实的列表页，比如【希区柯克】页列出所有希区柯克的电影，比如【21 世纪】页列出所有 21 世纪的电影，比如【青春】页列出所有含“青春”这个标签的文章. 这不难理解，但问题在于多语言. 按我的设想应该是同一个网站同样的内容被翻译成不同语言，所以英文的【导演】页应该是【directors】页，这在地址栏上不像想象中运作，在 &lt;code&gt;.../zh/导演/&lt;/code&gt; 页点击英语按钮会转到 &lt;code&gt;.../en/导演/&lt;/code&gt;，这个问题没想到很简单的解决办法，目前想到的解决办法是每个分类页、分类项页都用 _index.md 写出多语言的形式，地址栏永恒保持英文，不过这一想就觉得困难. 于是我决定放弃这个功能. &lt;a href=&#34;#fnref:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;2020 年 1 月 1 日尝试着做了一下，主要是要看官方文档&lt;a href=&#34;https://gohugo.io/templates/&#34;&gt;模板&lt;/a&gt;那一章，最重要的是&lt;a href=&#34;https://gohugo.io/templates/taxonomy-templates/&#34;&gt;分类模板&lt;/a&gt;那一节. Taxonomy 其实非常灵活，把它搞定只需要解决 3 个方面的问题：Taxonomy Term、Taxonomy List 和文章中关于 Taxonomy 的显示. Taxonomy Term 是某个分类页，比如【导演】页列出库布里克、希区柯克和黑泽明，比如【世纪】页列出 20 世纪、21 世纪，比如【标签】页列出青春、访谈、计算机；而 Taxonomy List 是具体分类项页，这是名副其实的列表页，比如【希区柯克】页列出所有希区柯克的电影，比如【21 世纪】页列出所有 21 世纪的电影，比如【青春】页列出所有含“青春”这个标签的文章. 这不难理解，但问题在于多语言. 按我的设想应该是同一个网站同样的内容被翻译成不同语言，所以英文的【导演】页应该是【directors】页，这在地址栏上不像想象中运作，在 “&amp;hellip;/zh/导演/” 页点击英语按钮会转到 “&amp;hellip;/en/导演/”，这个问题没想到很简单的解决办法，目前想到的解决办法是每个分类页、分类项页都用 _index.md 写出多语言的形式，地址栏永恒保持英文，不过这一想就觉得困难. 于是我决定放弃这个功能. &lt;a href=&#34;#fnref:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/section&gt;

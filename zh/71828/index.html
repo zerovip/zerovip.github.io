@@ -36,6 +36,9 @@ if (!doNotTrack) {
         function ChangeClassTOC(){
             document.getElementById("toc").classList.toggle("toc_show");
             }
+        function ChangeClassBlackBlock(wait_to_change){
+            wait_to_change.classList.toggle("black_block_show");
+            }
     </script>
 </head>
 
@@ -214,8 +217,10 @@ if (!doNotTrack) {
             
         </div>
     </div>
-    <div class="right_comments">
-        
+    
+    
+        <div class="right_comments">
+            
 <script src="https://utteranc.es/client.js"
     repo="zerovip/bcsu"
     issue-term="pathname"
@@ -224,7 +229,8 @@ if (!doNotTrack) {
     async>
 </script>
 
-    </div>
+        </div>
+    
 
     </div>
     

@@ -99,7 +99,7 @@
                     
                     <guid>/zh/about/me/</guid>
                     <description>&lt;p&gt;栏目该有还是要有，但关于我——无可奉告.&lt;/p&gt;
-&lt;p&gt;通过邮件联系我：&lt;code&gt;zer0zero-blog[AT]yahoo[DOT]com&lt;/code&gt; 或 &lt;code&gt;zer0zero[AT]sina[DOT]cn&lt;/code&gt;. 如需要给我发送加密邮件：uid: &lt;code&gt;A551B8F6A13D8A90&lt;/code&gt; (&lt;code&gt;zer0zero &amp;lt;zer0zero@yahoo.com&amp;gt;&lt;/code&gt;)，fingerprint: &lt;code&gt;AD3F 2207 E311 7C13 155D  40D1 A551 B8F6 A13D 8A90&lt;/code&gt;，public key:&lt;/p&gt;
+&lt;p&gt;通过邮件联系我：&lt;span style=&#34;background-color: #F2F5A9; color: black;&#34;&gt;zer0zero-blog[AT]yahoo[DOT]com&lt;/span&gt; 或 &lt;span style=&#34;background-color: #F2F5A9; color: black;&#34;&gt;zer0zero[AT]sina[DOT]cn&lt;/span&gt;. 如需要给我发送加密邮件：uid: &lt;code&gt;A551B8F6A13D8A90&lt;/code&gt; (zer0zero &amp;lt;zer0zero@yahoo.com&amp;gt;)，fingerprint: &lt;code&gt;AD3F 2207 E311 7C13 155D  40D1 A551 B8F6 A13D 8A90&lt;/code&gt;，public key:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;-----BEGIN PGP PUBLIC KEY BLOCK-----
 
 mQENBF4N4FIBCACzySXW+/MYM6fUPXsJj89icJ9hVfsQQldNVZ3QQeUdU5htQH4E
@@ -167,7 +167,7 @@ veL/x/fXMw1e5Ou5KKhroxS6160gLopRcw==
 &lt;h1 id=&#34;heading-5&#34;&gt;评论&lt;/h1&gt;
 &lt;p&gt;本站的文章支持评论，且各个语言板块下的评论不共享，即便是同一篇文章的不同语言. 因此在您评论时请注意使用当前页面的语言. 在这里我使用了以 GitHub issue 为工具的 &lt;a href=&#34;https://utteranc.es&#34;&gt;utterances&lt;/a&gt; 作为评论系统，因此需要您登录 GitHub 帐号并授予写 issue 的权限给 utterances 机器人. 如果您不愿意授权，只需到&lt;a href=&#34;https://github.com/zerovip/bcsu/issues&#34;&gt;这里&lt;/a&gt;建立以文章 path 为标题的 issue 并评论，或在已有的以文章 path 为标题的 issue 下评论即可.&lt;/p&gt;
 &lt;p&gt;例如，这篇文章的网址是 &lt;code&gt;https://zerovip.github.io/zh/about/site/&lt;/code&gt;，则这篇文章的 path 为 &lt;code&gt;zh/about/site/&lt;/code&gt;，即去掉前面的 &lt;code&gt;https://zerovip.github.io/&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;如果您没有 GitHub 账户，您可以&lt;a href=&#34;https://github.com/join&#34;&gt;免费注册一个&lt;/a&gt;；若您不愿意注册，也可以给我发邮件（zer0zero[at]sina[dot]cn）进行交流.&lt;/p&gt;
+&lt;p&gt;如果您没有 GitHub 账户，您可以&lt;a href=&#34;https://github.com/join&#34;&gt;免费注册一个&lt;/a&gt;；若您不愿意注册，也可以给我发邮件（&lt;span style=&#34;background-color: #F2F5A9; color: black;&#34;&gt;zer0zero-blog[AT]yahoo[DOT]com&lt;/span&gt; 或 &lt;span style=&#34;background-color: #F2F5A9; color: black;&#34;&gt;zer0zero[AT]sina[DOT]cn&lt;/span&gt;）进行交流.&lt;/p&gt;
 &lt;h1 id=&#34;heading-6&#34;&gt;订阅&lt;/h1&gt;
 &lt;p&gt;本站支持 RSS 2.0，您可以订阅任意一个列表，只需在左边栏点击想订阅的列表进入，再点击左边栏右上角的“RSS 订阅”即可.&lt;/p&gt;
 &lt;h1 id=&#34;heading-7&#34;&gt;技术&lt;/h1&gt;
