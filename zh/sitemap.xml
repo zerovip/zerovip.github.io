@@ -4,7 +4,7 @@
   
   <url>
     <loc>/zh/</loc>
-    <lastmod>2020-01-08T00:00:00+00:00</lastmod>
+    <lastmod>2020-01-21T00:00:00+00:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -21,6 +21,31 @@
                 hreflang="zh"
                 href="/zh/"
                 />
+  </url>
+  
+  <url>
+    <loc>/zh/non-math/memos/</loc>
+    <lastmod>2020-01-21T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/non-math/memos/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="/fr/non-math/memos/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="/zh/non-math/memos/"
+                />
+  </url>
+  
+  <url>
+    <loc>/zh/30353/</loc>
+    <lastmod>2020-01-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -46,26 +71,6 @@
   <url>
     <loc>/zh/40766/</loc>
     <lastmod>2020-01-08T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/zh/non-math/memos/</loc>
-    <lastmod>2019-12-23T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/en/non-math/memos/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="/fr/non-math/memos/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="/zh/non-math/memos/"
-                />
   </url>
   
   <url>
