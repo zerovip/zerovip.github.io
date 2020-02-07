@@ -1,72 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>
-    
-    
-        
-            
-                
-            
-                
-            
-        
-    
-        
-            
-                
-            
-                
-                    Littérature
-                
-            
-                
-            
-        
-    
-        
-            
-                
-            
-                
-            
-        
-    
- | La Tour D&#39;ivoire De Zéro</title>
+        <title> | La Tour D&#39;ivoire De Zéro</title>
         <link>/fr/non-math/literature/</link>
         <description>
-            Contenu Récent | 
-    
-    
-        
-            
-                
-            
-                
-            
-        
-    
-        
-            
-                
-            
-                
-                    Littérature
-                
-            
-                
-            
-        
-    
-        
-            
-                
-            
-                
-            
-        
-    
- | La Tour D&#39;ivoire De Zéro
+            Contenu Récent |  | La Tour D&#39;ivoire De Zéro
         </description>
         <generator>Hugo -- gohugo.io</generator>
         
@@ -78,36 +16,5 @@
         
         
         
-    
-    
-        
-            
-                
-            
-                
-            
-        
-    
-        
-            
-                
-            
-                
-                    
-                
-            
-                
-            
-        
-    
-        
-            
-                
-            
-                
-            
-        
-    
-
     </channel>
 </rss> 
