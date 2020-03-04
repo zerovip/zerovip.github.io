@@ -24,6 +24,26 @@
   </url>
   
   <url>
+    <loc>/zh/non-math/</loc>
+    <lastmod>2020-02-09T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/non-math/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="/fr/non-math/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="/zh/non-math/"
+                />
+  </url>
+  
+  <url>
     <loc>/zh/non-math/memos/</loc>
     <lastmod>2020-02-09T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -91,6 +111,26 @@
   <url>
     <loc>/zh/69995/</loc>
     <lastmod>2019-07-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/zh/math/</loc>
+    <lastmod>2019-07-14T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/math/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="/fr/math/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="/zh/math/"
+                />
   </url>
   
   <url>
@@ -230,44 +270,6 @@
                 rel="alternate"
                 hreflang="zh"
                 href="/zh/about/site/"
-                />
-  </url>
-  
-  <url>
-    <loc>/zh/math/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/en/math/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="/fr/math/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="/zh/math/"
-                />
-  </url>
-  
-  <url>
-    <loc>/zh/non-math/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/en/non-math/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="/fr/non-math/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="/zh/non-math/"
                 />
   </url>
   
