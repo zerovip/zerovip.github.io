@@ -179,7 +179,7 @@ if (!doNotTrack) {
             建站记
         </div>
         <div class="right_head_des">
-            2019-06-22 - 7872 字
+            2019-06-22 - 8403 字
         </div>
     </div>
 
@@ -366,8 +366,10 @@ file_path: name.pdf
 <p>按照心中预计的样子编写 CSS 文件，如果需要的话也写一些 JS. 就像 HTML 语言一样，关于它们的使用方法可以在任意相关的网站上找到，不是建立本站的难点，也不会成为这篇文章的重点.</p>
 <p>关于目录的下拉样式主要参考了<a href="https://www.runoob.com/css/css-dropdowns.html">菜鸟教程, CSS 下拉菜单</a>，目录序号的生成主要参考了<a href="https://clickhelp.com/clickhelp-technical-writing-blog/advanced-autonumbering-techniques-with-css/">Anastasia, Advanced Autonumbering Techniques with CSS</a>.</p>
 <p>然后就是我的文章排版，用了两端对齐，但是又有中文又有英文有时还有数学内容的文章就特别丑，中间的间距不均匀，我也不知道该怎么办.</p>
-<p>注：2019 年 12 月 29 日我对所有的 CSS 进行了重写，使用了更为方便更为强大的 CSS3 技术，包括 flex 弹性盒子、transition 过渡动画以及 @media 多媒体查询，重新为小屏幕手机端写了新的 CSS，并做了响应式布局. 目前这个博客就更好看、更好用了——无论在电脑屏幕上还是手机屏幕上. 这里需要特别记录的一点是关于“视口”这个概念的理解，这篇<a href="https://www.zhihu.com/question/35221839/answer/66825618">知乎上的回答</a>解答了我和提问者同样的困惑. 同时，之前的两端对齐的排版被我取消了，因为实在是太丑了，我宁愿让右侧不对齐.</p>
-<p>再注：新的 CSS 在奇葩的内核下显示不正常，波及了 QQ 浏览器、UC 浏览器等，它们对 CSS 新特性支持得不好. 试着解决了一次，但终究找不到问题的根源，也懒得解决了，毕竟在 Firefox、Chrome 等浏览器都显示得不错，更何况这些问题就应该浏览器厂商解决，哪有留给前端解决的？留给我解决我就偏要留给用户解决. 要是所有前端都这么硬气，倒逼用户换成更现代的浏览器，我才不信浏览器厂商敢这么不作为. 反正我这个博客也没什么人看，就让用[显示不好的浏览器]的人不再来看我的博客好了.</p>
+<div style="background-color: #F2F5A9; color: black;">
+<p>注：2019 年 12 月 29 日我对所有的 CSS 进行了重写，使用了更为方便更为强大的 CSS3 技术，包括 flex 弹性盒子（主要参考的是<a href="https://www.ruanyifeng.com/blog/2015/07/flex-grammar.html">阮一峰, Flex 布局教程：语法篇</a>、<a href="https://www.ruanyifeng.com/blog/2015/07/flex-examples.html">阮一峰, Flex 布局教程：实例篇</a>）、transition 过渡动画以及 @media 多媒体查询，重新为小屏幕手机端写了新的 CSS，并做了响应式布局. 目前这个博客就更好看、更好用了——无论在电脑屏幕上还是手机屏幕上. 这里需要特别记录的一点是关于“视口”这个概念的理解，这篇<a href="https://www.zhihu.com/question/35221839/answer/66825618">知乎上的回答</a>解答了我和提问者同样的困惑. 同时，之前的两端对齐的排版被我取消了，因为实在是太丑了，我宁愿让右侧不对齐.</div></p>
+<div style="background-color: #F2F5A9; color: black;">
+<p>再注：新的 CSS 在奇葩的内核下显示不正常，波及了 QQ 浏览器、UC 浏览器等. 试着解决了一次，但终究找不到问题的根源——明明我用这些浏览器跑<a href="https://css3test.com">CSS3 测试</a>支持率很高，而且我用到的技术它都支持. 我懒得解决了，除非有人帮我定位一下问题，因为我 Linux 的生产环境没法装 QQ 浏览器，也不知道前端大佬们都是怎么测试的. 我的网站在 Firefox、Chrome 等浏览器上都显示得超级好，更何况这些问题就应该浏览器厂商解决，哪有留给前端解决的？留给我解决我就偏要留给用户解决. 要是所有前端都这么硬气，倒逼用户换成更现代的浏览器，我才不信浏览器厂商敢这么不作为. 反正我这个博客也没什么人看，就让用[显示不好的浏览器]的人不再来看我的博客好了. 补充于 2020 年 1 月 2 日.</div></p>
 <h2 id="评论系统的支持">评论系统的支持</h2>
 <p>在这里我使用了以 GitHub issue 为工具的 <a href="https://utteranc.ce">utterances</a> 来生成评论，原理非常简单，配置也非常容易，按照其官网的说明简单操作即可. 本站的所有评论存储在<a href="https://github.com/zerovip/bcsu/issues">这里</a>.</p>
 <h2 id="自定义的-404-页面">自定义的 404 页面</h2>
@@ -386,6 +388,11 @@ file_path: name.pdf
 <p>而隐藏的需求就是让文章不在列表中显示出来，比如上面给出链接的那篇<a href="../../zh/62772">测试文章</a>，它是“备忘”这个分区下的文章，却不能在分区列表页找到，也不会在首页的最近 5 篇中出现，用的是技术是在文章 Markdown 的 front matter 里引入新的参数，并在列表页用 <code>where</code> 函数判断.</p>
 <p>这里需要额外注意的是 RSS 页也需要进行隐藏，因为 Hugo encryptor 这个工具只对 html 文件进行了加密，没有加密 xml 文件，如果不隐藏就会导致在 RSS 中可以看到密码和加密内容. 比如对上面给出链接的测试文章我故意没有在 RSS 列表页隐藏，这样在<a href="../../zh/non-math/memos/index.xml">“备忘分区”的 RSS</a> 中可以看到密码 <code>&lt;cipher-text data-password=&quot;PASS3word&quot; style=&quot;display:none;&quot;&gt;</code> 以及加密的内容.</p>
 <p>总而言之，列表隐藏和文字加密可随意配合使用，列表隐藏但不文字加密、文字加密但不列表隐藏、文字加密并列表隐藏，这都是可以的；但只要文字加密就必须 RSS 隐藏.</p>
+<p><span style="background-color: #F2F5A9; color: black;">这一小节补充于 2019 年 12 月 27 日.</span></p>
+<h2 id="统计信息">统计信息</h2>
+<p>最开始只用了 Google Analytics，没什么难的，本身 Hugo 就支持，只要在配置文件里把 Google Analytics 的代号写进去，有一个现成的语句片段可以用. 唯一要注意的是要用<code>{{ if not .Site.IsServer }}</code>判断一下别把本地测试的也统计进去就行了.</p>
+<p>2020 年 3 月 6 日我听说了一个新的开源统计工具：<a href="https://www.goatcounter.com/">Goat Counter</a>，使用非常简单，我也马上就把它加进来了.</p>
+<p><span style="background-color: #F2F5A9; color: black;">这一小节补充于 2020 年 3 月 6 日.</span></p>
 <h1 id="部署">部署</h1>
 <h2 id="github-pages">GitHub Pages</h2>
 <p>按照<a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/">官方文档</a>进行部署，因为是个人博客，我用的是<a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/#github-user-or-organization-pages">第一种 User/Organization Pages 类型</a>. 操作也都极为简单，不再赘述. 如果遇到已经部署好了却打不开的情况可以尝试重新 push 一下.</p>
@@ -395,32 +402,38 @@ file_path: name.pdf
 <p>第一，这个方法和 Github Pages 不兼容，因为 Github Pages 用了 submodule，相当于仓库里面还有一个仓库，而 Netlify 管 Github 要授权的时候只授权了大仓库，这导致 Netlify 运行时会产生权限的错误. <a href="https://www.synesthesia.co.uk/note/2019/06/13/hugo-netlify-and-github-pages/">这篇文章</a>报告了这个问题并提供了一个看上去极其不自然的方法解决了这个问题. 我觉得那个方法实在是有点愚蠢，我没有更好的办法.</p>
 <p>第二，如果让 Netlify 重新帮我用它那里的 Hugo 生成静态文件，那加密的部分怎么办？难道我要把加密的 python 文件上传到 Netlify 再设置一个钩子么？这听上去也很愚蠢，因为我已经有生成好的静态文件了，你只管帮我 host 就好了，搞这么麻烦干什么？</p>
 <p>于是我就直接把<a href="https://github.com/zerovip/zerovip.github.io">静态文件的仓库</a>，也就是 Github Pages 用的那个 username.github.io 那个仓库关联到 Netlify 网站项目上了，也运行得非常好. 这时我才发现 Netlify 并没有想象中那样变得加载更快，我还是要寻找更好的解决方案.</p>
+<p><span style="background-color: #F2F5A9; color: black;">这一小节补充于 2019 年 12 月 30 日.</span></p>
 <h2 id="其他">其他</h2>
 <p>但我到最后也没找到令我满意的方案. 我理想的方案应该是，1.部署方便，直接把 Github Pages 用的仓库拿过来用就行；2.更新方便，Github 那边的仓库更新时这边也同步更新；3.自由，注册不需要手机号，不受中国大陆的监管；4.中国大陆的加载速度快. 事实证明，3 和 4 是矛盾的. 我了解过的方案有：</p>
 <p>一，弄一个 CDN，但国外的 CDN 不满足 4，国内的 CDN 不满足 3.</p>
 <p>二，反正是静态的博客，再找地方托管，考虑过：Firebase（不满足 1）、Gitee（不满足 3）、Coding（不满足 3）、Gitlab（不满足 4）等等.</p>
 <p>于是干脆就不弄了.</p>
+<p><span style="background-color: #F2F5A9; color: black;">这一小节补充于 2019 年 12 月 30 日.</span></p>
 <h1 id="是为记">是为记.</h1>
 <h1 id="todo-清单">TODO 清单</h1>
 <ol>
-<li><del>评论系统</del></li>
-<li><del>适配手机的 CSS (重写 CSS 计划)</del></li>
-<li><del>RSS 支持</del></li>
-<li><del>文章间的跳转</del>（不再考虑）</li>
-<li><del>文章的目录安置(右上角固定的可伸缩悬浮块)</del></li>
+<li><del>评论系统</del>（已完成）</li>
+<li><del>适配手机的 CSS (重写 CSS 计划)</del>（已完成）</li>
+<li><del>RSS 支持</del>（已完成）</li>
+<li><del>文章间的跳转</del>（不再考虑，因为没有必要，使用手动添加友情链接代替）</li>
+<li><del>文章的目录安置(右上角固定的可伸缩悬浮块)</del>（已完成）</li>
 <li><del>黑暗主题</del>（不再考虑）</li>
-<li><del>Google analytics</del></li>
-<li><del>tags, categories, series 等</del>（不再考虑<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>）</li>
+<li><del>Google analytics</del>（已完成）</li>
+<li><del>tags, categories, series 等</del>（不再考虑<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>. 在边栏用多级 section 分类已经足够，没必要增加更复杂的分类方式.）</li>
 <li><del>本文中提到的中英文排版问题还没有解决</del>（暂且先这样）</li>
 <li>本文中提到的 404 页面问题还没有解决</li>
 <li>本文中提到的使用 pandoc 没有目录的问题还没有解决</li>
-<li><del>数学类 overflow-x auto 后 overflow-y 自动出现的问题</del></li>
-<li><del>提交 sitemap 供搜索引擎收录</del></li>
-<li><del>把 head 中的标题改一下，在搜索引擎中显得好看一点</del></li>
-<li><del>list 中写 head 标题的方法过于暴力，需要简化</del>（不再考虑）</li>
-<li><del>首页最近文章</del></li>
-<li><del>QQ 浏览器、UC 浏览器等奇葩内核，&lt;p&gt; 完全消失以及各种 flex 显示不好的问题</del>（不再考虑）</li>
+<li><del>数学类 overflow-x auto 后 overflow-y 自动出现的问题</del>（已解决）</li>
+<li><del>提交 sitemap 供搜索引擎收录</del>（已完成）</li>
+<li><del>把 head 中的标题改一下，在搜索引擎中显得好看一点</del>（已完成）</li>
+<li><del>list 中写 head 标题的方法过于暴力，需要简化</del>（不再考虑，不用太追求完美）</li>
+<li><del>首页最近文章</del>（已完成，显示 8 篇）</li>
+<li><del>QQ 浏览器、UC 浏览器等奇葩内核，&lt;p&gt; 完全消失以及各种 flex 显示不好的问题</del>（除非有人帮我定位问题）</li>
 <li><del>国内加载速度太慢的问题</del>（不再考虑）</li>
+<li>PWA，觉得很有潜力的技术，有时间的话会首先尝试它.</li>
+<li>IPFS，不一定，有生之年试一下就好.</li>
+<li>Zero Net，Ditto.</li>
+<li>InstantClick，Ditto.</li>
 </ol>
 <section class="footnotes" role="doc-endnotes">
 <hr>
@@ -432,7 +445,7 @@ file_path: name.pdf
 <p>自 2019 年 11 月 26 日 Hugo 升级到 0.60.0 版本后，默认的渲染引擎已经从 blackfriday 换成了 goldmark. <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:3" role="doc-endnote">
-<p>2020 年 1 月 1 日尝试着做了一下，主要是要看官方文档<a href="https://gohugo.io/templates/">模板</a>那一章，最重要的是<a href="https://gohugo.io/templates/taxonomy-templates/">分类模板</a>那一节. Taxonomy 其实非常灵活，把它搞定只需要解决 3 个方面的问题：Taxonomy Term、Taxonomy List 和文章中关于 Taxonomy 的显示. Taxonomy Term 是某个分类页，比如【导演】页列出库布里克、希区柯克和黑泽明，比如【世纪】页列出 20 世纪、21 世纪，比如【标签】页列出青春、访谈、计算机；而 Taxonomy List 是具体分类项页，这是名副其实的列表页，比如【希区柯克】页列出所有希区柯克的电影，比如【21 世纪】页列出所有 21 世纪的电影，比如【青春】页列出所有含“青春”这个标签的文章. 这不难理解，但问题在于多语言. 按我的设想应该是同一个网站同样的内容被翻译成不同语言，所以英文的【导演】页应该是【directors】页，这在地址栏上不像想象中运作，在 “&hellip;/zh/导演/” 页点击英语按钮会转到 “&hellip;/en/导演/”，这个问题没想到很简单的解决办法，目前想到的解决办法是每个分类页、分类项页都用 _index.md 写出多语言的形式，地址栏永恒保持英文，不过这一想就觉得困难. 于是我决定放弃这个功能. <a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p>2020 年 1 月 1 日尝试着做了一下，主要是要看官方文档<a href="https://gohugo.io/templates/">模板</a>那一章，最重要的是<a href="https://gohugo.io/templates/taxonomy-templates/">分类模板</a>那一节. Taxonomy 其实非常灵活，把它搞定只需要解决 3 个方面的问题：Taxonomy Term、Taxonomy List 和文章中关于 Taxonomy 的显示. Taxonomy Term 是某个分类页，比如【导演】页列出库布里克、希区柯克和黑泽明，比如【世纪】页列出 20 世纪、21 世纪，比如【标签】页列出青春、访谈、计算机；而 Taxonomy List 是具体分类项页，这是名副其实的列表页，比如【希区柯克】页列出所有希区柯克的电影，比如【21 世纪】页列出所有 21 世纪的电影，比如【青春】页列出所有含“青春”这个标签的文章. 这不难理解，但问题在于多语言. 按我的设想应该是同一个网站同样的内容被翻译成不同语言，所以英文的【导演】页应该是【directors】页，这在地址栏上不像想象中运作，在 “&hellip;/zh/导演/” 页点击英语按钮会转到 “&hellip;/en/导演/”，这个问题没想到很简单的解决办法，目前想到的解决办法是每个分类页、分类项页都用 _index.md 写出多语言的形式，地址栏永恒保持英文，不过这一想就觉得困难. 这也是我决定放弃这个功能的一个原因. <a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
 </section>
@@ -485,6 +498,7 @@ file_path: name.pdf
         <li><a href="#评论系统的支持">评论系统的支持</a></li>
         <li><a href="#自定义的-404-页面">自定义的 404 页面</a></li>
         <li><a href="#博客文章的加密与隐藏">博客文章的加密与隐藏</a></li>
+        <li><a href="#统计信息">统计信息</a></li>
       </ul>
     </li>
     <li><a href="#部署">部署</a>
