@@ -78,7 +78,7 @@
                 <pubDate>2020-03-06</pubDate>
                 
                 <guid>/zh/82178/</guid>
-                <description>&lt;p&gt;这篇文章就是我随便查一查随手写的，质量极低，是达不到在这个博客发出的标准的，但好不容易写了，就发出.（以后要降低发文标准，多写点这种水文啊！） 这件事暂时还没有决定下来，我自己还在各种犹豫. 以后再查到新东西再不断扩充，我真正做了决定以后再扩充写一下体验.&lt;span style=&#34;background-color: #F2F5A9; color: black;&#34;&gt;（2020.03.24 新增了一些内容（关于 reMarkable 和 Sony DPT-RP1 的对比）后，质量已经非常高了，里面有我大量的心血，而且如何选择也差不多有了头绪.）&lt;/span&gt;&lt;/p&gt;
+                <description>&lt;p&gt;这篇文章就是我随便查一查随手写的，质量极低，是达不到在这个博客发出的标准的，但好不容易写了，就发出.（以后要降低发文标准，多写点这种水文啊！） 这件事暂时还没有决定下来，我自己还在各种犹豫. 以后再查到新东西再不断扩充，我真正做了决定以后再扩充写一下体验.&lt;span style=&#34;background-color: #F2F5A9; color: black;&#34;&gt;（2020.03.24 新增了一些内容后，质量已经非常高了，里面有我大量的心血，而且如何选择也差不多有了头绪. 虽然这篇文章的题目是“平板类工具”，但由于 iPad、Surface 等产品的介绍、对比、评测在互联网上已经太多了，本文的重点是电子纸类产品 reMarkable 和 Sony DPT-RP1 的对比.）&lt;/span&gt;&lt;/p&gt;
 &lt;h1 id=&#34;背景与需求&#34;&gt;背景与需求&lt;/h1&gt;
 &lt;p&gt;最近因为疫情不能回学校，在家里上网课、学习. 我们很多课都是用英文原版教材，国内有影印版出版的我们就到网上买，没有的话就靠老师给我们影印或者到图书馆去借原版书（网上买原版书的话太贵了，一本书动不动就五六百）. 现在这些路都走不通了，就开始看电子书. 电子书好处还是很多的，比如做批注很灵活、有书内的跳转链接、可以在整本书内搜索关键词等，尤其是能搜索关键词这一点，对学数学还是帮助很大. 但我发现用笔记本电脑看课本太累了，便想着买一台有利于学习的平板类设备.&lt;/p&gt;
 &lt;p&gt;我的需求主要是阅读电子书，PDF 格式为主，并且要经常做批注、打草稿，会在书中搜索关键词，很多书有目录、有书内跳转链接的话会经常点击链接跳转，还希望跳过去之后能有简便的办法跳转回来. 有时会打 LaTeX 笔记.&lt;/p&gt;
@@ -125,7 +125,8 @@
 &lt;div style=&#34;background-color: #F2F5A9; color: black;&#34;&gt;
 &lt;p&gt;这篇文章刚写完 11 天，reMarkable 2 在 2020 年 3 月 17 日推出！详细的介绍请见&lt;a href=&#34;#remarkable-2-%E5%92%8C-sony-dpt-rp1-%E7%9A%84%E5%AF%B9%E6%AF%94&#34;&gt;下一小节&lt;/a&gt;.&lt;/div&gt;&lt;/p&gt;
 &lt;h2 id=&#34;remarkable-2-和-sony-dpt-rp1-的对比&#34;&gt;reMarkable 2 和 Sony DPT-RP1 的对比&lt;/h2&gt;
-&lt;p&gt;&lt;span style=&#34;background-color: #F2F5A9; color: black;&#34;&gt;本小节内容为 2020.03.24 更新. 超链接表示消息来源，都很值得看一看.&lt;/span&gt;&lt;/p&gt;
+&lt;div style=&#34;background-color: #F2F5A9; color: black;&#34;&gt;
+&lt;p&gt;本小节内容为 2020.03.24 更新，是本文干货区. 超链接表示消息来源，都值得点开看一看. 希望宣扬的一个理念是多读官方的用户手册（说明书），买之前就应该读.&lt;/div&gt;&lt;/p&gt;
 &lt;p&gt;对于 reMarkable 2 最好的材料是&lt;a href=&#34;https://support.remarkable.com/hc/en-us&#34;&gt;官网的支持页面&lt;/a&gt;，这里先来分清两个概念：reMarkable 2 和 reMarkable 2.0.&lt;/p&gt;
 &lt;p&gt;reMarkable 2 是指新一代电纸书机器本身，也就是现在正在官网预订，七月份会发货的那台机器，这台机器世界上还没有任何人拥有，我们对它的了解只能是官方的宣传资料. 它的前一代产品叫 reMarkable（现在为了区分也可以叫它 reMarkable 1），它们都是硬件，是设计完成后就不能更改的东西，我们对它们的调查集中在参数，也就是硬件的整体表现水平. 这里是 reMarkable 2 的官方宣传片的友情搬运：&lt;a href=&#34;https://www.bilibili.com/video/av97215911/&#34;&gt;bilibili | AV97215911&lt;/a&gt;. reMarkable 2 和 reMarkable 1 的参数对比见下表前两列：&lt;/p&gt;
 &lt;table&gt;
@@ -139,7 +140,7 @@
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td&gt;长宽高&lt;/td&gt;
+&lt;td&gt;尺寸&lt;/td&gt;
 &lt;td&gt;188 × 246 × 4.7 mm&lt;/td&gt;
 &lt;td&gt;177 × 256 × 6.7 mm&lt;/td&gt;
 &lt;td&gt;224 × 302.6 × 5.9 mm&lt;/td&gt;
@@ -178,7 +179,7 @@
 &lt;td&gt;内存&lt;/td&gt;
 &lt;td&gt;1 GB LPDDR3 SDRAM&lt;/td&gt;
 &lt;td&gt;512 MB DDR3L RAM&lt;/td&gt;
-&lt;td&gt;2GB LPDDR3&lt;/td&gt;
+&lt;td&gt;1 GB LPDDR3&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;处理器&lt;/td&gt;
@@ -190,7 +191,7 @@
 &lt;td&gt;电池&lt;/td&gt;
 &lt;td&gt;3000 mAh&lt;/td&gt;
 &lt;td&gt;3000 mAh&lt;/td&gt;
-&lt;td&gt;未找到&lt;/td&gt;
+&lt;td&gt;（没找到）&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;充电接口&lt;/td&gt;
@@ -199,16 +200,10 @@
 &lt;td&gt;（顶部居中）Micro USB (5V, 1.5A)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;顶部实体键&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://support.remarkable.com/hc/en-us/articles/360006701197&#34;&gt;顶部居左&lt;/a&gt;有一个电源键&lt;/td&gt;
-&lt;td&gt;顶部居中有一个电源键&lt;/td&gt;
-&lt;td&gt;顶部居中有一个电源键&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
 &lt;td&gt;实体键&lt;/td&gt;
-&lt;td&gt;下面有下巴，但看不清是否有实体键&lt;/td&gt;
-&lt;td&gt;下面有三个实体按键，分别是前一页、菜单、后一页&lt;/td&gt;
-&lt;td&gt;上面有一个菜单实体按键&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://support.remarkable.com/hc/en-us/articles/360006701197&#34;&gt;顶部居左&lt;/a&gt;有一个电源键，下面有下巴，但看不清下巴上是否有其他实体键&lt;/td&gt;
+&lt;td&gt;顶部居中有一个电源键，下面有下巴，下巴上有三个实体按键，分别是前一页、菜单、后一页&lt;/td&gt;
+&lt;td&gt;顶部居中有一个电源键，上面有额头，额头上一个菜单实体按键&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -253,7 +248,7 @@
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;span style=&#34;background-color: #F2F5A9; color: black;&#34;&gt;7&lt;/span&gt;. 因为屏幕小，不能并排阅读，不能并排做笔记（- 15 分）&lt;/td&gt;
-&lt;td&gt;&lt;span style=&#34;background-color: #F2F5A9; color: black;&#34;&gt;7&lt;/span&gt;. 文件有【文档】和【笔记】两种类型，【笔记】有【独立笔记】和【文档边注】两种类型，【文档边注】和【文档】一一对应，可以并排显示，边读边写；任何两种格式都可以并排阅读（【文档】和【文档】、【文档】和【笔记】、【笔记】和【笔记】），还能双联页显示一个文件&lt;/td&gt;
+&lt;td&gt;&lt;span style=&#34;background-color: #F2F5A9; color: black;&#34;&gt;7&lt;/span&gt;. 文件有【文档】和【笔记】两种类型，【笔记】有【独立笔记】和【文档边注】两种类型，【文档边注】和【文档】一一对应，可以并排显示，边读边写；任何两种格式（【文档】和【文档】、【文档】和【笔记】、【笔记】和【笔记】）都可以并排阅读；同一文件可以双联页显示&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;span style=&#34;background-color: #F2F5A9; color: black;&#34;&gt;8&lt;/span&gt;. （- 8 分）&lt;/td&gt;
