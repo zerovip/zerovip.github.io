@@ -179,7 +179,7 @@ if (!doNotTrack) {
             建站记
         </div>
         <div class="right_head_des">
-            2019-06-22 - 8431 字
+            2019-06-22 - 8694 字
         </div>
     </div>
 
@@ -370,6 +370,8 @@ file_path: name.pdf
 <p>注：2019 年 12 月 29 日我对所有的 CSS 进行了重写，使用了更为方便更为强大的 CSS3 技术，包括 flex 弹性盒子（主要参考的是<a href="https://www.ruanyifeng.com/blog/2015/07/flex-grammar.html">阮一峰, Flex 布局教程：语法篇</a>、<a href="https://www.ruanyifeng.com/blog/2015/07/flex-examples.html">阮一峰, Flex 布局教程：实例篇</a>）、transition 过渡动画以及 @media 多媒体查询，重新为小屏幕手机端写了新的 CSS，并做了响应式布局. 目前这个博客就更好看、更好用了——无论在电脑屏幕上还是手机屏幕上. 这里需要特别记录的一点是关于“视口”这个概念的理解，这篇<a href="https://www.zhihu.com/question/35221839/answer/66825618">知乎上的回答</a>解答了我和提问者同样的困惑. 同时，之前的两端对齐的排版被我取消了，因为实在是太丑了，我宁愿让右侧不对齐.</div></p>
 <div style="background-color: #F2F5A9; color: black;">
 <p>再注：新的 CSS 在奇葩的内核下显示不正常，波及了 QQ 浏览器、UC 浏览器等. 试着解决了一次，但终究找不到问题的根源——明明我用这些浏览器跑<a href="https://css3test.com">CSS3 测试</a>支持率很高，而且我用到的技术它都支持. 我懒得解决了，除非有人帮我定位一下问题，因为我 Linux 的生产环境没法装 QQ 浏览器，也不知道前端大佬们都是怎么测试的. 我的网站在 Firefox、Chrome 等浏览器上都显示得超级好，更何况这些问题就应该浏览器厂商解决，哪有留给前端解决的？留给我解决我就偏要留给用户解决. 要是所有前端都这么硬气，倒逼用户换成更现代的浏览器，我才不信浏览器厂商敢这么不作为. 反正我这个博客也没什么人看，就让用[显示不好的浏览器]的人不再来看我的博客好了. 补充于 2020 年 1 月 2 日.</div></p>
+<div style="background-color: #F2F5A9; color: black;">
+<p>再注：今天突然想起这件事，不死心又查了一下，发现了问题的关键是那些老旧的浏览器不支持 flex 的标准写法，得用它们各家浏览器自己的写法写一遍 flex 的 CSS 语句. 同时我还发现了一款为解决这个问题而生的工具：<a href="https://github.com/postcss/autoprefixer">Autoprefixer</a>，可以集成到 IDE 中使用，它有一个在线版本：<a href="https://autoprefixer.github.io/">Autoprefixer CSS online</a>，刚好就能自动帮我们把那些非标准的写法补齐，而且还可以选择<a href="https://browserl.ist/">支持浏览器的覆盖范围</a>，查询语法可以看<a href="https://github.com/browserslist/browserslist#queries">这里</a>. 这两个工具配合起来非常方便，分分钟解决了我的问题，我选择的是 last 4 version，可以支持 92.18% 的浏览器，这已经涵盖了各大主流浏览器了. 补充于 2020 年 4 月 10 日.</div></p>
 <h2 id="评论系统的支持">评论系统的支持</h2>
 <p>在这里我使用了以 GitHub issue 为工具的 <a href="https://utteranc.ce">utterances</a> 来生成评论，原理非常简单，配置也非常容易，按照其官网的说明简单操作即可. 本站的所有评论存储在<a href="https://github.com/zerovip/bcsu/issues">这里</a>.</p>
 <h2 id="自定义的-404-页面">自定义的 404 页面</h2>
@@ -428,7 +430,7 @@ file_path: name.pdf
 <li><del>把 head 中的标题改一下，在搜索引擎中显得好看一点</del>（已完成）</li>
 <li><del>list 中写 head 标题的方法过于暴力，需要简化</del>（不再考虑，不用太追求完美）</li>
 <li><del>首页最近文章</del>（已完成，显示 8 篇）</li>
-<li><del>QQ 浏览器、UC 浏览器等奇葩内核，&lt;p&gt; 完全消失以及各种 flex 显示不好的问题</del>（除非有人帮我定位问题）</li>
+<li><del>QQ 浏览器、UC 浏览器等奇葩内核下各种 flex 显示不好的问题</del>（已解决，见<a href="#%E8%B0%83%E6%95%B4%E6%A0%B7%E5%BC%8F">调整样式</a>一节的第三个加注.）</li>
 <li><del>国内加载速度太慢的问题</del>（不再考虑）</li>
 <li>PWA，觉得很有潜力的技术，有时间的话会首先尝试它.</li>
 <li>IPFS，不一定，有生之年试一下就好.</li>
