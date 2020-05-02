@@ -2139,6 +2139,8 @@ file_path: name.pdf
 &lt;p&gt;再注：新的 CSS 在奇葩的内核下显示不正常，波及了 QQ 浏览器、UC 浏览器等. 试着解决了一次，但终究找不到问题的根源——明明我用这些浏览器跑&lt;a href=&#34;https://css3test.com&#34;&gt;CSS3 测试&lt;/a&gt;支持率很高，而且我用到的技术它都支持. 我懒得解决了，除非有人帮我定位一下问题，因为我 Linux 的生产环境没法装 QQ 浏览器，也不知道前端大佬们都是怎么测试的. 我的网站在 Firefox、Chrome 等浏览器上都显示得超级好，更何况这些问题就应该浏览器厂商解决，哪有留给前端解决的？留给我解决我就偏要留给用户解决. 要是所有前端都这么硬气，倒逼用户换成更现代的浏览器，我才不信浏览器厂商敢这么不作为. 反正我这个博客也没什么人看，就让用[显示不好的浏览器]的人不再来看我的博客好了. 补充于 2020 年 1 月 2 日.&lt;/div&gt;&lt;/p&gt;
 &lt;div style=&#34;background-color: #F2F5A9; color: black;&#34;&gt;
 &lt;p&gt;再注：今天想起这件事，不死心又查了一下，怀疑是那些浏览器不支持 flex 的标准写法的缘故，于是找到这样一个解决此问题的工具：&lt;a href=&#34;https://github.com/postcss/autoprefixer&#34;&gt;Autoprefixer&lt;/a&gt;，可以集成到 IDE 中使用，它有一个在线版本：&lt;a href=&#34;https://autoprefixer.github.io/&#34;&gt;Autoprefixer CSS online&lt;/a&gt;，能自动帮我们把那些非标准的写法补齐，而且还可以选择&lt;a href=&#34;https://browserl.ist/&#34;&gt;支持浏览器的覆盖范围&lt;/a&gt;，查询语法可以看&lt;a href=&#34;https://github.com/browserslist/browserslist#queries&#34;&gt;这里&lt;/a&gt;. 这两个工具配合起来非常方便，我选择 last 4 version（可以支持 92.18% 的浏览器）试了一下，还是没有解决问题. 补充于 2020 年 4 月 10 日.&lt;/div&gt;&lt;/p&gt;
+&lt;div style=&#34;background-color: #F2F5A9; color: black;&#34;&gt;
+&lt;p&gt;再注：还是不死心，到思否论坛上问了一下，然后在一个关键提示下，顺利找到问题并解决. 问题的根源在于 QQ 浏览器看到 flex 容器写着 &lt;code&gt;height: 100vh&lt;/code&gt; 就想要帮我在一个屏幕高度内塞下所有 flex 项目，解决的办法是把 &lt;code&gt;flex-shrink&lt;/code&gt; 调整到 0. 详见&lt;a href=&#34;https://segmentfault.com/q/1010000022523106&#34;&gt;思否论坛的这个帖子&lt;/a&gt;. 补充于 2020 年 5 月 2 日.&lt;/div&gt;&lt;/p&gt;
 &lt;h2 id=&#34;评论系统的支持&#34;&gt;评论系统的支持&lt;/h2&gt;
 &lt;p&gt;在这里我使用了以 GitHub issue 为工具的 &lt;a href=&#34;https://utteranc.ce&#34;&gt;utterances&lt;/a&gt; 来生成评论，原理非常简单，配置也非常容易，按照其官网的说明简单操作即可. 本站的所有评论存储在&lt;a href=&#34;https://github.com/zerovip/bcsu/issues&#34;&gt;这里&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;自定义的-404-页面&#34;&gt;自定义的 404 页面&lt;/h2&gt;
@@ -2197,7 +2199,7 @@ file_path: name.pdf
 &lt;li&gt;&lt;del&gt;把 head 中的标题改一下，在搜索引擎中显得好看一点&lt;/del&gt;（已完成）&lt;/li&gt;
 &lt;li&gt;&lt;del&gt;list 中写 head 标题的方法过于暴力，需要简化&lt;/del&gt;（不再考虑，不用太追求完美）&lt;/li&gt;
 &lt;li&gt;&lt;del&gt;首页最近文章&lt;/del&gt;（已完成，显示 8 篇）&lt;/li&gt;
-&lt;li&gt;&lt;del&gt;QQ 浏览器、UC 浏览器等奇葩内核，&amp;lt;p&amp;gt; 完全消失的问题&lt;/del&gt;（除非有人帮我定位问题）&lt;/li&gt;
+&lt;li&gt;&lt;del&gt;QQ 浏览器、UC 浏览器等奇葩内核，&amp;lt;p&amp;gt; 完全消失的问题&lt;/del&gt;（已解决，问题的分析与解决办法见&lt;a href=&#34;#%E8%B0%83%E6%95%B4%E6%A0%B7%E5%BC%8F&#34;&gt;调整样式&lt;/a&gt;一节的最后一个注.）&lt;/li&gt;
 &lt;li&gt;&lt;del&gt;国内加载速度太慢的问题&lt;/del&gt;（不再考虑）&lt;/li&gt;
 &lt;li&gt;PWA，觉得很有潜力的技术，有时间的话会首先尝试它.&lt;/li&gt;
 &lt;li&gt;IPFS，不一定，有生之年试一下就好.&lt;/li&gt;
