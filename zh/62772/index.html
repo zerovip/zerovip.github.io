@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=divice-width, initial-scale=1.0" name="viewport"/>
-<meta content="Hugo 0.69.1" name="generator"/>
+<meta content="Hugo 0.73.0" name="generator"/>
 <title>
         
     静态博客文章加密工具测试
@@ -108,7 +108,7 @@ if (!doNotTrack) {
             静态博客文章加密工具测试
         </div>
 <div class="right_head_des">
-            2019-12-23 - 808 字
+            2019-12-23 - 646 字
         </div>
 </div>
 <div class="right_main">
@@ -118,68 +118,16 @@ if (!doNotTrack) {
 <p><a href="https://github.com/Li4n0/hugo_encryptor">Hugo encryptor</a> 是一款我偶然发现的可以给静态博客文章进行加密的小工具，配置使用很简单，可惜的是不能在本地测试.</p>
 <p>不过它足够简单，一经测试成功可以投入使用便不再需要反复测试，因此这篇博文是专门用来测试的.</p>
 <p>下面加密内容的密码是【PASS3word】. 这部分内容在 RSS 中没有被加密，在<a href="../../zh/non-math/memos/index.xml">“备忘分区”的 RSS</a> 中可以找到加密的内容.</p>
-<hugo-encryptor>
-<p>以下内容被密码保护</p>
-<div class="hugo-encryptor-form">
-<input class="hugo-encryptor-input" id="hugo-encryptor-password" placeholder="请输入密码"/>
-<input class="hugo-encryptor-button" onclick="hugoDecrypt(CryptoJS.MD5(document.getElementById('hugo-encryptor-password').value).toString(),'input')" type="button" value="提交"/>
+<div class="hugo-encryptor-container">
+<div class="hugo-encryptor-prompt">
+<p>文章的部分内容被密码保护：</p>
 </div>
-<cipher-text style="display:none;">eknMpJavDcGyIr7rL0O+sl8YsxauWb1yMEzPYejDh1itha/mdlUu3liPWUF1Fq53rPA/z/0eJPFXShGq/CXG+/+meyTB/HaGYTzZkaUBrlDzqeiagv1YShri0uDsekK84EK5kl8FAFa23QzxI9RFtT8cgUPzTrGlIw06NxBVyqe02Or5h4WIN33hZD5oShbqPahaibZdrRkeqltlynVWV/LKj8qEFzzgwcRvHlVaBTdwjD+/+uH8UJueenPUoQoSfeo6RbLUp98AaitQzhDqljPA8nNjOPXs6aepfZtJMLe7g9c2J4RjX/pXuKkCIZt+Il16lW22q9dI6m6YpWbYfZhrHHZeYbi9trQGFyCvteEF4l9mjHD7kaLXG1srRhFpldxzhJjzuaTu/XJKua35e+MMKjmxirwB7CcqOt73EE1fFcMLup8f8758spJrqFKbbctv9tKOefAmE22AObVbrlPFct1XKyGY5mH+FsGMTUrRnaoDZoo4vmu3MkzUSXSARRLG35jnwbMX9x2tC7QxOkH7LIlWtUnHWQyQgInaV900cHg6APH9E91K3aICTZLMKlGLZmrvgRRz7jpE5TQ/zXWJfHK23ILUvXEYocJ52KRf1Fo9FUBs5vEr+sdcFRPWJes42xEryMzGvopZjO8vFdKZQ5hijpBXEKtp+vgVMZ+Nrux/L5Gw6VtL4+zMOA+c2g7lMZDLsYy0JojoGMji0nCl9ivcbM2jk8ej3BrE995rolOPXR8AQbtMpC1BIl26SSTFhfR3slKliy009izeUM2XWUDIvfsW1D55HIbo8R8cNxDDht5uvG2pMBvwi1NeAb3Zq6FnEkPqLt7hBla4cABEJc0RLmvGtJdpKaIFsECPUCTJlXquhXR+EfYkTjGAwU+ak1BTw+3ZIYnemMlYzxB7qNzblNHwwc0PlC/BJRSqE0sk9N48q86dw+qBHtf9ZriQFX567ET2L1pcBHvFHGizdadek6eTs5wd7cuCfV7qo6r5xJ6T9NJirgg32AnKk796oLPivBNuiBgA0WqY/ZpB7IJAlDAWOZmrYmPmh4VyG1VWDo5OS+mTVm5qu3Ra32AJ+gThiOeHgW6ytfbiY/IumzDOu4n+5kr7kejGb5+d0ZFoxIyfdYSIUFIKaf8N/+PkLnvBJhWBoQaYVcG0Cx/kk08bBBmgNsC/ENzapxfzKSuMlveAXF7ioawr1xqcWBJg24NP7VXrfMDtozO2PyxpffOMTTS9tEVXVXRGVmCS7M/n2fJZYpH7YaptK5jb6Vu6clBZutjVGbCJNTncAeqoFGL5x/QnuTV6ajc57Hsdh9noJq7tdVwJWAxBE43LO45wqyqUYW6dGAC2ZEFKhiJrqfVmE2vB1Po9/cXNXxaQ+Fat7v3NjUZvltFIAZ7YQL0eN6+52i05RPCLFoIecyGDySkFtPBJ4cRtZ87tcds=</cipher-text>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
-<script>
-      let cipher = document.getElementsByTagName("cipher-text")[0];
-      const storageKey = location.pathname + "password";
-      const userStorage =  window['sessionStorage'] ;
-      
-
-      const decrypt = function(cipher_text, password) {
-        let key = CryptoJS.enc.Utf8.parse(password);
-        let iv = CryptoJS.enc.Utf8.parse(password.substr(16));
-
-        let decryptedData = CryptoJS.AES.decrypt(cipher_text, key, {
-          iv: iv,
-          mode: CryptoJS.mode.CBC,
-          padding: CryptoJS.pad.Pkcs7
-        });
-        return decryptedData.toString(CryptoJS.enc.Utf8);
-      };
-      
-
-      const hugoDecrypt = function(password, type) {
-        try {
-          let cipher_text = cipher.innerText;
-          let decrypted_text = decrypt(cipher_text, password);
-          if (
-            decrypted_text.includes("The quick brown fox jumps over the lazy dog")
-          ) {
-            cipher.parentElement.outerHTML = decrypted_text;
-            userStorage.setItem(storageKey, password);
-            document.getElementById("verifyText").outerHTML = "";
-          } else {
-            if (type === "input") {
-              alert('密码错误');
-            } else if (type === "storage") {
-              userStorage.removeItem(storageKey);
-            }
-          }
-        } catch (error) {
-          
-          if (type === "input") {
-            alert('密码错误');
-          } else if (type === "storage") {
-            userStorage.removeItem(location.pathname + "password");
-          }
-        }
-      };
-  </script>
-<script>
-    window.onload = () => {
-      if (userStorage.getItem(storageKey)) {
-        hugoDecrypt(userStorage.getItem(storageKey), "storage");
-      }
-    };
-  </script>
-</hugo-encryptor>
+<div class="hugo-encryptor-form">
+<input class="hugo-encryptor-input" placeholder="请输入密码"/>
+<input class="hugo-encryptor-button" onclick="_click_handler(this)" type="button" value="点击验证"/>
+</div>
+<div class="hugo-encryptor-cipher-text" style="display: none;">1sTAWk8iLi6v1prmG97gwjSbRK+XFLv7bmLy+mv8wbLTIRFG7Y3mg2uAeTy7jlNPoNkJGZtHq4dGNMk0RgMAGp0cpB1nfZcJXnHnPOeMvQOEpQMhwqFnVWVz2jzY5q8jckfOrack93PZYUyrPkJPikWprTh5izcjK87H8Z18ulB22whCBBPtdNBsiRXurKRx45GWBGbrqgLYKfnKQ2OqEWv0XJ2wENcdztUrmcL5ggYkjyJqiArhS7wjvd3PcI8PfIKg/77V3jRMzEiFhwJoZBcRrqZVkMr9qGvtQ4ujULQ3vYN/1pNbi8++cOdgbbgXeRGac6CpP0Scd335fTqXng5AL46W1LNtLvXbIyYiv9K4OQZWn/U5/6HoEoOsGpirM3FBRf2O67FvDKxEXIhqzZ9d8jWQ6rIDo7Djkv0q0FyRbIJbr070Nf8h5IqB5nCODF4ZhRteMXeX/7m2+EbkhDFwRvCJMTyfjNnDjMpJBLtv/4niQHKhspGH5WGCgSjMIB1UsW1+FMkV1N18FE0jF/JrJzNatz8/ZU4MO2mI3APMuWOgQ4eWCWwxx0rqIf4dCbLQftvFjKZ8NmRcTxctn1JiNfw/3Bjv9Gymdqxdyj2hHIc8NDGY+fdzANVWQeR1nHkwSrxyEz2E7AY7McmIPtc9WOdfCe4jvOV9osKxAcVgAZuxHccec3PBI0WIT+2NaCp7Am7ekyOONzM3RUSpydct3P5GU6zLCw/etLP1cQmYxnxdDIyBG6mH+lt7N9JKfFp5mCK+Wzzpzc+iSwPK0rK/3KqLhm/xCpWghCNndFSHxfTH+VBaDik4bE6Rslf4NjYrhmzqy0MGYt/+5QIrloteVwVwMW10t6Oq6IKwTmlNbrLG4CLf3CwLG5NlGZvQep7J3NAy7EZwqPQWN8pEp1FFzfPx7Pn3/cHewdNN5W0uY0Aw9wMKWANHcg1zswX0xiubWrD2JUawbI4cEwmsUApT1Tjki3g8MYy8doosSYwh+DmxtlEGC8Jb9K0LzONRFt3DkR/ehuEpAUGl1Y5PAoM3Caz4aAziMihsSOv/iKf7yrYPIukyXI/ZD529m/wuqQrRL5kPrHFUXhcKItKNcKyaz1klcwfuPS4gsT0H1hgWhXIUPbZ0C5XyhyCWX/HM1T3qwRPgfZE1DT5BQGp4ti/v+0F+hYCgB6X0q/KLyixpOzQm3EKDZ1W5QSgeyPqrUmAtiCw8Uc+O8JdL4BZujik8YdJvGIc70cNJ/tyKu9FuA95uSD/Nh3ytXfQpLKGcPWlzM4rBkANorVtXnhmvNr7BbXlWvJpyRpwwdcyjyAwmHet+rGN93pujPeejEtMt/nVww30bGdDujK+FEAPUH16+tzqPfSJqtQ44xspRrhfgbC1GrHHuyU7dpNHCJOn7</div>
+</div>
 <h2 id="未被加密的标题">未被加密的标题</h2>
 <p>在解密前这里的序号是1.1，解密后这里的序号是3.4.</p>
 <h1 id="未被加密的一级标题">未被加密的一级标题</h1>
@@ -217,5 +165,79 @@ if (!doNotTrack) {
 </div>
 </div>
 </div>
-</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script><script>
+const _do_decrypt = function(encrypted, password) {
+  let key = CryptoJS.enc.Utf8.parse(password);
+  let iv = CryptoJS.enc.Utf8.parse(password.substr(16));
+
+  let decrypted_data = CryptoJS.AES.decrypt(encrypted, key, {
+    iv: iv,
+    mode: CryptoJS.mode.CBC,
+    padding: CryptoJS.pad.Pkcs7
+  });
+  return decrypted_data.toString(CryptoJS.enc.Utf8);
+};
+
+const _click_handler = function(element) {
+  let parent = element.parentNode.parentNode;
+  let encrypted = parent.querySelector(
+    ".hugo-encryptor-cipher-text").innerText;
+  let password = parent.querySelector(
+    ".hugo-encryptor-input").value;
+  password = CryptoJS.MD5(password).toString();
+
+  let index = -1;
+  let elements = document.querySelectorAll(
+    ".hugo-encryptor-container");
+  for (index = 0; index < elements.length; ++index) {
+    if (elements[index].isSameNode(parent)) {
+      break;
+    }
+  }
+
+  let decrypted = "";
+  try {
+    decrypted = _do_decrypt(encrypted, password);
+  } catch (err) {
+    console.error(err);
+    alert("Failed to decrypt.");
+    return;
+  }
+
+  if (!decrypted.includes("--- DON'T MODIFY THIS LINE ---")) {
+    alert("Incorrect password.");
+    return;
+  }
+
+  let storage = localStorage;
+
+  let key = location.pathname + ".password." + index;
+  storage.setItem(key, password);
+  parent.innerHTML = decrypted;
+}
+
+window.onload = () => {
+  let index = -1;
+  let elements = document.querySelectorAll(
+    ".hugo-encryptor-container");
+
+  while (1) {
+    ++index;
+
+    let key = location.pathname + ".password." + index;
+    let password = localStorage.getItem(key);
+
+    if (!password) {
+      break;
+
+    } else {
+      console.log("Found password for part " + index);
+
+      let parent = elements[index];
+      let encrypted = parent.querySelector(".hugo-encryptor-cipher-text").innerText;
+      let decrypted = _do_decrypt(encrypted, password);
+      elements[index].innerHTML = decrypted;
+    }
+  }
+};</script></body>
 </html>
