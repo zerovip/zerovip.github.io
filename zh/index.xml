@@ -1893,9 +1893,11 @@ If you  kick the can down the road, you delay a decision in hopes that the probl
 &lt;p&gt;这个部分为一些与网络关系不大的电子生活的生活方式的整理，包括做哪类事情用什么软件，怎么使用那个软件，形成文字以避免功能上的交叉重叠，也方便因为意外更换电子设备时常用环境的快速搭建.&lt;/p&gt;
 &lt;h2 id=&#34;系统&#34;&gt;系统&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;&lt;span style=&#34;color: black;&#34;&gt;主要使用的计算机操作系统：Manjaro&lt;/span&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;span style=&#34;color: black;&#34;&gt;主要使用的计算机操作系统：&lt;del&gt;Manjaro&lt;/del&gt; Arch Linux&lt;/span&gt;&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;我是一个有系统洁癖的人，不仅希望能永远首先用上最新版本的软件，同时还希望我的计算机完完全全在我的掌控之下，我希望自己知道自己的每一个操作都是在干什么. &lt;small&gt;更一般地讲，我在生活上也是一个希望清楚地知道发生了什么的人.&lt;/small&gt; 然而想要知道得越多，就需要额外花费越多的时间和精力，我的生活的本质就是在这个矛盾之间寻找一个平衡. 在系统的选择问题上，本来选择的是 &lt;a href=&#34;https://www.archlinux.org/&#34;&gt;Arch Linux&lt;/a&gt;，但其繁琐的驱动问题使得我退而求其次，选择了 &lt;a href=&#34;https://www.manjaro.org/&#34;&gt;Manjaro&lt;/a&gt;. 这是 DEY 学长在 2017 年 3 月推荐给我的，从此我一直在用，以后也会一直主要使用. 自我使用以来，自己写了非常多的各种软件的配置文件以及一些脚本，它们被我备份在 &lt;a href=&#34;https://github.com/zerovip/backup&#34;&gt;GitHub 仓库里&lt;/a&gt;以防出现意外后可以快速恢复出一个一模一样的环境.&lt;/p&gt;
+&lt;div style=&#34;background-color: #F2F5A9; color: black;&#34;&gt;
+&lt;p&gt;2020 年 6 月更新：已从 Manjaro 更换为 Arch Linux.&lt;/div&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;&lt;span style=&#34;color: black;&#34;&gt;次要使用的计算机操作系统：Windows&lt;/span&gt;&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
