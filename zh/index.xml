@@ -2331,6 +2331,28 @@ file_path: name.pdf
 &lt;p&gt;最开始只用了 Google Analytics，没什么难的，本身 Hugo 就支持，只要在配置文件里把 Google Analytics 的代号写进去，有一个现成的语句片段可以用. 唯一要注意的是要用&lt;code&gt;{{ if not .Site.IsServer }}&lt;/code&gt;判断一下别把本地测试的也统计进去就行了.&lt;/p&gt;
 &lt;p&gt;2020 年 3 月 6 日我听说了一个新的开源统计工具：&lt;a href=&#34;https://www.goatcounter.com/&#34;&gt;Goat Counter&lt;/a&gt;，使用非常简单，我也马上就把它加进来了.&lt;/p&gt;
 &lt;p&gt;&lt;span style=&#34;background-color: #F2F5A9; color: black;&#34;&gt;这一小节补充于 2020 年 3 月 6 日.&lt;/span&gt;&lt;/p&gt;
+&lt;h2 id=&#34;同栏目下的文章互链&#34;&gt;同栏目下的文章互链&lt;/h2&gt;
+&lt;p&gt;我的博客站是有一些栏目的，比如目前就有“21 世纪的定理”、“消费指南”、“语言表达法”这三个栏目，栏目是一个希望自己持续更新的而且可以经常写的同类型题材的一类文章的集合，在这类文章的最后我想要放一个“友情链接”的部分，把同栏目下的其他文章进行汇总给出链接，方便读者在同一个栏目下进行跳转阅读. 之前文章比较少，就凑合着手动去添加，倒也费不了太多事，但最近“语言表达法”那个栏目的文章多了起来，就一直想写一个自动添加友情链接的功能.&lt;/p&gt;
+&lt;p&gt;最开始是想着用 Hugo 自带的分类功能，即那个 Taxonomy 的，我因为不需要 Tag、Category 等就把它禁掉了，见下面的第三个注释&lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;，现在觉得可以自己定义一个简单的 column 项，参考&lt;a href=&#34;https://gohugo.io/templates/taxonomy-templates/#list-content-with-the-same-taxonomy-term&#34;&gt;这里&lt;/a&gt;试着写了一下，就是在配置文件 &lt;code&gt;config.yaml&lt;/code&gt; 里写上一个新的 taxonomy，用冒号分隔单数与复数，然后在文章里的 front matter 部分使用，发现并没有出现我想象中的效果. 它那个 &lt;code&gt;.golang&lt;/code&gt; 我是实在搞不清楚是怎么回事，而且还不能在 &lt;code&gt;disableKind&lt;/code&gt; 里把这东西加上，因为一旦加上就完全不能用这个功能，而不加上又会生成单独的 taxonomy 页面. 于是就自己写，好在功能简单，很快就写出来了，前面计数的部分参考了&lt;a href=&#34;https://discourse.gohugo.io/t/how-counting-up-a-variable-in-range/586/8&#34;&gt;这个讨论&lt;/a&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;!-- themes/zero/layouts/_default/single.html --&amp;gt;
+&amp;lt;!-- 下面是友情链接部分 --&amp;gt;
+{{ if isset .Params &amp;quot;column&amp;quot; }}
+    &amp;lt;h1&amp;gt;友情链接&amp;lt;/h1&amp;gt;
+    {{ $currentNode := . }}
+    {{ $.Scratch.Set &amp;quot;counter&amp;quot; 1 }}
+    {{ range .Site.Pages.ByDate }}
+        {{ if eq .Params.column $currentNode.Params.column }}
+            {{ if eq . $currentNode }}
+                &amp;lt;li&amp;gt; 第 {{$.Scratch.Get &amp;quot;counter&amp;quot;}} 期：{{ .Title }}（就是这篇！）&amp;lt;/li&amp;gt;
+            {{ else }}
+                &amp;lt;li&amp;gt; 第 {{$.Scratch.Get &amp;quot;counter&amp;quot;}} 期：&amp;lt;a href=&amp;quot;{{ .Permalink }}&amp;quot;&amp;gt;{{ .Title }}&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+            {{ end }}
+            {{ $.Scratch.Set &amp;quot;counter&amp;quot; (add ($.Scratch.Get &amp;quot;counter&amp;quot;) 1) }}
+        {{ end }}
+    {{ end }}
+{{ end }}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;最后把中文的内容翻译翻译写成 &lt;code&gt;{{ i18n &amp;quot;xxx&amp;quot; }}&lt;/code&gt; 的形式就可以了.&lt;/p&gt;
+&lt;p&gt;&lt;span style=&#34;background-color: #F2F5A9; color: black;&#34;&gt;这一小节补充于 2020 年 7 月 29 日.&lt;/span&gt;&lt;/p&gt;
 &lt;h1 id=&#34;部署&#34;&gt;部署&lt;/h1&gt;
 &lt;h2 id=&#34;github-pages&#34;&gt;GitHub Pages&lt;/h2&gt;
 &lt;p&gt;按照&lt;a href=&#34;https://gohugo.io/hosting-and-deployment/hosting-on-github/&#34;&gt;官方文档&lt;/a&gt;进行部署，因为是个人博客，我用的是&lt;a href=&#34;https://gohugo.io/hosting-and-deployment/hosting-on-github/#github-user-or-organization-pages&#34;&gt;第一种 User/Organization Pages 类型&lt;/a&gt;. 操作也都极为简单，不再赘述. 如果遇到已经部署好了却打不开的情况可以尝试重新 push 一下.&lt;/p&gt;
@@ -2373,7 +2395,7 @@ file_path: name.pdf
 &lt;li&gt;Zero Net，Ditto.&lt;/li&gt;
 &lt;li&gt;InstantClick，Ditto.&lt;/li&gt;
 &lt;li&gt;CSS 颜色写成变量 (variables) 形式，重新配色，方便第 6 条黑暗模式重启.&lt;/li&gt;
-&lt;li&gt;用 hugo templates 把相同栏目的文章互链重新写一下.&lt;/li&gt;
+&lt;li&gt;&lt;del&gt;用 hugo templates 把相同栏目的文章互链重新写一下.&lt;/del&gt;（已完成，但没有使用 templates. 见&lt;a href=&#34;#%E5%90%8C%E6%A0%8F%E7%9B%AE%E4%B8%8B%E7%9A%84%E6%96%87%E7%AB%A0%E4%BA%92%E9%93%BE&#34;&gt;同栏目下的文章互链&lt;/a&gt;这一小节.）&lt;/li&gt;
 &lt;/ol&gt;
 &lt;section class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
 &lt;hr&gt;
