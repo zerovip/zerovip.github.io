@@ -57,9 +57,13 @@ if (!doNotTrack) {
 <div class="left_non-footer_option">
 <li><br/></li>
 <li><br/></li>
-<li><a href="../../../zh/about/site/">简体中文●</a></li>
-<li><a href="../../../en/about/site/">English●</a></li>
-<li><a href="../../../fr/about/site/">Français●</a></li>
+<li class="left_non-footer_option_active">简体中文 ⦿ </li>
+<li class="left_non-footer_option_non-active">
+<a href="../../../en/about/site/">English ○ </a>
+</li>
+<li class="left_non-footer_option_non-active">
+<a href="../../../fr/about/site/">Français ○ </a>
+</li>
 </div>
 <div class="left_non-footer_head">
 <div class="left_non-footer_head_title"><a href="../../../zh/">赤赤的象牙塔</a></div>
@@ -108,7 +112,7 @@ if (!doNotTrack) {
             关于本站
         </div>
 <div class="right_head_des">
-            2019-01-01 - 1825 字
+            2019-01-01 - 1978 字
         </div>
 </div>
 <div class="right_main">
@@ -138,16 +142,17 @@ if (!doNotTrack) {
 <p>您可以在<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">这里</a>阅读上述协议概要并查看其中某些语句的具体含义. 该协议的具体法律条款请参阅<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode">这里</a>.</p>
 <h1 id="语言">语言</h1>
 <p>本站支持中英法三语，默认语言为中文. 博客设计与建设时的原意是计划每篇文章都做三语翻译，使得同样的内容可以通过不同语言读到. 但建站完成投入使用后发现，我个人时间有限，学习任务繁重，且法语还不能自由使用，当初的设想过于不切实际. 所以未来很长一段时间内本站的文章将基本不会有多语种翻译. 数学区的内容会以中文或英文书写，非数学区的内容会主要以中文书写.</p>
-<p>不过，我会保证以其他语言写成的文章即便不做中文翻译也会在中文区把题目翻译出来并给出链接，使得中文区列出的所有文章即是本站发表的所有文章.</p>
+<p>不过，我会保证以其他语言写成的文章即便不做中文翻译也会在中文区把题目翻译出来并给出链接，使得中文区列出的所有文章即是本站发表的所有文章，切实巩固中文作为本站默认语言的地位.</p>
+<p>在任何页面下都可以在[左边栏的右上角选项部分]查看[该页面的各语种翻译情况]并进行跳转，其中 ⦿ 为当前页面的语言，○ 为[可以跳转的][对当前页面进行翻译了的]语言，⨂ 为[还没有对当前页面进行翻译]的语言.</p>
 <h1 id="评论">评论</h1>
 <p>本站的文章支持评论，且各个语言板块下的评论不共享，即便是同一篇文章的不同语言. 因此在您评论时请注意使用当前页面的语言. 在这里我使用了以 GitHub issue 为工具的 <a href="https://utteranc.es">utterances</a> 作为评论系统，因此需要您登录 GitHub 帐号并授予写 issue 的权限给 utterances 机器人. 如果您不愿意授权，只需到<a href="https://github.com/zerovip/bcsu/issues">这里</a>建立以文章 path 为标题的 issue 并评论，或在已有的以文章 path 为标题的 issue 下评论即可.</p>
 <p>例如，这篇文章的网址是 <code>https://zerovip.github.io/zh/about/site/</code>，则这篇文章的 path 为 <code>zh/about/site/</code>，即去掉前面的 <code>https://zerovip.github.io/</code>.</p>
-<p>如果您没有 GitHub 账户，您可以<a href="https://github.com/join">免费注册一个</a>；若您不愿意注册，也可以给我发邮件（<span style="background-color: #F2F5A9; color: black;">zer0zero-blog [AT] yahoo [DOT] com</span> 或 <span style="background-color: #F2F5A9; color: black;">zer0zero [AT] sina [DOT] cn</span>）进行交流.</p>
+<p>如果您没有 GitHub 账户，您可以<a href="https://github.com/join">免费注册一个</a>；若您不愿意注册，也可以给我发邮件（<span style="background-color: #F2F5A9; color: black;">zer0zero-blog [AT] yahoo [DOT] com</span> 或 <span style="background-color: #F2F5A9; color: black;">zer0zero [AT] sina [DOT] cn</span>）进行交流. 如果希望与我进行加密的邮件交流，请到<a href="../../../zh/about/me/">关于我</a>页面查看我的公钥.</p>
 <h1 id="订阅">订阅</h1>
-<p>本站支持 RSS 2.0，您可以订阅任意一个列表，只需在左边栏点击想订阅的列表进入，再点击左边栏右上角的“RSS 订阅”即可.</p>
+<p>本站支持 RSS 2.0，您可以订阅<strong>任意</strong>一个列表，只需在左边栏点击想订阅的列表，进入分区后，再点击左边栏右上角的“RSS 订阅”即可.</p>
 <h1 id="技术">技术</h1>
 <p>本站为静态博客，由 Hugo 生成，部署在 GitHub Pages 上. 有关建站的技术细节请参考我的文章：<a href="../../../zh/18284">建站记</a>.</p>
-<p>本站特意把一切资源（网站样式、文章、评论、图床）都托管在 Github 上，且不另设域名，为的是方便统一管理，不用对不同的组件操不同的心. 为了照顾 Github 有时被中国大陆地区的防火墙限制的情况发生，又单独部署了一份在 Netlify 上，但其中的评论与图床依旧是 Github 上的——所以无论如何，访问本站的体验都与访问 Github 的体验息息相关，而访问 Github 体验的问题还需要读者自行解决.</p>
+<p>本站特意把一切资源（网站样式、文章、评论、图床）都托管在 GitHub 上，且不另设域名，为的是方便统一管理，不用对不同的组件操不同的心. 为了照顾 GitHub 有时被中国大陆地区的防火墙限制的情况发生，又单独部署了一份在 Netlify 上，但其中的评论与图床依旧是 GitHub 上的——所以无论如何，访问本站的体验都与访问 GitHub 的体验息息相关，而访问 Github 体验的问题还需要读者自行解决.</p>
 <p></p><p></p><p></p><p></p>
 </div>
 </div>
