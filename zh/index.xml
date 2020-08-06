@@ -2210,112 +2210,112 @@ content/
 |-- section2
 |   |-- _index.md
 &#39;   &#39;-- _index.en.md
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;方法一——在配置文件里写：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;# config.yaml
-defaultContentLanguage: zh # 默认语言是中文
-defaultContentLanguageInSubdir: true # 所以下面的 url 里即便是默认的中文也带着/zh/
-menu:
-  main:
-    - url: /zh/section1/ # 和目录名字一致
-      identifier: s1 # 给下面的 children 确定 parent 用
-      name: 第一部分 # 可以不同语言用不同的名字
-      weight: 1 # 排序用
-    - url: /zh/section2/
-      identifier: s2
-      name: 第二部分
-      weight: 2
-    - url: /zh/section1/section11/
-      identifier: s11
-      parent: s1 # parent 的 identifier
-      name: 第一部分第一小节
-      weight: 1
-    
-languages:
-  zh:
-    languageCode: zh-cn
-    languageName: 简体中文
-    title: 网站名
-    weight: 1
-  en:
-    languageCode: en-us
-    languageName: English
-    title: Site&#39;s Name
-    weight: 2
-    menu:
-      main:
-        - url: /en/section1/
-          identifier: s1
-          name: SECTION I
-          weight: 1
-        - url: /en/section2/
-          identifier: s2
-          name: SECTION II
-          weight: 2
-        - url: /en/section1/section11/
-          identifier: s11
-          parent: s1
-          name: SECTION I PART I
-          weight: 1
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;方法二——在 front matter 里写：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;# config.yaml
-defaultContentLanguage: zh
-defaultContentLanguageInSubdir: true
-languages:
-  zh:
-    languageCode: zh-cn
-    languageName: 简体中文
-    title: 网站名
-    weight: 1
-  en:
-    languageCode: en-us
-    languageName: English
-    title: Site&#39;s Name
-    weight: 2
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;# /content/section1/_index.md
----
-menu:
-  main:
-    # 不用写 url 了
-    identifier: s1
-    name: 第一部分
-    weight: 1
----
-可写一些内容
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;# /content/section1/_index.en.md
----
-menu:
-  main:
-    # 不用写明语言了
-    identifier: s1
-    name: SECTION I
-    weight: 1
----
-Optional content here
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;# /content/section1/section11/_index.md
----
-menu:
-  main:
-      identifier: s11
-      parent: s1
-      name: 第一部分第一小节
-      weight: 1
----
-可写一些内容
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;因为我想做一个支持中英法三语的博客，而把 Menu Entry 的配置写在那么多分散的文件里显然是过于麻烦而又不好管理，所以一开始在这里我毫不犹豫地选择了方法一——在配置文件中写. 然而，后来在做一级 section 的 list 的时候，我却找不到办法完成这件事，因为筛选文章、排序文章这种事都是 Page 对象的方法，确定 section 却是 Menu Entry 对象做的，然而在所有的 &lt;a href=&#34;https://gohugo.io/variables/menus/&#34;&gt;Menu Entry 方法&lt;/a&gt;中，只有 &lt;code&gt;.Page&lt;/code&gt; 是唯一可以把 Menu Entry 对象转化为 Page 对象的方法——可是它上面赫然写着（至少截至到2019-06-25）：&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;方法 1——在配置文件里写：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;c&#34;&gt;# config.yaml&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;defaultContentLanguage&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;zh&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# 默认语言是中文&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;defaultContentLanguageInSubdir&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# 所以下面的 url 里即便是默认的中文也带着/zh/&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;menu&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;- &lt;span class=&#34;k&#34;&gt;url&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;/zh/section1/&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# 和目录名字一致&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;identifier&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;s1&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# 给下面的 children 确定 parent 用&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;第一部分&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# 可以不同语言用不同的名字&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;weight&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# 排序用&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;- &lt;span class=&#34;k&#34;&gt;url&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;/zh/section2/&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;identifier&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;s2&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;第二部分&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;weight&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;- &lt;span class=&#34;k&#34;&gt;url&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;/zh/section1/section11/&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;identifier&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;s11&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;parent&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;s1&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# parent 的 identifier&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;第一部分第一小节&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;weight&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;    
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;languages&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;zh&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;languageCode&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;zh-cn&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;languageName&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;简体中文&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;title&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;网站名&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;weight&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;en&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;languageCode&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;en-us&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;languageName&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;English&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;title&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;Site&amp;#39;s&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;Name&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;weight&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;menu&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;- &lt;span class=&#34;k&#34;&gt;url&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;/en/section1/&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;          &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;identifier&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;s1&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;          &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;SECTION&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;I&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;          &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;weight&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;- &lt;span class=&#34;k&#34;&gt;url&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;/en/section2/&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;          &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;identifier&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;s2&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;          &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;SECTION&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;II&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;          &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;weight&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;- &lt;span class=&#34;k&#34;&gt;url&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;/en/section1/section11/&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;          &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;identifier&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;s11&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;          &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;parent&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;s1&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;          &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;SECTION&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;I&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;PART&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;I&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;          &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;weight&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;方法 2——在 front matter 里写：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;c&#34;&gt;# config.yaml&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;defaultContentLanguage&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;zh&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;defaultContentLanguageInSubdir&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;languages&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;zh&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;languageCode&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;zh-cn&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;languageName&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;简体中文&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;title&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;网站名&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;weight&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;en&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;languageCode&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;en-us&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;languageName&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;English&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;title&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;Site&amp;#39;s&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;Name&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;weight&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;c&#34;&gt;# /content/section1/_index.md&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;---&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;menu&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# 不用写 url 了&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;identifier&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;s1&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;第一部分&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;weight&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;---&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;可写一些内容&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;c&#34;&gt;# /content/section1/_index.en.md&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;---&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;menu&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# 不用写明语言了&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;identifier&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;s1&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;SECTION&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;I&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;weight&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;---&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;Optional&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;content&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;here&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;c&#34;&gt;# /content/section1/section11/_index.md&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;---&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;menu&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;identifier&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;s11&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;parent&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;s1&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;第一部分第一小节&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;weight&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;---&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;可写一些内容&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;因为我想做一个支持中英法三语的博客，而把 Menu Entry 的配置写在那么多分散的文件里显然是过于麻烦而又不好管理，所以一开始在这里我毫不犹豫地选择了方法 1——在配置文件中写. 然而，后来在做一级 section 的 list 的时候，我却找不到办法完成这件事，因为筛选文章、排序文章这种事都是 Page 对象的方法，确定 section 却是 Menu Entry 对象做的，然而在所有的 &lt;a href=&#34;https://gohugo.io/variables/menus/&#34;&gt;Menu Entry 方法&lt;/a&gt;中，只有 &lt;code&gt;.Page&lt;/code&gt; 是唯一可以把 Menu Entry 对象转化为 Page 对象的方法——可是它上面赫然写着（至少截至到2019-06-25）：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;This will be non-nil if the menu entry is set via a page’s front-matter and not via the site config.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;虽然也并不知道它为什么用“non-nil”这样的措辞，就好像得到空集才是官方期望的一样. 但不管怎样，我又把 Menu Entry 的配置全部换成了方法二——在各个 _index.md 中写，倒是也不需要写明语言和写明 url 了.&lt;/p&gt;
+&lt;p&gt;虽然也并不知道它为什么用“non-nil”这样的措辞，就好像得到空集才是官方期望的一样. 但不管怎样，我又把 Menu Entry 的配置全部换成了方法 2——在各个 _index.md 中写，倒是也不需要写明语言和写明 url 了.&lt;/p&gt;
 &lt;h2 id=&#34;数学写作的支持&#34;&gt;数学写作的支持&lt;/h2&gt;
 &lt;h3 id=&#34;mathjax-的布置与-markdown-数学支持的了解&#34;&gt;MathJax 的布置与 Markdown 数学支持的了解&lt;/h3&gt;
 &lt;p&gt;希望浏览器能支持渲染数学公式，我这里选择了 &lt;a href=&#34;https://www.mathjax.org/&#34;&gt;MathJax&lt;/a&gt;. 按照其官方的文档，在模板中添加一行代码即可完成.&lt;/p&gt;
 &lt;p&gt;我同时又希望能无缝接轨 LaTeX 文件，这样我既可以自己本地编译 PDF 格式的文档，又可以让它以同样漂亮的格式显示在网页上. 关于 Markdown 的支持，这里值得参考的文章是&lt;a href=&#34;https://yihui.name/cn/2017/04/mathjax-markdown/&#34;&gt;谢益辉, MathJax 与 Markdown 的究极融合&lt;/a&gt;. 不过由于数学环境在 Markdown 中不得不以代码块 &lt;code&gt;`$math code$`&lt;/code&gt; 的样式用反引号将它包裹起来，而我需要的是把 LaTeX 代码直接拿过来就能用，不需要再进行额外的更改，因此继续寻找更好的工具.&lt;/p&gt;
 &lt;h3 id=&#34;配合-pandoc-尝试-markdown&#34;&gt;配合 Pandoc 尝试 Markdown&lt;/h3&gt;
 &lt;p&gt;听闻 &lt;a href=&#34;https://pandoc.org/&#34;&gt;Pandoc&lt;/a&gt; 是一个强大的工具，而 Hugo 是&lt;a href=&#34;https://gohugo.io/content-management/formats/#additional-formats-through-external-helpers&#34;&gt;支持&lt;/a&gt;它的，于是进行尝试：安装 Pandoc、在 front matter 中写上 &lt;code&gt;markup: pandoc&lt;/code&gt; 或 &lt;code&gt;markup: pdc&lt;/code&gt; （YAML 格式）、把我已经写好的 LaTeX 代码拷贝进来、渲染网页，结果极其糟糕. LaTeX 代码前面的导言区完全被当成了注释不起任何作用，这就意味着整个 LaTeX 完全不能用. 另外，我行间公式的书写习惯为&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;\[
-math display mode codes
-\]
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;这也显而易见不能正确渲染——合着这一步操作唯一能做到的就是正确渲染 &lt;code&gt;$math inline mode codes$&lt;/code&gt; 而不需要加反引号 &lt;code&gt;`$math code$`&lt;/code&gt;，而且还不能前一个美元符后面和后一个美元符前面有空格（当然大多数数学家写 LaTeX 就是这样做的），这还没包括一些在导言区引入的别的包里的数学符号（比如 &lt;code&gt;extarrows&lt;/code&gt; 包里的 &lt;code&gt;$\xlongequal$&lt;/code&gt; 就无法被渲染）. 而且那种比如我用 &lt;code&gt;\include{other_section}&lt;/code&gt; 连接的多个 LaTeX 文件也不容易逐一复制进去. 所以这个方案对我来说聊胜于无. 尽管如此，已经配置好的部分我也没有删除，如果写一些只有寥寥几个简单数学公式的小文章兴许还能用得上.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;sb&#34;&gt;\[&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;math display mode codes
+&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;\]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;这也显而易见不能正确渲染——合着这一步操作唯一能做到的就是正确渲染 &lt;code&gt;$math inline mode codes$&lt;/code&gt; 而不需要加反引号 &lt;code&gt;`$math code$`&lt;/code&gt;，而且还不能前一个美元符后面和后一个美元符前面有空格（当然大多数数学家写 LaTeX 就是这样做的），这还没包括一些在导言区引入的别的包里的数学符号（比如 &lt;code&gt;extarrows&lt;/code&gt; 包里的 &lt;code&gt;$\xlongequal$&lt;/code&gt; 就无法被渲染）. 而且那种比如我用 &lt;code&gt;\include{other_section}&lt;/code&gt; 连接的多个 LaTeX 文件也不容易逐一复制进去. 所以这个方案对我来说聊胜于无. 尽管如此，已经配置好的部分我也没有删除，如果写一些只有寥寥几个简单数学公式的小文章兴许还能用得上.&lt;/p&gt;
 &lt;p&gt;另一个问题是在使用 Pandoc 渲染时，文章是没有目录的. 已有人在网络上对此问题&lt;a href=&#34;https://jdhao.github.io/2018/10/10/hexo_to_hugo/#%E5%B0%8F%E9%97%AE%E9%A2%98&#34;&gt;进行了报告&lt;/a&gt;：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;对于 Pandoc，无法生成 TOC 是因为 hugo 在调用 Pandoc 将 Markdown 文件转换为 HTML 的时候，只使用了 &lt;code&gt;--mathjax&lt;/code&gt; 选项，没有使用 &lt;code&gt;--toc&lt;/code&gt; 选项&amp;hellip;&lt;/p&gt;
@@ -2328,20 +2328,20 @@ math display mode codes
 &lt;p&gt;到这里我便知道，世界上只有一个 LaTeX，让 Pandoc 完美支持 LaTeX 的所有功能简直是妄想，顶多是能顺利搞定人们最常用的那些标准的格式. 更何况本来 Markdown 和 HTML 就没有像 LaTeX 那样被设计，它们没有科学排版的初衷也不应该承担科学排版的责任. 这样一个“产品哲学”的问题想清楚以后，我便知道我该如何设计我的博客让它满足我心目中理想的样子.&lt;/p&gt;
 &lt;h3 id=&#34;硬上-pdf-呗&#34;&gt;硬上 PDF 呗&lt;/h3&gt;
 &lt;p&gt;在网页中内嵌一个 PDF 文件对象成了我唯一的选择. 我的操作是在 &lt;code&gt;/static/&lt;/code&gt; 中建立一个到我原始文件的硬链接 &lt;code&gt;$ ln /path/of/my/original/file.pdf /static/name.pdf&lt;/code&gt;，这样原始文件更新时这里可以同步更新（当然还需要用 Hugo 重新渲染再提交）. 然后在相应的文章的 front matter 中加上一些额外的识别参数，在文章页 (single.html) 对其进行判断：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;# /content/section1/section2/file_name.md
----
-title: 文章题目
-# ...省略其他参数
-file_path: name.pdf
----
-一些介绍性的文字（可选）.
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;!-- /themes/theme-name/layouts/_default/single.html --&amp;gt;
-&amp;lt;div class=&amp;quot;pdf-part&amp;quot;&amp;gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;c&#34;&gt;# /content/section1/section2/file_name.md&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;---&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;title&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;文章题目&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# ...省略其他参数&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;file_path&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;name.pdf&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;---&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;一些介绍性的文字（可选）.&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span class=&#34;c&#34;&gt;&amp;lt;!-- /themes/theme-name/layouts/_default/single.html --&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;div&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;class&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;pdf-part&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
     {{ with .Params.file_path }}
-        &amp;lt;embed src=&amp;quot;/{{ . }}&amp;quot; width=&amp;quot;100%&amp;quot; height=&amp;quot;700&amp;quot;/&amp;gt;
+        &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;embed&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;src&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;/{{ . }}&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;width&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;100%&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;height&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;700&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;/&amp;gt;&lt;/span&gt;
     {{ end }}
-&amp;lt;/div&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;调整样式&#34;&gt;调整样式&lt;/h2&gt;
+&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;调整样式&#34;&gt;调整样式&lt;/h2&gt;
 &lt;p&gt;按照心中预计的样子编写 CSS 文件，如果需要的话也写一些 JS. 就像 HTML 语言一样，关于它们的使用方法可以在任意相关的网站上找到，不是建立本站的难点，也不会成为这篇文章的重点.&lt;/p&gt;
 &lt;p&gt;关于目录的下拉样式主要参考了&lt;a href=&#34;https://www.runoob.com/css/css-dropdowns.html&#34;&gt;菜鸟教程, CSS 下拉菜单&lt;/a&gt;，目录序号的生成主要参考了&lt;a href=&#34;https://clickhelp.com/clickhelp-technical-writing-blog/advanced-autonumbering-techniques-with-css/&#34;&gt;Anastasia, Advanced Autonumbering Techniques with CSS&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;然后就是我的文章排版，用了两端对齐，但是又有中文又有英文有时还有数学内容的文章就特别丑，中间的间距不均匀，我也不知道该怎么办.&lt;/p&gt;
@@ -2379,24 +2379,24 @@ file_path: name.pdf
 &lt;h2 id=&#34;同栏目下的文章互链&#34;&gt;同栏目下的文章互链&lt;/h2&gt;
 &lt;p&gt;我的博客站是有一些栏目的，比如目前就有“21 世纪的定理”、“消费指南”、“语言表达法”这三个栏目，栏目是一个希望自己持续更新的而且可以经常写的同类型题材的一类文章的集合，在这类文章的最后我想要放一个“友情链接”的部分，把同栏目下的其他文章进行汇总给出链接，方便读者在同一个栏目下进行跳转阅读. 之前文章比较少，就凑合着手动去添加，倒也费不了太多事，但最近“语言表达法”那个栏目的文章多了起来，就一直想写一个自动添加友情链接的功能.&lt;/p&gt;
 &lt;p&gt;最开始是想着用 Hugo 自带的分类功能，即那个 Taxonomy 的，我因为不需要 Tag、Category 等就把它禁掉了，见下面的第三个注释&lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;，现在觉得可以自己定义一个简单的 column 项，参考&lt;a href=&#34;https://gohugo.io/templates/taxonomy-templates/#list-content-with-the-same-taxonomy-term&#34;&gt;这里&lt;/a&gt;试着写了一下，就是在配置文件 &lt;code&gt;config.yaml&lt;/code&gt; 里写上一个新的 taxonomy，用冒号分隔单数与复数，然后在文章里的 front matter 部分使用，发现并没有出现我想象中的效果. 它那个 &lt;code&gt;.golang&lt;/code&gt; 我是实在搞不清楚是怎么回事，而且还不能在 &lt;code&gt;disableKind&lt;/code&gt; 里把这东西加上，因为一旦加上就完全不能用这个功能，而不加上又会生成单独的 taxonomy 页面. 于是就自己写，好在功能简单，很快就写出来了，前面计数的部分参考了&lt;a href=&#34;https://discourse.gohugo.io/t/how-counting-up-a-variable-in-range/586/8&#34;&gt;这个讨论&lt;/a&gt;.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;!-- themes/zero/layouts/_default/single.html --&amp;gt;
-&amp;lt;!-- 下面是友情链接部分 --&amp;gt;
-{{ if isset .Params &amp;quot;column&amp;quot; }}
-    &amp;lt;h1&amp;gt;友情链接&amp;lt;/h1&amp;gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span class=&#34;c&#34;&gt;&amp;lt;!-- themes/zero/layouts/_default/single.html --&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;c&#34;&gt;&amp;lt;!-- 下面是友情链接部分 --&amp;gt;&lt;/span&gt;
+{{ if isset .Params &amp;#34;column&amp;#34; }}
+    &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;h1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;友情链接&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;h1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
     {{ $currentNode := . }}
-    {{ $.Scratch.Set &amp;quot;counter&amp;quot; 1 }}
+    {{ $.Scratch.Set &amp;#34;counter&amp;#34; 1 }}
     {{ range .Site.Pages.ByDate }}
         {{ if eq .Params.column $currentNode.Params.column }}
             {{ if eq . $currentNode }}
-                &amp;lt;li&amp;gt; 第 {{$.Scratch.Get &amp;quot;counter&amp;quot;}} 期：{{ .Title }}（就是这篇！）&amp;lt;/li&amp;gt;
+                &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;li&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt; 第 {{$.Scratch.Get &amp;#34;counter&amp;#34;}} 期：{{ .Title }}（就是这篇！）&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;li&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
             {{ else }}
-                &amp;lt;li&amp;gt; 第 {{$.Scratch.Get &amp;quot;counter&amp;quot;}} 期：&amp;lt;a href=&amp;quot;{{ .Permalink }}&amp;quot;&amp;gt;{{ .Title }}&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+                &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;li&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt; 第 {{$.Scratch.Get &amp;#34;counter&amp;#34;}} 期：&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;href&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;{{ .Permalink }}&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;{{ .Title }}&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;li&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
             {{ end }}
-            {{ $.Scratch.Set &amp;quot;counter&amp;quot; (add ($.Scratch.Get &amp;quot;counter&amp;quot;) 1) }}
+            {{ $.Scratch.Set &amp;#34;counter&amp;#34; (add ($.Scratch.Get &amp;#34;counter&amp;#34;) 1) }}
         {{ end }}
     {{ end }}
 {{ end }}
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;最后把中文的内容翻译翻译写成 &lt;code&gt;{{ i18n &amp;quot;xxx&amp;quot; }}&lt;/code&gt; 的形式就可以了.&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;最后把中文的内容翻译翻译写成 &lt;code&gt;{{ i18n &amp;quot;xxx&amp;quot; }}&lt;/code&gt; 的形式就可以了.&lt;/p&gt;
 &lt;p&gt;&lt;span style=&#34;background-color: #F2F5A9; color: black;&#34;&gt;这一小节补充于 2020 年 7 月 29 日.&lt;/span&gt;&lt;/p&gt;
 &lt;h1 id=&#34;部署&#34;&gt;部署&lt;/h1&gt;
 &lt;h2 id=&#34;github-pages&#34;&gt;GitHub Pages&lt;/h2&gt;
@@ -2443,6 +2443,8 @@ file_path: name.pdf
 &lt;li&gt;&lt;del&gt;用 hugo templates 把相同栏目的文章互链重新写一下.&lt;/del&gt;（已完成，但没有使用 templates. 见&lt;a href=&#34;#%E5%90%8C%E6%A0%8F%E7%9B%AE%E4%B8%8B%E7%9A%84%E6%96%87%E7%AB%A0%E4%BA%92%E9%93%BE&#34;&gt;同栏目下的文章互链&lt;/a&gt;这一小节.）&lt;/li&gt;
 &lt;li&gt;&lt;del&gt;对左边栏右上角的语言选项区域进行提前判断，没有翻译的文章不提供跳转链接，这样在本站自由点击跳转就不可能到达 404 页面了，上面第 10 条提到的问题就不是很需要解决了&lt;/del&gt;（已完成）&lt;/li&gt;
 &lt;li&gt;左边栏右上角不提供跳转的语言的颜色问题，可以和第 23 条同时解决.&lt;/li&gt;
+&lt;li&gt;&lt;del&gt;语法高亮支持.&lt;/del&gt;（已完成）&lt;/li&gt;
+&lt;li&gt;站内搜索功能（非常不着急）.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;section class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
 &lt;hr&gt;
