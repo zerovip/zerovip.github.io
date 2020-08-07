@@ -9,10 +9,10 @@
     建站记
  | 赤赤的象牙塔
     </title>
-<link href="../../css/syntax.css" rel="stylesheet" type="text/css"/>
 <link href="../../css/base.css" rel="stylesheet" type="text/css"/>
 <link href="../../css/small.css" media="screen and (max-width: 1200px)" rel="stylesheet" type="text/css"/>
 <link href="../../css/normal.css" media="screen and (min-width: 1201px)" rel="stylesheet" type="text/css"/>
+<link href="../../css/syntax.css" rel="stylesheet" type="text/css"/>
 <script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
@@ -24,19 +24,8 @@ if (!doNotTrack) {
 </script>
 <script async="" src="https://www.google-analytics.com/analytics.js"></script>
 <script async="" data-goatcounter="https://zerovip.goatcounter.com/count" src="//gc.zgo.at/count.js"></script>
-<script>
-        function ChangeClassLeft(){
-            document.getElementById("left").classList.toggle("left_show");
-            }
-        function ChangeClassTOC(){
-            document.getElementById("toc").classList.toggle("toc_show");
-            }
-        function ChangeClassBlackBlock(wait_to_change){
-            wait_to_change.classList.toggle("black_block_show");
-            }
-    </script>
 </head>
-<body>
+<body class="theme-container">
 <div class="bar_for_phone">
 <div class="bar_left_button">
 <div class="left_button_for_bar" onclick="ChangeClassLeft()">
@@ -56,11 +45,19 @@ if (!doNotTrack) {
 <div class="left" id="left">
 <div class="left_non-footer">
 <div class="left_non-footer_option">
-<li><br/></li>
+<div class="theme-switch">
+<label class="switch">
+<input checked="" class="theme-switcher light" type="checkbox"/>
+<span class="slider round"></span>
+</label>
+</div>
 <li><br/></li>
 <li class="left_non-footer_option_active">简体中文 ⦿ </li>
 <li class="left_non-footer_option_non-active">English ⨂ </li>
 <li class="left_non-footer_option_non-active">Français ⨂ </li>
+<li><br/></li>
+<li class="left_non-footer_option_non-active">RSS 订阅 ⨂ </li>
+<li><br/></li>
 </div>
 <div class="left_non-footer_head">
 <div class="left_non-footer_head_title"><a href="../../zh/">赤赤的象牙塔</a></div>
@@ -109,7 +106,7 @@ if (!doNotTrack) {
             建站记
         </div>
 <div class="right_head_des">
-            2019-06-22 - 10282 字
+            2019-06-22 - 10523 字
         </div>
 </div>
 <div class="right_main">
@@ -302,6 +299,8 @@ content/
 <p>再注：今天想起这件事，不死心又查了一下，怀疑是那些浏览器不支持 flex 的标准写法的缘故，于是找到这样一个解决此问题的工具：<a href="https://github.com/postcss/autoprefixer">Autoprefixer</a>，可以集成到 IDE 中使用，它有一个在线版本：<a href="https://autoprefixer.github.io/">Autoprefixer CSS online</a>，能自动帮我们把那些非标准的写法补齐，而且还可以选择<a href="https://browserl.ist/">支持浏览器的覆盖范围</a>，查询语法可以看<a href="https://github.com/browserslist/browserslist#queries">这里</a>. 这两个工具配合起来非常方便，我选择 last 4 version（可以支持 92.18% 的浏览器）试了一下，还是没有解决问题. 补充于 2020 年 4 月 10 日.</p></div>
 <div style="background-color: #F2F5A9; color: black;">
 <p>再注：还是不死心，到思否论坛上问了一下，然后在一个关键提示下，顺利找到问题并解决. 问题的根源在于 QQ 浏览器看到 flex 容器写着 <code>height: 100vh</code> 就想要帮我在一个屏幕高度内塞下所有 flex 项目，解决的办法是把 <code>flex-shrink</code> 调整到 0. 详见<a href="https://segmentfault.com/q/1010000022523106">思否论坛的这个帖子</a>. 补充于 2020 年 5 月 2 日.</p></div>
+<div style="background-color: #F2F5A9; color: black;">
+<p>注：今天对 CSS 的颜色变量进行了抽象提出，并在<a href="https://dev.to/lampewebdev/css-quickies-css-variables-or-how-you-create-a-white-dark-theme-easily-1i0i">Michael “lampe” Lazarski, CSS Quickies: CSS Variables</a>这篇教程的指导下完成了主题颜色的切换功能，这样一来本站便支持明暗两个主题了. 等过些日子好好配置出一套令人满意的明暗配色之后会在首页写个短消息公布一下. 补充于 2020 年 8 月 8 日.（啊刚刚皇马被曼城淘汰出局了，好伤心，瓦拉内两次失误啊.）</p></div>
 <h2 id="评论系统的支持">评论系统的支持</h2>
 <p>在这里我使用了以 GitHub issue 为工具的 <a href="https://utteranc.ce">utterances</a> 来生成评论，原理非常简单，配置也非常容易，按照其官网的说明简单操作即可. 本站的所有评论存储在<a href="https://github.com/zerovip/bcsu/issues">这里</a>.</p>
 <h2 id="自定义的-404-页面">自定义的 404 页面</h2>
@@ -369,14 +368,14 @@ content/
 <li><del>评论系统</del>（已完成）</li>
 <li><del>适配手机的 CSS (重写 CSS 计划)</del>（已完成）</li>
 <li><del>RSS 支持</del>（已完成）</li>
-<li><del>文章间的跳转</del>（不再考虑，因为没有必要，使用手动添加友情链接代替）</li>
+<li><del>文章间的跳转</del>（改为第 24 条，已完成）</li>
 <li><del>文章的目录安置(右上角固定的可伸缩悬浮块)</del>（已完成）</li>
-<li><del>黑暗主题</del>（不再考虑）</li>
+<li><strong>黑暗主题（更合理的配色，包括配一个黑暗模式出来，配色的时候注意一下文章中的黄色块还没对应黑暗模式）</strong></li>
 <li><del>Google analytics</del>（已完成）</li>
 <li><del>tags, categories, series 等</del>（不再考虑<sup id="fnref:3"><a class="footnote-ref" href="#fn:3" role="doc-noteref">3</a></sup>. 在边栏用多级 section 分类已经足够，没必要增加更复杂的分类方式.）</li>
 <li><del>本文中提到的中英文排版问题还没有解决</del>（暂且先这样）</li>
 <li><del>本文中提到的 404 页面问题还没有解决</del>（无关紧要，见下面的第 25 条）</li>
-<li>本文中提到的使用 pandoc 没有目录的问题还没有解决</li>
+<li><strong>本文中提到的使用 pandoc 没有目录的问题还没有解决</strong></li>
 <li><del>数学类 overflow-x auto 后 overflow-y 自动出现的问题</del>（已解决）</li>
 <li><del>提交 sitemap 供搜索引擎收录</del>（已完成）</li>
 <li><del>把 head 中的标题改一下，在搜索引擎中显得好看一点</del>（已完成）</li>
@@ -384,16 +383,17 @@ content/
 <li><del>首页最近文章</del>（已完成，显示 8 篇）</li>
 <li><del>QQ 浏览器、UC 浏览器等奇葩内核，&lt;p&gt; 完全消失的问题</del>（已解决，问题的分析与解决办法见<a href="#%E8%B0%83%E6%95%B4%E6%A0%B7%E5%BC%8F">调整样式</a>一节的最后一个注.）</li>
 <li><del>国内加载速度太慢的问题</del>（不再考虑）</li>
-<li>PWA，觉得很有潜力的技术，有时间的话会首先尝试它.</li>
-<li>IPFS，不一定，有生之年试一下就好.</li>
-<li>Zero Net，Ditto.</li>
-<li>InstantClick，Ditto.</li>
-<li>CSS 颜色写成变量 (variables) 形式，重新配色，方便第 6 条黑暗模式重新加入考虑计划.</li>
+<li><strong>PWA，觉得很有潜力的技术，有时间的话会首先尝试它.</strong></li>
+<li><strong>IPFS，不一定，有生之年试一下就好.</strong></li>
+<li><strong>Zero Net，Ditto.</strong></li>
+<li><strong>InstantClick，Ditto.</strong></li>
+<li><del>CSS 颜色写成变量 (variables) 形式，重新配色，方便第 6 条黑暗模式重新加入考虑计划，见<a href="https://dev.to/lampewebdev/css-quickies-css-variables-or-how-you-create-a-white-dark-theme-easily-1i0i">这个教程</a>.</del>（已完成）</li>
 <li><del>用 hugo templates 把相同栏目的文章互链重新写一下.</del>（已完成，但没有使用 templates. 见<a href="#%E5%90%8C%E6%A0%8F%E7%9B%AE%E4%B8%8B%E7%9A%84%E6%96%87%E7%AB%A0%E4%BA%92%E9%93%BE">同栏目下的文章互链</a>这一小节.）</li>
 <li><del>对左边栏右上角的语言选项区域进行提前判断，没有翻译的文章不提供跳转链接，这样在本站自由点击跳转就不可能到达 404 页面了，上面第 10 条提到的问题就不是很需要解决了</del>（已完成）</li>
-<li>左边栏右上角不提供跳转的语言的颜色问题，可以和第 23 条同时解决.</li>
+<li><del>左边栏右上角不提供跳转的语言的颜色问题</del></li>
 <li><del>语法高亮支持.</del>（已完成）</li>
-<li>站内搜索功能（非常不着急）.</li>
+<li><strong>站内搜索功能（非常不着急）</strong></li>
+<li><strong>试着用一下 prefers-color-scheme？其实非常简单，在 main.js 里把初始化的那个 if 语句的最后一个 else 里写点东西判断一下就行</strong></li>
 </ol>
 <section class="footnotes" role="doc-endnotes">
 <hr/>
@@ -413,7 +413,7 @@ content/
 </div>
 </div>
 <div class="right_comments">
-<script async="" crossorigin="anonymous" issue-term="pathname" repo="zerovip/bcsu" src="https://utteranc.es/client.js" theme="github-light">
+<script async="" crossorigin="anonymous" issue-term="pathname" repo="zerovip/bcsu" src="https://utteranc.es/client.js" theme="github-dark-orange">
 </script>
 </div>
 </div>
@@ -460,5 +460,6 @@ content/
 </div>
 </div>
 </div>
+<script src="../../js/main.js" type="text/javascript"></script>
 </body>
 </html>
