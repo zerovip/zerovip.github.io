@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=divice-width, initial-scale=1.0" name="viewport"/>
-<meta content="Hugo 0.74.3" name="generator"/>
+<meta content="Hugo 0.75.1" name="generator"/>
 <title>
         
     建站记
@@ -106,7 +106,7 @@ if (!doNotTrack) {
             建站记
         </div>
 <div class="right_head_des">
-            2019-06-22 - 11460 字
+            2019-06-22 - 11338 字
         </div>
 </div>
 <div class="right_main">
@@ -158,95 +158,95 @@ content/
 '   '-- _index.en.md
 </code></pre><p>方法 1——在配置文件里写：</p>
 <div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="c"># config.yaml</span><span class="w">
-</span><span class="w"></span><span class="k">defaultContentLanguage</span><span class="p">:</span><span class="w"> </span>zh<span class="w"> </span><span class="c"># 默认语言是中文</span><span class="w">
-</span><span class="w"></span><span class="k">defaultContentLanguageInSubdir</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="c"># 所以下面的 url 里即便是默认的中文也带着/zh/</span><span class="w">
-</span><span class="w"></span><span class="k">menu</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span><span class="k">main</span><span class="p">:</span><span class="w">
-</span><span class="w">    </span>- <span class="k">url</span><span class="p">:</span><span class="w"> </span>/zh/section1/<span class="w"> </span><span class="c"># 和目录名字一致</span><span class="w">
-</span><span class="w">      </span><span class="k">identifier</span><span class="p">:</span><span class="w"> </span>s1<span class="w"> </span><span class="c"># 给下面的 children 确定 parent 用</span><span class="w">
-</span><span class="w">      </span><span class="k">name</span><span class="p">:</span><span class="w"> </span>第一部分<span class="w"> </span><span class="c"># 可以不同语言用不同的名字</span><span class="w">
-</span><span class="w">      </span><span class="k">weight</span><span class="p">:</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="c"># 排序用</span><span class="w">
-</span><span class="w">    </span>- <span class="k">url</span><span class="p">:</span><span class="w"> </span>/zh/section2/<span class="w">
-</span><span class="w">      </span><span class="k">identifier</span><span class="p">:</span><span class="w"> </span>s2<span class="w">
-</span><span class="w">      </span><span class="k">name</span><span class="p">:</span><span class="w"> </span>第二部分<span class="w">
-</span><span class="w">      </span><span class="k">weight</span><span class="p">:</span><span class="w"> </span><span class="m">2</span><span class="w">
-</span><span class="w">    </span>- <span class="k">url</span><span class="p">:</span><span class="w"> </span>/zh/section1/section11/<span class="w">
-</span><span class="w">      </span><span class="k">identifier</span><span class="p">:</span><span class="w"> </span>s11<span class="w">
-</span><span class="w">      </span><span class="k">parent</span><span class="p">:</span><span class="w"> </span>s1<span class="w"> </span><span class="c"># parent 的 identifier</span><span class="w">
-</span><span class="w">      </span><span class="k">name</span><span class="p">:</span><span class="w"> </span>第一部分第一小节<span class="w">
-</span><span class="w">      </span><span class="k">weight</span><span class="p">:</span><span class="w"> </span><span class="m">1</span><span class="w">
+</span><span class="w"></span><span class="nt">defaultContentLanguage</span><span class="p">:</span><span class="w"> </span><span class="l">zh # 默认语言是中文</span><span class="w">
+</span><span class="w"></span><span class="nt">defaultContentLanguageInSubdir</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="c"># 所以下面的 url 里即便是默认的中文也带着/zh/</span><span class="w">
+</span><span class="w"></span><span class="nt">menu</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="nt">main</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span>- <span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l">/zh/section1/ # 和目录名字一致</span><span class="w">
+</span><span class="w">      </span><span class="nt">identifier</span><span class="p">:</span><span class="w"> </span><span class="l">s1 # 给下面的 children 确定 parent 用</span><span class="w">
+</span><span class="w">      </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">第一部分 # 可以不同语言用不同的名字</span><span class="w">
+</span><span class="w">      </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="c"># 排序用</span><span class="w">
+</span><span class="w">    </span>- <span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l">/zh/section2/</span><span class="w">
+</span><span class="w">      </span><span class="nt">identifier</span><span class="p">:</span><span class="w"> </span><span class="l">s2</span><span class="w">
+</span><span class="w">      </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">第二部分</span><span class="w">
+</span><span class="w">      </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="m">2</span><span class="w">
+</span><span class="w">    </span>- <span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l">/zh/section1/section11/</span><span class="w">
+</span><span class="w">      </span><span class="nt">identifier</span><span class="p">:</span><span class="w"> </span><span class="l">s11</span><span class="w">
+</span><span class="w">      </span><span class="nt">parent</span><span class="p">:</span><span class="w"> </span><span class="l">s1 # parent 的 identifier</span><span class="w">
+</span><span class="w">      </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">第一部分第一小节</span><span class="w">
+</span><span class="w">      </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="m">1</span><span class="w">
 </span><span class="w">    
-</span><span class="w"></span><span class="k">languages</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span><span class="k">zh</span><span class="p">:</span><span class="w">
-</span><span class="w">    </span><span class="k">languageCode</span><span class="p">:</span><span class="w"> </span>zh-cn<span class="w">
-</span><span class="w">    </span><span class="k">languageName</span><span class="p">:</span><span class="w"> </span>简体中文<span class="w">
-</span><span class="w">    </span><span class="k">title</span><span class="p">:</span><span class="w"> </span>网站名<span class="w">
-</span><span class="w">    </span><span class="k">weight</span><span class="p">:</span><span class="w"> </span><span class="m">1</span><span class="w">
-</span><span class="w">  </span><span class="k">en</span><span class="p">:</span><span class="w">
-</span><span class="w">    </span><span class="k">languageCode</span><span class="p">:</span><span class="w"> </span>en-us<span class="w">
-</span><span class="w">    </span><span class="k">languageName</span><span class="p">:</span><span class="w"> </span>English<span class="w">
-</span><span class="w">    </span><span class="k">title</span><span class="p">:</span><span class="w"> </span>Site's<span class="w"> </span>Name<span class="w">
-</span><span class="w">    </span><span class="k">weight</span><span class="p">:</span><span class="w"> </span><span class="m">2</span><span class="w">
-</span><span class="w">    </span><span class="k">menu</span><span class="p">:</span><span class="w">
-</span><span class="w">      </span><span class="k">main</span><span class="p">:</span><span class="w">
-</span><span class="w">        </span>- <span class="k">url</span><span class="p">:</span><span class="w"> </span>/en/section1/<span class="w">
-</span><span class="w">          </span><span class="k">identifier</span><span class="p">:</span><span class="w"> </span>s1<span class="w">
-</span><span class="w">          </span><span class="k">name</span><span class="p">:</span><span class="w"> </span>SECTION<span class="w"> </span>I<span class="w">
-</span><span class="w">          </span><span class="k">weight</span><span class="p">:</span><span class="w"> </span><span class="m">1</span><span class="w">
-</span><span class="w">        </span>- <span class="k">url</span><span class="p">:</span><span class="w"> </span>/en/section2/<span class="w">
-</span><span class="w">          </span><span class="k">identifier</span><span class="p">:</span><span class="w"> </span>s2<span class="w">
-</span><span class="w">          </span><span class="k">name</span><span class="p">:</span><span class="w"> </span>SECTION<span class="w"> </span>II<span class="w">
-</span><span class="w">          </span><span class="k">weight</span><span class="p">:</span><span class="w"> </span><span class="m">2</span><span class="w">
-</span><span class="w">        </span>- <span class="k">url</span><span class="p">:</span><span class="w"> </span>/en/section1/section11/<span class="w">
-</span><span class="w">          </span><span class="k">identifier</span><span class="p">:</span><span class="w"> </span>s11<span class="w">
-</span><span class="w">          </span><span class="k">parent</span><span class="p">:</span><span class="w"> </span>s1<span class="w">
-</span><span class="w">          </span><span class="k">name</span><span class="p">:</span><span class="w"> </span>SECTION<span class="w"> </span>I<span class="w"> </span>PART<span class="w"> </span>I<span class="w">
-</span><span class="w">          </span><span class="k">weight</span><span class="p">:</span><span class="w"> </span><span class="m">1</span><span class="w">
+</span><span class="w"></span><span class="nt">languages</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="nt">zh</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">languageCode</span><span class="p">:</span><span class="w"> </span><span class="l">zh-cn</span><span class="w">
+</span><span class="w">    </span><span class="nt">languageName</span><span class="p">:</span><span class="w"> </span><span class="l">简体中文</span><span class="w">
+</span><span class="w">    </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l">网站名</span><span class="w">
+</span><span class="w">    </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="m">1</span><span class="w">
+</span><span class="w">  </span><span class="nt">en</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">languageCode</span><span class="p">:</span><span class="w"> </span><span class="l">en-us</span><span class="w">
+</span><span class="w">    </span><span class="nt">languageName</span><span class="p">:</span><span class="w"> </span><span class="l">English</span><span class="w">
+</span><span class="w">    </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l">Site's Name</span><span class="w">
+</span><span class="w">    </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="m">2</span><span class="w">
+</span><span class="w">    </span><span class="nt">menu</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span><span class="nt">main</span><span class="p">:</span><span class="w">
+</span><span class="w">        </span>- <span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l">/en/section1/</span><span class="w">
+</span><span class="w">          </span><span class="nt">identifier</span><span class="p">:</span><span class="w"> </span><span class="l">s1</span><span class="w">
+</span><span class="w">          </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">SECTION I</span><span class="w">
+</span><span class="w">          </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="m">1</span><span class="w">
+</span><span class="w">        </span>- <span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l">/en/section2/</span><span class="w">
+</span><span class="w">          </span><span class="nt">identifier</span><span class="p">:</span><span class="w"> </span><span class="l">s2</span><span class="w">
+</span><span class="w">          </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">SECTION II</span><span class="w">
+</span><span class="w">          </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="m">2</span><span class="w">
+</span><span class="w">        </span>- <span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l">/en/section1/section11/</span><span class="w">
+</span><span class="w">          </span><span class="nt">identifier</span><span class="p">:</span><span class="w"> </span><span class="l">s11</span><span class="w">
+</span><span class="w">          </span><span class="nt">parent</span><span class="p">:</span><span class="w"> </span><span class="l">s1</span><span class="w">
+</span><span class="w">          </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">SECTION I PART I</span><span class="w">
+</span><span class="w">          </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="m">1</span><span class="w">
 </span></code></pre></div><p>方法 2——在 front matter 里写：</p>
 <div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="c"># config.yaml</span><span class="w">
-</span><span class="w"></span><span class="k">defaultContentLanguage</span><span class="p">:</span><span class="w"> </span>zh<span class="w">
-</span><span class="w"></span><span class="k">defaultContentLanguageInSubdir</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-</span><span class="w"></span><span class="k">languages</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span><span class="k">zh</span><span class="p">:</span><span class="w">
-</span><span class="w">    </span><span class="k">languageCode</span><span class="p">:</span><span class="w"> </span>zh-cn<span class="w">
-</span><span class="w">    </span><span class="k">languageName</span><span class="p">:</span><span class="w"> </span>简体中文<span class="w">
-</span><span class="w">    </span><span class="k">title</span><span class="p">:</span><span class="w"> </span>网站名<span class="w">
-</span><span class="w">    </span><span class="k">weight</span><span class="p">:</span><span class="w"> </span><span class="m">1</span><span class="w">
-</span><span class="w">  </span><span class="k">en</span><span class="p">:</span><span class="w">
-</span><span class="w">    </span><span class="k">languageCode</span><span class="p">:</span><span class="w"> </span>en-us<span class="w">
-</span><span class="w">    </span><span class="k">languageName</span><span class="p">:</span><span class="w"> </span>English<span class="w">
-</span><span class="w">    </span><span class="k">title</span><span class="p">:</span><span class="w"> </span>Site's<span class="w"> </span>Name<span class="w">
-</span><span class="w">    </span><span class="k">weight</span><span class="p">:</span><span class="w"> </span><span class="m">2</span><span class="w">
+</span><span class="w"></span><span class="nt">defaultContentLanguage</span><span class="p">:</span><span class="w"> </span><span class="l">zh</span><span class="w">
+</span><span class="w"></span><span class="nt">defaultContentLanguageInSubdir</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="w"></span><span class="nt">languages</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="nt">zh</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">languageCode</span><span class="p">:</span><span class="w"> </span><span class="l">zh-cn</span><span class="w">
+</span><span class="w">    </span><span class="nt">languageName</span><span class="p">:</span><span class="w"> </span><span class="l">简体中文</span><span class="w">
+</span><span class="w">    </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l">网站名</span><span class="w">
+</span><span class="w">    </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="m">1</span><span class="w">
+</span><span class="w">  </span><span class="nt">en</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">languageCode</span><span class="p">:</span><span class="w"> </span><span class="l">en-us</span><span class="w">
+</span><span class="w">    </span><span class="nt">languageName</span><span class="p">:</span><span class="w"> </span><span class="l">English</span><span class="w">
+</span><span class="w">    </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l">Site's Name</span><span class="w">
+</span><span class="w">    </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="m">2</span><span class="w">
 </span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="c"># /content/section1/_index.md</span><span class="w">
-</span><span class="w"></span>---<span class="w">
-</span><span class="w"></span><span class="k">menu</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span><span class="k">main</span><span class="p">:</span><span class="w">
+</span><span class="w"></span><span class="nn">---</span><span class="w">
+</span><span class="w"></span><span class="nt">menu</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="nt">main</span><span class="p">:</span><span class="w">
 </span><span class="w">    </span><span class="c"># 不用写 url 了</span><span class="w">
-</span><span class="w">    </span><span class="k">identifier</span><span class="p">:</span><span class="w"> </span>s1<span class="w">
-</span><span class="w">    </span><span class="k">name</span><span class="p">:</span><span class="w"> </span>第一部分<span class="w">
-</span><span class="w">    </span><span class="k">weight</span><span class="p">:</span><span class="w"> </span><span class="m">1</span><span class="w">
-</span><span class="w"></span>---<span class="w">
-</span><span class="w"></span>可写一些内容<span class="w">
+</span><span class="w">    </span><span class="nt">identifier</span><span class="p">:</span><span class="w"> </span><span class="l">s1</span><span class="w">
+</span><span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">第一部分</span><span class="w">
+</span><span class="w">    </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="m">1</span><span class="w">
+</span><span class="w"></span><span class="nn">---</span><span class="w">
+</span><span class="w"></span><span class="l">可写一些内容</span><span class="w">
 </span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="c"># /content/section1/_index.en.md</span><span class="w">
-</span><span class="w"></span>---<span class="w">
-</span><span class="w"></span><span class="k">menu</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span><span class="k">main</span><span class="p">:</span><span class="w">
+</span><span class="w"></span><span class="nn">---</span><span class="w">
+</span><span class="w"></span><span class="nt">menu</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="nt">main</span><span class="p">:</span><span class="w">
 </span><span class="w">    </span><span class="c"># 不用写明语言了</span><span class="w">
-</span><span class="w">    </span><span class="k">identifier</span><span class="p">:</span><span class="w"> </span>s1<span class="w">
-</span><span class="w">    </span><span class="k">name</span><span class="p">:</span><span class="w"> </span>SECTION<span class="w"> </span>I<span class="w">
-</span><span class="w">    </span><span class="k">weight</span><span class="p">:</span><span class="w"> </span><span class="m">1</span><span class="w">
-</span><span class="w"></span>---<span class="w">
-</span><span class="w"></span>Optional<span class="w"> </span>content<span class="w"> </span>here<span class="w">
+</span><span class="w">    </span><span class="nt">identifier</span><span class="p">:</span><span class="w"> </span><span class="l">s1</span><span class="w">
+</span><span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">SECTION I</span><span class="w">
+</span><span class="w">    </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="m">1</span><span class="w">
+</span><span class="w"></span><span class="nn">---</span><span class="w">
+</span><span class="w"></span><span class="l">Optional content here</span><span class="w">
 </span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="c"># /content/section1/section11/_index.md</span><span class="w">
-</span><span class="w"></span>---<span class="w">
-</span><span class="w"></span><span class="k">menu</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span><span class="k">main</span><span class="p">:</span><span class="w">
-</span><span class="w">      </span><span class="k">identifier</span><span class="p">:</span><span class="w"> </span>s11<span class="w">
-</span><span class="w">      </span><span class="k">parent</span><span class="p">:</span><span class="w"> </span>s1<span class="w">
-</span><span class="w">      </span><span class="k">name</span><span class="p">:</span><span class="w"> </span>第一部分第一小节<span class="w">
-</span><span class="w">      </span><span class="k">weight</span><span class="p">:</span><span class="w"> </span><span class="m">1</span><span class="w">
-</span><span class="w"></span>---<span class="w">
-</span><span class="w"></span>可写一些内容<span class="w">
+</span><span class="w"></span><span class="nn">---</span><span class="w">
+</span><span class="w"></span><span class="nt">menu</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="nt">main</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span><span class="nt">identifier</span><span class="p">:</span><span class="w"> </span><span class="l">s11</span><span class="w">
+</span><span class="w">      </span><span class="nt">parent</span><span class="p">:</span><span class="w"> </span><span class="l">s1</span><span class="w">
+</span><span class="w">      </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">第一部分第一小节</span><span class="w">
+</span><span class="w">      </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="m">1</span><span class="w">
+</span><span class="w"></span><span class="nn">---</span><span class="w">
+</span><span class="w"></span><span class="l">可写一些内容</span><span class="w">
 </span></code></pre></div><p>因为我想做一个支持中英法三语的博客，而把 Menu Entry 的配置写在那么多分散的文件里显然是过于麻烦而又不好管理，所以一开始在这里我毫不犹豫地选择了方法 1——在配置文件中写. 然而，后来在做一级 section 的 list 的时候，我却找不到办法完成这件事，因为筛选文章、排序文章这种事都是 Page 对象的方法，确定 section 却是 Menu Entry 对象做的，然而在所有的 <a href="https://gohugo.io/variables/menus/">Menu Entry 方法</a>中，只有 <code>.Page</code> 是唯一可以把 Menu Entry 对象转化为 Page 对象的方法——可是它上面赫然写着（至少截至到2019-06-25）：</p>
 <blockquote>
 <p>This will be non-nil if the menu entry is set via a page’s front-matter and not via the site config.</p>
@@ -275,12 +275,12 @@ content/
 <h3 id="硬上-pdf-呗">硬上 PDF 呗</h3>
 <p>在网页中内嵌一个 PDF 文件对象成了我唯一的选择. 我的操作是在 <code>/static/</code> 中建立一个到我原始文件的硬链接 <code>$ ln /path/of/my/original/file.pdf /static/name.pdf</code>，这样原始文件更新时这里可以同步更新（当然还需要用 Hugo 重新渲染再提交）. 然后在相应的文章的 front matter 中加上一些额外的识别参数，在文章页 (single.html) 对其进行判断：</p>
 <div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="c"># /content/section1/section2/file_name.md</span><span class="w">
-</span><span class="w"></span>---<span class="w">
-</span><span class="w"></span><span class="k">title</span><span class="p">:</span><span class="w"> </span>文章题目<span class="w">
+</span><span class="w"></span><span class="nn">---</span><span class="w">
+</span><span class="w"></span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l">文章题目</span><span class="w">
 </span><span class="w"></span><span class="c"># ...省略其他参数</span><span class="w">
-</span><span class="w"></span><span class="k">file_path</span><span class="p">:</span><span class="w"> </span>name.pdf<span class="w">
-</span><span class="w"></span>---<span class="w">
-</span><span class="w"></span>一些介绍性的文字（可选）.<span class="w">
+</span><span class="w"></span><span class="nt">file_path</span><span class="p">:</span><span class="w"> </span><span class="l">name.pdf</span><span class="w">
+</span><span class="w"></span><span class="nn">---</span><span class="w">
+</span><span class="w"></span><span class="l">一些介绍性的文字（可选）.</span><span class="w">
 </span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="c">&lt;!-- /themes/theme-name/layouts/_default/single.html --&gt;</span>
 <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"pdf-part"</span><span class="p">&gt;</span>
     {{ with .Params.file_path }}
