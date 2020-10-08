@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=divice-width, initial-scale=1.0" name="viewport"/>
-<meta content="Hugo 0.75.1" name="generator"/>
+<meta content="Hugo 0.76.2" name="generator"/>
 <title>
         
     建站记
@@ -106,7 +106,7 @@ if (!doNotTrack) {
             建站记
         </div>
 <div class="right_head_des">
-            2019-06-22 - 11338 字
+            2019-06-22 - 11335 字
         </div>
 </div>
 <div class="right_main">
@@ -158,13 +158,13 @@ content/
 '   '-- _index.en.md
 </code></pre><p>方法 1——在配置文件里写：</p>
 <div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="c"># config.yaml</span><span class="w">
-</span><span class="w"></span><span class="nt">defaultContentLanguage</span><span class="p">:</span><span class="w"> </span><span class="l">zh # 默认语言是中文</span><span class="w">
+</span><span class="w"></span><span class="nt">defaultContentLanguage</span><span class="p">:</span><span class="w"> </span><span class="l">zh</span><span class="w"> </span><span class="c"># 默认语言是中文</span><span class="w">
 </span><span class="w"></span><span class="nt">defaultContentLanguageInSubdir</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="c"># 所以下面的 url 里即便是默认的中文也带着/zh/</span><span class="w">
 </span><span class="w"></span><span class="nt">menu</span><span class="p">:</span><span class="w">
 </span><span class="w">  </span><span class="nt">main</span><span class="p">:</span><span class="w">
-</span><span class="w">    </span>- <span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l">/zh/section1/ # 和目录名字一致</span><span class="w">
-</span><span class="w">      </span><span class="nt">identifier</span><span class="p">:</span><span class="w"> </span><span class="l">s1 # 给下面的 children 确定 parent 用</span><span class="w">
-</span><span class="w">      </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">第一部分 # 可以不同语言用不同的名字</span><span class="w">
+</span><span class="w">    </span>- <span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l">/zh/section1/</span><span class="w"> </span><span class="c"># 和目录名字一致</span><span class="w">
+</span><span class="w">      </span><span class="nt">identifier</span><span class="p">:</span><span class="w"> </span><span class="l">s1</span><span class="w"> </span><span class="c"># 给下面的 children 确定 parent 用</span><span class="w">
+</span><span class="w">      </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">第一部分</span><span class="w"> </span><span class="c"># 可以不同语言用不同的名字</span><span class="w">
 </span><span class="w">      </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="c"># 排序用</span><span class="w">
 </span><span class="w">    </span>- <span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l">/zh/section2/</span><span class="w">
 </span><span class="w">      </span><span class="nt">identifier</span><span class="p">:</span><span class="w"> </span><span class="l">s2</span><span class="w">
@@ -172,7 +172,7 @@ content/
 </span><span class="w">      </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="m">2</span><span class="w">
 </span><span class="w">    </span>- <span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l">/zh/section1/section11/</span><span class="w">
 </span><span class="w">      </span><span class="nt">identifier</span><span class="p">:</span><span class="w"> </span><span class="l">s11</span><span class="w">
-</span><span class="w">      </span><span class="nt">parent</span><span class="p">:</span><span class="w"> </span><span class="l">s1 # parent 的 identifier</span><span class="w">
+</span><span class="w">      </span><span class="nt">parent</span><span class="p">:</span><span class="w"> </span><span class="l">s1</span><span class="w"> </span><span class="c"># parent 的 identifier</span><span class="w">
 </span><span class="w">      </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">第一部分第一小节</span><span class="w">
 </span><span class="w">      </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="m">1</span><span class="w">
 </span><span class="w">    
