@@ -26,7 +26,7 @@
                 <guid>/zh/59563/</guid>
                 <description>&lt;p&gt;使用长毛象一周了，我喜欢它. 我尽量多地看了一些用户、站长的经验分享，明白了一些事情的同时产生了更多的疑问：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://utopia.cool/@twisted/105064963760943687&#34;&gt;Mastodon 是一个协议？misskey 协议是啥？pleroma 协议又是啥？activepub 大协议又是啥？&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://m.cmx.im/@leon007/105049117684292610&#34;&gt;Mastodon 是一个协议？misskey 协议是啥？pleroma 协议又是啥？activepub 大协议又是啥？&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://o3o.ca/@jess/105071002006438658&#34;&gt;fediverse 不是所有的实例集合在一起么？为什么还会有博客、图片、视频平台？write freely、pixelfed、peertube 和长毛象有什么关系？&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;我决定好好学习一下.&lt;/p&gt;
@@ -343,6 +343,12 @@
 &lt;p&gt;如果你到这个宝藏列表里去看一看，会发现大量的只有 1 个实例的联邦宇宙软件，但它们因为遵守相关协议，也应该看作是联邦宇宙的一部分. 两个用户数量比较多的实例（联邦宇宙软件）代表：&lt;a href=&#34;twista.283.cloud&#34;&gt;twista&lt;/a&gt; 和 &lt;a href=&#34;juick.com&#34;&gt;juick&lt;/a&gt;，前者是日本的一个大实例，有三百余人；后者是俄罗斯的一个大实例，有一万八千多人. 除此以外，在维基百科中还提到了一个 Nextcloud，是用来存储文件的，也是用的 ActivityPub 协议.&lt;/p&gt;
 &lt;h1 id=&#34;结尾&#34;&gt;结尾&lt;/h1&gt;
 &lt;p&gt;希望这个表格和前面的定义介绍可以帮助大家更全面地认识联邦宇宙，认识我们所用的长毛象在其中所在的位置. 也希望能给有技术、有野心的朋友提供一个稍全面的视野，除了建立长毛象实例以外，也许学习 ActivityPub 协议并创造一个新的联邦宇宙软件、甚至是创造一个新的协议——都是有可能的. 无论如何，我喜欢联邦宇宙，我觉得这差不多是互联网该有的样子了.&lt;/p&gt;
+&lt;p&gt;后记：随后看到了&lt;a href=&#34;https://slashine.onl/@slashine/104537788488035256&#34;&gt;闪站站长的推荐&lt;/a&gt;，和我发现的宝藏列表是类似的！在这里一并列出.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://fediverse.party/en/miscellaneous&#34;&gt;https://fediverse.party/en/miscellaneous&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://fediverse.network/&#34;&gt;https://fediverse.network/&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.fediverse.space/instances&#34;&gt;https://www.fediverse.space/instances&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
 &lt;div class=&#39;notation_color&#39;&gt;
 &lt;p&gt;注意：为保护个人隐私，我并不想透露我这个个人主页，所以我临时注册了一个 Gitee 帐号，把文章发在了那里，链接为 &lt;a href=&#34;https://zero_mstd.gitee.io/fediverse/fediverse.html&#34;&gt;https://zero_mstd.gitee.io/fediverse/fediverse.html&lt;/a&gt;. 如果是看到那篇文章后又通过搜索引擎找到了这里，请不要在长毛象上公布这个链接，你自己偷偷知道我有这么个博客站就好了.&lt;/div&gt;&lt;/p&gt;
 </description>
