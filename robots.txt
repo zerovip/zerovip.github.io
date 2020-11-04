@@ -1,4 +1,5 @@
 User-agent: *
-Disallow: /zh/about/me/
-Disallow: /en/about/me/
-Disallow: /fr/about/me/
+Disallow: /zh/about/me
+Disallow: /en/about/me
+Disallow: /fr/about/me
+Disallow: /zh/71828
