@@ -1,10 +1,60 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title> | Zero&#39;s Ivory Tower</title>
+        <title>
+    
+    
+        
+            
+                
+            
+                
+            
+        
+    
+        
+            
+                
+            
+                
+            
+                
+            
+        
+    
+        
+            ABOUT
+        
+    
+ | Zero&#39;s Ivory Tower</title>
         <link>/en/about/</link>
         <description>
-            Recent Content |  | Zero&#39;s Ivory Tower
+            Recent Content | 
+    
+    
+        
+            
+                
+            
+                
+            
+        
+    
+        
+            
+                
+            
+                
+            
+                
+            
+        
+    
+        
+            ABOUT
+        
+    
+ | Zero&#39;s Ivory Tower
         </description>
         <generator>Hugo -- gohugo.io</generator>
         
@@ -20,5 +70,52 @@
         
         
         
+    
+    
+        
+            
+                
+            
+                
+            
+        
+    
+        
+            
+                
+            
+                
+            
+                
+            
+        
+    
+        
+            
+                <item>
+                    <title>About the site</title>
+                    <link>/en/about/site/</link>
+                    <pubDate>2019-01-01</pubDate>
+                    
+                    <guid>/en/about/site/</guid>
+                    <description>&lt;p&gt;Tags
+Categories
+So on.&lt;/p&gt;
+</description>
+                </item>
+            
+                <item>
+                    <title>About me</title>
+                    <link>/en/about/me/</link>
+                    <pubDate>2000-01-01</pubDate>
+                    
+                    <guid>/en/about/me/</guid>
+                    <description>&lt;p&gt;You shouldn&amp;rsquo;t try to know me.&lt;/p&gt;
+</description>
+                </item>
+            
+        
+    
+
     </channel>
 </rss> 

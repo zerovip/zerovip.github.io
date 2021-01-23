@@ -1,10 +1,60 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title> | La Tour D&#39;ivoire De Zéro</title>
+        <title>
+    
+    
+        
+            
+                
+            
+                
+            
+        
+    
+        
+            
+                
+            
+                
+            
+                
+            
+        
+    
+        
+            À PROPOS DE
+        
+    
+ | La Tour D&#39;ivoire De Zéro</title>
         <link>/fr/about/</link>
         <description>
-            Contenu Récent |  | La Tour D&#39;ivoire De Zéro
+            Contenu Récent | 
+    
+    
+        
+            
+                
+            
+                
+            
+        
+    
+        
+            
+                
+            
+                
+            
+                
+            
+        
+    
+        
+            À PROPOS DE
+        
+    
+ | La Tour D&#39;ivoire De Zéro
         </description>
         <generator>Hugo -- gohugo.io</generator>
         
@@ -20,5 +70,50 @@
         
         
         
+    
+    
+        
+            
+                
+            
+                
+            
+        
+    
+        
+            
+                
+            
+                
+            
+                
+            
+        
+    
+        
+            
+                <item>
+                    <title>À propos de ce site</title>
+                    <link>/fr/about/site/</link>
+                    <pubDate>2019-01-01</pubDate>
+                    
+                    <guid>/fr/about/site/</guid>
+                    <description>&lt;p&gt;À Propos De Ce Site&amp;hellip;&lt;/p&gt;
+</description>
+                </item>
+            
+                <item>
+                    <title>À propos de moi</title>
+                    <link>/fr/about/me/</link>
+                    <pubDate>2000-01-01</pubDate>
+                    
+                    <guid>/fr/about/me/</guid>
+                    <description>&lt;p&gt;Je suis très beau.&lt;/p&gt;
+</description>
+                </item>
+            
+        
+    
+
     </channel>
 </rss> 
