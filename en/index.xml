@@ -1,55 +1,5 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-    <channel>
-        <title>Zero&#39;s Ivory Tower</title>
-        <link>/en/</link>
-        <description>Recent Content | Zero&#39;s Ivory Tower</description>
-        <generator>Hugo -- gohugo.io</generator>
-        
-            <language>en-us</language>
-        
-        
-        
-        
-        
-            <lastBuildDate>
-                2020-05-22
-            </lastBuildDate>
-        
-        
-        
-            <item>
-                <title>Slides for my seminar of homological algebra</title>
-                <link>/en/20030/</link>
-                <pubDate>2020-05-22</pubDate>
-                
-                <guid>/en/20030/</guid>
-                <description>&lt;p&gt;All the seminars were held online this semester because everyone were in quarantine. I don&amp;rsquo;t have a pad letting me write on it when give a live broadcast, so I prepared these slides. Using slides is faster than writing on a blackboard, so it took me only one hour to finish this talk. Some proofs are a bit long and I didn&amp;rsquo;t have enough time to prepare, so all the proofs were handwritten, very flexible. That works well.&lt;/p&gt;
-&lt;p&gt;This seminar is about homological algebra, using Joseph J. Rotman, &lt;em&gt;An Introduction to Homological Algebra&lt;/em&gt; as our main reading material. My part is section 4.1 &amp;amp; 4.2, talking about semisimple rings with projective and injective modules, and von Neumann regular rings with flat modules. Somewhat easy.&lt;/p&gt;
-</description>
-            </item>
-        
-            <item>
-                <title>About the site</title>
-                <link>/en/about/site/</link>
-                <pubDate>2019-01-01</pubDate>
-                
-                <guid>/en/about/site/</guid>
-                <description>&lt;p&gt;Tags
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Zero's Ivory Tower</title><link>/en/</link><description>Recent Content | Zero's Ivory Tower</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>
+2020-05-22</lastBuildDate><item><title>Slides for my seminar of homological algebra</title><link>/en/20030/</link><pubDate>2020-05-22</pubDate><guid>/en/20030/</guid><description>&lt;p>All the seminars were held online this semester because everyone were in quarantine. I don&amp;rsquo;t have a pad letting me write on it when give a live broadcast, so I prepared these slides. Using slides is faster than writing on a blackboard, so it took me only one hour to finish this talk. Some proofs are a bit long and I didn&amp;rsquo;t have enough time to prepare, so all the proofs were handwritten, very flexible. That works well.&lt;/p>
+&lt;p>This seminar is about homological algebra, using Joseph J. Rotman, &lt;em>An Introduction to Homological Algebra&lt;/em> as our main reading material. My part is section 4.1 &amp;amp; 4.2, talking about semisimple rings with projective and injective modules, and von Neumann regular rings with flat modules. Somewhat easy.&lt;/p></description></item><item><title>About the site</title><link>/en/about/site/</link><pubDate>2019-01-01</pubDate><guid>/en/about/site/</guid><description>&lt;p>Tags
 Categories
-So on.&lt;/p&gt;
-</description>
-            </item>
-        
-            <item>
-                <title>About me</title>
-                <link>/en/about/me/</link>
-                <pubDate>2000-01-01</pubDate>
-                
-                <guid>/en/about/me/</guid>
-                <description>&lt;p&gt;You shouldn&amp;rsquo;t try to know me.&lt;/p&gt;
-</description>
-            </item>
-        
-    </channel>
-</rss>
+So on.&lt;/p></description></item><item><title>About me</title><link>/en/about/me/</link><pubDate>2000-01-01</pubDate><guid>/en/about/me/</guid><description>&lt;p>You shouldn&amp;rsquo;t try to know me.&lt;/p></description></item></channel></rss>

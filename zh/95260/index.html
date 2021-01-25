@@ -1,252 +1,40 @@
 <!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8"/>
-<meta content="width=divice-width, initial-scale=1.0" name="viewport"/>
-<meta content="Hugo 0.79.0" name="generator"/>
-<title>
-        
-    把豆伴的 Chrome 插件转为 Firefox 插件（未成功）
- | 赤赤的象牙塔
-    </title>
-<link href="../../css/base.css" rel="stylesheet" type="text/css"/>
-<link href="../../css/small.css" media="screen and (max-width: 1200px)" rel="stylesheet" type="text/css"/>
-<link href="../../css/normal.css" media="screen and (min-width: 1201px)" rel="stylesheet" type="text/css"/>
-<link href="../../css/syntax.css" rel="stylesheet" type="text/css"/>
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-143006759-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async="" src="https://www.google-analytics.com/analytics.js"></script>
-<script async="" data-goatcounter="https://zerovip.goatcounter.com/count" src="//gc.zgo.at/count.js"></script>
-</head>
-<body class="theme-container">
-<div class="bar_for_phone">
-<div class="bar_left_button">
-<div class="left_button_for_bar" onclick="ChangeClassLeft()">
-<div class="bar1"></div>
-<div class="bar2"></div>
-<div class="bar3"></div>
-</div>
-</div>
-<div class="bar_title">
-<a href="../../zh/">赤赤的象牙塔</a>
-</div>
-<div class="bar_right_button">
-<button class="toc_title_for_bar" onclick="ChangeClassTOC()">目录</button>
-</div>
-</div>
-<div class="body_for_pc">
-<div class="left" id="left">
-<div class="left_non-footer">
-<div class="left_non-footer_option">
-<div class="theme-switch">
-<label class="switch">
-<input checked="" class="theme-switcher" type="checkbox"/>
-<span class="slider round"></span>
-</label>
-</div>
-<li><br/></li>
-<li class="left_non-footer_option_active">简体中文 ⦿ </li>
-<li class="left_non-footer_option_non-active">English ⨂ </li>
-<li class="left_non-footer_option_non-active">Français ⨂ </li>
-<li><br/></li>
-<li class="left_non-footer_option_non-active">RSS 订阅 ⨂ </li>
-<li><br/></li>
-</div>
-<div class="left_non-footer_head">
-<div class="left_non-footer_head_title"><a href="../../zh/">赤赤的象牙塔</a></div>
-<div class="left_non-footer_head_subtitle">(●’◡’●)ﾉ</div>
-</div>
-<div class="left_non-footer_main">
-<div class="h1">
-<a href="../../zh/math/">数学</a>
-</div>
-<div class="h2">
-<a href="../../zh/math/notes/">数学笔记 </a>
-</div>
-<div class="h2">
-<a href="../../zh/math/stories/">数学科普 </a>
-</div>
-<div class="h1 active">
-<a href="../../zh/non-math/">非数学</a>
-</div>
-<div class="h2">
-<a href="../../zh/non-math/journal/">日志 </a>
-</div>
-<div class="h2">
-<a href="../../zh/non-math/literature/">写作 </a>
-</div>
-<div class="h2 active">
-<a href="../../zh/non-math/memos/">备忘 </a>
-</div>
-<div class="h1">
-<a href="../../zh/about/">关于</a>
-</div>
-<div class="h2">
-<a href="../../zh/about/me/">关于我 </a>
-</div>
-<div class="h2">
-<a href="../../zh/about/site/">关于本站 </a>
-</div>
-</div>
-</div>
-<div class="left_footer">
-<div class="copyright">©2019-2021 版权所有.</div>
-</div>
-</div>
-<div class="right">
-<div class="right_head">
-<div class="right_head_title">
-            把豆伴的 Chrome 插件转为 Firefox 插件（未成功）
-        </div>
-<div class="right_head_des">
-            2020-09-05 - 2846 字
-        </div>
-</div>
-<div class="right_main">
-<div class="right_main_article">
-<p>我是一个豆瓣用户，我会用到一款豆友开发的备份插件：
-<a href="https://blog.doufen.org/posts/tofu-user-guide/" rel="noreferrer noopener" target="_blank">
-    豆伴
-    
-        <b>⧉ </b>
-</a>
-. 这里顺带一提，我看好多友邻都管这个插件叫“豆坟”，实际上这个插件叫“豆伴”；“豆坟”是这个项目的名字，这个项目还包括了浏览器，浏览器的名字倒是叫“豆坟”. 话说回来，这个插件只支持 Chrome 浏览器，而我是一个 Firefox 用户. 在额外安装了 Chrome 浏览器并仔细体验了一下这个插件后，我表示我太爱这个插件了！但我不爱 Chrome 浏览器，我想着能不能把它移植到 Firefox 上. 我对浏览器插件开发一窍不通，前端只会最最最基本的 HTML、CSS 和 JavaScript. 但我想着，还是试试吧，这篇文章就是我的尝试过程，是一篇流水帐.</p>
-<p>我是一边捣鼓一边写这篇文章的，结果最后没能成功. 好吧，这是一篇失败的流水帐，虽然还没有做太多努力和尝试. 未来我有时间会再次捡起这个问题再尝试一回的！</p>
-<h1 id="搜索">搜索</h1>
-<p>在搜索引擎中对这个问题进行搜索，发现了一篇 Firefox 的官方文档：
-<a href="https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/" rel="noreferrer noopener" target="_blank">
-    Porting a Google Chrome extension
-    
-        <b>⧉ </b>
-</a>
+<html><head><meta charset="utf-8"/><meta content="width=divice-width,initial-scale=1" name="viewport"/><meta content="Hugo 0.79.0" name="generator"/><title>把豆伴的 Chrome 插件转为 Firefox 插件（未成功）
+| 赤赤的象牙塔</title><link href="../../css/base.css" rel="stylesheet" type="text/css"/><link href="../../css/small.css" media="screen and (max-width: 1200px)" rel="stylesheet" type="text/css"/><link href="../../css/normal.css" media="screen and (min-width: 1201px)" rel="stylesheet" type="text/css"/><link href="../../css/syntax.css" rel="stylesheet" type="text/css"/><script type="application/javascript">var doNotTrack=false;if(!doNotTrack){window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;ga('create','UA-143006759-1','auto');ga('send','pageview');}</script><script async="" src="https://www.google-analytics.com/analytics.js"></script><script async="" data-goatcounter="https://zerovip.goatcounter.com/count" src="//gc.zgo.at/count.js"></script></head><body class="theme-container"><div class="bar_for_phone"><div class="bar_left_button"><div class="left_button_for_bar" onclick="ChangeClassLeft()"><div class="bar1"></div><div class="bar2"></div><div class="bar3"></div></div></div><div class="bar_title"><a href="../../zh/">赤赤的象牙塔</a></div><div class="bar_right_button"><button class="toc_title_for_bar" onclick="ChangeClassTOC()">目录</button></div></div><div class="body_for_pc"><div class="left" id="left"><div class="left_non-footer"><div class="left_non-footer_option"><div class="theme-switch"><label class="switch"><input checked="" class="theme-switcher" type="checkbox"/>
+<span class="slider round"></span></label></div><li><br/></li><li class="left_non-footer_option_active">简体中文 ⦿</li><li class="left_non-footer_option_non-active">English ⨂</li><li class="left_non-footer_option_non-active">Français ⨂</li><li><br/></li><li class="left_non-footer_option_non-active">RSS 订阅 ⨂</li><li><br/></li></div><div class="left_non-footer_head"><div class="left_non-footer_head_title"><a href="../../zh/">赤赤的象牙塔</a></div><div class="left_non-footer_head_subtitle">(●’◡’●)ﾉ</div></div><div class="left_non-footer_main"><div class="h1"><a href="../../zh/math/">数学</a></div><div class="h2"><a href="../../zh/math/notes/">数学笔记</a></div><div class="h2"><a href="../../zh/math/stories/">数学科普</a></div><div class="h1 active"><a href="../../zh/non-math/">非数学</a></div><div class="h2"><a href="../../zh/non-math/journal/">日志</a></div><div class="h2"><a href="../../zh/non-math/literature/">写作</a></div><div class="h2 active"><a href="../../zh/non-math/memos/">备忘</a></div><div class="h1"><a href="../../zh/about/">关于</a></div><div class="h2"><a href="../../zh/about/me/">关于我</a></div><div class="h2"><a href="../../zh/about/site/">关于本站</a></div></div></div><div class="left_footer"><div class="copyright">©2019-2021 版权所有.</div></div></div><div class="right"><div class="right_head"><div class="right_head_title">把豆伴的 Chrome 插件转为 Firefox 插件（未成功）</div><div class="right_head_des">2020-09-05 - 2846 字</div></div><div class="right_main"><div class="right_main_article"><p>我是一个豆瓣用户，我会用到一款豆友开发的备份插件：
+<a href="https://blog.doufen.org/posts/tofu-user-guide/" rel="noreferrer noopener" target="_blank">豆伴
+<b>⧉</b></a>
+. 这里顺带一提，我看好多友邻都管这个插件叫“豆坟”，实际上这个插件叫“豆伴”；“豆坟”是这个项目的名字，这个项目还包括了浏览器，浏览器的名字倒是叫“豆坟”. 话说回来，这个插件只支持 Chrome 浏览器，而我是一个 Firefox 用户. 在额外安装了 Chrome 浏览器并仔细体验了一下这个插件后，我表示我太爱这个插件了！但我不爱 Chrome 浏览器，我想着能不能把它移植到 Firefox 上. 我对浏览器插件开发一窍不通，前端只会最最最基本的 HTML、CSS 和 JavaScript. 但我想着，还是试试吧，这篇文章就是我的尝试过程，是一篇流水帐.</p><p>我是一边捣鼓一边写这篇文章的，结果最后没能成功. 好吧，这是一篇失败的流水帐，虽然还没有做太多努力和尝试. 未来我有时间会再次捡起这个问题再尝试一回的！</p><h1 id="搜索">搜索</h1><p>在搜索引擎中对这个问题进行搜索，发现了一篇 Firefox 的官方文档：
+<a href="https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/" rel="noreferrer noopener" target="_blank">Porting a Google Chrome extension
+<b>⧉</b></a>
 、Quora 上的一个问题：
-<a href="https://www.quora.com/Whats-the-easiest-way-to-convert-a-Chrome-Extension-to-a-Firefox-Extension" rel="noreferrer noopener" target="_blank">
-    What’s the easiest way to convert a Chrome extension to a Firefox extension?
-    
-        <b>⧉ </b>
-</a>
+<a href="https://www.quora.com/Whats-the-easiest-way-to-convert-a-Chrome-Extension-to-a-Firefox-Extension" rel="noreferrer noopener" target="_blank">What’s the easiest way to convert a Chrome extension to a Firefox extension?
+<b>⧉</b></a>
 ，还有一篇知乎上的文章：
-<a href="https://zhuanlan.zhihu.com/p/163535578" rel="noreferrer noopener" target="_blank">
-    利用Firefox开发者网站，转换Chrome插件为Firefox插件
-    
-        <b>⧉ </b>
-</a>
-.</p>
-<h1 id="兼容性检查">兼容性检查</h1>
-<p>Quora 上的答案让我有点灰心，大家都是说没有这样的工具，有些东西不兼容云云. 但 Firefox 的文档给了我很强的信心，它说大多数情况下只需要很少的改动就可以了（Extensions written for these browsers will, in most cases, run in Firefox with just a few changes）. 接着往下读，第 1 步它说让我检查 menifest.json 的设置和 Chrome 的接口看看有没有什么是不兼容的，但代码不是我写的，Chrome 的接口特性我也完全不知道，幸好它提供了一个
-<a href="https://www.extensiontest.com/" rel="noreferrer noopener" target="_blank">
-    自动工具：Extension Compatibility Test for Firefox
-    
-        <b>⧉ </b>
-</a>
-. 可惜的是它只支持 .crx 格式文件上传，而豆伴插件只提供了 .zip 格式下载. 再查了一下，.crx 其实本质就是一个 .zip，只不过又额外添加了插件描述、ID、密钥等信息. 于是我就明目张胆地在选择 .crx 文件时把豆伴的 .zip 文件传了上去. 好消息出现了：Great news! Your extension is compatible with Firefox. 接下来就是测试了.</p>
-<h1 id="临时测试">临时测试</h1>
-<p>依然按照官方文档第 2 步给出的 
-<a href="https://developer.mozilla.org/zh-CN/docs/Tools/about:debugging" rel="noreferrer noopener" target="_blank">
-    about: debugging 帮助
-    
-        <b>⧉ </b>
-</a>
-，在地址栏输入 <code>about:debugging</code> 进入调试页面. 由于是要调试本地的 Firefox，点击“此 Firefox”链接，即 <code>about:debugging#/runtime/this-firefox</code> 进入到本地调试的页面. 然后点击“载入临时附加组件”，把从豆坟官网下载好的 <code>tofu-0.8.2.zip</code> 导入进去. 第一个错误出现了：File …/tofu-0.8.2.zip does not contain a valid manifest. 意思是里面不含有合法的 manifest.</p>
-<h1 id="重新打包">重新打包</h1>
-<p>解压缩看了一下，里面是有一个 manifest.json 的，而且打开看了一下觉得也没什么太大的问题，怀疑可能是压缩时的编码问题，所以尝试重新打包. 也是安装 Firefox 官方文档：
-<a href="https://extensionworkshop.com/documentation/publish/package-your-extension/" rel="noreferrer noopener" target="_blank">
-    Package your extension
-    
-        <b>⧉ </b>
-</a>
- 的指示重新对解压后的文件进行了打包. 具体地讲，因为我是 Linux 用户，我就按照其中 Linux / Mac OSX Terminal 部分的指示，先进入文件目录（<code>cd tofu-0.8.2</code>）再使用命令：<code>zip -r -FS ../tofu-zero-test.zip * --exclude '*.git*'</code>. 重新打包好后，重新在本地调试处上传，这下就没有错误了，只是弹出了两个警告：</p>
-<blockquote>
-<p>Reading manifest: Warning processing version_name: An unexpected property was found in the WebExtension manifest.</p>
-</blockquote>
-<p>但也没有具体说是哪一行的问题，暂且就先不管它，认为是成功了吧.</p>
-<h1 id="测试备份">测试备份</h1>
-<p>于是就来到了第 3 步：测试. 我试着用了一下. 第一个问题是设置不能保存：比如我设置抓取间隔为 5 秒，并设置好我的 cloudinary 的名字，但点击保存（提示：设置成功！）之后再打开设置依然是没有设置的状态. 不知道是设置成功了但没有显示成功还是压根就没有设置成功. 第二个问题是好像这个插件没法读取 cookie，明明已经登录了豆瓣，它却还认为我没有登录，在它的帐号页面登录之后，再打开又变成了没有登录的状态，我突然怀疑第一个问题其实也是读取 cookie 的问题？</p>
-<p>无论如何，新建任务直接跑起来看看：看上去没有任何问题. 浏览数据、导出数据都没有任何问题. 导出的数据也没有任何问题. 有问题的话可以根据第 4 步联系官方，但我的问题应该还不至于到这一步，因为目前只有设置有问题，可以先暂时忽略它.</p>
-<h1 id="发布">发布</h1>
-<p>本来按照第 5 步应该是进行打包，不过这一步我在上面已经做过了. 这里直接来到第 6 步，发布. 到这里其实就和之前查到的那篇知乎文章完美衔接了. 按照官方文档：
-<a href="https://extensionworkshop.com/documentation/publish/submitting-an-add-on/" rel="noreferrer noopener" target="_blank">
-    Submitting an add-on
-    
-        <b>⧉ </b>
-</a>
- 或知乎的文章都是一样的，无非就是登入帐号，到开发者中心
-<a href="https://addons.mozilla.org/zh-CN/developers/addon/submit/upload-unlisted" rel="noreferrer noopener" target="_blank">
-    提交附加组件
-    
-        <b>⧉ </b>
-</a>
-. 上传了 .zip 包之后，没想到这里出现了 1 个错误和 13 个警告.</p>
-<h1 id="解决错误">解决错误</h1>
-<p>好吧，这里出现的错误终于写出来是错在哪了，感觉这个检测工具比调试工具好用的多——那个调试的开发者工具里好几屏的错误和警告信息真的搞得人不知道该怎么下手. 先来看看那一个错误：</p>
-<blockquote>
-<p>There is a JavaScript syntax error in your code; validation cannot continue on this file.</p>
-</blockquote>
-<p>居然有一个语法错误？我怎么这么不相信呢. 看看是哪个文件的问题：vendor/dexie.js 第 4465 行，第 1 列. 无论如何，打开文件看一看. 其实看到这个行数 4465，我就想喊一声谢天谢地了，写这个 js 的作者也太好心了，没有对 js 进行压缩，依然保持了人类可读的格式. 定位到 4465 行一看，这居然是这份 js 的最后一条语句了，是 <code>export default Dexie;</code>. 这里我就产生了一个疑问，这看上去并不是语法错误啊，难道是 Firefox 不支持么？检查用关键词搜索了一番，没有找到我想要的答案. 好吧，先搜一搜这个 dexie.js 工具，看看它是干什么的.</p>
-<p>这个倒是容易搜索到，主页在
-<a href="https://dexie.org/" rel="noreferrer noopener" target="_blank">
-    这里
-    
-        <b>⧉ </b>
-</a>
+<a href="https://zhuanlan.zhihu.com/p/163535578" rel="noreferrer noopener" target="_blank">利用Firefox开发者网站，转换Chrome插件为Firefox插件
+<b>⧉</b></a>
+.</p><h1 id="兼容性检查">兼容性检查</h1><p>Quora 上的答案让我有点灰心，大家都是说没有这样的工具，有些东西不兼容云云. 但 Firefox 的文档给了我很强的信心，它说大多数情况下只需要很少的改动就可以了（Extensions written for these browsers will, in most cases, run in Firefox with just a few changes）. 接着往下读，第 1 步它说让我检查 menifest.json 的设置和 Chrome 的接口看看有没有什么是不兼容的，但代码不是我写的，Chrome 的接口特性我也完全不知道，幸好它提供了一个
+<a href="https://www.extensiontest.com/" rel="noreferrer noopener" target="_blank">自动工具：Extension Compatibility Test for Firefox
+<b>⧉</b></a>
+. 可惜的是它只支持 .crx 格式文件上传，而豆伴插件只提供了 .zip 格式下载. 再查了一下，.crx 其实本质就是一个 .zip，只不过又额外添加了插件描述、ID、密钥等信息. 于是我就明目张胆地在选择 .crx 文件时把豆伴的 .zip 文件传了上去. 好消息出现了：Great news! Your extension is compatible with Firefox. 接下来就是测试了.</p><h1 id="临时测试">临时测试</h1><p>依然按照官方文档第 2 步给出的
+<a href="https://developer.mozilla.org/zh-CN/docs/Tools/about:debugging" rel="noreferrer noopener" target="_blank">about: debugging 帮助
+<b>⧉</b></a>
+，在地址栏输入 <code>about:debugging</code> 进入调试页面. 由于是要调试本地的 Firefox，点击“此 Firefox”链接，即 <code>about:debugging#/runtime/this-firefox</code> 进入到本地调试的页面. 然后点击“载入临时附加组件”，把从豆坟官网下载好的 <code>tofu-0.8.2.zip</code> 导入进去. 第一个错误出现了：File &amp;mldr;/tofu-0.8.2.zip does not contain a valid manifest. 意思是里面不含有合法的 manifest.</p><h1 id="重新打包">重新打包</h1><p>解压缩看了一下，里面是有一个 manifest.json 的，而且打开看了一下觉得也没什么太大的问题，怀疑可能是压缩时的编码问题，所以尝试重新打包. 也是安装 Firefox 官方文档：
+<a href="https://extensionworkshop.com/documentation/publish/package-your-extension/" rel="noreferrer noopener" target="_blank">Package your extension
+<b>⧉</b></a>
+的指示重新对解压后的文件进行了打包. 具体地讲，因为我是 Linux 用户，我就按照其中 Linux / Mac OSX Terminal 部分的指示，先进入文件目录（<code>cd tofu-0.8.2</code>）再使用命令：<code>zip -r -FS ../tofu-zero-test.zip * --exclude '*.git*'</code>. 重新打包好后，重新在本地调试处上传，这下就没有错误了，只是弹出了两个警告：</p><blockquote><p>Reading manifest: Warning processing version_name: An unexpected property was found in the WebExtension manifest.</p></blockquote><p>但也没有具体说是哪一行的问题，暂且就先不管它，认为是成功了吧.</p><h1 id="测试备份">测试备份</h1><p>于是就来到了第 3 步：测试. 我试着用了一下. 第一个问题是设置不能保存：比如我设置抓取间隔为 5 秒，并设置好我的 cloudinary 的名字，但点击保存（提示：设置成功！）之后再打开设置依然是没有设置的状态. 不知道是设置成功了但没有显示成功还是压根就没有设置成功. 第二个问题是好像这个插件没法读取 cookie，明明已经登录了豆瓣，它却还认为我没有登录，在它的帐号页面登录之后，再打开又变成了没有登录的状态，我突然怀疑第一个问题其实也是读取 cookie 的问题？</p><p>无论如何，新建任务直接跑起来看看：看上去没有任何问题. 浏览数据、导出数据都没有任何问题. 导出的数据也没有任何问题. 有问题的话可以根据第 4 步联系官方，但我的问题应该还不至于到这一步，因为目前只有设置有问题，可以先暂时忽略它.</p><h1 id="发布">发布</h1><p>本来按照第 5 步应该是进行打包，不过这一步我在上面已经做过了. 这里直接来到第 6 步，发布. 到这里其实就和之前查到的那篇知乎文章完美衔接了. 按照官方文档：
+<a href="https://extensionworkshop.com/documentation/publish/submitting-an-add-on/" rel="noreferrer noopener" target="_blank">Submitting an add-on
+<b>⧉</b></a>
+或知乎的文章都是一样的，无非就是登入帐号，到开发者中心
+<a href="https://addons.mozilla.org/zh-CN/developers/addon/submit/upload-unlisted" rel="noreferrer noopener" target="_blank">提交附加组件
+<b>⧉</b></a>
+. 上传了 .zip 包之后，没想到这里出现了 1 个错误和 13 个警告.</p><h1 id="解决错误">解决错误</h1><p>好吧，这里出现的错误终于写出来是错在哪了，感觉这个检测工具比调试工具好用的多——那个调试的开发者工具里好几屏的错误和警告信息真的搞得人不知道该怎么下手. 先来看看那一个错误：</p><blockquote><p>There is a JavaScript syntax error in your code; validation cannot continue on this file.</p></blockquote><p>居然有一个语法错误？我怎么这么不相信呢. 看看是哪个文件的问题：vendor/dexie.js 第 4465 行，第 1 列. 无论如何，打开文件看一看. 其实看到这个行数 4465，我就想喊一声谢天谢地了，写这个 js 的作者也太好心了，没有对 js 进行压缩，依然保持了人类可读的格式. 定位到 4465 行一看，这居然是这份 js 的最后一条语句了，是 <code>export default Dexie;</code>. 这里我就产生了一个疑问，这看上去并不是语法错误啊，难道是 Firefox 不支持么？检查用关键词搜索了一番，没有找到我想要的答案. 好吧，先搜一搜这个 dexie.js 工具，看看它是干什么的.</p><p>这个倒是容易搜索到，主页在
+<a href="https://dexie.org/" rel="noreferrer noopener" target="_blank">这里
+<b>⧉</b></a>
 ，看介绍是好像是负责数据库的. 顺藤摸瓜，通过 GitHub 上的
-<a href="https://github.com/dfahlander/Dexie.js#hello-world" rel="noreferrer noopener" target="_blank">
-    示例代码 hello-world
-    
-        <b>⧉ </b>
-</a>
- 找到这份 js 的
-<a href="https://unpkg.com/dexie@latest/dist/dexie.js" rel="noreferrer noopener" target="_blank">
-    在线版本：https://unpkg.com/dexie@latest/dist/dexie.js
-    
-        <b>⧉ </b>
-</a>
-，打开一看，它的最后一行语句并不是 <code>export default Dexie;</code>，难道是豆伴的作者对它进行了魔改？可是我又随便比较了一下，感觉不一样的地方太多了，回到顶上一看版本信息，好嘛，豆伴使用的代码居然没写版本信息，只是一行没有替换的 <code>Version {version}, {date}</code>，在线的版本已经到 3.0.2 了. 姑且就认为是 dexie 的作者重新写了一版吧.</p>
-<p>按照一般的软件升级一定会向下兼容接口，这份新版的 dexie.js 又没有那令人崩溃的 export 语法错误，我决定用新版替换一下. 然后重新打包 <code>zip -r -FS ../tofu-0.8.2.1.zip * --exclude '*.git*'</code>，这里我在版本号后面又加了一个 .1 做了额外区分，然后重新上传——</p>
-<blockquote>
-<p>您的附加组件已通过验证，无错误，有 13 条警告.</p>
-</blockquote>
-<p>我长舒一口气. 13 条警告先不管了.</p>
-<h1 id="继续签名提交并测试">继续签名提交并测试</h1>
-<p>按照知乎文章的提示，我暂时只选择了兼容 Firefox（没选兼容 Firefox Android 版），点击“签名附加组件”，不提交源码——毕竟我不是这个插件的作者. 转至我的提交后，果然已经核准，一秒钟都没用，知乎文章诚不我欺！</p>
-<p>这时我迫不及待地想要再次测试一番，看一看之前的问题会不会因为我替换了 dexie.js 而得到解决，又或者我的替换带来了新的问题？结果果然没有让我失望呢！添加组件后点击豆伴图标正常得到了菜单列表，但任何一个选项都打不开了呢！</p>
-<p>把新打包的文件导入到 <code>about:debugging#/runtime/this-firefox</code> 里，确实有这个问题，看来是我的替换带来了问题呢！</p>
-<h1 id="todo">TODO</h1>
-<p>本来生气地想我自己学一下写一个插件算了，因为看上去也就是一个爬虫的事儿. 结果看了看人家的代码，应该是用了好多现成的 js 库什么的，我要是写的话恐怕全是想自己实现了，应该是很难达到同样的功能的. 所以等我有时间了可以好好排查一下这个神奇的 dexie.js 以及那个神奇的 export 语法错误，再解决解决这 13 个警告的问题，看一看那些菜单的点击代码，能不能快速修一下之类的. 至少在没能成功移植的日子里，我还是能通过临时扩展的方法（<code>about:debugging#/runtime/this-firefox</code>）来备份豆瓣的.</p>
-<p></p><p></p><p></p><p></p>
-</div>
-</div>
-<div class="right_comments">
-<script async="" crossorigin="anonymous" issue-term="pathname" repo="zerovip/bcsu" src="https://utteranc.es/client.js" theme="github-light">
-</script>
-</div>
-</div>
-<div class="toc" id="toc">
-<button class="toc_title">目录</button>
-<div class="toc_content">
-<nav id="TableOfContents">
-<ul>
-<li><a href="#搜索">搜索</a></li>
-<li><a href="#兼容性检查">兼容性检查</a></li>
-<li><a href="#临时测试">临时测试</a></li>
-<li><a href="#重新打包">重新打包</a></li>
-<li><a href="#测试备份">测试备份</a></li>
-<li><a href="#发布">发布</a></li>
-<li><a href="#解决错误">解决错误</a></li>
-<li><a href="#继续签名提交并测试">继续签名提交并测试</a></li>
-<li><a href="#todo">TODO</a></li>
-</ul>
-</nav>
-</div>
-</div>
-</div>
-<script src="../../js/main.js" type="text/javascript"></script>
-</body>
-</html>
+<a href="https://github.com/dfahlander/Dexie.js#hello-world" rel="noreferrer noopener" target="_blank">示例代码 hello-world
+<b>⧉</b></a>
+找到这份 js 的
+<a href="https://unpkg.com/dexie@latest/dist/dexie.js" rel="noreferrer noopener" target="_blank">在线版本：https://unpkg.com/dexie@latest/dist/dexie.js
+<b>⧉</b></a>
+，打开一看，它的最后一行语句并不是 <code>export default Dexie;</code>，难道是豆伴的作者对它进行了魔改？可是我又随便比较了一下，感觉不一样的地方太多了，回到顶上一看版本信息，好嘛，豆伴使用的代码居然没写版本信息，只是一行没有替换的 <code>Version {version}, {date}</code>，在线的版本已经到 3.0.2 了. 姑且就认为是 dexie 的作者重新写了一版吧.</p><p>按照一般的软件升级一定会向下兼容接口，这份新版的 dexie.js 又没有那令人崩溃的 export 语法错误，我决定用新版替换一下. 然后重新打包 <code>zip -r -FS ../tofu-0.8.2.1.zip * --exclude '*.git*'</code>，这里我在版本号后面又加了一个 .1 做了额外区分，然后重新上传——</p><blockquote><p>您的附加组件已通过验证，无错误，有 13 条警告.</p></blockquote><p>我长舒一口气. 13 条警告先不管了.</p><h1 id="继续签名提交并测试">继续签名提交并测试</h1><p>按照知乎文章的提示，我暂时只选择了兼容 Firefox（没选兼容 Firefox Android 版），点击“签名附加组件”，不提交源码——毕竟我不是这个插件的作者. 转至我的提交后，果然已经核准，一秒钟都没用，知乎文章诚不我欺！</p><p>这时我迫不及待地想要再次测试一番，看一看之前的问题会不会因为我替换了 dexie.js 而得到解决，又或者我的替换带来了新的问题？结果果然没有让我失望呢！添加组件后点击豆伴图标正常得到了菜单列表，但任何一个选项都打不开了呢！</p><p>把新打包的文件导入到 <code>about:debugging#/runtime/this-firefox</code> 里，确实有这个问题，看来是我的替换带来了问题呢！</p><h1 id="todo">TODO</h1><p>本来生气地想我自己学一下写一个插件算了，因为看上去也就是一个爬虫的事儿. 结果看了看人家的代码，应该是用了好多现成的 js 库什么的，我要是写的话恐怕全是想自己实现了，应该是很难达到同样的功能的. 所以等我有时间了可以好好排查一下这个神奇的 dexie.js 以及那个神奇的 export 语法错误，再解决解决这 13 个警告的问题，看一看那些菜单的点击代码，能不能快速修一下之类的. 至少在没能成功移植的日子里，我还是能通过临时扩展的方法（<code>about:debugging#/runtime/this-firefox</code>）来备份豆瓣的.</p><p></p><p></p><p></p><p></p></div></div><div class="right_comments"><script async="" crossorigin="anonymous" issue-term="pathname" repo="zerovip/bcsu" src="https://utteranc.es/client.js" theme="github-light"></script></div></div><div class="toc" id="toc"><button class="toc_title">目录</button><div class="toc_content"><nav id="TableOfContents"><ul><li><a href="#搜索">搜索</a></li><li><a href="#兼容性检查">兼容性检查</a></li><li><a href="#临时测试">临时测试</a></li><li><a href="#重新打包">重新打包</a></li><li><a href="#测试备份">测试备份</a></li><li><a href="#发布">发布</a></li><li><a href="#解决错误">解决错误</a></li><li><a href="#继续签名提交并测试">继续签名提交并测试</a></li><li><a href="#todo">TODO</a></li></ul></nav></div></div></div><script src="../../js/main.js" type="text/javascript"></script></body></html>
