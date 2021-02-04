@@ -1172,6 +1172,8 @@ Sony DPT-RP1
 &lt;b>⧉ &lt;/b>
 &lt;/a>
 &lt;/th>
+&lt;th>Fujitsu Quadero A4&lt;/th>
+&lt;th>mooInk Pro 13.3 寸&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
@@ -1180,17 +1182,23 @@ Sony DPT-RP1
 &lt;td>188 × 246 × 4.7 mm&lt;/td>
 &lt;td>177 × 256 × 6.7 mm&lt;/td>
 &lt;td>224 × 302.6 × 5.9 mm&lt;/td>
+&lt;td>224 × 302.6 × 5.9 mm&lt;/td>
+&lt;td>224 × 302.6 × 5.7 mm&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>重量&lt;/td>
 &lt;td>350 g&lt;/td>
 &lt;td>403.5 g&lt;/td>
 &lt;td>349 g&lt;/td>
+&lt;td>350 g&lt;/td>
+&lt;td>352 g&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>屏幕大小&lt;/td>
 &lt;td>10.3″&lt;/td>
 &lt;td>10.3″&lt;/td>
+&lt;td>13.3″&lt;/td>
+&lt;td>13.3″&lt;/td>
 &lt;td>13.3″&lt;/td>
 &lt;/tr>
 &lt;tr>
@@ -1205,36 +1213,62 @@ PPI
 &lt;b>⧉ &lt;/b>
 &lt;/a>
 ) 16 级灰度&lt;/td>
+&lt;td>1650 × 2200 (207 PPI) 16 级灰度&lt;/td>
+&lt;td>1650 × 2200 (206 DPI) 16 级灰度&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>存储空间&lt;/td>
 &lt;td>8 GB&lt;/td>
 &lt;td>8 GB&lt;/td>
 &lt;td>16 GB eMMC&lt;/td>
+&lt;td>16 GB&lt;/td>
+&lt;td>32 GB&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>操作系统&lt;/td>
 &lt;td>Codex, a custom Linux-based OS&lt;/td>
 &lt;td>Codex, a custom Linux-based OS&lt;/td>
 &lt;td>封闭 Android&lt;/td>
+&lt;td>封闭 Android 7.1&lt;/td>
+&lt;td>（暂时未知）&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>内存&lt;/td>
 &lt;td>1 GB LPDDR3 SDRAM&lt;/td>
 &lt;td>512 MB DDR3L RAM&lt;/td>
 &lt;td>1 GB LPDDR3&lt;/td>
+&lt;td>1 GB&lt;/td>
+&lt;td>2 GB&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>处理器&lt;/td>
 &lt;td>1.2 GHz dual core ARM&lt;/td>
 &lt;td>1 GHz ARM A9 CPU&lt;/td>
 &lt;td>1.2GHz quad-core Marvell IAP140 64-bit Iot&lt;/td>
+&lt;td>
+&lt;a href="https://goodereader.com/blog/product/fujitsu-quaderno-a4-13-3-digital-paper-e-reader-english-white"
+target="_blank" rel="noreferrer noopener"
+>
+1.2GHz quad-core Marvell IAP140 64-bit Iot 和 ARM Cortex-A53，还有一个单独的低电量使用的 Cortex M3
+&lt;b>⧉ &lt;/b>
+&lt;/a>
+&lt;/td>
+&lt;td>1.2 GHz × 4 core&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>电池&lt;/td>
 &lt;td>3000 mAh&lt;/td>
 &lt;td>3000 mAh&lt;/td>
 &lt;td>（没找到）&lt;/td>
+&lt;td>（没找到）
+&lt;a href="https://goodereader.com/blog/reviews/fujitsu-quaderno-a4-hands-on-review"
+target="_blank" rel="noreferrer noopener"
+>
+笔有 1000 mAH 的电量
+&lt;b>⧉ &lt;/b>
+&lt;/a>
+&lt;/td>
+&lt;td>2000 mAh&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>充电接口&lt;/td>
@@ -1248,6 +1282,15 @@ target="_blank" rel="noreferrer noopener"
 ）USB-C (参数没找到)&lt;/td>
 &lt;td>（底部居中）Micro USB (5V, 1.5A)&lt;/td>
 &lt;td>（顶部居中）Micro USB (5V, 1.5A)&lt;/td>
+&lt;td>（
+&lt;a href="https://goodereader.com/blog/reviews/fujitsu-quaderno-a4-hands-on-review"
+target="_blank" rel="noreferrer noopener"
+>
+顶部居中
+&lt;b>⧉ &lt;/b>
+&lt;/a>
+）Micro USB&lt;/td>
+&lt;td>Micro USB（支持 OTG）（可能是 5 V, 1 A）&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>实体键&lt;/td>
@@ -1261,6 +1304,15 @@ target="_blank" rel="noreferrer noopener"
 有一个电源键，下面有下巴，但看不清下巴上是否有其他实体键&lt;/td>
 &lt;td>顶部居中有一个电源键，下面有下巴，下巴上有三个实体按键，分别是前一页、菜单、后一页&lt;/td>
 &lt;td>顶部居中有一个电源键，上面有额头，额头上一个菜单实体按键&lt;/td>
+&lt;td>
+&lt;a href="https://laptrinhx.com/fujitsu-quaderno-a4-13-3-inch-e-note-unboxing-2947095028/"
+target="_blank" rel="noreferrer noopener"
+>
+顶部电源键
+&lt;b>⧉ &lt;/b>
+&lt;/a>
+&lt;/td>
+&lt;td>（暂时未知）&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -1316,6 +1368,39 @@ target="_blank" rel="noreferrer noopener"
 &lt;figcaption>◉ 图. 一个笔误？&lt;/figcaption>
 &lt;/figure>
 &lt;/p>
+&lt;h3 id="补充两款产品fujitsu-quaderno-a4-和-mooink-pro">
+补充两款产品：Fujitsu Quaderno A4 和 mooInk Pro
+&lt;a href="#%e8%a1%a5%e5%85%85%e4%b8%a4%e6%ac%be%e4%ba%a7%e5%93%81fujitsu-quaderno-a4-%e5%92%8c-mooink-pro">&lt;small>¶&lt;/small>&lt;/a>
+&lt;/h3>
+&lt;div class='notation_color'>
+&lt;p>本小节补充于 2021 年 2 月 4 日.&lt;/div>&lt;/p>
+&lt;p>最近我又注意到了两款新产品，如本节标题所述.&lt;/p>
+&lt;p>据坊间传闻，Sony DPT 不再出新的产品，因为
+&lt;a href="https://www.zhihu.com/answer/1390262747"
+target="_blank" rel="noreferrer noopener"
+>
+Sony 关闭了美国的电子纸部门
+&lt;b>⧉ &lt;/b>
+&lt;/a>
+，这个时候出来了一个富士通（Fujitsu），而且它和 Sony 几乎一模一样，连 NFC 都有，两者还都是日本的企业，让我不禁猜测是 Sony 把产品线直接给了富士通. 然而富士通的新品对比 Sony DPT-RP1 变化不大，硬件没有升级，只是多了一个日程的功能，价格更加便宜，没有中文的本地化，产品里有英文的界面，但随产品附赠的纸质说明书、保修卡等都是日文的，购买起来不方便. 它的具体信息我已经添加到上面的表格中了，我也往 bilibili 上搬运了一个
+&lt;a href="https://www.bilibili.com/video/BV1va4y1p7Fp"
+target="_blank" rel="noreferrer noopener"
+>
+介绍视频
+&lt;b>⧉ &lt;/b>
+&lt;/a>
+.&lt;/p>
+&lt;p>mooInk Pro 是 readmoo 家的产品，主打的宣传语是全球唯一的繁体中文的阅读，有 10.3 寸的也有 13.3 寸的，前者和 reMarkable 一样大，后者和 Sony DPT-RP1 一样大. 我更关注大的，所以我主要看了 13.3 寸的那一款. 但非常奇怪的一点是，他们的主页上并没有给 13.3 寸的机器单独做一个页面，只是在
+&lt;a href="https://readmoo.com/mooink-series/compare"
+target="_blank" rel="noreferrer noopener"
+>
+产品比较页
+&lt;b>⧉ &lt;/b>
+&lt;/a>
+可以看到是有 13.3 寸那一款的. 具体的参数我已经补充到上面的表格中了，但具体功能我还没有细看，暂时还不知道笔是什么笔，是否需要充电；也暂时还不知道横屏并排阅读、记笔记的体验怎么样，但我在产品比较页对比了 13.3 寸和 10.3 寸的两款产品，“电子书阅读功能”这一项里面的内容是完全一致的——那就是说，如果 13.3 寸的产品像 Sony 的那款一样支持多种格式的横屏并排工作模式，那么 10.3 寸的那一款就同样支持？！（不过我暂时对这一点比较怀疑. 等我有时间的时候再好好看一看.）&lt;/p>
+&lt;div class='notation_color'>
+&lt;p>本小节补充内容结束，以下继续是 2020 年的原文.&lt;/div>&lt;/p>
+&lt;hr>
 &lt;p>下面对这两款产品的一切（软硬件）进行详细的（主观）对比：&lt;/p>
 &lt;table>
 &lt;thead>
@@ -3802,6 +3887,23 @@ target="_blank" rel="noreferrer noopener"
 &lt;b>⧉ &lt;/b>
 &lt;/a>
 的问题，而搜索到的一个博客. 惊奇地发现 ta 也在那个 Arch Linux CN 的 telegram 群里. 看了 ta 的一些博客，都写得非常有内容，而且还很有意思，语气很搞笑哈哈！值得关注！&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>
+&lt;a href="https://renyuneyun.gitlab.io/"
+target="_blank" rel="noreferrer noopener"
+>
+覆沉
+&lt;b>⧉ &lt;/b>
+&lt;/a>
+. 确切地说，是别人和我在 Mastodon 上讨论时援引了 ta 的一篇文章：
+&lt;a href="https://renyuneyun.gitlab.io/federated-sns.html"
+target="_blank" rel="noreferrer noopener"
+>
+互聯社交網絡
+&lt;b>⧉ &lt;/b>
+&lt;/a>
+. 读了 ta 的文章觉得很有收获，看 ta 的博客内容也很丰富，于是贴到这里.&lt;/p>
 &lt;/li>
 &lt;/ul>
 &lt;h1 id="数学">
