@@ -434,8 +434,8 @@ target="_blank" rel="noreferrer noopener"
 &lt;li>&lt;a href="https://fediverse.network/">https://fediverse.network/&lt;/a>.&lt;/li>
 &lt;li>&lt;a href="https://www.fediverse.space/instances">https://www.fediverse.space/instances&lt;/a>.&lt;/li>
 &lt;/ul>
-&lt;blockquote class="notation_color">&lt;p>注意：请不要在长毛象给出本文的链接. 出于个人隐私的考虑，本文首发于另一个平台，我在长毛象上的宣传也是用的那个平台的链接. 所以如果你在别的地方已经看到过这篇文章，又通过搜索引擎找到了这里，请不要在长毛象上声张，你自己偷偷知道我有这么个博客站就好了.&lt;/p>
-&lt;/blockquote></description></item><item><title>把豆伴的 Chrome 插件转为 Firefox 插件（未成功）</title><link>/zh/95260/</link><pubDate>2020-09-05</pubDate><guid>/zh/95260/</guid><description>&lt;p>我是一个豆瓣用户，我会用到一款豆友开发的备份插件：
+&lt;div class='notation_color'>
+&lt;p>注意：请不要在长毛象给出本文的链接. 出于个人隐私的考虑，本文首发于另一个平台，我在长毛象上的宣传也是用的那个平台的链接. 所以如果你在别的地方已经看到过这篇文章，又通过搜索引擎找到了这里，请不要在长毛象上声张，你自己偷偷知道我有这么个博客站就好了.&lt;/div>&lt;/p></description></item><item><title>把豆伴的 Chrome 插件转为 Firefox 插件（未成功）</title><link>/zh/95260/</link><pubDate>2020-09-05</pubDate><guid>/zh/95260/</guid><description>&lt;p>我是一个豆瓣用户，我会用到一款豆友开发的备份插件：
 &lt;a href="https://blog.doufen.org/posts/tofu-user-guide/"
 target="_blank" rel="noreferrer noopener"
 >
@@ -1115,19 +1115,19 @@ Boogie board 手写版
 &lt;a href="#%e5%90%84%e5%a4%a7%e5%8e%82%e5%95%86%e7%94%b5%e5%ad%90%e7%ba%b8%e7%9a%84%e6%96%b0%e4%ba%a7%e5%93%81">&lt;small>¶&lt;/small>&lt;/a>
 &lt;/h2>
 &lt;p>因为 E Ink 的彩色墨水屏技术已经成熟，近期电子纸的市场可能会出现新产品，包括 Sony、reMarkable 都听说（2020.03.06）要发布新产品，不如先观望一阵. 到时发布了新产品即便不好，旧产品也会降价.&lt;/p>
-&lt;blockquote class="notation_color">&lt;p>这篇文章刚写完 11 天，reMarkable 2 在 2020 年 3 月 17 日推出！详细的介绍请见
+&lt;div class='notation_color'>
+&lt;p>这篇文章刚写完 11 天，reMarkable 2 在 2020 年 3 月 17 日推出！详细的介绍请见
 &lt;a href="#remarkable-2-%e5%92%8c-sony-dpt-rp1-%e7%9a%84%e5%af%b9%e6%af%94"
 >
 下一小节
 &lt;/a>
-.&lt;/p>
-&lt;/blockquote>
+.&lt;/div>&lt;/p>
 &lt;h2 id="remarkable-2-和-sony-dpt-rp1-的对比">
 reMarkable 2 和 Sony DPT-RP1 的对比
 &lt;a href="#remarkable-2-%e5%92%8c-sony-dpt-rp1-%e7%9a%84%e5%af%b9%e6%af%94">&lt;small>¶&lt;/small>&lt;/a>
 &lt;/h2>
-&lt;blockquote class="notation_color">&lt;p>本小节内容为 2020.03.24 更新，是本文干货区. 超链接表示消息来源，都值得点开看一看. 希望宣扬的一个理念是多读官方的用户手册（说明书），买之前就应该读.&lt;/p>
-&lt;/blockquote>
+&lt;div class='notation_color'>
+&lt;p>本小节内容为 2020.03.24 更新，是本文干货区. 超链接表示消息来源，都值得点开看一看. 希望宣扬的一个理念是多读官方的用户手册（说明书），买之前就应该读.&lt;/div>&lt;/p>
 &lt;p>对于 reMarkable 2 最好的材料是
 &lt;a href="https://support.remarkable.com/hc/en-us"
 target="_blank" rel="noreferrer noopener"
@@ -1372,8 +1372,8 @@ target="_blank" rel="noreferrer noopener"
 补充两款产品：Fujitsu Quaderno A4 和 mooInk Pro
 &lt;a href="#%e8%a1%a5%e5%85%85%e4%b8%a4%e6%ac%be%e4%ba%a7%e5%93%81fujitsu-quaderno-a4-%e5%92%8c-mooink-pro">&lt;small>¶&lt;/small>&lt;/a>
 &lt;/h3>
-&lt;blockquote class="notation_color">&lt;p>本小节补充于 2021 年 2 月 4 日.&lt;/p>
-&lt;/blockquote>
+&lt;div class='notation_color'>
+&lt;p>本小节补充于 2021 年 2 月 4 日.&lt;/div>&lt;/p>
 &lt;p>最近我又注意到了两款新产品，如本节标题所述.&lt;/p>
 &lt;p>据坊间传闻，Sony DPT 不再出新的产品，因为
 &lt;a href="https://www.zhihu.com/answer/1390262747"
@@ -1398,8 +1398,8 @@ target="_blank" rel="noreferrer noopener"
 &lt;b>⧉ &lt;/b>
 &lt;/a>
 可以看到是有 13.3 寸那一款的. 具体的参数我已经补充到上面的表格中了，但具体功能我还没有细看，暂时还不知道笔是什么笔，是否需要充电；也暂时还不知道横屏并排阅读、记笔记的体验怎么样，但我在产品比较页对比了 13.3 寸和 10.3 寸的两款产品，“电子书阅读功能”这一项里面的内容是完全一致的——那就是说，如果 13.3 寸的产品像 Sony 的那款一样支持多种格式的横屏并排工作模式，那么 10.3 寸的那一款就同样支持？！（不过我暂时对这一点比较怀疑. 等我有时间的时候再好好看一看.）&lt;/p>
-&lt;blockquote class="notation_color">&lt;p>本小节补充内容结束，以下继续是 2020 年的原文.&lt;/p>
-&lt;/blockquote>
+&lt;div class='notation_color'>
+&lt;p>本小节补充内容结束，以下继续是 2020 年的原文.&lt;/div>&lt;/p>
 &lt;hr>
 &lt;p>下面对这两款产品的一切（软硬件）进行详细的（主观）对比：&lt;/p>
 &lt;table>
@@ -3246,16 +3246,16 @@ target="_blank" rel="noreferrer noopener"
 &lt;li>&lt;strong>&lt;span style="color: black;">Twitter&lt;/span>&lt;/strong>&lt;/li>
 &lt;/ul>
 &lt;p>接替微博的位置，记录生活精彩瞬间，记录迸发的灵感，阅读世界上的时事，消磨时间. 锁推使用中. 每天使用应少于 1 小时.&lt;/p>
-&lt;blockquote class="notation_color">&lt;p>2020 年 4 月 9 日更新：Twitter 用的也渐渐少了，调整为只在 Twitter 上记录技术的细节以及早上起床后记录我还记得的梦境.&lt;/p>
-&lt;/blockquote>
+&lt;div class='notation_color'>
+&lt;p>2020 年 4 月 9 日更新：Twitter 用的也渐渐少了，调整为只在 Twitter 上记录技术的细节以及早上起床后记录我还记得的梦境.&lt;/div>&lt;/p>
 &lt;ul>
 &lt;li>&lt;strong>&lt;span style="color: black;">豆瓣&lt;/span>&lt;/strong>&lt;/li>
 &lt;/ul>
 &lt;p>标记书与电影，简单备份一些对质量没有要求的照片，看看世界，消磨时间. 每天使用应少于 1.5 小时.&lt;/p>
-&lt;blockquote class="notation_color">&lt;p>2020 年 4 月 9 日更新：豆瓣用的渐渐多了起来，豆瓣广播目前调整为接替微博的位置. 整体的策略为：长篇的东西写博客，生活中有趣的小事发豆瓣. 豆瓣尽量不发没有意义的灌水，频率不超过每周三次为好，还是应该尽量多写博客，强迫自己把思考做完整，也方便未来整理与反思.&lt;/p>
-&lt;/blockquote>
-&lt;blockquote class="notation_color">&lt;p>2020 年 10 月 17 日更新：因豆瓣 tag 标签下线整改以及大批友邻被封禁，我终于还是意识到不能把内容交给任何一个组织、资本或公司，尤其是受到中国大陆政治言论审查的社交平台. 随着大批的用户迁出，我也决定豆瓣作为微博过渡者的使命已经完成，以后只在豆瓣上记录书影音即可.&lt;/p>
-&lt;/blockquote>
+&lt;div class='notation_color'>
+&lt;p>2020 年 4 月 9 日更新：豆瓣用的渐渐多了起来，豆瓣广播目前调整为接替微博的位置. 整体的策略为：长篇的东西写博客，生活中有趣的小事发豆瓣. 豆瓣尽量不发没有意义的灌水，频率不超过每周三次为好，还是应该尽量多写博客，强迫自己把思考做完整，也方便未来整理与反思.&lt;/div>&lt;/p>
+&lt;div class='notation_color'>
+&lt;p>2020 年 10 月 17 日更新：因豆瓣 tag 标签下线整改以及大批友邻被封禁，我终于还是意识到不能把内容交给任何一个组织、资本或公司，尤其是受到中国大陆政治言论审查的社交平台. 随着大批的用户迁出，我也决定豆瓣作为微博过渡者的使命已经完成，以后只在豆瓣上记录书影音即可.&lt;/div>&lt;/p>
 &lt;ul>
 &lt;li>&lt;strong>&lt;span style="color: black;">长毛象&lt;/span>&lt;/strong>&lt;/li>
 &lt;/ul>
@@ -3339,14 +3339,14 @@ GitHub 仓库里
 &lt;b>⧉ &lt;/b>
 &lt;/a>
 以防出现意外后可以快速恢复出一个一模一样的环境.&lt;/p>
-&lt;blockquote class="notation_color">&lt;p>2020 年 6 月更新：已从 Manjaro 更换为 Arch Linux.&lt;/p>
-&lt;/blockquote>
+&lt;div class='notation_color'>
+&lt;p>2020 年 6 月更新：已从 Manjaro 更换为 Arch Linux.&lt;/div>&lt;/p>
 &lt;ul>
 &lt;li>&lt;strong>&lt;span style="color: black;">次要使用的计算机操作系统：Windows&lt;/span>&lt;/strong>&lt;/li>
 &lt;/ul>
 &lt;p>很多游戏不支持 Linux，还要到 Windows 上玩，还有一些例如学校任务不得不安装的软件有时候也都没有 Linux 版本.&lt;/p>
-&lt;blockquote class="notation_color">&lt;p>2020 年 1 月新规：所有游戏一律到 Windows 上玩，无论是否支持 Linux.&lt;/p>
-&lt;/blockquote>
+&lt;div class='notation_color'>
+&lt;p>2020 年 1 月新规：所有游戏一律到 Windows 上玩，无论是否支持 Linux.&lt;/div>&lt;/p>
 &lt;ul>
 &lt;li>&lt;strong>&lt;span style="color: black;">主要使用的手机操作系统：Android&lt;/span>&lt;/strong>&lt;/li>
 &lt;/ul>
@@ -3428,8 +3428,8 @@ target="_blank" rel="noreferrer noopener"
 &lt;li>&lt;strong>&lt;span style="color: black;">手机输入法：&lt;del>触宝&lt;/del> Gboard&lt;/span>&lt;/strong>&lt;/li>
 &lt;/ul>
 &lt;p>&lt;del>好早以前就一直在用触宝输入法，它的核心优点有：多语言，拼音打字后可以手写笔画选字，九宫格键盘的符号键背后有分门别类的特别全的符号. 而且我高中的时候发现在输入密码的时候触宝输入法直接就不起作用了，会呼出原生输入法，我把这个问题通过邮件反馈给开发人员后他们一星期内就发布了新版本解决了这个问题. 这件事让我一直对这个输入法珍爱有加，后来他们给输入法加了广告我也没有换，再后来我找到了没有广告的触宝输入法极速版并一直使用至今.&lt;/del>&lt;/p>
-&lt;blockquote class="notation_color">&lt;p>2020 年还是决定换一个输入法. 想换的理由是想体验一下全键盘，而触宝输入法的全键盘的符号键背后符号太少了，给开发人员发邮件希望要九宫格的符号界面却迟迟没有回复，查了一下选择了 Gboard. 结果发现 Gboard 的符号页符号也很少，还少了手写笔画选字的功能. 但无论如何还是硬着头皮用下来了.&lt;/p>
-&lt;/blockquote>
+&lt;div class='notation_color'>
+&lt;p>2020 年还是决定换一个输入法. 想换的理由是想体验一下全键盘，而触宝输入法的全键盘的符号键背后符号太少了，给开发人员发邮件希望要九宫格的符号界面却迟迟没有回复，查了一下选择了 Gboard. 结果发现 Gboard 的符号页符号也很少，还少了手写笔画选字的功能. 但无论如何还是硬着头皮用下来了.&lt;/div>&lt;/p>
 &lt;ul>
 &lt;li>&lt;strong>&lt;span style="color: black;">知晓体育比分：SofaScore&lt;/span>&lt;/strong>&lt;/li>
 &lt;/ul>
@@ -3453,8 +3453,8 @@ RSS
 &lt;b>⧉ &lt;/b>
 &lt;/a>
 源. RSS 大法好，必须在这里鼓吹一波 RSS 这个上个时代的互联网技术. 我订阅的源主要有：知乎日报、Engadget、果壳精选、Mathematics-Quanta Magazine 等. &lt;del>本站未来将会支持 RSS 订阅.&lt;/del>&lt;/p>
-&lt;blockquote class="notation_color">&lt;p>2020 年更新：本站现已支持 RSS 订阅.&lt;/p>
-&lt;/blockquote>
+&lt;div class='notation_color'>
+&lt;p>2020 年更新：本站现已支持 RSS 订阅.&lt;/div>&lt;/p>
 &lt;ul>
 &lt;li>&lt;strong>&lt;span style="color: black;">画数学曲线：ArityMOD&lt;/span>&lt;/strong>&lt;/li>
 &lt;/ul>
@@ -3467,7 +3467,8 @@ RSS
 2019 年 9 月换成了 Gmail，原因是 Outlook 收到消息后不会提醒，经测试 Gmail 提醒得很好.&lt;/span>&lt;/del>&lt;/p>
 &lt;p>&lt;del>&lt;span class='notation_color'>
 2019 年 12 月更新：Gmail 在 163、hotmail、outlook 邮箱收到消息后还是不会提醒，正打算再换一个.&lt;/span>&lt;/del>&lt;/p>
-&lt;blockquote class="notation_color">&lt;p>2020 年 1 月 16 日更新：试了一下 mail.ru，其实很不错的，提醒很及时，唯一的缺点是直接把 163 的全下载下来了，还都是未读状态，就觉得不太行. 又试了
+&lt;div class='notation_color'>
+&lt;p>2020 年 1 月 16 日更新：试了一下 mail.ru，其实很不错的，提醒很及时，唯一的缺点是直接把 163 的全下载下来了，还都是未读状态，就觉得不太行. 又试了
 &lt;a href="https://k9mail.github.io/"
 target="_blank" rel="noreferrer noopener"
 >
@@ -3481,8 +3482,7 @@ target="_blank" rel="noreferrer noopener"
 这篇文章
 &lt;b>⧉ &lt;/b>
 &lt;/a>
-顺利解决；yahoo 要在账户安全设置处设置单独的应用密码.&lt;/p>
-&lt;/blockquote>
+顺利解决；yahoo 要在账户安全设置处设置单独的应用密码.&lt;/div>&lt;/p>
 &lt;ul>
 &lt;li>&lt;strong>&lt;span style="color: black;">二次验证软件：Authy&lt;/span>&lt;/strong>&lt;/li>
 &lt;/ul>
@@ -3558,7 +3558,8 @@ pt
 &lt;li>&lt;strong>&lt;span style="color: black;">Ingress&lt;/span>&lt;/strong>&lt;/li>
 &lt;/ul>
 &lt;p>&lt;del>一个朋友带我入的坑，是一个手机端的增强现实的游戏，佛系玩. 启蒙军才是人类的未来！&lt;/del>&lt;/p>
-&lt;blockquote class="notation_color">&lt;p>2019 年 7 月 18 日更新：已废弃. 玩了也没几个月吧，我本来挺佛系的，出去吃饭就打开随手 hack，遇到中立 po 就随手插上一个脚. 有时候也还投入挺多心力的，出去走一走做 field，甚至做多重. 做多重很麻烦的，一遍一遍 hack 就为了多得到一些 key，常常一两个小时就耽误在这上面了. 我还安慰自己不能总是学习，玩这个游戏也算是多运动，很健康的.&lt;/p>
+&lt;div class='notation_color'>
+&lt;p>2019 年 7 月 18 日更新：已废弃. 玩了也没几个月吧，我本来挺佛系的，出去吃饭就打开随手 hack，遇到中立 po 就随手插上一个脚. 有时候也还投入挺多心力的，出去走一走做 field，甚至做多重. 做多重很麻烦的，一遍一遍 hack 就为了多得到一些 key，常常一两个小时就耽误在这上面了. 我还安慰自己不能总是学习，玩这个游戏也算是多运动，很健康的.&lt;/p>
 &lt;p>我不和别人对抗. 因为只能放 2000 个道具，我得到的所有能量炮我都自己吃掉了，而不是把它们用了炸别人的 po——我只占领中立的能量塔；然而常常一个星期无人占领的中立能量塔我一占领、连线、建 field，第二天就有敌军把它们打掉了并占为他们所有. 我开始还很不爽，后来觉得毕竟也是规则的一部分，别人打掉也方便我重新占领，能得到更多的经验值，这也是游戏的乐趣所在吧，所以也坦然接受了，建 field 也都完全不加护盾，方便别人打掉. 佛系玩着，看着自己成就一点一点多起来也很快乐.&lt;/p>
 &lt;p>好像守 po 150 天能得到一个什么奖励，我就选了一个特别不好接近的 po 占了 5 级，定时给它充电，加上护盾，连线从来不连它以免给敌军连线造成困扰被打掉. 后来还有一个友军还帮我升了一下级，我非常感激 TA，不知道是不是 TA 猜到我想守这个 po，或者 TA 就是顺便路过而已. 总之我对它珍爱有加，把全部心力都浇筑在它上面. 同时也做好了心理准备，想象它被打掉的样子，毕竟我是想解锁成就，被敌军发现并破坏我的计划也都是正常的. 不过已经快 30 多天了，敌军都没有碰过它，我想也许不是他们没有发现，可能就是他们对新人比较有爱吧.&lt;/p>
 &lt;p>暑假升级到 2.25.2 之后 ingress 就一直登不上去了，一直转圈圈. 后来升级到 2.26.2 依然如此，很多天了. 在最后不得不给我守的 po 充电（因为一直不充电 7 天就掉完电变成中立 po 了）的前一天我决心解决这个问题：在网上查解决办法、清缓存、清储存、重装软件、重启手机、换梯子、等等&amp;hellip;很多个小时过去了，我没找到解决办法. 最后突然灵光一现，去 play 商店的评论区看，一下就看到一条评论：&lt;/p>
@@ -3567,8 +3568,7 @@ pt
 &lt;/blockquote>
 &lt;p>于是我又改 google 帐号名称，果然顺利解决了问题. 登进去以后赶紧从我那 200 多个 key 里找我想充电的那个. 按名称排序的话完全看不出中文的规律，按距离排序几乎就是得一个一个翻过去，完全不知道该怎么搜索，一如既往地烦躁地花了些时间后终于找到，却充不进去电！所有的 po 都充不进去！我试着到我家这边一个 po 跟前去充还是不行，这时我才发现也没法 hack，也没法插脚，所有操作都做不了了，提示的框里什么都没写，是一个空白框. 虽然我第一次遇到这样的情况，但我马上怀疑自己被封禁了，查了一下，好像和 semi-ban 的症状特别相似，也没查到有用的解封方法，都说是过几天就好了. 那我可等不起，再过几个小时我守的 po 就中立了——没有任何人打它，它就中立了.&lt;/p>
 &lt;p>应该说，这是压垮我的最后一根稻草. 我把游戏卸了，顿时感到一身轻松. 我不用再耽误时间，我不用再看着我占的 po 被敌军打下，我不用时时刻刻想着给我的 po 充电. 我认为游戏的意义在于放松，在于让我快乐，这个游戏唯一让我快乐的地方是我看着自己一点一点解锁新成就，期待自己在满级以后可以装逼. 这个游戏也许被更多的玩家认为是一个交友游戏，但它首先被我排除了这样的玩法——我就要 solo 玩，没有 6 级以上 po 又如何？而如今在我看来玩这个游戏窝心的程度已经远远大于让我快乐的程度，索性我离开吧. 我只有 7 级，我没有沉没成本，我还可以全身而退，除了解 passcode 没有体验过，这游戏也没有超出我认知的东西了.&lt;/p>
-&lt;p>那就这样，再见 ingress ！XM 能量与我再无关，启蒙军与我再无关.&lt;/p>
-&lt;/blockquote></description></item><item><title>一些不错的网站</title><link>/zh/71828/</link><pubDate>2019-06-23</pubDate><guid>/zh/71828/</guid><description>&lt;p>收集整理值得一看的网站，并给出链接. 以我经常关注的博客居多，主要是方便自己. 这些都&lt;strong>不是&lt;/strong>友链（我不和任何人交换友链），或许可以把他们看成是我的榜样们，或者说这里是我视奸的起点.&lt;/p>
+&lt;p>那就这样，再见 ingress ！XM 能量与我再无关，启蒙军与我再无关.&lt;/div>&lt;/p></description></item><item><title>一些不错的网站</title><link>/zh/71828/</link><pubDate>2019-06-23</pubDate><guid>/zh/71828/</guid><description>&lt;p>收集整理值得一看的网站，并给出链接. 以我经常关注的博客居多，主要是方便自己. 这些都&lt;strong>不是&lt;/strong>友链（我不和任何人交换友链），或许可以把他们看成是我的榜样们，或者说这里是我视奸的起点.&lt;/p>
 &lt;p>&lt;span class='notation_color'>不定期更新中&amp;hellip;（每次更新的内容不另作说明）&lt;/span>&lt;/p>
 &lt;h1 id="非数学">
 非数学
@@ -4916,7 +4916,8 @@ Anastasia, Advanced Autonumbering Techniques with CSS
 &lt;/a>
 .&lt;/p>
 &lt;p>然后就是我的文章排版，用了两端对齐，但是又有中文又有英文有时还有数学内容的文章就特别丑，中间的间距不均匀，我也不知道该怎么办.&lt;/p>
-&lt;blockquote class="notation_color">&lt;p>注：2019 年 12 月 29 日我对所有的 CSS 进行了重写，使用了更为方便更为强大的 CSS3 技术，包括 flex 弹性盒子（主要参考的是
+&lt;div class='notation_color'>
+&lt;p>注：2019 年 12 月 29 日我对所有的 CSS 进行了重写，使用了更为方便更为强大的 CSS3 技术，包括 flex 弹性盒子（主要参考的是
 &lt;a href="https://www.ruanyifeng.com/blog/2015/07/flex-grammar.html"
 target="_blank" rel="noreferrer noopener"
 >
@@ -4937,18 +4938,18 @@ target="_blank" rel="noreferrer noopener"
 知乎上的回答
 &lt;b>⧉ &lt;/b>
 &lt;/a>
-解答了我和提问者同样的困惑. 同时，之前的两端对齐的排版被我取消了，因为实在是太丑了，我宁愿让右侧不对齐.&lt;/p>
-&lt;/blockquote>
-&lt;blockquote class="notation_color">&lt;p>再注：新的 CSS 在奇葩的内核下显示不正常，波及了 QQ 浏览器、UC 浏览器等. 试着解决了一次，但终究找不到问题的根源——明明我用这些浏览器跑
+解答了我和提问者同样的困惑. 同时，之前的两端对齐的排版被我取消了，因为实在是太丑了，我宁愿让右侧不对齐.&lt;/div>&lt;/p>
+&lt;div class='notation_color'>
+&lt;p>再注：新的 CSS 在奇葩的内核下显示不正常，波及了 QQ 浏览器、UC 浏览器等. 试着解决了一次，但终究找不到问题的根源——明明我用这些浏览器跑
 &lt;a href="https://css3test.com"
 target="_blank" rel="noreferrer noopener"
 >
 CSS3 测试
 &lt;b>⧉ &lt;/b>
 &lt;/a>
-支持率很高，而且我用到的技术它都支持. 我懒得解决了，除非有人帮我定位一下问题，因为我 Linux 的生产环境没法装 QQ 浏览器，也不知道前端大佬们都是怎么测试的. 我的网站在 Firefox、Chrome 等浏览器上都显示得超级好，更何况这些问题就应该浏览器厂商解决，哪有留给前端解决的？留给我解决我就偏要留给用户解决. 要是所有前端都这么硬气，倒逼用户换成更现代的浏览器，我才不信浏览器厂商敢这么不作为. 反正我这个博客也没什么人看，就让用[显示不好的浏览器]的人不再来看我的博客好了. 补充于 2020 年 1 月 2 日.&lt;/p>
-&lt;/blockquote>
-&lt;blockquote class="notation_color">&lt;p>再注：今天想起这件事，不死心又查了一下，怀疑是那些浏览器不支持 flex 的标准写法的缘故，于是找到这样一个解决此问题的工具：
+支持率很高，而且我用到的技术它都支持. 我懒得解决了，除非有人帮我定位一下问题，因为我 Linux 的生产环境没法装 QQ 浏览器，也不知道前端大佬们都是怎么测试的. 我的网站在 Firefox、Chrome 等浏览器上都显示得超级好，更何况这些问题就应该浏览器厂商解决，哪有留给前端解决的？留给我解决我就偏要留给用户解决. 要是所有前端都这么硬气，倒逼用户换成更现代的浏览器，我才不信浏览器厂商敢这么不作为. 反正我这个博客也没什么人看，就让用[显示不好的浏览器]的人不再来看我的博客好了. 补充于 2020 年 1 月 2 日.&lt;/div>&lt;/p>
+&lt;div class='notation_color'>
+&lt;p>再注：今天想起这件事，不死心又查了一下，怀疑是那些浏览器不支持 flex 的标准写法的缘故，于是找到这样一个解决此问题的工具：
 &lt;a href="https://github.com/postcss/autoprefixer"
 target="_blank" rel="noreferrer noopener"
 >
@@ -4976,27 +4977,27 @@ target="_blank" rel="noreferrer noopener"
 这里
 &lt;b>⧉ &lt;/b>
 &lt;/a>
-. 这两个工具配合起来非常方便，我选择 last 4 version（可以支持 92.18% 的浏览器）试了一下，还是没有解决问题. 补充于 2020 年 4 月 10 日.&lt;/p>
-&lt;/blockquote>
-&lt;blockquote class="notation_color">&lt;p>再注：还是不死心，到思否论坛上问了一下，然后在一个关键提示下，顺利找到问题并解决. 问题的根源在于 QQ 浏览器看到 flex 容器写着 &lt;code>height: 100vh&lt;/code> 就想要帮我在一个屏幕高度内塞下所有 flex 项目，解决的办法是把 &lt;code>flex-shrink&lt;/code> 调整到 0. 详见
+. 这两个工具配合起来非常方便，我选择 last 4 version（可以支持 92.18% 的浏览器）试了一下，还是没有解决问题. 补充于 2020 年 4 月 10 日.&lt;/div>&lt;/p>
+&lt;div class='notation_color'>
+&lt;p>再注：还是不死心，到思否论坛上问了一下，然后在一个关键提示下，顺利找到问题并解决. 问题的根源在于 QQ 浏览器看到 flex 容器写着 &lt;code>height: 100vh&lt;/code> 就想要帮我在一个屏幕高度内塞下所有 flex 项目，解决的办法是把 &lt;code>flex-shrink&lt;/code> 调整到 0. 详见
 &lt;a href="https://segmentfault.com/q/1010000022523106"
 target="_blank" rel="noreferrer noopener"
 >
 思否论坛的这个帖子
 &lt;b>⧉ &lt;/b>
 &lt;/a>
-. 补充于 2020 年 5 月 2 日.&lt;/p>
-&lt;/blockquote>
-&lt;blockquote class="notation_color">&lt;p>注：今天对 CSS 的颜色变量进行了抽象提出，并在
+. 补充于 2020 年 5 月 2 日.&lt;/div>&lt;/p>
+&lt;div class='notation_color'>
+&lt;p>注：今天对 CSS 的颜色变量进行了抽象提出，并在
 &lt;a href="https://dev.to/lampewebdev/css-quickies-css-variables-or-how-you-create-a-white-dark-theme-easily-1i0i"
 target="_blank" rel="noreferrer noopener"
 >
 Michael &amp;ldquo;lampe&amp;rdquo; Lazarski, CSS Quickies: CSS Variables
 &lt;b>⧉ &lt;/b>
 &lt;/a>
-这篇教程的指导下完成了主题颜色的切换功能，这样一来本站便支持明暗两个主题了. 等过些日子好好配置出一套令人满意的明暗配色之后会在首页写个短消息公布一下. 补充于 2020 年 8 月 8 日.（啊刚刚皇马被曼城淘汰出局了，好伤心，瓦拉内两次失误啊.）&lt;/p>
-&lt;/blockquote>
-&lt;blockquote class="notation_color">&lt;p>注：在
+这篇教程的指导下完成了主题颜色的切换功能，这样一来本站便支持明暗两个主题了. 等过些日子好好配置出一套令人满意的明暗配色之后会在首页写个短消息公布一下. 补充于 2020 年 8 月 8 日.（啊刚刚皇马被曼城淘汰出局了，好伤心，瓦拉内两次失误啊.）&lt;/div>&lt;/p>
+&lt;div class='notation_color'>
+&lt;p>注：在
 &lt;a href="https://colorschemedesigner.com/"
 target="_blank" rel="noreferrer noopener"
 >
@@ -5032,8 +5033,7 @@ Color Scheme Designer
 &lt;b>⧉ &lt;/b>
 &lt;/a>
 . 黑暗模式的配色基本上是可以了，但我还是不是很满意. 一来觉得配色还是有不合理的地方，二是像一些图片在黑暗背景下显得很不协调——透明背景加黑色字体的图片几乎无法辨认、白色背景的又显得很突兀. 如果有人对配色比较在行，可以给我提供配色方案.&lt;/p>
-&lt;p>还应该完善的一个小功能是：应该用 prefers-color-scheme 技术判断一下用户的系统环境颜色，当然比较简单，在 main.js 里把初始化的那个 if 语句的最后一个 else 里写点东西判断一下就行，但我不是很想搞，还是觉得给所有人默认明亮模式比较好，或许等我的黑暗模式配色更好看一点再说吧. 补充于 2020 年 8 月 10 日.&lt;/p>
-&lt;/blockquote>
+&lt;p>还应该完善的一个小功能是：应该用 prefers-color-scheme 技术判断一下用户的系统环境颜色，当然比较简单，在 main.js 里把初始化的那个 if 语句的最后一个 else 里写点东西判断一下就行，但我不是很想搞，还是觉得给所有人默认明亮模式比较好，或许等我的黑暗模式配色更好看一点再说吧. 补充于 2020 年 8 月 10 日.&lt;/div>&lt;/p>
 &lt;h2 id="评论系统的支持">
 评论系统的支持
 &lt;a href="#%e8%af%84%e8%ae%ba%e7%b3%bb%e7%bb%9f%e7%9a%84%e6%94%af%e6%8c%81">&lt;small>¶&lt;/small>&lt;/a>
@@ -5342,7 +5342,7 @@ target="_blank" rel="noreferrer noopener"
 &lt;li>&lt;input disabled="" type="checkbox"> &lt;strong>站内搜索功能（非常不着急）&lt;/strong>&lt;/li>
 &lt;li>&lt;input disabled="" type="checkbox"> &lt;strong>用一下 prefers-color-scheme&lt;/strong>&lt;/li>
 &lt;li>&lt;input disabled="" type="checkbox"> &lt;strong>支持 webmention（还需要了解、学习并评估）&lt;/strong>&lt;/li>
-&lt;li>&lt;input disabled="" type="checkbox"> &lt;strong>感觉 CSS 越写越多，而且每次都是修修补补，现在有点乱，应该重新整理一下&lt;/strong>&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> &lt;strong>CSS 越写越多，修修补补，应该统一整理、化简一下&lt;/strong>&lt;/li>
 &lt;/ol>
 &lt;section class="footnotes" role="doc-endnotes">
 &lt;hr>
