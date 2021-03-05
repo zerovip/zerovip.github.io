@@ -6251,6 +6251,14 @@ target="_blank" rel="noreferrer noopener"
 &lt;li>&lt;input disabled="" type="checkbox"> &lt;strong>用一下 prefers-color-scheme&lt;/strong>&lt;/li>
 &lt;li>&lt;input disabled="" type="checkbox"> &lt;strong>支持 webmention（还需要了解、学习并评估）&lt;/strong>&lt;/li>
 &lt;li>&lt;input disabled="" type="checkbox"> &lt;strong>CSS 越写越多，修修补补，应该统一整理、化简一下&lt;/strong>&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> &lt;strong>代码块是否需要折叠显示？参考：
+&lt;a href="https://github.com/reuixiy/hugo-theme-meme/issues/76"
+target="_blank" rel="noreferrer noopener"
+>
+reuixiy&amp;rsquo;s meme
+&lt;b>⧉ &lt;/b>
+&lt;/a>
+&lt;/strong>&lt;/li>
 &lt;/ol>
 &lt;section class="footnotes" role="doc-endnotes">
 &lt;hr>
