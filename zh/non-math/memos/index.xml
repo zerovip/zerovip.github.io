@@ -3905,6 +3905,30 @@ target="_blank" rel="noreferrer noopener"
 &lt;/a>
 . 读了 ta 的文章觉得很有收获，看 ta 的博客内容也很丰富，于是贴到这里.&lt;/p>
 &lt;/li>
+&lt;li>
+&lt;p>
+&lt;a href="https://palant.info/"
+target="_blank" rel="noreferrer noopener"
+>
+Almost Secure
+&lt;b>⧉ &lt;/b>
+&lt;/a>
+. 应该是一个做信息安全的人，不过我注意到他是因为他写的两篇关于 Hugo 的文章，关于站内搜索以及 Webmention，正好都是我想要添加的功能. 他的文章质量很高，富有探索与钻研精神，而且乐于分享细节. 他博客的主题是
+&lt;a href="https://io-oi.me/"
+target="_blank" rel="noreferrer noopener"
+>
+reuixiy
+&lt;b>⧉ &lt;/b>
+&lt;/a>
+写的
+&lt;a href="https://github.com/reuixiy/hugo-theme-meme"
+target="_blank" rel="noreferrer noopener"
+>
+MemE
+&lt;b>⧉ &lt;/b>
+&lt;/a>
+，他贡献了搜索的功能.&lt;/p>
+&lt;/li>
 &lt;/ul>
 &lt;h1 id="数学">
 数学
@@ -5305,7 +5329,7 @@ TODO 清单
 &lt;li>&lt;input checked="" disabled="" type="checkbox"> &lt;del>tags, categories, series 等&lt;/del>（不再考虑&lt;sup id="fnref:3">&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref">3&lt;/a>&lt;/sup>. 在边栏用多级 section 分类已经足够，没必要增加更复杂的分类方式.）&lt;/li>
 &lt;li>&lt;input checked="" disabled="" type="checkbox"> &lt;del>本文中提到的中英文排版问题还没有解决&lt;/del>（暂且先这样）&lt;/li>
 &lt;li>&lt;input checked="" disabled="" type="checkbox"> &lt;del>本文中提到的 404 页面问题还没有解决&lt;/del>（无关紧要，见下面的第 25 条）&lt;/li>
-&lt;li>&lt;input disabled="" type="checkbox"> &lt;strong>本文中提到的使用 pandoc 没有目录的问题还没有解决&lt;/strong>&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> 本文中提到的使用 pandoc 没有目录的问题还没有解决&lt;/li>
 &lt;li>&lt;input checked="" disabled="" type="checkbox"> &lt;del>数学类 overflow-x auto 后 overflow-y 自动出现的问题&lt;/del>（已解决）&lt;/li>
 &lt;li>&lt;input checked="" disabled="" type="checkbox"> &lt;del>提交 sitemap 供搜索引擎收录&lt;/del>（已完成）&lt;/li>
 &lt;li>&lt;input checked="" disabled="" type="checkbox"> &lt;del>把 head 中的标题改一下，在搜索引擎中显得好看一点&lt;/del>（已完成）&lt;/li>
@@ -5318,10 +5342,10 @@ TODO 清单
 &lt;/a>
 一节的最后一个注.）&lt;/li>
 &lt;li>&lt;input checked="" disabled="" type="checkbox"> &lt;del>国内加载速度太慢的问题&lt;/del>（不再考虑）&lt;/li>
-&lt;li>&lt;input disabled="" type="checkbox"> &lt;strong>PWA，觉得很有潜力的技术，有时间的话会首先尝试它.&lt;/strong>&lt;/li>
-&lt;li>&lt;input disabled="" type="checkbox"> &lt;strong>IPFS，不一定，有生之年试一下就好.&lt;/strong>&lt;/li>
-&lt;li>&lt;input disabled="" type="checkbox"> &lt;strong>Zero Net，Ditto.&lt;/strong>&lt;/li>
-&lt;li>&lt;input disabled="" type="checkbox"> &lt;strong>InstantClick，Ditto.&lt;/strong>&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> PWA，觉得很有潜力的技术，有时间的话会首先尝试它.&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> IPFS，不一定，有生之年试一下就好.&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> Zero Net，Ditto.&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> InstantClick，Ditto.&lt;/li>
 &lt;li>&lt;input checked="" disabled="" type="checkbox"> &lt;del>CSS 颜色写成变量 (variables) 形式，重新配色，方便第 6 条黑暗模式重新加入考虑计划，见
 &lt;a href="https://dev.to/lampewebdev/css-quickies-css-variables-or-how-you-create-a-white-dark-theme-easily-1i0i"
 target="_blank" rel="noreferrer noopener"
@@ -5339,18 +5363,35 @@ target="_blank" rel="noreferrer noopener"
 &lt;li>&lt;input checked="" disabled="" type="checkbox"> &lt;del>对左边栏右上角的语言选项区域进行提前判断，没有翻译的文章不提供跳转链接，这样在本站自由点击跳转就不可能到达 404 页面了，上面第 10 条提到的问题就不是很需要解决了&lt;/del>（已完成）&lt;/li>
 &lt;li>&lt;input checked="" disabled="" type="checkbox"> &lt;del>左边栏右上角不提供跳转的语言的颜色问题&lt;/del>&lt;/li>
 &lt;li>&lt;input checked="" disabled="" type="checkbox"> &lt;del>语法高亮支持.&lt;/del>（已完成）&lt;/li>
-&lt;li>&lt;input disabled="" type="checkbox"> &lt;strong>站内搜索功能（非常不着急）&lt;/strong>&lt;/li>
-&lt;li>&lt;input disabled="" type="checkbox"> &lt;strong>用一下 prefers-color-scheme&lt;/strong>&lt;/li>
-&lt;li>&lt;input disabled="" type="checkbox"> &lt;strong>支持 webmention（还需要了解、学习并评估）&lt;/strong>&lt;/li>
-&lt;li>&lt;input disabled="" type="checkbox"> &lt;strong>CSS 越写越多，修修补补，应该统一整理、化简一下&lt;/strong>&lt;/li>
-&lt;li>&lt;input disabled="" type="checkbox"> &lt;strong>代码块是否需要折叠显示？参考：
+&lt;li>&lt;input disabled="" type="checkbox"> 站内搜索功能（非常不着急），可以参考
+&lt;a href="https://palant.info/2020/06/04/the-easier-way-to-use-lunr-search-with-hugo/"
+target="_blank" rel="noreferrer noopener"
+>
+这篇文章
+&lt;b>⧉ &lt;/b>
+&lt;/a>
+&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> 用一下 prefers-color-scheme&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> 支持 webmention（还需要了解、学习并评估），可以参考
+&lt;a href="https://palant.info/2020/09/03/added-webmention-support-to-the-blog/"
+target="_blank" rel="noreferrer noopener"
+>
+这篇文章
+&lt;b>⧉ &lt;/b>
+&lt;/a>
+&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> CSS 越写越多，修修补补，应该统一整理、化简一下&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> 代码块是否需要折叠显示？参考：
 &lt;a href="https://github.com/reuixiy/hugo-theme-meme/issues/76"
 target="_blank" rel="noreferrer noopener"
 >
 reuixiy&amp;rsquo;s meme
 &lt;b>⧉ &lt;/b>
 &lt;/a>
-&lt;/strong>&lt;/li>
+&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> 有什么办法可以不在文章中指定所属 section，根据目录结构在左边完成箭头的指示&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> 换语言那里的 &lt;code>substr&lt;/code> 之前应该数一下当前语言的字符串数量存进变量里，以能更好地应对普适的情况&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> 等以上 todo 都完成之后，这个主题才算是基本成型了，可以考虑一下要不要写个文章介绍一下自己的主题，以及要不要加进 hugo 的官方主题仓库，适当做个小推广呢？&lt;/li>
 &lt;/ol>
 &lt;section class="footnotes" role="doc-endnotes">
 &lt;hr>
