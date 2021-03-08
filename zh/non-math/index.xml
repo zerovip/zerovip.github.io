@@ -5434,7 +5434,7 @@ target="_blank" rel="noreferrer noopener"
 &lt;/a>
 是简单有效的. 不过它对两级以上的 section 只能按第一级 section 建 menu：&lt;/p>
 &lt;blockquote>
-&lt;p>&amp;hellip;this enables you to creat a &lt;em>top-level&lt;/em> menu&amp;hellip;&lt;/p>
+&lt;p>…this enables you to creat a &lt;em>top-level&lt;/em> menu…&lt;/p>
 &lt;/blockquote>
 &lt;p>且它不能默认支持多语言. 这样看来，在它的基础上手动补充一些信息比如手动添加低级 section 的 menu 以及手动添加其他语言的 menu 在我看来就不如不用这个懒人方法，所有 menu 全部手动创建.&lt;/p>
 &lt;p>正如官方文档所说，创建 menu 有两种方法：在
