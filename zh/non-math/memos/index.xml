@@ -5392,6 +5392,14 @@ reuixiy&amp;rsquo;s meme
 &lt;li>&lt;input disabled="" type="checkbox"> 有什么办法可以不在文章中指定所属 section，根据目录结构在左边完成箭头的指示&lt;/li>
 &lt;li>&lt;input disabled="" type="checkbox"> 换语言那里的 &lt;code>substr&lt;/code> 之前应该数一下当前语言的字符串数量存进变量里，以能更好地应对普适的情况&lt;/li>
 &lt;li>&lt;input disabled="" type="checkbox"> 等以上 todo 都完成之后，这个主题才算是基本成型了，可以考虑一下要不要写个文章介绍一下自己的主题，以及要不要加进 hugo 的官方主题仓库，适当做个小推广呢？&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> 一个超链接后面如果有标点符号，这里可能会形成断行. 查到一个
+&lt;a href="https://stackoverflow.com/questions/58257080/"
+target="_blank" rel="noreferrer noopener"
+>
+js 的解决方法
+&lt;b>⧉ &lt;/b>
+&lt;/a>
+.&lt;/li>
 &lt;/ol>
 &lt;section class="footnotes" role="doc-endnotes">
 &lt;hr>

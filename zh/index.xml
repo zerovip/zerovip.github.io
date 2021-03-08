@@ -62,7 +62,7 @@ target="_blank" rel="noreferrer noopener"
 &lt;li>P574 - 雀形目 - 雀科 - 麻雀（Eurasian tree sparrow）&lt;/li>
 &lt;li>P600 - 雀形目 - 燕雀科 - 燕雀（brambling）&lt;/li>
 &lt;/ol>
-&lt;p>&lt;/small>&lt;/hr>&lt;/p>
+&lt;/small>
 &lt;p>我特意在学习鸟类时记忆了其对应的英文名，一来可以方便与外国人交流或查找英文的资料，二来英文名里有时会含有额外的信息. 这一点其实早在我 1 月 31 日刚拿到书的那一天就发现了. 那天我学习了
 &lt;a href="https://zh.wikipedia.org/zh-hans/%e6%a0%97%e5%96%89%e8%9c%82%e8%99%8e"
 target="_blank" rel="noreferrer noopener"
@@ -6448,6 +6448,14 @@ reuixiy&amp;rsquo;s meme
 &lt;li>&lt;input disabled="" type="checkbox"> 有什么办法可以不在文章中指定所属 section，根据目录结构在左边完成箭头的指示&lt;/li>
 &lt;li>&lt;input disabled="" type="checkbox"> 换语言那里的 &lt;code>substr&lt;/code> 之前应该数一下当前语言的字符串数量存进变量里，以能更好地应对普适的情况&lt;/li>
 &lt;li>&lt;input disabled="" type="checkbox"> 等以上 todo 都完成之后，这个主题才算是基本成型了，可以考虑一下要不要写个文章介绍一下自己的主题，以及要不要加进 hugo 的官方主题仓库，适当做个小推广呢？&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> 一个超链接后面如果有标点符号，这里可能会形成断行. 查到一个
+&lt;a href="https://stackoverflow.com/questions/58257080/"
+target="_blank" rel="noreferrer noopener"
+>
+js 的解决方法
+&lt;b>⧉ &lt;/b>
+&lt;/a>
+.&lt;/li>
 &lt;/ol>
 &lt;section class="footnotes" role="doc-endnotes">
 &lt;hr>
