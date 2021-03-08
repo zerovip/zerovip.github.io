@@ -6288,7 +6288,7 @@ target="_blank" rel="noreferrer noopener"
 &lt;b>⧉ &lt;/b>
 &lt;/a>
 &lt;/li>
-&lt;li>&lt;input disabled="" type="checkbox"> CSS 越写越多，修修补补，应该统一整理、化简一下&lt;/li>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> &lt;del>CSS 越写越多，修修补补，应该统一整理、化简一下&lt;/del>（基本完成）&lt;/li>
 &lt;li>&lt;input disabled="" type="checkbox"> 代码块是否需要折叠显示？参考：
 &lt;a href="https://github.com/reuixiy/hugo-theme-meme/issues/76"
 target="_blank" rel="noreferrer noopener"
