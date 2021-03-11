@@ -5914,7 +5914,7 @@ target="_blank" rel="noreferrer noopener"
 &lt;/a>
 ：&lt;/p>
 &lt;blockquote>
-&lt;p>对于 Pandoc，无法生成 TOC 是因为 hugo 在调用 Pandoc 将 Markdown 文件转换为 HTML 的时候，只使用了 &lt;code>--mathjax&lt;/code> 选项，没有使用 &lt;code>--toc&lt;/code> 选项&amp;hellip;&lt;/p>
+&lt;p>对于 Pandoc，无法生成 TOC 是因为 hugo 在调用 Pandoc 将 Markdown 文件转换为 HTML 的时候，只使用了 &lt;code>--mathjax&lt;/code> 选项，没有使用 &lt;code>--toc&lt;/code> 选项…&lt;/p>
 &lt;/blockquote>
 &lt;p>我只想安安静静地跟着官方走，所以并不打算自己编译 Hugo 解决这个问题，而且 20 天前已经有相关的
 &lt;a href="https://github.com/gohugoio/hugo/pull/6026"
@@ -6447,8 +6447,8 @@ reuixiy&amp;rsquo;s meme
 &lt;/li>
 &lt;li>&lt;input disabled="" type="checkbox"> 有什么办法可以不在文章中指定所属 section，根据目录结构在左边完成箭头的指示&lt;/li>
 &lt;li>&lt;input disabled="" type="checkbox"> 换语言那里的 &lt;code>substr&lt;/code> 之前应该数一下当前语言的字符串数量存进变量里，以能更好地应对普适的情况&lt;/li>
-&lt;li>&lt;input disabled="" type="checkbox"> 等以上 todo 都完成之后，这个主题才算是基本成型了，可以考虑一下要不要写个文章介绍一下自己的主题，以及要不要加进 hugo 的官方主题仓库，适当做个小推广呢？&lt;/li>
-&lt;li>&lt;input disabled="" type="checkbox"> 一个超链接后面如果有标点符号，这里可能会形成断行. 查到一个
+&lt;li>&lt;input disabled="" type="checkbox"> 等所有 todo 都完成之后，这个主题才算是基本成型了，可以考虑一下要不要写个文章介绍一下自己的主题，以及要不要加进 hugo 的官方主题仓库，适当做个小推广呢？&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> 一个超链接后面如果有标点符号，这里可能会形成断行，导致标点符号出现在下一行行首. 查到一个
 &lt;a href="https://stackoverflow.com/questions/58257080/"
 target="_blank" rel="noreferrer noopener"
 >
@@ -6456,6 +6456,8 @@ js 的解决方法
 &lt;b>⧉ &lt;/b>
 &lt;/a>
 .&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> 代码块的横向滚动，应该保持行号不动，只有代码块滚动. 是一个 CSS 的问题.&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> 透明背景的图片在黑暗模式下应进行反色操作.&lt;/li>
 &lt;/ol>
 &lt;section class="footnotes" role="doc-endnotes">
 &lt;hr>
