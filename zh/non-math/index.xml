@@ -6250,7 +6250,14 @@ TODO 清单
 &lt;/a>
 一节的最后一个注.）&lt;/li>
 &lt;li>&lt;input checked="" disabled="" type="checkbox"> &lt;del>国内加载速度太慢的问题&lt;/del>（不再考虑）&lt;/li>
-&lt;li>&lt;input disabled="" type="checkbox"> PWA，觉得很有潜力的技术，有时间的话会首先尝试它.&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> PWA，觉得很有潜力的技术，有时间的话会首先尝试它. 可以参考
+&lt;a href="https://techformist.com/add-pwa-hugo/"
+target="_blank" rel="noreferrer noopener"
+>
+这篇文章
+&lt;b>⧉ &lt;/b>
+&lt;/a>
+.&lt;/li>
 &lt;li>&lt;input disabled="" type="checkbox"> IPFS，不一定，有生之年试一下就好.&lt;/li>
 &lt;li>&lt;input disabled="" type="checkbox"> Zero Net，Ditto.&lt;/li>
 &lt;li>&lt;input disabled="" type="checkbox"> InstantClick，Ditto.&lt;/li>
@@ -6279,7 +6286,14 @@ target="_blank" rel="noreferrer noopener"
 &lt;b>⧉ &lt;/b>
 &lt;/a>
 &lt;/li>
-&lt;li>&lt;input disabled="" type="checkbox"> 用一下 prefers-color-scheme&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> 用一下 prefers-color-scheme. 可以参考
+&lt;a href="https://albinek.com/going-dark-web-edition"
+target="_blank" rel="noreferrer noopener"
+>
+这篇文章
+&lt;b>⧉ &lt;/b>
+&lt;/a>
+.&lt;/li>
 &lt;li>&lt;input disabled="" type="checkbox"> 支持 webmention（还需要了解、学习并评估），可以参考
 &lt;a href="https://palant.info/2020/09/03/added-webmention-support-to-the-blog/"
 target="_blank" rel="noreferrer noopener"
