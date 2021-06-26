@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"/><meta content="width=divice-width,initial-scale=1" name="viewport"/><meta content="Hugo 0.84.0" name="generator"/><title>博客记录书影音——Hugo 的 Data Templates
+| 赤赤的象牙塔</title><link href="../../css/base.min.a59c2b0f72674fb060e03b6a2338e8dcfb2b8a1038240485da6b3737718559c9.css" rel="stylesheet" type="text/css"/><link href="../../css/small.min.f5cbfca2bff15ba4010f469eb946b58c9aa9eed83334457f20afc3f7c2c62f8a.css" media="screen and (max-width: 1200px)" rel="stylesheet" type="text/css"/><link href="../../css/normal.min.be196062cbff56d863e9c84984e359f5e7331cb72e766a0eb1ed1ac021b07958.css" media="screen and (min-width: 1201px)" rel="stylesheet" type="text/css"/><link href="../../css/syntax.min.ed5b37c3a50997d5ccd8b81bf0d00a7ac1f92c82985623c2dbf0cb422596726a.css" rel="stylesheet" type="text/css"/><script type="application/javascript">var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-143006759-1','auto'),ga('send','pageview'))</script><script async="" src="https://www.google-analytics.com/analytics.js"></script><script async="" data-goatcounter="https://zerovip.goatcounter.com/count" src="//gc.zgo.at/count.js"></script></head><body class="theme-container"><div class="bar_for_phone"><div class="bar_left_button"><div class="left_button_for_bar" onclick="ChangeClassLeft()"><div class="bar1"></div><div class="bar2"></div><div class="bar3"></div></div></div><div class="bar_title"><a href="../../zh/">赤赤的象牙塔</a></div><div class="bar_right_button"><button class="toc_title_for_bar" onclick="ChangeClassTOC()">目录</button></div></div><div class="body_for_pc"><div class="left" id="left"><div class="left_non-footer"><div class="left_non-footer_option"><div class="theme-switch"><label class="switch"><input checked="" class="theme-switcher" type="checkbox"/>
+<span class="slider round"></span></label></div><li><br/></li><li class="left_non-footer_option_active">简体中文 ⦿</li><li class="left_non-footer_option_non-active">English ⨂</li><li class="left_non-footer_option_non-active">Français ⨂</li><li><br/></li><li class="left_non-footer_option_non-active">RSS 订阅 ⨂</li><li><br/></li></div><div class="left_non-footer_head"><div class="left_non-footer_head_title"><a href="../../zh/">赤赤的象牙塔</a></div><div class="left_non-footer_head_subtitle">(●’◡’●)ﾉ</div></div><div class="left_non-footer_main"><div class="h1"><a href="../../zh/math/">数学</a></div><div class="h2"><a href="../../zh/math/notes/">数学笔记</a></div><div class="h2"><a href="../../zh/math/stories/">数学科普</a></div><div class="h1 active"><a href="../../zh/non-math/">非数学</a></div><div class="h2"><a href="../../zh/non-math/journal/">日志</a></div><div class="h2"><a href="../../zh/non-math/literature/">写作</a></div><div class="h2 active"><a href="../../zh/non-math/memos/">备忘</a></div><div class="h1"><a href="../../zh/record/">记录</a></div><div class="h2"><a href="../../zh/record/book/">读过的书</a></div><div class="h2"><a href="../../zh/record/film/">看过的电影</a></div><div class="h1"><a href="../../zh/about/">关于</a></div><div class="h2"><a href="../../zh/about/me/">关于我</a></div><div class="h2"><a href="../../zh/about/site/">关于本站</a></div></div></div><div class="left_footer"><div class="copyright">©2019-2021 版权所有.</div></div></div><div class="right"><div class="right_head"><div class="right_head_title">博客记录书影音——Hugo 的 Data Templates</div><div class="right_head_des">2021-06-25 - 4274 字</div></div><div class="right_main"><div class="right_main_article"><p>如你所见，本站在侧边栏里新增了“记录”板块，包含我读过的书、我看过的电影. 本文做一个技术总结.</p><h1 id="动机">动机
+<a href="#%e5%8a%a8%e6%9c%ba"><small>¶</small></a></h1><p>我本来用来记录书、电影、音乐、游戏的平台是豆瓣，但把自己的数据交到别的平台上是很危险的一件事，已经有不少友邻出现了帐号被封禁后所有的书影音游记录全部消失的悲剧事件；第二，豆瓣的发言要经由中国大陆相关部门的审查，这使得在评价一部文艺作品时也需要注意措辞，有的时候恐怕不能把心中想的东西原原本本地记录下来；第三，豆瓣在文艺作品的条目上也受到中国大陆相关部门的审查，
+<a href="https://terminus2049.github.io/Not-exist-in-douban/" rel="noreferrer noopener" target="_blank">很多书影音
+<b>⧉</b></a>
+在豆瓣上根本不能存在，比如我看过的《颐和园》、《自助洗衣店》等作品就无法在豆瓣上标注，这对于记录自己的文艺生活来说是致命的灾难.</p><p>分析豆瓣这个平台，其作用有二：一是记录自己的文艺生活，二是可以在上面浏览其他人的记录，参考它上面的评分，有一定的社交属性. 豆瓣之所以能长期存活，是因为第二点；反过来想，如果我们能够放弃第二点，那么豆瓣就不是无可替代的，自己拿一个 excel 表格就能做记录，想放到网上可以选 Notion 或者 Airtable 之类，这样的实践已经有很多.</p><p>而我自己，已经有自己的博客了，把书影音记录整合进这个博客是非常自然的一个选择. 这里有三个问题需要解决：</p><ul><li>怎么在博客中展示这些数据？需要什么格式的文件，数据结构应该是什么样的？</li><li>怎么把豆瓣中的以往数据拿下来，并且存成我们想要的格式？</li><li>未来的记录流程是怎么样的，使用这个博客能像使用豆瓣那样流畅、自然吗？</li></ul><h1 id="怎么在博客中展示数据">怎么在博客中展示数据
+<a href="#%e6%80%8e%e4%b9%88%e5%9c%a8%e5%8d%9a%e5%ae%a2%e4%b8%ad%e5%b1%95%e7%a4%ba%e6%95%b0%e6%8d%ae"><small>¶</small></a></h1><p>我使用的博客生成器是 Hugo，而 Hugo 有一个
+<a href="https://gohugo.io/templates/data-templates/" rel="noreferrer noopener" target="_blank">Data Templates
+<b>⧉</b></a>
+，这正是完成这件事的最佳方案！</p><p>根据文档，我们可以把数据存成 yaml、toml、json，甚至是 csv 都可以. 我觉得 yaml 和 json 都是很好的选择，前者格式简洁，适合人类读写，后续添加记录的时候应该会省事很多；后者则应用非常广泛，相应的工具比较成熟，写代码处理 json 数据会非常方便. 我选择的是 json 格式.</p><p>根据文档中的例子，具体的数据结构是非常灵活的，想怎么安排就怎么安排，我根据自己想要展示的内容，做成了列表的形式，列表里面的每个元素都是一个字典：</p><div class="highlight"><div class="chroma"><table class="lntable"><tr><td class="lntd"><pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span></code></pre></td><td class="lntd"><pre class="chroma"><code class="language-json" data-lang="json"><span class="err">#</span> <span class="err">data/book.json</span>
+<span class="p">[</span>
+  <span class="p">{</span>
+    <span class="nt">"title"</span><span class="p">:</span> <span class="s2">"第一本书的书名"</span><span class="p">,</span>
+    <span class="nt">"author"</span><span class="p">:</span> <span class="s2">"书的作者"</span><span class="p">,</span>
+    <span class="nt">"public_year"</span><span class="p">:</span> <span class="s2">"书的出版年份"</span><span class="p">,</span>
+    <span class="nt">"press"</span><span class="p">:</span> <span class="s2">"出版社"</span><span class="p">,</span>
+    <span class="nt">"link"</span><span class="p">:</span> <span class="s2">"豆瓣链接"</span><span class="p">,</span>
+    <span class="nt">"isbn"</span><span class="p">:</span> <span class="s2">"书的 ISBN 编号"</span><span class="p">,</span>
+    <span class="nt">"mark_date"</span><span class="p">:</span> <span class="s2">"我是哪一天读完的此书"</span><span class="p">,</span>
+    <span class="nt">"my_score"</span><span class="p">:</span> <span class="s2">"我给的星星数"</span><span class="p">,</span>
+    <span class="nt">"my_comment"</span><span class="p">:</span> <span class="s2">"我对此书的评价"</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="nt">"title"</span><span class="p">:</span> <span class="s2">"第二本书的书名"</span><span class="p">,</span>
+    <span class="nt">"author"</span><span class="p">:</span> <span class="s2">"书的作者"</span><span class="p">,</span>
+    <span class="nt">"public_year"</span><span class="p">:</span> <span class="s2">"书的出版年份"</span><span class="p">,</span>
+    <span class="nt">"press"</span><span class="p">:</span> <span class="s2">"出版社"</span><span class="p">,</span>
+    <span class="nt">"link"</span><span class="p">:</span> <span class="s2">"豆瓣链接"</span><span class="p">,</span>
+    <span class="nt">"isbn"</span><span class="p">:</span> <span class="s2">"书的 ISBN 编号"</span><span class="p">,</span>
+    <span class="nt">"mark_date"</span><span class="p">:</span> <span class="s2">"我是哪一天读完的此书"</span><span class="p">,</span>
+    <span class="nt">"my_score"</span><span class="p">:</span> <span class="s2">"我给的星星数"</span><span class="p">,</span>
+    <span class="nt">"my_comment"</span><span class="p">:</span> <span class="s2">"我对此书的评价"</span>
+  <span class="p">}</span>
+<span class="p">]</span>
+</code></pre></td></tr></table></div></div><div class="highlight"><div class="chroma"><table class="lntable"><tr><td class="lntd"><pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span></code></pre></td><td class="lntd"><pre class="chroma"><code class="language-json" data-lang="json"><span class="err">#</span> <span class="err">data/film.json</span>
+<span class="p">[</span>
+  <span class="p">{</span>
+    <span class="nt">"title"</span><span class="p">:</span> <span class="s2">"第一部电影的电影中文名"</span><span class="p">,</span>
+    <span class="nt">"ori_name"</span><span class="p">:</span> <span class="s2">"电影的原名"</span><span class="p">,</span>
+    <span class="nt">"public_year"</span><span class="p">:</span> <span class="s2">"上映年份"</span><span class="p">,</span>
+    <span class="nt">"produce_country"</span><span class="p">:</span> <span class="s2">"发行地区"</span><span class="p">,</span>
+    <span class="nt">"film_type"</span><span class="p">:</span> <span class="s2">"电影的类型"</span><span class="p">,</span>
+    <span class="nt">"director"</span><span class="p">:</span> <span class="s2">"导演"</span><span class="p">,</span>
+    <span class="nt">"link"</span><span class="p">:</span> <span class="s2">"豆瓣链接"</span><span class="p">,</span>
+    <span class="nt">"imdb_id"</span><span class="p">:</span> <span class="s2">"IMDB 编号"</span><span class="p">,</span>
+    <span class="nt">"mark_date"</span><span class="p">:</span> <span class="s2">"我是哪一天看完的此电影"</span><span class="p">,</span>
+    <span class="nt">"my_score"</span><span class="p">:</span> <span class="s2">"我给的星星数"</span><span class="p">,</span>
+    <span class="nt">"my_comment"</span><span class="p">:</span> <span class="s2">"我对此电影的评价"</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="nt">"title"</span><span class="p">:</span> <span class="s2">"第二部电影的电影中文名"</span><span class="p">,</span>
+    <span class="nt">"ori_name"</span><span class="p">:</span> <span class="s2">"电影的原名"</span><span class="p">,</span>
+    <span class="nt">"public_year"</span><span class="p">:</span> <span class="s2">"上映年份"</span><span class="p">,</span>
+    <span class="nt">"produce_country"</span><span class="p">:</span> <span class="s2">"发行地区"</span><span class="p">,</span>
+    <span class="nt">"film_type"</span><span class="p">:</span> <span class="s2">"电影的类型"</span><span class="p">,</span>
+    <span class="nt">"director"</span><span class="p">:</span> <span class="s2">"导演"</span><span class="p">,</span>
+    <span class="nt">"link"</span><span class="p">:</span> <span class="s2">"豆瓣链接"</span><span class="p">,</span>
+    <span class="nt">"imdb_id"</span><span class="p">:</span> <span class="s2">"IMDB 编号"</span><span class="p">,</span>
+    <span class="nt">"mark_date"</span><span class="p">:</span> <span class="s2">"我是哪一天看完的此电影"</span><span class="p">,</span>
+    <span class="nt">"my_score"</span><span class="p">:</span> <span class="s2">"我给的星星数"</span><span class="p">,</span>
+    <span class="nt">"my_comment"</span><span class="p">:</span> <span class="s2">"我对此电影的评价"</span>
+  <span class="p">}</span>
+<span class="p">]</span>
+</code></pre></td></tr></table></div></div><p>这里的顺序是按照标记日期新的在前、旧的在后的顺序排列的.</p><p>安排好数据结构，就可以写模板了. 像我这个站，需要两个单独的网页来展示，所以就写在文章模板 <code>layouts/_default/single.html</code> 里. 为了方便后期维护，我们把书影音记录页面单拆一个 partial 出来：</p><div class="highlight"><div class="chroma"><table class="lntable"><tr><td class="lntd"><pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td><td class="lntd"><pre class="chroma"><code class="language-html" data-lang="html"><span class="c">&lt;!-- layouts/_default/single.html --&gt;</span>
+
+<span class="c">&lt;!-- 书影音展示区域 --&gt;</span>
+{{ partial "record.html" . }}
+</code></pre></td></tr></table></div></div><p>为了确定哪些页面需要渲染这一部分，我们使用 identifier 做个判断：</p><div class="highlight"><div class="chroma"><table class="lntable"><tr><td class="lntd"><pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td><td class="lntd"><pre class="chroma"><code class="language-html" data-lang="html"><span class="c">&lt;!-- layouts/partials/record.html --&gt;</span>
+
+{{ if eq (.Param "menu.main.identifier") "book" }}
+<span class="c">&lt;!-- 下面是读过的书的记录 --&gt;</span>
+    {{ range $.Site.Data.book }}
+        {{ .title }}
+    {{ end }}
+
+{{ else if eq (.Param "menu.main.identifier") "film" }}
+<span class="c">&lt;!-- 下面是看过的电影的记录 --&gt;</span>
+    {{ range $.Site.Data.film }}
+        {{ .title }}
+    {{ end }}
+
+{{ end }}
+</code></pre></td></tr></table></div></div><p>目录结构如下：</p><div class="highlight"><div class="chroma"><table class="lntable"><tr><td class="lntd"><pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td><td class="lntd"><pre class="chroma"><code class="language-bash" data-lang="bash">$ tree
+.
+├── config.yaml
+├── content
+│   ├── about
+│   ├── _index.md
+│   └── record
+│       ├── book.md
+│       ├── film.md
+│       └── _index.md
+├── data
+│   ├── book.json
+└   └── film.json
+</code></pre></td></tr></table></div></div><p>其中：</p><div class="highlight"><div class="chroma"><table class="lntable"><tr><td class="lntd"><pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td><td class="lntd"><pre class="chroma"><code class="language-md" data-lang="md"><span class="c">&lt;!-- content/record/_index.md --&gt;</span>
+
+---
+menu:
+  main:
+    identifier: record
+    name: 记录
+    weight: 3
+---
+
+记录分区，包含我所有读过的书、看过的电影，作为豆瓣的替代品.
+</code></pre></td></tr></table></div></div><div class="highlight"><div class="chroma"><table class="lntable"><tr><td class="lntd"><pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td><td class="lntd"><pre class="chroma"><code class="language-md" data-lang="md"><span class="c">&lt;!-- content/record/book.md --&gt;</span>
+
+---
+title: 读过的书
+date: 2010-01-01
+menu:
+  main:
+    identifier: book
+    parent: record
+    name: 读过的书
+    weight: 1
+---
+
+这些是我读过的书.
+</code></pre></td></tr></table></div></div><div class="highlight"><div class="chroma"><table class="lntable"><tr><td class="lntd"><pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td><td class="lntd"><pre class="chroma"><code class="language-md" data-lang="md"><span class="c">&lt;!-- content/record/film.md --&gt;</span>
+
+---
+title: 看过的电影
+date: 2010-01-01
+menu:
+  main:
+    identifier: film
+    parent: record
+    name: 看过的电影
+    weight: 2
+---
+
+这些是我看过的电影和电视剧.
+</code></pre></td></tr></table></div></div><p>这样就搞定了，只要在 <code>layouts/partials/record.html</code> 里再好好把数据的展示格式调整一下就没问题了.</p><p>不过我在这里遇到了另一个问题，那就是我的网站是多语言的网站. 多语言的意思就是这个网站的每一个页面都应该做多语言的翻译，就比如一篇文章，在源文件里是写在 <code>title.md</code> 里的，但为了多语言，则应该给它翻译成 <code>title.en.md</code> 和 <code>title.fr.md</code> 分别用作英语的页面和法语的页面，Hugo 也能非常自动地把这个问题处理好，只要你这样写了，它就会自动帮你生成多语言的页面. 类比到 data 的问题上，照理说也应如此，比如 <code>book.json</code> 我给它翻译出两份 <code>book.en.json</code> 和 <code>book.fr.json</code> 应该就可以了，但 Hugo 并没有支持这种做法.</p><p>于是我就想，要不就把数据存成 <code>book_zh.json</code>、<code>book_en.json</code>、<code>book_fr.json</code> 这种格式，然后在 <code>layouts/partials/record.html</code> 里做个类似于 <code>{{ range $.Site.Data.film_(.Language.Lang) }}</code>的东西就差不多了吧，但我试了半天也查了半天文档，发现 Hugo 好像并不支持这种变量里面套变量（
+<a href="https://www.php.net/manual/en/language.variables.variable.php" rel="noreferrer noopener" target="_blank">variable variables
+<b>⧉</b></a>
+）的做法.</p><p>正在我左右为难之际，我突然灵光一现！我想起了在一般的编程语言比如 python 中是如何处理这种变量套变量的，那就是
+<a href="https://stackoverflow.com/a/1373185/9783145" rel="noreferrer noopener" target="_blank">使用字典
+<b>⧉</b></a>
+：</p><div class="highlight"><div class="chroma"><table class="lntable"><tr><td class="lntd"><pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td><td class="lntd"><pre class="chroma"><code class="language-py" data-lang="py"><span class="n">a</span> <span class="o">=</span> <span class="s2">"hello"</span>
+<span class="nb">dict</span> <span class="o">=</span> <span class="p">{</span><span class="n">a</span><span class="p">:</span> <span class="s2">"world"</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="nb">dict</span><span class="p">[</span><span class="n">a</span><span class="p">])</span>
+</code></pre></td></tr></table></div></div><p>对于 golang 来说就是 map，而用在我们这里的 Hugo data templates，我们应该注意到：data 文件夹的每一层都是一个 map 啊！这下问题就可以简单地解决了.</p><p>文件结构做点调整：</p><div class="highlight"><div class="chroma"><table class="lntable"><tr><td class="lntd"><pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td><td class="lntd"><pre class="chroma"><code class="language-bash" data-lang="bash">$ tree
+.
+├── config.yaml
+├── content
+│   ├── about
+│   ├── _index.md
+│   └── record
+│       ├── book.en.md
+│       ├── book.md
+│       ├── film.en.md
+│       ├── film.md
+│       ├── _index.en.md
+│       └── _index.md
+├── data
+│   ├── en
+│   │   ├── book.json
+│   │   └── film.json
+│   └── zh
+│       ├── book.json
+└       └── film.json
+</code></pre></td></tr></table></div></div><p>页面的 markdown 文件：</p><div class="highlight"><div class="chroma"><table class="lntable"><tr><td class="lntd"><pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td><td class="lntd"><pre class="chroma"><code class="language-md" data-lang="md"><span class="c">&lt;!-- content/record/_index.en.md --&gt;</span>
+
+---
+menu:
+  main:
+    identifier: record
+    name: RECORD
+    weight: 3
+---
+
+Record section. Including the books I have read and the films I have watched, as an alternative to douban.
+</code></pre></td></tr></table></div></div><div class="highlight"><div class="chroma"><table class="lntable"><tr><td class="lntd"><pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td><td class="lntd"><pre class="chroma"><code class="language-md" data-lang="md"><span class="c">&lt;!-- content/record/book.en.md --&gt;</span>
+
+---
+title: Books read
+date: 2010-01-01
+menu:
+  main:
+    identifier: book
+    parent: record
+    name: Books Read
+    weight: 1
+---
+
+Here are the books I have read.
+</code></pre></td></tr></table></div></div><div class="highlight"><div class="chroma"><table class="lntable"><tr><td class="lntd"><pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td><td class="lntd"><pre class="chroma"><code class="language-md" data-lang="md"><span class="c">&lt;!-- content/record/film.en.md --&gt;</span>
+
+---
+title: Films watched
+date: 2010-01-01
+menu:
+  main:
+    identifier: film
+    parent: record
+    name: Films Watched
+    weight: 2
+---
+
+Here are the films I have watched.
+</code></pre></td></tr></table></div></div><p>模板：</p><div class="highlight"><div class="chroma"><table class="lntable"><tr><td class="lntd"><pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span></code></pre></td><td class="lntd"><pre class="chroma"><code class="language-html" data-lang="html"><span class="c">&lt;!-- layouts/partials/record.html --&gt;</span>
+
+{{ $curr_page := . }}
+{{ range $key, $value := $.Site.Data }}
+
+    {{ if eq $key $curr_page.Language.Lang }}
+
+        {{ if eq ($curr_page.Param "menu.main.identifier") "book" }}
+        <span class="c">&lt;!-- 下面是读过的书的记录 --&gt;</span>
+            {{ range $value.book }}
+                {{ .title }}
+            {{ end }}
+        {{ end }}
+
+        {{ else if eq ($curr_page.Param "menu.main.identifier") "film" }}
+        <span class="c">&lt;!-- 下面是看过的电影的记录 --&gt;</span>
+            {{ range $value.film }}
+                {{ .title }}
+            {{ end }}
+        {{ end }}
+
+    {{ end }}
+
+{{ end }}
+</code></pre></td></tr></table></div></div><h1 id="怎么把豆瓣的数据存成相应格式">怎么把豆瓣的数据存成相应格式
+<a href="#%e6%80%8e%e4%b9%88%e6%8a%8a%e8%b1%86%e7%93%a3%e7%9a%84%e6%95%b0%e6%8d%ae%e5%ad%98%e6%88%90%e7%9b%b8%e5%ba%94%e6%a0%bc%e5%bc%8f"><small>¶</small></a></h1><p>首先使用
+<a href="https://blog.doufen.org/posts/tofu-user-guide/" rel="noreferrer noopener" target="_blank">豆伴备份工具
+<b>⧉</b></a>
+备份豆瓣数据，下载下来得到一个 xlsx 文件. 然后我们可以使用 python 的
+<a href="https://openpyxl.readthedocs.io/en/stable/" rel="noreferrer noopener" target="_blank">openpyxl 包
+<b>⧉</b></a>
+把里面的数据取出来弄成我们想要的格式. 但是这个工具备份下来的数据没有原名以及 IMDB 编号，我又找到了一个好心人制作的免费 api：
+<a href="https://github.com/iiiiiii1/douban-imdb-api" rel="noreferrer noopener" target="_blank">douban-imdb-api
+<b>⧉</b></a>
+. 把这些东西集合在一起，我写了这么几行代码：</p><div class="highlight"><div class="chroma"><table class="lntable"><tr><td class="lntd"><pre class="chroma"><code><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span><span class="lnt">101
+</span><span class="lnt">102
+</span></code></pre></td><td class="lntd"><pre class="chroma"><code class="language-py" data-lang="py"><span class="kn">from</span> <span class="nn">openpyxl</span> <span class="kn">import</span> <span class="n">load_workbook</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="n">wb</span> <span class="o">=</span> <span class="n">load_workbook</span><span class="p">(</span><span class="s1">'douban.xlsx'</span><span class="p">)</span>
+
+<span class="n">watch_done</span> <span class="o">=</span> <span class="n">wb</span><span class="p">[</span><span class="s1">'看过'</span><span class="p">]</span>
+<span class="n">read_done</span> <span class="o">=</span> <span class="n">wb</span><span class="p">[</span><span class="s1">'读过'</span><span class="p">]</span>
+
+<span class="n">wb</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="n">watch_json</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">read_json</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">read_done</span><span class="o">.</span><span class="n">max_row</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="n">title</span> <span class="o">=</span> <span class="n">read_done</span><span class="p">[</span><span class="s1">'A</span><span class="si">%d</span><span class="s1">'</span><span class="o">%</span><span class="p">(</span><span class="n">i</span><span class="p">)]</span><span class="o">.</span><span class="n">value</span>
+    <span class="n">des</span> <span class="o">=</span> <span class="n">read_done</span><span class="p">[</span><span class="s1">'B</span><span class="si">%d</span><span class="s1">'</span><span class="o">%</span><span class="p">(</span><span class="n">i</span><span class="p">)]</span><span class="o">.</span><span class="n">value</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">'/'</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">author</span> <span class="o">=</span> <span class="n">des</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+        <span class="n">public_year</span> <span class="o">=</span> <span class="n">des</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+        <span class="n">press</span> <span class="o">=</span> <span class="n">des</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="n">author</span> <span class="o">=</span> <span class="s2">"null"</span>
+        <span class="n">public_year</span> <span class="o">=</span> <span class="s2">"null"</span>
+        <span class="n">press</span> <span class="o">=</span> <span class="s2">"null"</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"读过出现问题"</span><span class="p">)</span>
+    <span class="n">link</span> <span class="o">=</span> <span class="n">read_done</span><span class="p">[</span><span class="s1">'D</span><span class="si">%d</span><span class="s1">'</span><span class="o">%</span><span class="p">(</span><span class="n">i</span><span class="p">)]</span><span class="o">.</span><span class="n">value</span>
+    <span class="n">mark_date</span> <span class="o">=</span> <span class="n">read_done</span><span class="p">[</span><span class="s1">'E</span><span class="si">%d</span><span class="s1">'</span><span class="o">%</span><span class="p">(</span><span class="n">i</span><span class="p">)]</span><span class="o">.</span><span class="n">value</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">]</span>
+    <span class="n">my_score</span> <span class="o">=</span> <span class="n">read_done</span><span class="p">[</span><span class="s1">'F</span><span class="si">%d</span><span class="s1">'</span><span class="o">%</span><span class="p">(</span><span class="n">i</span><span class="p">)]</span><span class="o">.</span><span class="n">value</span>
+    <span class="n">my_comment</span> <span class="o">=</span> <span class="n">read_done</span><span class="p">[</span><span class="s1">'H</span><span class="si">%d</span><span class="s1">'</span><span class="o">%</span><span class="p">(</span><span class="n">i</span><span class="p">)]</span><span class="o">.</span><span class="n">value</span>
+
+    <span class="n">book_obj</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">'title'</span><span class="p">:</span> <span class="n">title</span><span class="p">,</span>
+            <span class="s1">'author'</span><span class="p">:</span> <span class="n">author</span><span class="p">,</span>
+            <span class="s1">'public_year'</span><span class="p">:</span> <span class="n">public_year</span><span class="p">,</span>
+            <span class="s1">'press'</span><span class="p">:</span> <span class="n">press</span><span class="p">,</span>
+            <span class="s1">'link'</span><span class="p">:</span> <span class="n">link</span><span class="p">,</span>
+            <span class="s1">'mark_date'</span><span class="p">:</span> <span class="n">mark_date</span><span class="p">,</span>
+            <span class="s1">'my_score'</span><span class="p">:</span> <span class="s1">'★'</span> <span class="o">*</span> <span class="n">my_score</span><span class="p">,</span>
+            <span class="s1">'my_comment'</span><span class="p">:</span> <span class="n">my_comment</span>
+            <span class="p">}</span>
+
+    <span class="n">read_json</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">book_obj</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">watch_done</span><span class="o">.</span><span class="n">max_row</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="n">title</span> <span class="o">=</span> <span class="n">watch_done</span><span class="p">[</span><span class="s1">'A</span><span class="si">%d</span><span class="s1">'</span><span class="o">%</span><span class="p">(</span><span class="n">i</span><span class="p">)]</span><span class="o">.</span><span class="n">value</span>
+    <span class="n">des</span> <span class="o">=</span> <span class="n">watch_done</span><span class="p">[</span><span class="s1">'B</span><span class="si">%d</span><span class="s1">'</span><span class="o">%</span><span class="p">(</span><span class="n">i</span><span class="p">)]</span><span class="o">.</span><span class="n">value</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">'/'</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">public_year</span> <span class="o">=</span> <span class="n">des</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+        <span class="n">produce_country</span> <span class="o">=</span> <span class="n">des</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+        <span class="n">film_type</span> <span class="o">=</span> <span class="n">des</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+        <span class="n">director</span> <span class="o">=</span> <span class="n">des</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="n">public_year</span> <span class="o">=</span> <span class="s2">"null"</span>
+        <span class="n">produce_country</span> <span class="o">=</span> <span class="s2">"null"</span>
+        <span class="n">film_type</span> <span class="o">=</span> <span class="s2">"null"</span>
+        <span class="n">director</span> <span class="o">=</span> <span class="s2">"null"</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"看过出现问题"</span><span class="p">)</span>
+    <span class="n">link</span> <span class="o">=</span> <span class="n">watch_done</span><span class="p">[</span><span class="s1">'D</span><span class="si">%d</span><span class="s1">'</span><span class="o">%</span><span class="p">(</span><span class="n">i</span><span class="p">)]</span><span class="o">.</span><span class="n">value</span>
+    <span class="n">link_split</span> <span class="o">=</span> <span class="n">link</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">'/'</span><span class="p">)</span>
+    <span class="n">douban_id</span> <span class="o">=</span> <span class="n">link_split</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">film_ex</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'https://movie.querydata.org/api?id='</span> <span class="o">+</span> <span class="n">douban_id</span><span class="p">)</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+        <span class="n">imdb_id</span> <span class="o">=</span> <span class="n">film_ex</span><span class="p">[</span><span class="s1">'imdbId'</span><span class="p">]</span>
+        <span class="n">ori_name</span> <span class="o">=</span> <span class="n">film_ex</span><span class="p">[</span><span class="s1">'originalName'</span><span class="p">]</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">''</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">'出现异常'</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">''</span><span class="p">)</span>
+        <span class="n">imdb_id</span> <span class="o">=</span> <span class="s1">'null'</span>
+        <span class="n">ori_name</span> <span class="o">=</span> <span class="s1">'null'</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">'成功'</span><span class="p">)</span>
+    <span class="n">mark_date</span> <span class="o">=</span> <span class="n">watch_done</span><span class="p">[</span><span class="s1">'E</span><span class="si">%d</span><span class="s1">'</span><span class="o">%</span><span class="p">(</span><span class="n">i</span><span class="p">)]</span><span class="o">.</span><span class="n">value</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">]</span>
+    <span class="n">my_score</span> <span class="o">=</span> <span class="n">watch_done</span><span class="p">[</span><span class="s1">'F</span><span class="si">%d</span><span class="s1">'</span><span class="o">%</span><span class="p">(</span><span class="n">i</span><span class="p">)]</span><span class="o">.</span><span class="n">value</span>
+    <span class="n">my_comment</span> <span class="o">=</span> <span class="n">watch_done</span><span class="p">[</span><span class="s1">'H</span><span class="si">%d</span><span class="s1">'</span><span class="o">%</span><span class="p">(</span><span class="n">i</span><span class="p">)]</span><span class="o">.</span><span class="n">value</span>
+
+    <span class="n">film_obj</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">'title'</span><span class="p">:</span> <span class="n">title</span><span class="p">,</span>
+            <span class="s1">'ori_name'</span><span class="p">:</span> <span class="n">ori_name</span><span class="p">,</span>
+            <span class="s1">'public_year'</span><span class="p">:</span> <span class="n">public_year</span><span class="p">,</span>
+            <span class="s1">'produce_country'</span><span class="p">:</span> <span class="n">produce_country</span><span class="p">,</span>
+            <span class="s1">'film_type'</span><span class="p">:</span> <span class="n">film_type</span><span class="p">,</span>
+            <span class="s1">'director'</span><span class="p">:</span> <span class="n">director</span><span class="p">,</span>
+            <span class="s1">'link'</span><span class="p">:</span> <span class="n">link</span><span class="p">,</span>
+            <span class="s1">'imdb_id'</span><span class="p">:</span> <span class="n">imdb_id</span><span class="p">,</span>
+            <span class="s1">'mark_date'</span><span class="p">:</span> <span class="n">mark_date</span><span class="p">,</span>
+            <span class="s1">'my_score'</span><span class="p">:</span> <span class="s1">'★'</span> <span class="o">*</span> <span class="n">my_score</span><span class="p">,</span>
+            <span class="s1">'my_comment'</span><span class="p">:</span> <span class="n">my_comment</span>
+            <span class="p">}</span>
+
+    <span class="n">watch_json</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">film_obj</span><span class="p">)</span>
+
+<span class="k">with</span> <span class="nb">open</span> <span class="p">(</span><span class="s1">'book.json'</span><span class="p">,</span> <span class="s1">'w'</span><span class="p">)</span> <span class="k">as</span> <span class="n">rf</span><span class="p">:</span>
+    <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">read_json</span><span class="p">,</span> <span class="n">rf</span><span class="p">,</span> <span class="n">ensure_ascii</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="k">with</span> <span class="nb">open</span> <span class="p">(</span><span class="s1">'film.json'</span><span class="p">,</span> <span class="s1">'w'</span><span class="p">)</span> <span class="k">as</span> <span class="n">wf</span><span class="p">:</span>
+    <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">watch_json</span><span class="p">,</span> <span class="n">wf</span><span class="p">,</span> <span class="n">ensure_ascii</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+</code></pre></td></tr></table></div></div><p>运行这个代码之前应该先把表格按照标记时间新的在上、旧的在下的顺序重新排一下序，因为用豆伴工具备份下来的数据是按照第一次标记的顺序排列的. 比如，我在 2019 年给某一个电影标记了“想看”，2021 年的某一天我把它看了，标了“看过”，那么这条记录会出现在 2019 年的那个位置，尽管它的标记日期是 2021 年. 如果像我一样最开始没有注意到这一点，等数据都弄好了才发现，我又写了另一份代码帮忙排序（因为重新生成数据的话还得去调用人家的免费 api，一是我于心不忍，二是那太慢了！）：</p><div class="highlight"><div class="chroma"><table class="lntable"><tr><td class="lntd"><pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre></td><td class="lntd"><pre class="chroma"><code class="language-py" data-lang="py"><span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">operator</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'book.json'</span><span class="p">,</span> <span class="s1">'r'</span><span class="p">)</span> <span class="k">as</span> <span class="n">ori_book</span><span class="p">:</span>
+    <span class="n">book_ori</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">ori_book</span><span class="p">)</span>
+
+<span class="n">book_ori</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">key</span> <span class="o">=</span> <span class="n">operator</span><span class="o">.</span><span class="n">itemgetter</span><span class="p">(</span><span class="s1">'mark_date'</span><span class="p">),</span> <span class="n">reverse</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+
+<span class="k">with</span> <span class="nb">open</span> <span class="p">(</span><span class="s1">'book_new.json'</span><span class="p">,</span> <span class="s1">'w'</span><span class="p">)</span> <span class="k">as</span> <span class="n">rf</span><span class="p">:</span>
+    <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">book_ori</span><span class="p">,</span> <span class="n">rf</span><span class="p">,</span> <span class="n">ensure_ascii</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'film.json'</span><span class="p">,</span> <span class="s1">'r'</span><span class="p">)</span> <span class="k">as</span> <span class="n">ori_film</span><span class="p">:</span>
+    <span class="n">film_ori</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">ori_film</span><span class="p">)</span>
+
+<span class="n">film_ori</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">key</span> <span class="o">=</span> <span class="n">operator</span><span class="o">.</span><span class="n">itemgetter</span><span class="p">(</span><span class="s1">'mark_date'</span><span class="p">),</span> <span class="n">reverse</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+
+<span class="k">with</span> <span class="nb">open</span> <span class="p">(</span><span class="s1">'film_new.json'</span><span class="p">,</span> <span class="s1">'w'</span><span class="p">)</span> <span class="k">as</span> <span class="n">wf</span><span class="p">:</span>
+    <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">film_ori</span><span class="p">,</span> <span class="n">wf</span><span class="p">,</span> <span class="n">ensure_ascii</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+</code></pre></td></tr></table></div></div><p>这样，我们的数据都搞定了，把它们放进 <code>data/zh/</code> 里就好了，如果需要多语言的则自行翻译后放进相应语言的文件夹里.</p><h1 id="怎么添加新的条目到我的博客中">怎么添加新的条目到我的博客中
+<a href="#%e6%80%8e%e4%b9%88%e6%b7%bb%e5%8a%a0%e6%96%b0%e7%9a%84%e6%9d%a1%e7%9b%ae%e5%88%b0%e6%88%91%e7%9a%84%e5%8d%9a%e5%ae%a2%e4%b8%ad"><small>¶</small></a></h1><p>之前在哪里看到过一个最棒的解决思路：豆瓣的标记是能生成 RSS 的，因此跑一个脚本，在自己帐号的标记书影音 RSS 发生变化时，自动把条目添加到 json 文件中. 而跑这个脚本最好的地方就是 GitHub Action，这样一来还同时解决了 push 到 GitHub repo 以及重新生成网站（很多托管网站像 Vercel、Netlify 都提供这样的功能，本质上就是他们托管商那里也安装了 Hugo 这个软件）的问题，应该是最简单高效，极其完美的解决方案了.</p><p>但我这个博客有个特殊之处在于我有一些文章是需要自己跑脚本加密的，必须得我自己生成 public 文件夹再推送出去，不能用托管商的 hugo 命令. 所以我想的是，干脆就放弃豆瓣，自己写一个脚本，需要添加新标记时就跑一下脚本，输入豆瓣 id 后脚本自动去把相关信息爬下来，我只需要打分和写评语就可以了. 不过这个部分我暂时还没有做，因此先搁置在这里，等我做好了再来分享.</p><p></p><p></p><p></p><p></p></div></div><div class="right_comments"><script async="" crossorigin="anonymous" issue-term="pathname" repo="zerovip/bcsu" src="https://utteranc.es/client.js" theme="github-light"></script></div></div><div class="toc" id="toc"><button class="toc_title">目录</button><div class="toc_content"><nav id="TableOfContents"><ul><li><a href="#动机">动机</a></li><li><a href="#怎么在博客中展示数据">怎么在博客中展示数据</a></li><li><a href="#怎么把豆瓣的数据存成相应格式">怎么把豆瓣的数据存成相应格式</a></li><li><a href="#怎么添加新的条目到我的博客中">怎么添加新的条目到我的博客中</a></li></ul></nav></div></div></div><script src="../../js/main.min.768b2e143537ac52038c98c318834c9fb1d7c0e16ddc8f56801812a4d621b15b.js" type="text/javascript"></script></body></html>
