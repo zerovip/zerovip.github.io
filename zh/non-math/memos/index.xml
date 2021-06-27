@@ -548,7 +548,8 @@ Here are the films I have watched.
 {{ end }}
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h1 id="怎么把豆瓣的数据存成相应格式">
+&lt;/div>&lt;p>调整格式丰富内容以后再用 i18n 函数把内容翻译成多语言即可.&lt;/p>
+&lt;h1 id="怎么把豆瓣的数据存成相应格式">
 怎么把豆瓣的数据存成相应格式
 &lt;a href="#%e6%80%8e%e4%b9%88%e6%8a%8a%e8%b1%86%e7%93%a3%e7%9a%84%e6%95%b0%e6%8d%ae%e5%ad%98%e6%88%90%e7%9b%b8%e5%ba%94%e6%a0%bc%e5%bc%8f">&lt;small>¶&lt;/small>&lt;/a>
 &lt;/h1>
