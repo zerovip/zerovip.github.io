@@ -7700,13 +7700,20 @@ target="_blank" rel="noreferrer noopener"
 Data Templates
 &lt;b>⧉ &lt;/b>
 &lt;/a>
-来做这件事.&lt;/del>（已
+来做这件事.&lt;/del>（
 &lt;a href="../../../zh/82988/"
 >
-完成
+已完成
 &lt;/a>
 ）&lt;/li>
-&lt;li>&lt;input disabled="" type="checkbox"> 考虑列表页的分页问题？（如果文章太多了的话）&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> 考虑列表页的分页问题？（如果文章太多了的话）参考：
+&lt;a href="https://gohugo.io/templates/pagination/"
+target="_blank" rel="noreferrer noopener"
+>
+Pagination
+&lt;b>⧉ &lt;/b>
+&lt;/a>
+. 不过我目前倾向于不用分页，一页就挺好.&lt;/li>
 &lt;/ol>
 &lt;section class="footnotes" role="doc-endnotes">
 &lt;hr>
