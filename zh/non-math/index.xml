@@ -7258,6 +7258,16 @@ MemE
 ，他贡献了搜索的功能.&lt;/p>
 &lt;/li>
 &lt;li>
+&lt;p>
+&lt;a href="https://nova.moe"
+target="_blank" rel="noreferrer noopener"
+>
+Nova Kwok&amp;rsquo;s Awesome Blog
+&lt;b>⧉ &lt;/b>
+&lt;/a>
+. 偶然看到，技术性文章较多，也有少量的随笔. 做了很多有意思的项目.&lt;/p>
+&lt;/li>
+&lt;li>
 &lt;p>别人推荐的一些，还没看，有时间可以过一遍看看：&lt;/p>
 &lt;ul>
 &lt;li>
@@ -8842,14 +8852,14 @@ Data Templates
 已完成
 &lt;/a>
 ）&lt;/li>
-&lt;li>&lt;input disabled="" type="checkbox"> 考虑列表页的分页问题？（如果文章太多了的话）参考：
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> ~~考虑列表页的分页问题？（如果文章太多了的话）参考：
 &lt;a href="https://gohugo.io/templates/pagination/"
 target="_blank" rel="noreferrer noopener"
 >
 Pagination
 &lt;b>⧉ &lt;/b>
 &lt;/a>
-. 不过我目前倾向于不用分页，一页就挺好.&lt;/li>
+.~~不再考虑，不用分页，一页就挺好.&lt;/li>
 &lt;/ol>
 &lt;section class="footnotes" role="doc-endnotes">
 &lt;hr>
