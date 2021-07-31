@@ -3,3 +3,9 @@ Disallow: /zh/about/me
 Disallow: /en/about/me
 Disallow: /fr/about/me
 Disallow: /zh/71828
+Disallow: /zh/record/film
+Disallow: /en/record/film
+Disallow: /fr/record/film
+Disallow: /zh/record/book
+Disallow: /en/record/book
+Disallow: /fr/record/book

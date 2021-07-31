@@ -1,58 +1,224 @@
 <!DOCTYPE html>
-<html><head><meta charset="utf-8"/><meta content="width=divice-width,initial-scale=1" name="viewport"/><meta content="Hugo 0.84.2" name="generator"/><title>bspwm 入门
-| 赤赤的象牙塔</title><link href="../../css/base.min.95ea8167f9605d8832a5e034bbb0661e743738a37ebaee97a3aeba483bce8a62.css" rel="stylesheet" type="text/css"/><link href="../../css/small.min.fc3c637453c4bb37cfe95f39f0a9bd491c0f8186e381262a1fde3fd405e376d9.css" media="screen and (max-width: 1200px)" rel="stylesheet" type="text/css"/><link href="../../css/normal.min.be196062cbff56d863e9c84984e359f5e7331cb72e766a0eb1ed1ac021b07958.css" media="screen and (min-width: 1201px)" rel="stylesheet" type="text/css"/><link href="../../css/syntax.min.ed5b37c3a50997d5ccd8b81bf0d00a7ac1f92c82985623c2dbf0cb422596726a.css" rel="stylesheet" type="text/css"/><script type="application/javascript">var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-143006759-1','auto'),ga('send','pageview'))</script><script async="" src="https://www.google-analytics.com/analytics.js"></script><script async="" data-goatcounter="https://zerovip.goatcounter.com/count" src="//gc.zgo.at/count.js"></script></head><body class="theme-container"><div class="bar_for_phone"><div class="bar_left_button"><div class="left_button_for_bar" onclick="ChangeClassLeft()"><div class="bar1"></div><div class="bar2"></div><div class="bar3"></div></div></div><div class="bar_title"><a href="../../zh/">赤赤的象牙塔</a></div><div class="bar_right_button"><button class="toc_title_for_bar" onclick="ChangeClassTOC()">目录</button></div></div><div class="body_for_pc"><div class="left" id="left"><div class="left_non-footer"><div class="left_non-footer_option"><div class="theme-switch"><label class="switch"><input checked="" class="theme-switcher" type="checkbox"/>
-<span class="slider round"></span></label></div><li><br/></li><li class="left_non-footer_option_active">简体中文 ⦿</li><li class="left_non-footer_option_non-active">English ⨂</li><li class="left_non-footer_option_non-active">Français ⨂</li><li><br/></li><li class="left_non-footer_option_non-active">RSS 订阅 ⨂</li><li><br/></li></div><div class="left_non-footer_head"><div class="left_non-footer_head_title"><a href="../../zh/">赤赤的象牙塔</a></div><div class="left_non-footer_head_subtitle">(●’◡’●)ﾉ</div></div><div class="left_non-footer_main"><div class="h1"><a href="../../zh/math/">数学</a></div><div class="h2"><a href="../../zh/math/notes/">数学笔记</a></div><div class="h2"><a href="../../zh/math/stories/">数学科普</a></div><div class="h1 active"><a href="../../zh/non-math/">非数学</a></div><div class="h2"><a href="../../zh/non-math/journal/">日志</a></div><div class="h2"><a href="../../zh/non-math/literature/">写作</a></div><div class="h2 active"><a href="../../zh/non-math/memos/">备忘</a></div><div class="h1"><a href="../../zh/record/">记录</a></div><div class="h2"><a href="../../zh/record/book/">读过的书</a></div><div class="h2"><a href="../../zh/record/film/">看过的电影</a></div><div class="h1"><a href="../../zh/about/">关于</a></div><div class="h2"><a href="../../zh/about/me/">关于我</a></div><div class="h2"><a href="../../zh/about/site/">关于本站</a></div></div></div><div class="left_footer"><div class="copyright">©2019-2021 版权所有.</div></div></div><div class="right" onclick="HideBothSide()"><div class="right_head"><div class="right_head_title">bspwm 入门</div><div class="right_head_des">2021-06-10 - 10699 字</div></div><div class="right_main"><div class="right_main_article"><div class="notation_color"><p>本文首发于 bilibili：
-<a href="https://www.bilibili.com/read/cv7417123" rel="noreferrer noopener" target="_blank">bspwm 入门
-<b>⧉</b></a>
-. 考虑到 b 站的专栏格式非常差，链接不支持、代码格式也不支持. 另外自己写的东西放在一个商业公司的平台上不如放在自己手里，所以在这里也发一份.</p></div><p>在
-<a href="https://www.bilibili.com/video/BV1kZ4y1u7dw" rel="noreferrer noopener" target="_blank">我之前的视频（BV1kZ4y1u7dw）
-<b>⧉</b></a>
-中我简单介绍了 bspwm 并展示了一些它自带的例子中的功能. 但那个视频只是一个简单介绍，其本质是一个安利，目标观众是使用其他 wm 或不使用 wm 的路人；那么针对被我成功安利决定来体验体验 bspwm 的新用户呢，我决定写这样一篇专栏，帮助大家入门 bspwm. 因此这篇文章的目标读者是<strong>正在使用或准备使用 bspwm 的用户</strong>，需要的前置知识为<strong>我上个视频中讲到的基本概念</strong>.</p><p>在这篇文章中，我会先对之前的视频做一些补充说明；然后我会举三个例子讲解一下怎么写简单的 bspc 语句来实现简单的功能，帮助大家巩固练习阅读文档的能力；接着我会讲一下 bspwm 自带的例子中的其他有趣的东西，包括 rules（规则）、panel（面板） 和 receptacle（容器）等；最后再随便谈点哲学.</p><p><span class="notation_color">这种带高亮的文字是对读者的建议或指示，可以作为练习.</span></p><h1 id="对之前视频的补充说明">对之前视频的补充说明
-<a href="#%e5%af%b9%e4%b9%8b%e5%89%8d%e8%a7%86%e9%a2%91%e7%9a%84%e8%a1%a5%e5%85%85%e8%af%b4%e6%98%8e"><small>¶</small></a></h1><h2 id="那个视频是有时效性的当时所用的版本为-097">那个视频是有时效性的，当时所用的版本为 0.9.7
-<a href="#%e9%82%a3%e4%b8%aa%e8%a7%86%e9%a2%91%e6%98%af%e6%9c%89%e6%97%b6%e6%95%88%e6%80%a7%e7%9a%84%e5%bd%93%e6%97%b6%e6%89%80%e7%94%a8%e7%9a%84%e7%89%88%e6%9c%ac%e4%b8%ba-097"><small>¶</small></a></h2><p>bspwm 是一个正在开发中的软件，因此有一些功能上的调整是非常正常的事，自带的例子有一些变化也是正常的. 比如这一个月过去了，版本号升级到了 0.9.10，我在视频中演示的两个文件 bspwmrc 和 sxhkdrc 分别有了小小的变化（2020.08.31）：</p><ul><li>bspwmrc 的变化见
-<a href="https://github.com/baskerville/bspwm/commit/8f41d7989fcb0b62cf756c84b8ad6e3f9c24c31d#diff-1423a51810e9d20b9942a42d927482a1" rel="noreferrer noopener" target="_blank">这里
-<b>⧉</b></a></li><li>sxhkdrc 的变化见
-<a href="https://github.com/baskerville/bspwm/commit/d87e6c0f773e189a3a62b2d066b982b3a4e2bd56#diff-3be5a0247ad88793531ac5fbb8e3acb1" rel="noreferrer noopener" target="_blank">这里
-<b>⧉</b></a></li></ul><p>这提醒我们：bspwm 是没有默认配置的，任何时候你都可以放心地使用包管理器升级软件而不用担心你设置好的操作发生变化；另一方面，当软件有升级时，我们可以到 GitHub 上去看一看新的提交，看一看这些变化是否适合自己，不错的变化可以同步到自己的配置里. 如果嫌麻烦就一直用最开始配置也没有任何问题.</p><h2 id="其他发行版可能有自己的默认配置">其他发行版可能有自己的默认配置
-<a href="#%e5%85%b6%e4%bb%96%e5%8f%91%e8%a1%8c%e7%89%88%e5%8f%af%e8%83%bd%e6%9c%89%e8%87%aa%e5%b7%b1%e7%9a%84%e9%bb%98%e8%ae%a4%e9%85%8d%e7%bd%ae"><small>¶</small></a></h2><p>这点我不是很确定，但我看
-<a href="https://wiki.sparkylinux.org/doku.php/bspwm" rel="noreferrer noopener" target="_blank">SparkyWiki
-<b>⧉</b></a>
-好像就有一些并不是它自带的例子中的配置. 可能有些发行版是做了自己的更改的，请使用其他发行版的用户自己留意一下.</p><h2 id="关于登录时启动-bspwm">关于登录时启动 bspwm
-<a href="#%e5%85%b3%e4%ba%8e%e7%99%bb%e5%bd%95%e6%97%b6%e5%90%af%e5%8a%a8-bspwm"><small>¶</small></a></h2><p>当时视频里没有细说，但其实很简单. 如果你不使用显示管理器（display manager），比如你使用 xinit 启动 Xorg，那么在 <code>~/.xinitrc</code> 中写一句 <code>exec bspwm</code> 就好；如果你使用显示管理器（比如：GDM、LightDM、LXDM、SDDM、XDM、Entrance、Ly、Nodm 之类的），那么只要检查一下有 <code>/usr/share/xsessions/bspwm.desktop</code> 这样一个路径下的文件就好了，登录时显示管理器就会让你选择了，一般情况下你在安装时安装脚本都会自动帮你把这个文件放好的. （没有的话看
-<a href="https://github.com/baskerville/bspwm/blob/master/contrib/freedesktop/bspwm.desktop" rel="noreferrer noopener" target="_blank">这里
-<b>⧉</b></a>
-）</p><h2 id="可以参考的其他阅读材料">可以参考的其他阅读材料
-<a href="#%e5%8f%af%e4%bb%a5%e5%8f%82%e8%80%83%e7%9a%84%e5%85%b6%e4%bb%96%e9%98%85%e8%af%bb%e6%9d%90%e6%96%99"><small>¶</small></a></h2><p>bspwm 的文档是出了名的难读：它冗长、简练、格式又不是很规范. 因此我们可以参考些别的. 在这里列举一些：</p><ol><li>GitHub 主页上的
-<a href="https://github.com/baskerville/bspwm" rel="noreferrer noopener" target="_blank">README
-<b>⧉</b></a>
-，就是我在视频中演示 parent、children 和 brother 关系的图时的那个地方. 这份文档在本地也是有的，例如在 Arch Linux 下，它在：<code>/usr/share/doc/bspwm/README.md</code>.</li><li>GitHub 上的
-<a href="https://github.com/baskerville/bspwm/wiki" rel="noreferrer noopener" target="_blank">wiki 页
-<b>⧉</b></a>
-，这也是一份“人话”的介绍，目录在右边 Pages 那里，现在它有 5 页，分别是起始页、命令语法的重写、窗口（window）命令的简要介绍、在 fish （另一个 shell）下需要额外注意的地方、窗口规则的属性 flag.</li><li><a href="https://wiki.archlinux.org/index.php/Bspwm" rel="noreferrer noopener" target="_blank">ArchWiki
-<b>⧉</b></a>
-，非常强大的、非常人性化的“人话”说明书！尤其是其中疑难解答的部分非常精华. 最后的 See also 也很有用.</li><li><a href="https://wiki.gentoo.org/wiki/Bspwm" rel="noreferrer noopener" target="_blank">GentooWiki
-<b>⧉</b></a>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=divice-width,initial-scale=1" name="viewport"/>
+<meta content="Hugo 0.86.0" name="generator"/>
+<title>
+bspwm 入门
+| 赤赤的象牙塔
+</title>
+<link href="../../css/base.min.8e348fbbb8e9a973c65af334f2b36f869d744a61b3224c7bff5e35e2ac990a79.css" rel="stylesheet" type="text/css"/>
+<link href="../../css/small.min.fc3c637453c4bb37cfe95f39f0a9bd491c0f8186e381262a1fde3fd405e376d9.css" media="screen and (max-width: 1200px)" rel="stylesheet" type="text/css"/>
+<link href="../../css/normal.min.87ca6c8fd77d7c0e32a8b8cd398fdc5de88c7a2bf7315fef839791ffed301990.css" media="screen and (min-width: 1201px)" rel="stylesheet" type="text/css"/>
+<link href="../../css/syntax.min.ed5b37c3a50997d5ccd8b81bf0d00a7ac1f92c82985623c2dbf0cb422596726a.css" rel="stylesheet" type="text/css"/>
+<script type="application/javascript">var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-143006759-1','auto'),ga('send','pageview'))</script>
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script async="" data-goatcounter="https://zerovip.goatcounter.com/count" src="//gc.zgo.at/count.js"></script>
+</head>
+<body class="theme-container">
+<div class="bar_for_phone">
+<div class="bar_left_button">
+<div class="left_button_for_bar" onclick="ChangeClassLeft()">
+<div class="bar1"></div>
+<div class="bar2"></div>
+<div class="bar3"></div>
+</div>
+</div>
+<div class="bar_title">
+<a href="../../zh/">赤赤的象牙塔</a>
+</div>
+<div class="bar_right_button">
+<button class="toc_title_for_bar" onclick="ChangeClassTOC()">目录</button>
+</div>
+</div>
+<div class="body_for_pc">
+<div class="left" id="left">
+<div class="left_non-footer">
+<div class="left_non-footer_option">
+<div class="theme-switch">
+<label class="switch">
+<input checked="" class="theme-switcher" type="checkbox"/>
+<span class="slider round"></span>
+</label>
+</div>
+<li><br/></li>
+<li class="left_non-footer_option_active">
+简体中文 ⦿
+</li>
+<li class="left_non-footer_option_non-active">
+English ⨂
+</li>
+<li class="left_non-footer_option_non-active">
+Français ⨂
+</li>
+<li><br/></li>
+<li class="left_non-footer_option_non-active">
+RSS 订阅 ⨂
+</li>
+<li><br/></li>
+</div>
+<div class="left_non-footer_head">
+<div class="left_non-footer_head_title">
+<a href="../../zh/">
+赤赤的象牙塔
+</a>
+</div>
+<div class="left_non-footer_head_subtitle">(●’◡’●)ﾉ</div>
+</div>
+<div class="left_non-footer_main">
+<div class="h1">
+<a href="../../zh/math/">数学</a>
+</div>
+<div class="h2">
+<a href="../../zh/math/notes/">数学笔记 </a>
+</div>
+<div class="h2">
+<a href="../../zh/math/stories/">数学科普 </a>
+</div>
+<div class="h1 active">
+<a href="../../zh/non-math/">非数学</a>
+</div>
+<div class="h2">
+<a href="../../zh/non-math/journal/">日志 </a>
+</div>
+<div class="h2">
+<a href="../../zh/non-math/literature/">写作 </a>
+</div>
+<div class="h2 active">
+<a href="../../zh/non-math/memos/">备忘 </a>
+</div>
+<div class="h1">
+<a href="../../zh/record/">记录</a>
+</div>
+<div class="h2">
+<a href="../../zh/record/book/">读过的书 </a>
+</div>
+<div class="h2">
+<a href="../../zh/record/film/">看过的电影 </a>
+</div>
+<div class="h1">
+<a href="../../zh/about/">关于</a>
+</div>
+<div class="h2">
+<a href="../../zh/about/me/">关于我 </a>
+</div>
+<div class="h2">
+<a href="../../zh/about/site/">关于本站 </a>
+</div>
+</div>
+</div>
+<div class="left_footer">
+<div class="copyright">©2019-2021 版权所有.</div>
+</div>
+</div>
+<div class="right" onclick="HideBothSide()">
+<div class="right_head">
+<div class="right_head_title">
+bspwm 入门
+</div>
+<div class="right_head_des">
+2021-06-10 - 10795 字
+</div>
+</div>
+<div class="right_main">
+<div class="right_main_article">
+<div class="notation_color">
+<p>本文首发于 bilibili：
+<a href="https://www.bilibili.com/read/cv7417123" rel="noreferrer noopener" target="_blank">bspwm 入门<b><sub>⧉</sub></b></a>
+. 考虑到 b 站的专栏格式非常差，链接不支持、代码格式也不支持. 另外自己写的东西放在一个商业公司的平台上不如放在自己手里，所以在这里也发一份.</p></div>
+<p>在
+<a href="https://www.bilibili.com/video/BV1kZ4y1u7dw" rel="noreferrer noopener" target="_blank">我之前的视频（BV1kZ4y1u7dw）<b><sub>⧉</sub></b></a>
+中我简单介绍了 bspwm 并展示了一些它自带的例子中的功能. 但那个视频只是一个简单介绍，其本质是一个安利，目标观众是使用其他 wm 或不使用 wm 的路人；那么针对被我成功安利决定来体验体验 bspwm 的新用户呢，我决定写这样一篇专栏，帮助大家入门 bspwm. 因此这篇文章的目标读者是<strong>正在使用或准备使用 bspwm 的用户</strong>，需要的前置知识为<strong>我上个视频中讲到的基本概念</strong>.</p>
+<p>在这篇文章中，我会先对之前的视频做一些补充说明；然后我会举三个例子讲解一下怎么写简单的 bspc 语句来实现简单的功能，帮助大家巩固练习阅读文档的能力；接着我会讲一下 bspwm 自带的例子中的其他有趣的东西，包括 rules（规则）、panel（面板） 和 receptacle（容器）等；最后再随便谈点哲学.</p>
+<p><span class="notation_color">这种带高亮的文字是对读者的建议或指示，可以作为练习.</span></p>
+<h1 id="对之前视频的补充说明">
+对之前视频的补充说明
+<a href="#%e5%af%b9%e4%b9%8b%e5%89%8d%e8%a7%86%e9%a2%91%e7%9a%84%e8%a1%a5%e5%85%85%e8%af%b4%e6%98%8e"><small>¶</small></a>
+</h1>
+<h2 id="那个视频是有时效性的当时所用的版本为-097">
+那个视频是有时效性的，当时所用的版本为 0.9.7
+<a href="#%e9%82%a3%e4%b8%aa%e8%a7%86%e9%a2%91%e6%98%af%e6%9c%89%e6%97%b6%e6%95%88%e6%80%a7%e7%9a%84%e5%bd%93%e6%97%b6%e6%89%80%e7%94%a8%e7%9a%84%e7%89%88%e6%9c%ac%e4%b8%ba-097"><small>¶</small></a>
+</h2>
+<p>bspwm 是一个正在开发中的软件，因此有一些功能上的调整是非常正常的事，自带的例子有一些变化也是正常的. 比如这一个月过去了，版本号升级到了 0.9.10，我在视频中演示的两个文件 bspwmrc 和 sxhkdrc 分别有了小小的变化（2020.08.31）：</p>
+<ul>
+<li>bspwmrc 的变化见
+<a href="https://github.com/baskerville/bspwm/commit/8f41d7989fcb0b62cf756c84b8ad6e3f9c24c31d#diff-1423a51810e9d20b9942a42d927482a1" rel="noreferrer noopener" target="_blank">这里<b><sub>⧉</sub></b></a>
+</li>
+<li>sxhkdrc 的变化见
+<a href="https://github.com/baskerville/bspwm/commit/d87e6c0f773e189a3a62b2d066b982b3a4e2bd56#diff-3be5a0247ad88793531ac5fbb8e3acb1" rel="noreferrer noopener" target="_blank">这里<b><sub>⧉</sub></b></a>
+</li>
+</ul>
+<p>这提醒我们：bspwm 是没有默认配置的，任何时候你都可以放心地使用包管理器升级软件而不用担心你设置好的操作发生变化；另一方面，当软件有升级时，我们可以到 GitHub 上去看一看新的提交，看一看这些变化是否适合自己，不错的变化可以同步到自己的配置里. 如果嫌麻烦就一直用最开始配置也没有任何问题.</p>
+<h2 id="其他发行版可能有自己的默认配置">
+其他发行版可能有自己的默认配置
+<a href="#%e5%85%b6%e4%bb%96%e5%8f%91%e8%a1%8c%e7%89%88%e5%8f%af%e8%83%bd%e6%9c%89%e8%87%aa%e5%b7%b1%e7%9a%84%e9%bb%98%e8%ae%a4%e9%85%8d%e7%bd%ae"><small>¶</small></a>
+</h2>
+<p>这点我不是很确定，但我看
+<a href="https://wiki.sparkylinux.org/doku.php/bspwm" rel="noreferrer noopener" target="_blank">SparkyWiki<b><sub>⧉</sub></b></a>
+好像就有一些并不是它自带的例子中的配置. 可能有些发行版是做了自己的更改的，请使用其他发行版的用户自己留意一下.</p>
+<h2 id="关于登录时启动-bspwm">
+关于登录时启动 bspwm
+<a href="#%e5%85%b3%e4%ba%8e%e7%99%bb%e5%bd%95%e6%97%b6%e5%90%af%e5%8a%a8-bspwm"><small>¶</small></a>
+</h2>
+<p>当时视频里没有细说，但其实很简单. 如果你不使用显示管理器（display manager），比如你使用 xinit 启动 Xorg，那么在 <code>~/.xinitrc</code> 中写一句 <code>exec bspwm</code> 就好；如果你使用显示管理器（比如：GDM、LightDM、LXDM、SDDM、XDM、Entrance、Ly、Nodm 之类的），那么只要检查一下有 <code>/usr/share/xsessions/bspwm.desktop</code> 这样一个路径下的文件就好了，登录时显示管理器就会让你选择了，一般情况下你在安装时安装脚本都会自动帮你把这个文件放好的. （没有的话看
+<a href="https://github.com/baskerville/bspwm/blob/master/contrib/freedesktop/bspwm.desktop" rel="noreferrer noopener" target="_blank">这里<b><sub>⧉</sub></b></a>
+）</p>
+<h2 id="可以参考的其他阅读材料">
+可以参考的其他阅读材料
+<a href="#%e5%8f%af%e4%bb%a5%e5%8f%82%e8%80%83%e7%9a%84%e5%85%b6%e4%bb%96%e9%98%85%e8%af%bb%e6%9d%90%e6%96%99"><small>¶</small></a>
+</h2>
+<p>bspwm 的文档是出了名的难读：它冗长、简练、格式又不是很规范. 因此我们可以参考些别的. 在这里列举一些：</p>
+<ol>
+<li>GitHub 主页上的
+<a href="https://github.com/baskerville/bspwm" rel="noreferrer noopener" target="_blank">README<b><sub>⧉</sub></b></a>
+，就是我在视频中演示 parent、children 和 brother 关系的图时的那个地方. 这份文档在本地也是有的，例如在 Arch Linux 下，它在：<code>/usr/share/doc/bspwm/README.md</code>.</li>
+<li>GitHub 上的
+<a href="https://github.com/baskerville/bspwm/wiki" rel="noreferrer noopener" target="_blank">wiki 页<b><sub>⧉</sub></b></a>
+，这也是一份“人话”的介绍，目录在右边 Pages 那里，现在它有 5 页，分别是起始页、命令语法的重写、窗口（window）命令的简要介绍、在 fish （另一个 shell）下需要额外注意的地方、窗口规则的属性 flag.</li>
+<li>
+<a href="https://wiki.archlinux.org/index.php/Bspwm" rel="noreferrer noopener" target="_blank">ArchWiki<b><sub>⧉</sub></b></a>
+，非常强大的、非常人性化的“人话”说明书！尤其是其中疑难解答的部分非常精华. 最后的 See also 也很有用.</li>
+<li>
+<a href="https://wiki.gentoo.org/wiki/Bspwm" rel="noreferrer noopener" target="_blank">GentooWiki<b><sub>⧉</sub></b></a>
 ；
-<a href="https://wiki.voidlinux.org/Bspwm" rel="noreferrer noopener" target="_blank">VoidLinux wiki
-<b>⧉</b></a>
-，供参考.</li><li><a href="https://github.com/baskerville/bspwm/issues" rel="noreferrer noopener" target="_blank">GitHub Issue 页
-<b>⧉</b></a>
-，可以把浏览 issue（不仅仅是这一个项目的）培养成一个爱好，从中学习解决问题的思路.</li><li><a href="https://www.reddit.com/r/bspwm" rel="noreferrer noopener" target="_blank">reddit 论坛
-<b>⧉</b></a>
-，一个可以经常浏览的交流平台.</li><li>Angad Sharma，
-<a href="https://dev.to/l04db4l4nc3r/bspwm-a-bare-bones-window-manager-44di" rel="noreferrer noopener" target="_blank">Bspwm: A Bare-Bones Window Manager
-<b>⧉</b></a>
-，一个很系统的教学，带着读者安装，一边写一点配置一边简单讲一讲，还包括了使用 nitrogen 更换壁纸、使用 compton 增加透明效果、polybar 的部分，以及我的视频没有讲到的：怎么用 bspc 写 node 和 window 的动作指令，四种布局方案（自动、手动、长边、螺旋），怎么写脚本切换这四种方案. 这是一份非常有用、写得非常好的、非常好理解的、全面的、系统的教程，非常建议阅读.</li><li><a href="http://thedarnedestthing.com/bspwm" rel="noreferrer noopener" target="_blank">The Darnedest Thing
-<b>⧉</b></a>
-，2015 年的一篇文章，有点年头了，写得不系统，可作为课外读物.</li><li>My Take on Tech，
-<a href="https://my-take-on.tech/2020/07/03/some-tricks-for-sxhkd-and-bspwm/" rel="noreferrer noopener" target="_blank">Some Tricks For sxhkd (and bspwm)
-<b>⧉</b></a>
-，和上面的一样，基础的东西默认你是知道的，有阅读门槛，不系统，作为课外读物会非常非常有帮助，你绝对能从中有所收获和启发.</li><li><strong>最最重要的一点，好好利用搜索引擎.</strong> bspwm 有其他 wm 所不具备的一个优势就是它的名字非常有辨识度（对比 awesome 这种常用的英文形容词），因此只要你在搜索引擎中简单地打出 “bspwm” 五个字母，你就能完美命中你想找的东西，在 google、bing 甚至百度，在 YouTube 搜索栏，在 GitHub 搜索栏，在任何一个论坛的搜索栏…… 没事的时候搜索一下，说不定又有新出炉的、说人话的好文章.</li></ol><h1 id="bspc-语句">bspc 语句
-<a href="#bspc-%e8%af%ad%e5%8f%a5"><small>¶</small></a></h1><p><span class="notation_color">强烈建议阅读我在 <strong>1.4 小节</strong> 中列举的第 <strong>7</strong> 个参考材料中 The bspwm client 部分，尤其是其中的前两小节，即 Node Actions（节点操作）和 Window State Actions（窗口状态操作）.</span></p><p>这里讲三个例子，来帮助大家巩固练习阅读文档的流程，因为我上一个视频的后半部分只讲了理论，没有演示实践，这里补一下.</p><h2 id="例一旋转">例一：旋转
-<a href="#%e4%be%8b%e4%b8%80%e6%97%8b%e8%bd%ac"><small>¶</small></a></h2><p>有这样一个需求：我们想把某个节点下的两个 children 窗口旋转一下，如果它是上下平分的我想把它旋转成左右平分，如果是左右平分的我想把它旋转成上下平分. 这是自带的例子中所没有的，怎么办呢？</p><p>我们在谷歌中以关键词 “bspwm rotate windows” 搜索一下，能找到
-<a href="https://www.reddit.com/r/bspwm/comments/4ih2o5/rotating_windows_split_orientation/d2y1cj0" rel="noreferrer noopener" target="_blank">一个 reddit 上的帖子
-<b>⧉</b></a>
-，它里面有一个网友表示可以用 <code>bspc node @/ -R 90</code> 来旋转整个桌面下的所有窗口，或者通过 <code>bspc node -f @parent</code> 选择当前焦点的 parent 节点，然后再用 <code>bspc node -R 90</code> 来旋转. 在终端里按照他给的方法执行一下，我们发现是可以满足需求的. （注意：当执行了 <code>bspc node -f @parent</code> 后焦点同时含有了多个窗口，这时鼠标在哪个窗口，真正的焦点就在哪个窗口. ）</p><p>我们往 sxhkdrc 中给这些操作绑定上快捷键：</p><div class="highlight"><div class="chroma"><table class="lntable"><tr><td class="lntd"><pre class="chroma"><code><span class="lnt">1
+<a href="https://wiki.voidlinux.org/Bspwm" rel="noreferrer noopener" target="_blank">VoidLinux wiki<b><sub>⧉</sub></b></a>
+，供参考.</li>
+<li>
+<a href="https://github.com/baskerville/bspwm/issues" rel="noreferrer noopener" target="_blank">GitHub Issue 页<b><sub>⧉</sub></b></a>
+，可以把浏览 issue（不仅仅是这一个项目的）培养成一个爱好，从中学习解决问题的思路.</li>
+<li>
+<a href="https://www.reddit.com/r/bspwm" rel="noreferrer noopener" target="_blank">reddit 论坛<b><sub>⧉</sub></b></a>
+，一个可以经常浏览的交流平台.</li>
+<li>Angad Sharma，
+<a href="https://dev.to/l04db4l4nc3r/bspwm-a-bare-bones-window-manager-44di" rel="noreferrer noopener" target="_blank">Bspwm: A Bare-Bones Window Manager<b><sub>⧉</sub></b></a>
+，一个很系统的教学，带着读者安装，一边写一点配置一边简单讲一讲，还包括了使用 nitrogen 更换壁纸、使用 compton 增加透明效果、polybar 的部分，以及我的视频没有讲到的：怎么用 bspc 写 node 和 window 的动作指令，四种布局方案（自动、手动、长边、螺旋），怎么写脚本切换这四种方案. 这是一份非常有用、写得非常好的、非常好理解的、全面的、系统的教程，非常建议阅读.</li>
+<li>
+<a href="http://thedarnedestthing.com/bspwm" rel="noreferrer noopener" target="_blank">The Darnedest Thing<b><sub>⧉</sub></b></a>
+，2015 年的一篇文章，有点年头了，写得不系统，可作为课外读物.</li>
+<li>My Take on Tech，
+<a href="https://my-take-on.tech/2020/07/03/some-tricks-for-sxhkd-and-bspwm/" rel="noreferrer noopener" target="_blank">Some Tricks For sxhkd (and bspwm)<b><sub>⧉</sub></b></a>
+，和上面的一样，基础的东西默认你是知道的，有阅读门槛，不系统，作为课外读物会非常非常有帮助，你绝对能从中有所收获和启发.</li>
+<li><strong>最最重要的一点，好好利用搜索引擎.</strong> bspwm 有其他 wm 所不具备的一个优势就是它的名字非常有辨识度（对比 awesome 这种常用的英文形容词），因此只要你在搜索引擎中简单地打出 “bspwm” 五个字母，你就能完美命中你想找的东西，在 google、bing 甚至百度，在 YouTube 搜索栏，在 GitHub 搜索栏，在任何一个论坛的搜索栏…… 没事的时候搜索一下，说不定又有新出炉的、说人话的好文章.</li>
+</ol>
+<h1 id="bspc-语句">
+bspc 语句
+<a href="#bspc-%e8%af%ad%e5%8f%a5"><small>¶</small></a>
+</h1>
+<p><span class="notation_color">强烈建议阅读我在 <strong>1.4 小节</strong> 中列举的第 <strong>7</strong> 个参考材料中 The bspwm client 部分，尤其是其中的前两小节，即 Node Actions（节点操作）和 Window State Actions（窗口状态操作）.</span></p>
+<p>这里讲三个例子，来帮助大家巩固练习阅读文档的流程，因为我上一个视频的后半部分只讲了理论，没有演示实践，这里补一下.</p>
+<h2 id="例一旋转">
+例一：旋转
+<a href="#%e4%be%8b%e4%b8%80%e6%97%8b%e8%bd%ac"><small>¶</small></a>
+</h2>
+<p>有这样一个需求：我们想把某个节点下的两个 children 窗口旋转一下，如果它是上下平分的我想把它旋转成左右平分，如果是左右平分的我想把它旋转成上下平分. 这是自带的例子中所没有的，怎么办呢？</p>
+<p>我们在谷歌中以关键词 “bspwm rotate windows” 搜索一下，能找到
+<a href="https://www.reddit.com/r/bspwm/comments/4ih2o5/rotating_windows_split_orientation/d2y1cj0" rel="noreferrer noopener" target="_blank">一个 reddit 上的帖子<b><sub>⧉</sub></b></a>
+，它里面有一个网友表示可以用 <code>bspc node @/ -R 90</code> 来旋转整个桌面下的所有窗口，或者通过 <code>bspc node -f @parent</code> 选择当前焦点的 parent 节点，然后再用 <code>bspc node -R 90</code> 来旋转. 在终端里按照他给的方法执行一下，我们发现是可以满足需求的. （注意：当执行了 <code>bspc node -f @parent</code> 后焦点同时含有了多个窗口，这时鼠标在哪个窗口，真正的焦点就在哪个窗口. ）</p>
+<p>我们往 sxhkdrc 中给这些操作绑定上快捷键：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma" tabindex="0"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -61,7 +227,9 @@
 </span><span class="lnt">7
 </span><span class="lnt">8
 </span><span class="lnt">9
-</span></code></pre></td><td class="lntd"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># .config/sxhkd/sxhkdrc</span>
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma" tabindex="0"><code class="language-bash" data-lang="bash"><span class="c1"># .config/sxhkd/sxhkdrc</span>
 <span class="c1"># rotate the whole desktop</span>
 super + <span class="nb">shift</span> + r
     bspc node @/ -R <span class="m">90</span>
@@ -70,15 +238,54 @@ super + <span class="nb">shift</span> + r
 super + r
     bspc node -f @parent<span class="p">;</span> <span class="se">\
 </span><span class="se"></span>    bspc node -R <span class="m">90</span>
-</code></pre></td></tr></table></div></div><p>然后重新载入这份配置后一试——就发现了一个 bug：<code>super + r</code> 的两条指令结束后焦点内含有两个窗口，如果重复执行 super + r ，焦点中的窗口会越来越多，参与旋转的窗口也越来越多.</p><p>为了解决这个问题，我们来看看这三条指令具体是什么意思. 看上去对于旋转来说最重要的应该是 <code>-R</code> 命令，我们 <code>man bspwm</code> 打开文档（在线文档在
-<a href="https://github.com/baskerville/bspwm/blob/master/doc/bspwm.1.asciidoc" rel="noreferrer noopener" target="_blank">这里
-<b>⧉</b></a>
-），使用 / 键搜索 -R，可以看到这样两行：</p><blockquote><p><code>-R, --rotate 90|270|180</code></p><p>Rotate the tree rooted at the selected node.</p></blockquote><p>从这里开始上下翻一翻，看一看这两行在整个文档中处于一个什么样的位置，它的上下文语境是什么样的. 我们把整份文档简化成这种样子：</p><p><figure><img alt="BSPWM(1) 文档大纲" src="../../images/bspwm-manpage.png"/><figcaption>◉ 图. BSPWM(1) 文档大纲</figcaption></figure></p><p>可以看到 <code>-R</code> 是一个 node 指令中的 <code>COMMAND</code> 部分，node 指令的通用的格式（General Syntax）为（见上面大纲图中第 20 行）：<code>node [NODE_SEL] COMMANDS</code>. 我在上一个视频中讲过，<code>node</code> 是小写字母，是终结符，是必须有的而且不能替换的. 后面的 <code>[NODE_SEL]</code> 和 <code>COMMANDS</code> 都是非终结符，要进行替换.</p><p>先说 <code>[NODE_SEL]</code>，它的含义很好理解：select a node，即这是一个节点选择器（node selector），我们在这个位置要选择一个用来执行后面 <code>COMMAND</code> 的对象节点. 它被一对中括号括起来，表示 <code>NODE_SEL</code> 是可选的. 从 reddit 网友给出的三条 node 指令中确实能看出它是可选的：指令 <code>bspc node @/ -R 90</code> 中含有 <code>NODE_SEL</code> ，并且在这个指令中将其替换为了 <code>@/</code> ；而指令 <code>bspc node -f @parent</code> 和指令 <code>bspc node -R 90</code> 中就不含有 <code>NODE_SEL</code>. 再读一下文档：If <code>NODE_SEL</code> is omitted, focused is assumed，意思是如果不含有 <code>NODE_SEL</code>，就默认把当前的焦点窗口作为后面 <code>COMMAND</code> 的对象节点.</p><p>再说后面的 <code>COMMANDS</code>，它没有被中括号括起来，说明它是必写的，而且它也是非终结符，需要进行替换，下面列出了 <code>COMMANDS</code> 可以被替换成哪些东西，一共有 22 种可能性，而且每种的格式和说明也都写得很详细，reddit 网友给出的三条指令中，两条 <code>-R</code> 和一条 <code>-f</code> 都在其中，我也把这两条列在了上面的大纲里（见上面大纲图中第 22 - 23 行）. 在这里只带着大家看一下 <code>-R</code> 命令，也就是我们最开始搜索 <code>-R</code> 时看到的那两行：</p><blockquote><p><code>-R, --rotate 90|270|180</code></p><p>Rotate the tree rooted at the selected node.</p></blockquote><p>如果想用 <code>-R</code> 的话，它的格式是：把 <code>COMMANDS</code> 替换为 <code>-R 90</code> 或 <code>-R 270</code> 或 <code>-R 180</code> 三选一，含义分别是：以刚刚选择的 <code>NODE_SEL</code> 节点为根，对它下面的所有子树进行顺时针 90 或 270 或 180 度的旋转.</p><p>剩下的问题就是 <code>NODE_SEL</code> 到底能替换成什么了，它的语法格式是怎么样的. 我们在这几行附近并没有看到说明，那就再用 / 键搜索 <code>NODE_SEL</code>，就找到了我上个视频的结尾处仔细分析过的一大串语法格式（见上面大纲图中第 10 行）：</p><blockquote><pre><code>NODE_SEL := [NODE_SEL#](DIR|CYCLE_DIR|PATH|any|first_ancestor|last|newest|
+</code></pre></td></tr></table>
+</div>
+</div><p>然后重新载入这份配置后一试——就发现了一个 bug：<code>super + r</code> 的两条指令结束后焦点内含有两个窗口，如果重复执行 super + r ，焦点中的窗口会越来越多，参与旋转的窗口也越来越多.</p>
+<p>为了解决这个问题，我们来看看这三条指令具体是什么意思. 看上去对于旋转来说最重要的应该是 <code>-R</code> 命令，我们 <code>man bspwm</code> 打开文档（在线文档在
+<a href="https://github.com/baskerville/bspwm/blob/master/doc/bspwm.1.asciidoc" rel="noreferrer noopener" target="_blank">这里<b><sub>⧉</sub></b></a>
+），使用 / 键搜索 -R，可以看到这样两行：</p>
+<blockquote>
+<p><code>-R, --rotate 90|270|180</code></p>
+<p>Rotate the tree rooted at the selected node.</p>
+</blockquote>
+<p>从这里开始上下翻一翻，看一看这两行在整个文档中处于一个什么样的位置，它的上下文语境是什么样的. 我们把整份文档简化成这种样子：</p>
+<p><figure>
+<img alt="BSPWM(1) 文档大纲" src="../../images/bspwm-manpage.png"/>
+<figcaption>◉ 图. BSPWM(1) 文档大纲</figcaption>
+</figure>
+</p>
+<p>可以看到 <code>-R</code> 是一个 node 指令中的 <code>COMMAND</code> 部分，node 指令的通用的格式（General Syntax）为（见上面大纲图中第 20 行）：<code>node [NODE_SEL] COMMANDS</code>. 我在上一个视频中讲过，<code>node</code> 是小写字母，是终结符，是必须有的而且不能替换的. 后面的 <code>[NODE_SEL]</code> 和 <code>COMMANDS</code> 都是非终结符，要进行替换.</p>
+<p>先说 <code>[NODE_SEL]</code>，它的含义很好理解：select a node，即这是一个节点选择器（node selector），我们在这个位置要选择一个用来执行后面 <code>COMMAND</code> 的对象节点. 它被一对中括号括起来，表示 <code>NODE_SEL</code> 是可选的. 从 reddit 网友给出的三条 node 指令中确实能看出它是可选的：指令 <code>bspc node @/ -R 90</code> 中含有 <code>NODE_SEL</code> ，并且在这个指令中将其替换为了 <code>@/</code> ；而指令 <code>bspc node -f @parent</code> 和指令 <code>bspc node -R 90</code> 中就不含有 <code>NODE_SEL</code>. 再读一下文档：If <code>NODE_SEL</code> is omitted, focused is assumed，意思是如果不含有 <code>NODE_SEL</code>，就默认把当前的焦点窗口作为后面 <code>COMMAND</code> 的对象节点.</p>
+<p>再说后面的 <code>COMMANDS</code>，它没有被中括号括起来，说明它是必写的，而且它也是非终结符，需要进行替换，下面列出了 <code>COMMANDS</code> 可以被替换成哪些东西，一共有 22 种可能性，而且每种的格式和说明也都写得很详细，reddit 网友给出的三条指令中，两条 <code>-R</code> 和一条 <code>-f</code> 都在其中，我也把这两条列在了上面的大纲里（见上面大纲图中第 22 - 23 行）. 在这里只带着大家看一下 <code>-R</code> 命令，也就是我们最开始搜索 <code>-R</code> 时看到的那两行：</p>
+<blockquote>
+<p><code>-R, --rotate 90|270|180</code></p>
+<p>Rotate the tree rooted at the selected node.</p>
+</blockquote>
+<p>如果想用 <code>-R</code> 的话，它的格式是：把 <code>COMMANDS</code> 替换为 <code>-R 90</code> 或 <code>-R 270</code> 或 <code>-R 180</code> 三选一，含义分别是：以刚刚选择的 <code>NODE_SEL</code> 节点为根，对它下面的所有子树进行顺时针 90 或 270 或 180 度的旋转.</p>
+<p>剩下的问题就是 <code>NODE_SEL</code> 到底能替换成什么了，它的语法格式是怎么样的. 我们在这几行附近并没有看到说明，那就再用 / 键搜索 <code>NODE_SEL</code>，就找到了我上个视频的结尾处仔细分析过的一大串语法格式（见上面大纲图中第 10 行）：</p>
+<blockquote>
+<pre><code>NODE_SEL := [NODE_SEL#](DIR|CYCLE_DIR|PATH|any|first_ancestor|last|newest|
     older|newer|focused|pointed|biggest|smallest|
     &lt;node_id&gt;)[.[!]focused][.[!]active][.[!]automatic][.[!]local]
         [.[!]leaf][.[!]window][.[!]STATE][.[!]FLAG][.[!]LAYER][.[!]SPLIT_TYPE]         
         [.[!]same_class][.[!]descendant_of][.[!]ancestor_of]
-</code></pre></blockquote><p>网友给出的 <code>@/</code> 是怎么来的呢？它表示什么意思呢？</p><ul><li>第一步：不选前面的 <code>NODE_SEL#</code>；也不选后面的一大堆中括号里的东西；小括号里的 13 选 1 选择 <code>PATH</code>. 现在 <code>NODE_SEL</code> 被替换变成了 <code>PATH</code>.</li><li>第二步：查找下面 <code>PATH</code> 的定义，也就是：<code>PATH := @[DESKTOP_SEL:][[/]JUMP](/JUMP)*</code>. 这里 <code>@</code> 必选，第二个 <code>DESKTOP_SEL</code>: 不选，第三个 <code>[[/]JUMP]</code> 选 <code>/JUMP</code>，后面的 <code>(/JUMP)*</code> 选 0 个. 现在 <code>PATH</code> 被替换变成了 <code>@/JUMP</code>.</li><li>第三步：查找下面 <code>JUMP</code> 的定义，也就是：<code>JUMP := first|1|second|2|brother|parent|DIR</code>. 这按理来说是一个 7 选 1，但是注意，这是这个文档写得不太规范的一个地方，在 Path Jumps 的描述中我们看到这样一句话：</li></ul><blockquote><p>The initial node is the focused node (or the root if the path starts with /) of the reference desktop (or the selected desktop if the path has a DESKTOP_SEL prefix).</p></blockquote><p>这就把第二步中 <code>PATH</code> 的含义解释清楚了. 我们想通过一些路径来选择我们想要的节点，这大体上可以类比在微软 windows 系统中选择一个文件：先指定一个盘符，是 C 盘还是 D 盘，再进行路径的跳转，也就是打开一个文件夹再打开一个文件夹；这里是用 <code>@[DESKTOP_SEL:]</code> 先指定桌面（不写 <code>DESKTOP_SEL</code> 就是指定当前桌面），再用 <code>JUMP</code> 进行跳转，需要多次跳转的话后面就再写好多个 <code>/JUMP</code>. 那么只有一个 <code>/</code> 就表示选择了根节点，不再进行跳转了——这当然也是可以的，就好比我打开 C 盘后就停止了，不再打开下面的文件夹了. 所以我们这里 <code>JUMP</code> 就取空值，表示不再跳转，这是 7 选 1 之外的做法，显然是不符合 BNF 语法规范的.</p><p>无论如何，我们用 <code>@/</code> 就选择了当前桌面的根节点，也就是当前桌面下的所有窗口，对它执行 <code>-R</code> 就完成了对当前桌面的所有窗口执行旋转操作，整条语句就是网友给出的 <code>bspc node @/ -R 90</code>.</p><p>那么同理，我们可以精确地选择当前节点的 parent 节点，即用 <code>@parent</code> 替换 <code>NODE_SEL</code>. 具体的流程为：<code>NODE_SEL</code> 替换为 <code>PATH</code>，<code>PATH</code> 替换成 <code>@JUMP</code>（不选 <code>DESKTOP_SEL</code> 表示当前桌面；不选 <code>/</code> 表示初始节点从当前焦点所在的节点开始，而不是从当前桌面的根节点开始），<code>JUMP</code> 7 选 1 替换成 <code>parent</code>. 整条语句就变成了 <code>bspc node @parent -R 90</code>.</p><p>最后我们就可以写出我们想要的代码了：</p><div class="highlight"><div class="chroma"><table class="lntable"><tr><td class="lntd"><pre class="chroma"><code><span class="lnt">1
+</code></pre></blockquote>
+<p>网友给出的 <code>@/</code> 是怎么来的呢？它表示什么意思呢？</p>
+<ul>
+<li>第一步：不选前面的 <code>NODE_SEL#</code>；也不选后面的一大堆中括号里的东西；小括号里的 13 选 1 选择 <code>PATH</code>. 现在 <code>NODE_SEL</code> 被替换变成了 <code>PATH</code>.</li>
+<li>第二步：查找下面 <code>PATH</code> 的定义，也就是：<code>PATH := @[DESKTOP_SEL:][[/]JUMP](/JUMP)*</code>. 这里 <code>@</code> 必选，第二个 <code>DESKTOP_SEL</code>: 不选，第三个 <code>[[/]JUMP]</code> 选 <code>/JUMP</code>，后面的 <code>(/JUMP)*</code> 选 0 个. 现在 <code>PATH</code> 被替换变成了 <code>@/JUMP</code>.</li>
+<li>第三步：查找下面 <code>JUMP</code> 的定义，也就是：<code>JUMP := first|1|second|2|brother|parent|DIR</code>. 这按理来说是一个 7 选 1，但是注意，这是这个文档写得不太规范的一个地方，在 Path Jumps 的描述中我们看到这样一句话：</li>
+</ul>
+<blockquote>
+<p>The initial node is the focused node (or the root if the path starts with /) of the reference desktop (or the selected desktop if the path has a DESKTOP_SEL prefix).</p>
+</blockquote>
+<p>这就把第二步中 <code>PATH</code> 的含义解释清楚了. 我们想通过一些路径来选择我们想要的节点，这大体上可以类比在微软 windows 系统中选择一个文件：先指定一个盘符，是 C 盘还是 D 盘，再进行路径的跳转，也就是打开一个文件夹再打开一个文件夹；这里是用 <code>@[DESKTOP_SEL:]</code> 先指定桌面（不写 <code>DESKTOP_SEL</code> 就是指定当前桌面），再用 <code>JUMP</code> 进行跳转，需要多次跳转的话后面就再写好多个 <code>/JUMP</code>. 那么只有一个 <code>/</code> 就表示选择了根节点，不再进行跳转了——这当然也是可以的，就好比我打开 C 盘后就停止了，不再打开下面的文件夹了. 所以我们这里 <code>JUMP</code> 就取空值，表示不再跳转，这是 7 选 1 之外的做法，显然是不符合 BNF 语法规范的.</p>
+<p>无论如何，我们用 <code>@/</code> 就选择了当前桌面的根节点，也就是当前桌面下的所有窗口，对它执行 <code>-R</code> 就完成了对当前桌面的所有窗口执行旋转操作，整条语句就是网友给出的 <code>bspc node @/ -R 90</code>.</p>
+<p>那么同理，我们可以精确地选择当前节点的 parent 节点，即用 <code>@parent</code> 替换 <code>NODE_SEL</code>. 具体的流程为：<code>NODE_SEL</code> 替换为 <code>PATH</code>，<code>PATH</code> 替换成 <code>@JUMP</code>（不选 <code>DESKTOP_SEL</code> 表示当前桌面；不选 <code>/</code> 表示初始节点从当前焦点所在的节点开始，而不是从当前桌面的根节点开始），<code>JUMP</code> 7 选 1 替换成 <code>parent</code>. 整条语句就变成了 <code>bspc node @parent -R 90</code>.</p>
+<p>最后我们就可以写出我们想要的代码了：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma" tabindex="0"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -86,7 +293,9 @@ super + r
 </span><span class="lnt">6
 </span><span class="lnt">7
 </span><span class="lnt">8
-</span></code></pre></td><td class="lntd"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># .config/sxhkd/sxhkdrc</span>
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma" tabindex="0"><code class="language-bash" data-lang="bash"><span class="c1"># .config/sxhkd/sxhkdrc</span>
 <span class="c1"># rotate the whole desktop</span>
 super + <span class="nb">shift</span> + r
     bspc node @/ -R <span class="m">90</span>
@@ -94,11 +303,21 @@ super + <span class="nb">shift</span> + r
 <span class="c1"># rotate the parent of current focused</span>
 super + r
     bspc node @parent -R <span class="m">90</span>
-</code></pre></td></tr></table></div></div><p>还记得我们用两条语句完成 super + r 时的 bug 么？<span class="notation_color">请读者们仿照我讲解的流程自行对照文档理解 reddit 网友给的指令中 -f 的含义，并尝试直接解决这个 bug.</span></p><p><strong>这个例子我讲得比较细致，但希望读者朋友们能耐心搞明白它，作为阅读文档的实践练习. 这个搞明白了，就没有不会读的文档了.</strong></p><h2 id="例二隐藏">例二：隐藏
-<a href="#%e4%be%8b%e4%ba%8c%e9%9a%90%e8%97%8f"><small>¶</small></a></h2><p>有时我们想实现类似最小化的功能，这需要用到 bspwm 的隐藏. 这也是自带的例子中没有的，怎么办呢？</p><p>这里就直接揭晓答案了，在 <strong>1.4 小节</strong>中列举的第 <strong>4</strong> 个参考材料，即 GentooWiki 中就有这个功能的实现：见
-<a href="https://wiki.gentoo.org/wiki/Bspwm#Hide.2FShow_windows" rel="noreferrer noopener" target="_blank">这里
-<b>⧉</b></a>
-.</p><div class="highlight"><div class="chroma"><table class="lntable"><tr><td class="lntd"><pre class="chroma"><code><span class="lnt">1
+</code></pre></td></tr></table>
+</div>
+</div><p>还记得我们用两条语句完成 super + r 时的 bug 么？<span class="notation_color">请读者们仿照我讲解的流程自行对照文档理解 reddit 网友给的指令中 -f 的含义，并尝试直接解决这个 bug.</span></p>
+<p><strong>这个例子我讲得比较细致，但希望读者朋友们能耐心搞明白它，作为阅读文档的实践练习. 这个搞明白了，就没有不会读的文档了.</strong></p>
+<h2 id="例二隐藏">
+例二：隐藏
+<a href="#%e4%be%8b%e4%ba%8c%e9%9a%90%e8%97%8f"><small>¶</small></a>
+</h2>
+<p>有时我们想实现类似最小化的功能，这需要用到 bspwm 的隐藏. 这也是自带的例子中没有的，怎么办呢？</p>
+<p>这里就直接揭晓答案了，在 <strong>1.4 小节</strong>中列举的第 <strong>4</strong> 个参考材料，即 GentooWiki 中就有这个功能的实现：见
+<a href="https://wiki.gentoo.org/wiki/Bspwm#Hide.2FShow_windows" rel="noreferrer noopener" target="_blank">这里<b><sub>⧉</sub></b></a>
+.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma" tabindex="0"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -107,7 +326,9 @@ super + r
 </span><span class="lnt">7
 </span><span class="lnt">8
 </span><span class="lnt">9
-</span></code></pre></td><td class="lntd"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># .config/sxhkd/sxhkdrc</span>
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma" tabindex="0"><code class="language-bash" data-lang="bash"><span class="c1"># .config/sxhkd/sxhkdrc</span>
 
 <span class="c1"># hide window</span>
 super + v
@@ -116,14 +337,24 @@ super + v
 <span class="c1"># unhide window</span>
 super + <span class="nb">shift</span> + v
     bspc node <span class="o">{</span>,<span class="k">$(</span>bspc query -N -n .hidden <span class="p">|</span> tail -n1<span class="k">)</span><span class="o">}</span> -g <span class="nv">hidden</span><span class="o">=</span>off
-</code></pre></td></tr></table></div></div><p><span class="notation_color">请读者们用类似例一中的工作流程对照文档理解一下其中的 <code>-g</code> 命令，更关键地，请大家自己学习理解 <code>bspc query</code> 命令，把这两行完完全全搞明白. 如果你对 Linux 基础命令不熟悉，可能也要简单地学习一下，比如关于管道的知识、 <code>tail</code> 的用法等.</span></p><p>一个问题：最后一行的那个大括号有必要么？直接使用 <code>bspc node $(bspc query -N -n .hidden | tail -n1) -g hidden=off</code> 可以么？</p><h2 id="例三把焦点从平铺窗口移动到浮动窗口">例三：把焦点从平铺窗口移动到浮动窗口
-<a href="#%e4%be%8b%e4%b8%89%e6%8a%8a%e7%84%a6%e7%82%b9%e4%bb%8e%e5%b9%b3%e9%93%ba%e7%aa%97%e5%8f%a3%e7%a7%bb%e5%8a%a8%e5%88%b0%e6%b5%ae%e5%8a%a8%e7%aa%97%e5%8f%a3"><small>¶</small></a></h2><p>这是一位观众咨询我的问题：当焦点在平铺窗口上时，按 super + h/j/k/l 是不能移动焦点到浮动窗口上的，使用 super + c/o/i 之类的并不能让他满意，怎么办呢？自己写就好了.</p><p>如果读者们在上面两个例子中按照我最后的高亮字体进行了阅读学习，那么你现在一定对 <code>bspc query</code> 和 <code>bspc node -f</code> 有了一定的认识. 这样的话，你目前的知识就足够解决这个问题了，不妨先自己试一试. 当然如果你对 shell 脚本语言不熟悉也要临时学一点点，比如可以到
-<a href="https://www.runoob.com/linux/linux-shell.html" rel="noreferrer noopener" target="_blank">菜鸟教程
-<b>⧉</b></a>
+</code></pre></td></tr></table>
+</div>
+</div><p><span class="notation_color">请读者们用类似例一中的工作流程对照文档理解一下其中的 <code>-g</code> 命令，更关键地，请大家自己学习理解 <code>bspc query</code> 命令，把这两行完完全全搞明白. 如果你对 Linux 基础命令不熟悉，可能也要简单地学习一下，比如关于管道的知识、 <code>tail</code> 的用法等.</span></p>
+<p>一个问题：最后一行的那个大括号有必要么？直接使用 <code>bspc node $(bspc query -N -n .hidden | tail -n1) -g hidden=off</code> 可以么？</p>
+<h2 id="例三把焦点从平铺窗口移动到浮动窗口">
+例三：把焦点从平铺窗口移动到浮动窗口
+<a href="#%e4%be%8b%e4%b8%89%e6%8a%8a%e7%84%a6%e7%82%b9%e4%bb%8e%e5%b9%b3%e9%93%ba%e7%aa%97%e5%8f%a3%e7%a7%bb%e5%8a%a8%e5%88%b0%e6%b5%ae%e5%8a%a8%e7%aa%97%e5%8f%a3"><small>¶</small></a>
+</h2>
+<p>这是一位观众咨询我的问题：当焦点在平铺窗口上时，按 super + h/j/k/l 是不能移动焦点到浮动窗口上的，使用 super + c/o/i 之类的并不能让他满意，怎么办呢？自己写就好了.</p>
+<p>如果读者们在上面两个例子中按照我最后的高亮字体进行了阅读学习，那么你现在一定对 <code>bspc query</code> 和 <code>bspc node -f</code> 有了一定的认识. 这样的话，你目前的知识就足够解决这个问题了，不妨先自己试一试. 当然如果你对 shell 脚本语言不熟悉也要临时学一点点，比如可以到
+<a href="https://www.runoob.com/linux/linux-shell.html" rel="noreferrer noopener" target="_blank">菜鸟教程<b><sub>⧉</sub></b></a>
 这里看一看，解决这个问题需要用到 shell 流程控制请看
-<a href="https://www.runoob.com/linux/linux-shell-process-control.html" rel="noreferrer noopener" target="_blank">这里
-<b>⧉</b></a>
-.</p><p>这是我写的方法，仅供参考：</p><div class="highlight"><div class="chroma"><table class="lntable"><tr><td class="lntd"><pre class="chroma"><code><span class="lnt">1
+<a href="https://www.runoob.com/linux/linux-shell-process-control.html" rel="noreferrer noopener" target="_blank">这里<b><sub>⧉</sub></b></a>
+.</p>
+<p>这是我写的方法，仅供参考：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma" tabindex="0"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -131,7 +362,9 @@ super + <span class="nb">shift</span> + v
 </span><span class="lnt">6
 </span><span class="lnt">7
 </span><span class="lnt">8
-</span></code></pre></td><td class="lntd"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># .config/sxhkd/sxhkdrc</span>
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma" tabindex="0"><code class="language-bash" data-lang="bash"><span class="c1"># .config/sxhkd/sxhkdrc</span>
 <span class="c1"># focus a floating window from a tiled window</span>
 super + a
     <span class="k">if</span> <span class="o">[</span> <span class="s2">"</span><span class="k">$(</span>bspc query -N -n focused.floating<span class="k">)</span><span class="s2">"</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span> <span class="se">\
@@ -139,50 +372,118 @@ super + a
 </span><span class="se"></span>    <span class="k">else</span> <span class="se">\
 </span><span class="se"></span>        bspc node -f last.floating.local<span class="p">;</span> <span class="se">\
 </span><span class="se"></span>    <span class="k">fi</span>
-</code></pre></td></tr></table></div></div><p>希望大家能从这个例子中理解 <code>NODE_SEL</code> 后面那一大堆中括号的作用，叹号是表示取否定哦~</p><h2 id="一个小技巧">一个小技巧
-<a href="#%e4%b8%80%e4%b8%aa%e5%b0%8f%e6%8a%80%e5%b7%a7"><small>¶</small></a></h2><p>分享一个我经常用的、很多人可能会忽视的、能快速帮你梳理文档结构的一个小技巧，那就是把自动补全打开，然后经常按按 tab 键. 比如打下 bspc ，按一下 tab 键会出现 9 个候选的 command 或 domain，然后随便选一个比如 bspc node，再按一下 tab 键，等等.</p><p><figure><img alt="补全小技巧的示意效果图：bspc &lt;TAB&gt;" src="../../images/bspc_trick1.png"/><figcaption>◉ 图. 补全小技巧的示意效果图：bspc &lt;TAB&gt;</figcaption></figure><figure><img alt="补全小技巧的示意效果图：bspc node &lt;TAB&gt;" src="../../images/bspc_trick2.png"/><figcaption>◉ 图. 补全小技巧的示意效果图：bspc node &lt;TAB&gt;</figcaption></figure><figure><img alt="补全小技巧的示意效果图：bspc node &lt;TAB&gt;&lt;TAB&gt;" src="../../images/bspc_trick3.png"/><figcaption>◉ 图. 补全小技巧的示意效果图：bspc node &lt;TAB&gt;&lt;TAB&gt;</figcaption></figure></p><p>上面三张图展示的是我的 zsh 补全效果，bash 或 fish 也都是有的，安装 bspwm 时安装脚本应该会把它们处理好，一般情况下打开补全就能用了. 如果没有的话可以自己弄，以我的 Arch Linux 为例，补全脚本分别在这里：</p><ul><li>zsh. 本地：<code>/usr/share/zsh/site-functions/_bspc</code>；
-<a href="https://github.com/baskerville/bspwm/blob/master/contrib/zsh_completion" rel="noreferrer noopener" target="_blank">项目中
-<b>⧉</b></a>
-.</li><li>bash. 本地：<code>/usr/share/bash-completion/completions/bspc</code>；
-<a href="https://github.com/baskerville/bspwm/blob/master/contrib/bash_completion" rel="noreferrer noopener" target="_blank">项目中
-<b>⧉</b></a>
-.</li><li>fish. 本地：<code>/usr/share/fish/vendor_completions.d/bspc.fish</code>；
-<a href="https://github.com/baskerville/bspwm/blob/master/contrib/fish_completion" rel="noreferrer noopener" target="_blank">项目中
-<b>⧉</b></a>
-.</li></ul><p>看代码量的话好像 bash 和 fish 不如 zsh 的补全代码多，不知道使用起来能不能达到我上面截图中 zsh 的补全效果.</p><h1 id="添加规则的两种方式">添加规则的两种方式
-<a href="#%e6%b7%bb%e5%8a%a0%e8%a7%84%e5%88%99%e7%9a%84%e4%b8%a4%e7%a7%8d%e6%96%b9%e5%bc%8f"><small>¶</small></a></h1><h2 id="内建-rule-指令">内建 rule 指令
-<a href="#%e5%86%85%e5%bb%ba-rule-%e6%8c%87%e4%bb%a4"><small>¶</small></a></h2><p><span class="notation_color">建议详细阅读我在 <strong>1.4 小节</strong>中列举的
-<a href="https://dev.to/l04db4l4nc3r/bspwm-a-bare-bones-window-manager-44di" rel="noreferrer noopener" target="_blank">第 <strong>7</strong> 个参考材料
-<b>⧉</b></a>
-中 The bspwm client 部分的第三小节：Window Rules，搞明白规则是用来干什么的，并学习用 <code>xprop</code> 命令查询一个程序窗口的 WM_CLASS.</span></p><p>关于规则的部分，文档里也只有寥寥不到 15 行的东西，只有 <code>-a</code>、<code>-r</code>、<code>-l</code> 三个 <code>COMMANDS</code>，而且基本上只用得到 <code>-a</code> 这一个，非常好读. <span class="notation_color">建议 <code>man bspwm</code> 后用 / 键搜索 Rule 进行阅读.</span> 它的位置在上面的大纲中也能看到，Rule 是作为一个 <code>DOMAIN</code> 出现的.</p><p>关于规则指令后面可以加的属性（<code>[(hidden|sticky|private|locked|marked|center|follow|manage|focus|border)=(on|off)]</code>）可以参考我在 <strong>1.4 小节</strong>中列举的
-<a href="https://github.com/baskerville/bspwm/wiki/window-rules---attribute-flags" rel="noreferrer noopener" target="_blank">第 <strong>2</strong> 个参考材料即 GitHub 上的 wiki
-<b>⧉</b></a>
-中的 window rules attribute flags. 现在一共有 10 个是可以使用的，它们的意思是非常好理解的，我在上一个视频中也有讲到.</p><h2 id="external-rules">external rules
-<a href="#external-rules"><small>¶</small></a></h2><p>在 <strong>1.4 小节</strong>中列举的
-<a href="https://wiki.archlinux.org/index.php/Bspwm#Rules" rel="noreferrer noopener" target="_blank">第 <strong>3</strong> 个参考材料也就是 Arch Wiki
-<b>⧉</b></a>
-中有一小节是关于规则的说明，它说 external rules （外部的规则）写起来更复杂，但也能处理更复杂的窗口规则（This is more complex, but can allow you to craft more complex window rules），并说我们可以看一下例子中的写法，除此以外就没有说更多了. 这是对新手入门十分不友好的，而且除此以外，在网上也找不到更全面的介绍了，那我们就来自己动手丰衣足食吧！</p><p>在线的例子在
-<a href="https://github.com/baskerville/bspwm/tree/master/examples/external_rules" rel="noreferrer noopener" target="_blank">这里
-<b>⧉</b></a>
-；本地也是有的：<code>/usr/share/doc/bspwm/examples/external_rules</code>. 里面有两个文件，分别是 bspwmrc 和 external_rules，我们对 bspwmrc 更熟悉，我们先打开它.</p><div class="highlight"><div class="chroma"><table class="lntable"><tr><td class="lntd"><pre class="chroma"><code><span class="lnt">1
+</code></pre></td></tr></table>
+</div>
+</div><p>希望大家能从这个例子中理解 <code>NODE_SEL</code> 后面那一大堆中括号的作用，叹号是表示取否定哦~</p>
+<h2 id="一个小技巧">
+一个小技巧
+<a href="#%e4%b8%80%e4%b8%aa%e5%b0%8f%e6%8a%80%e5%b7%a7"><small>¶</small></a>
+</h2>
+<p>分享一个我经常用的、很多人可能会忽视的、能快速帮你梳理文档结构的一个小技巧，那就是把自动补全打开，然后经常按按 tab 键. 比如打下 bspc ，按一下 tab 键会出现 9 个候选的 command 或 domain，然后随便选一个比如 bspc node，再按一下 tab 键，等等.</p>
+<p><figure>
+<img alt="补全小技巧的示意效果图：bspc &lt;TAB&gt;" src="../../images/bspc_trick1.png"/>
+<figcaption>◉ 图. 补全小技巧的示意效果图：bspc &lt;TAB&gt;</figcaption>
+</figure>
+<figure>
+<img alt="补全小技巧的示意效果图：bspc node &lt;TAB&gt;" src="../../images/bspc_trick2.png"/>
+<figcaption>◉ 图. 补全小技巧的示意效果图：bspc node &lt;TAB&gt;</figcaption>
+</figure>
+<figure>
+<img alt="补全小技巧的示意效果图：bspc node &lt;TAB&gt;&lt;TAB&gt;" src="../../images/bspc_trick3.png"/>
+<figcaption>◉ 图. 补全小技巧的示意效果图：bspc node &lt;TAB&gt;&lt;TAB&gt;</figcaption>
+</figure>
+</p>
+<p>上面三张图展示的是我的 zsh 补全效果，bash 或 fish 也都是有的，安装 bspwm 时安装脚本应该会把它们处理好，一般情况下打开补全就能用了. 如果没有的话可以自己弄，以我的 Arch Linux 为例，补全脚本分别在这里：</p>
+<ul>
+<li>zsh. 本地：<code>/usr/share/zsh/site-functions/_bspc</code>；
+<a href="https://github.com/baskerville/bspwm/blob/master/contrib/zsh_completion" rel="noreferrer noopener" target="_blank">项目中<b><sub>⧉</sub></b></a>
+.</li>
+<li>bash. 本地：<code>/usr/share/bash-completion/completions/bspc</code>；
+<a href="https://github.com/baskerville/bspwm/blob/master/contrib/bash_completion" rel="noreferrer noopener" target="_blank">项目中<b><sub>⧉</sub></b></a>
+.</li>
+<li>fish. 本地：<code>/usr/share/fish/vendor_completions.d/bspc.fish</code>；
+<a href="https://github.com/baskerville/bspwm/blob/master/contrib/fish_completion" rel="noreferrer noopener" target="_blank">项目中<b><sub>⧉</sub></b></a>
+.</li>
+</ul>
+<p>看代码量的话好像 bash 和 fish 不如 zsh 的补全代码多，不知道使用起来能不能达到我上面截图中 zsh 的补全效果.</p>
+<h1 id="添加规则的两种方式">
+添加规则的两种方式
+<a href="#%e6%b7%bb%e5%8a%a0%e8%a7%84%e5%88%99%e7%9a%84%e4%b8%a4%e7%a7%8d%e6%96%b9%e5%bc%8f"><small>¶</small></a>
+</h1>
+<h2 id="内建-rule-指令">
+内建 rule 指令
+<a href="#%e5%86%85%e5%bb%ba-rule-%e6%8c%87%e4%bb%a4"><small>¶</small></a>
+</h2>
+<p><span class="notation_color">建议详细阅读我在 <strong>1.4 小节</strong>中列举的
+<a href="https://dev.to/l04db4l4nc3r/bspwm-a-bare-bones-window-manager-44di" rel="noreferrer noopener" target="_blank">第 <strong>7</strong> 个参考材料<b><sub>⧉</sub></b></a>
+中 The bspwm client 部分的第三小节：Window Rules，搞明白规则是用来干什么的，并学习用 <code>xprop</code> 命令查询一个程序窗口的 WM_CLASS.</span></p>
+<p>关于规则的部分，文档里也只有寥寥不到 15 行的东西，只有 <code>-a</code>、<code>-r</code>、<code>-l</code> 三个 <code>COMMANDS</code>，而且基本上只用得到 <code>-a</code> 这一个，非常好读. <span class="notation_color">建议 <code>man bspwm</code> 后用 / 键搜索 Rule 进行阅读.</span> 它的位置在上面的大纲中也能看到，Rule 是作为一个 <code>DOMAIN</code> 出现的.</p>
+<p>关于规则指令后面可以加的属性（<code>[(hidden|sticky|private|locked|marked|center|follow|manage|focus|border)=(on|off)]</code>）可以参考我在 <strong>1.4 小节</strong>中列举的
+<a href="https://github.com/baskerville/bspwm/wiki/window-rules---attribute-flags" rel="noreferrer noopener" target="_blank">第 <strong>2</strong> 个参考材料即 GitHub 上的 wiki<b><sub>⧉</sub></b></a>
+中的 window rules attribute flags. 现在一共有 10 个是可以使用的，它们的意思是非常好理解的，我在上一个视频中也有讲到.</p>
+<h2 id="external-rules">
+external rules
+<a href="#external-rules"><small>¶</small></a>
+</h2>
+<p>在 <strong>1.4 小节</strong>中列举的
+<a href="https://wiki.archlinux.org/index.php/Bspwm#Rules" rel="noreferrer noopener" target="_blank">第 <strong>3</strong> 个参考材料也就是 Arch Wiki<b><sub>⧉</sub></b></a>
+中有一小节是关于规则的说明，它说 external rules （外部的规则）写起来更复杂，但也能处理更复杂的窗口规则（This is more complex, but can allow you to craft more complex window rules），并说我们可以看一下例子中的写法，除此以外就没有说更多了. 这是对新手入门十分不友好的，而且除此以外，在网上也找不到更全面的介绍了，那我们就来自己动手丰衣足食吧！</p>
+<p>在线的例子在
+<a href="https://github.com/baskerville/bspwm/tree/master/examples/external_rules" rel="noreferrer noopener" target="_blank">这里<b><sub>⧉</sub></b></a>
+；本地也是有的：<code>/usr/share/doc/bspwm/examples/external_rules</code>. 里面有两个文件，分别是 bspwmrc 和 external_rules，我们对 bspwmrc 更熟悉，我们先打开它.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma" tabindex="0"><code><span class="lnt">1
 </span><span class="lnt">2
-</span></code></pre></td><td class="lntd"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#! /bin/sh
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma" tabindex="0"><code class="language-bash" data-lang="bash"><span class="cp">#! /bin/sh
 </span><span class="cp"></span>bspc config external_rules_command <span class="s2">"</span><span class="k">$(</span>which external_rules<span class="k">)</span><span class="s2">"</span>
-</code></pre></td></tr></table></div></div><p>里面只有一行，但有个 <code>external_rules_command</code> 是我们不理解的，<code>man bspwm</code> 打开文档，用 / 键搜索一下 <code>external_rules_command</code>，找到它在文档中的位置，是位于 <code>SETTINGS</code> 里面的 <code>Globle Settings</code>，看上下文，和它平等地位的还有我们在上个视频中讲到的 <code>normal_border_color</code>、<code>focused_border_color</code>、自带的 bspwmrc 例子中有的 <code>split_ratio</code>、<code>borderless_monocle</code>、<code>gapless_monocle</code> 等，这下我们心里就有底了，我们可以把这一行复制到 <code>~/.config/bspwm/bspwmrc</code> 中，就像我们在上个视频中改边框颜色一样. 现在我们静下心来读一读文档中对 external_rules_command 的解释：</p><blockquote><p>Absolute path to the command used to retrieve rule consequences. The command will receive the following arguments: window ID, class name, instance name, and intermediate consequences. The output of that command must have the following format: key1=value1 key2=value2 &amp;mldr; (the valid key/value pairs are given in the description of the rule command).</p><p>（一个命令的绝对路径，这个命令是用来查找规则结果的. 这个命令要接收如下的参数：window ID、class name、instance name、intermediate consequences. 这个命令的输出结果必须是键值对的格式，合法的键值对在 rule 命令的描述中给出. ）</p></blockquote><p>如果在上一节中你按照我的指示去读了文档中关于 Rule 的部分那不到 15 行的内容，那你现在看到它最后一句说的键值对时一定能够会心一笑了.</p><p>现在我们知道了这短短的一行 <code>bspc config</code> 语句中最后的 <code>"$(which external_rules)"</code> 就是这里说的绝对路径了，再结合我们对 Linux 基本语句 <code>which</code> 的知识，我们就明白了另一份文件 external_rules 一定是一份脚本文件，而且要把它加到环境变量中以便我们能直接调用它，就像使用 <code>ls</code>、<code>cd</code> 一样直接使用 <code>external_rules</code> 作为一个命令，而且这个命令必须带四个参数，输出必须是键值对.</p><div class="notation_color"><p>写自己的命令的方法：</p><p>（这一段是 Linux 使用基础中的基础，因为 Linux 的灵魂就是自己写脚本，如果你连这都不知道的话，就要加强 Linux 基础知识的学习了）</p><p>完成这件事有很多种做法，我个人的做法是建一个 <code>~/.bin/</code> 文件夹，然后在里面写脚本，shell 脚本也行，python 脚本也行，比如：</p><div class="highlight"><div class="chroma"><table class="lntable"><tr><td class="lntd"><pre class="chroma"><code><span class="lnt">1
+</code></pre></td></tr></table>
+</div>
+</div><p>里面只有一行，但有个 <code>external_rules_command</code> 是我们不理解的，<code>man bspwm</code> 打开文档，用 / 键搜索一下 <code>external_rules_command</code>，找到它在文档中的位置，是位于 <code>SETTINGS</code> 里面的 <code>Globle Settings</code>，看上下文，和它平等地位的还有我们在上个视频中讲到的 <code>normal_border_color</code>、<code>focused_border_color</code>、自带的 bspwmrc 例子中有的 <code>split_ratio</code>、<code>borderless_monocle</code>、<code>gapless_monocle</code> 等，这下我们心里就有底了，我们可以把这一行复制到 <code>~/.config/bspwm/bspwmrc</code> 中，就像我们在上个视频中改边框颜色一样. 现在我们静下心来读一读文档中对 external_rules_command 的解释：</p>
+<blockquote>
+<p>Absolute path to the command used to retrieve rule consequences. The command will receive the following arguments: window ID, class name, instance name, and intermediate consequences. The output of that command must have the following format: key1=value1 key2=value2 &amp;mldr; (the valid key/value pairs are given in the description of the rule command).</p>
+<p>（一个命令的绝对路径，这个命令是用来查找规则结果的. 这个命令要接收如下的参数：window ID、class name、instance name、intermediate consequences. 这个命令的输出结果必须是键值对的格式，合法的键值对在 rule 命令的描述中给出. ）</p>
+</blockquote>
+<p>如果在上一节中你按照我的指示去读了文档中关于 Rule 的部分那不到 15 行的内容，那你现在看到它最后一句说的键值对时一定能够会心一笑了.</p>
+<p>现在我们知道了这短短的一行 <code>bspc config</code> 语句中最后的 <code>"$(which external_rules)"</code> 就是这里说的绝对路径了，再结合我们对 Linux 基本语句 <code>which</code> 的知识，我们就明白了另一份文件 external_rules 一定是一份脚本文件，而且要把它加到环境变量中以便我们能直接调用它，就像使用 <code>ls</code>、<code>cd</code> 一样直接使用 <code>external_rules</code> 作为一个命令，而且这个命令必须带四个参数，输出必须是键值对.</p>
+<div class="notation_color">
+<p>写自己的命令的方法：</p>
+<p>（这一段是 Linux 使用基础中的基础，因为 Linux 的灵魂就是自己写脚本，如果你连这都不知道的话，就要加强 Linux 基础知识的学习了）</p>
+<p>完成这件事有很多种做法，我个人的做法是建一个 <code>~/.bin/</code> 文件夹，然后在里面写脚本，shell 脚本也行，python 脚本也行，比如：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma" tabindex="0"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
-</span></code></pre></td><td class="lntd"><pre class="chroma"><code class="language-python" data-lang="python"><span class="ch">#!/usr/bin/env python                                                          </span>
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma" tabindex="0"><code class="language-python" data-lang="python"><span class="ch">#!/usr/bin/env python                                                          </span>
 <span class="c1"># ~/.bin/hello-world</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">"hello!"</span><span class="p">)</span>
-</code></pre></td></tr></table></div></div><p>然后别忘了每次启动时把它自动加载到环境变量中：</p><div class="highlight"><div class="chroma"><table class="lntable"><tr><td class="lntd"><pre class="chroma"><code><span class="lnt">1
+</code></pre></td></tr></table>
+</div>
+</div><p>然后别忘了每次启动时把它自动加载到环境变量中：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma" tabindex="0"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
-</span></code></pre></td><td class="lntd"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># .xprofile or .xinitrc or .zprofile or ……</span>
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma" tabindex="0"><code class="language-bash" data-lang="bash"><span class="c1"># .xprofile or .xinitrc or .zprofile or ……</span>
 <span class="k">if</span> <span class="o">[</span> -d <span class="s2">"</span><span class="nv">$HOME</span><span class="s2">/.bin"</span> <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>                                                  
     <span class="nv">PATH</span><span class="o">=</span><span class="s2">"</span><span class="nv">$HOME</span><span class="s2">/.bin:</span><span class="nv">$PATH</span><span class="s2">"</span>
 <span class="k">fi</span>
-</code></pre></td></tr></table></div></div><p>这样就能在终端中像执行 <code>ls</code> 一样执行 <code>hello-world</code> 了.</p></div><p>带着这些认识，我们打开 external_rules 看一看：</p><div class="highlight"><div class="chroma"><table class="lntable"><tr><td class="lntd"><pre class="chroma"><code><span class="lnt"> 1
+</code></pre></td></tr></table>
+</div>
+</div><p>这样就能在终端中像执行 <code>ls</code> 一样执行 <code>hello-world</code> 了. </p></div>
+<p>带着这些认识，我们打开 external_rules 看一看：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma" tabindex="0"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -204,7 +505,9 @@ super + a
 </span><span class="lnt">20
 </span><span class="lnt">21
 </span><span class="lnt">22
-</span></code></pre></td><td class="lntd"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#! /bin/sh
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma" tabindex="0"><code class="language-bash" data-lang="bash"><span class="cp">#! /bin/sh
 </span><span class="cp"></span>
 <span class="nv">wid</span><span class="o">=</span><span class="nv">$1</span>
 <span class="nv">class</span><span class="o">=</span><span class="nv">$2</span>
@@ -226,13 +529,20 @@ super + a
         <span class="o">[</span> <span class="s2">"</span><span class="nv">$state</span><span class="s2">"</span> <span class="o">]</span> <span class="o">||</span> <span class="nb">echo</span> <span class="s2">"state=pseudo_tiled"</span>
         <span class="p">;;</span>
 <span class="k">esac</span>
-</code></pre></td></tr></table></div></div><p>（如果不会读 shell 语句，一定要自己去学习一下啊！在这里最起码得读得懂中括号、case 语句、eval 语句、双竖线才行. ）</p><p>可以看到，和我们预想的一样，这是一份脚本，分为三个段落，第一段是接收四个参数，这没什么好说的；第二段是在第 3 个参数 instance name 是 fontforge 的情况下，通过 window ID 获取 window 的 title（标题），并对 title 的三种可能情况返回了一组键值对；第三段对 class name 的两种情况执行了第四个参数，并在 $state 变量为空时返回另一组键值对.</p><p>如果你认真阅读了这 22 行代码，你首先产生的一个疑问一定会是：xtitle （第 9 行）是什么命令？我们在搜索引擎中以“xtitle”为关键词进行搜索，发现了这样一个工具：
-<a href="https://github.com/baskerville/xtitle" rel="noreferrer noopener" target="_blank">baskerville/xtitle
-<b>⧉</b></a>
+</code></pre></td></tr></table>
+</div>
+</div><p>（如果不会读 shell 语句，一定要自己去学习一下啊！在这里最起码得读得懂中括号、case 语句、eval 语句、双竖线才行. ）</p>
+<p>可以看到，和我们预想的一样，这是一份脚本，分为三个段落，第一段是接收四个参数，这没什么好说的；第二段是在第 3 个参数 instance name 是 fontforge 的情况下，通过 window ID 获取 window 的 title（标题），并对 title 的三种可能情况返回了一组键值对；第三段对 class name 的两种情况执行了第四个参数，并在 $state 变量为空时返回另一组键值对.</p>
+<p>如果你认真阅读了这 22 行代码，你首先产生的一个疑问一定会是：xtitle （第 9 行）是什么命令？我们在搜索引擎中以“xtitle”为关键词进行搜索，发现了这样一个工具：
+<a href="https://github.com/baskerville/xtitle" rel="noreferrer noopener" target="_blank">baskerville/xtitle<b><sub>⧉</sub></b></a>
 . 注意到这个工具的作者了么？他 GitHub 的用户名是 baskerville 哎！这不正是 bspwm 的作者么？！这下就不奇怪了吧，这个作者写的 bspwm 自带的例子中的 external rules 里含有另一个他写的小工具！就像 bspwm 需要用到的快捷键精灵 sxhkd 一样，sxhkd 也是他专门为 bspwm 写的呢！这个 xtitle 并不在 Arch Linux 的官方源中，我们需要自行编译它. 不过 Arch Linux 的
-<a href="https://aur.archlinux.org/packages/xtitle/" rel="noreferrer noopener" target="_blank">AUR 里是有的
-<b>⧉</b></a>
-，我就直接从这上面克隆然后 makepkg 一下了.</p><p>把每条语句都理解清楚以后我们还是对这份文件本身一头雾水：这个脚本由谁来执行？什么时候执行？怎么执行？执行的时候怎么传递参数？那四个参数（window ID、class name、instance name、intermediate consequences）是什么？谁来决定？<code>fontforge</code>、<code>Layers|Tools|Warning</code>、<code>Lutris|Liferea</code> 这些都是什么意思？哪些程序的窗口会是这样的标题？</p><p>别急，我们来试验一番. 这里我们并不采用上面提到的环境变量的方法，我们直接在 .config/bspwm/bspwmrc 中的最后一行加上：<code>bspc config external_rules_command "${HOME}/.config/bspwm/try_e_r"</code>，并用类似 external_rules 的格式创建 try_e_r 文件：</p><div class="highlight"><div class="chroma"><table class="lntable"><tr><td class="lntd"><pre class="chroma"><code><span class="lnt"> 1
+<a href="https://aur.archlinux.org/packages/xtitle/" rel="noreferrer noopener" target="_blank">AUR 里是有的<b><sub>⧉</sub></b></a>
+，我就直接从这上面克隆然后 makepkg 一下了.</p>
+<p>把每条语句都理解清楚以后我们还是对这份文件本身一头雾水：这个脚本由谁来执行？什么时候执行？怎么执行？执行的时候怎么传递参数？那四个参数（window ID、class name、instance name、intermediate consequences）是什么？谁来决定？<code>fontforge</code>、<code>Layers|Tools|Warning</code>、<code>Lutris|Liferea</code> 这些都是什么意思？哪些程序的窗口会是这样的标题？</p>
+<p>别急，我们来试验一番. 这里我们并不采用上面提到的环境变量的方法，我们直接在 .config/bspwm/bspwmrc 中的最后一行加上：<code>bspc config external_rules_command "${HOME}/.config/bspwm/try_e_r"</code>，并用类似 external_rules 的格式创建 try_e_r 文件：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma" tabindex="0"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -247,7 +557,9 @@ super + a
 </span><span class="lnt">13
 </span><span class="lnt">14
 </span><span class="lnt">15
-</span></code></pre></td><td class="lntd"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#! /bin/sh
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma" tabindex="0"><code class="language-bash" data-lang="bash"><span class="cp">#! /bin/sh
 </span><span class="cp"></span>
 <span class="c1"># ~/.config/bspwm/try_e_r</span>
 <span class="nv">wid</span><span class="o">=</span><span class="nv">$1</span>
@@ -262,33 +574,147 @@ super + a
 </span><span class="s2">    instance name : </span><span class="si">${</span><span class="nv">instance</span><span class="si">}</span><span class="s2">,\n \
 </span><span class="s2">    intermediate consequences : </span><span class="si">${</span><span class="nv">consequences</span><span class="si">}</span><span class="s2">\n\n"</span> <span class="se">\
 </span><span class="se"></span>    &gt;&gt; /tmp/try_e_r.log
-</code></pre></td></tr></table></div></div><p>然后我们按 <code>super + Alt + r</code> 重启 bspwm，在终端下使用 <code>tail -f /tmp/try_e_r.log</code> 来监听日志文件变化. 我们对窗口进行一些操作，看看 try_e_r.log 里什么时候会有新的变化，并看看这四个参数以及使用 xtitle 得到的结果分别都是什么. 贴一下我这里的测试结果：</p><p><figure><img alt="external_rules 的测试结果" src="../../images/ext_rule1.png"/><figcaption>◉ 图. external_rules 的测试结果</figcaption></figure><figure><img alt="external_rules 的测试结果" src="../../images/ext_rule2.png"/><figcaption>◉ 图. external_rules 的测试结果</figcaption></figure></p><p>打开监听变化的日志文件以后，我分别打开了一个终端，一个 firefox 浏览器，一个 SMPlayer. 当然第一个 Polybar 是我重启 bspwm 之后马上打开的第一个窗口，这无需多言，只是<span class="notation_color">我有点不明白我明明把 <code>bspc config external_rules_command "${HOME}/.config/bspwm/try_e_r"</code> 写到 bspwmrc 的最后一行了，竟然还能在日志里看到 Polybar ？难道 shell 脚本不是从上到下一行一行执行的么？希望得到各位读者的指点.</span>（那些日志中的输出你可能会对 Polybar 的 <code>layer=above</code> 不太熟悉，可以自己再额外看一看关于 layer 的信息.）</p><p>通过试验，我们明白了 external_rules 的工作流程：如果我们写了 external_rules 脚本，并在 bspwmrc 中写明了这个脚本的绝对路径，那么 bspwm 在每打开一个窗口时都会自动执行这个命令，并把这个窗口的信息通过那四个参数告诉给这个命令，然后根据得到的返回值也就是一些键值对来决定窗口的样貌与模式.</p><p>打个比方，external_rules 是我们创造的一位负责管理学生进入学校（负责管理窗口打开）的看门大爷（一个命令），我们有任何规则都可以告诉他（用脚本语言写进去），然后他就躺在传达室里默默无闻（它只是一个命令而已，你不调用，它就不会理你），一旦有一个学生要进入学校（一个窗口要被打开），送学生来的家长（bspwm）就会把看门大爷叫起来（调用这个命令），告诉看门大爷（向这个命令传参）这个学生的学号（这个窗口的 window ID）、他是哪个班的（class name）、他叫什么名字（instance name）、他来学校干什么（intermediate consequences），看门大爷就把他的学号输入到电脑里查一下（xtitle）他的小名（title）叫什么，然后根据这些信息和你告诉给他的规则来决定这个学生进入学校以后有什么额外要做的事情（这个窗口应该有什么额外的规则）.</p><p>external_rules 的部分我觉得写到这里就足够了，它确确实实能写出非常复杂的规则出来. 关于 <code>fontforge</code>、<code>Layers|Tools|Warning</code>、<code>Lutris|Liferea</code> 的事情我觉得反而不是很重要，因为 Lutris 和 Liferea 的这两个软件你不一定会用得到，你只要知道怎么自己写规则，怎么利用好这个功能就足够了.</p><p>如果感兴趣或者想完整地体验一下 external_rules 的读者可以自行安装这两个软件，这两个软件在 Arch Linux 下的官方源中都有：</p><ul><li><a href="https://lzone.de/liferea/" rel="noreferrer noopener" target="_blank">Liferea
-<b>⧉</b></a>
-，一个信息汇总聚合平台，我猜是某种 RSS 阅读器.</li><li><a href="https://lutris.net/" rel="noreferrer noopener" target="_blank">Lutris
-<b>⧉</b></a>
-，一个游戏平台，我猜是类似 steam 那种.</li></ul><p><span class="notation_color">关于这份脚本，还有一个 <code>$state</code> 没有讲. 读者们可以用类似的方法看看它是什么.</span></p><h1 id="四种布局方案">四种布局方案
-<a href="#%e5%9b%9b%e7%a7%8d%e5%b8%83%e5%b1%80%e6%96%b9%e6%a1%88"><small>¶</small></a></h1><p><span class="notation_color">建议详细阅读我在 <strong>1.4 小节</strong>中列举的
-<a href="https://dev.to/l04db4l4nc3r/bspwm-a-bare-bones-window-manager-44di" rel="noreferrer noopener" target="_blank">第 <strong>7</strong> 个参考材料
-<b>⧉</b></a>
-中 Layouts 部分. 它里面还包括了一段快速切换布局方案的脚本.</span></p><p>待补充.</p><h1 id="关于-panel">关于 panel
-<a href="#%e5%85%b3%e4%ba%8e-panel"><small>¶</small></a></h1><p>第三方的 panel 选择很多，比如 polybar、lemonbar、yabar，<span class="notation_color">可以阅读我在 <strong>1.4 小节</strong>中列举的第 <strong>3</strong> 个参考材料即 Arch Wiki 中的相关部分.</span></p><p>这里想讲一下它的例子中自带的 panel ，待补充.</p><h1 id="关于容器">关于容器
-<a href="#%e5%85%b3%e4%ba%8e%e5%ae%b9%e5%99%a8"><small>¶</small></a></h1><p>待补充.</p><h1 id="谈一点哲学">谈一点哲学
-<a href="#%e8%b0%88%e4%b8%80%e7%82%b9%e5%93%b2%e5%ad%a6"><small>¶</small></a></h1><p>就是我自己有一些想法，随便满足一下表达欲.</p><h2 id="阅读文档与解决问题">阅读文档与解决问题
-<a href="#%e9%98%85%e8%af%bb%e6%96%87%e6%a1%a3%e4%b8%8e%e8%a7%a3%e5%86%b3%e9%97%ae%e9%a2%98"><small>¶</small></a></h2><p>我虽然在之前的视频里简单说了说怎么阅读文档——会了语法之后只要耐心就好了，但我并没有很鼓励大家都去啃文档，因为这并不高效. 哪怕我很认真我很耐心地在视频中演示了一些东西，我也仅仅是希望中文的 Linux 社区少一点点浮躁、多一点点耐心，仅此而已.</p><p>那么更高效、也更符合现实的对待文档的态度是什么呢？我想用英语的阅读理解做个简单的类比.</p><p>在初中/高中的英语考试中有一类题型叫做阅读理解，试卷上会有一篇文章，然后文章后面有一些题目，每个题目有四个选项，考生需要阅读文章，然后做题. 面对这种阅读理解题，大体是有两种解题策略的：一是先读文章再做题；二是先读题目再到文章中去找相关的句子. 前者能让你真正读懂这篇文章，但是会有点慢；后者能让你快速把题目做出来，但你可能并不知道文章讲了什么. 选取那种策略主要还是看你怎么对待考试：如果你享受读英语的过程、好奇文章讲了什么，那么你可能会采取前者；如果你只是为了获得分数，其他的都不重要，那么你可能会采取后者.</p><p>照搬到 Linux 使用上也是差不多的. 文档相当于文章，你的需求相当于文章后面的问题，要不要读文档、怎么读文档，完全取决于你为什么要用 Linux，你的心态是怎么样的. 你在做事情的时候经常会有新的需求提出来么？你是一个需求很多的人还是一个需求很少的人？大体情况下，阅读文档能让你解决问题、完成需求的时间变短，但阅读文档本身需要大量的时间. 我个人的看法是，如果你的需求不太多，那就不需要阅读文档，遇到问题解决问题就好；如果你的需求比较多，那可能磨刀不误砍柴工了. 到底还是一个平衡的问题.</p><p>我个人是不会从头到尾阅读文档的，我的习惯几乎就是在 2.1 小节 例一：旋转 那里的工作流程：当我有需求时，我会通过搜索引擎寻找解决方案，然后我会对照文档理解别人的解决方案，最后适当做出改进或直接使用. 为了安全起见，我绝不会看都不看就把别人的代码复制下来直接执行.</p><h2 id="unix-哲学">Unix 哲学
-<a href="#unix-%e5%93%b2%e5%ad%a6"><small>¶</small></a></h2><p>我在上一个视频中讲到 bspwm 的优点时，有很多网友就说到了 bspwm 符合 Unix 哲学. 那么 Unix 的哲学是什么呢？在
-<a href="https://en.wikipedia.org/wiki/Unix_philosophy" rel="noreferrer noopener" target="_blank">维基百科
-<b>⧉</b></a>
-中可以找到 1978 年 Doug Mcllroy 最原始四句表述，我们这里单取出第一条来看：</p><blockquote><p>Make each program do one thing well. To do a new job, build afresh rather than complicate old programs by adding new “features”.</p></blockquote><p>简单地说就是一个程序只应该做一件事并把它做好. 其实我说到这里大家应该就明白了，bspwm 就单纯地只负责窗口管理的部分，那么键盘输入的部分怎么办呢？bspwm 的作者又为了这个任务创造了一个新的工具 sxhkd. 这样做的好处是我们可以使用其他工具来进行快捷键绑定的工作；或者反过来：在不用 bspwm 的情况下，单纯只安装 sxhkd 来处理键盘输入，比如使用键盘调整音量、调整屏幕亮度的工作都可以由 sxhkd 来完成.</p><p>这样的 Unix 哲学在 bspwm 的身上体现得淋漓尽致：</p><ul><li>在 external_rules 的部分，为了根据窗口的 window id 获取窗口的标题（title），作者又额外创造了
-<a href="https://github.com/baskerville/xtitle" rel="noreferrer noopener" target="_blank">xtitle
-<b>⧉</b></a>
-. 见本文第 3.2 小节；</li><li>在 panel 部分，为了判断是否存在一个 bar，作者又额外创造了一个对窗口进行操作的工具
-<a href="https://github.com/baskerville/xdo" rel="noreferrer noopener" target="_blank">xdo
-<b>⧉</b></a>
+</code></pre></td></tr></table>
+</div>
+</div><p>然后我们按 <code>super + Alt + r</code> 重启 bspwm，在终端下使用 <code>tail -f /tmp/try_e_r.log</code> 来监听日志文件变化. 我们对窗口进行一些操作，看看 try_e_r.log 里什么时候会有新的变化，并看看这四个参数以及使用 xtitle 得到的结果分别都是什么. 贴一下我这里的测试结果：</p>
+<p><figure>
+<img alt="external_rules 的测试结果" src="../../images/ext_rule1.png"/>
+<figcaption>◉ 图. external_rules 的测试结果</figcaption>
+</figure>
+<figure>
+<img alt="external_rules 的测试结果" src="../../images/ext_rule2.png"/>
+<figcaption>◉ 图. external_rules 的测试结果</figcaption>
+</figure>
+</p>
+<p>打开监听变化的日志文件以后，我分别打开了一个终端，一个 firefox 浏览器，一个 SMPlayer. 当然第一个 Polybar 是我重启 bspwm 之后马上打开的第一个窗口，这无需多言，只是<span class="notation_color">我有点不明白我明明把 <code>bspc config external_rules_command "${HOME}/.config/bspwm/try_e_r"</code> 写到 bspwmrc 的最后一行了，竟然还能在日志里看到 Polybar ？难道 shell 脚本不是从上到下一行一行执行的么？希望得到各位读者的指点.</span>（那些日志中的输出你可能会对 Polybar 的 <code>layer=above</code> 不太熟悉，可以自己再额外看一看关于 layer 的信息.）</p>
+<p>通过试验，我们明白了 external_rules 的工作流程：如果我们写了 external_rules 脚本，并在 bspwmrc 中写明了这个脚本的绝对路径，那么 bspwm 在每打开一个窗口时都会自动执行这个命令，并把这个窗口的信息通过那四个参数告诉给这个命令，然后根据得到的返回值也就是一些键值对来决定窗口的样貌与模式.</p>
+<p>打个比方，external_rules 是我们创造的一位负责管理学生进入学校（负责管理窗口打开）的看门大爷（一个命令），我们有任何规则都可以告诉他（用脚本语言写进去），然后他就躺在传达室里默默无闻（它只是一个命令而已，你不调用，它就不会理你），一旦有一个学生要进入学校（一个窗口要被打开），送学生来的家长（bspwm）就会把看门大爷叫起来（调用这个命令），告诉看门大爷（向这个命令传参）这个学生的学号（这个窗口的 window ID）、他是哪个班的（class name）、他叫什么名字（instance name）、他来学校干什么（intermediate consequences），看门大爷就把他的学号输入到电脑里查一下（xtitle）他的小名（title）叫什么，然后根据这些信息和你告诉给他的规则来决定这个学生进入学校以后有什么额外要做的事情（这个窗口应该有什么额外的规则）.</p>
+<p>external_rules 的部分我觉得写到这里就足够了，它确确实实能写出非常复杂的规则出来. 关于 <code>fontforge</code>、<code>Layers|Tools|Warning</code>、<code>Lutris|Liferea</code> 的事情我觉得反而不是很重要，因为 Lutris 和 Liferea 的这两个软件你不一定会用得到，你只要知道怎么自己写规则，怎么利用好这个功能就足够了.</p>
+<p>如果感兴趣或者想完整地体验一下 external_rules 的读者可以自行安装这两个软件，这两个软件在 Arch Linux 下的官方源中都有：</p>
+<ul>
+<li>
+<a href="https://lzone.de/liferea/" rel="noreferrer noopener" target="_blank">Liferea<b><sub>⧉</sub></b></a>
+，一个信息汇总聚合平台，我猜是某种 RSS 阅读器.</li>
+<li>
+<a href="https://lutris.net/" rel="noreferrer noopener" target="_blank">Lutris<b><sub>⧉</sub></b></a>
+，一个游戏平台，我猜是类似 steam 那种.</li>
+</ul>
+<p><span class="notation_color">关于这份脚本，还有一个 <code>$state</code> 没有讲. 读者们可以用类似的方法看看它是什么.</span></p>
+<h1 id="四种布局方案">
+四种布局方案
+<a href="#%e5%9b%9b%e7%a7%8d%e5%b8%83%e5%b1%80%e6%96%b9%e6%a1%88"><small>¶</small></a>
+</h1>
+<p><span class="notation_color">建议详细阅读我在 <strong>1.4 小节</strong>中列举的
+<a href="https://dev.to/l04db4l4nc3r/bspwm-a-bare-bones-window-manager-44di" rel="noreferrer noopener" target="_blank">第 <strong>7</strong> 个参考材料<b><sub>⧉</sub></b></a>
+中 Layouts 部分. 它里面还包括了一段快速切换布局方案的脚本.</span></p>
+<p>待补充.</p>
+<h1 id="关于-panel">
+关于 panel
+<a href="#%e5%85%b3%e4%ba%8e-panel"><small>¶</small></a>
+</h1>
+<p>第三方的 panel 选择很多，比如 polybar、lemonbar、yabar，<span class="notation_color">可以阅读我在 <strong>1.4 小节</strong>中列举的第 <strong>3</strong> 个参考材料即 Arch Wiki 中的相关部分.</span></p>
+<p>这里想讲一下它的例子中自带的 panel ，待补充.</p>
+<h1 id="关于容器">
+关于容器
+<a href="#%e5%85%b3%e4%ba%8e%e5%ae%b9%e5%99%a8"><small>¶</small></a>
+</h1>
+<p>待补充.</p>
+<h1 id="谈一点哲学">
+谈一点哲学
+<a href="#%e8%b0%88%e4%b8%80%e7%82%b9%e5%93%b2%e5%ad%a6"><small>¶</small></a>
+</h1>
+<p>就是我自己有一些想法，随便满足一下表达欲.</p>
+<h2 id="阅读文档与解决问题">
+阅读文档与解决问题
+<a href="#%e9%98%85%e8%af%bb%e6%96%87%e6%a1%a3%e4%b8%8e%e8%a7%a3%e5%86%b3%e9%97%ae%e9%a2%98"><small>¶</small></a>
+</h2>
+<p>我虽然在之前的视频里简单说了说怎么阅读文档——会了语法之后只要耐心就好了，但我并没有很鼓励大家都去啃文档，因为这并不高效. 哪怕我很认真我很耐心地在视频中演示了一些东西，我也仅仅是希望中文的 Linux 社区少一点点浮躁、多一点点耐心，仅此而已.</p>
+<p>那么更高效、也更符合现实的对待文档的态度是什么呢？我想用英语的阅读理解做个简单的类比.</p>
+<p>在初中/高中的英语考试中有一类题型叫做阅读理解，试卷上会有一篇文章，然后文章后面有一些题目，每个题目有四个选项，考生需要阅读文章，然后做题. 面对这种阅读理解题，大体是有两种解题策略的：一是先读文章再做题；二是先读题目再到文章中去找相关的句子. 前者能让你真正读懂这篇文章，但是会有点慢；后者能让你快速把题目做出来，但你可能并不知道文章讲了什么. 选取那种策略主要还是看你怎么对待考试：如果你享受读英语的过程、好奇文章讲了什么，那么你可能会采取前者；如果你只是为了获得分数，其他的都不重要，那么你可能会采取后者.</p>
+<p>照搬到 Linux 使用上也是差不多的. 文档相当于文章，你的需求相当于文章后面的问题，要不要读文档、怎么读文档，完全取决于你为什么要用 Linux，你的心态是怎么样的. 你在做事情的时候经常会有新的需求提出来么？你是一个需求很多的人还是一个需求很少的人？大体情况下，阅读文档能让你解决问题、完成需求的时间变短，但阅读文档本身需要大量的时间. 我个人的看法是，如果你的需求不太多，那就不需要阅读文档，遇到问题解决问题就好；如果你的需求比较多，那可能磨刀不误砍柴工了. 到底还是一个平衡的问题.</p>
+<p>我个人是不会从头到尾阅读文档的，我的习惯几乎就是在 2.1 小节 例一：旋转 那里的工作流程：当我有需求时，我会通过搜索引擎寻找解决方案，然后我会对照文档理解别人的解决方案，最后适当做出改进或直接使用. 为了安全起见，我绝不会看都不看就把别人的代码复制下来直接执行.</p>
+<h2 id="unix-哲学">
+Unix 哲学
+<a href="#unix-%e5%93%b2%e5%ad%a6"><small>¶</small></a>
+</h2>
+<p>我在上一个视频中讲到 bspwm 的优点时，有很多网友就说到了 bspwm 符合 Unix 哲学. 那么 Unix 的哲学是什么呢？在
+<a href="https://en.wikipedia.org/wiki/Unix_philosophy" rel="noreferrer noopener" target="_blank">维基百科<b><sub>⧉</sub></b></a>
+中可以找到 1978 年 Doug Mcllroy 最原始四句表述，我们这里单取出第一条来看：</p>
+<blockquote>
+<p>Make each program do one thing well. To do a new job, build afresh rather than complicate old programs by adding new “features”.</p>
+</blockquote>
+<p>简单地说就是一个程序只应该做一件事并把它做好. 其实我说到这里大家应该就明白了，bspwm 就单纯地只负责窗口管理的部分，那么键盘输入的部分怎么办呢？bspwm 的作者又为了这个任务创造了一个新的工具 sxhkd. 这样做的好处是我们可以使用其他工具来进行快捷键绑定的工作；或者反过来：在不用 bspwm 的情况下，单纯只安装 sxhkd 来处理键盘输入，比如使用键盘调整音量、调整屏幕亮度的工作都可以由 sxhkd 来完成.</p>
+<p>这样的 Unix 哲学在 bspwm 的身上体现得淋漓尽致：</p>
+<ul>
+<li>在 external_rules 的部分，为了根据窗口的 window id 获取窗口的标题（title），作者又额外创造了
+<a href="https://github.com/baskerville/xtitle" rel="noreferrer noopener" target="_blank">xtitle<b><sub>⧉</sub></b></a>
+. 见本文第 3.2 小节；</li>
+<li>在 panel 部分，为了判断是否存在一个 bar，作者又额外创造了一个对窗口进行操作的工具
+<a href="https://github.com/baskerville/xdo" rel="noreferrer noopener" target="_blank">xdo<b><sub>⧉</sub></b></a>
 . <del>见本文第 5 章，</del> 别见了，第 5 章没写，看一下
-<a href="https://github.com/baskerville/bspwm/blob/master/examples/panel/panel" rel="noreferrer noopener" target="_blank">这份代码
-<b>⧉</b></a>
-的第 3 行你就明白了.</li></ul><p>这是不是能激发我们对 Unix 哲学的一些思考呢？</p><h2 id="社区">社区
-<a href="#%e7%a4%be%e5%8c%ba"><small>¶</small></a></h2><p>bspwm 是一个文档写得很难读的软件，
-<a href="https://github.com/baskerville/bspwm/tree/master/examples" rel="noreferrer noopener" target="_blank">它自带的 examples
-<b>⧉</b></a>
-里有好多内容缺乏系统的介绍，像这里面的 external_rules、overlapping_borders、panel、receptacles 都缺少很好的文章来介绍它们的功能和使用方法.</p><p>我在这篇文章中对 external_rules 做了一点简单的介绍，本来其他的内容我也计划写一写的，但实在是累了，而且这个 b 站专栏的富文本编辑器用起来太费劲了……所以其他的内容我就不再写了，但是依然列在这里，希望我这块砖头能引到良玉. 大佬们请一定不要吝啬你们的知识啊，稍微分享分享就是好的；像我们普通用户可以把自己使用 bspwm 中遇到的问题和做出的努力稍微力所能及地随便记录一下，这对于中文的 bspwm 社区绝对是一件好事.</p><hr/><p>虽然好多东西没写，这篇文章还是太长了. 希望读完此文的读者能从中学习到：bspc 语句的使用、阅读文档的方法、解决问题的流程、面对陌生事物（以 external_rules 为例）时的手段、调试的方法（写入 log，实时监测变化）以及我想传达的对软件的轻视、对技能的重视——因为随着技术的快速迭代，任何一个软件最终都会被更好的软件所替代，而那些解决问题的方法、面对问题时的耐心与踏实，却是我们使用 Linux 中、甚至是平时生活中一直都需要的.</p><p></p><p></p><p></p><p></p></div></div><div class="right_comments"><script async="" crossorigin="anonymous" issue-term="pathname" repo="zerovip/bcsu" src="https://utteranc.es/client.js" theme="github-light"></script></div></div><div class="toc" id="toc"><button class="toc_title">目录</button><div class="toc_content"><nav id="TableOfContents"><ul><li><a href="#对之前视频的补充说明">对之前视频的补充说明</a><ul><li><a href="#那个视频是有时效性的当时所用的版本为-097">那个视频是有时效性的，当时所用的版本为 0.9.7</a></li><li><a href="#其他发行版可能有自己的默认配置">其他发行版可能有自己的默认配置</a></li><li><a href="#关于登录时启动-bspwm">关于登录时启动 bspwm</a></li><li><a href="#可以参考的其他阅读材料">可以参考的其他阅读材料</a></li></ul></li><li><a href="#bspc-语句">bspc 语句</a><ul><li><a href="#例一旋转">例一：旋转</a></li><li><a href="#例二隐藏">例二：隐藏</a></li><li><a href="#例三把焦点从平铺窗口移动到浮动窗口">例三：把焦点从平铺窗口移动到浮动窗口</a></li><li><a href="#一个小技巧">一个小技巧</a></li></ul></li><li><a href="#添加规则的两种方式">添加规则的两种方式</a><ul><li><a href="#内建-rule-指令">内建 rule 指令</a></li><li><a href="#external-rules">external rules</a></li></ul></li><li><a href="#四种布局方案">四种布局方案</a></li><li><a href="#关于-panel">关于 panel</a></li><li><a href="#关于容器">关于容器</a></li><li><a href="#谈一点哲学">谈一点哲学</a><ul><li><a href="#阅读文档与解决问题">阅读文档与解决问题</a></li><li><a href="#unix-哲学">Unix 哲学</a></li><li><a href="#社区">社区</a></li></ul></li></ul></nav></div></div></div><script src="../../js/main.min.960bcad3eb07314f8843ae4f7aabb4410c7a85ab8d8e16d411ad8efb4a11110f.js" type="text/javascript"></script></body></html>
+<a href="https://github.com/baskerville/bspwm/blob/master/examples/panel/panel" rel="noreferrer noopener" target="_blank">这份代码<b><sub>⧉</sub></b></a>
+的第 3 行你就明白了.</li>
+</ul>
+<p>这是不是能激发我们对 Unix 哲学的一些思考呢？</p>
+<h2 id="社区">
+社区
+<a href="#%e7%a4%be%e5%8c%ba"><small>¶</small></a>
+</h2>
+<p>bspwm 是一个文档写得很难读的软件，
+<a href="https://github.com/baskerville/bspwm/tree/master/examples" rel="noreferrer noopener" target="_blank">它自带的 examples<b><sub>⧉</sub></b></a>
+里有好多内容缺乏系统的介绍，像这里面的 external_rules、overlapping_borders、panel、receptacles 都缺少很好的文章来介绍它们的功能和使用方法.</p>
+<p>我在这篇文章中对 external_rules 做了一点简单的介绍，本来其他的内容我也计划写一写的，但实在是累了，而且这个 b 站专栏的富文本编辑器用起来太费劲了……所以其他的内容我就不再写了，但是依然列在这里，希望我这块砖头能引到良玉. 大佬们请一定不要吝啬你们的知识啊，稍微分享分享就是好的；像我们普通用户可以把自己使用 bspwm 中遇到的问题和做出的努力稍微力所能及地随便记录一下，这对于中文的 bspwm 社区绝对是一件好事.</p>
+<hr/>
+<p>虽然好多东西没写，这篇文章还是太长了. 希望读完此文的读者能从中学习到：bspc 语句的使用、阅读文档的方法、解决问题的流程、面对陌生事物（以 external_rules 为例）时的手段、调试的方法（写入 log，实时监测变化）以及我想传达的对软件的轻视、对技能的重视——因为随着技术的快速迭代，任何一个软件最终都会被更好的软件所替代，而那些解决问题的方法、面对问题时的耐心与踏实，却是我们使用 Linux 中、甚至是平时生活中一直都需要的.</p>
+<p></p><p></p><p></p><p></p>
+</div>
+</div>
+<div class="right_comments">
+<script async="" crossorigin="anonymous" issue-term="pathname" repo="zerovip/bcsu" src="https://utteranc.es/client.js" theme="github-light"></script>
+</div>
+</div>
+<div class="toc" id="toc">
+<button class="toc_title">目录</button>
+<div class="toc_content">
+<nav id="TableOfContents">
+<ul>
+<li><a href="#对之前视频的补充说明">对之前视频的补充说明</a>
+<ul>
+<li><a href="#那个视频是有时效性的当时所用的版本为-097">那个视频是有时效性的，当时所用的版本为 0.9.7</a></li>
+<li><a href="#其他发行版可能有自己的默认配置">其他发行版可能有自己的默认配置</a></li>
+<li><a href="#关于登录时启动-bspwm">关于登录时启动 bspwm</a></li>
+<li><a href="#可以参考的其他阅读材料">可以参考的其他阅读材料</a></li>
+</ul>
+</li>
+<li><a href="#bspc-语句">bspc 语句</a>
+<ul>
+<li><a href="#例一旋转">例一：旋转</a></li>
+<li><a href="#例二隐藏">例二：隐藏</a></li>
+<li><a href="#例三把焦点从平铺窗口移动到浮动窗口">例三：把焦点从平铺窗口移动到浮动窗口</a></li>
+<li><a href="#一个小技巧">一个小技巧</a></li>
+</ul>
+</li>
+<li><a href="#添加规则的两种方式">添加规则的两种方式</a>
+<ul>
+<li><a href="#内建-rule-指令">内建 rule 指令</a></li>
+<li><a href="#external-rules">external rules</a></li>
+</ul>
+</li>
+<li><a href="#四种布局方案">四种布局方案</a></li>
+<li><a href="#关于-panel">关于 panel</a></li>
+<li><a href="#关于容器">关于容器</a></li>
+<li><a href="#谈一点哲学">谈一点哲学</a>
+<ul>
+<li><a href="#阅读文档与解决问题">阅读文档与解决问题</a></li>
+<li><a href="#unix-哲学">Unix 哲学</a></li>
+<li><a href="#社区">社区</a></li>
+</ul>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<script src="../../js/main.min.960bcad3eb07314f8843ae4f7aabb4410c7a85ab8d8e16d411ad8efb4a11110f.js" type="text/javascript"></script>
+</body>
+</html>

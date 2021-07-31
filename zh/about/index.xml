@@ -44,9 +44,7 @@ veL/x/fXMw1e5Ou5KKhroxS6160gLopRcw==
 &lt;/h1>
 &lt;p>本站为个人博客站，只会发表个人的原创或翻译的文章，不转载文章，不接受投稿. 不过我在整理一些
 &lt;a href="../../zh/71828"
->
-优秀网站
-&lt;/a>
+>优秀网站&lt;/a>
 （包括但不限于他人的博客），欢迎把自己或他人的优秀的博客推荐给我.&lt;/p>
 &lt;p>本站分为数学区和非数学区.&lt;/p>
 &lt;h2 id="数学区">
@@ -80,17 +78,11 @@ veL/x/fXMw1e5Ou5KKhroxS6160gLopRcw==
 &lt;p>您可以在
 &lt;a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"
 target="_blank" rel="noreferrer noopener"
->
-这里
-&lt;b>⧉ &lt;/b>
-&lt;/a>
+>这里&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a>
 阅读上述协议概要并查看其中某些语句的具体含义. 该协议的具体法律条款请参阅
 &lt;a href="https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode"
 target="_blank" rel="noreferrer noopener"
->
-这里
-&lt;b>⧉ &lt;/b>
-&lt;/a>
+>这里&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a>
 .&lt;/p>
 &lt;h1 id="语言">
 语言
@@ -106,31 +98,20 @@ target="_blank" rel="noreferrer noopener"
 &lt;p>本站的文章支持评论，且各个语言板块下的评论不共享，即便是同一篇文章的不同语言. 因此在您评论时请注意使用当前页面的语言. 在这里我使用了以 GitHub issue 为工具的
 &lt;a href="https://utteranc.es"
 target="_blank" rel="noreferrer noopener"
->
-utterances
-&lt;b>⧉ &lt;/b>
-&lt;/a>
+>utterances&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a>
 作为评论系统，因此需要您登录 GitHub 帐号并授予写 issue 的权限给 utterances 机器人. 如果您不愿意授权，只需到
 &lt;a href="https://github.com/zerovip/bcsu/issues"
 target="_blank" rel="noreferrer noopener"
->
-这里
-&lt;b>⧉ &lt;/b>
-&lt;/a>
+>这里&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a>
 建立以文章 path 为标题的 issue 并评论，或在已有的以文章 path 为标题的 issue 下评论即可.&lt;/p>
 &lt;p>例如，这篇文章的网址是 &lt;code>https://zerovip.github.io/zh/about/site/&lt;/code>，则这篇文章的 path 为 &lt;code>zh/about/site/&lt;/code>，即去掉前面的 &lt;code>https://zerovip.github.io/&lt;/code>.&lt;/p>
 &lt;p>如果您没有 GitHub 账户，您可以
 &lt;a href="https://github.com/join"
 target="_blank" rel="noreferrer noopener"
->
-免费注册一个
-&lt;b>⧉ &lt;/b>
-&lt;/a>
+>免费注册一个&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a>
 ；若您不愿意注册，也可以给我发邮件（&lt;span class='notation_color'>zer0zero-blog [AT] yahoo [DOT] com&lt;/span> 或 &lt;span class='notation_color'>zer0zero [AT] sina [DOT] cn&lt;/span>）进行交流. 如果希望与我进行加密的邮件交流，请到
 &lt;a href="../../zh/about/me/"
->
-关于我
-&lt;/a>
+>关于我&lt;/a>
 页面查看我的公钥.&lt;/p>
 &lt;h1 id="订阅">
 订阅
@@ -143,8 +124,6 @@ target="_blank" rel="noreferrer noopener"
 &lt;/h1>
 &lt;p>本站为静态博客，由 Hugo 生成，部署在 GitHub Pages 上. 有关建站的技术细节请参考我的文章：
 &lt;a href="../../zh/18284"
->
-建站记
-&lt;/a>
+>建站记&lt;/a>
 .&lt;/p>
 &lt;p>本站特意把一切资源（网站样式、文章、评论、图床）都托管在 GitHub 上，且不另设域名，为的是方便统一管理，不用对不同的组件操不同的心. 为了照顾 GitHub 有时被中国大陆地区的防火墙限制的情况发生，又单独部署了一份在 Netlify 和 Vercel 上，但其中的评论与图床依旧是 GitHub 上的——所以无论如何，访问本站的体验都与访问 GitHub 的体验息息相关，而访问 Github 体验的问题还需要读者自行解决.&lt;/p></description></item></channel></rss>
