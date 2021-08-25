@@ -11372,7 +11372,7 @@ target="_blank" rel="noreferrer noopener"
 target="_blank" rel="noreferrer noopener"
 >reuixiy&amp;rsquo;s meme&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a>&lt;/li>
 &lt;li>&lt;input disabled="" type="checkbox"> 有什么办法可以不在文章中指定所属 section，根据目录结构在左边完成箭头的指示&lt;/li>
-&lt;li>&lt;input disabled="" type="checkbox"> 换语言那里的 &lt;code>substr&lt;/code> 之前应该数一下当前语言的字符串数量存进变量里，以能更好地应对普适的情况&lt;/li>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> &lt;del>换语言那里的 &lt;code>substr&lt;/code> 之前应该数一下当前语言的字符串数量存进变量里，以能更好地应对普适的情况&lt;/del>（使用 dict 更加优雅地完成了）&lt;/li>
 &lt;li>&lt;input disabled="" type="checkbox"> 等所有 todo 都完成之后，这个主题才算是基本成型了，可以考虑一下要不要写个文章介绍一下自己的主题，以及要不要加进 hugo 的官方主题仓库，适当做个小推广呢？&lt;/li>
 &lt;li>&lt;input disabled="" type="checkbox"> 一个超链接后面如果有标点符号，这里可能会形成断行，导致标点符号出现在下一行行首. 查到一个 &lt;a href="https://stackoverflow.com/questions/58257080/"
 target="_blank" rel="noreferrer noopener"
@@ -11383,9 +11383,9 @@ target="_blank" rel="noreferrer noopener"
 target="_blank" rel="noreferrer noopener"
 >Data Templates&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a>来做这件事.&lt;/del>（&lt;a href="../../zh/82988/"
 >已完成&lt;/a>）&lt;/li>
-&lt;li>&lt;input checked="" disabled="" type="checkbox"> ~~考虑列表页的分页问题？（如果文章太多了的话）参考：&lt;a href="https://gohugo.io/templates/pagination/"
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> &lt;del>考虑列表页的分页问题？（如果文章太多了的话）参考：&lt;a href="https://gohugo.io/templates/pagination/"
 target="_blank" rel="noreferrer noopener"
->Pagination&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a>.~~不再考虑，不用分页，一页就挺好.&lt;/li>
+>Pagination&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a>.&lt;/del> 不再考虑，不用分页，一页就挺好.&lt;/li>
 &lt;/ol>
 &lt;section class="footnotes" role="doc-endnotes">
 &lt;hr>
