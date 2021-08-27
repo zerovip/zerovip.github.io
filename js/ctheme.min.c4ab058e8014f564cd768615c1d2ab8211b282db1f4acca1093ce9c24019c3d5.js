@@ -1,1 +1,0 @@
-var ctheme,checked;const themeContainer=document.querySelector(".theme-container");ctheme=localStorage.getItem('ctheme'),checked=1,ctheme=="dark"?(themeContainer.classList.add("dark"),checked=0):ctheme=="light"&&themeContainer.classList.remove("dark")

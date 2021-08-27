@@ -3,7 +3,160 @@
 近期内容 |
 备忘
 | 赤赤的象牙塔</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>
-2021-07-10</lastBuildDate><item><title>小鹤音形单字全码码表与重码分析</title><link>/zh/95251/</link><pubDate>2021-07-10</pubDate><guid>/zh/95251/</guid><description>&lt;div class='notation_color'>
+2021-08-27</lastBuildDate><item><title>如何让静态网站的暗色主题换页不闪烁</title><link>/zh/01901/</link><pubDate>2021-08-27</pubDate><guid>/zh/01901/</guid><description>&lt;h1 id="问题">
+问题
+&lt;a href="#%e9%97%ae%e9%a2%98">&lt;small>¶&lt;/small>&lt;/a>
+&lt;/h1>
+&lt;p>我写的这个 Hugo 主题之前一直有个毛病. 它默认是亮色主题，但如果调到暗色主题&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>，那么加载新页面时网站会先渲染亮色主题，然后再自动切换到暗色主题，观感上就是它闪烁了一下. 我本来以为这是静态网站的通病，直到我看到别人的主题就没这个毛病，比如 &lt;a href="https://adityatelange.github.io/hugo-PaperMod/"
+target="_blank" rel="noreferrer noopener"
+>PaperMod&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a>. 所以这个问题是一定有解决方案的.&lt;/p>
+&lt;p>我先查了一下，&lt;a href="https://github.com/zwbetz-gh/cupper-hugo-theme"
+target="_blank" rel="noreferrer noopener"
+>Cupper 主题&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a>的维护者写过一篇文章：&lt;a href="https://zwbetz.com/fix-the-white-flash-on-page-load-when-using-a-dark-theme-on-a-static-site/"
+target="_blank" rel="noreferrer noopener"
+>Fix the White Flash on Page Load When Using a Dark Theme on a Static Site&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a>. 我试了 ta 的方案，Chrome 浏览器下此方案确实解决了问题，但是 Firefox 下问题依然存在：Firefox 会把 &lt;code>visibility: hidden; opacity: 0;&lt;/code> 渲染成白色，等 &lt;code>DOMContentLoaded&lt;/code> 事件发生后，&lt;code>showContent()&lt;/code> 函数再把内容展示出来，也就是说它还是会闪烁，只不过之前是闪一下&lt;strong>亮色主题&lt;/strong>，现在是闪一下&lt;strong>纯白页&lt;/strong>，实际观感同样糟糕.&lt;/p>
+&lt;p>Firefox 与 Chrome 的差异我觉得更像是 Chrome 的开发者使用了魔法，来帮助其用户获得更好的使用体验，同时这也掩盖了真正的问题，迷惑了使用 Chrome 浏览器的 Hugo 主题开发者.&lt;/p>
+&lt;h1 id="找到问题的根源">
+找到问题的根源
+&lt;a href="#%e6%89%be%e5%88%b0%e9%97%ae%e9%a2%98%e7%9a%84%e6%a0%b9%e6%ba%90">&lt;small>¶&lt;/small>&lt;/a>
+&lt;/h1>
+&lt;p>核心的思路仍然是理解浏览器渲染页面的流程. 简单来说：&lt;/p>
+&lt;ul>
+&lt;li>你请求了一个网页；&lt;/li>
+&lt;li>浏览器先把整个 HTML 下载下来，存成 DOM，然后从上到下依次解析、渲染页面；&lt;/li>
+&lt;li>遇到外链的 CSS 或 JavaScript 就停止解析，先去把外链的文件下载回来装载上再继续；&lt;/li>
+&lt;li>遇到 &lt;code>&amp;lt;style&amp;gt;&amp;lt;/style&amp;gt;&lt;/code> 或刚刚装载了外部的 CSS 就把样式表存成 CSSOM 并重新渲染有影响的部分；&lt;/li>
+&lt;li>遇到 &lt;code>&amp;lt;script&amp;gt;&amp;lt;/script&amp;gt;&lt;/code> 或刚刚装载了外部的 JavaScript 就停止解析并运行脚本，运行完脚本后再继续解析、渲染；&lt;/li>
+&lt;li>以此类推，直到完成.&lt;/li>
+&lt;/ul>
+&lt;p>而发生闪烁问题的原因就在于我把判断颜色的 JavaScript 脚本放在了 &lt;code>&amp;lt;body&amp;gt;&lt;/code> 的最后，像这样：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="cp">&amp;lt;!DOCTYPE html&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">html&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">body&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="c">&amp;lt;!-- lots of stuff…… --&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">script&lt;/span> &lt;span class="na">src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;changeTheme.js&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">script&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">body&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">html&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h1 id="解决">
+解决
+&lt;a href="#%e8%a7%a3%e5%86%b3">&lt;small>¶&lt;/small>&lt;/a>
+&lt;/h1>
+&lt;p>问题的解决其实也简单，核心有二：&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;ol>
+&lt;li>把读取主题的脚本放进 &lt;code>&amp;lt;head&amp;gt;&lt;/code> 里，这样刚刚加载还没开始渲染时就能够确定用户当前选择的主题；&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;li>
+&lt;ol start="2">
+&lt;li>把更改主题的容器提升成整个 &lt;code>&amp;lt;html&amp;gt;&lt;/code>，即：从原来的&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">html&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">body&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;theme-container&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">body&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">html&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>变成现在的&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">html&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;theme-container&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">body&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">body&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">html&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>这是因为 &lt;code>&amp;lt;body&amp;gt;&lt;/code> 在这个时候还没有被渲染，&lt;code>&amp;lt;head&amp;gt;&lt;/code> 里的脚本能操作的对象只有 &lt;code>&amp;lt;html&amp;gt;&lt;/code>.&lt;/p>
+&lt;hr>
+&lt;p>至此问题完全解决，完整的代码如下：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="cp">&amp;lt;!DOCTYPE html&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">html&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;theme-container&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">head&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="c">&amp;lt;!-- lots of stuff…… --&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">script&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">themeContainer&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">querySelector&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;.theme-container&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">theme&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">localStorage&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getItem&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;theme&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">theme&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="s2">&amp;#34;dark&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">themeContainer&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">classList&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">add&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;dark&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">theme&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="s2">&amp;#34;light&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">themeContainer&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">classList&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">remove&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;dark&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">script&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">head&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">body&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="c">&amp;lt;!-- lots of stuff…… --&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">script&lt;/span> &lt;span class="na">src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;others.js&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">script&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">body&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">html&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;section class="footnotes" role="doc-endnotes">
+&lt;hr>
+&lt;ol>
+&lt;li id="fn:1" role="doc-endnote">
+&lt;p>本主题中暗色模式的实现方法为 CSS 变量，详见&lt;a href="https://dev.to/lampewebdev/css-quickies-css-variables-or-how-you-create-a-white-dark-theme-easily-1i0i"
+target="_blank" rel="noreferrer noopener"
+>这篇教程&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a>.&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;/section></description></item><item><title>小鹤音形单字全码码表与重码分析</title><link>/zh/95251/</link><pubDate>2021-07-10</pubDate><guid>/zh/95251/</guid><description>&lt;div class='notation_color'>
 &lt;p>原本只是想分析小鹤音形单字全码码表的重码情况的，因为我搜遍了整个互联网没有发现有人谈论这些内容. 结果我越写越多，最后看来本文的部分内容也可以作为小鹤音形的入门指南.&lt;/div>&lt;/p>
 &lt;h1 id="定义">
 定义
@@ -6109,7 +6262,7 @@ target="_blank" rel="noreferrer noopener"
 &lt;/blockquote>
 &lt;p>从这里开始上下翻一翻，看一看这两行在整个文档中处于一个什么样的位置，它的上下文语境是什么样的. 我们把整份文档简化成这种样子：&lt;/p>
 &lt;p>&lt;figure>
-&lt;img src="../../../images/bspwm-manpage.png" alt="BSPWM(1) 文档大纲">
+&lt;img loading="lazy" src="../../../images/bspwm-manpage.png" alt="BSPWM(1) 文档大纲">
 &lt;figcaption>◉ 图. BSPWM(1) 文档大纲&lt;/figcaption>
 &lt;/figure>
 &lt;/p>
@@ -6237,15 +6390,15 @@ super + a
 &lt;/h2>
 &lt;p>分享一个我经常用的、很多人可能会忽视的、能快速帮你梳理文档结构的一个小技巧，那就是把自动补全打开，然后经常按按 tab 键. 比如打下 bspc ，按一下 tab 键会出现 9 个候选的 command 或 domain，然后随便选一个比如 bspc node，再按一下 tab 键，等等.&lt;/p>
 &lt;p>&lt;figure>
-&lt;img src="../../../images/bspc_trick1.png" alt="补全小技巧的示意效果图：bspc &amp;lt;TAB&amp;gt;">
+&lt;img loading="lazy" src="../../../images/bspc_trick1.png" alt="补全小技巧的示意效果图：bspc &amp;lt;TAB&amp;gt;">
 &lt;figcaption>◉ 图. 补全小技巧的示意效果图：bspc &amp;lt;TAB&amp;gt;&lt;/figcaption>
 &lt;/figure>
 &lt;figure>
-&lt;img src="../../../images/bspc_trick2.png" alt="补全小技巧的示意效果图：bspc node &amp;lt;TAB&amp;gt;">
+&lt;img loading="lazy" src="../../../images/bspc_trick2.png" alt="补全小技巧的示意效果图：bspc node &amp;lt;TAB&amp;gt;">
 &lt;figcaption>◉ 图. 补全小技巧的示意效果图：bspc node &amp;lt;TAB&amp;gt;&lt;/figcaption>
 &lt;/figure>
 &lt;figure>
-&lt;img src="../../../images/bspc_trick3.png" alt="补全小技巧的示意效果图：bspc node &amp;lt;TAB&amp;gt;&amp;lt;TAB&amp;gt;">
+&lt;img loading="lazy" src="../../../images/bspc_trick3.png" alt="补全小技巧的示意效果图：bspc node &amp;lt;TAB&amp;gt;&amp;lt;TAB&amp;gt;">
 &lt;figcaption>◉ 图. 补全小技巧的示意效果图：bspc node &amp;lt;TAB&amp;gt;&amp;lt;TAB&amp;gt;&lt;/figcaption>
 &lt;/figure>
 &lt;/p>
@@ -6431,11 +6584,11 @@ target="_blank" rel="noreferrer noopener"
 &lt;/div>
 &lt;/div>&lt;p>然后我们按 &lt;code>super + Alt + r&lt;/code> 重启 bspwm，在终端下使用 &lt;code>tail -f /tmp/try_e_r.log&lt;/code> 来监听日志文件变化. 我们对窗口进行一些操作，看看 try_e_r.log 里什么时候会有新的变化，并看看这四个参数以及使用 xtitle 得到的结果分别都是什么. 贴一下我这里的测试结果：&lt;/p>
 &lt;p>&lt;figure>
-&lt;img src="../../../images/ext_rule1.png" alt="external_rules 的测试结果">
+&lt;img loading="lazy" src="../../../images/ext_rule1.png" alt="external_rules 的测试结果">
 &lt;figcaption>◉ 图. external_rules 的测试结果&lt;/figcaption>
 &lt;/figure>
 &lt;figure>
-&lt;img src="../../../images/ext_rule2.png" alt="external_rules 的测试结果">
+&lt;img loading="lazy" src="../../../images/ext_rule2.png" alt="external_rules 的测试结果">
 &lt;figcaption>◉ 图. external_rules 的测试结果&lt;/figcaption>
 &lt;/figure>
 &lt;/p>
@@ -7596,7 +7749,7 @@ target="_blank" rel="noreferrer noopener"
 >海蒂 | bilibili&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a>）中，在第 56:36 处，&lt;span class='black_block' onclick="ChangeClassBlackBlock(this)">海蒂把一个表演马戏的人的猴子放进屋子里来了，结果猴子在屋子里捣蛋，大家都抓不住它，这个时候&lt;/span>海蒂说，“你可以在它（猴子）的尾巴上撒盐”.&lt;/p>
 &lt;p>当然这里的用法是用了这个短语的本意，即撒盐，但它背后的逻辑其实是这个被大家熟知的短语或者说是这个习俗，如果不了解的话看到这里会有点懵的.&lt;/p>
 &lt;p>&lt;figure>
-&lt;img src="../../../images/heidi.png" alt="海蒂">
+&lt;img loading="lazy" src="../../../images/heidi.png" alt="海蒂">
 &lt;figcaption>◉ 图. 海蒂&lt;/figcaption>
 &lt;/figure>
 &lt;/p>
@@ -7741,7 +7894,7 @@ target="_blank" rel="noreferrer noopener"
 &lt;p>他的堂姐现在已经人过中年，除了她自己说她曾经拥有过美貌，没有人这样说. 她瘦弱、皮肤发黄，上了年纪；伦敦所有玩具店里的所有胭脂和粉都不能让她美丽.——萨克雷&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>《亨利·艾斯芒德的历史》&lt;/p>
 &lt;p>这里多说一句. 我本来是不知道 &amp;ldquo;the red and white&amp;rdquo; 是什么意思，还以为是红白相间的衣服，还在想玩具店为什么会卖这种东西. 然后我就找到了中译本的《亨利·艾斯芒德的历史》，找到这句话，想看看别人是怎么翻译的. 于是我学习到了 &amp;ldquo;the red and white&amp;rdquo; 是胭脂和粉的意思——还是蛮贴切的嘛. 然而让我惊讶的是，中译本就直接把 &amp;ldquo;long in the tooth&amp;rdquo; 给翻译成了“牙又长”（见下图），这说明这个表达法可能对于中国人来说确实比较陌生. 我这里找到的版本是人民文学出版社 1958 年 9 月第一版，由陈逵、王培德翻译.&lt;/p>
 &lt;p>&lt;figure>
-&lt;img src="../../../images/HenryEsmond.jpg" alt="《亨利·艾斯芒德的历史》中译本片段">
+&lt;img loading="lazy" src="../../../images/HenryEsmond.jpg" alt="《亨利·艾斯芒德的历史》中译本片段">
 &lt;figcaption>◉ 图. 《亨利·艾斯芒德的历史》中译本片段&lt;/figcaption>
 &lt;/figure>
 &lt;/p>
@@ -7756,7 +7909,7 @@ target="_blank" rel="noreferrer noopener"
 &lt;p>（待补充）&lt;/p>
 &lt;p>我看了看维基百科 Horse Teeth 那个词条，反正整体就特别复杂，简单来说，马的牙齿有好多种好多种形状，而且马在几岁时长什么形状的牙齿，几岁时什么形状的牙齿又会脱落都是固定的，有经验的养马的人通过牙齿就能判断马的年龄. 其中有一种形状的牙齿，在马 15 岁之后不会脱落，而且长的速度比磨损的速度还快，所以这种牙齿就越长越长，而且它越长就说明那匹马越老，毕竟有那种牙齿就已经 15 岁起步了. 这么看来，这个短语来指代“老的，上了年纪的”，还是挺合适的了.&lt;/p>
 &lt;p>&lt;figure>
-&lt;img src="../../../images/horse-teeth.jpg" alt="马的牙齿">
+&lt;img loading="lazy" src="../../../images/horse-teeth.jpg" alt="马的牙齿">
 &lt;figcaption>◉ 图. 马的牙齿&lt;/figcaption>
 &lt;/figure>
 &lt;/p>
@@ -7820,7 +7973,7 @@ target="_blank" rel="noreferrer noopener"
 >汽车排放的条例&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a>中要求所有的汽车必须经历一系列的排放检测，检测是通过模拟城市中和高速上的行车来进行的. 检测要求给出城市中行车和高速上行车的油耗（gas mileage&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>）估计值，但因为任何检测都无法准确模拟出所有的驾驶习惯和路况环境，所以实际的油耗每台车都会不同. 于是，在所有的汽车广告中，只要提到油耗，就会加上一句，“your mileage may vary”，表示检测中估计出的结果并不代表真实的情况，是一种免责条款.&lt;/p>
 &lt;p>这里举一个例子，下面这张图是 1981 年 11 月 &lt;em>Field &amp;amp; Stream&lt;/em> 期刊中的第 25 页，是一张汽车的广告，在广告的右下角，就用小字写着：“&lt;strong>Your mileage may vary&lt;/strong> due to speed, trip length, weather. Actual highway mileage will probably be less.”&lt;/p>
 &lt;p>&lt;figure>
-&lt;img src="../../../images/YMMV.png" alt="YMMV 在汽车广告中的例子">
+&lt;img loading="lazy" src="../../../images/YMMV.png" alt="YMMV 在汽车广告中的例子">
 &lt;figcaption>◉ 图. YMMV 在汽车广告中的例子&lt;/figcaption>
 &lt;/figure>
 &lt;/p>
@@ -7921,7 +8074,7 @@ target="_blank" rel="noreferrer noopener"
 target="_blank" rel="noreferrer noopener"
 >这篇文章&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a>，里面在描述一个情节时就用到了这个用法（见下图）. 读到这里时我还一愣，最开始我自然地以为是把那个人叫到地毯上，还仔细回忆了一下那间屋子里好像没有地毯，即便有也没给特写，然后就猜出来这是个俚语，意思很容易也猜出来了，毕竟我看过剧我知道情节. 然后就好奇这个俚语有什么典故没有就开始查，最后就写了这篇博客.&lt;/p>
 &lt;p>&lt;figure>
-&lt;img src="../../../images/call-sb-on-the-carpet.jpg" alt="call sb. on the carpet 用例">
+&lt;img loading="lazy" src="../../../images/call-sb-on-the-carpet.jpg" alt="call sb. on the carpet 用例">
 &lt;figcaption>◉ 图. call sb. on the carpet 用例&lt;/figcaption>
 &lt;/figure>
 &lt;/p>
@@ -7976,7 +8129,7 @@ target="_blank" rel="noreferrer noopener"
 &lt;p>From the &lt;em>Saturday Night Live&lt;/em> character Debbie Downer, played by Rachel Dratch.&lt;/p>
 &lt;p>来源于综艺节目《周六夜现场》中的一个角色，由 Rachel Dratch 扮演.（见下图）&lt;/p>
 &lt;p>&lt;figure>
-&lt;img src="../../../images/debbie-downer.jpg" alt="Debbie Downer">
+&lt;img loading="lazy" src="../../../images/debbie-downer.jpg" alt="Debbie Downer">
 &lt;figcaption>◉ 图. Debbie Downer&lt;/figcaption>
 &lt;/figure>
 &lt;/p>
@@ -8010,7 +8163,7 @@ target="_blank" rel="noreferrer noopener"
 target="_blank" rel="noreferrer noopener"
 >评论&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a>就善意地提醒到：“我不是想破坏气氛，但你没按要求写.”（见下图）&lt;/p>
 &lt;p>&lt;figure>
-&lt;img src="../../../images/debbie-downer_eg.jpg" alt="我的学习语境">
+&lt;img loading="lazy" src="../../../images/debbie-downer_eg.jpg" alt="我的学习语境">
 &lt;figcaption>◉ 图. 我的学习语境&lt;/figcaption>
 &lt;/figure>
 &lt;/p>
@@ -8079,7 +8232,7 @@ style="display: none;"
 &lt;a href="#%e5%85%b3%e4%ba%8e%e5%9b%be%e7%89%87">&lt;small>¶&lt;/small>&lt;/a>
 &lt;/h2>
 &lt;p>&lt;figure>
-&lt;img src="../../../images/example.jpeg" alt="示例图片">
+&lt;img loading="lazy" src="../../../images/example.jpeg" alt="示例图片">
 &lt;figcaption>◉ 图. 示例图片&lt;/figcaption>
 &lt;/figure>
 &lt;/p>
@@ -8158,7 +8311,7 @@ style="display: none;"
 &lt;a href="#%e6%9f%b1%e9%95%9cccyl">&lt;small>¶&lt;/small>&lt;/a>
 &lt;/h3>
 &lt;p>&lt;figure>
-&lt;img src="../../../images/cylinder.png" alt="柱镜示意图">
+&lt;img loading="lazy" src="../../../images/cylinder.png" alt="柱镜示意图">
 &lt;figcaption>◉ 图. 柱镜示意图&lt;/figcaption>
 &lt;/figure>
 &lt;/p>
@@ -8399,7 +8552,7 @@ TR
 &lt;p>镜架的尺寸会标注在镜腿上，有基线标注法（格式为：aa-bb-ccc）和方框标注法（格式为：aa◻︎bb-ccc）两种测量标注方法. 基线标注法先取最高水平线与最低水平线的中间位置水平线做基线，然后任何数据的测量都在基线上进行；方框标注法则先画出与镜片相切的、以水平线与竖直线为边的、最小的矩形，再测量这个矩形的数据. 方框标注法比较常用. 以我之前戴的一副旧眼镜为例，它的尺寸标注为：53◻︎17-138. 其中第一个数据 53 是镜片宽度，第二个数据 17 为鼻梁宽，第三个数据 138 为镜腿长，单位均为 mm.&lt;/p>
 &lt;p>下图演示了镜框的基础元素以及组成部分. 由于镜框的安装原因，鼻梁架也许是选择镜框时最应该考虑的部分，因为这部分是主要的受力面，同时也是位于连接眼镜前端与面部的地方. 鼻梁架的设计应该有利于舒适感及辅助作用，这保证了当双眼在自然凝视状态下，镜片所处的位置是正确的.&lt;/p>
 &lt;p>&lt;figure>
-&lt;img src="../../../images/frame-measurement.jpg" alt="镜架尺寸示意图">
+&lt;img loading="lazy" src="../../../images/frame-measurement.jpg" alt="镜架尺寸示意图">
 &lt;figcaption>◉ 图. 镜架尺寸示意图&lt;/figcaption>
 &lt;/figure>
 &lt;/p>
@@ -8642,7 +8795,7 @@ target="_blank" rel="noreferrer noopener"
 &lt;p>我将几家的验光数据做了对比，发现差别较大（主要是右眼），我自己分析是前一天睡眠不足，早上没有休息好，上午的度数较大；一天都没有怎么看近，下午的度数就小一些. 于是几天后我又到上述某品牌的另一家分店又进行了一次验光，流程比较标准. 验光师说我右眼状态不稳定，应该到医院散瞳后验光，这也在一定程度上反应了我右眼几次验光差别较大的问题.&lt;/p>
 &lt;p>我的验光结果如下，在考虑每次验光的流程、试戴感受，并对数据进行了细致分析后，我最终选择了 D 的数据作为配镜数据.&lt;/p>
 &lt;p>&lt;figure>
-&lt;img src="../../../images/optometry-result.png" alt="验光结果图">
+&lt;img loading="lazy" src="../../../images/optometry-result.png" alt="验光结果图">
 &lt;figcaption>◉ 图. 验光结果图&lt;/figcaption>
 &lt;/figure>
 &lt;/p>
@@ -8675,7 +8828,7 @@ target="_blank" rel="noreferrer noopener"
 &lt;/h2>
 &lt;p>这一章比较了已有对词根的各种定义的优缺点，并试图综合这些定义的优点，定义了独创的&lt;strong>词素构词理论&lt;/strong>. 词素构词理论的核心体现在下图中.&lt;/p>
 &lt;p>&lt;figure>
-&lt;img src="../../../images/word-root.png" alt="词素构词理论图">
+&lt;img loading="lazy" src="../../../images/word-root.png" alt="词素构词理论图">
 &lt;figcaption>◉ 图. 词素构词理论图&lt;/figcaption>
 &lt;/figure>
 &lt;/p>
@@ -8746,7 +8899,7 @@ target="_blank" rel="noreferrer noopener"
 &lt;/h2>
 &lt;p>这一章反思了英语传统构词法（&lt;span style="color:red;">转化法&lt;/span>、&lt;span style="color:red;">合成法&lt;/span>、&lt;span style="color:red;">派生法&lt;/span>），介绍了独创的能涵盖传统构词法的三级派生构词法，&lt;span class='notation_color'>其生成的单词（派生词）可以再作为自由词根&lt;/span>. 有些英语单词一次完成构词过程，有些则需要多次完成. 我们&lt;span class='notation_color'>使用“派生词”这个词语来称呼所有使用这种三级派生构词法得到的单词&lt;/span>，而不是指传统意义上的由&lt;span style="color:red;">派生法&lt;/span>得到的单词. 在本文中，为避免造成理解负担，我们用加括号的“单词（派生词）”这种写法. 三级派生构词法见下表，它依照词根是否加词缀和加何种词缀分成 3 级：&lt;/p>
 &lt;p>&lt;figure>
-&lt;img src="../../../images/word-build.png" alt="词素构词理论图">
+&lt;img loading="lazy" src="../../../images/word-build.png" alt="词素构词理论图">
 &lt;figcaption>◉ 图. 词素构词理论图&lt;/figcaption>
 &lt;/figure>
 &lt;/p>
@@ -9843,9 +9996,9 @@ target="_blank" rel="noreferrer noopener"
 >模板&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a>一章，不仅是前面提到的三个最基本页面，所有有可能用到的模板都在这一章介绍得很清楚，另外就是&lt;a href="https://gohugo.io/lookup-order/"
 target="_blank" rel="noreferrer noopener"
 >查找顺序&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a>非常非常重要，提前规划好可以最大程度地复用代码，减少工作量. 上面我参考的那篇文章中在第 3、4 小节给出的调试方法：删去&lt;code>/public&lt;/code>文件夹，使用&lt;code>$ hugo server --watch --verbose&lt;/code>命令，是非常有用的.&lt;/p>
-&lt;h2 id="tomlyaml和json的学习">
-TOML、YAML和JSON的学习
-&lt;a href="#tomlyaml%e5%92%8cjson%e7%9a%84%e5%ad%a6%e4%b9%a0">&lt;small>¶&lt;/small>&lt;/a>
+&lt;h2 id="tomlyaml-和-json-的学习">
+TOML、YAML 和 JSON 的学习
+&lt;a href="#tomlyaml-%e5%92%8c-json-%e7%9a%84%e5%ad%a6%e4%b9%a0">&lt;small>¶&lt;/small>&lt;/a>
 &lt;/h2>
 &lt;p>Hugo 的配置文件支持这三种格式. 尽管官方文档给出的例子大多数都是三种格式都有，但仅仅是官方的例子并不足够使用；又考虑到在进行检索时网络上的各位博主也是用什么的都有，且大多数博主记录自己的建站过程肯定不会像官方那样提供三个格式的配置；这三种格式的转化并不是显而易见地见几个例子就能触类旁通（比如 TOML 中的双中括号 &lt;code>[[something]]&lt;/code> 就不是很容易猜到 ）：因此对这三种格式进行学习是有必要的. 这里我主要参考了如下几篇文章：&lt;/p>
 &lt;ol>
@@ -10488,9 +10641,11 @@ target="_blank" rel="noreferrer noopener"
 &lt;li>&lt;input disabled="" type="checkbox"> 站内搜索功能（非常不着急），可以参考&lt;a href="https://palant.info/2020/06/04/the-easier-way-to-use-lunr-search-with-hugo/"
 target="_blank" rel="noreferrer noopener"
 >这篇文章&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a>&lt;/li>
-&lt;li>&lt;input disabled="" type="checkbox"> 用一下 prefers-color-scheme. 可以参考&lt;a href="https://albinek.com/going-dark-web-edition"
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> &lt;del>用一下 prefers-color-scheme. 可以参考&lt;a href="https://albinek.com/going-dark-web-edition"
 target="_blank" rel="noreferrer noopener"
->这篇文章&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a>.&lt;/li>
+>这篇文章&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a>.&lt;/del>（已完成，参考了&lt;a href="https://github.com/wangchucheng/hugo-eureka/blob/master/layouts/partials/header.html"
+target="_blank" rel="noreferrer noopener"
+>Eureka 主题的写法&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a>.）&lt;/li>
 &lt;li>&lt;input disabled="" type="checkbox"> 支持 webmention（还需要了解、学习并评估），可以参考&lt;a href="https://palant.info/2020/09/03/added-webmention-support-to-the-blog/"
 target="_blank" rel="noreferrer noopener"
 >这篇文章&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a>&lt;/li>
@@ -10513,6 +10668,12 @@ target="_blank" rel="noreferrer noopener"
 &lt;li>&lt;input checked="" disabled="" type="checkbox"> &lt;del>考虑列表页的分页问题？（如果文章太多了的话）参考：&lt;a href="https://gohugo.io/templates/pagination/"
 target="_blank" rel="noreferrer noopener"
 >Pagination&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a>.&lt;/del> 不再考虑，不用分页，一页就挺好.&lt;/li>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> &lt;del>暗色模式下加载新页面闪烁的问题.&lt;/del>（&lt;a href="../../../zh/01901"
+>已完成&lt;/a>）&lt;/li>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> &lt;del>支持图片懒加载，使用 render hooks 技术.&lt;/del>&lt;/li>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> &lt;del>Open Graph 和 Twitter Cards 的支持，见&lt;a href="https://gohugo.io/templates/internal/"
+target="_blank" rel="noreferrer noopener"
+>Hugo Internal Templates&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a>.&lt;/del>（暂不考虑，觉得不是很有必要）&lt;/li>
 &lt;/ol>
 &lt;section class="footnotes" role="doc-endnotes">
 &lt;hr>
