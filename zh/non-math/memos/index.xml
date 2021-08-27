@@ -6262,7 +6262,8 @@ target="_blank" rel="noreferrer noopener"
 &lt;/blockquote>
 &lt;p>从这里开始上下翻一翻，看一看这两行在整个文档中处于一个什么样的位置，它的上下文语境是什么样的. 我们把整份文档简化成这种样子：&lt;/p>
 &lt;p>&lt;figure>
-&lt;img loading="lazy" src="../../../images/bspwm-manpage.png" alt="BSPWM(1) 文档大纲">
+&lt;img loading="lazy" src="../../../images/bspwm-manpage.png" alt="BSPWM(1) 文档大纲"
+>
 &lt;figcaption>◉ 图. BSPWM(1) 文档大纲&lt;/figcaption>
 &lt;/figure>
 &lt;/p>
@@ -6390,15 +6391,18 @@ super + a
 &lt;/h2>
 &lt;p>分享一个我经常用的、很多人可能会忽视的、能快速帮你梳理文档结构的一个小技巧，那就是把自动补全打开，然后经常按按 tab 键. 比如打下 bspc ，按一下 tab 键会出现 9 个候选的 command 或 domain，然后随便选一个比如 bspc node，再按一下 tab 键，等等.&lt;/p>
 &lt;p>&lt;figure>
-&lt;img loading="lazy" src="../../../images/bspc_trick1.png" alt="补全小技巧的示意效果图：bspc &amp;lt;TAB&amp;gt;">
+&lt;img loading="lazy" src="../../../images/bspc_trick1.png" alt="补全小技巧的示意效果图：bspc &amp;lt;TAB&amp;gt;"
+>
 &lt;figcaption>◉ 图. 补全小技巧的示意效果图：bspc &amp;lt;TAB&amp;gt;&lt;/figcaption>
 &lt;/figure>
 &lt;figure>
-&lt;img loading="lazy" src="../../../images/bspc_trick2.png" alt="补全小技巧的示意效果图：bspc node &amp;lt;TAB&amp;gt;">
+&lt;img loading="lazy" src="../../../images/bspc_trick2.png" alt="补全小技巧的示意效果图：bspc node &amp;lt;TAB&amp;gt;"
+>
 &lt;figcaption>◉ 图. 补全小技巧的示意效果图：bspc node &amp;lt;TAB&amp;gt;&lt;/figcaption>
 &lt;/figure>
 &lt;figure>
-&lt;img loading="lazy" src="../../../images/bspc_trick3.png" alt="补全小技巧的示意效果图：bspc node &amp;lt;TAB&amp;gt;&amp;lt;TAB&amp;gt;">
+&lt;img loading="lazy" src="../../../images/bspc_trick3.png" alt="补全小技巧的示意效果图：bspc node &amp;lt;TAB&amp;gt;&amp;lt;TAB&amp;gt;"
+>
 &lt;figcaption>◉ 图. 补全小技巧的示意效果图：bspc node &amp;lt;TAB&amp;gt;&amp;lt;TAB&amp;gt;&lt;/figcaption>
 &lt;/figure>
 &lt;/p>
@@ -6584,11 +6588,13 @@ target="_blank" rel="noreferrer noopener"
 &lt;/div>
 &lt;/div>&lt;p>然后我们按 &lt;code>super + Alt + r&lt;/code> 重启 bspwm，在终端下使用 &lt;code>tail -f /tmp/try_e_r.log&lt;/code> 来监听日志文件变化. 我们对窗口进行一些操作，看看 try_e_r.log 里什么时候会有新的变化，并看看这四个参数以及使用 xtitle 得到的结果分别都是什么. 贴一下我这里的测试结果：&lt;/p>
 &lt;p>&lt;figure>
-&lt;img loading="lazy" src="../../../images/ext_rule1.png" alt="external_rules 的测试结果">
+&lt;img loading="lazy" src="../../../images/ext_rule1.png" alt="external_rules 的测试结果"
+>
 &lt;figcaption>◉ 图. external_rules 的测试结果&lt;/figcaption>
 &lt;/figure>
 &lt;figure>
-&lt;img loading="lazy" src="../../../images/ext_rule2.png" alt="external_rules 的测试结果">
+&lt;img loading="lazy" src="../../../images/ext_rule2.png" alt="external_rules 的测试结果"
+>
 &lt;figcaption>◉ 图. external_rules 的测试结果&lt;/figcaption>
 &lt;/figure>
 &lt;/p>
@@ -7749,7 +7755,8 @@ target="_blank" rel="noreferrer noopener"
 >海蒂 | bilibili&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a>）中，在第 56:36 处，&lt;span class='black_block' onclick="ChangeClassBlackBlock(this)">海蒂把一个表演马戏的人的猴子放进屋子里来了，结果猴子在屋子里捣蛋，大家都抓不住它，这个时候&lt;/span>海蒂说，“你可以在它（猴子）的尾巴上撒盐”.&lt;/p>
 &lt;p>当然这里的用法是用了这个短语的本意，即撒盐，但它背后的逻辑其实是这个被大家熟知的短语或者说是这个习俗，如果不了解的话看到这里会有点懵的.&lt;/p>
 &lt;p>&lt;figure>
-&lt;img loading="lazy" src="../../../images/heidi.png" alt="海蒂">
+&lt;img loading="lazy" src="../../../images/heidi.png" alt="海蒂"
+>
 &lt;figcaption>◉ 图. 海蒂&lt;/figcaption>
 &lt;/figure>
 &lt;/p>
@@ -7894,7 +7901,8 @@ target="_blank" rel="noreferrer noopener"
 &lt;p>他的堂姐现在已经人过中年，除了她自己说她曾经拥有过美貌，没有人这样说. 她瘦弱、皮肤发黄，上了年纪；伦敦所有玩具店里的所有胭脂和粉都不能让她美丽.——萨克雷&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>《亨利·艾斯芒德的历史》&lt;/p>
 &lt;p>这里多说一句. 我本来是不知道 &amp;ldquo;the red and white&amp;rdquo; 是什么意思，还以为是红白相间的衣服，还在想玩具店为什么会卖这种东西. 然后我就找到了中译本的《亨利·艾斯芒德的历史》，找到这句话，想看看别人是怎么翻译的. 于是我学习到了 &amp;ldquo;the red and white&amp;rdquo; 是胭脂和粉的意思——还是蛮贴切的嘛. 然而让我惊讶的是，中译本就直接把 &amp;ldquo;long in the tooth&amp;rdquo; 给翻译成了“牙又长”（见下图），这说明这个表达法可能对于中国人来说确实比较陌生. 我这里找到的版本是人民文学出版社 1958 年 9 月第一版，由陈逵、王培德翻译.&lt;/p>
 &lt;p>&lt;figure>
-&lt;img loading="lazy" src="../../../images/HenryEsmond.jpg" alt="《亨利·艾斯芒德的历史》中译本片段">
+&lt;img loading="lazy" src="../../../images/HenryEsmond.jpg" alt="《亨利·艾斯芒德的历史》中译本片段"
+>
 &lt;figcaption>◉ 图. 《亨利·艾斯芒德的历史》中译本片段&lt;/figcaption>
 &lt;/figure>
 &lt;/p>
@@ -7909,7 +7917,8 @@ target="_blank" rel="noreferrer noopener"
 &lt;p>（待补充）&lt;/p>
 &lt;p>我看了看维基百科 Horse Teeth 那个词条，反正整体就特别复杂，简单来说，马的牙齿有好多种好多种形状，而且马在几岁时长什么形状的牙齿，几岁时什么形状的牙齿又会脱落都是固定的，有经验的养马的人通过牙齿就能判断马的年龄. 其中有一种形状的牙齿，在马 15 岁之后不会脱落，而且长的速度比磨损的速度还快，所以这种牙齿就越长越长，而且它越长就说明那匹马越老，毕竟有那种牙齿就已经 15 岁起步了. 这么看来，这个短语来指代“老的，上了年纪的”，还是挺合适的了.&lt;/p>
 &lt;p>&lt;figure>
-&lt;img loading="lazy" src="../../../images/horse-teeth.jpg" alt="马的牙齿">
+&lt;img loading="lazy" src="../../../images/horse-teeth.jpg" alt="马的牙齿"
+>
 &lt;figcaption>◉ 图. 马的牙齿&lt;/figcaption>
 &lt;/figure>
 &lt;/p>
@@ -7973,7 +7982,8 @@ target="_blank" rel="noreferrer noopener"
 >汽车排放的条例&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a>中要求所有的汽车必须经历一系列的排放检测，检测是通过模拟城市中和高速上的行车来进行的. 检测要求给出城市中行车和高速上行车的油耗（gas mileage&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>）估计值，但因为任何检测都无法准确模拟出所有的驾驶习惯和路况环境，所以实际的油耗每台车都会不同. 于是，在所有的汽车广告中，只要提到油耗，就会加上一句，“your mileage may vary”，表示检测中估计出的结果并不代表真实的情况，是一种免责条款.&lt;/p>
 &lt;p>这里举一个例子，下面这张图是 1981 年 11 月 &lt;em>Field &amp;amp; Stream&lt;/em> 期刊中的第 25 页，是一张汽车的广告，在广告的右下角，就用小字写着：“&lt;strong>Your mileage may vary&lt;/strong> due to speed, trip length, weather. Actual highway mileage will probably be less.”&lt;/p>
 &lt;p>&lt;figure>
-&lt;img loading="lazy" src="../../../images/YMMV.png" alt="YMMV 在汽车广告中的例子">
+&lt;img loading="lazy" src="../../../images/YMMV.png" alt="YMMV 在汽车广告中的例子"
+>
 &lt;figcaption>◉ 图. YMMV 在汽车广告中的例子&lt;/figcaption>
 &lt;/figure>
 &lt;/p>
@@ -8074,7 +8084,8 @@ target="_blank" rel="noreferrer noopener"
 target="_blank" rel="noreferrer noopener"
 >这篇文章&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a>，里面在描述一个情节时就用到了这个用法（见下图）. 读到这里时我还一愣，最开始我自然地以为是把那个人叫到地毯上，还仔细回忆了一下那间屋子里好像没有地毯，即便有也没给特写，然后就猜出来这是个俚语，意思很容易也猜出来了，毕竟我看过剧我知道情节. 然后就好奇这个俚语有什么典故没有就开始查，最后就写了这篇博客.&lt;/p>
 &lt;p>&lt;figure>
-&lt;img loading="lazy" src="../../../images/call-sb-on-the-carpet.jpg" alt="call sb. on the carpet 用例">
+&lt;img loading="lazy" src="../../../images/call-sb-on-the-carpet.jpg" alt="call sb. on the carpet 用例"
+>
 &lt;figcaption>◉ 图. call sb. on the carpet 用例&lt;/figcaption>
 &lt;/figure>
 &lt;/p>
@@ -8129,7 +8140,8 @@ target="_blank" rel="noreferrer noopener"
 &lt;p>From the &lt;em>Saturday Night Live&lt;/em> character Debbie Downer, played by Rachel Dratch.&lt;/p>
 &lt;p>来源于综艺节目《周六夜现场》中的一个角色，由 Rachel Dratch 扮演.（见下图）&lt;/p>
 &lt;p>&lt;figure>
-&lt;img loading="lazy" src="../../../images/debbie-downer.jpg" alt="Debbie Downer">
+&lt;img loading="lazy" src="../../../images/debbie-downer.jpg" alt="Debbie Downer"
+>
 &lt;figcaption>◉ 图. Debbie Downer&lt;/figcaption>
 &lt;/figure>
 &lt;/p>
@@ -8163,7 +8175,8 @@ target="_blank" rel="noreferrer noopener"
 target="_blank" rel="noreferrer noopener"
 >评论&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a>就善意地提醒到：“我不是想破坏气氛，但你没按要求写.”（见下图）&lt;/p>
 &lt;p>&lt;figure>
-&lt;img loading="lazy" src="../../../images/debbie-downer_eg.jpg" alt="我的学习语境">
+&lt;img loading="lazy" src="../../../images/debbie-downer_eg.jpg" alt="我的学习语境"
+>
 &lt;figcaption>◉ 图. 我的学习语境&lt;/figcaption>
 &lt;/figure>
 &lt;/p>
@@ -8232,7 +8245,8 @@ style="display: none;"
 &lt;a href="#%e5%85%b3%e4%ba%8e%e5%9b%be%e7%89%87">&lt;small>¶&lt;/small>&lt;/a>
 &lt;/h2>
 &lt;p>&lt;figure>
-&lt;img loading="lazy" src="../../../images/example.jpeg" alt="示例图片">
+&lt;img loading="lazy" src="../../../images/example.jpeg" alt="示例图片"
+>
 &lt;figcaption>◉ 图. 示例图片&lt;/figcaption>
 &lt;/figure>
 &lt;/p>
@@ -8311,7 +8325,8 @@ style="display: none;"
 &lt;a href="#%e6%9f%b1%e9%95%9cccyl">&lt;small>¶&lt;/small>&lt;/a>
 &lt;/h3>
 &lt;p>&lt;figure>
-&lt;img loading="lazy" src="../../../images/cylinder.png" alt="柱镜示意图">
+&lt;img loading="lazy" src="../../../images/cylinder.png" alt="柱镜示意图"
+>
 &lt;figcaption>◉ 图. 柱镜示意图&lt;/figcaption>
 &lt;/figure>
 &lt;/p>
@@ -8552,7 +8567,8 @@ TR
 &lt;p>镜架的尺寸会标注在镜腿上，有基线标注法（格式为：aa-bb-ccc）和方框标注法（格式为：aa◻︎bb-ccc）两种测量标注方法. 基线标注法先取最高水平线与最低水平线的中间位置水平线做基线，然后任何数据的测量都在基线上进行；方框标注法则先画出与镜片相切的、以水平线与竖直线为边的、最小的矩形，再测量这个矩形的数据. 方框标注法比较常用. 以我之前戴的一副旧眼镜为例，它的尺寸标注为：53◻︎17-138. 其中第一个数据 53 是镜片宽度，第二个数据 17 为鼻梁宽，第三个数据 138 为镜腿长，单位均为 mm.&lt;/p>
 &lt;p>下图演示了镜框的基础元素以及组成部分. 由于镜框的安装原因，鼻梁架也许是选择镜框时最应该考虑的部分，因为这部分是主要的受力面，同时也是位于连接眼镜前端与面部的地方. 鼻梁架的设计应该有利于舒适感及辅助作用，这保证了当双眼在自然凝视状态下，镜片所处的位置是正确的.&lt;/p>
 &lt;p>&lt;figure>
-&lt;img loading="lazy" src="../../../images/frame-measurement.jpg" alt="镜架尺寸示意图">
+&lt;img loading="lazy" src="../../../images/frame-measurement.jpg" alt="镜架尺寸示意图"
+>
 &lt;figcaption>◉ 图. 镜架尺寸示意图&lt;/figcaption>
 &lt;/figure>
 &lt;/p>
@@ -8795,7 +8811,8 @@ target="_blank" rel="noreferrer noopener"
 &lt;p>我将几家的验光数据做了对比，发现差别较大（主要是右眼），我自己分析是前一天睡眠不足，早上没有休息好，上午的度数较大；一天都没有怎么看近，下午的度数就小一些. 于是几天后我又到上述某品牌的另一家分店又进行了一次验光，流程比较标准. 验光师说我右眼状态不稳定，应该到医院散瞳后验光，这也在一定程度上反应了我右眼几次验光差别较大的问题.&lt;/p>
 &lt;p>我的验光结果如下，在考虑每次验光的流程、试戴感受，并对数据进行了细致分析后，我最终选择了 D 的数据作为配镜数据.&lt;/p>
 &lt;p>&lt;figure>
-&lt;img loading="lazy" src="../../../images/optometry-result.png" alt="验光结果图">
+&lt;img loading="lazy" src="../../../images/optometry-result.png" alt="验光结果图"
+>
 &lt;figcaption>◉ 图. 验光结果图&lt;/figcaption>
 &lt;/figure>
 &lt;/p>
@@ -8828,7 +8845,9 @@ target="_blank" rel="noreferrer noopener"
 &lt;/h2>
 &lt;p>这一章比较了已有对词根的各种定义的优缺点，并试图综合这些定义的优点，定义了独创的&lt;strong>词素构词理论&lt;/strong>. 词素构词理论的核心体现在下图中.&lt;/p>
 &lt;p>&lt;figure>
-&lt;img loading="lazy" src="../../../images/word-root.png" alt="词素构词理论图">
+&lt;img loading="lazy" src="../../../images/word-root.i.png" alt="词素构词理论图"
+style="filter: var(--c-img-filter);"
+>
 &lt;figcaption>◉ 图. 词素构词理论图&lt;/figcaption>
 &lt;/figure>
 &lt;/p>
@@ -8899,7 +8918,8 @@ target="_blank" rel="noreferrer noopener"
 &lt;/h2>
 &lt;p>这一章反思了英语传统构词法（&lt;span style="color:red;">转化法&lt;/span>、&lt;span style="color:red;">合成法&lt;/span>、&lt;span style="color:red;">派生法&lt;/span>），介绍了独创的能涵盖传统构词法的三级派生构词法，&lt;span class='notation_color'>其生成的单词（派生词）可以再作为自由词根&lt;/span>. 有些英语单词一次完成构词过程，有些则需要多次完成. 我们&lt;span class='notation_color'>使用“派生词”这个词语来称呼所有使用这种三级派生构词法得到的单词&lt;/span>，而不是指传统意义上的由&lt;span style="color:red;">派生法&lt;/span>得到的单词. 在本文中，为避免造成理解负担，我们用加括号的“单词（派生词）”这种写法. 三级派生构词法见下表，它依照词根是否加词缀和加何种词缀分成 3 级：&lt;/p>
 &lt;p>&lt;figure>
-&lt;img loading="lazy" src="../../../images/word-build.png" alt="词素构词理论图">
+&lt;img loading="lazy" src="../../../images/word-build.png" alt="词素构词理论图"
+>
 &lt;figcaption>◉ 图. 词素构词理论图&lt;/figcaption>
 &lt;/figure>
 &lt;/p>
@@ -9790,6 +9810,11 @@ target="_blank" rel="noreferrer noopener"
 >频率&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a>. 了解 Hugo Modules 时看到 &lt;a href="https://blog.jimmycai.com/p/hugo-modules/"
 target="_blank" rel="noreferrer noopener"
 >ta 的文章&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a>，感觉 ta 对 Hugo 的掌握都非常高级，涵盖了非常多的前端高级技术，相较之下我的这个站只用了最最简单也最最原始的 HTML、CSS、JavaScript 而已.&lt;/li>
+&lt;li>&lt;a href="https://www.zhanghai.me/"
+target="_blank" rel="noreferrer noopener"
+>梦断代码&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a>. 因为&lt;a href="https://github.com/zhanghai/Douya"
+target="_blank" rel="noreferrer noopener"
+>豆芽&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a>项目关注到的这个人，ta 真的很厉害.&lt;/li>
 &lt;li>别人推荐的一些，还没看，有时间可以过一遍看看：
 &lt;ul>
 &lt;li>&lt;a href="http://headsalon.org/"
@@ -10435,6 +10460,8 @@ target="_blank" rel="noreferrer noopener"
 target="_blank" rel="noreferrer noopener"
 >Color Scheme Designer&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a>. 黑暗模式的配色基本上是可以了，但我还是不是很满意. 一来觉得配色还是有不合理的地方，二是像一些图片在黑暗背景下显得很不协调——透明背景加黑色字体的图片几乎无法辨认、白色背景的又显得很突兀. 如果有人对配色比较在行，可以给我提供配色方案.&lt;/p>
 &lt;p>还应该完善的一个小功能是：应该用 prefers-color-scheme 技术判断一下用户的系统环境颜色，当然比较简单，在 main.js 里把初始化的那个 if 语句的最后一个 else 里写点东西判断一下就行，但我不是很想搞，还是觉得给所有人默认明亮模式比较好，或许等我的黑暗模式配色更好看一点再说吧. 补充于 2020 年 8 月 10 日.&lt;/div>&lt;/p>
+&lt;div class='notation_color'>
+&lt;p>prefers-color-scheme 已支持. 补充于 2021 年 8 月 27 日.&lt;/div>&lt;/p>
 &lt;h2 id="评论系统的支持">
 评论系统的支持
 &lt;a href="#%e8%af%84%e8%ae%ba%e7%b3%bb%e7%bb%9f%e7%9a%84%e6%94%af%e6%8c%81">&lt;small>¶&lt;/small>&lt;/a>
@@ -10660,7 +10687,7 @@ target="_blank" rel="noreferrer noopener"
 target="_blank" rel="noreferrer noopener"
 >js 的解决方法&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a>.&lt;/li>
 &lt;li>&lt;input disabled="" type="checkbox"> 代码块的横向滚动，应该保持行号不动，只有代码块滚动. 是一个 CSS 的问题.&lt;/li>
-&lt;li>&lt;input disabled="" type="checkbox"> 透明背景的图片在黑暗模式下应进行反色操作.&lt;/li>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> &lt;del>透明背景的图片在黑暗模式下应进行反色操作.&lt;/del>（已完成. 需要在暗色主题下反色的图片只需在文件后缀名前加上 &lt;code>.i&lt;/code> 即可，也就是说以 &lt;code>file_name.i.{png|jpg|jpeg|gif|webp|…}&lt;/code> 的格式命名.）&lt;/li>
 &lt;li>&lt;input checked="" disabled="" type="checkbox"> &lt;del>考虑把豆瓣的书影音游的数据迁移到博客里，单独弄一个页面，使用&lt;a href="https://gohugo.io/templates/data-templates/"
 target="_blank" rel="noreferrer noopener"
 >Data Templates&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a>来做这件事.&lt;/del>（&lt;a href="../../../zh/82988/"
@@ -10673,7 +10700,11 @@ target="_blank" rel="noreferrer noopener"
 &lt;li>&lt;input checked="" disabled="" type="checkbox"> &lt;del>支持图片懒加载，使用 render hooks 技术.&lt;/del>&lt;/li>
 &lt;li>&lt;input checked="" disabled="" type="checkbox"> &lt;del>Open Graph 和 Twitter Cards 的支持，见&lt;a href="https://gohugo.io/templates/internal/"
 target="_blank" rel="noreferrer noopener"
->Hugo Internal Templates&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a>.&lt;/del>（暂不考虑，觉得不是很有必要）&lt;/li>
+>Hugo Internal Templates&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a>.&lt;/del>（暂不考虑，觉得不是很有必要. 不过如果打算宣传自己的主题的话 (35) 还是要加上.）&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> 使用 &lt;a href="https://gohugo.io/content-management/page-bundles/"
+target="_blank" rel="noreferrer noopener"
+>Page Bundles&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a> 重新整理整个博客的目录结构.&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> 用 pandoc 渲染的文章也没法用 render hooks 的问题.(11)&lt;/li>
 &lt;/ol>
 &lt;section class="footnotes" role="doc-endnotes">
 &lt;hr>
