@@ -10705,6 +10705,7 @@ target="_blank" rel="noreferrer noopener"
 target="_blank" rel="noreferrer noopener"
 >Page Bundles&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a> 重新整理整个博客的目录结构.&lt;/li>
 &lt;li>&lt;input disabled="" type="checkbox"> 用 pandoc 渲染的文章也没法用 render hooks 的问题.(11)&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> utterence 评论插件的主题更换脚本应在加载完成后运行.&lt;/li>
 &lt;/ol>
 &lt;section class="footnotes" role="doc-endnotes">
 &lt;hr>
