@@ -1,5 +1,157 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>赤赤的象牙塔</title><link>/zh/</link><description>近期内容 | 赤赤的象牙塔</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>
-2021-08-27</lastBuildDate><item><title>如何让静态网站的暗色主题换页不闪烁 - 自写主题</title><link>/zh/01901/</link><pubDate>2021-08-27</pubDate><guid>/zh/01901/</guid><description>&lt;h1 id="问题">
+2021-08-28</lastBuildDate><item><title>Hugo 如何让图片在暗色主题下反色 - 自写主题</title><link>/zh/15738/</link><pubDate>2021-08-28</pubDate><guid>/zh/15738/</guid><description>&lt;p>本文探讨的是图片在亮色、暗色主题下的显示问题，里面有一些图片示例，请读者们手动调节本站的主题来测试它们的显示效果. 调节按钮在左边栏的右上角，手机等小屏幕请点击左上角的汉堡按钮呼出左边栏.&lt;/p>
+&lt;h1 id="问题">
+问题
+&lt;a href="#%e9%97%ae%e9%a2%98">&lt;small>¶&lt;/small>&lt;/a>
+&lt;/h1>
+&lt;p>有些图片是白底黑字，在暗色主题下刺眼：&lt;/p>
+&lt;p>&lt;figure>
+&lt;img loading="lazy" src="lorem.jpg" alt="白底黑字的示例图"
+>
+&lt;figcaption>◉ 图. 白底黑字的示例图&lt;/figcaption>
+&lt;/figure>
+&lt;/p>
+&lt;p>有些图片是透明背景黑字，在暗色主题下看不清：&lt;/p>
+&lt;p>&lt;figure>
+&lt;img loading="lazy" src="lorem.png" alt="透明背景黑字的示例图"
+>
+&lt;figcaption>◉ 图. 透明背景黑字的示例图&lt;/figcaption>
+&lt;/figure>
+&lt;/p>
+&lt;p>以上这两种情况都需要在读者选择暗色主题的时候进行反色处理.&lt;/p>
+&lt;h1 id="处理思路">
+处理思路
+&lt;a href="#%e5%a4%84%e7%90%86%e6%80%9d%e8%b7%af">&lt;small>¶&lt;/small>&lt;/a>
+&lt;/h1>
+&lt;p>颜色的反转使用 CSS 的滤镜（filters）技术即可，比如在如下代码中，&lt;code>.normal&lt;/code> 是正常的颜色，&lt;code>.inverted&lt;/code> 是反转的颜色.&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-CSS" data-lang="CSS">&lt;span class="p">.&lt;/span>&lt;span class="nc">normal&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">filter&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">invert&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="kt">%&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="nc">inverted&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">filter&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">invert&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">100&lt;/span>&lt;span class="kt">%&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>我们可以把上面的代码套进 CSS 变量中，和两套主题的变量放在一起. 然后在 Hugo 的模板中更改处理图片用的 &lt;a href="https://gohugo.io/getting-started/configuration-markup/#markdown-render-hooks"
+target="_blank" rel="noreferrer noopener"
+>render hooks&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a>，给图片加上适当的样式即可.&lt;/p>
+&lt;p>其中暗色主题的切换参考的是&lt;a href="https://dev.to/lampewebdev/css-quickies-css-variables-or-how-you-create-a-white-dark-theme-easily-1i0i"
+target="_blank" rel="noreferrer noopener"
+>这篇文章&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a>，简单来说，就是在读者切换成暗色主题时给整个 &lt;code>&amp;lt;html&amp;gt;&lt;/code> 容器加上一个表示暗色主题的类名（&lt;code>.classList.add(&amp;quot;dark&amp;quot;)&lt;/code>），读者切换成亮色主题时将这个类名去掉（&lt;code>.classList.remove(&amp;quot;dark&amp;quot;)&lt;/code>），然后在 CSS 中针对是否有那个暗色主题的类名，把不同的值定义给同一个变量，而在指定 HTML 元素的样式时直接使用那个变量即可. 详见下面的代码.&lt;/p>
+&lt;h1 id="完整代码">
+完整代码
+&lt;a href="#%e5%ae%8c%e6%95%b4%e4%bb%a3%e7%a0%81">&lt;small>¶&lt;/small>&lt;/a>
+&lt;/h1>
+&lt;p>首先是 HTML 示例代码，在整个 &lt;code>&amp;lt;html&amp;gt;&lt;/code> 容器上定义一个类：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">html&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;theme-container&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">body&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="c">&amp;lt;!--Something…--&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">body&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">html&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>然后在 CSS 中对这个容器是否有暗色主题类名 &lt;code>.dark&lt;/code> 分别定义变量 &lt;code>--c-img-filter&lt;/code>：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-css" data-lang="css">&lt;span class="p">.&lt;/span>&lt;span class="nc">theme-container&lt;/span>&lt;span class="p">{&lt;/span>
+&lt;span class="nv">--c-img-filter&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">invert&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="kt">%&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="nc">theme-container&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nc">dark&lt;/span>&lt;span class="p">{&lt;/span>
+&lt;span class="nv">--c-img-filter&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">invert&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">100&lt;/span>&lt;span class="kt">%&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>最后处理 Hugo 模板：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="c">&amp;lt;!-- layouts/_default/_markup/render-image.html --&amp;gt;&lt;/span>
+{{ $url := .Destination | safeURL }}
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">figure&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">img&lt;/span> &lt;span class="na">src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;{{ $url }}&amp;#34;&lt;/span>
+&lt;span class="err">{{&lt;/span> &lt;span class="err">$&lt;/span>&lt;span class="na">file_name_array&lt;/span> &lt;span class="na">:&lt;/span>&lt;span class="o">=&lt;/span> &lt;span class="s">split&lt;/span> &lt;span class="err">$&lt;/span>&lt;span class="na">url&lt;/span> &lt;span class="err">&amp;#34;.&amp;#34;&lt;/span> &lt;span class="err">}}&lt;/span>
+&lt;span class="err">{{&lt;/span> &lt;span class="err">$&lt;/span>&lt;span class="na">file_name_len&lt;/span> &lt;span class="na">:&lt;/span>&lt;span class="o">=&lt;/span> &lt;span class="s">len&lt;/span> &lt;span class="err">$&lt;/span>&lt;span class="na">file_name_array&lt;/span> &lt;span class="err">}}&lt;/span>
+&lt;span class="err">{{&lt;/span> &lt;span class="na">if&lt;/span> &lt;span class="na">eq&lt;/span> &lt;span class="err">(&lt;/span>&lt;span class="na">index&lt;/span> &lt;span class="err">$&lt;/span>&lt;span class="na">file_name_array&lt;/span> &lt;span class="err">(&lt;/span>&lt;span class="na">sub&lt;/span> &lt;span class="err">$&lt;/span>&lt;span class="na">file_name_len&lt;/span> &lt;span class="na">2&lt;/span>&lt;span class="err">))&lt;/span> &lt;span class="err">&amp;#34;&lt;/span>&lt;span class="na">i&lt;/span>&lt;span class="err">&amp;#34;&lt;/span> &lt;span class="err">}}&lt;/span>
+&lt;span class="na">style&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;filter: var(--c-img-filter);&amp;#34;&lt;/span>
+&lt;span class="err">{{&lt;/span> &lt;span class="na">end&lt;/span> &lt;span class="err">}}&lt;/span>
+&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">figure&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>这里没有贸然对所有的图片都加上 &lt;code>style=&amp;quot;filter: var(--c-img-filter);&amp;quot;&lt;/code>，而是先对文件名进行分析，最后达到的效果是：以 &lt;code>.i.{png|jpg|gif|jpeg|webp|…}&lt;/code> 作为文件名后缀的图片会在选择暗色主题时进行反色处理，而没有 &lt;code>.i&lt;/code> 这个文件名修饰的图片则永远保持原样. 例如：&lt;/p>
+&lt;ul>
+&lt;li>这张图片文件名为 lorem.i.jpg，亮色模式下白底黑字、暗色模式下黑底白字&lt;/li>
+&lt;/ul>
+&lt;p>&lt;figure>
+&lt;img loading="lazy" src="lorem.i.jpg" alt="lorem.i.jpg"
+style="filter: var(--c-img-filter);"
+>
+&lt;figcaption>◉ 图. lorem.i.jpg&lt;/figcaption>
+&lt;/figure>
+&lt;/p>
+&lt;hr>
+&lt;ul>
+&lt;li>这张图片文件名为 lorem.i.png，亮色模式下透明底黑字、暗色模式下透明底白字&lt;/li>
+&lt;/ul>
+&lt;p>&lt;figure>
+&lt;img loading="lazy" src="lorem.i.png" alt="lorem.i.png"
+style="filter: var(--c-img-filter);"
+>
+&lt;figcaption>◉ 图. lorem.i.png&lt;/figcaption>
+&lt;/figure>
+&lt;/p>
+&lt;hr>
+&lt;ul>
+&lt;li>这张图片文件名为 cat.jpg，亮色模式与暗色模式下都是正常的颜色&lt;/li>
+&lt;/ul>
+&lt;p>&lt;figure>
+&lt;img loading="lazy" src="cat.jpg" alt="cat.jpg"
+>
+&lt;figcaption>◉ 图. cat.jpg&lt;/figcaption>
+&lt;/figure>
+&lt;/p>
+&lt;hr></description></item><item><title>如何让静态网站的暗色主题换页不闪烁 - 自写主题</title><link>/zh/01901/</link><pubDate>2021-08-27</pubDate><guid>/zh/01901/</guid><description>&lt;h1 id="问题">
 问题
 &lt;a href="#%e9%97%ae%e9%a2%98">&lt;small>¶&lt;/small>&lt;/a>
 &lt;/h1>
