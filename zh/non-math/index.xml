@@ -3,7 +3,7 @@
 近期内容 |
 非数学
 | 赤赤的象牙塔</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>
-2021-08-27</lastBuildDate><item><title>如何让静态网站的暗色主题换页不闪烁</title><link>/zh/01901/</link><pubDate>2021-08-27</pubDate><guid>/zh/01901/</guid><description>&lt;h1 id="问题">
+2021-08-27</lastBuildDate><item><title>如何让静态网站的暗色主题换页不闪烁 - 自写主题</title><link>/zh/01901/</link><pubDate>2021-08-27</pubDate><guid>/zh/01901/</guid><description>&lt;h1 id="问题">
 问题
 &lt;a href="#%e9%97%ae%e9%a2%98">&lt;small>¶&lt;/small>&lt;/a>
 &lt;/h1>
@@ -74,11 +74,13 @@ target="_blank" rel="noreferrer noopener"
 &lt;/span>&lt;span class="lnt">2
 &lt;/span>&lt;span class="lnt">3
 &lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">html&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
 &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">body&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;theme-container&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
 &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">body&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">html&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
 &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">html&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
@@ -241,35 +243,35 @@ target="_blank" rel="noreferrer noopener"
 &lt;/span>&lt;span class="lnt">29
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="p">{&lt;/span>
-&lt;span class="err">[&lt;/span>
-&lt;span class="nt">&amp;#34;尔：　　erdx&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
-&lt;span class="nt">&amp;#34;⺈　小&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
-&lt;span class="nt">&amp;#34;⺈&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
-&lt;span class="nt">&amp;#34;小&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
-&lt;span class="nt">&amp;#34;d&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
-&lt;span class="nt">&amp;#34;x&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
-&lt;span class="nt">&amp;#34;尔&amp;#34;&lt;/span>
-&lt;span class="err">]&lt;/span>&lt;span class="p">,&lt;/span>
-&lt;span class="err">[&lt;/span>
-&lt;span class="nt">&amp;#34;乐：　　lepd ytpd lcpd-&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
-&lt;span class="nt">&amp;#34;丿　乛　丨　丿　丶&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
-&lt;span class="nt">&amp;#34;丿&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
-&lt;span class="nt">&amp;#34;丶&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
-&lt;span class="nt">&amp;#34;p&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
-&lt;span class="nt">&amp;#34;d&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
-&lt;span class="nt">&amp;#34;乐&amp;#34;&lt;/span>
-&lt;span class="err">]&lt;/span>&lt;span class="p">,&lt;/span>
-&lt;span class="err">[&lt;/span>
-&lt;span class="nt">&amp;#34;句：　　jubk- gzbk*&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
-&lt;span class="nt">&amp;#34;勹　口&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
-&lt;span class="nt">&amp;#34;勹&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
-&lt;span class="nt">&amp;#34;口&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
-&lt;span class="nt">&amp;#34;b&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
-&lt;span class="nt">&amp;#34;k&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
-&lt;span class="nt">&amp;#34;句&amp;#34;&lt;/span>
-&lt;span class="err">]&lt;/span>
-&lt;span class="p">}&lt;/span>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="p">[&lt;/span>
+&lt;span class="p">[&lt;/span>
+&lt;span class="s2">&amp;#34;尔：　　erdx&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;⺈　小&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;⺈&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;小&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;d&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;x&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;尔&amp;#34;&lt;/span>
+&lt;span class="p">],&lt;/span>
+&lt;span class="p">[&lt;/span>
+&lt;span class="s2">&amp;#34;乐：　　lepd ytpd lcpd-&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;丿　乛　丨　丿　丶&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;丿&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;丶&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;p&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;d&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;乐&amp;#34;&lt;/span>
+&lt;span class="p">],&lt;/span>
+&lt;span class="p">[&lt;/span>
+&lt;span class="s2">&amp;#34;句：　　jubk- gzbk*&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;勹　口&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;勹&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;口&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;b&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;k&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;句&amp;#34;&lt;/span>
+&lt;span class="p">]&lt;/span>
+&lt;span class="p">]&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>每一条数据从上到下共有 7 段，以“乐”字为例：&lt;/p>
@@ -330,8 +332,8 @@ target="_blank" rel="noreferrer noopener"
 &lt;/span>&lt;span class="lnt">32
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="p">{&lt;/span>
-&lt;span class="err">{&lt;/span>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="p">[&lt;/span>
+&lt;span class="p">{&lt;/span>
 &lt;span class="nt">&amp;#34;character&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;尔&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
 &lt;span class="nt">&amp;#34;level&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;1&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
 &lt;span class="nt">&amp;#34;fly_code&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;erdx&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
@@ -340,7 +342,7 @@ target="_blank" rel="noreferrer noopener"
 &lt;span class="nt">&amp;#34;first_py&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;d&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
 &lt;span class="nt">&amp;#34;last_part&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;小&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
 &lt;span class="nt">&amp;#34;last_py&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;x&amp;#34;&lt;/span>
-&lt;span class="p">}&lt;/span>&lt;span class="err">,&lt;/span>
+&lt;span class="p">},&lt;/span>
 &lt;span class="p">{&lt;/span>
 &lt;span class="nt">&amp;#34;character&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;乐&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
 &lt;span class="nt">&amp;#34;level&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;1&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
@@ -350,7 +352,7 @@ target="_blank" rel="noreferrer noopener"
 &lt;span class="nt">&amp;#34;first_py&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;p&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
 &lt;span class="nt">&amp;#34;last_part&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;丶&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
 &lt;span class="nt">&amp;#34;last_py&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;d&amp;#34;&lt;/span>
-&lt;span class="p">}&lt;/span>&lt;span class="err">,&lt;/span>
+&lt;span class="p">},&lt;/span>
 &lt;span class="p">{&lt;/span>
 &lt;span class="nt">&amp;#34;character&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;句&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
 &lt;span class="nt">&amp;#34;level&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;1&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
@@ -361,7 +363,7 @@ target="_blank" rel="noreferrer noopener"
 &lt;span class="nt">&amp;#34;last_part&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;口&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
 &lt;span class="nt">&amp;#34;last_py&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;k&amp;#34;&lt;/span>
 &lt;span class="p">}&lt;/span>
-&lt;span class="err">}&lt;/span>
+&lt;span class="p">]&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;h1 id="分析其中的重码情况">
@@ -5340,7 +5342,7 @@ target="_blank" rel="noreferrer noopener"
 &lt;span class="p">}&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>博客记录书影音——Hugo 的 Data Templates</title><link>/zh/82988/</link><pubDate>2021-06-25</pubDate><guid>/zh/82988/</guid><description>&lt;p>如你所见，本站在侧边栏里新增了“记录”板块，包含我读过的书、我看过的电影. 本文做一个技术总结.&lt;/p>
+&lt;/div></description></item><item><title>博客记录书影音——Hugo 的 Data Templates - 自写主题</title><link>/zh/82988/</link><pubDate>2021-06-25</pubDate><guid>/zh/82988/</guid><description>&lt;p>如你所见，本站在侧边栏里新增了“记录”板块，包含我读过的书、我看过的电影. 本文做一个技术总结.&lt;/p>
 &lt;h1 id="动机">
 动机
 &lt;a href="#%e5%8a%a8%e6%9c%ba">&lt;small>¶&lt;/small>&lt;/a>
@@ -5359,6 +5361,10 @@ target="_blank" rel="noreferrer noopener"
 怎么在博客中展示数据
 &lt;a href="#%e6%80%8e%e4%b9%88%e5%9c%a8%e5%8d%9a%e5%ae%a2%e4%b8%ad%e5%b1%95%e7%a4%ba%e6%95%b0%e6%8d%ae">&lt;small>¶&lt;/small>&lt;/a>
 &lt;/h1>
+&lt;h2 id="基本结构">
+基本结构
+&lt;a href="#%e5%9f%ba%e6%9c%ac%e7%bb%93%e6%9e%84">&lt;small>¶&lt;/small>&lt;/a>
+&lt;/h2>
 &lt;p>我使用的博客生成器是 Hugo，而 Hugo 有一个 &lt;a href="https://gohugo.io/templates/data-templates/"
 target="_blank" rel="noreferrer noopener"
 >Data Templates&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a>，这正是完成这件事的最佳方案！&lt;/p>
@@ -5658,6 +5664,10 @@ weight: 2
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>这样就搞定了，只要在 &lt;code>layouts/partials/record.html&lt;/code> 里再好好把数据的展示格式调整一下就没问题了.&lt;/p>
+&lt;h2 id="处理多语言问题">
+处理多语言问题
+&lt;a href="#%e5%a4%84%e7%90%86%e5%a4%9a%e8%af%ad%e8%a8%80%e9%97%ae%e9%a2%98">&lt;small>¶&lt;/small>&lt;/a>
+&lt;/h2>
 &lt;p>不过我在这里遇到了另一个问题，那就是我的网站是多语言的网站. 多语言的意思就是这个网站的每一个页面都应该做多语言的翻译，就比如一篇文章，在源文件里是写在 &lt;code>title.md&lt;/code> 里的，但为了多语言，则应该给它翻译成 &lt;code>title.en.md&lt;/code> 和 &lt;code>title.fr.md&lt;/code> 分别用作英语的页面和法语的页面，Hugo 也能非常自动地把这个问题处理好，只要你这样写了，它就会自动帮你生成多语言的页面. 类比到 data 的问题上，照理说也应如此，比如 &lt;code>book.json&lt;/code> 我给它翻译出两份 &lt;code>book.en.json&lt;/code> 和 &lt;code>book.fr.json&lt;/code> 应该就可以了，但 Hugo 并没有支持这种做法.&lt;/p>
 &lt;p>于是我就想，要不就把数据存成 &lt;code>book_zh.json&lt;/code>、&lt;code>book_en.json&lt;/code>、&lt;code>book_fr.json&lt;/code> 这种格式，然后在 &lt;code>layouts/partials/record.html&lt;/code> 里做个类似于 &lt;code>{{ range $.Site.Data.film_(.Language.Lang) }}&lt;/code>的东西就差不多了吧，但我试了半天也查了半天文档，发现 Hugo 好像并不支持这种变量里面套变量（&lt;a href="https://www.php.net/manual/en/language.variables.variable.php"
 target="_blank" rel="noreferrer noopener"
@@ -6240,7 +6250,7 @@ bspc node @/ -R &lt;span class="m">90&lt;/span>
 &lt;span class="c1"># rotate the parent of current focused&lt;/span>
 super + r
 bspc node -f @parent&lt;span class="p">;&lt;/span> &lt;span class="se">\
-&lt;/span>&lt;span class="se">&lt;/span>bspc node -R &lt;span class="m">90&lt;/span>
+&lt;/span>&lt;span class="se">&lt;/span> bspc node -R &lt;span class="m">90&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>然后重新载入这份配置后一试——就发现了一个 bug：&lt;code>super + r&lt;/code> 的两条指令结束后焦点内含有两个窗口，如果重复执行 super + r ，焦点中的窗口会越来越多，参与旋转的窗口也越来越多.&lt;/p>
@@ -6370,10 +6380,10 @@ target="_blank" rel="noreferrer noopener"
 &lt;span class="c1"># focus a floating window from a tiled window&lt;/span>
 super + a
 &lt;span class="k">if&lt;/span> &lt;span class="o">[&lt;/span> &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="k">$(&lt;/span>bspc query -N -n focused.floating&lt;span class="k">)&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span> &lt;span class="o">]&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="k">then&lt;/span> &lt;span class="se">\
-&lt;/span>&lt;span class="se">&lt;/span>bspc node -f last.tiled.local&lt;span class="p">;&lt;/span> &lt;span class="se">\
-&lt;/span>&lt;span class="se">&lt;/span>&lt;span class="k">else&lt;/span> &lt;span class="se">\
-&lt;/span>&lt;span class="se">&lt;/span>bspc node -f last.floating.local&lt;span class="p">;&lt;/span> &lt;span class="se">\
-&lt;/span>&lt;span class="se">&lt;/span>&lt;span class="k">fi&lt;/span>
+&lt;/span>&lt;span class="se">&lt;/span> bspc node -f last.tiled.local&lt;span class="p">;&lt;/span> &lt;span class="se">\
+&lt;/span>&lt;span class="se">&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="se">\
+&lt;/span>&lt;span class="se">&lt;/span> bspc node -f last.floating.local&lt;span class="p">;&lt;/span> &lt;span class="se">\
+&lt;/span>&lt;span class="se">&lt;/span> &lt;span class="k">fi&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>希望大家能从这个例子中理解 &lt;code>NODE_SEL&lt;/code> 后面那一大堆中括号的作用，叹号是表示取否定哦~&lt;/p>
@@ -6464,8 +6474,8 @@ target="_blank" rel="noreferrer noopener"
 &lt;/span>&lt;span class="lnt">3
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="ch">#!/usr/bin/env python&lt;/span>
-&lt;span class="c1"># ~/.bin/hello-world&lt;/span>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="ch">#!/usr/bin/env python &lt;/span>
+&lt;span class="c1"># ~/.bin/hello-world &lt;/span>
 &lt;span class="nb">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;hello!&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
@@ -6478,7 +6488,7 @@ target="_blank" rel="noreferrer noopener"
 &lt;/span>&lt;span class="lnt">4
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="c1"># .xprofile or .xinitrc or .zprofile or ……&lt;/span>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="c1"># .xprofile or .xinitrc or .zprofile or …… &lt;/span>
 &lt;span class="k">if&lt;/span> &lt;span class="o">[&lt;/span> -d &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="nv">$HOME&lt;/span>&lt;span class="s2">/.bin&amp;#34;&lt;/span> &lt;span class="o">]&lt;/span> &lt;span class="p">;&lt;/span> &lt;span class="k">then&lt;/span>
 &lt;span class="nv">PATH&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="nv">$HOME&lt;/span>&lt;span class="s2">/.bin:&lt;/span>&lt;span class="nv">$PATH&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>
 &lt;span class="k">fi&lt;/span>
@@ -6570,12 +6580,12 @@ target="_blank" rel="noreferrer noopener"
 &lt;span class="nv">instance&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="nv">$3&lt;/span>
 &lt;span class="nv">consequences&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="nv">$4&lt;/span>
 &lt;span class="nb">echo&lt;/span> -e &lt;span class="s2">&amp;#34;One group: \n \
-&lt;/span>&lt;span class="s2">window ID : &lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nv">wid&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="s2">,\n \
-&lt;/span>&lt;span class="s2">title : &lt;/span>&lt;span class="k">$(&lt;/span>xtitle &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nv">wid&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="k">)&lt;/span>&lt;span class="s2">,\n \
-&lt;/span>&lt;span class="s2">class name : &lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nv">class&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="s2">,\n \
-&lt;/span>&lt;span class="s2">instance name : &lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nv">instance&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="s2">,\n \
-&lt;/span>&lt;span class="s2">intermediate consequences : &lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nv">consequences&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="s2">\n\n&amp;#34;&lt;/span> &lt;span class="se">\
-&lt;/span>&lt;span class="se">&lt;/span>&amp;gt;&amp;gt; /tmp/try_e_r.log
+&lt;/span>&lt;span class="s2"> window ID : &lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nv">wid&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="s2">,\n \
+&lt;/span>&lt;span class="s2"> title : &lt;/span>&lt;span class="k">$(&lt;/span>xtitle &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nv">wid&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="k">)&lt;/span>&lt;span class="s2">,\n \
+&lt;/span>&lt;span class="s2"> class name : &lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nv">class&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="s2">,\n \
+&lt;/span>&lt;span class="s2"> instance name : &lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nv">instance&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="s2">,\n \
+&lt;/span>&lt;span class="s2"> intermediate consequences : &lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nv">consequences&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="s2">\n\n&amp;#34;&lt;/span> &lt;span class="se">\
+&lt;/span>&lt;span class="se">&lt;/span> &amp;gt;&amp;gt; /tmp/try_e_r.log
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>然后我们按 &lt;code>super + Alt + r&lt;/code> 重启 bspwm，在终端下使用 &lt;code>tail -f /tmp/try_e_r.log&lt;/code> 来监听日志文件变化. 我们对窗口进行一些操作，看看 try_e_r.log 里什么时候会有新的变化，并看看这四个参数以及使用 xtitle 得到的结果分别都是什么. 贴一下我这里的测试结果：&lt;/p>
@@ -6943,7 +6953,7 @@ target="_blank" rel="noreferrer noopener"
 &lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-lua" data-lang="lua">&lt;span class="cm">--[[
 &lt;/span>&lt;span class="cm">说明：
-&lt;/span>&lt;span class="cm">这个脚本是用来去除字幕中的 \N.
+&lt;/span>&lt;span class="cm"> 这个脚本是用来去除字幕中的 \N.
 &lt;/span>&lt;span class="cm">]]&lt;/span>
 &lt;span class="c1">-- 一些描述性的信息&lt;/span>
 &lt;span class="n">script_name&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;去掉换行&amp;#39;&lt;/span>
@@ -6985,7 +6995,7 @@ target="_blank" rel="noreferrer noopener"
 &lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-lua" data-lang="lua">&lt;span class="cm">--[[
 &lt;/span>&lt;span class="cm">说明：
-&lt;/span>&lt;span class="cm">这个脚本是用来去除字幕中的 \N.
+&lt;/span>&lt;span class="cm"> 这个脚本是用来去除字幕中的 \N.
 &lt;/span>&lt;span class="cm">]]&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
@@ -7143,8 +7153,8 @@ lua 代码中要注意的细节
 &lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-lua" data-lang="lua">&lt;span class="cm">--[[
 &lt;/span>&lt;span class="cm">说明：
-&lt;/span>&lt;span class="cm">把中文的字幕和翻译好的英文字幕穿插在一起. 要求用户所选行数一定要是偶数，
-&lt;/span>&lt;span class="cm">且一半英文字幕、一半中文字幕，都是按照相同的顺序上下对应起来的.
+&lt;/span>&lt;span class="cm"> 把中文的字幕和翻译好的英文字幕穿插在一起. 要求用户所选行数一定要是偶数，
+&lt;/span>&lt;span class="cm"> 且一半英文字幕、一半中文字幕，都是按照相同的顺序上下对应起来的.
 &lt;/span>&lt;span class="cm">]]&lt;/span>
 &lt;span class="n">script_name&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;双语穿插&amp;#39;&lt;/span>
 &lt;span class="n">script_description&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;把中文的字幕和翻译好的英文字幕穿插在一起.&amp;#39;&lt;/span>
@@ -7367,8 +7377,8 @@ target="_blank" rel="noreferrer noopener"
 &lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-lua" data-lang="lua">&lt;span class="cm">--[[
 &lt;/span>&lt;span class="cm">说明：
-&lt;/span>&lt;span class="cm">把穿插在一起的中英文字幕分开. 要求用户所选行数一定要是偶数，
-&lt;/span>&lt;span class="cm">且每行英文字幕相邻的下面一行都是其对应的中文字幕.
+&lt;/span>&lt;span class="cm"> 把穿插在一起的中英文字幕分开. 要求用户所选行数一定要是偶数，
+&lt;/span>&lt;span class="cm"> 且每行英文字幕相邻的下面一行都是其对应的中文字幕.
 &lt;/span>&lt;span class="cm">]]&lt;/span>
 &lt;span class="n">script_name&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;分开穿插的双语&amp;#39;&lt;/span>
 &lt;span class="n">script_description&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;把穿插在一起的中英文字幕分开.&amp;#39;&lt;/span>
@@ -10864,7 +10874,7 @@ target="_blank" rel="noreferrer noopener"
 target="_blank" rel="noreferrer noopener"
 >Topos Cat&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a>. 在 bilibili 上发现的一个人，看到 ta 翻译了 YouTube 频道 Aleph 0 的视频.&lt;/li>
 &lt;/ul>
-&lt;p>&lt;span class='notation_color'>除了以上内容，我还在各种平台林林总总关注了很多超牛逼超牛逼的本科生，比如在知乎、在豆瓣，大约都是和我同龄或比我小一些，但水平远远在我之上. 这些人永远是我的榜样. 如今的互联网世界，获取信息极其方便，但获取优质信息不太容易，而那些优质信息是能让我们学习，帮助我们成长的. 希望上面的分享对别人也有帮助.&lt;/span>&lt;/p></description></item><item><title>Hugo 静态博客建站记（自写主题）</title><link>/zh/18284/</link><pubDate>2019-06-22</pubDate><guid>/zh/18284/</guid><description>&lt;p>很早就想建一个自己的博客了，每每看到别人的好看的博客就心里痒痒. 高中及以前写过一些回忆录都发表在 QQ 空间上，高中以来有意识地进行一些写作，觉得不错的都发表在新浪博客上，稍短的就写成长微博. 但有时想写一些专业性（数学）的东西，新浪博客的富文本编辑器就不够用了，而微博由于国内的审查机制不明确不规范也决定放弃，于是着手建博客.&lt;/p>
+&lt;p>&lt;span class='notation_color'>除了以上内容，我还在各种平台林林总总关注了很多超牛逼超牛逼的本科生，比如在知乎、在豆瓣，大约都是和我同龄或比我小一些，但水平远远在我之上. 这些人永远是我的榜样. 如今的互联网世界，获取信息极其方便，但获取优质信息不太容易，而那些优质信息是能让我们学习，帮助我们成长的. 希望上面的分享对别人也有帮助.&lt;/span>&lt;/p></description></item><item><title>Hugo 静态博客建站记 - 自写主题</title><link>/zh/18284/</link><pubDate>2019-06-22</pubDate><guid>/zh/18284/</guid><description>&lt;p>很早就想建一个自己的博客了，每每看到别人的好看的博客就心里痒痒. 高中及以前写过一些回忆录都发表在 QQ 空间上，高中以来有意识地进行一些写作，觉得不错的都发表在新浪博客上，稍短的就写成长微博. 但有时想写一些专业性（数学）的东西，新浪博客的富文本编辑器就不够用了，而微博由于国内的审查机制不明确不规范也决定放弃，于是着手建博客.&lt;/p>
 &lt;h1 id="构想">
 构想
 &lt;a href="#%e6%9e%84%e6%83%b3">&lt;small>¶&lt;/small>&lt;/a>
@@ -11039,47 +11049,47 @@ content/
 &lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">defaultContentLanguage&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">zh&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># 默认语言是中文&lt;/span>&lt;span class="w">
 &lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">defaultContentLanguageInSubdir&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kc">true&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># 所以下面的 url 里即便是默认的中文也带着/zh/&lt;/span>&lt;span class="w">
 &lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">menu&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">main&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w">&lt;/span>- &lt;span class="nt">url&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">/zh/section1/&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># 和目录名字一致&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">identifier&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">s1&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># 给下面的 children 确定 parent 用&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">第一部分&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># 可以不同语言用不同的名字&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">weight&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="m">1&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># 排序用&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w">&lt;/span>- &lt;span class="nt">url&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">/zh/section2/&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">identifier&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">s2&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">第二部分&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">weight&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="m">2&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w">&lt;/span>- &lt;span class="nt">url&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">/zh/section1/section11/&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">identifier&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">s11&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">parent&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">s1&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># parent 的 identifier&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">第一部分第一小节&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">weight&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="m">1&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">main&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>- &lt;span class="nt">url&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">/zh/section1/&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># 和目录名字一致&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">identifier&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">s1&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># 给下面的 children 确定 parent 用&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">第一部分&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># 可以不同语言用不同的名字&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">weight&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="m">1&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># 排序用&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>- &lt;span class="nt">url&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">/zh/section2/&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">identifier&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">s2&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">第二部分&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">weight&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="m">2&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>- &lt;span class="nt">url&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">/zh/section1/section11/&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">identifier&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">s11&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">parent&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">s1&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># parent 的 identifier&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">第一部分第一小节&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">weight&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="m">1&lt;/span>&lt;span class="w">
 &lt;/span>&lt;span class="w">
 &lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">languages&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">zh&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">languageCode&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">zh-cn&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">languageName&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">简体中文&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">title&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">网站名&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">weight&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="m">1&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">en&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">languageCode&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">en-us&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">languageName&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">English&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">title&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Site&amp;#39;s Name&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">weight&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="m">2&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">menu&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">main&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w">&lt;/span>- &lt;span class="nt">url&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">/en/section1/&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">identifier&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">s1&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">SECTION I&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">weight&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="m">1&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w">&lt;/span>- &lt;span class="nt">url&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">/en/section2/&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">identifier&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">s2&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">SECTION II&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">weight&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="m">2&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w">&lt;/span>- &lt;span class="nt">url&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">/en/section1/section11/&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">identifier&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">s11&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">parent&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">s1&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">SECTION I PART I&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">weight&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="m">1&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">zh&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">languageCode&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">zh-cn&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">languageName&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">简体中文&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">title&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">网站名&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">weight&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="m">1&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">en&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">languageCode&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">en-us&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">languageName&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">English&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">title&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Site&amp;#39;s Name&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">weight&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="m">2&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">menu&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">main&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>- &lt;span class="nt">url&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">/en/section1/&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">identifier&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">s1&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">SECTION I&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">weight&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="m">1&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>- &lt;span class="nt">url&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">/en/section2/&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">identifier&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">s2&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">SECTION II&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">weight&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="m">2&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>- &lt;span class="nt">url&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">/en/section1/section11/&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">identifier&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">s11&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">parent&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">s1&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">SECTION I PART I&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">weight&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="m">1&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>方法 2——在 front matter 里写：&lt;/p>
@@ -11105,16 +11115,16 @@ content/
 &lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">defaultContentLanguage&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">zh&lt;/span>&lt;span class="w">
 &lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">defaultContentLanguageInSubdir&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kc">true&lt;/span>&lt;span class="w">
 &lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">languages&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">zh&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">languageCode&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">zh-cn&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">languageName&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">简体中文&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">title&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">网站名&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">weight&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="m">1&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">en&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">languageCode&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">en-us&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">languageName&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">English&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">title&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Site&amp;#39;s Name&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">weight&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="m">2&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">zh&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">languageCode&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">zh-cn&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">languageName&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">简体中文&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">title&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">网站名&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">weight&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="m">1&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">en&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">languageCode&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">en-us&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">languageName&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">English&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">title&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Site&amp;#39;s Name&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">weight&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="m">2&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;div class="highlight">&lt;div class="chroma">
@@ -11134,11 +11144,11 @@ content/
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="c"># /content/section1/_index.md&lt;/span>&lt;span class="w">
 &lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nn">---&lt;/span>&lt;span class="w">
 &lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">menu&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">main&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="c"># 不用写 url 了&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">identifier&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">s1&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">第一部分&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">weight&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="m">1&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">main&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># 不用写 url 了&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">identifier&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">s1&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">第一部分&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">weight&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="m">1&lt;/span>&lt;span class="w">
 &lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nn">---&lt;/span>&lt;span class="w">
 &lt;/span>&lt;span class="w">&lt;/span>&lt;span class="l">可写一些内容&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
@@ -11160,11 +11170,11 @@ content/
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="c"># /content/section1/_index.en.md&lt;/span>&lt;span class="w">
 &lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nn">---&lt;/span>&lt;span class="w">
 &lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">menu&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">main&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="c"># 不用写明语言了&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">identifier&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">s1&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">SECTION I&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">weight&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="m">1&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">main&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># 不用写明语言了&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">identifier&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">s1&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">SECTION I&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">weight&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="m">1&lt;/span>&lt;span class="w">
 &lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nn">---&lt;/span>&lt;span class="w">
 &lt;/span>&lt;span class="w">&lt;/span>&lt;span class="l">Optional content here&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
@@ -11186,11 +11196,11 @@ content/
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="c"># /content/section1/section11/_index.md&lt;/span>&lt;span class="w">
 &lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nn">---&lt;/span>&lt;span class="w">
 &lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">menu&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">main&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">identifier&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">s11&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">parent&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">s1&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">第一部分第一小节&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">weight&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="m">1&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">main&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">identifier&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">s11&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">parent&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">s1&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">第一部分第一小节&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">weight&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="m">1&lt;/span>&lt;span class="w">
 &lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nn">---&lt;/span>&lt;span class="w">
 &lt;/span>&lt;span class="w">&lt;/span>&lt;span class="l">可写一些内容&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
@@ -11593,9 +11603,11 @@ target="_blank" rel="noreferrer noopener"
 &lt;li>&lt;input checked="" disabled="" type="checkbox"> &lt;del>Open Graph 和 Twitter Cards 的支持，见&lt;a href="https://gohugo.io/templates/internal/"
 target="_blank" rel="noreferrer noopener"
 >Hugo Internal Templates&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a>.&lt;/del>（暂不考虑，觉得不是很有必要. 不过如果打算宣传自己的主题的话 (35) 还是要加上.）&lt;/li>
-&lt;li>&lt;input disabled="" type="checkbox"> 使用 &lt;a href="https://gohugo.io/content-management/page-bundles/"
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> &lt;del>使用 &lt;a href="https://gohugo.io/content-management/page-bundles/"
 target="_blank" rel="noreferrer noopener"
->Page Bundles&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a> 重新整理整个博客的目录结构.&lt;/li>
+>Page Bundles&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a> 重新整理整个博客的目录结构.&lt;/del>（已完成，写了一个&lt;a href="https://gist.github.com/zerovip/ddd1036e74fb62e7296ef4b7e00b2765"
+target="_blank" rel="noreferrer noopener"
+>脚本&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a>来做这件事.）&lt;/li>
 &lt;li>&lt;input disabled="" type="checkbox"> 用 pandoc 渲染的文章也没法用 render hooks 的问题.(11)&lt;/li>
 &lt;li>&lt;input disabled="" type="checkbox"> utterence 评论插件的主题更换脚本应在加载完成后运行.&lt;/li>
 &lt;/ol>

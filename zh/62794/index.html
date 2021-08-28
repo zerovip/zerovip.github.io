@@ -219,7 +219,7 @@ RSS 订阅 ⊠
 <td class="lntd">
 <pre class="chroma" tabindex="0"><code class="language-lua" data-lang="lua"><span class="cm">--[[
 </span><span class="cm">说明：
-</span><span class="cm">这个脚本是用来去除字幕中的 \N.
+</span><span class="cm">    这个脚本是用来去除字幕中的 \N.
 </span><span class="cm">]]</span>
 
 <span class="c1">-- 一些描述性的信息</span>
@@ -231,25 +231,25 @@ RSS 订阅 ⊠
 <span class="c1">-- 这是我们的函数，第 38 行保证了它会被执行.</span>
 <span class="kr">function</span> <span class="nf">strip</span><span class="p">(</span><span class="n">sub</span><span class="p">,</span> <span class="n">sel</span><span class="p">)</span>
 
-<span class="c1">-- 对选中行进行遍历</span>
-<span class="kr">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">i</span> <span class="kr">in</span> <span class="n">ipairs</span><span class="p">(</span><span class="n">sel</span><span class="p">)</span> <span class="kr">do</span>
+    <span class="c1">-- 对选中行进行遍历</span>
+    <span class="kr">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">i</span> <span class="kr">in</span> <span class="n">ipairs</span><span class="p">(</span><span class="n">sel</span><span class="p">)</span> <span class="kr">do</span>
 
-<span class="c1">-- 取出字幕</span>
-<span class="kd">local</span> <span class="n">line</span> <span class="o">=</span> <span class="n">sub</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="c1">-- 取出字幕</span>
+        <span class="kd">local</span> <span class="n">line</span> <span class="o">=</span> <span class="n">sub</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
 
-<span class="c1">-- 对字幕进行一些操作</span>
-<span class="n">line.text</span> <span class="o">=</span> <span class="n">string.gsub</span><span class="p">(</span><span class="n">line.text</span><span class="p">,</span> <span class="s1">'</span><span class="se">\\</span><span class="s1">N'</span><span class="p">,</span> <span class="s1">' '</span><span class="p">)</span>
+        <span class="c1">-- 对字幕进行一些操作</span>
+        <span class="n">line.text</span> <span class="o">=</span> <span class="n">string.gsub</span><span class="p">(</span><span class="n">line.text</span><span class="p">,</span> <span class="s1">'</span><span class="se">\\</span><span class="s1">N'</span><span class="p">,</span> <span class="s1">' '</span><span class="p">)</span>
 
-<span class="c1">-- 把操作好的字幕再放回去</span>
-<span class="n">sub</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">line</span>
-
-<span class="kr">end</span>
-
-<span class="c1">-- 设置一个撤销点</span>
-<span class="n">aegisub.set_undo_point</span><span class="p">(</span><span class="n">script_name</span><span class="p">)</span>
-
-<span class="c1">-- 保持选中行仍然是选中状态</span>
-<span class="kr">return</span> <span class="n">sel</span>
+        <span class="c1">-- 把操作好的字幕再放回去</span>
+        <span class="n">sub</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">line</span>
+	
+    <span class="kr">end</span>
+    
+    <span class="c1">-- 设置一个撤销点</span>
+    <span class="n">aegisub.set_undo_point</span><span class="p">(</span><span class="n">script_name</span><span class="p">)</span>
+    
+    <span class="c1">-- 保持选中行仍然是选中状态</span>
+    <span class="kr">return</span> <span class="n">sel</span>
 
 <span class="kr">end</span>
 
@@ -272,7 +272,7 @@ RSS 订阅 ⊠
 <td class="lntd">
 <pre class="chroma" tabindex="0"><code class="language-lua" data-lang="lua"><span class="cm">--[[
 </span><span class="cm">说明：
-</span><span class="cm">这个脚本是用来去除字幕中的 \N.
+</span><span class="cm">    这个脚本是用来去除字幕中的 \N.
 </span><span class="cm">]]</span>
 </code></pre></td></tr></table>
 </div>
@@ -342,25 +342,25 @@ RSS 订阅 ⊠
 <pre class="chroma" tabindex="0"><code class="language-lua" data-lang="lua"><span class="c1">-- 这是我们的函数，第 38 行保证了它会被执行.</span>
 <span class="kr">function</span> <span class="nf">strip</span><span class="p">(</span><span class="n">sub</span><span class="p">,</span> <span class="n">sel</span><span class="p">)</span>
 
-<span class="c1">-- 对选中行进行遍历</span>
-<span class="kr">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">i</span> <span class="kr">in</span> <span class="n">ipairs</span><span class="p">(</span><span class="n">sel</span><span class="p">)</span> <span class="kr">do</span>
+    <span class="c1">-- 对选中行进行遍历</span>
+    <span class="kr">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">i</span> <span class="kr">in</span> <span class="n">ipairs</span><span class="p">(</span><span class="n">sel</span><span class="p">)</span> <span class="kr">do</span>
 
-<span class="c1">-- 取出字幕</span>
-<span class="kd">local</span> <span class="n">line</span> <span class="o">=</span> <span class="n">sub</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="c1">-- 取出字幕</span>
+        <span class="kd">local</span> <span class="n">line</span> <span class="o">=</span> <span class="n">sub</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
 
-<span class="c1">-- 对字幕进行一些操作</span>
-<span class="n">line.text</span> <span class="o">=</span> <span class="n">string.gsub</span><span class="p">(</span><span class="n">line.text</span><span class="p">,</span> <span class="s1">'</span><span class="se">\\</span><span class="s1">N'</span><span class="p">,</span> <span class="s1">' '</span><span class="p">)</span>
+        <span class="c1">-- 对字幕进行一些操作</span>
+        <span class="n">line.text</span> <span class="o">=</span> <span class="n">string.gsub</span><span class="p">(</span><span class="n">line.text</span><span class="p">,</span> <span class="s1">'</span><span class="se">\\</span><span class="s1">N'</span><span class="p">,</span> <span class="s1">' '</span><span class="p">)</span>
 
-<span class="c1">-- 把操作好的字幕再放回去</span>
-<span class="n">sub</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">line</span>
-
-<span class="kr">end</span>
-
-<span class="c1">-- 设置一个撤销点</span>
-<span class="n">aegisub.set_undo_point</span><span class="p">(</span><span class="n">script_name</span><span class="p">)</span>
-
-<span class="c1">-- 保持选中行仍然是选中状态</span>
-<span class="kr">return</span> <span class="n">sel</span>
+        <span class="c1">-- 把操作好的字幕再放回去</span>
+        <span class="n">sub</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">line</span>
+	
+    <span class="kr">end</span>
+    
+    <span class="c1">-- 设置一个撤销点</span>
+    <span class="n">aegisub.set_undo_point</span><span class="p">(</span><span class="n">script_name</span><span class="p">)</span>
+    
+    <span class="c1">-- 保持选中行仍然是选中状态</span>
+    <span class="kr">return</span> <span class="n">sel</span>
 
 <span class="kr">end</span>
 </code></pre></td></tr></table>
@@ -438,8 +438,8 @@ lua 代码中要注意的细节
 <td class="lntd">
 <pre class="chroma" tabindex="0"><code class="language-lua" data-lang="lua"><span class="cm">--[[
 </span><span class="cm">说明：
-</span><span class="cm">把中文的字幕和翻译好的英文字幕穿插在一起. 要求用户所选行数一定要是偶数，
-</span><span class="cm">且一半英文字幕、一半中文字幕，都是按照相同的顺序上下对应起来的.
+</span><span class="cm">    把中文的字幕和翻译好的英文字幕穿插在一起. 要求用户所选行数一定要是偶数，
+</span><span class="cm">    且一半英文字幕、一半中文字幕，都是按照相同的顺序上下对应起来的.
 </span><span class="cm">]]</span>
 
 <span class="n">script_name</span> <span class="o">=</span> <span class="s1">'双语穿插'</span>
@@ -448,34 +448,34 @@ lua 代码中要注意的细节
 <span class="n">script_version</span> <span class="o">=</span> <span class="s1">'0.1'</span>
 
 <span class="kr">function</span> <span class="nf">mix</span><span class="p">(</span><span class="n">sub</span><span class="p">,</span> <span class="n">sel</span><span class="p">)</span>
-
-<span class="kd">local</span> <span class="n">sub_backup</span> <span class="o">=</span> <span class="p">{}</span>
-
-<span class="kr">for</span> <span class="n">subi</span><span class="p">,</span> <span class="n">seli</span> <span class="kr">in</span> <span class="n">ipairs</span><span class="p">(</span><span class="n">sel</span><span class="p">)</span> <span class="kr">do</span>
-<span class="n">sub_backup</span><span class="p">[</span><span class="n">seli</span><span class="p">]</span> <span class="o">=</span> <span class="n">sub</span><span class="p">[</span><span class="n">seli</span><span class="p">]</span>
-<span class="kr">end</span>
-
-<span class="kd">local</span> <span class="n">slen</span> <span class="o">=</span> <span class="o">#</span><span class="n">sel</span>
-
-<span class="kr">for</span> <span class="n">subi</span><span class="p">,</span> <span class="n">seli</span> <span class="kr">in</span> <span class="n">ipairs</span><span class="p">(</span><span class="n">sel</span><span class="p">)</span> <span class="kr">do</span>
-<span class="kr">if</span> <span class="n">subi</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">~=</span> <span class="mi">0</span> <span class="kr">then</span>
-<span class="c1">-- 索引是奇数，英文，加 1 再除以 2，在 sel 里取出这个索引的值.</span>
-<span class="n">sub</span><span class="p">[</span><span class="n">seli</span><span class="p">]</span> <span class="o">=</span> <span class="n">sub_backup</span><span class="p">[</span><span class="n">sel</span><span class="p">[(</span><span class="n">subi</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">]]</span>
-<span class="kr">elseif</span> <span class="n">subi</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span> <span class="kr">then</span>
-<span class="c1">-- 索引是偶数，中文，加 n 再除以 2，在 sel 里取出这个索引的值.</span>
-<span class="n">sub</span><span class="p">[</span><span class="n">seli</span><span class="p">]</span> <span class="o">=</span> <span class="n">sub_backup</span><span class="p">[</span><span class="n">sel</span><span class="p">[(</span><span class="n">subi</span> <span class="o">+</span> <span class="n">slen</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">]]</span>
-<span class="kr">end</span>
-<span class="kr">end</span>
-
-<span class="n">aegisub.set_undo_point</span><span class="p">(</span><span class="n">script_name</span><span class="p">)</span>
-
-<span class="kr">return</span> <span class="n">sel</span>
+    
+    <span class="kd">local</span> <span class="n">sub_backup</span> <span class="o">=</span> <span class="p">{}</span>
+    
+    <span class="kr">for</span> <span class="n">subi</span><span class="p">,</span> <span class="n">seli</span> <span class="kr">in</span> <span class="n">ipairs</span><span class="p">(</span><span class="n">sel</span><span class="p">)</span> <span class="kr">do</span>
+        <span class="n">sub_backup</span><span class="p">[</span><span class="n">seli</span><span class="p">]</span> <span class="o">=</span> <span class="n">sub</span><span class="p">[</span><span class="n">seli</span><span class="p">]</span>
+    <span class="kr">end</span>
+    
+    <span class="kd">local</span> <span class="n">slen</span> <span class="o">=</span> <span class="o">#</span><span class="n">sel</span>
+    
+    <span class="kr">for</span> <span class="n">subi</span><span class="p">,</span> <span class="n">seli</span> <span class="kr">in</span> <span class="n">ipairs</span><span class="p">(</span><span class="n">sel</span><span class="p">)</span> <span class="kr">do</span>
+        <span class="kr">if</span> <span class="n">subi</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">~=</span> <span class="mi">0</span> <span class="kr">then</span>
+            <span class="c1">-- 索引是奇数，英文，加 1 再除以 2，在 sel 里取出这个索引的值.</span>
+            <span class="n">sub</span><span class="p">[</span><span class="n">seli</span><span class="p">]</span> <span class="o">=</span> <span class="n">sub_backup</span><span class="p">[</span><span class="n">sel</span><span class="p">[(</span><span class="n">subi</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">]]</span>
+        <span class="kr">elseif</span> <span class="n">subi</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span> <span class="kr">then</span>
+            <span class="c1">-- 索引是偶数，中文，加 n 再除以 2，在 sel 里取出这个索引的值.</span>
+            <span class="n">sub</span><span class="p">[</span><span class="n">seli</span><span class="p">]</span> <span class="o">=</span> <span class="n">sub_backup</span><span class="p">[</span><span class="n">sel</span><span class="p">[(</span><span class="n">subi</span> <span class="o">+</span> <span class="n">slen</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">]]</span>
+        <span class="kr">end</span>
+    <span class="kr">end</span>
+    
+    <span class="n">aegisub.set_undo_point</span><span class="p">(</span><span class="n">script_name</span><span class="p">)</span>
+    
+    <span class="kr">return</span> <span class="n">sel</span>
 
 <span class="kr">end</span>
 
 <span class="c1">-- 验证函数</span>
 <span class="kr">function</span> <span class="nf">mix_validation</span><span class="p">(</span><span class="n">sub</span><span class="p">,</span> <span class="n">sel</span><span class="p">)</span>
-<span class="kr">return</span> <span class="o">#</span><span class="n">sel</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span>
+    <span class="kr">return</span> <span class="o">#</span><span class="n">sel</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span>
 <span class="kr">end</span>
 
 <span class="n">aegisub.register_macro</span><span class="p">(</span><span class="n">script_name</span><span class="p">,</span> <span class="n">script_description</span><span class="p">,</span> <span class="n">mix</span><span class="p">,</span> <span class="n">mix_validation</span><span class="p">)</span>
@@ -499,7 +499,7 @@ lua 代码中要注意的细节
 <td class="lntd">
 <pre class="chroma" tabindex="0"><code class="language-lua" data-lang="lua"><span class="c1">-- 验证函数</span>
 <span class="kr">function</span> <span class="nf">mix_validation</span><span class="p">(</span><span class="n">sub</span><span class="p">,</span> <span class="n">sel</span><span class="p">)</span>
-<span class="kr">return</span> <span class="o">#</span><span class="n">sel</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span>
+    <span class="kr">return</span> <span class="o">#</span><span class="n">sel</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span>
 <span class="kr">end</span>
 </code></pre></td></tr></table>
 </div>
@@ -527,15 +527,15 @@ lua 代码中要注意的细节
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma" tabindex="0"><code class="language-lua" data-lang="lua"><span class="kd">local</span> <span class="n">slen</span> <span class="o">=</span> <span class="o">#</span><span class="n">sel</span>
-
+    
 <span class="kr">for</span> <span class="n">subi</span><span class="p">,</span> <span class="n">seli</span> <span class="kr">in</span> <span class="n">ipairs</span><span class="p">(</span><span class="n">sel</span><span class="p">)</span> <span class="kr">do</span>
-<span class="kr">if</span> <span class="n">subi</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">~=</span> <span class="mi">0</span> <span class="kr">then</span>
-<span class="c1">-- 索引是奇数，英文，加 1 再除以 2，在 sel 里取出这个索引的值.</span>
-<span class="n">sub</span><span class="p">[</span><span class="n">seli</span><span class="p">]</span> <span class="o">=</span> <span class="n">sub_backup</span><span class="p">[</span><span class="n">sel</span><span class="p">[(</span><span class="n">subi</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">]]</span>
-<span class="kr">elseif</span> <span class="n">subi</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span> <span class="kr">then</span>
-<span class="c1">-- 索引是偶数，中文，加 n 再除以 2，在 sel 里取出这个索引的值.</span>
-<span class="n">sub</span><span class="p">[</span><span class="n">seli</span><span class="p">]</span> <span class="o">=</span> <span class="n">sub_backup</span><span class="p">[</span><span class="n">sel</span><span class="p">[(</span><span class="n">subi</span> <span class="o">+</span> <span class="n">slen</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">]]</span>
-<span class="kr">end</span>
+    <span class="kr">if</span> <span class="n">subi</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">~=</span> <span class="mi">0</span> <span class="kr">then</span>
+        <span class="c1">-- 索引是奇数，英文，加 1 再除以 2，在 sel 里取出这个索引的值.</span>
+        <span class="n">sub</span><span class="p">[</span><span class="n">seli</span><span class="p">]</span> <span class="o">=</span> <span class="n">sub_backup</span><span class="p">[</span><span class="n">sel</span><span class="p">[(</span><span class="n">subi</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">]]</span>
+    <span class="kr">elseif</span> <span class="n">subi</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span> <span class="kr">then</span>
+        <span class="c1">-- 索引是偶数，中文，加 n 再除以 2，在 sel 里取出这个索引的值.</span>
+        <span class="n">sub</span><span class="p">[</span><span class="n">seli</span><span class="p">]</span> <span class="o">=</span> <span class="n">sub_backup</span><span class="p">[</span><span class="n">sel</span><span class="p">[(</span><span class="n">subi</span> <span class="o">+</span> <span class="n">slen</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">]]</span>
+    <span class="kr">end</span>
 <span class="kr">end</span>
 </code></pre></td></tr></table>
 </div>
@@ -551,9 +551,9 @@ lua 代码中要注意的细节
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma" tabindex="0"><code class="language-lua" data-lang="lua"><span class="kd">local</span> <span class="n">sub_backup</span> <span class="o">=</span> <span class="p">{}</span>
-
+    
 <span class="kr">for</span> <span class="n">subi</span><span class="p">,</span> <span class="n">seli</span> <span class="kr">in</span> <span class="n">ipairs</span><span class="p">(</span><span class="n">sel</span><span class="p">)</span> <span class="kr">do</span>
-<span class="n">sub_backup</span><span class="p">[</span><span class="n">seli</span><span class="p">]</span> <span class="o">=</span> <span class="n">sub</span><span class="p">[</span><span class="n">seli</span><span class="p">]</span>
+    <span class="n">sub_backup</span><span class="p">[</span><span class="n">seli</span><span class="p">]</span> <span class="o">=</span> <span class="n">sub</span><span class="p">[</span><span class="n">seli</span><span class="p">]</span>
 <span class="kr">end</span>
 </code></pre></td></tr></table>
 </div>
@@ -577,7 +577,7 @@ lua 代码中要注意的细节
 <span class="n">old</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'interesting'</span>        <span class="c1">--对旧的变量做一些更改</span>
 <span class="n">print</span><span class="p">(</span><span class="n">old</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">old</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">old</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span> <span class="c1">-- output：interesting 2 3</span>
 <span class="n">print</span><span class="p">(</span><span class="n">new</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">new</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">new</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span> <span class="c1">-- output：interesting 2 3</span>
-<span class="c1">--导致新的变量也同步了那个更改</span>
+                              <span class="c1">--导致新的变量也同步了那个更改</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>实际上，这样的语言有很多，大部分引用语义的语言都是传引用的. 比如 java, javascript, python. 一个 python 的例子如下：</p>
@@ -663,8 +663,8 @@ lua 代码中要注意的细节
 <td class="lntd">
 <pre class="chroma" tabindex="0"><code class="language-lua" data-lang="lua"><span class="cm">--[[
 </span><span class="cm">说明：
-</span><span class="cm">把穿插在一起的中英文字幕分开. 要求用户所选行数一定要是偶数，
-</span><span class="cm">且每行英文字幕相邻的下面一行都是其对应的中文字幕.
+</span><span class="cm">    把穿插在一起的中英文字幕分开. 要求用户所选行数一定要是偶数，
+</span><span class="cm">    且每行英文字幕相邻的下面一行都是其对应的中文字幕.
 </span><span class="cm">]]</span>
 
 <span class="n">script_name</span> <span class="o">=</span> <span class="s1">'分开穿插的双语'</span>
@@ -673,24 +673,24 @@ lua 代码中要注意的细节
 <span class="n">script_version</span> <span class="o">=</span> <span class="s1">'0.1'</span>
 
 <span class="kr">function</span> <span class="nf">seperate</span><span class="p">(</span><span class="n">sub</span><span class="p">,</span> <span class="n">sel</span><span class="p">)</span>
-<span class="kd">local</span> <span class="n">sub_backup</span> <span class="o">=</span> <span class="p">{}</span>
-<span class="kr">for</span> <span class="n">subi</span><span class="p">,</span> <span class="n">seli</span> <span class="kr">in</span> <span class="n">ipairs</span><span class="p">(</span><span class="n">sel</span><span class="p">)</span> <span class="kr">do</span>
-<span class="n">sub_backup</span><span class="p">[</span><span class="n">seli</span><span class="p">]</span> <span class="o">=</span> <span class="n">sub</span><span class="p">[</span><span class="n">seli</span><span class="p">]</span>
-<span class="kr">end</span>
-<span class="kd">local</span> <span class="n">slen</span> <span class="o">=</span> <span class="o">#</span><span class="n">sel</span>
-<span class="kr">for</span> <span class="n">subi</span><span class="p">,</span> <span class="n">seli</span> <span class="kr">in</span> <span class="n">ipairs</span><span class="p">(</span><span class="n">sel</span><span class="p">)</span> <span class="kr">do</span>
-<span class="kr">if</span> <span class="n">subi</span> <span class="o">&lt;=</span> <span class="n">slen</span> <span class="o">/</span> <span class="mi">2</span> <span class="kr">then</span>
-<span class="n">sub</span><span class="p">[</span><span class="n">seli</span><span class="p">]</span> <span class="o">=</span> <span class="n">sub_backup</span><span class="p">[</span><span class="n">sel</span><span class="p">[</span><span class="n">subi</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]]</span>
-<span class="kr">elseif</span> <span class="n">subi</span> <span class="o">&gt;</span> <span class="n">slen</span> <span class="o">/</span> <span class="mi">2</span> <span class="kr">then</span>
-<span class="n">sub</span><span class="p">[</span><span class="n">seli</span><span class="p">]</span> <span class="o">=</span> <span class="n">sub_backup</span><span class="p">[</span><span class="n">sel</span><span class="p">[</span><span class="n">subi</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">-</span> <span class="n">slen</span><span class="p">]]</span>
-<span class="kr">end</span>
-<span class="kr">end</span>
-<span class="n">aegisub.set_undo_point</span><span class="p">(</span><span class="n">script_name</span><span class="p">)</span>
-<span class="kr">return</span> <span class="n">sel</span>
+    <span class="kd">local</span> <span class="n">sub_backup</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="kr">for</span> <span class="n">subi</span><span class="p">,</span> <span class="n">seli</span> <span class="kr">in</span> <span class="n">ipairs</span><span class="p">(</span><span class="n">sel</span><span class="p">)</span> <span class="kr">do</span>
+        <span class="n">sub_backup</span><span class="p">[</span><span class="n">seli</span><span class="p">]</span> <span class="o">=</span> <span class="n">sub</span><span class="p">[</span><span class="n">seli</span><span class="p">]</span>
+    <span class="kr">end</span>
+    <span class="kd">local</span> <span class="n">slen</span> <span class="o">=</span> <span class="o">#</span><span class="n">sel</span>
+    <span class="kr">for</span> <span class="n">subi</span><span class="p">,</span> <span class="n">seli</span> <span class="kr">in</span> <span class="n">ipairs</span><span class="p">(</span><span class="n">sel</span><span class="p">)</span> <span class="kr">do</span>
+        <span class="kr">if</span> <span class="n">subi</span> <span class="o">&lt;=</span> <span class="n">slen</span> <span class="o">/</span> <span class="mi">2</span> <span class="kr">then</span>
+            <span class="n">sub</span><span class="p">[</span><span class="n">seli</span><span class="p">]</span> <span class="o">=</span> <span class="n">sub_backup</span><span class="p">[</span><span class="n">sel</span><span class="p">[</span><span class="n">subi</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]]</span>
+        <span class="kr">elseif</span> <span class="n">subi</span> <span class="o">&gt;</span> <span class="n">slen</span> <span class="o">/</span> <span class="mi">2</span> <span class="kr">then</span>
+            <span class="n">sub</span><span class="p">[</span><span class="n">seli</span><span class="p">]</span> <span class="o">=</span> <span class="n">sub_backup</span><span class="p">[</span><span class="n">sel</span><span class="p">[</span><span class="n">subi</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">-</span> <span class="n">slen</span><span class="p">]]</span>
+        <span class="kr">end</span>
+    <span class="kr">end</span>
+    <span class="n">aegisub.set_undo_point</span><span class="p">(</span><span class="n">script_name</span><span class="p">)</span>
+    <span class="kr">return</span> <span class="n">sel</span>
 <span class="kr">end</span>
 
 <span class="kr">function</span> <span class="nf">seperate_validation</span><span class="p">(</span><span class="n">sub</span><span class="p">,</span> <span class="n">sel</span><span class="p">)</span>
-<span class="kr">return</span> <span class="o">#</span><span class="n">sel</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span>
+    <span class="kr">return</span> <span class="o">#</span><span class="n">sel</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span>
 <span class="kr">end</span>
 
 <span class="n">aegisub.register_macro</span><span class="p">(</span><span class="n">script_name</span><span class="p">,</span> <span class="n">script_description</span><span class="p">,</span> <span class="n">seperate</span><span class="p">,</span> <span class="n">seperate_validation</span><span class="p">)</span>
