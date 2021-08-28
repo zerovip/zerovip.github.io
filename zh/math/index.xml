@@ -16,7 +16,7 @@
 &lt;p>不是代数数的数（实数或复数）叫&lt;strong>超越数&lt;/strong>. 常见的超越数有：&lt;span class="math inline">\(e, \pi, ...\)&lt;/span>&lt;/p>
 &lt;p>有很多数人类还不知道它是实代数数还是实超越数，比如：&lt;span class="math inline">\(\pi + e, \pi - e, \pi e, \frac{\pi}{e}, \pi^{\pi}, e^e, \pi^{e}, ...\)&lt;/span>，不过 &lt;span class="math inline">\(e^{\pi}\)&lt;/span> 是超越数.&lt;/p>
 &lt;figure>
-&lt;img src="../../images/real-numbers.png" alt="实数分类图" />&lt;figcaption aria-hidden="true">实数分类图&lt;/figcaption>
+&lt;img src="real-numbers.i.png" alt="实数分类图" />&lt;figcaption aria-hidden="true">实数分类图&lt;/figcaption>
 &lt;/figure>
 &lt;h2 id="实数的小数展开">实数的小数展开&lt;/h2>
 &lt;p>实数（在十进制下）总能写成小数的形式，可能是&lt;strong>有限小数&lt;/strong>、&lt;strong>无限循环小数&lt;/strong>（这二者统称&lt;strong>有理数&lt;/strong>），&lt;strong>无限不循环小数&lt;/strong>（也叫&lt;strong>无理数&lt;/strong>），&lt;strong>实数的小数展开&lt;/strong>就是指把实数写成小数的形式.&lt;/p>
@@ -52,18 +52,18 @@
 &lt;h2 id="形象的解释">形象的解释&lt;/h2>
 &lt;p>我们稍微形象一点来说，对任意一个代数无理数，我们可以画出它的 &lt;span class="math inline">\(n-p(n)\)&lt;/span> 图像，这个定理告诉我们，这张图像不会被限制在一条过原点的直线的下方（含这条直线）！见下面 &lt;span class="math inline">\(y = cx\)&lt;/span> 的动图，&lt;span class="math inline">\(n-p(n)\)&lt;/span> 图像不会完全被限制在黄色区域里，在足够远的地方一定会落到白色区域，且对任何斜率的直线构成的黄白色区域都成立.&lt;/p>
 &lt;figure>
-&lt;img src="../../images/y=cx.gif" alt="y = cx 示意图" />&lt;figcaption aria-hidden="true">&lt;span class="math inline">\(y = cx\)&lt;/span> 示意图&lt;/figcaption>
+&lt;img src="y=cx.i.gif" alt="y = cx 示意图" />&lt;figcaption aria-hidden="true">&lt;span class="math inline">\(y = cx\)&lt;/span> 示意图&lt;/figcaption>
 &lt;/figure>
 &lt;p>也就是说，&lt;span class="math inline">\(p(n)\)&lt;/span> 的增长速度是超过线性级别的.&lt;/p>
 &lt;h2 id="与之前结果的比较">与之前结果的比较&lt;/h2>
 &lt;p>顺带，我们也用这样形象的方法来看待之前的两个下界.&lt;/p>
 &lt;p>最原始的下界 &lt;span class="math inline">\(p(n) \ge n + 1\)&lt;/span> 是对于所有无理数来说的，是说 &lt;span class="math inline">\(n-p(n)\)&lt;/span> 曲线一定落在 &lt;span class="math inline">\(y = x + 1\)&lt;/span> 的上部（含这条直线）. 见下图，&lt;span class="math inline">\(n-p(n)\)&lt;/span> 曲线一定会完全落在白色区域内.&lt;/p>
 &lt;figure>
-&lt;img src="../../images/y=x+1.png" alt="y = x + 1 示意图" />&lt;figcaption aria-hidden="true">&lt;span class="math inline">\(y = x + 1\)&lt;/span> 示意图&lt;/figcaption>
+&lt;img src="y=x+1.i.png" alt="y = x + 1 示意图" />&lt;figcaption aria-hidden="true">&lt;span class="math inline">\(y = x + 1\)&lt;/span> 示意图&lt;/figcaption>
 &lt;/figure>
 &lt;p>把无理数范围缩小到代数无理数后得到的比较好的一个下界：【对任意（大）的一个常数 &lt;span class="math inline">\(c\)&lt;/span>，存在一个数 &lt;span class="math inline">\(N_c\in \mathbb{N}\)&lt;/span>，使得对任意 &lt;span class="math inline">\(n \ge N_c\)&lt;/span>，有 &lt;span class="math inline">\(p(n) &amp;gt; n + c\)&lt;/span> 成立】，是说&lt;span class="math inline">\(n-p(n)\)&lt;/span> 曲线一定不会被限制在某条与 &lt;span class="math inline">\(y = x + 1\)&lt;/span> 平行的直线（不含这条直线）下方. 见下面 &lt;span class="math inline">\(y = x + c\)&lt;/span> 的动图，&lt;span class="math inline">\(n-p(n)\)&lt;/span> 图像不会完全被限制在黄色区域里，在足够远的地方一定会落到白色区域，且对任何截距的直线构成的黄白色区域都成立.&lt;/p>
 &lt;figure>
-&lt;img src="../../images/y=x+c.gif" alt="y = x + c 示意图" />&lt;figcaption aria-hidden="true">&lt;span class="math inline">\(y = x + c\)&lt;/span> 示意图&lt;/figcaption>
+&lt;img src="y=x+c.i.gif" alt="y = x + c 示意图" />&lt;figcaption aria-hidden="true">&lt;span class="math inline">\(y = x + c\)&lt;/span> 示意图&lt;/figcaption>
 &lt;/figure>
 &lt;p>由此可见这个结果对原始结果的改进，以及这篇文章介绍的定理对这个结果的改进，显然后者比前者有意义得多.&lt;/p>
 &lt;h1 id="推广">推广&lt;/h1>

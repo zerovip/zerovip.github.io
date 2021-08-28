@@ -545,7 +545,7 @@ target="_blank" rel="noreferrer noopener"
 >电子生活法则&lt;/a>，时时刻刻要求自己，哪些动态可以发，每天最多发多少，不要太水，哪种视频可以上传到 Bilibili，看过电影和书必须在豆瓣上标记，必须要写足够多字数的短评. 这在一些人看来是显然的对自己高要求了，是妥妥的完美主义. 这当然是完美主义，但其实对我本人来说，倒也没有那么夸张，这就是一种由于沉没成本在里面的，越用越珍惜.&lt;/p>
 &lt;p>我有一个杯子，型号是 Elmundo EABZ-380（见下图）. 它有透明的杯身，可以方便我看到里面还有多少水；它是那种类似玻璃的硬 Tritan 材质，有一定的保温效果又不会特别保温；它有我最喜欢的提手，是那种[想用时能用][不用时可以放下来]的提手；它的造型我也喜欢，直上直下，没有弧线；它的容量有 380 ml 也是刚刚好的.&lt;/p>
 &lt;p>&lt;figure>
-&lt;img loading="lazy" src="../../../images/cup.png" alt="杯子网页"
+&lt;img loading="lazy" src="cup.png" alt="杯子网页"
 >
 &lt;figcaption>◉ 图. 杯子网页&lt;/figcaption>
 &lt;/figure>
@@ -598,7 +598,7 @@ target="_blank" rel="noreferrer noopener"
 &lt;p>我出生以前，爸爸妈妈暂时住在爷爷奶奶家，我一出生，他们就决定带着我搬出去住. 开始时，我们租了一间小小的屋子，一年后他们找到了一处房子，我们搬了过去. 妈妈辞掉工作，开始专心照顾我，我们在那个地方居住了 6 年. 我 7 岁时再次搬家并转学，然后就一直没再搬动过. 我如今 23 岁，离开我童年居住的地方已经 16 年了. 最近，我开始常常做梦梦到那个我童年居住的地方，它令我着迷. 今天是清明节假期的最后一天，春光正好，我实在按捺不住，就决定回去看看.&lt;/p>
 &lt;p>那个地方在北京市 AA 区 BB 镇，在 CC 立交桥的桥下有一条路，顺着那条路一直走就能走到我曾经的家，地址是 X 园路 114 号. 不过在找出[我一年级时按老师要求制作的人生第一份简历（下图）]之前，我都还以为那是 116 号. 我目前居住的地方离那里挺远，骑车要骑一个多小时. 我好久没锻炼了，怕自己体力不够，就坐了公交车.&lt;/p>
 &lt;p>&lt;figure>
-&lt;img loading="lazy" src="../../../images/first-cv-on-grade-one.jpg" alt="一年级的简历"
+&lt;img loading="lazy" src="first-cv-on-grade-one.jpg" alt="一年级的简历"
 >
 &lt;figcaption>◉ 图. 一年级的简历&lt;/figcaption>
 &lt;/figure>
@@ -685,7 +685,8 @@ target="_blank" rel="noreferrer noopener"
 &lt;/p>
 &lt;p>其实这么多年过去，突然回来，面对这么多房间，我一时不太确定哪一扇门的背后才是我熟悉的居住空间. 我只是凭着感觉走向那个地方，然后随便找了一扇门，忐忑地试着转动了一下门的把手，幸运的是，门能打开. 我往里面定睛一看，更幸运的是，那正是我曾经居住过的房间.&lt;/p>
 &lt;p>&lt;figure>
-&lt;img loading="lazy" src="../../../images/map-of-room.png" alt="房间平面示意图（曾经的摆设）"
+&lt;img loading="lazy" src="map-of-room.i.png" alt="房间平面示意图（曾经的摆设）"
+style="filter: var(--c-img-filter);"
 >
 &lt;figcaption>◉ 图. 房间平面示意图（曾经的摆设）&lt;/figcaption>
 &lt;/figure>
@@ -718,7 +719,8 @@ target="_blank" rel="noreferrer noopener"
 &lt;p>关好门后，我便想去曾经的厨房看一看，我对厨房的记忆只有它的位置而已，我甚至想不起来里面的布局. 我到了厨房的位置，转动门把手，却发现门被锁住了. 我感觉奇怪，把其他所有房间的门都试了一遍，发现其他任何房间的门都是锁着的. 那一瞬间，我有种后知后觉的感动，眼泪几乎流了出来——这所有的房间里，唯独通往[我曾经居住过的那些屋子]的客厅的门是没有上锁的，冥冥之中就好像是这房子为我留的一扇门，它也许知道我多年以后会再回到这里，它也许盼着我回来盼了 16 年.&lt;/p>
 &lt;p>我只能再转一转院子了.&lt;/p>
 &lt;p>&lt;figure>
-&lt;img loading="lazy" src="../../../images/map-of-yard.png" alt="院子平面示意图"
+&lt;img loading="lazy" src="map-of-yard.i.png" alt="院子平面示意图"
+style="filter: var(--c-img-filter);"
 >
 &lt;figcaption>◉ 图. 院子平面示意图&lt;/figcaption>
 &lt;/figure>

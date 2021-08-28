@@ -199,12 +199,12 @@ bspc 语句
 <pre class="chroma" tabindex="0"><code class="language-bash" data-lang="bash"><span class="c1"># .config/sxhkd/sxhkdrc</span>
 <span class="c1"># rotate the whole desktop</span>
 super + <span class="nb">shift</span> + r
-    bspc node @/ -R <span class="m">90</span>
+bspc node @/ -R <span class="m">90</span>
 
 <span class="c1"># rotate the parent of current focused</span>
 super + r
-    bspc node -f @parent<span class="p">;</span> <span class="se">\
-</span><span class="se"></span>    bspc node -R <span class="m">90</span>
+bspc node -f @parent<span class="p">;</span> <span class="se">\
+</span><span class="se"></span>bspc node -R <span class="m">90</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>然后重新载入这份配置后一试——就发现了一个 bug：<code>super + r</code> 的两条指令结束后焦点内含有两个窗口，如果重复执行 super + r ，焦点中的窗口会越来越多，参与旋转的窗口也越来越多.</p>
@@ -215,7 +215,7 @@ super + r
 </blockquote>
 <p>从这里开始上下翻一翻，看一看这两行在整个文档中处于一个什么样的位置，它的上下文语境是什么样的. 我们把整份文档简化成这种样子：</p>
 <p><figure>
-<img alt="BSPWM(1) 文档大纲" loading="lazy" src="../../images/bspwm-manpage.png"/>
+<img alt="BSPWM(1) 文档大纲" loading="lazy" src="bspwm-manpage.i.png" style="filter:var(--c-img-filter)"/>
 <figcaption>◉ 图. BSPWM(1) 文档大纲</figcaption>
 </figure>
 </p>
@@ -232,7 +232,7 @@ super + r
 <pre><code>NODE_SEL := [NODE_SEL#](DIR|CYCLE_DIR|PATH|any|first_ancestor|last|newest|
     older|newer|focused|pointed|biggest|smallest|
     &lt;node_id&gt;)[.[!]focused][.[!]active][.[!]automatic][.[!]local]
-        [.[!]leaf][.[!]window][.[!]STATE][.[!]FLAG][.[!]LAYER][.[!]SPLIT_TYPE]         
+        [.[!]leaf][.[!]window][.[!]STATE][.[!]FLAG][.[!]LAYER][.[!]SPLIT_TYPE]
         [.[!]same_class][.[!]descendant_of][.[!]ancestor_of]
 </code></pre></blockquote>
 <p>网友给出的 <code>@/</code> 是怎么来的呢？它表示什么意思呢？</p>
@@ -263,11 +263,11 @@ super + r
 <pre class="chroma" tabindex="0"><code class="language-bash" data-lang="bash"><span class="c1"># .config/sxhkd/sxhkdrc</span>
 <span class="c1"># rotate the whole desktop</span>
 super + <span class="nb">shift</span> + r
-    bspc node @/ -R <span class="m">90</span>
+bspc node @/ -R <span class="m">90</span>
 
 <span class="c1"># rotate the parent of current focused</span>
 super + r
-    bspc node @parent -R <span class="m">90</span>
+bspc node @parent -R <span class="m">90</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>还记得我们用两条语句完成 super + r 时的 bug 么？<span class="notation_color">请读者们仿照我讲解的流程自行对照文档理解 reddit 网友给的指令中 -f 的含义，并尝试直接解决这个 bug.</span></p>
@@ -295,11 +295,11 @@ super + r
 
 <span class="c1"># hide window</span>
 super + v
-    bspc node -g hidden
+bspc node -g hidden
 
 <span class="c1"># unhide window</span>
 super + <span class="nb">shift</span> + v
-    bspc node <span class="o">{</span>,<span class="k">$(</span>bspc query -N -n .hidden <span class="p">|</span> tail -n1<span class="k">)</span><span class="o">}</span> -g <span class="nv">hidden</span><span class="o">=</span>off
+bspc node <span class="o">{</span>,<span class="k">$(</span>bspc query -N -n .hidden <span class="p">|</span> tail -n1<span class="k">)</span><span class="o">}</span> -g <span class="nv">hidden</span><span class="o">=</span>off
 </code></pre></td></tr></table>
 </div>
 </div><p><span class="notation_color">请读者们用类似例一中的工作流程对照文档理解一下其中的 <code>-g</code> 命令，更关键地，请大家自己学习理解 <code>bspc query</code> 命令，把这两行完完全全搞明白. 如果你对 Linux 基础命令不熟悉，可能也要简单地学习一下，比如关于管道的知识、 <code>tail</code> 的用法等.</span></p>
@@ -326,11 +326,11 @@ super + <span class="nb">shift</span> + v
 <pre class="chroma" tabindex="0"><code class="language-bash" data-lang="bash"><span class="c1"># .config/sxhkd/sxhkdrc</span>
 <span class="c1"># focus a floating window from a tiled window</span>
 super + a
-    <span class="k">if</span> <span class="o">[</span> <span class="s2">"</span><span class="k">$(</span>bspc query -N -n focused.floating<span class="k">)</span><span class="s2">"</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span> <span class="se">\
-</span><span class="se"></span>        bspc node -f last.tiled.local<span class="p">;</span> <span class="se">\
-</span><span class="se"></span>    <span class="k">else</span> <span class="se">\
-</span><span class="se"></span>        bspc node -f last.floating.local<span class="p">;</span> <span class="se">\
-</span><span class="se"></span>    <span class="k">fi</span>
+<span class="k">if</span> <span class="o">[</span> <span class="s2">"</span><span class="k">$(</span>bspc query -N -n focused.floating<span class="k">)</span><span class="s2">"</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span> <span class="se">\
+</span><span class="se"></span>bspc node -f last.tiled.local<span class="p">;</span> <span class="se">\
+</span><span class="se"></span><span class="k">else</span> <span class="se">\
+</span><span class="se"></span>bspc node -f last.floating.local<span class="p">;</span> <span class="se">\
+</span><span class="se"></span><span class="k">fi</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>希望大家能从这个例子中理解 <code>NODE_SEL</code> 后面那一大堆中括号的作用，叹号是表示取否定哦~</p>
@@ -340,15 +340,15 @@ super + a
 </h2>
 <p>分享一个我经常用的、很多人可能会忽视的、能快速帮你梳理文档结构的一个小技巧，那就是把自动补全打开，然后经常按按 tab 键. 比如打下 bspc ，按一下 tab 键会出现 9 个候选的 command 或 domain，然后随便选一个比如 bspc node，再按一下 tab 键，等等.</p>
 <p><figure>
-<img alt="补全小技巧的示意效果图：bspc &lt;TAB&gt;" loading="lazy" src="../../images/bspc_trick1.png"/>
+<img alt="补全小技巧的示意效果图：bspc &lt;TAB&gt;" loading="lazy" src="bspc_trick1.png"/>
 <figcaption>◉ 图. 补全小技巧的示意效果图：bspc &lt;TAB&gt;</figcaption>
 </figure>
 <figure>
-<img alt="补全小技巧的示意效果图：bspc node &lt;TAB&gt;" loading="lazy" src="../../images/bspc_trick2.png"/>
+<img alt="补全小技巧的示意效果图：bspc node &lt;TAB&gt;" loading="lazy" src="bspc_trick2.png"/>
 <figcaption>◉ 图. 补全小技巧的示意效果图：bspc node &lt;TAB&gt;</figcaption>
 </figure>
 <figure>
-<img alt="补全小技巧的示意效果图：bspc node &lt;TAB&gt;&lt;TAB&gt;" loading="lazy" src="../../images/bspc_trick3.png"/>
+<img alt="补全小技巧的示意效果图：bspc node &lt;TAB&gt;&lt;TAB&gt;" loading="lazy" src="bspc_trick3.png"/>
 <figcaption>◉ 图. 补全小技巧的示意效果图：bspc node &lt;TAB&gt;&lt;TAB&gt;</figcaption>
 </figure>
 </p>
@@ -404,7 +404,7 @@ external rules
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma" tabindex="0"><code class="language-python" data-lang="python"><span class="ch">#!/usr/bin/env python                                                          </span>
+<pre class="chroma" tabindex="0"><code class="language-python" data-lang="python"><span class="ch">#!/usr/bin/env python</span>
 <span class="c1"># ~/.bin/hello-world</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">"hello!"</span><span class="p">)</span>
 </code></pre></td></tr></table>
@@ -419,8 +419,8 @@ external rules
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma" tabindex="0"><code class="language-bash" data-lang="bash"><span class="c1"># .xprofile or .xinitrc or .zprofile or ……</span>
-<span class="k">if</span> <span class="o">[</span> -d <span class="s2">"</span><span class="nv">$HOME</span><span class="s2">/.bin"</span> <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>                                                  
-    <span class="nv">PATH</span><span class="o">=</span><span class="s2">"</span><span class="nv">$HOME</span><span class="s2">/.bin:</span><span class="nv">$PATH</span><span class="s2">"</span>
+<span class="k">if</span> <span class="o">[</span> -d <span class="s2">"</span><span class="nv">$HOME</span><span class="s2">/.bin"</span> <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
+<span class="nv">PATH</span><span class="o">=</span><span class="s2">"</span><span class="nv">$HOME</span><span class="s2">/.bin:</span><span class="nv">$PATH</span><span class="s2">"</span>
 <span class="k">fi</span>
 </code></pre></td></tr></table>
 </div>
@@ -460,19 +460,19 @@ external rules
 <span class="nv">consequences</span><span class="o">=</span><span class="nv">$4</span>
 
 <span class="k">if</span> <span class="o">[</span> <span class="s2">"</span><span class="nv">$instance</span><span class="s2">"</span> <span class="o">=</span> fontforge <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
-    <span class="nv">title</span><span class="o">=</span><span class="k">$(</span>xtitle <span class="s2">"</span><span class="nv">$wid</span><span class="s2">"</span><span class="k">)</span>
-    <span class="k">case</span> <span class="s2">"</span><span class="nv">$title</span><span class="s2">"</span> in
-        Layers<span class="p">|</span>Tools<span class="p">|</span>Warning<span class="o">)</span>
-            <span class="nb">echo</span> <span class="s2">"focus=off"</span>
-            <span class="p">;;</span>
-    <span class="k">esac</span>
+<span class="nv">title</span><span class="o">=</span><span class="k">$(</span>xtitle <span class="s2">"</span><span class="nv">$wid</span><span class="s2">"</span><span class="k">)</span>
+<span class="k">case</span> <span class="s2">"</span><span class="nv">$title</span><span class="s2">"</span> in
+Layers<span class="p">|</span>Tools<span class="p">|</span>Warning<span class="o">)</span>
+<span class="nb">echo</span> <span class="s2">"focus=off"</span>
+<span class="p">;;</span>
+<span class="k">esac</span>
 <span class="k">fi</span>
 
 <span class="k">case</span> <span class="s2">"</span><span class="nv">$class</span><span class="s2">"</span> in
-    Lutris<span class="p">|</span>Liferea<span class="o">)</span>
-        <span class="nb">eval</span> <span class="s2">"</span><span class="nv">$consequences</span><span class="s2">"</span>
-        <span class="o">[</span> <span class="s2">"</span><span class="nv">$state</span><span class="s2">"</span> <span class="o">]</span> <span class="o">||</span> <span class="nb">echo</span> <span class="s2">"state=pseudo_tiled"</span>
-        <span class="p">;;</span>
+Lutris<span class="p">|</span>Liferea<span class="o">)</span>
+<span class="nb">eval</span> <span class="s2">"</span><span class="nv">$consequences</span><span class="s2">"</span>
+<span class="o">[</span> <span class="s2">"</span><span class="nv">$state</span><span class="s2">"</span> <span class="o">]</span> <span class="o">||</span> <span class="nb">echo</span> <span class="s2">"state=pseudo_tiled"</span>
+<span class="p">;;</span>
 <span class="k">esac</span>
 </code></pre></td></tr></table>
 </div>
@@ -509,21 +509,21 @@ external rules
 <span class="nv">consequences</span><span class="o">=</span><span class="nv">$4</span>
 
 <span class="nb">echo</span> -e <span class="s2">"One group: \n \
-</span><span class="s2">    window ID : </span><span class="si">${</span><span class="nv">wid</span><span class="si">}</span><span class="s2">,\n \
-</span><span class="s2">    title : </span><span class="k">$(</span>xtitle <span class="s2">"</span><span class="si">${</span><span class="nv">wid</span><span class="si">}</span><span class="s2">"</span><span class="k">)</span><span class="s2">,\n \
-</span><span class="s2">    class name : </span><span class="si">${</span><span class="nv">class</span><span class="si">}</span><span class="s2">,\n \
-</span><span class="s2">    instance name : </span><span class="si">${</span><span class="nv">instance</span><span class="si">}</span><span class="s2">,\n \
-</span><span class="s2">    intermediate consequences : </span><span class="si">${</span><span class="nv">consequences</span><span class="si">}</span><span class="s2">\n\n"</span> <span class="se">\
-</span><span class="se"></span>    &gt;&gt; /tmp/try_e_r.log
+</span><span class="s2">window ID : </span><span class="si">${</span><span class="nv">wid</span><span class="si">}</span><span class="s2">,\n \
+</span><span class="s2">title : </span><span class="k">$(</span>xtitle <span class="s2">"</span><span class="si">${</span><span class="nv">wid</span><span class="si">}</span><span class="s2">"</span><span class="k">)</span><span class="s2">,\n \
+</span><span class="s2">class name : </span><span class="si">${</span><span class="nv">class</span><span class="si">}</span><span class="s2">,\n \
+</span><span class="s2">instance name : </span><span class="si">${</span><span class="nv">instance</span><span class="si">}</span><span class="s2">,\n \
+</span><span class="s2">intermediate consequences : </span><span class="si">${</span><span class="nv">consequences</span><span class="si">}</span><span class="s2">\n\n"</span> <span class="se">\
+</span><span class="se"></span>&gt;&gt; /tmp/try_e_r.log
 </code></pre></td></tr></table>
 </div>
 </div><p>然后我们按 <code>super + Alt + r</code> 重启 bspwm，在终端下使用 <code>tail -f /tmp/try_e_r.log</code> 来监听日志文件变化. 我们对窗口进行一些操作，看看 try_e_r.log 里什么时候会有新的变化，并看看这四个参数以及使用 xtitle 得到的结果分别都是什么. 贴一下我这里的测试结果：</p>
 <p><figure>
-<img alt="external_rules 的测试结果" loading="lazy" src="../../images/ext_rule1.png"/>
+<img alt="external_rules 的测试结果" loading="lazy" src="ext_rule1.png"/>
 <figcaption>◉ 图. external_rules 的测试结果</figcaption>
 </figure>
 <figure>
-<img alt="external_rules 的测试结果" loading="lazy" src="../../images/ext_rule2.png"/>
+<img alt="external_rules 的测试结果" loading="lazy" src="ext_rule2.png"/>
 <figcaption>◉ 图. external_rules 的测试结果</figcaption>
 </figure>
 </p>
