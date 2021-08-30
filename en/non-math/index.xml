@@ -2,4 +2,157 @@
 | Zero's Ivory Tower</title><link>/en/non-math/</link><description>
 Recent Content |
 NON-MATHMATICS
-| Zero's Ivory Tower</description><generator>Hugo -- gohugo.io</generator><language>en-us</language></channel></rss>
+| Zero's Ivory Tower</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>
+2021-08-28</lastBuildDate><item><title>Make Hugo Invert Color for Images when Using a Dark Mode - Build a Theme</title><link>/en/15738/</link><pubDate>2021-08-28</pubDate><guid>/en/15738/</guid><description>&lt;p>This post will discuss the display problem of images in light / dark mode, and there are some sample images as examples. You can test their display by manually switch the theme of this site. The switcher is in the upper right corner of the left menu bar, and if you are using a phone you can tap the burger button in the upper left corner to call out the menu bar.&lt;/p>
+&lt;h1 id="the-problem">
+The problem
+&lt;a href="#the-problem">&lt;small>¶&lt;/small>&lt;/a>
+&lt;/h1>
+&lt;p>Some images have black text on a white background, which is harsh when using the dark mode:&lt;/p>
+&lt;p>&lt;figure>
+&lt;img loading="lazy" src="lorem.jpg" alt="A sample image have black text on a white background"
+>
+&lt;figcaption>◉ Figure. A sample image have black text on a white background&lt;/figcaption>
+&lt;/figure>
+&lt;/p>
+&lt;p>While some images have black text on a transparent background, which is not visible when using the dark mode:&lt;/p>
+&lt;p>&lt;figure>
+&lt;img loading="lazy" src="lorem.png" alt="A sample image have black text on a transparent background"
+>
+&lt;figcaption>◉ Figure. A sample image have black text on a transparent background&lt;/figcaption>
+&lt;/figure>
+&lt;/p>
+&lt;p>Both of these cases need the image to be inverted when the reader selects the dark mode.&lt;/p>
+&lt;h1 id="how-to-deal-with">
+How to deal with
+&lt;a href="#how-to-deal-with">&lt;small>¶&lt;/small>&lt;/a>
+&lt;/h1>
+&lt;p>The approach is using the CSS filters technique. For example, in the following code, &lt;code>.normal&lt;/code> is for the normal color and &lt;code>.inverted&lt;/code> is for the inverted color.&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-CSS" data-lang="CSS">&lt;span class="p">.&lt;/span>&lt;span class="nc">normal&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">filter&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">invert&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="kt">%&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="nc">inverted&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">filter&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">invert&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">100&lt;/span>&lt;span class="kt">%&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>We can put the above code into a CSS variable, together with the dark mode switch part. Then we edit &lt;a href="https://gohugo.io/getting-started/configuration-markup/#markdown-render-hooks"
+target="_blank" rel="noreferrer noopener"
+>render hooks&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a> in the Hugo template, one of which is for image processing, just add appropriate style to the image there.&lt;/p>
+&lt;p>About the dark mode switching function I refer to &lt;a href="https://dev.to/lampewebdev/css-quickies-css-variables-or-how-you-create-a-white-dark-theme-easily-1i0i"
+target="_blank" rel="noreferrer noopener"
+>this article&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a> in the practice. Roughly speaking, when the reader switch the site theme to dark mode, the whole &lt;code>&amp;lt;html&amp;gt;&lt;/code> container will be added a class to indicate that the page in dark mode now (&lt;code>.classList.add(&amp;quot;dark&amp;quot;)&lt;/code>); and when the reader switch to light mode, this class will be deleted (&lt;code>.classList.remove(&amp;quot;dark&amp;quot;)&lt;/code>). On the CSS’ hand, we assign different values to a same variable depending on whether the container has the &lt;code>dark&lt;/code> class. While this variable will be used for HTML elements’ styles. See the code below for details.&lt;/p>
+&lt;h1 id="the-code">
+The code
+&lt;a href="#the-code">&lt;small>¶&lt;/small>&lt;/a>
+&lt;/h1>
+&lt;p>Here is the HTML code. Give a class to the whole &lt;code>&amp;lt;html&amp;gt;&lt;/code> container:&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">html&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;theme-container&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">body&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="c">&amp;lt;!--Something…--&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">body&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">html&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Define the same variable &lt;code>--c-img-filter&lt;/code> in two different cases, depending on whether the container has the &lt;code>dark&lt;/code> class:&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-css" data-lang="css">&lt;span class="p">.&lt;/span>&lt;span class="nc">theme-container&lt;/span>&lt;span class="p">{&lt;/span>
+&lt;span class="nv">--c-img-filter&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">invert&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="kt">%&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="nc">theme-container&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nc">dark&lt;/span>&lt;span class="p">{&lt;/span>
+&lt;span class="nv">--c-img-filter&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">invert&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">100&lt;/span>&lt;span class="kt">%&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Finally let’s deal with the Hugo template:&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="c">&amp;lt;!-- layouts/_default/_markup/render-image.html --&amp;gt;&lt;/span>
+{{ $url := .Destination | safeURL }}
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">figure&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">img&lt;/span> &lt;span class="na">src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;{{ $url }}&amp;#34;&lt;/span>
+&lt;span class="err">{{&lt;/span> &lt;span class="err">$&lt;/span>&lt;span class="na">file_name_array&lt;/span> &lt;span class="na">:&lt;/span>&lt;span class="o">=&lt;/span> &lt;span class="s">split&lt;/span> &lt;span class="err">$&lt;/span>&lt;span class="na">url&lt;/span> &lt;span class="err">&amp;#34;.&amp;#34;&lt;/span> &lt;span class="err">}}&lt;/span>
+&lt;span class="err">{{&lt;/span> &lt;span class="err">$&lt;/span>&lt;span class="na">file_name_len&lt;/span> &lt;span class="na">:&lt;/span>&lt;span class="o">=&lt;/span> &lt;span class="s">len&lt;/span> &lt;span class="err">$&lt;/span>&lt;span class="na">file_name_array&lt;/span> &lt;span class="err">}}&lt;/span>
+&lt;span class="err">{{&lt;/span> &lt;span class="na">if&lt;/span> &lt;span class="na">eq&lt;/span> &lt;span class="err">(&lt;/span>&lt;span class="na">index&lt;/span> &lt;span class="err">$&lt;/span>&lt;span class="na">file_name_array&lt;/span> &lt;span class="err">(&lt;/span>&lt;span class="na">sub&lt;/span> &lt;span class="err">$&lt;/span>&lt;span class="na">file_name_len&lt;/span> &lt;span class="na">2&lt;/span>&lt;span class="err">))&lt;/span> &lt;span class="err">&amp;#34;&lt;/span>&lt;span class="na">i&lt;/span>&lt;span class="err">&amp;#34;&lt;/span> &lt;span class="err">}}&lt;/span>
+&lt;span class="na">style&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;filter: var(--c-img-filter);&amp;#34;&lt;/span>
+&lt;span class="err">{{&lt;/span> &lt;span class="na">end&lt;/span> &lt;span class="err">}}&lt;/span>
+&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">figure&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>We didn’t simply add &lt;code>style=&amp;quot;filter: var(--c-img-filter);&amp;quot;&lt;/code> to all the images. Instead, we analyze file name first. The effect we achieved is: Invert the color of images named as &lt;code>xxx.i.{png|jpg|gif|jpeg|webp|…}&lt;/code> when the reader switch to dark mode, while keep as it is for others. For example:&lt;/p>
+&lt;ul>
+&lt;li>This image is named as &lt;code>lorem.i.jpg&lt;/code>, which is black text on a white background for light mode, and white text on a black background for dark mode.&lt;/li>
+&lt;/ul>
+&lt;p>&lt;figure>
+&lt;img loading="lazy" src="lorem.i.jpg" alt="lorem.i.jpg"
+style="filter: var(--c-img-filter);"
+>
+&lt;figcaption>◉ Figure. lorem.i.jpg&lt;/figcaption>
+&lt;/figure>
+&lt;/p>
+&lt;hr>
+&lt;ul>
+&lt;li>This image is named as &lt;code>lorem.i.png&lt;/code>, which is black text on a transparent background for light mode, and white text for dark mode.&lt;/li>
+&lt;/ul>
+&lt;p>&lt;figure>
+&lt;img loading="lazy" src="lorem.i.png" alt="lorem.i.png"
+style="filter: var(--c-img-filter);"
+>
+&lt;figcaption>◉ Figure. lorem.i.png&lt;/figcaption>
+&lt;/figure>
+&lt;/p>
+&lt;hr>
+&lt;ul>
+&lt;li>This image is named as &lt;code>cat.jpg&lt;/code>, its color is normal for both light and dark mode.&lt;/li>
+&lt;/ul>
+&lt;p>&lt;figure>
+&lt;img loading="lazy" src="cat.jpg" alt="cat.jpg"
+>
+&lt;figcaption>◉ Figure. cat.jpg&lt;/figcaption>
+&lt;/figure>
+&lt;/p>
+&lt;hr></description></item></channel></rss>
