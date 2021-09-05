@@ -11,6 +11,7 @@ The problem
 &lt;p>Some images have black text on a white background, which is harsh when using the dark mode:&lt;/p>
 &lt;p>&lt;figure>
 &lt;img loading="lazy" src="lorem.jpg" alt="A sample image have black text on a white background"
+style="filter: var(--c-img-filter2)"
 >
 &lt;figcaption>◉ Figure. A sample image have black text on a white background&lt;/figcaption>
 &lt;/figure>
@@ -18,6 +19,7 @@ The problem
 &lt;p>While some images have black text on a transparent background, which is not visible when using the dark mode:&lt;/p>
 &lt;p>&lt;figure>
 &lt;img loading="lazy" src="lorem.png" alt="A sample image have black text on a transparent background"
+style="filter: var(--c-img-filter2)"
 >
 &lt;figcaption>◉ Figure. A sample image have black text on a transparent background&lt;/figcaption>
 &lt;/figure>
@@ -151,6 +153,7 @@ style="filter: var(--c-img-filter);"
 &lt;/ul>
 &lt;p>&lt;figure>
 &lt;img loading="lazy" src="cat.jpg" alt="cat.jpg"
+style="filter: var(--c-img-filter2)"
 >
 &lt;figcaption>◉ Figure. cat.jpg&lt;/figcaption>
 &lt;/figure>

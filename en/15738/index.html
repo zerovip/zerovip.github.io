@@ -8,7 +8,7 @@
 Make Hugo Invert Color for Images when Using a Dark Mode - Build a Theme
 | Zero's Ivory Tower
 </title>
-<link href="../../css/base.min.aa17428469df8d07fe87bc565ef5bf7712c37fbf3a894bf6a61bcfe0813e03e2.css" rel="stylesheet" type="text/css"/>
+<link href="../../css/base.min.7a1b5c1c1d7e43ac09f0cd1df239e034cbdf5fa7439794fb7b5fe1225963173c.css" rel="stylesheet" type="text/css"/>
 <link href="../../css/small.min.fc3c637453c4bb37cfe95f39f0a9bd491c0f8186e381262a1fde3fd405e376d9.css" media="screen and (max-width: 1200px)" rel="stylesheet" type="text/css"/>
 <link href="../../css/normal.min.87ca6c8fd77d7c0e32a8b8cd398fdc5de88c7a2bf7315fef839791ffed301990.css" media="screen and (min-width: 1201px)" rel="stylesheet" type="text/css"/>
 <script src="../../js/ctheme.min.2b9744ea6df95f636aae562954ce13add68a9c7b99203c9ac1aa4671b6238958.js" type="text/javascript"></script>
@@ -133,13 +133,13 @@ The problem
 </h1>
 <p>Some images have black text on a white background, which is harsh when using the dark mode:</p>
 <p><figure>
-<img alt="A sample image have black text on a white background" loading="lazy" src="lorem.jpg"/>
+<img alt="A sample image have black text on a white background" loading="lazy" src="lorem.jpg" style="filter:var(--c-img-filter2)"/>
 <figcaption>◉ Figure. A sample image have black text on a white background</figcaption>
 </figure>
 </p>
 <p>While some images have black text on a transparent background, which is not visible when using the dark mode:</p>
 <p><figure>
-<img alt="A sample image have black text on a transparent background" loading="lazy" src="lorem.png"/>
+<img alt="A sample image have black text on a transparent background" loading="lazy" src="lorem.png" style="filter:var(--c-img-filter2)"/>
 <figcaption>◉ Figure. A sample image have black text on a transparent background</figcaption>
 </figure>
 </p>
@@ -265,7 +265,7 @@ The code
 <li>This image is named as <code>cat.jpg</code>, its color is normal for both light and dark mode.</li>
 </ul>
 <p><figure>
-<img alt="cat.jpg" loading="lazy" src="cat.jpg"/>
+<img alt="cat.jpg" loading="lazy" src="cat.jpg" style="filter:var(--c-img-filter2)"/>
 <figcaption>◉ Figure. cat.jpg</figcaption>
 </figure>
 </p>

@@ -11,6 +11,7 @@
 &lt;p>有些图片是白底黑字，在暗色主题下刺眼：&lt;/p>
 &lt;p>&lt;figure>
 &lt;img loading="lazy" src="lorem.jpg" alt="白底黑字的示例图"
+style="filter: var(--c-img-filter2)"
 >
 &lt;figcaption>◉ 图. 白底黑字的示例图&lt;/figcaption>
 &lt;/figure>
@@ -18,6 +19,7 @@
 &lt;p>有些图片是透明背景黑字，在暗色主题下看不清：&lt;/p>
 &lt;p>&lt;figure>
 &lt;img loading="lazy" src="lorem.png" alt="透明背景黑字的示例图"
+style="filter: var(--c-img-filter2)"
 >
 &lt;figcaption>◉ 图. 透明背景黑字的示例图&lt;/figcaption>
 &lt;/figure>
@@ -151,6 +153,7 @@ style="filter: var(--c-img-filter);"
 &lt;/ul>
 &lt;p>&lt;figure>
 &lt;img loading="lazy" src="cat.jpg" alt="cat.jpg"
+style="filter: var(--c-img-filter2)"
 >
 &lt;figcaption>◉ 图. cat.jpg&lt;/figcaption>
 &lt;/figure>
@@ -6544,16 +6547,19 @@ super + a
 &lt;p>分享一个我经常用的、很多人可能会忽视的、能快速帮你梳理文档结构的一个小技巧，那就是把自动补全打开，然后经常按按 tab 键. 比如打下 bspc ，按一下 tab 键会出现 9 个候选的 command 或 domain，然后随便选一个比如 bspc node，再按一下 tab 键，等等.&lt;/p>
 &lt;p>&lt;figure>
 &lt;img loading="lazy" src="bspc_trick1.png" alt="补全小技巧的示意效果图：bspc &amp;lt;TAB&amp;gt;"
+style="filter: var(--c-img-filter2)"
 >
 &lt;figcaption>◉ 图. 补全小技巧的示意效果图：bspc &amp;lt;TAB&amp;gt;&lt;/figcaption>
 &lt;/figure>
 &lt;figure>
 &lt;img loading="lazy" src="bspc_trick2.png" alt="补全小技巧的示意效果图：bspc node &amp;lt;TAB&amp;gt;"
+style="filter: var(--c-img-filter2)"
 >
 &lt;figcaption>◉ 图. 补全小技巧的示意效果图：bspc node &amp;lt;TAB&amp;gt;&lt;/figcaption>
 &lt;/figure>
 &lt;figure>
 &lt;img loading="lazy" src="bspc_trick3.png" alt="补全小技巧的示意效果图：bspc node &amp;lt;TAB&amp;gt;&amp;lt;TAB&amp;gt;"
+style="filter: var(--c-img-filter2)"
 >
 &lt;figcaption>◉ 图. 补全小技巧的示意效果图：bspc node &amp;lt;TAB&amp;gt;&amp;lt;TAB&amp;gt;&lt;/figcaption>
 &lt;/figure>
@@ -6741,11 +6747,13 @@ target="_blank" rel="noreferrer noopener"
 &lt;/div>&lt;p>然后我们按 &lt;code>super + Alt + r&lt;/code> 重启 bspwm，在终端下使用 &lt;code>tail -f /tmp/try_e_r.log&lt;/code> 来监听日志文件变化. 我们对窗口进行一些操作，看看 try_e_r.log 里什么时候会有新的变化，并看看这四个参数以及使用 xtitle 得到的结果分别都是什么. 贴一下我这里的测试结果：&lt;/p>
 &lt;p>&lt;figure>
 &lt;img loading="lazy" src="ext_rule1.png" alt="external_rules 的测试结果"
+style="filter: var(--c-img-filter2)"
 >
 &lt;figcaption>◉ 图. external_rules 的测试结果&lt;/figcaption>
 &lt;/figure>
 &lt;figure>
 &lt;img loading="lazy" src="ext_rule2.png" alt="external_rules 的测试结果"
+style="filter: var(--c-img-filter2)"
 >
 &lt;figcaption>◉ 图. external_rules 的测试结果&lt;/figcaption>
 &lt;/figure>
@@ -7896,6 +7904,7 @@ target="_blank" rel="noreferrer noopener"
 &lt;p>当然这里的用法是用了这个短语的本意，即撒盐，但它背后的逻辑其实是这个被大家熟知的短语或者说是这个习俗，如果不了解的话看到这里会有点懵的.&lt;/p>
 &lt;p>&lt;figure>
 &lt;img loading="lazy" src="heidi.png" alt="海蒂"
+style="filter: var(--c-img-filter2)"
 >
 &lt;figcaption>◉ 图. 海蒂&lt;/figcaption>
 &lt;/figure>
@@ -8059,6 +8068,7 @@ style="filter: var(--c-img-filter);"
 &lt;p>我看了看维基百科 Horse Teeth 那个词条，反正整体就特别复杂，简单来说，马的牙齿有好多种好多种形状，而且马在几岁时长什么形状的牙齿，几岁时什么形状的牙齿又会脱落都是固定的，有经验的养马的人通过牙齿就能判断马的年龄. 其中有一种形状的牙齿，在马 15 岁之后不会脱落，而且长的速度比磨损的速度还快，所以这种牙齿就越长越长，而且它越长就说明那匹马越老，毕竟有那种牙齿就已经 15 岁起步了. 这么看来，这个短语来指代“老的，上了年纪的”，还是挺合适的了.&lt;/p>
 &lt;p>&lt;figure>
 &lt;img loading="lazy" src="horse-teeth.jpg" alt="马的牙齿"
+style="filter: var(--c-img-filter2)"
 >
 &lt;figcaption>◉ 图. 马的牙齿&lt;/figcaption>
 &lt;/figure>
@@ -8124,6 +8134,7 @@ target="_blank" rel="noreferrer noopener"
 &lt;p>这里举一个例子，下面这张图是 1981 年 11 月 &lt;em>Field &amp;amp; Stream&lt;/em> 期刊中的第 25 页，是一张汽车的广告，在广告的右下角，就用小字写着：“&lt;strong>Your mileage may vary&lt;/strong> due to speed, trip length, weather. Actual highway mileage will probably be less.”&lt;/p>
 &lt;p>&lt;figure>
 &lt;img loading="lazy" src="YMMV.png" alt="YMMV 在汽车广告中的例子"
+style="filter: var(--c-img-filter2)"
 >
 &lt;figcaption>◉ 图. YMMV 在汽车广告中的例子&lt;/figcaption>
 &lt;/figure>
@@ -8283,6 +8294,7 @@ target="_blank" rel="noreferrer noopener"
 &lt;p>来源于综艺节目《周六夜现场》中的一个角色，由 Rachel Dratch 扮演.（见下图）&lt;/p>
 &lt;p>&lt;figure>
 &lt;img loading="lazy" src="debbie-downer.jpg" alt="Debbie Downer"
+style="filter: var(--c-img-filter2)"
 >
 &lt;figcaption>◉ 图. Debbie Downer&lt;/figcaption>
 &lt;/figure>
@@ -8389,6 +8401,7 @@ style="display: none;"
 &lt;/h2>
 &lt;p>&lt;figure>
 &lt;img loading="lazy" src="example.jpeg" alt="示例图片"
+style="filter: var(--c-img-filter2)"
 >
 &lt;figcaption>◉ 图. 示例图片&lt;/figcaption>
 &lt;/figure>
@@ -8955,6 +8968,7 @@ target="_blank" rel="noreferrer noopener"
 &lt;p>我的验光结果如下，在考虑每次验光的流程、试戴感受，并对数据进行了细致分析后，我最终选择了 D 的数据作为配镜数据.&lt;/p>
 &lt;p>&lt;figure>
 &lt;img loading="lazy" src="optometry-result.png" alt="验光结果图"
+style="filter: var(--c-img-filter2)"
 >
 &lt;figcaption>◉ 图. 验光结果图&lt;/figcaption>
 &lt;/figure>
