@@ -10859,7 +10859,8 @@ target="_blank" rel="noreferrer noopener"
 target="_blank" rel="noreferrer noopener"
 >脚本&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a>来做这件事.）&lt;/li>
 &lt;li>&lt;input disabled="" type="checkbox"> 用 pandoc 渲染的文章也没法用 render hooks 的问题.(11)&lt;/li>
-&lt;li>&lt;input disabled="" type="checkbox"> utterence 评论插件的主题更换脚本应在加载完成后运行.&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> utterence 评论插件的主题更换脚本应在加载完成后运行. 或者干脆用 invert 的办法暴力转换算了……&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> 无障碍友好问题需要关注！重新配色以方便色盲和色弱，以及多多使用 HTML 5 无障碍标签，让使用 TalkBack 的人可以方便使用.（需亲身测试）&lt;/li>
 &lt;/ol>
 &lt;section class="footnotes" role="doc-endnotes">
 &lt;hr>
