@@ -9,8 +9,8 @@ Films regardés
 | La Tour D'ivoire De Zéro
 </title>
 <link href="../../../css/base.min.7a1b5c1c1d7e43ac09f0cd1df239e034cbdf5fa7439794fb7b5fe1225963173c.css" rel="stylesheet" type="text/css"/>
-<link href="../../../css/small.min.fc3c637453c4bb37cfe95f39f0a9bd491c0f8186e381262a1fde3fd405e376d9.css" media="screen and (max-width: 1200px)" rel="stylesheet" type="text/css"/>
-<link href="../../../css/normal.min.87ca6c8fd77d7c0e32a8b8cd398fdc5de88c7a2bf7315fef839791ffed301990.css" media="screen and (min-width: 1201px)" rel="stylesheet" type="text/css"/>
+<link href="../../../css/small.min.9f91d0cbba2fd9a7efa0f3b6e1b750e35302c345dc218506021015018963a45b.css" media="screen and (max-width: 1200px)" rel="stylesheet" type="text/css"/>
+<link href="../../../css/normal.min.29c94953c6395be6c1d1adf45a3dd9daa8fd7559e206478edacd0d3e237aaae9.css" media="screen and (min-width: 1201px)" rel="stylesheet" type="text/css"/>
 <script src="../../../js/ctheme.min.2b9744ea6df95f636aae562954ce13add68a9c7b99203c9ac1aa4671b6238958.js" type="text/javascript"></script>
 <link href="../../../css/syntax.min.ed5b37c3a50997d5ccd8b81bf0d00a7ac1f92c82985623c2dbf0cb422596726a.css" rel="stylesheet" type="text/css"/>
 <script type="application/javascript">var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-143006759-1','auto'),ga('send','pageview'))</script>
@@ -18,7 +18,7 @@ Films regardés
 <script async="" data-goatcounter="https://zerovip.goatcounter.com/count" src="//gc.zgo.at/count.js"></script>
 </head>
 <body>
-<div class="bar_for_phone">
+<nav class="bar_for_phone">
 <div class="bar_left_button">
 <div class="left_button_for_bar" onclick="ChangeClassLeft()">
 <div class="bar1"></div>
@@ -32,46 +32,47 @@ Films regardés
 <div class="bar_right_button">
 <button class="toc_title_for_bar" onclick="ChangeClassTOC()">Table des Matières</button>
 </div>
-</div>
+</nav>
 <div class="body_for_pc">
-<div class="left" id="left">
+<aside class="left" id="left">
 <div class="left_non-footer">
 <div class="left_non-footer_option">
-<div class="theme-switch">
+<command class="left_non-footer_option_theme-switch">
 <label class="switch">
-<input checked="" class="theme-switcher" onchange="themeSwitch()" type="checkbox"/>
+<input class="theme-switcher" onchange="themeSwitch()" type="checkbox"/>
 <span class="slider round"></span>
 </label>
-</div>
-<li><br/></li>
-<li class="left_non-footer_option_non-active">
+</command>
+<ul class="left_non-footer_option_language" role="radiogroup">
+<li aria-checked="false" class="left_non-footer_option_non-active" role="radio">
 <a href="../../../zh/record/film/">
 简体中文 ○
 </a>
 </li>
-<li class="left_non-footer_option_non-active">
+<li aria-checked="false" class="left_non-footer_option_non-active" role="radio">
 <a href="../../../en/record/film/">
 English ○
 </a>
 </li>
-<li class="left_non-footer_option_active">
+<li aria-checked="true" class="left_non-footer_option_active" role="radio">
 Français ⦿
 </li>
-<li><br/></li>
+</ul>
+<command class="left_non-footer_option_rss">
 <li class="left_non-footer_option_non-active">
 Flux RSS ⊠
 </li>
-<li><br/></li>
+</command>
 </div>
-<div class="left_non-footer_head">
+<header class="left_non-footer_head">
 <div class="left_non-footer_head_title">
 <a href="../../../fr/">
 La Tour D'ivoire De Zéro
 </a>
 </div>
 <div class="left_non-footer_head_subtitle">(●’◡’●)ﾉ</div>
-</div>
-<div class="left_non-footer_main">
+</header>
+<nav class="left_non-footer_main">
 <div class="h1">
 <a href="../../../fr/math/">MATHÉMATIQUES</a>
 </div>
@@ -111,26 +112,26 @@ La Tour D'ivoire De Zéro
 <div class="h2">
 <a href="../../../fr/about/site/">À Propos De Ce Site </a>
 </div>
+</nav>
 </div>
-</div>
-<div class="left_footer">
+<footer class="left_footer">
 <div class="copyright">©2019-2021 Tous Droits Réservés.</div>
-</div>
-</div>
+</footer>
+</aside>
 <div class="right" onclick="HideBothSide()">
-<div class="right_head">
+<header class="right_head">
 <div class="right_head_title">
 Films regardés
 </div>
 <div class="right_head_des">
-1 janvier 2010 - 2 mots
+<time>1 janvier 2010</time> - 2 mots
 </div>
-</div>
+</header>
 <div class="right_main">
-<div class="right_main_article">
+<article class="right_main_article">
 <p>Films Regardés.</p>
 <p></p><p></p><p></p><p></p>
-</div>
+</article>
 <p style="color:var(--c-read);margin:auto">🞗🞗🞗🞗🞗</p>
 <p style="color:var(--c-read);margin:auto">j’ai regardé 2 films ou séries télévisées au total:</p>
 <p style="color:var(--c-read);margin:auto"> (mon score moyen est: 0,00)</p>

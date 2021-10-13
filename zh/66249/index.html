@@ -9,8 +9,8 @@
 | 赤赤的象牙塔
 </title>
 <link href="../../css/base.min.7a1b5c1c1d7e43ac09f0cd1df239e034cbdf5fa7439794fb7b5fe1225963173c.css" rel="stylesheet" type="text/css"/>
-<link href="../../css/small.min.fc3c637453c4bb37cfe95f39f0a9bd491c0f8186e381262a1fde3fd405e376d9.css" media="screen and (max-width: 1200px)" rel="stylesheet" type="text/css"/>
-<link href="../../css/normal.min.87ca6c8fd77d7c0e32a8b8cd398fdc5de88c7a2bf7315fef839791ffed301990.css" media="screen and (min-width: 1201px)" rel="stylesheet" type="text/css"/>
+<link href="../../css/small.min.9f91d0cbba2fd9a7efa0f3b6e1b750e35302c345dc218506021015018963a45b.css" media="screen and (max-width: 1200px)" rel="stylesheet" type="text/css"/>
+<link href="../../css/normal.min.29c94953c6395be6c1d1adf45a3dd9daa8fd7559e206478edacd0d3e237aaae9.css" media="screen and (min-width: 1201px)" rel="stylesheet" type="text/css"/>
 <script src="../../js/ctheme.min.2b9744ea6df95f636aae562954ce13add68a9c7b99203c9ac1aa4671b6238958.js" type="text/javascript"></script>
 <link href="../../css/syntax.min.ed5b37c3a50997d5ccd8b81bf0d00a7ac1f92c82985623c2dbf0cb422596726a.css" rel="stylesheet" type="text/css"/>
 <script type="application/javascript">var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-143006759-1','auto'),ga('send','pageview'))</script>
@@ -18,7 +18,7 @@
 <script async="" data-goatcounter="https://zerovip.goatcounter.com/count" src="//gc.zgo.at/count.js"></script>
 </head>
 <body>
-<div class="bar_for_phone">
+<nav class="bar_for_phone">
 <div class="bar_left_button">
 <div class="left_button_for_bar" onclick="ChangeClassLeft()">
 <div class="bar1"></div>
@@ -32,42 +32,43 @@
 <div class="bar_right_button">
 <button class="toc_title_for_bar" onclick="ChangeClassTOC()">目录</button>
 </div>
-</div>
+</nav>
 <div class="body_for_pc">
-<div class="left" id="left">
+<aside class="left" id="left">
 <div class="left_non-footer">
 <div class="left_non-footer_option">
-<div class="theme-switch">
+<command class="left_non-footer_option_theme-switch">
 <label class="switch">
-<input checked="" class="theme-switcher" onchange="themeSwitch()" type="checkbox"/>
+<input class="theme-switcher" onchange="themeSwitch()" type="checkbox"/>
 <span class="slider round"></span>
 </label>
-</div>
-<li><br/></li>
-<li class="left_non-footer_option_active">
+</command>
+<ul class="left_non-footer_option_language" role="radiogroup">
+<li aria-checked="true" class="left_non-footer_option_active" role="radio">
 简体中文 ⦿
 </li>
-<li class="left_non-footer_option_non-active">
+<li aria-checked="disabled" class="left_non-footer_option_non-active" role="radio">
 English ⨂
 </li>
-<li class="left_non-footer_option_non-active">
+<li aria-checked="disabled" class="left_non-footer_option_non-active" role="radio">
 Français ⨂
 </li>
-<li><br/></li>
+</ul>
+<command class="left_non-footer_option_rss">
 <li class="left_non-footer_option_non-active">
 RSS 订阅 ⊠
 </li>
-<li><br/></li>
+</command>
 </div>
-<div class="left_non-footer_head">
+<header class="left_non-footer_head">
 <div class="left_non-footer_head_title">
 <a href="../../zh/">
 赤赤的象牙塔
 </a>
 </div>
 <div class="left_non-footer_head_subtitle">(●’◡’●)ﾉ</div>
-</div>
-<div class="left_non-footer_main">
+</header>
+<nav class="left_non-footer_main">
 <div class="h1 active">
 <a href="../../zh/math/">数学</a>
 </div>
@@ -107,26 +108,26 @@ RSS 订阅 ⊠
 <div class="h2">
 <a href="../../zh/about/site/">关于本站 </a>
 </div>
+</nav>
 </div>
-</div>
-<div class="left_footer">
+<footer class="left_footer">
 <div class="copyright">©2019-2021 版权所有.</div>
-</div>
-</div>
+</footer>
+</aside>
 <div class="right" onclick="HideBothSide()">
-<div class="right_head">
+<header class="right_head">
 <div class="right_head_title">
 一阶逻辑语言学习笔记
 </div>
 <div class="right_head_des">
-2019年7月12日 - 261 字
+<time>2019年7月12日</time> - 261 字
 </div>
-</div>
+</header>
 <div class="right_main">
-<div class="right_main_article">
+<article class="right_main_article">
 <p>这是我这两天自学一阶逻辑语言的一份笔记，内容不多，非常简单，也非常符合直觉，主要是一些定义之类的，展示了数学是如何被建立起来的. 它解决了我关于命题否定的一些疑惑，对我学习数学已经完全够用了，所以更高级的内容比如哥德尔的定理等因为暂时不会影响到我学习数学，就没有再细看了，如果以后有时间看一看的话会继续在这里写. 这份笔记的亮点之一在于直接总结一阶逻辑，比较明快；我参考的书是先讲了命题逻辑，又往里加一阶逻辑，两个逻辑体系的建立有些不同所以有种做了无用功的感觉. 亮点之二在于最后一阶逻辑语言转化到数学语言的部分是我自己总结的.</p>
 <p></p><p></p><p></p><p></p>
-</div>
+</article>
 <div class="right_main_notes">
 <p>如果没有显示，请点击<a href="logic.pdf">这里</a>下载.</p>
 <embed height="800" src="logic.pdf" type="application/pdf" width="100%">
@@ -137,12 +138,12 @@ RSS 订阅 ⊠
 <script async="" crossorigin="anonymous" issue-term="pathname" repo="zerovip/bcsu" src="https://utteranc.es/client.js" theme="github-light"></script>
 </div>
 </div>
-<div class="toc" id="toc">
+<aside class="toc" id="toc">
 <button class="toc_title">目录</button>
 <div class="toc_content">
 <nav id="TableOfContents"></nav>
 </div>
-</div>
+</aside>
 </div>
 <script src="../../js/main.min.09f704e0a8070b3bf9bceadff3f53e38344d199eb99f6a52643c082c23945ce5.js" type="text/javascript"></script>
 </body>
