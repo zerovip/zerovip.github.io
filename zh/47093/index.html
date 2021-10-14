@@ -122,7 +122,7 @@ RSS 订阅 ⊠
 代数无理数的小数展开 - 21 世纪的定理
 </div>
 <div class="right_head_des">
-<time>2019年7月14日</time> - 2980 字
+<time>2019年7月14日</time> - 2982 字
 </div>
 </header>
 <div class="right_main">
@@ -154,16 +154,16 @@ RSS 订阅 ⊠
 <h2 id="关于-pn-的界限的估计">关于 <span class="math inline">\(p(n)\)</span> 的界限的估计</h2>
 <p>对于有理数的小数展开，一定存在一个常数 <span class="math inline">\(B\)</span>，使得对 <span class="math inline">\(\forall n, 0 \le p(n) \le B\)</span>（上下界均无法再更好），这是比较简单的部分. 对于无理数的小数展开，我们来估计 <span class="math inline">\(p(n)\)</span> 的界限.</p>
 <h3 id="无理数小数展开的-pn-的下界">无理数小数展开的 <span class="math inline">\(p(n)\)</span> 的下界</h3>
-<p>首先，<span class="math inline">\(p(n)\)</span> 的下界，<span class="math inline">\(p(n) \ge n + 1\)</span>. <span class="notation_color">[证明待补充.]</span> 这个下界不能再大，比如，令 <span class="math inline">\(S_0 = 0\)</span>，<span class="math inline">\(S_1 = 01\)</span>，<span class="math inline">\(S_2 = S_1\cup S_0 = 010\)</span>，<span class="math inline">\(S_3 = S_2\cup S_1 = 01001\)</span>， …，<span class="math inline">\(S_n = S_{n-1}\cup S_{n-2}, n \ge 2\)</span>，则按照这个规则生成的 <span class="math inline">\(S_n\)</span> 作为小数部分，<span class="math inline">\(0\)</span> 为整数得到的实数 <span class="math inline">\(\alpha = 0.010010100100101001010...\)</span>，它的</p>
+<p>首先，<span class="math inline">\(p(n)\)</span> 的下界，<span class="math inline">\(p(n) \ge n + 1\)</span>. <mark class="notation_color">[证明待补充.]</mark> 这个下界不能再大，比如，令 <span class="math inline">\(S_0 = 0\)</span>，<span class="math inline">\(S_1 = 01\)</span>，<span class="math inline">\(S_2 = S_1\cup S_0 = 010\)</span>，<span class="math inline">\(S_3 = S_2\cup S_1 = 01001\)</span>， …，<span class="math inline">\(S_n = S_{n-1}\cup S_{n-2}, n \ge 2\)</span>，则按照这个规则生成的 <span class="math inline">\(S_n\)</span> 作为小数部分，<span class="math inline">\(0\)</span> 为整数得到的实数 <span class="math inline">\(\alpha = 0.010010100100101001010...\)</span>，它的</p>
 <ul>
 <li><span class="math inline">\(p(1) = 2\)</span>（长度为 <span class="math inline">\(1\)</span> 的片段有且只有 <span class="math inline">\(0, 1\)</span>）</li>
 <li><span class="math inline">\(p(2) = 3\)</span>（长度为 <span class="math inline">\(2\)</span> 的片段有且只有 <span class="math inline">\(00, 01, 10\)</span>）</li>
 <li><span class="math inline">\(p(3) = 4\)</span>（长度为 <span class="math inline">\(3\)</span> 的片段有且只有 <span class="math inline">\(001, 010, 100, 101\)</span>）</li>
 <li><span class="math inline">\(p(4) = 5\)</span>（长度为 <span class="math inline">\(4\)</span> 的片段有且只有 <span class="math inline">\(0010, 0100, 1001, 0101, 1010\)</span>）</li>
 </ul>
-<p>实际上这个实数的小数展开就有，<span class="math inline">\(p(n) = n + 1\)</span>.<span class="notation_color">[证明待补充]</span></p>
+<p>实际上这个实数的小数展开就有，<span class="math inline">\(p(n) = n + 1\)</span>.<mark class="notation_color">[证明待补充]</mark></p>
 <h3 id="无理数小数展开的-pn-的上界">无理数小数展开的 <span class="math inline">\(p(n)\)</span> 的上界</h3>
-<p>其次，<span class="math inline">\(p(n)\)</span> 的上界. 首先我们可以容易地得到，<span class="math inline">\(p(n) \le 10^n\)</span>，但这个上界能不能再小呢？<span class="notation_color">[待补充]</span></p>
+<p>其次，<span class="math inline">\(p(n)\)</span> 的上界. 首先我们可以容易地得到，<span class="math inline">\(p(n) \le 10^n\)</span>，但这个上界能不能再小呢？<mark class="notation_color">[证明待补充]</mark></p>
 <h3 id="代数无理数小数展开的-pn-的下界">代数无理数小数展开的 <span class="math inline">\(p(n)\)</span> 的下界</h3>
 <p>上面界限的估计让我们觉得非常粗糙，这时我们可以把无理数缩小范围到代数无理数，对代数无理数小数展开的 <span class="math inline">\(p(n)\)</span> 做界限估计，看看能不能得到更精细的结果.</p>
 <p>第一个结果就是：一个代数无理数的小数展开，对任意（大）的一个常数 <span class="math inline">\(c\)</span>，存在一个数 <span class="math inline">\(N_c\in \mathbb{N}\)</span>，使得对任意 <span class="math inline">\(n \ge N_c\)</span>，有 <span class="math inline">\(p(n) &gt; n + c\)</span> 成立. 这个结果显然比之前无理数的结果 <span class="math inline">\(p(n) \ge n + 1\)</span> 更好（下界变大）了，因为当我们取 <span class="math inline">\(c = 1\)</span> 时，不会有一个代数无理数的小数展开使得之前结果中的“等号”恒成立了. 同时反过来看，上面定义的无理数 <span class="math inline">\(\alpha\)</span> 对之前结果中的“等号”恒成立，因此我们可以知道实数 <span class="math inline">\(\alpha\)</span> 不是一个代数数而是一个超越无理数.</p>
@@ -193,7 +193,7 @@ RSS 订阅 ⊠
 <p>这个定理其实可以推广到任意 <span class="math inline">\(b\)</span> 进制（<span class="math inline">\(b \ge 2\)</span>），而不一定非要是十进制. 在任意进制下的代数无理数的小数展开都是满足上面的定理的，<span class="math inline">\(p(n)\)</span> 也类似地定义即可.</p>
 <h1 id="对原文的一些深入学习">对原文的一些深入学习</h1>
 <p>原文是：B. Adamczewski and Y. Bugeaud, On the complexity of algebraic numbers I. Expansions in integer bases, Annals of Mathematics 165-2, (2007), 547–565.</p>
-<p><span class="notation_color">深入学习待补充.</span></p>
+<p><mark class="notation_color">深入学习待补充.</mark></p>
 <section class="footnotes" role="doc-endnotes">
 <hr/>
 <ol>

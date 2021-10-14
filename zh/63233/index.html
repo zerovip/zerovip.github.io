@@ -125,11 +125,11 @@ bspwm 入门
 </header>
 <div class="right_main">
 <article class="right_main_article">
-<div class="notation_color">
+<div class="notation_color" role="mark">
 <p>本文首发于 bilibili：<a href="https://www.bilibili.com/read/cv7417123" rel="noreferrer noopener" target="_blank">bspwm 入门<b><sub>⧉</sub></b></a>. 考虑到 b 站的专栏格式非常差，链接不支持、代码格式也不支持. 另外自己写的东西放在一个商业公司的平台上不如放在自己手里，所以在这里也发一份.</p></div>
 <p>在<a href="https://www.bilibili.com/video/BV1kZ4y1u7dw" rel="noreferrer noopener" target="_blank">我之前的视频（BV1kZ4y1u7dw）<b><sub>⧉</sub></b></a>中我简单介绍了 bspwm 并展示了一些它自带的例子中的功能. 但那个视频只是一个简单介绍，其本质是一个安利，目标观众是使用其他 wm 或不使用 wm 的路人；那么针对被我成功安利决定来体验体验 bspwm 的新用户呢，我决定写这样一篇专栏，帮助大家入门 bspwm. 因此这篇文章的目标读者是<strong>正在使用或准备使用 bspwm 的用户</strong>，需要的前置知识为<strong>我上个视频中讲到的基本概念</strong>.</p>
 <p>在这篇文章中，我会先对之前的视频做一些补充说明；然后我会举三个例子讲解一下怎么写简单的 bspc 语句来实现简单的功能，帮助大家巩固练习阅读文档的能力；接着我会讲一下 bspwm 自带的例子中的其他有趣的东西，包括 rules（规则）、panel（面板） 和 receptacle（容器）等；最后再随便谈点哲学.</p>
-<p><span class="notation_color">这种带高亮的文字是对读者的建议或指示，可以作为练习.</span></p>
+<p><mark class="notation_color">这种带高亮的文字是对读者的建议或指示，可以作为练习.</mark></p>
 <h1 id="对之前视频的补充说明">
 对之前视频的补充说明
 <a href="#%e5%af%b9%e4%b9%8b%e5%89%8d%e8%a7%86%e9%a2%91%e7%9a%84%e8%a1%a5%e5%85%85%e8%af%b4%e6%98%8e"><small>¶</small></a>
@@ -175,7 +175,7 @@ bspwm 入门
 bspc 语句
 <a href="#bspc-%e8%af%ad%e5%8f%a5"><small>¶</small></a>
 </h1>
-<p><span class="notation_color">强烈建议阅读我在 <strong>1.4 小节</strong> 中列举的第 <strong>7</strong> 个参考材料中 The bspwm client 部分，尤其是其中的前两小节，即 Node Actions（节点操作）和 Window State Actions（窗口状态操作）.</span></p>
+<p><mark class="notation_color">强烈建议阅读我在 <strong>1.4 小节</strong> 中列举的第 <strong>7</strong> 个参考材料中 The bspwm client 部分，尤其是其中的前两小节，即 Node Actions（节点操作）和 Window State Actions（窗口状态操作）.</mark></p>
 <p>这里讲三个例子，来帮助大家巩固练习阅读文档的流程，因为我上一个视频的后半部分只讲了理论，没有演示实践，这里补一下.</p>
 <h2 id="例一旋转">
 例一：旋转
@@ -271,7 +271,7 @@ super + r
     bspc node @parent -R <span class="m">90</span>
 </code></pre></td></tr></table>
 </div>
-</div><p>还记得我们用两条语句完成 super + r 时的 bug 么？<span class="notation_color">请读者们仿照我讲解的流程自行对照文档理解 reddit 网友给的指令中 -f 的含义，并尝试直接解决这个 bug.</span></p>
+</div><p>还记得我们用两条语句完成 super + r 时的 bug 么？<mark class="notation_color">请读者们仿照我讲解的流程自行对照文档理解 reddit 网友给的指令中 -f 的含义，并尝试直接解决这个 bug.</mark></p>
 <p><strong>这个例子我讲得比较细致，但希望读者朋友们能耐心搞明白它，作为阅读文档的实践练习. 这个搞明白了，就没有不会读的文档了.</strong></p>
 <h2 id="例二隐藏">
 例二：隐藏
@@ -303,7 +303,7 @@ super + <span class="nb">shift</span> + v
     bspc node <span class="o">{</span>,<span class="k">$(</span>bspc query -N -n .hidden <span class="p">|</span> tail -n1<span class="k">)</span><span class="o">}</span> -g <span class="nv">hidden</span><span class="o">=</span>off
 </code></pre></td></tr></table>
 </div>
-</div><p><span class="notation_color">请读者们用类似例一中的工作流程对照文档理解一下其中的 <code>-g</code> 命令，更关键地，请大家自己学习理解 <code>bspc query</code> 命令，把这两行完完全全搞明白. 如果你对 Linux 基础命令不熟悉，可能也要简单地学习一下，比如关于管道的知识、 <code>tail</code> 的用法等.</span></p>
+</div><p><mark class="notation_color">请读者们用类似例一中的工作流程对照文档理解一下其中的 <code>-g</code> 命令，更关键地，请大家自己学习理解 <code>bspc query</code> 命令，把这两行完完全全搞明白. 如果你对 Linux 基础命令不熟悉，可能也要简单地学习一下，比如关于管道的知识、 <code>tail</code> 的用法等.</mark></p>
 <p>一个问题：最后一行的那个大括号有必要么？直接使用 <code>bspc node $(bspc query -N -n .hidden | tail -n1) -g hidden=off</code> 可以么？</p>
 <h2 id="例三把焦点从平铺窗口移动到浮动窗口">
 例三：把焦点从平铺窗口移动到浮动窗口
@@ -368,8 +368,8 @@ super + a
 内建 rule 指令
 <a href="#%e5%86%85%e5%bb%ba-rule-%e6%8c%87%e4%bb%a4"><small>¶</small></a>
 </h2>
-<p><span class="notation_color">建议详细阅读我在 <strong>1.4 小节</strong>中列举的<a href="https://dev.to/l04db4l4nc3r/bspwm-a-bare-bones-window-manager-44di" rel="noreferrer noopener" target="_blank">第 <strong>7</strong> 个参考材料<b><sub>⧉</sub></b></a>中 The bspwm client 部分的第三小节：Window Rules，搞明白规则是用来干什么的，并学习用 <code>xprop</code> 命令查询一个程序窗口的 WM_CLASS.</span></p>
-<p>关于规则的部分，文档里也只有寥寥不到 15 行的东西，只有 <code>-a</code>、<code>-r</code>、<code>-l</code> 三个 <code>COMMANDS</code>，而且基本上只用得到 <code>-a</code> 这一个，非常好读. <span class="notation_color">建议 <code>man bspwm</code> 后用 / 键搜索 Rule 进行阅读.</span> 它的位置在上面的大纲中也能看到，Rule 是作为一个 <code>DOMAIN</code> 出现的.</p>
+<p><mark class="notation_color">建议详细阅读我在 <strong>1.4 小节</strong>中列举的<a href="https://dev.to/l04db4l4nc3r/bspwm-a-bare-bones-window-manager-44di" rel="noreferrer noopener" target="_blank">第 <strong>7</strong> 个参考材料<b><sub>⧉</sub></b></a>中 The bspwm client 部分的第三小节：Window Rules，搞明白规则是用来干什么的，并学习用 <code>xprop</code> 命令查询一个程序窗口的 WM_CLASS.</mark></p>
+<p>关于规则的部分，文档里也只有寥寥不到 15 行的东西，只有 <code>-a</code>、<code>-r</code>、<code>-l</code> 三个 <code>COMMANDS</code>，而且基本上只用得到 <code>-a</code> 这一个，非常好读. <mark class="notation_color">建议 <code>man bspwm</code> 后用 / 键搜索 Rule 进行阅读.</mark> 它的位置在上面的大纲中也能看到，Rule 是作为一个 <code>DOMAIN</code> 出现的.</p>
 <p>关于规则指令后面可以加的属性（<code>[(hidden|sticky|private|locked|marked|center|follow|manage|focus|border)=(on|off)]</code>）可以参考我在 <strong>1.4 小节</strong>中列举的<a href="https://github.com/baskerville/bspwm/wiki/window-rules---attribute-flags" rel="noreferrer noopener" target="_blank">第 <strong>2</strong> 个参考材料即 GitHub 上的 wiki<b><sub>⧉</sub></b></a> 中的 window rules attribute flags. 现在一共有 10 个是可以使用的，它们的意思是非常好理解的，我在上一个视频中也有讲到.</p>
 <h2 id="external-rules">
 external rules
@@ -394,7 +394,7 @@ external rules
 </blockquote>
 <p>如果在上一节中你按照我的指示去读了文档中关于 Rule 的部分那不到 15 行的内容，那你现在看到它最后一句说的键值对时一定能够会心一笑了.</p>
 <p>现在我们知道了这短短的一行 <code>bspc config</code> 语句中最后的 <code>"$(which external_rules)"</code> 就是这里说的绝对路径了，再结合我们对 Linux 基本语句 <code>which</code> 的知识，我们就明白了另一份文件 external_rules 一定是一份脚本文件，而且要把它加到环境变量中以便我们能直接调用它，就像使用 <code>ls</code>、<code>cd</code> 一样直接使用 <code>external_rules</code> 作为一个命令，而且这个命令必须带四个参数，输出必须是键值对.</p>
-<div class="notation_color">
+<div class="notation_color" role="mark">
 <p>写自己的命令的方法：</p>
 <p>（这一段是 Linux 使用基础中的基础，因为 Linux 的灵魂就是自己写脚本，如果你连这都不知道的话，就要加强 Linux 基础知识的学习了）</p>
 <p>完成这件事有很多种做法，我个人的做法是建一个 <code>~/.bin/</code> 文件夹，然后在里面写脚本，shell 脚本也行，python 脚本也行，比如：</p>
@@ -528,7 +528,7 @@ external rules
 <figcaption>◉ 图. external_rules 的测试结果</figcaption>
 </figure>
 </p>
-<p>打开监听变化的日志文件以后，我分别打开了一个终端，一个 firefox 浏览器，一个 SMPlayer. 当然第一个 Polybar 是我重启 bspwm 之后马上打开的第一个窗口，这无需多言，只是<span class="notation_color">我有点不明白我明明把 <code>bspc config external_rules_command "${HOME}/.config/bspwm/try_e_r"</code> 写到 bspwmrc 的最后一行了，竟然还能在日志里看到 Polybar ？难道 shell 脚本不是从上到下一行一行执行的么？希望得到各位读者的指点.</span>（那些日志中的输出你可能会对 Polybar 的 <code>layer=above</code> 不太熟悉，可以自己再额外看一看关于 layer 的信息.）</p>
+<p>打开监听变化的日志文件以后，我分别打开了一个终端，一个 firefox 浏览器，一个 SMPlayer. 当然第一个 Polybar 是我重启 bspwm 之后马上打开的第一个窗口，这无需多言，只是<mark class="notation_color">我有点不明白我明明把 <code>bspc config external_rules_command "${HOME}/.config/bspwm/try_e_r"</code> 写到 bspwmrc 的最后一行了，竟然还能在日志里看到 Polybar ？难道 shell 脚本不是从上到下一行一行执行的么？希望得到各位读者的指点.</mark>（那些日志中的输出你可能会对 Polybar 的 <code>layer=above</code> 不太熟悉，可以自己再额外看一看关于 layer 的信息.）</p>
 <p>通过试验，我们明白了 external_rules 的工作流程：如果我们写了 external_rules 脚本，并在 bspwmrc 中写明了这个脚本的绝对路径，那么 bspwm 在每打开一个窗口时都会自动执行这个命令，并把这个窗口的信息通过那四个参数告诉给这个命令，然后根据得到的返回值也就是一些键值对来决定窗口的样貌与模式.</p>
 <p>打个比方，external_rules 是我们创造的一位负责管理学生进入学校（负责管理窗口打开）的看门大爷（一个命令），我们有任何规则都可以告诉他（用脚本语言写进去），然后他就躺在传达室里默默无闻（它只是一个命令而已，你不调用，它就不会理你），一旦有一个学生要进入学校（一个窗口要被打开），送学生来的家长（bspwm）就会把看门大爷叫起来（调用这个命令），告诉看门大爷（向这个命令传参）这个学生的学号（这个窗口的 window ID）、他是哪个班的（class name）、他叫什么名字（instance name）、他来学校干什么（intermediate consequences），看门大爷就把他的学号输入到电脑里查一下（xtitle）他的小名（title）叫什么，然后根据这些信息和你告诉给他的规则来决定这个学生进入学校以后有什么额外要做的事情（这个窗口应该有什么额外的规则）.</p>
 <p>external_rules 的部分我觉得写到这里就足够了，它确确实实能写出非常复杂的规则出来. 关于 <code>fontforge</code>、<code>Layers|Tools|Warning</code>、<code>Lutris|Liferea</code> 的事情我觉得反而不是很重要，因为 Lutris 和 Liferea 的这两个软件你不一定会用得到，你只要知道怎么自己写规则，怎么利用好这个功能就足够了.</p>
@@ -537,18 +537,18 @@ external rules
 <li><a href="https://lzone.de/liferea/" rel="noreferrer noopener" target="_blank">Liferea<b><sub>⧉</sub></b></a>，一个信息汇总聚合平台，我猜是某种 RSS 阅读器.</li>
 <li><a href="https://lutris.net/" rel="noreferrer noopener" target="_blank">Lutris<b><sub>⧉</sub></b></a>，一个游戏平台，我猜是类似 steam 那种.</li>
 </ul>
-<p><span class="notation_color">关于这份脚本，还有一个 <code>$state</code> 没有讲. 读者们可以用类似的方法看看它是什么.</span></p>
+<p><mark class="notation_color">关于这份脚本，还有一个 <code>$state</code> 没有讲. 读者们可以用类似的方法看看它是什么.</mark></p>
 <h1 id="四种布局方案">
 四种布局方案
 <a href="#%e5%9b%9b%e7%a7%8d%e5%b8%83%e5%b1%80%e6%96%b9%e6%a1%88"><small>¶</small></a>
 </h1>
-<p><span class="notation_color">建议详细阅读我在 <strong>1.4 小节</strong>中列举的<a href="https://dev.to/l04db4l4nc3r/bspwm-a-bare-bones-window-manager-44di" rel="noreferrer noopener" target="_blank">第 <strong>7</strong> 个参考材料<b><sub>⧉</sub></b></a>中 Layouts 部分. 它里面还包括了一段快速切换布局方案的脚本.</span></p>
+<p><mark class="notation_color">建议详细阅读我在 <strong>1.4 小节</strong>中列举的<a href="https://dev.to/l04db4l4nc3r/bspwm-a-bare-bones-window-manager-44di" rel="noreferrer noopener" target="_blank">第 <strong>7</strong> 个参考材料<b><sub>⧉</sub></b></a>中 Layouts 部分. 它里面还包括了一段快速切换布局方案的脚本.</mark></p>
 <p>待补充.</p>
 <h1 id="关于-panel">
 关于 panel
 <a href="#%e5%85%b3%e4%ba%8e-panel"><small>¶</small></a>
 </h1>
-<p>第三方的 panel 选择很多，比如 polybar、lemonbar、yabar，<span class="notation_color">可以阅读我在 <strong>1.4 小节</strong>中列举的第 <strong>3</strong> 个参考材料即 Arch Wiki 中的相关部分.</span></p>
+<p>第三方的 panel 选择很多，比如 polybar、lemonbar、yabar，<mark class="notation_color">可以阅读我在 <strong>1.4 小节</strong>中列举的第 <strong>3</strong> 个参考材料即 Arch Wiki 中的相关部分.</mark></p>
 <p>这里想讲一下它的例子中自带的 panel ，待补充.</p>
 <h1 id="关于容器">
 关于容器

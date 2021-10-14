@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>赤赤的象牙塔</title><link>/zh/</link><description>近期内容 | 赤赤的象牙塔</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>
-2021-09-15</lastBuildDate><item><title>平板与电子纸类工具的犹豫 - 消费指南</title><link>/zh/82178/</link><pubDate>2021-09-15</pubDate><guid>/zh/82178/</guid><description>&lt;div class='notation_color'>
+2021-09-15</lastBuildDate><item><title>平板与电子纸类工具的犹豫 - 消费指南</title><link>/zh/82178/</link><pubDate>2021-09-15</pubDate><guid>/zh/82178/</guid><description>&lt;div role="mark" class='notation_color'>
 &lt;p>本文最初写于 2020 年 3 月 6 日，当时对购买什么设备比较犹豫，所以简单对比了各种不同的平板与电子纸类工具，最后比较倾向于电子纸；&lt;/p>
 &lt;p>2020 年 3 月 18 日我看到 reMarkable 2 接受预订的消息，再加上互联网上能找到的电子纸类对比实在太少，所以扩充了大量的电子纸类产品的信息汇总与对比. 但因为是在之前的基础上修修补补，所以文章结构非常乱；&lt;/p>
 &lt;p>2021 年 7 月 15 日我注意到 Fujitsu Quaderno 推出了第二代产品，于是借此机会将本文的大部分内容重新做了编排.&lt;/p>
@@ -19,7 +19,7 @@
 电子纸系列
 &lt;a href="#%e7%94%b5%e5%ad%90%e7%ba%b8%e7%b3%bb%e5%88%97">&lt;small>¶&lt;/small>&lt;/a>
 &lt;/h2>
-&lt;p>&lt;span class='notation_color'>这一部分的雏形是 2020.03 写的，只是一个简单的罗列而已，详细的对比与介绍请看下一个章节.&lt;/span>&lt;/p>
+&lt;p>&lt;mark class='notation_color'>这一部分的雏形是 2020.03 写的，只是一个简单的罗列而已，详细的对比与介绍请看下一个章节.&lt;/mark>&lt;/p>
 &lt;hr>
 &lt;ul>
 &lt;li>&lt;strong>Sony 电子纸 DPT-RP1&lt;/strong>&lt;/li>
@@ -83,7 +83,7 @@ target="_blank" rel="noreferrer noopener"
 &lt;p>其实，读墨本来就是台湾一家非常有名的繁体中文电子书平台，有点像是亚马逊的 Kindle 商城，所以这个设备的初衷应该就是用来读那些电子书的. 虽然完全可以自己玩成单机版，但总觉得是上错了车，而且机器里带着一个永远也不用的电子书城功能感觉还是怪怪的.&lt;/p>
 &lt;p>还有就是他们好像主打的是 10.3 寸的那一款，13.3 寸的可能都不卖了.&lt;/p>
 &lt;hr>
-&lt;div class='notation_color'>
+&lt;div role="mark" class='notation_color'>
 &lt;p>总结：不知道 Papyr 和 mooInk 这俩未来会不会跟进 Linfiny 的第二代技术，即加了 EMR 电磁层的那种. 如果可以再等等的话，可能未来的市场上选择就多一些，可以照着最便宜的买；不等的话，Fujitsu Quaderno A4 Gen.2 就已经非常棒了.&lt;/div>&lt;/p>
 &lt;h2 id="平板系列">
 平板系列
@@ -150,7 +150,7 @@ target="_blank" rel="noreferrer noopener"
 两种替代方案
 &lt;a href="#%e4%b8%a4%e7%a7%8d%e6%9b%bf%e4%bb%a3%e6%96%b9%e6%a1%88">&lt;small>¶&lt;/small>&lt;/a>
 &lt;/h2>
-&lt;p>&lt;span class='notation_color'>这一小节写于 2020.03，现在看来已经没有什么意义了. 这一年多以来，我为了等更好的产品，上面的任何设备我都没买，也没有使用任何替代方案，就用笔记本电脑凑合着，也凑合过来了.&lt;/span>&lt;/p>
+&lt;p>&lt;mark class='notation_color'>这一小节写于 2020.03，现在看来已经没有什么意义了. 这一年多以来，我为了等更好的产品，上面的任何设备我都没买，也没有使用任何替代方案，就用笔记本电脑凑合着，也凑合过来了.&lt;/mark>&lt;/p>
 &lt;hr>
 &lt;ul>
 &lt;li>&lt;strong>自己做？&lt;/strong>&lt;/li>
@@ -169,7 +169,7 @@ target="_blank" rel="noreferrer noopener"
 电子纸系列对比
 &lt;a href="#%e7%94%b5%e5%ad%90%e7%ba%b8%e7%b3%bb%e5%88%97%e5%af%b9%e6%af%94">&lt;small>¶&lt;/small>&lt;/a>
 &lt;/h1>
-&lt;div class='notation_color'>
+&lt;div role="mark" class='notation_color'>
 &lt;p>这一章节的大部分内容都是写于 2020.03.20 左右，是本文的重中之重. 2021.07 添加了新内容，并重新做了编排，使结构更加清晰简明、行文更加流畅. 我尽量多地综合了各种我能找到的信息，并用超链接的形式注明了来源，那些也都是非常值得点开去看一看的. 但是随着时间的推移，可能有的超链接会失效，或者链接里的内容发生变化，那样的话就请各位读者自己想办法了. 我本人已经找到了心仪的产品，所以以后再有新的产品这篇文章也不会再更新了.&lt;/div>&lt;/p>
 &lt;h2 id="一个理念">
 一个理念
@@ -588,9 +588,9 @@ target="_blank" rel="noreferrer noopener"
 target="_blank" rel="noreferrer noopener"
 >需要花钱购买&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a>，不过之前的 PDF 1.7 标准在与 Adobe 公司的合作下可以免费获得：&lt;a href="https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdfs/pdf_reference_1-7.pdf"
 target="_blank" rel="noreferrer noopener"
->PDF Reference, sixth edition&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a>.&lt;span class='notation_color'>（延伸阅读：&lt;a href="https://www.zhihu.com/question/20500509"
+>PDF Reference, sixth edition&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a>.&lt;mark class='notation_color'>（延伸阅读：&lt;a href="https://www.zhihu.com/question/20500509"
 target="_blank" rel="noreferrer noopener"
->知乎：为什么大多 ISO 标准都收费才能阅读？&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a>）&lt;/span>&lt;/p>
+>知乎：为什么大多 ISO 标准都收费才能阅读？&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a>）&lt;/mark>&lt;/p>
 &lt;p>如果只是想了解 PDF 1.7 标准和 Adobe 1-8 级各扩展等级在功能上的特性，其实读一下&lt;a href="https://en.wikipedia.org/wiki/History_of_PDF"
 target="_blank" rel="noreferrer noopener"
 >维基百科：History of PDF&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a> 也就够了，那里有一个大表格：&lt;/p>
@@ -738,19 +738,19 @@ QuirkLogic Papyr
 下面对这两款产品的一切（软硬件）进行详细的（主观）对比：
 | reMarkable 2 优点（无 Sony 相应优点主观减分） | Sony 优点（无 reMarkable 2 相应优点主观减分） |
 | ------ | ------ |
-| &lt;span class='notation_color'>1&lt;/span>. 屏幕小方便携带（- 1 分） | &lt;span class='notation_color'>1&lt;/span>. 屏幕大看书方便 |
-| &lt;span class='notation_color'>2&lt;/span>. 手写笔是电磁笔，书写体验更好，延迟低，不用充电 | &lt;span class='notation_color'>2&lt;/span>. [手写笔是电容笔](https://mp.weixin.qq.com/s/5QPulccMeliVCHc7x2VwZg)，书写体验略差，还总是要充电（- 20 分） |
-|&lt;span class='notation_color'> 3&lt;/span>. PDF 阅读体验较差，[不能跳转链接](https://www.zhihu.com/question/271717753/answer/373271022)（- 10 分） | &lt;span class='notation_color'>3&lt;/span>. PDF 阅读体验更好：能跳转，且能跳回 |
-| &lt;span class='notation_color'>4&lt;/span>. Linux 系统开放，社区强大，reddit 和 facebook group 上有很多大神，github 上也有很多代码，方便二次开发，可以自己满足自己的需求 | &lt;span class='notation_color'>4&lt;/span>. 封闭 Android 系统（- 6 分） |
-| &lt;span class='notation_color'>5&lt;/span>. 更便宜 | &lt;span class='notation_color'>5&lt;/span>. （- 15 分） |
-| &lt;span class='notation_color'>6&lt;/span>. 4.7 mm，比 Sony 更薄，尺寸也比 Sony 更小，重量 350 g 却比 Sony 重 1 g | &lt;span class='notation_color'>6&lt;/span>. 主要是轻，才349 g，但问题在于[支架不结实](https://mp.weixin.qq.com/s/5QPulccMeliVCHc7x2VwZg)，容易变形（- 3 分） |
-| &lt;span class='notation_color'>7&lt;/span>. 因为屏幕小，不能并排阅读，不能并排做笔记（- 15 分） | &lt;span class='notation_color'>7&lt;/span>. 文件有【文档】和【笔记】两种类型，【笔记】有【独立笔记】和【文档边注】两种类型，【文档边注】和【文档】一一对应，可以并排显示，边读边写；任何两种格式（【文档】和【文档】、【文档】和【笔记】、【笔记】和【笔记】）都可以并排阅读；同一文件可以双联页显示 |
-| &lt;span class='notation_color'>8&lt;/span>. （- 8 分） | &lt;span class='notation_color'>8&lt;/span>. 可以对文本和手写笔记进行搜索 |
-| &lt;span class='notation_color'>9&lt;/span>. 可以对 33 种语言进行手写转文字，不包括中文，且转化后的文字只能通过邮件发给别人，不能保存起来 | &lt;span class='notation_color'>9&lt;/span>. （- 3 分） |
-| &lt;span class='notation_color'>10&lt;/span>. （- 5分） | &lt;span class='notation_color'>10&lt;/span>. 可以在中国购买，有中国区的售后 |
-| &lt;span class='notation_color'>11&lt;/span>. 包括同步、升级、LiveView 在内的功能都有可能被墙（- 5分） | &lt;span class='notation_color'>11&lt;/span>. 支持在中国区不翻墙地同步、更新软件 |
-| &lt;span class='notation_color'>12&lt;/span>. （- 0.5分） | &lt;span class='notation_color'>12&lt;/span>. 界面可以是中文的 |
-| &lt;span class='notation_color'>13&lt;/span>. 更新频率快说明团队很用心 | &lt;span class='notation_color'>13&lt;/span>. 更新频率慢说明产品比较成熟 |
+| &lt;mark class='notation_color'>1&lt;/mark>. 屏幕小方便携带（- 1 分） | &lt;mark class='notation_color'>1&lt;/mark>. 屏幕大看书方便 |
+| &lt;mark class='notation_color'>2&lt;/mark>. 手写笔是电磁笔，书写体验更好，延迟低，不用充电 | &lt;mark class='notation_color'>2&lt;/mark>. [手写笔是电容笔](https://mp.weixin.qq.com/s/5QPulccMeliVCHc7x2VwZg)，书写体验略差，还总是要充电（- 20 分） |
+|&lt;mark class='notation_color'> 3&lt;/mark>. PDF 阅读体验较差，[不能跳转链接](https://www.zhihu.com/question/271717753/answer/373271022)（- 10 分） | &lt;mark class='notation_color'>3&lt;/mark>. PDF 阅读体验更好：能跳转，且能跳回 |
+| &lt;mark class='notation_color'>4&lt;/mark>. Linux 系统开放，社区强大，reddit 和 facebook group 上有很多大神，github 上也有很多代码，方便二次开发，可以自己满足自己的需求 | &lt;mark class='notation_color'>4&lt;/mark>. 封闭 Android 系统（- 6 分） |
+| &lt;mark class='notation_color'>5&lt;/mark>. 更便宜 | &lt;mark class='notation_color'>5&lt;/mark>. （- 15 分） |
+| &lt;mark class='notation_color'>6&lt;/mark>. 4.7 mm，比 Sony 更薄，尺寸也比 Sony 更小，重量 350 g 却比 Sony 重 1 g | &lt;mark class='notation_color'>6&lt;/mark>. 主要是轻，才349 g，但问题在于[支架不结实](https://mp.weixin.qq.com/s/5QPulccMeliVCHc7x2VwZg)，容易变形（- 3 分） |
+| &lt;mark class='notation_color'>7&lt;/mark>. 因为屏幕小，不能并排阅读，不能并排做笔记（- 15 分） | &lt;mark class='notation_color'>7&lt;/mark>. 文件有【文档】和【笔记】两种类型，【笔记】有【独立笔记】和【文档边注】两种类型，【文档边注】和【文档】一一对应，可以并排显示，边读边写；任何两种格式（【文档】和【文档】、【文档】和【笔记】、【笔记】和【笔记】）都可以并排阅读；同一文件可以双联页显示 |
+| &lt;mark class='notation_color'>8&lt;/mark>. （- 8 分） | &lt;mark class='notation_color'>8&lt;/mark>. 可以对文本和手写笔记进行搜索 |
+| &lt;mark class='notation_color'>9&lt;/mark>. 可以对 33 种语言进行手写转文字，不包括中文，且转化后的文字只能通过邮件发给别人，不能保存起来 | &lt;mark class='notation_color'>9&lt;/mark>. （- 3 分） |
+| &lt;mark class='notation_color'>10&lt;/mark>. （- 5分） | &lt;mark class='notation_color'>10&lt;/mark>. 可以在中国购买，有中国区的售后 |
+| &lt;mark class='notation_color'>11&lt;/mark>. 包括同步、升级、LiveView 在内的功能都有可能被墙（- 5分） | &lt;mark class='notation_color'>11&lt;/mark>. 支持在中国区不翻墙地同步、更新软件 |
+| &lt;mark class='notation_color'>12&lt;/mark>. （- 0.5分） | &lt;mark class='notation_color'>12&lt;/mark>. 界面可以是中文的 |
+| &lt;mark class='notation_color'>13&lt;/mark>. 更新频率快说明团队很用心 | &lt;mark class='notation_color'>13&lt;/mark>. 更新频率慢说明产品比较成熟 |
 reMarkable 2 虽然减分少（- 44.5 分，Sony - 47 分）但是减分的项目多，而且比起它的阅读能力，我更愿意牺牲 Sony 的书写体验，整体看来我更想要 Sony.（哎？我的时间全都被浪费了？了解 reMarkable 用了我更多的时间啊！） 具体怎么选择可能就是等 Sony 新品出来了，如果它的笔被改为了不用充电，果断买，如果它的笔还是电容笔的话，也许就先不着急，也关注下国产的产品，以及未来的产品，实在不行就买 Surface 之类的.
 --></description></item><item><title>Hugo 如何让图片在暗色主题下反色 - 自写主题</title><link>/zh/15738/</link><pubDate>2021-08-28</pubDate><guid>/zh/15738/</guid><description>&lt;p>本文探讨的是图片在亮色、暗色主题下的显示问题，里面有一些图片示例，请读者们手动调节本站的主题来测试它们的显示效果. 调节按钮在左边栏的右上角，手机等小屏幕请点击左上角的汉堡按钮呼出左边栏.&lt;/p>
 &lt;h1 id="问题">
@@ -1060,7 +1060,7 @@ target="_blank" rel="noreferrer noopener"
 >这篇教程&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a>.&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;/section></description></item><item><title>小鹤音形单字全码码表与重码分析</title><link>/zh/95251/</link><pubDate>2021-07-10</pubDate><guid>/zh/95251/</guid><description>&lt;div class='notation_color'>
+&lt;/section></description></item><item><title>小鹤音形单字全码码表与重码分析</title><link>/zh/95251/</link><pubDate>2021-07-10</pubDate><guid>/zh/95251/</guid><description>&lt;div role="mark" class='notation_color'>
 &lt;p>原本只是想分析小鹤音形单字全码码表的重码情况的，因为我搜遍了整个互联网没有发现有人谈论这些内容. 结果我越写越多，最后看来本文的部分内容也可以作为小鹤音形的入门指南.&lt;/div>&lt;/p>
 &lt;h1 id="定义">
 定义
@@ -1436,7 +1436,7 @@ target="_blank" rel="noreferrer noopener"
 &lt;tbody>
 &lt;tr>
 &lt;td>11&lt;/td>
-&lt;td>&lt;span class='notation_color'>两个字都是一级字的码&lt;/span>&lt;/td>
+&lt;td>&lt;mark class='notation_color'>两个字都是一级字的码&lt;/mark>&lt;/td>
 &lt;td>98&lt;/td>
 &lt;/tr>
 &lt;tr>
@@ -1480,17 +1480,17 @@ target="_blank" rel="noreferrer noopener"
 &lt;tbody>
 &lt;tr>
 &lt;td>111&lt;/td>
-&lt;td>&lt;span class='notation_color'>三个字都是一级字的码&lt;/span>&lt;/td>
+&lt;td>&lt;mark class='notation_color'>三个字都是一级字的码&lt;/mark>&lt;/td>
 &lt;td>5&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>112&lt;/td>
-&lt;td>&lt;span class='notation_color'>三个字中有 2 个一级字、1 个二级字的码&lt;/span>&lt;/td>
+&lt;td>&lt;mark class='notation_color'>三个字中有 2 个一级字、1 个二级字的码&lt;/mark>&lt;/td>
 &lt;td>7&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>113&lt;/td>
-&lt;td>&lt;span class='notation_color'>三个字中有 2 个一级字、1 个三级字的码&lt;/span>&lt;/td>
+&lt;td>&lt;mark class='notation_color'>三个字中有 2 个一级字、1 个三级字的码&lt;/mark>&lt;/td>
 &lt;td>4&lt;/td>
 &lt;/tr>
 &lt;tr>
@@ -1539,17 +1539,17 @@ target="_blank" rel="noreferrer noopener"
 &lt;tbody>
 &lt;tr>
 &lt;td>1112&lt;/td>
-&lt;td>&lt;span class='notation_color'>四个字中有 3 个一级字、1 个二级字的码&lt;/span>&lt;/td>
+&lt;td>&lt;mark class='notation_color'>四个字中有 3 个一级字、1 个二级字的码&lt;/mark>&lt;/td>
 &lt;td>1&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>1113&lt;/td>
-&lt;td>&lt;span class='notation_color'>四个字中有 3 个一级字、1 个三级字的码&lt;/span>&lt;/td>
+&lt;td>&lt;mark class='notation_color'>四个字中有 3 个一级字、1 个三级字的码&lt;/mark>&lt;/td>
 &lt;td>1&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>1123&lt;/td>
-&lt;td>&lt;span class='notation_color'>四个字中有 2 个一级字、1 个二级字、1 个三级字的码&lt;/span>&lt;/td>
+&lt;td>&lt;mark class='notation_color'>四个字中有 2 个一级字、1 个二级字、1 个三级字的码&lt;/mark>&lt;/td>
 &lt;td>2&lt;/td>
 &lt;/tr>
 &lt;tr>
@@ -1578,7 +1578,7 @@ target="_blank" rel="noreferrer noopener"
 &lt;tbody>
 &lt;tr>
 &lt;td>11122&lt;/td>
-&lt;td>&lt;span class='notation_color'>五个字中有 3 个一级字、2 个二级字的码&lt;/span>&lt;/td>
+&lt;td>&lt;mark class='notation_color'>五个字中有 3 个一级字、2 个二级字的码&lt;/mark>&lt;/td>
 &lt;td>1&lt;/td>
 &lt;/tr>
 &lt;tr>
@@ -1588,7 +1588,7 @@ target="_blank" rel="noreferrer noopener"
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;p>我认为一级字有重复的情况是最需要特殊考虑做特殊设计的，因为一级字是最最常用的字. 我用&lt;span class='notation_color'>黄色&lt;/span>把这些部分标记出来了，好在只有 119 个，不算多. 这 119 个特殊的码我也完整地列在&lt;a href="#119-%e4%b8%aa%e4%b8%80%e7%ba%a7%e5%ad%97%e9%87%8d%e5%ad%97%e7%9a%84%e7%a0%81"
+&lt;p>我认为一级字有重复的情况是最需要特殊考虑做特殊设计的，因为一级字是最最常用的字. 我用&lt;mark class='notation_color'>黄色&lt;/mark>把这些部分标记出来了，好在只有 119 个，不算多. 这 119 个特殊的码我也完整地列在&lt;a href="#119-%e4%b8%aa%e4%b8%80%e7%ba%a7%e5%ad%97%e9%87%8d%e5%ad%97%e7%9a%84%e7%a0%81"
 >附录&lt;/a>中了，在这里只象征性列出最后 10 个：&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -1885,7 +1885,7 @@ target="_blank" rel="noreferrer noopener"
 &lt;td>辩、辨&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>原(yrix-)愿(yrix)&lt;span class='notation_color'>螈(yrix*)&lt;/span>&lt;/td>
+&lt;td>原(yrix-)愿(yrix)&lt;mark class='notation_color'>螈(yrix*)&lt;/mark>&lt;/td>
 &lt;td>1&lt;/td>
 &lt;td>yrix&lt;/td>
 &lt;td>愿&lt;/td>
@@ -1894,7 +1894,7 @@ target="_blank" rel="noreferrer noopener"
 &lt;td>原&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>驹(jumk-)桔(jumk)橘(jumk-)&lt;span class='notation_color'>枸(jumk*)&lt;/span>&lt;span class='notation_color'>椐(jumk*)&lt;/span>&lt;/td>
+&lt;td>驹(jumk-)桔(jumk)橘(jumk-)&lt;mark class='notation_color'>枸(jumk*)&lt;/mark>&lt;mark class='notation_color'>椐(jumk*)&lt;/mark>&lt;/td>
 &lt;td>1&lt;/td>
 &lt;td>jumk&lt;/td>
 &lt;td>桔&lt;/td>
@@ -1909,7 +1909,7 @@ target="_blank" rel="noreferrer noopener"
 &lt;td>&lt;/td>
 &lt;td>拂、麸&lt;/td>
 &lt;td>fuf&lt;/td>
-&lt;td>扶、&lt;span class='notation_color'>敷fufw-&lt;/span>&lt;/td>
+&lt;td>扶、&lt;mark class='notation_color'>敷fufw-&lt;/mark>&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>淤(yudd)渝(yudd)&lt;/td>
@@ -1918,7 +1918,7 @@ target="_blank" rel="noreferrer noopener"
 &lt;td>&lt;/td>
 &lt;td>渝、淤&lt;/td>
 &lt;td>yud&lt;/td>
-&lt;td>&lt;span class='notation_color'>鱼yuda-&lt;/span>、&lt;span class='notation_color'>浴yudk-&lt;/span>&lt;/td>
+&lt;td>&lt;mark class='notation_color'>鱼yuda-&lt;/mark>、&lt;mark class='notation_color'>浴yudk-&lt;/mark>&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>殃(yhdy)洋(yhdy-)漾(yhdy-)泱(yhdy)&lt;/td>
@@ -1939,7 +1939,7 @@ target="_blank" rel="noreferrer noopener"
 &lt;td>什、伸&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;span class='notation_color'>尿(svuu*)&lt;/span>碎(svuu-)&lt;/td>
+&lt;td>&lt;mark class='notation_color'>尿(svuu*)&lt;/mark>碎(svuu-)&lt;/td>
 &lt;td>0&lt;/td>
 &lt;td>svuu&lt;/td>
 &lt;td>岁数&lt;/td>
@@ -2007,7 +2007,7 @@ target="_blank" rel="noreferrer noopener"
 &lt;p>跑了程序后，我发现还行，这 587 个四键全码取前三键后的重复数只有 51 组，完整的结果见&lt;a href="#%e6%9c%89%e9%87%8d%e7%a0%81%e7%9a%84%e9%82%a3-587-%e4%b8%aa%e5%8f%96%e5%89%8d%e4%b8%89%e9%94%ae%e5%90%8e%e7%9a%84%e9%87%8d%e7%a0%81%e5%88%86%e5%b8%83"
 >附录&lt;/a>. 而且通过浏览这 51 组三键重码，会发现每一组的重字情况大多数都是 4 个重字，最多只有 8 个重字，除这 51 组以外的 587 - 51 = 536 组都可以在键入三键后唯一确定第四键，且其重字情况不超过 5 个重字.&lt;/p>
 &lt;p>因此这样设计完全可行，候选页最多 1 页，候选字最多 8 个，而且我们还可以考虑把这些有重字的四键全码的本来的第四键让给最常用的汉字，其他的则是第四键选择上屏. 第四键的选择也可以不用数字键，而是使用字母键，比如键盘的第二行，asdfghjkl，共有 9 个键，无论如何也能排得开候选字.&lt;/p>
-&lt;p>&lt;span class='notation_color'>这就是我设计的改进方案，只等我把 Rime 的方案设计学成，看看能不能搞一个出来.&lt;/span>&lt;/p>
+&lt;p>&lt;mark class='notation_color'>这就是我设计的改进方案，只等我把 Rime 的方案设计学成，看看能不能搞一个出来.&lt;/mark>&lt;/p>
 &lt;h2 id="论输入法的开放性">
 论输入法的开放性
 &lt;a href="#%e8%ae%ba%e8%be%93%e5%85%a5%e6%b3%95%e7%9a%84%e5%bc%80%e6%94%be%e6%80%a7">&lt;small>¶&lt;/small>&lt;/a>
@@ -6121,12 +6121,12 @@ target="_blank" rel="noreferrer noopener"
 有重码的那 587 个取前三键后的重码分布
 &lt;a href="#%e6%9c%89%e9%87%8d%e7%a0%81%e7%9a%84%e9%82%a3-587-%e4%b8%aa%e5%8f%96%e5%89%8d%e4%b8%89%e9%94%ae%e5%90%8e%e7%9a%84%e9%87%8d%e7%a0%81%e5%88%86%e5%b8%83">&lt;small>¶&lt;/small>&lt;/a>
 &lt;/h2>
-&lt;p>后面的括号里的数字表示[以这三键为前三键的、且有一码多字现象的]全码，其重字的个数. 比如，“xip(&lt;span class='notation_color'>322&lt;/span>)” 含义解读如下：&lt;/p>
+&lt;p>后面的括号里的数字表示[以这三键为前三键的、且有一码多字现象的]全码，其重字的个数. 比如，“xip(&lt;mark class='notation_color'>322&lt;/mark>)” 含义解读如下：&lt;/p>
 &lt;ul>
 &lt;li>以 “xip” 为前三键，且属于那 587 个一码多字里的四键全码有 “xipd”、“xipk” 和 “xipx”；&lt;/li>
-&lt;li>四键全码 “xipd” 的重字情况为：夕(1)(xipd-)奚(2)(xipd-)禊(2)(xipd*)，有 &lt;span class='notation_color'>3&lt;/span> 个重字；&lt;/li>
-&lt;li>四键全码 “xipk” 的重字情况为：禧(2)(xipk)谿(3)(xipk*)，有 &lt;span class='notation_color'>2&lt;/span> 个重字；&lt;/li>
-&lt;li>四键全码 “xipx” 的重字情况为：系(1)(xipx-)悉(1)(xipx)，有 &lt;span class='notation_color'>2&lt;/span> 个重字.&lt;/li>
+&lt;li>四键全码 “xipd” 的重字情况为：夕(1)(xipd-)奚(2)(xipd-)禊(2)(xipd*)，有 &lt;mark class='notation_color'>3&lt;/mark> 个重字；&lt;/li>
+&lt;li>四键全码 “xipk” 的重字情况为：禧(2)(xipk)谿(3)(xipk*)，有 &lt;mark class='notation_color'>2&lt;/mark> 个重字；&lt;/li>
+&lt;li>四键全码 “xipx” 的重字情况为：系(1)(xipx-)悉(1)(xipx)，有 &lt;mark class='notation_color'>2&lt;/mark> 个重字.&lt;/li>
 &lt;/ul>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -7039,7 +7039,7 @@ target="_blank" rel="noreferrer noopener"
 >【每周一爆】豆瓣读书搜索页的window.__DATA__的解密&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a>.&lt;/p>
 &lt;p>最后写好的代码见&lt;a href="https://github.com/zerovip/backup/blob/master/.bin/add_record_execute.py"
 target="_blank" rel="noreferrer noopener"
->这里&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a>.&lt;/p></description></item><item><title>bspwm 入门</title><link>/zh/63233/</link><pubDate>2021-06-10</pubDate><guid>/zh/63233/</guid><description>&lt;div class='notation_color'>
+>这里&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a>.&lt;/p></description></item><item><title>bspwm 入门</title><link>/zh/63233/</link><pubDate>2021-06-10</pubDate><guid>/zh/63233/</guid><description>&lt;div role="mark" class='notation_color'>
 &lt;p>本文首发于 bilibili：&lt;a href="https://www.bilibili.com/read/cv7417123"
 target="_blank" rel="noreferrer noopener"
 >bspwm 入门&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a>. 考虑到 b 站的专栏格式非常差，链接不支持、代码格式也不支持. 另外自己写的东西放在一个商业公司的平台上不如放在自己手里，所以在这里也发一份.&lt;/div>&lt;/p>
@@ -7047,7 +7047,7 @@ target="_blank" rel="noreferrer noopener"
 target="_blank" rel="noreferrer noopener"
 >我之前的视频（BV1kZ4y1u7dw）&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a>中我简单介绍了 bspwm 并展示了一些它自带的例子中的功能. 但那个视频只是一个简单介绍，其本质是一个安利，目标观众是使用其他 wm 或不使用 wm 的路人；那么针对被我成功安利决定来体验体验 bspwm 的新用户呢，我决定写这样一篇专栏，帮助大家入门 bspwm. 因此这篇文章的目标读者是&lt;strong>正在使用或准备使用 bspwm 的用户&lt;/strong>，需要的前置知识为&lt;strong>我上个视频中讲到的基本概念&lt;/strong>.&lt;/p>
 &lt;p>在这篇文章中，我会先对之前的视频做一些补充说明；然后我会举三个例子讲解一下怎么写简单的 bspc 语句来实现简单的功能，帮助大家巩固练习阅读文档的能力；接着我会讲一下 bspwm 自带的例子中的其他有趣的东西，包括 rules（规则）、panel（面板） 和 receptacle（容器）等；最后再随便谈点哲学.&lt;/p>
-&lt;p>&lt;span class='notation_color'>这种带高亮的文字是对读者的建议或指示，可以作为练习.&lt;/span>&lt;/p>
+&lt;p>&lt;mark class='notation_color'>这种带高亮的文字是对读者的建议或指示，可以作为练习.&lt;/mark>&lt;/p>
 &lt;h1 id="对之前视频的补充说明">
 对之前视频的补充说明
 &lt;a href="#%e5%af%b9%e4%b9%8b%e5%89%8d%e8%a7%86%e9%a2%91%e7%9a%84%e8%a1%a5%e5%85%85%e8%af%b4%e6%98%8e">&lt;small>¶&lt;/small>&lt;/a>
@@ -7121,7 +7121,7 @@ target="_blank" rel="noreferrer noopener"
 bspc 语句
 &lt;a href="#bspc-%e8%af%ad%e5%8f%a5">&lt;small>¶&lt;/small>&lt;/a>
 &lt;/h1>
-&lt;p>&lt;span class='notation_color'>强烈建议阅读我在 &lt;strong>1.4 小节&lt;/strong> 中列举的第 &lt;strong>7&lt;/strong> 个参考材料中 The bspwm client 部分，尤其是其中的前两小节，即 Node Actions（节点操作）和 Window State Actions（窗口状态操作）.&lt;/span>&lt;/p>
+&lt;p>&lt;mark class='notation_color'>强烈建议阅读我在 &lt;strong>1.4 小节&lt;/strong> 中列举的第 &lt;strong>7&lt;/strong> 个参考材料中 The bspwm client 部分，尤其是其中的前两小节，即 Node Actions（节点操作）和 Window State Actions（窗口状态操作）.&lt;/mark>&lt;/p>
 &lt;p>这里讲三个例子，来帮助大家巩固练习阅读文档的流程，因为我上一个视频的后半部分只讲了理论，没有演示实践，这里补一下.&lt;/p>
 &lt;h2 id="例一旋转">
 例一：旋转
@@ -7221,7 +7221,7 @@ super + r
 bspc node @parent -R &lt;span class="m">90&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>还记得我们用两条语句完成 super + r 时的 bug 么？&lt;span class='notation_color'>请读者们仿照我讲解的流程自行对照文档理解 reddit 网友给的指令中 -f 的含义，并尝试直接解决这个 bug.&lt;/span>&lt;/p>
+&lt;/div>&lt;p>还记得我们用两条语句完成 super + r 时的 bug 么？&lt;mark class='notation_color'>请读者们仿照我讲解的流程自行对照文档理解 reddit 网友给的指令中 -f 的含义，并尝试直接解决这个 bug.&lt;/mark>&lt;/p>
 &lt;p>&lt;strong>这个例子我讲得比较细致，但希望读者朋友们能耐心搞明白它，作为阅读文档的实践练习. 这个搞明白了，就没有不会读的文档了.&lt;/strong>&lt;/p>
 &lt;h2 id="例二隐藏">
 例二：隐藏
@@ -7253,7 +7253,7 @@ super + &lt;span class="nb">shift&lt;/span> + v
 bspc node &lt;span class="o">{&lt;/span>,&lt;span class="k">$(&lt;/span>bspc query -N -n .hidden &lt;span class="p">|&lt;/span> tail -n1&lt;span class="k">)&lt;/span>&lt;span class="o">}&lt;/span> -g &lt;span class="nv">hidden&lt;/span>&lt;span class="o">=&lt;/span>off
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>&lt;span class='notation_color'>请读者们用类似例一中的工作流程对照文档理解一下其中的 &lt;code>-g&lt;/code> 命令，更关键地，请大家自己学习理解 &lt;code>bspc query&lt;/code> 命令，把这两行完完全全搞明白. 如果你对 Linux 基础命令不熟悉，可能也要简单地学习一下，比如关于管道的知识、 &lt;code>tail&lt;/code> 的用法等.&lt;/span>&lt;/p>
+&lt;/div>&lt;p>&lt;mark class='notation_color'>请读者们用类似例一中的工作流程对照文档理解一下其中的 &lt;code>-g&lt;/code> 命令，更关键地，请大家自己学习理解 &lt;code>bspc query&lt;/code> 命令，把这两行完完全全搞明白. 如果你对 Linux 基础命令不熟悉，可能也要简单地学习一下，比如关于管道的知识、 &lt;code>tail&lt;/code> 的用法等.&lt;/mark>&lt;/p>
 &lt;p>一个问题：最后一行的那个大括号有必要么？直接使用 &lt;code>bspc node $(bspc query -N -n .hidden | tail -n1) -g hidden=off&lt;/code> 可以么？&lt;/p>
 &lt;h2 id="例三把焦点从平铺窗口移动到浮动窗口">
 例三：把焦点从平铺窗口移动到浮动窗口
@@ -7334,10 +7334,10 @@ target="_blank" rel="noreferrer noopener"
 内建 rule 指令
 &lt;a href="#%e5%86%85%e5%bb%ba-rule-%e6%8c%87%e4%bb%a4">&lt;small>¶&lt;/small>&lt;/a>
 &lt;/h2>
-&lt;p>&lt;span class='notation_color'>建议详细阅读我在 &lt;strong>1.4 小节&lt;/strong>中列举的&lt;a href="https://dev.to/l04db4l4nc3r/bspwm-a-bare-bones-window-manager-44di"
+&lt;p>&lt;mark class='notation_color'>建议详细阅读我在 &lt;strong>1.4 小节&lt;/strong>中列举的&lt;a href="https://dev.to/l04db4l4nc3r/bspwm-a-bare-bones-window-manager-44di"
 target="_blank" rel="noreferrer noopener"
->第 &lt;strong>7&lt;/strong> 个参考材料&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a>中 The bspwm client 部分的第三小节：Window Rules，搞明白规则是用来干什么的，并学习用 &lt;code>xprop&lt;/code> 命令查询一个程序窗口的 WM_CLASS.&lt;/span>&lt;/p>
-&lt;p>关于规则的部分，文档里也只有寥寥不到 15 行的东西，只有 &lt;code>-a&lt;/code>、&lt;code>-r&lt;/code>、&lt;code>-l&lt;/code> 三个 &lt;code>COMMANDS&lt;/code>，而且基本上只用得到 &lt;code>-a&lt;/code> 这一个，非常好读. &lt;span class='notation_color'>建议 &lt;code>man bspwm&lt;/code> 后用 / 键搜索 Rule 进行阅读.&lt;/span> 它的位置在上面的大纲中也能看到，Rule 是作为一个 &lt;code>DOMAIN&lt;/code> 出现的.&lt;/p>
+>第 &lt;strong>7&lt;/strong> 个参考材料&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a>中 The bspwm client 部分的第三小节：Window Rules，搞明白规则是用来干什么的，并学习用 &lt;code>xprop&lt;/code> 命令查询一个程序窗口的 WM_CLASS.&lt;/mark>&lt;/p>
+&lt;p>关于规则的部分，文档里也只有寥寥不到 15 行的东西，只有 &lt;code>-a&lt;/code>、&lt;code>-r&lt;/code>、&lt;code>-l&lt;/code> 三个 &lt;code>COMMANDS&lt;/code>，而且基本上只用得到 &lt;code>-a&lt;/code> 这一个，非常好读. &lt;mark class='notation_color'>建议 &lt;code>man bspwm&lt;/code> 后用 / 键搜索 Rule 进行阅读.&lt;/mark> 它的位置在上面的大纲中也能看到，Rule 是作为一个 &lt;code>DOMAIN&lt;/code> 出现的.&lt;/p>
 &lt;p>关于规则指令后面可以加的属性（&lt;code>[(hidden|sticky|private|locked|marked|center|follow|manage|focus|border)=(on|off)]&lt;/code>）可以参考我在 &lt;strong>1.4 小节&lt;/strong>中列举的&lt;a href="https://github.com/baskerville/bspwm/wiki/window-rules---attribute-flags"
 target="_blank" rel="noreferrer noopener"
 >第 &lt;strong>2&lt;/strong> 个参考材料即 GitHub 上的 wiki&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a> 中的 window rules attribute flags. 现在一共有 10 个是可以使用的，它们的意思是非常好理解的，我在上一个视频中也有讲到.&lt;/p>
@@ -7368,7 +7368,7 @@ target="_blank" rel="noreferrer noopener"
 &lt;/blockquote>
 &lt;p>如果在上一节中你按照我的指示去读了文档中关于 Rule 的部分那不到 15 行的内容，那你现在看到它最后一句说的键值对时一定能够会心一笑了.&lt;/p>
 &lt;p>现在我们知道了这短短的一行 &lt;code>bspc config&lt;/code> 语句中最后的 &lt;code>&amp;quot;$(which external_rules)&amp;quot;&lt;/code> 就是这里说的绝对路径了，再结合我们对 Linux 基本语句 &lt;code>which&lt;/code> 的知识，我们就明白了另一份文件 external_rules 一定是一份脚本文件，而且要把它加到环境变量中以便我们能直接调用它，就像使用 &lt;code>ls&lt;/code>、&lt;code>cd&lt;/code> 一样直接使用 &lt;code>external_rules&lt;/code> 作为一个命令，而且这个命令必须带四个参数，输出必须是键值对.&lt;/p>
-&lt;div class='notation_color'>
+&lt;div role="mark" class='notation_color'>
 &lt;p>写自己的命令的方法：&lt;/p>
 &lt;p>（这一段是 Linux 使用基础中的基础，因为 Linux 的灵魂就是自己写脚本，如果你连这都不知道的话，就要加强 Linux 基础知识的学习了）&lt;/p>
 &lt;p>完成这件事有很多种做法，我个人的做法是建一个 &lt;code>~/.bin/&lt;/code> 文件夹，然后在里面写脚本，shell 脚本也行，python 脚本也行，比如：&lt;/p>
@@ -7507,7 +7507,7 @@ style="filter: var(--c-img-filter2)"
 &lt;figcaption>◉ 图. external_rules 的测试结果&lt;/figcaption>
 &lt;/figure>
 &lt;/p>
-&lt;p>打开监听变化的日志文件以后，我分别打开了一个终端，一个 firefox 浏览器，一个 SMPlayer. 当然第一个 Polybar 是我重启 bspwm 之后马上打开的第一个窗口，这无需多言，只是&lt;span class='notation_color'>我有点不明白我明明把 &lt;code>bspc config external_rules_command &amp;quot;${HOME}/.config/bspwm/try_e_r&amp;quot;&lt;/code> 写到 bspwmrc 的最后一行了，竟然还能在日志里看到 Polybar ？难道 shell 脚本不是从上到下一行一行执行的么？希望得到各位读者的指点.&lt;/span>（那些日志中的输出你可能会对 Polybar 的 &lt;code>layer=above&lt;/code> 不太熟悉，可以自己再额外看一看关于 layer 的信息.）&lt;/p>
+&lt;p>打开监听变化的日志文件以后，我分别打开了一个终端，一个 firefox 浏览器，一个 SMPlayer. 当然第一个 Polybar 是我重启 bspwm 之后马上打开的第一个窗口，这无需多言，只是&lt;mark class='notation_color'>我有点不明白我明明把 &lt;code>bspc config external_rules_command &amp;quot;${HOME}/.config/bspwm/try_e_r&amp;quot;&lt;/code> 写到 bspwmrc 的最后一行了，竟然还能在日志里看到 Polybar ？难道 shell 脚本不是从上到下一行一行执行的么？希望得到各位读者的指点.&lt;/mark>（那些日志中的输出你可能会对 Polybar 的 &lt;code>layer=above&lt;/code> 不太熟悉，可以自己再额外看一看关于 layer 的信息.）&lt;/p>
 &lt;p>通过试验，我们明白了 external_rules 的工作流程：如果我们写了 external_rules 脚本，并在 bspwmrc 中写明了这个脚本的绝对路径，那么 bspwm 在每打开一个窗口时都会自动执行这个命令，并把这个窗口的信息通过那四个参数告诉给这个命令，然后根据得到的返回值也就是一些键值对来决定窗口的样貌与模式.&lt;/p>
 &lt;p>打个比方，external_rules 是我们创造的一位负责管理学生进入学校（负责管理窗口打开）的看门大爷（一个命令），我们有任何规则都可以告诉他（用脚本语言写进去），然后他就躺在传达室里默默无闻（它只是一个命令而已，你不调用，它就不会理你），一旦有一个学生要进入学校（一个窗口要被打开），送学生来的家长（bspwm）就会把看门大爷叫起来（调用这个命令），告诉看门大爷（向这个命令传参）这个学生的学号（这个窗口的 window ID）、他是哪个班的（class name）、他叫什么名字（instance name）、他来学校干什么（intermediate consequences），看门大爷就把他的学号输入到电脑里查一下（xtitle）他的小名（title）叫什么，然后根据这些信息和你告诉给他的规则来决定这个学生进入学校以后有什么额外要做的事情（这个窗口应该有什么额外的规则）.&lt;/p>
 &lt;p>external_rules 的部分我觉得写到这里就足够了，它确确实实能写出非常复杂的规则出来. 关于 &lt;code>fontforge&lt;/code>、&lt;code>Layers|Tools|Warning&lt;/code>、&lt;code>Lutris|Liferea&lt;/code> 的事情我觉得反而不是很重要，因为 Lutris 和 Liferea 的这两个软件你不一定会用得到，你只要知道怎么自己写规则，怎么利用好这个功能就足够了.&lt;/p>
@@ -7520,20 +7520,20 @@ target="_blank" rel="noreferrer noopener"
 target="_blank" rel="noreferrer noopener"
 >Lutris&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a>，一个游戏平台，我猜是类似 steam 那种.&lt;/li>
 &lt;/ul>
-&lt;p>&lt;span class='notation_color'>关于这份脚本，还有一个 &lt;code>$state&lt;/code> 没有讲. 读者们可以用类似的方法看看它是什么.&lt;/span>&lt;/p>
+&lt;p>&lt;mark class='notation_color'>关于这份脚本，还有一个 &lt;code>$state&lt;/code> 没有讲. 读者们可以用类似的方法看看它是什么.&lt;/mark>&lt;/p>
 &lt;h1 id="四种布局方案">
 四种布局方案
 &lt;a href="#%e5%9b%9b%e7%a7%8d%e5%b8%83%e5%b1%80%e6%96%b9%e6%a1%88">&lt;small>¶&lt;/small>&lt;/a>
 &lt;/h1>
-&lt;p>&lt;span class='notation_color'>建议详细阅读我在 &lt;strong>1.4 小节&lt;/strong>中列举的&lt;a href="https://dev.to/l04db4l4nc3r/bspwm-a-bare-bones-window-manager-44di"
+&lt;p>&lt;mark class='notation_color'>建议详细阅读我在 &lt;strong>1.4 小节&lt;/strong>中列举的&lt;a href="https://dev.to/l04db4l4nc3r/bspwm-a-bare-bones-window-manager-44di"
 target="_blank" rel="noreferrer noopener"
->第 &lt;strong>7&lt;/strong> 个参考材料&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a>中 Layouts 部分. 它里面还包括了一段快速切换布局方案的脚本.&lt;/span>&lt;/p>
+>第 &lt;strong>7&lt;/strong> 个参考材料&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a>中 Layouts 部分. 它里面还包括了一段快速切换布局方案的脚本.&lt;/mark>&lt;/p>
 &lt;p>待补充.&lt;/p>
 &lt;h1 id="关于-panel">
 关于 panel
 &lt;a href="#%e5%85%b3%e4%ba%8e-panel">&lt;small>¶&lt;/small>&lt;/a>
 &lt;/h1>
-&lt;p>第三方的 panel 选择很多，比如 polybar、lemonbar、yabar，&lt;span class='notation_color'>可以阅读我在 &lt;strong>1.4 小节&lt;/strong>中列举的第 &lt;strong>3&lt;/strong> 个参考材料即 Arch Wiki 中的相关部分.&lt;/span>&lt;/p>
+&lt;p>第三方的 panel 选择很多，比如 polybar、lemonbar、yabar，&lt;mark class='notation_color'>可以阅读我在 &lt;strong>1.4 小节&lt;/strong>中列举的第 &lt;strong>3&lt;/strong> 个参考材料即 Arch Wiki 中的相关部分.&lt;/mark>&lt;/p>
 &lt;p>这里想讲一下它的例子中自带的 panel ，待补充.&lt;/p>
 &lt;h1 id="关于容器">
 关于容器
@@ -9006,7 +9006,7 @@ target="_blank" rel="noreferrer noopener"
 target="_blank" rel="noreferrer noopener"
 >https://www.fediverse.space/instances&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a>.&lt;/li>
 &lt;/ul>
-&lt;div class='notation_color'>
+&lt;div role="mark" class='notation_color'>
 &lt;p>注意：请不要在长毛象给出本文的链接. 出于个人隐私的考虑，本文首发于另一个平台，我在长毛象上的宣传也是用的那个平台的链接. 所以如果你在别的地方已经看到过这篇文章，又通过搜索引擎找到了这里，请不要在长毛象上声张，你自己偷偷知道我有这么个博客站就好了.&lt;/div>&lt;/p></description></item><item><title>把豆伴的 Chrome 插件转为 Firefox 插件（未成功）</title><link>/zh/95260/</link><pubDate>2020-09-05</pubDate><guid>/zh/95260/</guid><description>&lt;p>我是一个豆瓣用户，我会用到一款豆友开发的备份插件：&lt;a href="https://blog.doufen.org/posts/tofu-user-guide/"
 target="_blank" rel="noreferrer noopener"
 >豆伴&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a>. 这里顺带一提，我看好多友邻都管这个插件叫“豆坟”，实际上这个插件叫“豆伴”；“豆坟”是这个项目的名字，这个项目还包括了浏览器，浏览器的名字倒是叫“豆坟”. 话说回来，这个插件只支持 Chrome 浏览器，而我是一个 Firefox 用户. 在额外安装了 Chrome 浏览器并仔细体验了一下这个插件后，我表示我太爱这个插件了！但我不爱 Chrome 浏览器，我想着能不能把它移植到 Firefox 上. 我对浏览器插件开发一窍不通，前端只会最最最基本的 HTML、CSS 和 JavaScript. 但我想着，还是试试吧，这篇文章就是我的尝试过程，是一篇流水帐.&lt;/p>
@@ -9128,7 +9128,8 @@ target="_blank" rel="noreferrer noopener"
 &lt;/h1>
 &lt;p>在 1937 年的电影《海蒂》（观看链接：&lt;a href="https://www.bilibili.com/bangumi/play/ss28901/"
 target="_blank" rel="noreferrer noopener"
->海蒂 | bilibili&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a>）中，在第 56:36 处，&lt;span class='black_block' onclick="ChangeClassBlackBlock(this)">海蒂把一个表演马戏的人的猴子放进屋子里来了，结果猴子在屋子里捣蛋，大家都抓不住它，这个时候&lt;/span>海蒂说，“你可以在它（猴子）的尾巴上撒盐”.&lt;/p>
+>海蒂 | bilibili&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a>）中，在第 56:36 处，&lt;span role="mark" aria-details="spoil" class='black_block' onclick="ChangeClassBlackBlock(this)">海蒂把一个表演马戏的人的猴子放进屋子里来了，结果猴子在屋子里捣蛋，大家都抓不住它，这个时候&lt;/span>
+海蒂说，“你可以在它（猴子）的尾巴上撒盐”.&lt;/p>
 &lt;p>当然这里的用法是用了这个短语的本意，即撒盐，但它背后的逻辑其实是这个被大家熟知的短语或者说是这个习俗，如果不了解的话看到这里会有点懵的.&lt;/p>
 &lt;p>&lt;figure>
 &lt;img loading="lazy" src="heidi.png" alt="海蒂"
@@ -9867,8 +9868,8 @@ target="_blank" rel="noreferrer noopener"
 &lt;/h1>
 &lt;p>私人事件中你爱怎么提诉求就怎么提诉求，这里主要讨论公共事件.&lt;/p>
 &lt;p>首先就是先理智，不要沉溺于已经过去的事. 我们可以总结经验，但该过去的就让它过去，我们应该着眼未来. 小孩子不会因为摔坏的水杯记恨一天，我们也不应该因为政府的无能就每天愤怒——与其愤怒，不如做一些改变：建设它或者推翻它，总之提出我们的诉求. 我们不提出诉求，便只会无故地愤怒，便不会思考这个体制到底哪里出了问题，等一个不了解事情真相的人问我们为什么愤怒时，我们能说得清理由么？&lt;/p>
-&lt;p>其次，如果我们能说得清，就不应该装作“是个人都知道”的样子而不屑于说清. 我们应该主动出击，把诉求表达清楚，把愤怒的理由表达清楚，不要让别人——那些中间力量——猜测我们的诉求. 比如现在有一种声音，说李文亮医生的去世“是因为病毒，不是警察、不是传唤、不是政府、不是党”，呼吁大家要理智&lt;span class='notation_color'>[请看下方补充内容]&lt;/span>，而网友们一人骂他一句“傻逼”就不再解释，这是不正确的. 了解整个事件的人不说理由地在愤怒着，[没有了解到事件全貌的、且不愿意思考的、随大流的人]跟着一起[不知道理由地]愤怒着，而那些[没有了解到事件全貌的、且愿意思考一下的]人们就会产生怀疑啊，你们在愤怒什么？再加上真相被广泛删除，他们会发出声音说，你们有什么好愤怒的呢？这些人没什么好指责的，我们知道的信息他们不知道罢了. 可我们非但不解释，还要骂他们——这根本就是在排斥潜在的盟友啊，是在推开本可以团结的力量啊.&lt;/p>
-&lt;div class='notation_color'>
+&lt;p>其次，如果我们能说得清，就不应该装作“是个人都知道”的样子而不屑于说清. 我们应该主动出击，把诉求表达清楚，把愤怒的理由表达清楚，不要让别人——那些中间力量——猜测我们的诉求. 比如现在有一种声音，说李文亮医生的去世“是因为病毒，不是警察、不是传唤、不是政府、不是党”，呼吁大家要理智&lt;mark class='notation_color'>[请看下方补充内容]&lt;/mark>，而网友们一人骂他一句“傻逼”就不再解释，这是不正确的. 了解整个事件的人不说理由地在愤怒着，[没有了解到事件全貌的、且不愿意思考的、随大流的人]跟着一起[不知道理由地]愤怒着，而那些[没有了解到事件全貌的、且愿意思考一下的]人们就会产生怀疑啊，你们在愤怒什么？再加上真相被广泛删除，他们会发出声音说，你们有什么好愤怒的呢？这些人没什么好指责的，我们知道的信息他们不知道罢了. 可我们非但不解释，还要骂他们——这根本就是在排斥潜在的盟友啊，是在推开本可以团结的力量啊.&lt;/p>
+&lt;div role="mark" class='notation_color'>
 &lt;p>后记：2020 年 2 月 10 日的时候，文中说的这“一种声音”越来越多了，他们非常理性地看待这件事，说李文亮医生只是个普通人，国家没做错什么，没什么好愤怒的. 其实不是这样的——如果你一直都比较关注这件事，会发现疫情这件事是有几个转折点的：&lt;/p>
 &lt;p>（一）前期科学家没有发现这个病毒人传人，这是无可厚非的. （二）1 月 20 日钟南山连线说完人传人之后大家齐心协力准备抗击疫情，91porn 给出了游客可看 100 部的福利，但大家发现有阻力在跟我们对着干——至少一个星期内在网上公开讨论疫情本身的环境非常不宽松，数据也不透明，随着人们越来越关注，官方的应对措施给人一种手忙脚乱的感觉，大家没法信任官方，怀疑有数据瞒报（根据官方数据，不至于封城的吧）、当权者不负责等诸多问题，但这些质疑的声音就直接被删除了. 我印象很深的是除夕前一天在一个群里大家在转一个一线医生的真实数据的估计，但大家发现看似发到群里了，其他人却根本看不到. （三）1 月 27 日出现了北青深一度的文章《受训诫的武汉医生：11 天后被病人传染住进隔离病房，之前群内言论被断章取义》介绍了一位医生，后来我们知道这就是李文亮. 也就是 1 月 27 日读了这篇文章我们才发现有人早就预警了，却被断章取义说是谣言，医院要求写反思，院内处分，公安训诫——这也许没什么好愤怒的；1 月 27 日我们读了这篇文章才发现 1 月上旬，面对疫情，虽然还没发现人传人，有关部门的态度却是不要外传此类消息，并且不给做核酸检测（早期绝对不是试剂盒不够用）让确诊人数没法上升. 值得一提的是，不给做核酸检测也用在了李文亮身上，他 1 月 12 日住院，2 月 1 日才确诊，谁都猜测他的死亡与此有关. 这让人不禁猜疑，到底是什么时候发现人传人的？是不是早就发现疫情严重了？如果不严重，为什么要隐瞒？以及有多少人因为不给做检测而不收治而死亡？没有人对这篇文章的内容进行反驳，也没人说它正确并表示要追查有关部门的责任，而是把这篇文章删除了. 这给人们的信号就是：这篇文章说得对，但我不认错、不悔改. 再配合上对李文亮预警信息的训诫，人们开始愤怒了，很快扒出了之前处理 8 位造谣者的事. （四）事情越闹越大，一天后 1 月 28 日最高人民法院微信发文指导对“造谣”的判定问题，1 月 29 日武汉市公安局迫于压力更改了之前对 8 人造谣的措辞，从这个时候开始才觉得中央最高层开始知道整件事，开始干预这件事，一切才开始变得透明起来.&lt;/p>
 &lt;p>虽然有人说张继先才是吹哨人，她 12 月 27 日就上报了，这当然没错，但她的上报没有引起足够的重视，即便 1 月 20 日说了人传人，有关部门还想着隐瞒，正是 1 月 27 日的采访文章让一切走上正轨. 这是为什么人们愤怒，为什么人们会很尊敬李文亮.&lt;/p>
@@ -9945,10 +9946,11 @@ target="_blank" rel="noreferrer noopener"
 &lt;/blockquote>
 &lt;p>这句话还没找到来源，这 8 个人的身份我认为还不能盲目下结论（截至 2020 年 2 月 7 日）.&lt;/p>
 &lt;p>如果我来为李文亮医生的去世而引发的愤怒提出诉求，那么至少警方不能随便监控聊天记录；对谣言的判定与处罚必须等到有确凿证据之后才能做出，这点必须尊重科学而不是尊重维稳的意愿；被怀疑是造谣者的人应该有权力对自己发出的信息进行辩护；判定为谣言并进行惩罚这件事应该有专人来做并承担责任；人们应该有自由表达而不被删除的权力；政府官员应由人民选举产生.&lt;/p>
-&lt;div class='notation_color'>
+&lt;div role="mark" class='notation_color'>
 &lt;p>让人愤怒的事每天都有，2 月 10 日武汉市防指办强制征用武汉软件工程职业学院的部分宿舍，学生们的私人物品被扔得到处都是.&lt;/p>
-&lt;p>补充于 2020.2.10&lt;/div>&lt;/p>
-&lt;div class='notation_color'>
+&lt;p>补充于 2020.2.10&lt;/p>
+&lt;/div>
+&lt;div role="mark" class='notation_color'>
 &lt;p>随着事情的发展，对当时真实情况的采访与反思慢慢多了起来，事情的全貌也渐渐展现了出来. 这里补充两篇最新的文章：&lt;a href="https://www.yyrw.org.cn/e/action/ShowInfo.php?author_id=1127232&amp;amp;classid=5&amp;amp;id=2256"
 target="_blank" rel="noreferrer noopener"
 >《人物》, 发哨子的人&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a>、&lt;a href="http://china.caixin.com/2020-03-10/101526309.html"
@@ -10705,16 +10707,16 @@ target="_blank" rel="noreferrer noopener"
 &lt;h2 id="关于-pn-的界限的估计">关于 &lt;span class="math inline">\(p(n)\)&lt;/span> 的界限的估计&lt;/h2>
 &lt;p>对于有理数的小数展开，一定存在一个常数 &lt;span class="math inline">\(B\)&lt;/span>，使得对 &lt;span class="math inline">\(\forall n, 0 \le p(n) \le B\)&lt;/span>（上下界均无法再更好），这是比较简单的部分. 对于无理数的小数展开，我们来估计 &lt;span class="math inline">\(p(n)\)&lt;/span> 的界限.&lt;/p>
 &lt;h3 id="无理数小数展开的-pn-的下界">无理数小数展开的 &lt;span class="math inline">\(p(n)\)&lt;/span> 的下界&lt;/h3>
-&lt;p>首先，&lt;span class="math inline">\(p(n)\)&lt;/span> 的下界，&lt;span class="math inline">\(p(n) \ge n + 1\)&lt;/span>. &lt;span class="notation_color">[证明待补充.]&lt;/span> 这个下界不能再大，比如，令 &lt;span class="math inline">\(S_0 = 0\)&lt;/span>，&lt;span class="math inline">\(S_1 = 01\)&lt;/span>，&lt;span class="math inline">\(S_2 = S_1\cup S_0 = 010\)&lt;/span>，&lt;span class="math inline">\(S_3 = S_2\cup S_1 = 01001\)&lt;/span>， …，&lt;span class="math inline">\(S_n = S_{n-1}\cup S_{n-2}, n \ge 2\)&lt;/span>，则按照这个规则生成的 &lt;span class="math inline">\(S_n\)&lt;/span> 作为小数部分，&lt;span class="math inline">\(0\)&lt;/span> 为整数得到的实数 &lt;span class="math inline">\(\alpha = 0.010010100100101001010...\)&lt;/span>，它的&lt;/p>
+&lt;p>首先，&lt;span class="math inline">\(p(n)\)&lt;/span> 的下界，&lt;span class="math inline">\(p(n) \ge n + 1\)&lt;/span>. &lt;mark class='notation_color'>[证明待补充.]&lt;/mark> 这个下界不能再大，比如，令 &lt;span class="math inline">\(S_0 = 0\)&lt;/span>，&lt;span class="math inline">\(S_1 = 01\)&lt;/span>，&lt;span class="math inline">\(S_2 = S_1\cup S_0 = 010\)&lt;/span>，&lt;span class="math inline">\(S_3 = S_2\cup S_1 = 01001\)&lt;/span>， …，&lt;span class="math inline">\(S_n = S_{n-1}\cup S_{n-2}, n \ge 2\)&lt;/span>，则按照这个规则生成的 &lt;span class="math inline">\(S_n\)&lt;/span> 作为小数部分，&lt;span class="math inline">\(0\)&lt;/span> 为整数得到的实数 &lt;span class="math inline">\(\alpha = 0.010010100100101001010...\)&lt;/span>，它的&lt;/p>
 &lt;ul>
 &lt;li>&lt;span class="math inline">\(p(1) = 2\)&lt;/span>（长度为 &lt;span class="math inline">\(1\)&lt;/span> 的片段有且只有 &lt;span class="math inline">\(0, 1\)&lt;/span>）&lt;/li>
 &lt;li>&lt;span class="math inline">\(p(2) = 3\)&lt;/span>（长度为 &lt;span class="math inline">\(2\)&lt;/span> 的片段有且只有 &lt;span class="math inline">\(00, 01, 10\)&lt;/span>）&lt;/li>
 &lt;li>&lt;span class="math inline">\(p(3) = 4\)&lt;/span>（长度为 &lt;span class="math inline">\(3\)&lt;/span> 的片段有且只有 &lt;span class="math inline">\(001, 010, 100, 101\)&lt;/span>）&lt;/li>
 &lt;li>&lt;span class="math inline">\(p(4) = 5\)&lt;/span>（长度为 &lt;span class="math inline">\(4\)&lt;/span> 的片段有且只有 &lt;span class="math inline">\(0010, 0100, 1001, 0101, 1010\)&lt;/span>）&lt;/li>
 &lt;/ul>
-&lt;p>实际上这个实数的小数展开就有，&lt;span class="math inline">\(p(n) = n + 1\)&lt;/span>.&lt;span class="notation_color">[证明待补充]&lt;/span>&lt;/p>
+&lt;p>实际上这个实数的小数展开就有，&lt;span class="math inline">\(p(n) = n + 1\)&lt;/span>.&lt;mark class='notation_color'>[证明待补充]&lt;/mark>&lt;/p>
 &lt;h3 id="无理数小数展开的-pn-的上界">无理数小数展开的 &lt;span class="math inline">\(p(n)\)&lt;/span> 的上界&lt;/h3>
-&lt;p>其次，&lt;span class="math inline">\(p(n)\)&lt;/span> 的上界. 首先我们可以容易地得到，&lt;span class="math inline">\(p(n) \le 10^n\)&lt;/span>，但这个上界能不能再小呢？&lt;span class="notation_color">[待补充]&lt;/span>&lt;/p>
+&lt;p>其次，&lt;span class="math inline">\(p(n)\)&lt;/span> 的上界. 首先我们可以容易地得到，&lt;span class="math inline">\(p(n) \le 10^n\)&lt;/span>，但这个上界能不能再小呢？&lt;mark class='notation_color'>[证明待补充]&lt;/mark>&lt;/p>
 &lt;h3 id="代数无理数小数展开的-pn-的下界">代数无理数小数展开的 &lt;span class="math inline">\(p(n)\)&lt;/span> 的下界&lt;/h3>
 &lt;p>上面界限的估计让我们觉得非常粗糙，这时我们可以把无理数缩小范围到代数无理数，对代数无理数小数展开的 &lt;span class="math inline">\(p(n)\)&lt;/span> 做界限估计，看看能不能得到更精细的结果.&lt;/p>
 &lt;p>第一个结果就是：一个代数无理数的小数展开，对任意（大）的一个常数 &lt;span class="math inline">\(c\)&lt;/span>，存在一个数 &lt;span class="math inline">\(N_c\in \mathbb{N}\)&lt;/span>，使得对任意 &lt;span class="math inline">\(n \ge N_c\)&lt;/span>，有 &lt;span class="math inline">\(p(n) &amp;gt; n + c\)&lt;/span> 成立. 这个结果显然比之前无理数的结果 &lt;span class="math inline">\(p(n) \ge n + 1\)&lt;/span> 更好（下界变大）了，因为当我们取 &lt;span class="math inline">\(c = 1\)&lt;/span> 时，不会有一个代数无理数的小数展开使得之前结果中的“等号”恒成立了. 同时反过来看，上面定义的无理数 &lt;span class="math inline">\(\alpha\)&lt;/span> 对之前结果中的“等号”恒成立，因此我们可以知道实数 &lt;span class="math inline">\(\alpha\)&lt;/span> 不是一个代数数而是一个超越无理数.&lt;/p>
@@ -10744,7 +10746,7 @@ target="_blank" rel="noreferrer noopener"
 &lt;p>这个定理其实可以推广到任意 &lt;span class="math inline">\(b\)&lt;/span> 进制（&lt;span class="math inline">\(b \ge 2\)&lt;/span>），而不一定非要是十进制. 在任意进制下的代数无理数的小数展开都是满足上面的定理的，&lt;span class="math inline">\(p(n)\)&lt;/span> 也类似地定义即可.&lt;/p>
 &lt;h1 id="对原文的一些深入学习">对原文的一些深入学习&lt;/h1>
 &lt;p>原文是：B. Adamczewski and Y. Bugeaud, On the complexity of algebraic numbers I. Expansions in integer bases, Annals of Mathematics 165-2, (2007), 547–565.&lt;/p>
-&lt;p>&lt;span class="notation_color">深入学习待补充.&lt;/span>&lt;/p>
+&lt;p>&lt;mark class='notation_color'>深入学习待补充.&lt;/mark>&lt;/p>
 &lt;section class="footnotes" role="doc-endnotes">
 &lt;hr />
 &lt;ol>
@@ -10841,7 +10843,7 @@ style="filter: var(--c-img-filter);"
 从词素角度反思英语构词法
 &lt;a href="#%e4%bb%8e%e8%af%8d%e7%b4%a0%e8%a7%92%e5%ba%a6%e5%8f%8d%e6%80%9d%e8%8b%b1%e8%af%ad%e6%9e%84%e8%af%8d%e6%b3%95">&lt;small>¶&lt;/small>&lt;/a>
 &lt;/h2>
-&lt;p>这一章反思了英语传统构词法（&lt;span style="color:red;">转化法&lt;/span>、&lt;span style="color:red;">合成法&lt;/span>、&lt;span style="color:red;">派生法&lt;/span>），介绍了独创的能涵盖传统构词法的三级派生构词法，&lt;span class='notation_color'>其生成的单词（派生词）可以再作为自由词根&lt;/span>. 有些英语单词一次完成构词过程，有些则需要多次完成. 我们&lt;span class='notation_color'>使用“派生词”这个词语来称呼所有使用这种三级派生构词法得到的单词&lt;/span>，而不是指传统意义上的由&lt;span style="color:red;">派生法&lt;/span>得到的单词. 在本文中，为避免造成理解负担，我们用加括号的“单词（派生词）”这种写法. 三级派生构词法见下表，它依照词根是否加词缀和加何种词缀分成 3 级：&lt;/p>
+&lt;p>这一章反思了英语传统构词法（&lt;span style="color:red;">转化法&lt;/span>、&lt;span style="color:red;">合成法&lt;/span>、&lt;span style="color:red;">派生法&lt;/span>），介绍了独创的能涵盖传统构词法的三级派生构词法，&lt;mark class='notation_color'>其生成的单词（派生词）可以再作为自由词根&lt;/mark>. 有些英语单词一次完成构词过程，有些则需要多次完成. 我们&lt;mark class='notation_color'>使用“派生词”这个词语来称呼所有使用这种三级派生构词法得到的单词&lt;/mark>，而不是指传统意义上的由&lt;span style="color:red;">派生法&lt;/span>得到的单词. 在本文中，为避免造成理解负担，我们用加括号的“单词（派生词）”这种写法. 三级派生构词法见下表，它依照词根是否加词缀和加何种词缀分成 3 级：&lt;/p>
 &lt;p>&lt;figure>
 &lt;img loading="lazy" src="word-build.i.png" alt="词素构词理论图"
 style="filter: var(--c-img-filter);"
@@ -11453,22 +11455,22 @@ target="_blank" rel="noreferrer noopener"
 &lt;li>&lt;strong>&lt;span style="color: black;">Twitter&lt;/span>&lt;/strong>&lt;/li>
 &lt;/ul>
 &lt;p>接替微博的位置，记录生活精彩瞬间，记录迸发的灵感，阅读世界上的时事，消磨时间. 锁推使用中. 每天使用应少于 1 小时.&lt;/p>
-&lt;div class='notation_color'>
+&lt;div role="mark" class='notation_color'>
 &lt;p>2020 年 4 月 9 日更新：Twitter 用的也渐渐少了，调整为只在 Twitter 上记录技术的细节以及早上起床后记录我还记得的梦境.&lt;/div>&lt;/p>
 &lt;ul>
 &lt;li>&lt;strong>&lt;span style="color: black;">豆瓣&lt;/span>&lt;/strong>&lt;/li>
 &lt;/ul>
 &lt;p>标记书与电影，简单备份一些对质量没有要求的照片，看看世界，消磨时间. 每天使用应少于 1.5 小时.&lt;/p>
-&lt;div class='notation_color'>
+&lt;div role="mark" class='notation_color'>
 &lt;p>2020 年 4 月 9 日更新：豆瓣用的渐渐多了起来，豆瓣广播目前调整为接替微博的位置. 整体的策略为：长篇的东西写博客，生活中有趣的小事发豆瓣. 豆瓣尽量不发没有意义的灌水，频率不超过每周三次为好，还是应该尽量多写博客，强迫自己把思考做完整，也方便未来整理与反思.&lt;/div>&lt;/p>
-&lt;div class='notation_color'>
+&lt;div role="mark" class='notation_color'>
 &lt;p>2020 年 10 月 17 日更新：因豆瓣 tag 标签下线整改以及大批友邻被封禁，我终于还是意识到不能把内容交给任何一个组织、资本或公司，尤其是受到中国大陆政治言论审查的社交平台. 随着大批的用户迁出，我也决定豆瓣作为微博过渡者的使命已经完成，以后只在豆瓣上记录书影音即可.&lt;/div>&lt;/p>
 &lt;ul>
 &lt;li>&lt;strong>&lt;span style="color: black;">长毛象&lt;/span>&lt;/strong>&lt;/li>
 &lt;/ul>
 &lt;p>跟随着豆瓣的大量难民（可以在长毛象任意实例中搜索 &lt;code>#背井离乡&lt;/code>、&lt;code>#豆瓣难民&lt;/code> 两个话题了解这次大迁徙活动），我发现并决定使用长毛象（Mastodon）这个项目. 长毛象不是一家公司、不是一个平台，它只是一个技术、一个项目；就像邮件不是一家公司、不是一个平台，只是一个技术、一个项目一样. 得益于分布式的服务器管理和开源的项目技术，长毛象的初体验令我感觉非常良好，是微博、推特的绝佳替代品.&lt;/p>
 &lt;p>频繁地更换社交平台不是什么好事，白白浪费时间，我决定未来将长期使用长毛象作为个人社交平台，发表生活中的小事、突发奇想的灵感和不系统的思考，作为本博客站的补充. 更细致的知识的梳理、系统的思考、完整的文学创作则还是以本博客站作为大本营.&lt;/p>
-&lt;p>&lt;span class='notation_color'>本节添加于 2020 年 10 月 17 日.&lt;/span>&lt;/p>
+&lt;p>&lt;mark class='notation_color'>本节添加于 2020 年 10 月 17 日.&lt;/mark>&lt;/p>
 &lt;ul>
 &lt;li>&lt;strong>&lt;span style="color: black;">知乎&lt;/span>&lt;/strong>&lt;/li>
 &lt;/ul>
@@ -11526,13 +11528,13 @@ target="_blank" rel="noreferrer noopener"
 >Manjaro&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a>. 这是 DEY 学长在 2017 年 3 月推荐给我的，从此我一直在用，以后也会一直主要使用. 自我使用以来，自己写了非常多的各种软件的配置文件以及一些脚本，它们被我备份在 &lt;a href="https://github.com/zerovip/backup"
 target="_blank" rel="noreferrer noopener"
 >GitHub 仓库里&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a>以防出现意外后可以快速恢复出一个一模一样的环境.&lt;/p>
-&lt;div class='notation_color'>
+&lt;div role="mark" class='notation_color'>
 &lt;p>2020 年 6 月更新：已从 Manjaro 更换为 Arch Linux.&lt;/div>&lt;/p>
 &lt;ul>
 &lt;li>&lt;strong>&lt;span style="color: black;">次要使用的计算机操作系统：Windows&lt;/span>&lt;/strong>&lt;/li>
 &lt;/ul>
 &lt;p>很多游戏不支持 Linux，还要到 Windows 上玩，还有一些例如学校任务不得不安装的软件有时候也都没有 Linux 版本.&lt;/p>
-&lt;div class='notation_color'>
+&lt;div role="mark" class='notation_color'>
 &lt;p>2020 年 1 月新规：所有游戏一律到 Windows 上玩，无论是否支持 Linux.&lt;/div>&lt;/p>
 &lt;ul>
 &lt;li>&lt;strong>&lt;span style="color: black;">主要使用的手机操作系统：Android&lt;/span>&lt;/strong>&lt;/li>
@@ -11580,7 +11582,7 @@ target="_blank" rel="noreferrer noopener"
 &lt;li>&lt;strong>&lt;span style="color: black;">手机输入法：&lt;del>触宝&lt;/del> Gboard&lt;/span>&lt;/strong>&lt;/li>
 &lt;/ul>
 &lt;p>&lt;del>好早以前就一直在用触宝输入法，它的核心优点有：多语言，拼音打字后可以手写笔画选字，九宫格键盘的符号键背后有分门别类的特别全的符号. 而且我高中的时候发现在输入密码的时候触宝输入法直接就不起作用了，会呼出原生输入法，我把这个问题通过邮件反馈给开发人员后他们一星期内就发布了新版本解决了这个问题. 这件事让我一直对这个输入法珍爱有加，后来他们给输入法加了广告我也没有换，再后来我找到了没有广告的触宝输入法极速版并一直使用至今.&lt;/del>&lt;/p>
-&lt;div class='notation_color'>
+&lt;div role="mark" class='notation_color'>
 &lt;p>2020 年还是决定换一个输入法. 想换的理由是想体验一下全键盘，而触宝输入法的全键盘的符号键背后符号太少了，给开发人员发邮件希望要九宫格的符号界面却迟迟没有回复，查了一下选择了 Gboard. 结果发现 Gboard 的符号页符号也很少，还少了手写笔画选字的功能. 但无论如何还是硬着头皮用下来了.&lt;/div>&lt;/p>
 &lt;ul>
 &lt;li>&lt;strong>&lt;span style="color: black;">知晓体育比分：SofaScore&lt;/span>&lt;/strong>&lt;/li>
@@ -11600,7 +11602,7 @@ target="_blank" rel="noreferrer noopener"
 &lt;p>Android 软件，用来订阅 &lt;a href="https://zh.wikipedia.org/wiki/RSS"
 target="_blank" rel="noreferrer noopener"
 >RSS&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a> 源. RSS 大法好，必须在这里鼓吹一波 RSS 这个上个时代的互联网技术. 我订阅的源主要有：知乎日报、Engadget、果壳精选、Mathematics-Quanta Magazine 等. &lt;del>本站未来将会支持 RSS 订阅.&lt;/del>&lt;/p>
-&lt;div class='notation_color'>
+&lt;div role="mark" class='notation_color'>
 &lt;p>2020 年更新：本站现已支持 RSS 订阅.&lt;/div>&lt;/p>
 &lt;ul>
 &lt;li>&lt;strong>&lt;span style="color: black;">画数学曲线：ArityMOD&lt;/span>&lt;/strong>&lt;/li>
@@ -11614,7 +11616,7 @@ target="_blank" rel="noreferrer noopener"
 2019 年 9 月换成了 Gmail，原因是 Outlook 收到消息后不会提醒，经测试 Gmail 提醒得很好.&lt;/span>&lt;/del>&lt;/p>
 &lt;p>&lt;del>&lt;span class='notation_color'>
 2019 年 12 月更新：Gmail 在 163、hotmail、outlook 邮箱收到消息后还是不会提醒，正打算再换一个.&lt;/span>&lt;/del>&lt;/p>
-&lt;div class='notation_color'>
+&lt;div role="mark" class='notation_color'>
 &lt;p>2020 年 1 月 16 日更新：试了一下 mail.ru，其实很不错的，提醒很及时，唯一的缺点是直接把 163 的全下载下来了，还都是未读状态，就觉得不太行. 又试了 &lt;a href="https://k9mail.github.io/"
 target="_blank" rel="noreferrer noopener"
 >K-9 Mail&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a>，目前看来一切都好，软件小巧且功能强大. gmail 需要设置单独的应用密码；outlook 和 hotmail 都可以直接凭密码登入；sina 可直接凭密码登入；163 需要单独设置授权密码，还需要另外解决阻止客户端收信的问题，参考了&lt;a href="http://www.sangsan.cn/article/learn/1047.htm"
@@ -11685,7 +11687,7 @@ target="_blank" rel="noreferrer noopener"
 &lt;li>&lt;strong>&lt;span style="color: black;">Ingress&lt;/span>&lt;/strong>&lt;/li>
 &lt;/ul>
 &lt;p>&lt;del>一个朋友带我入的坑，是一个手机端的增强现实的游戏，佛系玩. 启蒙军才是人类的未来！&lt;/del>&lt;/p>
-&lt;div class='notation_color'>
+&lt;div role="mark" class='notation_color'>
 &lt;p>2019 年 7 月 18 日更新：已废弃. 玩了也没几个月吧，我本来挺佛系的，出去吃饭就打开随手 hack，遇到中立 po 就随手插上一个脚. 有时候也还投入挺多心力的，出去走一走做 field，甚至做多重. 做多重很麻烦的，一遍一遍 hack 就为了多得到一些 key，常常一两个小时就耽误在这上面了. 我还安慰自己不能总是学习，玩这个游戏也算是多运动，很健康的.&lt;/p>
 &lt;p>我不和别人对抗. 因为只能放 2000 个道具，我得到的所有能量炮我都自己吃掉了，而不是把它们用了炸别人的 po——我只占领中立的能量塔；然而常常一个星期无人占领的中立能量塔我一占领、连线、建 field，第二天就有敌军把它们打掉了并占为他们所有. 我开始还很不爽，后来觉得毕竟也是规则的一部分，别人打掉也方便我重新占领，能得到更多的经验值，这也是游戏的乐趣所在吧，所以也坦然接受了，建 field 也都完全不加护盾，方便别人打掉. 佛系玩着，看着自己成就一点一点多起来也很快乐.&lt;/p>
 &lt;p>好像守 po 150 天能得到一个什么奖励，我就选了一个特别不好接近的 po 占了 5 级，定时给它充电，加上护盾，连线从来不连它以免给敌军连线造成困扰被打掉. 后来还有一个友军还帮我升了一下级，我非常感激 TA，不知道是不是 TA 猜到我想守这个 po，或者 TA 就是顺便路过而已. 总之我对它珍爱有加，把全部心力都浇筑在它上面. 同时也做好了心理准备，想象它被打掉的样子，毕竟我是想解锁成就，被敌军发现并破坏我的计划也都是正常的. 不过已经快 30 多天了，敌军都没有碰过它，我想也许不是他们没有发现，可能就是他们对新人比较有爱吧.&lt;/p>
@@ -11696,7 +11698,7 @@ target="_blank" rel="noreferrer noopener"
 &lt;p>于是我又改 google 帐号名称，果然顺利解决了问题. 登进去以后赶紧从我那 200 多个 key 里找我想充电的那个. 按名称排序的话完全看不出中文的规律，按距离排序几乎就是得一个一个翻过去，完全不知道该怎么搜索，一如既往地烦躁地花了些时间后终于找到，却充不进去电！所有的 po 都充不进去！我试着到我家这边一个 po 跟前去充还是不行，这时我才发现也没法 hack，也没法插脚，所有操作都做不了了，提示的框里什么都没写，是一个空白框. 虽然我第一次遇到这样的情况，但我马上怀疑自己被封禁了，查了一下，好像和 semi-ban 的症状特别相似，也没查到有用的解封方法，都说是过几天就好了. 那我可等不起，再过几个小时我守的 po 就中立了——没有任何人打它，它就中立了.&lt;/p>
 &lt;p>应该说，这是压垮我的最后一根稻草. 我把游戏卸了，顿时感到一身轻松. 我不用再耽误时间，我不用再看着我占的 po 被敌军打下，我不用时时刻刻想着给我的 po 充电. 我认为游戏的意义在于放松，在于让我快乐，这个游戏唯一让我快乐的地方是我看着自己一点一点解锁新成就，期待自己在满级以后可以装逼. 这个游戏也许被更多的玩家认为是一个交友游戏，但它首先被我排除了这样的玩法——我就要 solo 玩，没有 6 级以上 po 又如何？而如今在我看来玩这个游戏窝心的程度已经远远大于让我快乐的程度，索性我离开吧. 我只有 7 级，我没有沉没成本，我还可以全身而退，除了解 passcode 没有体验过，这游戏也没有超出我认知的东西了.&lt;/p>
 &lt;p>那就这样，再见 ingress ！XM 能量与我再无关，启蒙军与我再无关.&lt;/div>&lt;/p></description></item><item><title>一些不错的网站</title><link>/zh/71828/</link><pubDate>2019-06-23</pubDate><guid>/zh/71828/</guid><description>&lt;p>收集整理值得一看的网站，并给出链接. 以我经常关注的博客居多，主要是方便自己. 这些都&lt;strong>不是&lt;/strong>友链（我不和任何人交换友链），或许可以把他们看成是我的榜样们，或者说这里是我视奸的起点.&lt;/p>
-&lt;p>&lt;span class='notation_color'>不定期更新中&amp;hellip;（每次更新的内容不另作说明）&lt;/span>&lt;/p>
+&lt;p>&lt;mark class='notation_color'>不定期更新中&amp;hellip;（每次更新的内容不另作说明）&lt;/mark>&lt;/p>
 &lt;h1 id="非数学">
 非数学
 &lt;a href="#%e9%9d%9e%e6%95%b0%e5%ad%a6">&lt;small>¶&lt;/small>&lt;/a>
@@ -11850,7 +11852,7 @@ target="_blank" rel="noreferrer noopener"
 数学
 &lt;a href="#%e6%95%b0%e5%ad%a6">&lt;small>¶&lt;/small>&lt;/a>
 &lt;/h1>
-&lt;p>&lt;span class='notation_color'>除了一些机构的数学类网站，我越来越发现各大高校数学系老师的个人主页上有非常多有价值的内容，我们可以广泛参考他们开设课程时提供的参考书目，甚至他们会贴上很多他们自己写的课程讲义.&lt;/span>&lt;/p>
+&lt;p>&lt;mark class='notation_color'>除了一些机构的数学类网站，我越来越发现各大高校数学系老师的个人主页上有非常多有价值的内容，我们可以广泛参考他们开设课程时提供的参考书目，甚至他们会贴上很多他们自己写的课程讲义.&lt;/mark>&lt;/p>
 &lt;ul>
 &lt;li>&lt;a href="https://github.com/rossant/awesome-math"
 target="_blank" rel="noreferrer noopener"
@@ -11971,7 +11973,7 @@ target="_blank" rel="noreferrer noopener"
 target="_blank" rel="noreferrer noopener"
 >Topos Cat&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a>. 在 bilibili 上发现的一个人，看到 ta 翻译了 YouTube 频道 Aleph 0 的视频.&lt;/li>
 &lt;/ul>
-&lt;p>&lt;span class='notation_color'>除了以上内容，我还在各种平台林林总总关注了很多超牛逼超牛逼的本科生，比如在知乎、在豆瓣，大约都是和我同龄或比我小一些，但水平远远在我之上. 这些人永远是我的榜样. 如今的互联网世界，获取信息极其方便，但获取优质信息不太容易，而那些优质信息是能让我们学习，帮助我们成长的. 希望上面的分享对别人也有帮助.&lt;/span>&lt;/p></description></item><item><title>Hugo 静态博客建站记 - 自写主题</title><link>/zh/18284/</link><pubDate>2019-06-22</pubDate><guid>/zh/18284/</guid><description>&lt;p>很早就想建一个自己的博客了，每每看到别人的好看的博客就心里痒痒. 高中及以前写过一些回忆录都发表在 QQ 空间上，高中以来有意识地进行一些写作，觉得不错的都发表在新浪博客上，稍短的就写成长微博. 但有时想写一些专业性（数学）的东西，新浪博客的富文本编辑器就不够用了，而微博由于国内的审查机制不明确不规范也决定放弃，于是着手建博客.&lt;/p>
+&lt;p>&lt;mark class='notation_color'>除了以上内容，我还在各种平台林林总总关注了很多超牛逼超牛逼的本科生，比如在知乎、在豆瓣，大约都是和我同龄或比我小一些，但水平远远在我之上. 这些人永远是我的榜样. 如今的互联网世界，获取信息极其方便，但获取优质信息不太容易，而那些优质信息是能让我们学习，帮助我们成长的. 希望上面的分享对别人也有帮助.&lt;/mark>&lt;/p></description></item><item><title>Hugo 静态博客建站记 - 自写主题</title><link>/zh/18284/</link><pubDate>2019-06-22</pubDate><guid>/zh/18284/</guid><description>&lt;p>很早就想建一个自己的博客了，每每看到别人的好看的博客就心里痒痒. 高中及以前写过一些回忆录都发表在 QQ 空间上，高中以来有意识地进行一些写作，觉得不错的都发表在新浪博客上，稍短的就写成长微博. 但有时想写一些专业性（数学）的东西，新浪博客的富文本编辑器就不够用了，而微博由于国内的审查机制不明确不规范也决定放弃，于是着手建博客.&lt;/p>
 &lt;h1 id="构想">
 构想
 &lt;a href="#%e6%9e%84%e6%83%b3">&lt;small>¶&lt;/small>&lt;/a>
@@ -12416,7 +12418,7 @@ target="_blank" rel="noreferrer noopener"
 target="_blank" rel="noreferrer noopener"
 >Anastasia, Advanced Autonumbering Techniques with CSS&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a>.&lt;/p>
 &lt;p>然后就是我的文章排版，用了两端对齐，但是又有中文又有英文有时还有数学内容的文章就特别丑，中间的间距不均匀，我也不知道该怎么办.&lt;/p>
-&lt;div class='notation_color'>
+&lt;div role="mark" class='notation_color'>
 &lt;p>注：2019 年 12 月 29 日我对所有的 CSS 进行了重写，使用了更为方便更为强大的 CSS3 技术，包括 flex 弹性盒子（主要参考的是&lt;a href="https://www.ruanyifeng.com/blog/2015/07/flex-grammar.html"
 target="_blank" rel="noreferrer noopener"
 >阮一峰, Flex 布局教程：语法篇&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a>、&lt;a href="https://www.ruanyifeng.com/blog/2015/07/flex-examples.html"
@@ -12424,11 +12426,11 @@ target="_blank" rel="noreferrer noopener"
 >阮一峰, Flex 布局教程：实例篇&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a>）、transition 过渡动画以及 @media 多媒体查询，重新为小屏幕手机端写了新的 CSS，并做了响应式布局. 目前这个博客就更好看、更好用了——无论在电脑屏幕上还是手机屏幕上. 这里需要特别记录的一点是关于“视口”这个概念的理解，这篇&lt;a href="https://www.zhihu.com/question/35221839/answer/66825618"
 target="_blank" rel="noreferrer noopener"
 >知乎上的回答&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a>解答了我和提问者同样的困惑. 同时，之前的两端对齐的排版被我取消了，因为实在是太丑了，我宁愿让右侧不对齐.&lt;/div>&lt;/p>
-&lt;div class='notation_color'>
+&lt;div role="mark" class='notation_color'>
 &lt;p>再注：新的 CSS 在奇葩的内核下显示不正常，波及了 QQ 浏览器、UC 浏览器等. 试着解决了一次，但终究找不到问题的根源——明明我用这些浏览器跑&lt;a href="https://css3test.com"
 target="_blank" rel="noreferrer noopener"
 >CSS3 测试&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a>支持率很高，而且我用到的技术它都支持. 我懒得解决了，除非有人帮我定位一下问题，因为我 Linux 的生产环境没法装 QQ 浏览器，也不知道前端大佬们都是怎么测试的. 我的网站在 Firefox、Chrome 等浏览器上都显示得超级好，更何况这些问题就应该浏览器厂商解决，哪有留给前端解决的？留给我解决我就偏要留给用户解决. 要是所有前端都这么硬气，倒逼用户换成更现代的浏览器，我才不信浏览器厂商敢这么不作为. 反正我这个博客也没什么人看，就让用[显示不好的浏览器]的人不再来看我的博客好了. 补充于 2020 年 1 月 2 日.&lt;/div>&lt;/p>
-&lt;div class='notation_color'>
+&lt;div role="mark" class='notation_color'>
 &lt;p>再注：今天想起这件事，不死心又查了一下，怀疑是那些浏览器不支持 flex 的标准写法的缘故，于是找到这样一个解决此问题的工具：&lt;a href="https://github.com/postcss/autoprefixer"
 target="_blank" rel="noreferrer noopener"
 >Autoprefixer&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a>，可以集成到 IDE 中使用，它有一个在线版本：&lt;a href="https://autoprefixer.github.io/"
@@ -12438,15 +12440,15 @@ target="_blank" rel="noreferrer noopener"
 >支持浏览器的覆盖范围&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a>，查询语法可以看&lt;a href="https://github.com/browserslist/browserslist#queries"
 target="_blank" rel="noreferrer noopener"
 >这里&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a>. 这两个工具配合起来非常方便，我选择 last 4 version（可以支持 92.18% 的浏览器）试了一下，还是没有解决问题. 补充于 2020 年 4 月 10 日.&lt;/div>&lt;/p>
-&lt;div class='notation_color'>
+&lt;div role="mark" class='notation_color'>
 &lt;p>再注：还是不死心，到思否论坛上问了一下，然后在一个关键提示下，顺利找到问题并解决. 问题的根源在于 QQ 浏览器看到 flex 容器写着 &lt;code>height: 100vh&lt;/code> 就想要帮我在一个屏幕高度内塞下所有 flex 项目，解决的办法是把 &lt;code>flex-shrink&lt;/code> 调整到 0. 详见&lt;a href="https://segmentfault.com/q/1010000022523106"
 target="_blank" rel="noreferrer noopener"
 >思否论坛的这个帖子&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a>. 补充于 2020 年 5 月 2 日.&lt;/div>&lt;/p>
-&lt;div class='notation_color'>
+&lt;div role="mark" class='notation_color'>
 &lt;p>注：今天对 CSS 的颜色变量进行了抽象提出，并在&lt;a href="https://dev.to/lampewebdev/css-quickies-css-variables-or-how-you-create-a-white-dark-theme-easily-1i0i"
 target="_blank" rel="noreferrer noopener"
 >Michael &amp;ldquo;lampe&amp;rdquo; Lazarski, CSS Quickies: CSS Variables&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a>这篇教程的指导下完成了主题颜色的切换功能，这样一来本站便支持明暗两个主题了. 等过些日子好好配置出一套令人满意的明暗配色之后会在首页写个短消息公布一下. 补充于 2020 年 8 月 8 日.（啊刚刚皇马被曼城淘汰出局了，好伤心，瓦拉内两次失误啊.）&lt;/div>&lt;/p>
-&lt;div class='notation_color'>
+&lt;div role="mark" class='notation_color'>
 &lt;p>注：在 &lt;a href="https://colorschemedesigner.com/"
 target="_blank" rel="noreferrer noopener"
 >Color Scheme Designer&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a> 的帮助下，我重新设计了明亮模式的配色，只是稍微有一点点变动，基本感官没有变化. 接着我又一鼓作气，把黑暗模式的配色也完成了，主要参考了 &lt;a href="https://blog.prototypr.io/how-to-design-a-dark-theme-for-your-android-app-3daeb264637"
@@ -12459,7 +12461,7 @@ target="_blank" rel="noreferrer noopener"
 target="_blank" rel="noreferrer noopener"
 >Color Scheme Designer&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a>. 黑暗模式的配色基本上是可以了，但我还是不是很满意. 一来觉得配色还是有不合理的地方，二是像一些图片在黑暗背景下显得很不协调——透明背景加黑色字体的图片几乎无法辨认、白色背景的又显得很突兀. 如果有人对配色比较在行，可以给我提供配色方案.&lt;/p>
 &lt;p>还应该完善的一个小功能是：应该用 prefers-color-scheme 技术判断一下用户的系统环境颜色，当然比较简单，在 main.js 里把初始化的那个 if 语句的最后一个 else 里写点东西判断一下就行，但我不是很想搞，还是觉得给所有人默认明亮模式比较好，或许等我的黑暗模式配色更好看一点再说吧. 补充于 2020 年 8 月 10 日.&lt;/div>&lt;/p>
-&lt;div class='notation_color'>
+&lt;div role="mark" class='notation_color'>
 &lt;p>prefers-color-scheme 已支持. 补充于 2021 年 8 月 27 日.&lt;/div>&lt;/p>
 &lt;h2 id="评论系统的支持">
 评论系统的支持
@@ -12507,7 +12509,7 @@ target="_blank" rel="noreferrer noopener"
 &lt;p>这里需要额外注意的是 RSS 页也需要进行隐藏，因为 Hugo encryptor 这个工具只对 html 文件进行了加密，没有加密 xml 文件，如果不隐藏就会导致在 RSS 中可以看到密码和加密内容. 比如对上面给出链接的测试文章我故意没有在 RSS 列表页隐藏，这样在&lt;a href="../zh/non-math/memos/index.xml"
 >“备忘分区”的 RSS&lt;/a> 中可以看到密码 &lt;code>&amp;lt;cipher-text data-password=&amp;quot;PASS3word&amp;quot; style=&amp;quot;display:none;&amp;quot;&amp;gt;&lt;/code> 以及加密的内容.&lt;/p>
 &lt;p>总而言之，列表隐藏和文字加密可随意配合使用，列表隐藏但不文字加密、文字加密但不列表隐藏、文字加密并列表隐藏，这都是可以的；但只要文字加密就必须 RSS 隐藏.&lt;/p>
-&lt;p>&lt;span class='notation_color'>这一小节补充于 2019 年 12 月 27 日.&lt;/span>&lt;/p>
+&lt;p>&lt;mark class='notation_color'>这一小节补充于 2019 年 12 月 27 日.&lt;/mark>&lt;/p>
 &lt;h2 id="统计信息">
 统计信息
 &lt;a href="#%e7%bb%9f%e8%ae%a1%e4%bf%a1%e6%81%af">&lt;small>¶&lt;/small>&lt;/a>
@@ -12516,7 +12518,7 @@ target="_blank" rel="noreferrer noopener"
 &lt;p>2020 年 3 月 6 日我听说了一个新的开源统计工具：&lt;a href="https://www.goatcounter.com/"
 target="_blank" rel="noreferrer noopener"
 >Goat Counter&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a>，使用非常简单，我也马上就把它加进来了.&lt;/p>
-&lt;p>&lt;span class='notation_color'>这一小节补充于 2020 年 3 月 6 日.&lt;/span>&lt;/p>
+&lt;p>&lt;mark class='notation_color'>这一小节补充于 2020 年 3 月 6 日.&lt;/mark>&lt;/p>
 &lt;h2 id="同栏目下的文章互链">
 同栏目下的文章互链
 &lt;a href="#%e5%90%8c%e6%a0%8f%e7%9b%ae%e4%b8%8b%e7%9a%84%e6%96%87%e7%ab%a0%e4%ba%92%e9%93%be">&lt;small>¶&lt;/small>&lt;/a>
@@ -12568,7 +12570,7 @@ target="_blank" rel="noreferrer noopener"
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>最后把中文的内容翻译翻译写成 &lt;code>{{ i18n &amp;quot;xxx&amp;quot; }}&lt;/code> 的形式就可以了.&lt;/p>
-&lt;p>&lt;span class='notation_color'>这一小节补充于 2020 年 7 月 29 日.&lt;/span>&lt;/p>
+&lt;p>&lt;mark class='notation_color'>这一小节补充于 2020 年 7 月 29 日.&lt;/mark>&lt;/p>
 &lt;h1 id="部署">
 部署
 &lt;a href="#%e9%83%a8%e7%bd%b2">&lt;small>¶&lt;/small>&lt;/a>
@@ -12597,7 +12599,7 @@ target="_blank" rel="noreferrer noopener"
 &lt;p>于是我就直接把&lt;a href="https://github.com/zerovip/zerovip.github.io"
 target="_blank" rel="noreferrer noopener"
 >静态文件的仓库 zerovip.github.io&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a>，也就是 Github Pages 用的那个 username.github.io 那个仓库关联到 Netlify 网站项目上了，也运行得非常好. 这时我才发现 Netlify 并没有想象中那样变得加载更快，我还是要寻找更好的解决方案.&lt;/p>
-&lt;p>&lt;span class='notation_color'>这一小节补充于 2019 年 12 月 30 日.&lt;/span>&lt;/p>
+&lt;p>&lt;mark class='notation_color'>这一小节补充于 2019 年 12 月 30 日.&lt;/mark>&lt;/p>
 &lt;h2 id="其他">
 其他
 &lt;a href="#%e5%85%b6%e4%bb%96">&lt;small>¶&lt;/small>&lt;/a>
@@ -12606,7 +12608,7 @@ target="_blank" rel="noreferrer noopener"
 &lt;p>一，弄一个 CDN，但国外的 CDN 不满足 4，国内的 CDN 不满足 3.&lt;/p>
 &lt;p>二，反正是静态的博客，再找地方托管，考虑过：Firebase（不满足 1）、Gitee（不满足 3）、Coding（不满足 3）、Gitlab（不满足 4）等等.&lt;/p>
 &lt;p>于是干脆就不弄了.&lt;/p>
-&lt;p>&lt;span class='notation_color'>这一小节补充于 2019 年 12 月 30 日.&lt;/span>&lt;/p>
+&lt;p>&lt;mark class='notation_color'>这一小节补充于 2019 年 12 月 30 日.&lt;/mark>&lt;/p>
 &lt;h2 id="vercel">
 Vercel
 &lt;a href="#vercel">&lt;small>¶&lt;/small>&lt;/a>
@@ -12615,13 +12617,13 @@ Vercel
 target="_blank" rel="noreferrer noopener"
 >Vercel&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a> 这个东西感觉有点流行起来了，中文世界里的一些平台上出现了越来越多关于它的很多讨论. 于是我又花了五分钟把我的博客多部署了一份，感觉它确实访问速度稍稍快一些. 它的部署也非常简单，用 GitHub 登录，从 GitHub 导入项目，在 GitHub 的相关 repo 中安装 Vercel app，然后就行了，后面有任何变化也会同步推送出来. 整体上感觉是 Netlify 的竞品，因为和 Netlify 一样它也支持各种框架——Hugo、Hexo、Jekyll、Next.js、Gatsby、Vue.js 等等等等等等，有一大堆都是我没听说过的东西. 原理应该和 Netlify 完全一样，可以设置部署的命令，环境变量等等，相当于是一台受到限制的 VPS.&lt;/p>
 &lt;p>我当然还是直接把静态仓库 zerovip.github.io 给部署上去了，因为涉及到用 python 脚本给渲染好的 html 加密. 但即便不涉及加密过程我也会这么部署的，因为 Hugo 本身就很强大，软件安装极其容易，生成静态文件速度极快，像我这样直接部署所有静态文件才不会因为版本号不同、环境不同等原因产生任何偏差，严格保证了所有内容完全一致. 像 Hexo 那种生成静态文件要好几秒且安装起来比较费事的框架可能这么搞稍微容易一点吧，这样搞的话本地不需要安装，只专注写 markdown 文档就好. 但缺点就是只能用别人的主题，不能像我这样自己写主题，对主题上的任何需求和不满意的地方也没法随时进行调整. 说起来，我对我自己的这个主题真的是相当满意，我对我的一切选择（选择了 Hugo、选择了自己写主题）都太满意了，前期辛苦一点点换来的是持久的幸福啊！&lt;/p>
-&lt;p>&lt;span class='notation_color'>这一小节补充于 2020 年 8 月 21 日.&lt;/span>&lt;/p>
+&lt;p>&lt;mark class='notation_color'>这一小节补充于 2020 年 8 月 21 日.&lt;/mark>&lt;/p>
 &lt;h2 id="cloudflare-pages">
 CloudFlare Pages
 &lt;a href="#cloudflare-pages">&lt;small>¶&lt;/small>&lt;/a>
 &lt;/h2>
 &lt;p>CloudFlare 也搞了一个 Pages 服务，不得不感慨，现在做托管的服务越来越多了. 于是又欢喜地把我的博客托管到了这上面一份.&lt;/p>
-&lt;p>&lt;span class='notation_color'>这一小节补充于 2021 年 3 月 12 日.&lt;/span>&lt;/p>
+&lt;p>&lt;mark class='notation_color'>这一小节补充于 2021 年 3 月 12 日.&lt;/mark>&lt;/p>
 &lt;h1 id="是为记">
 是为记.
 &lt;a href="#%e6%98%af%e4%b8%ba%e8%ae%b0">&lt;small>¶&lt;/small>&lt;/a>
@@ -12726,7 +12728,7 @@ target="_blank" rel="noreferrer noopener"
 >分类模板&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a>那一节. Taxonomy 其实非常灵活，把它搞定只需要解决 3 个方面的问题：Taxonomy Term、Taxonomy List 和文章中关于 Taxonomy 的显示. Taxonomy Term 是某个分类页，比如【导演】页列出库布里克、希区柯克和黑泽明，比如【世纪】页列出 20 世纪、21 世纪，比如【标签】页列出青春、访谈、计算机；而 Taxonomy List 是具体分类项页，这是名副其实的列表页，比如【希区柯克】页列出所有希区柯克的电影，比如【21 世纪】页列出所有 21 世纪的电影，比如【青春】页列出所有含“青春”这个标签的文章. 这不难理解，但问题在于多语言. 按我的设想应该是同一个网站同样的内容被翻译成不同语言，所以英文的【导演】页应该是【directors】页，这在地址栏上不像想象中运作，在 “&amp;hellip;/zh/导演/” 页点击英语按钮会转到 “&amp;hellip;/en/导演/”，这个问题没想到很简单的解决办法，目前想到的解决办法是每个分类页、分类项页都用 _index.md 写出多语言的形式，地址栏永恒保持英文，不过这一想就觉得困难. 这也是我决定放弃这个功能的一个原因.&amp;#160;&lt;a href="#fnref:3" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;/section></description></item><item><title>表示论学习笔记</title><link>/zh/59045/</link><pubDate>2019-06-20</pubDate><guid>/zh/59045/</guid><description>&lt;p>这里是表示论的笔记，是我2019年春季学期旁听研究生的课的课堂笔记，有些地方还没有整理完，以后有时间慢慢整理.&lt;/p></description></item><item><title>看过的电影</title><link>/zh/record/film/</link><pubDate>2010-01-01</pubDate><guid>/zh/record/film/</guid><description>&lt;p>这些是我看过的电影和电视剧. 打分的根本原则是同类比较，不同类型的电影无法比较，五星商业片不代表好于三星文艺片（更不会代表不好于），不会因为导演拍了一部爱情电影而我更喜欢悬疑，就因为爱情电影中没有悬疑而扣分. 综艺节目不标，体育比赛不标. 名字处的链接指向豆瓣，IMDB 编号处的链接指向 IMDB.&lt;/p></description></item><item><title>读过的书</title><link>/zh/record/book/</link><pubDate>2010-01-01</pubDate><guid>/zh/record/book/</guid><description>&lt;p>这些是我读过的书. 文集之类的书读过其中某个完整的部分也会标，教材、专业书、工具书不标. 书名处的链接指向豆瓣.&lt;/p></description></item><item><title>关于我</title><link>/zh/about/me/</link><pubDate>2000-01-01</pubDate><guid>/zh/about/me/</guid><description>&lt;p>通过邮件联系我：&lt;span class='notation_color'>zer0zero-blog [AT] yahoo [DOT] com&lt;/span> 或 &lt;span class='notation_color'>zer0zero [AT] sina [DOT] cn&lt;/span>. 如需要给我发送加密邮件：&lt;/p>
+&lt;/section></description></item><item><title>表示论学习笔记</title><link>/zh/59045/</link><pubDate>2019-06-20</pubDate><guid>/zh/59045/</guid><description>&lt;p>这里是表示论的笔记，是我2019年春季学期旁听研究生的课的课堂笔记，有些地方还没有整理完，以后有时间慢慢整理.&lt;/p></description></item><item><title>看过的电影</title><link>/zh/record/film/</link><pubDate>2010-01-01</pubDate><guid>/zh/record/film/</guid><description>&lt;p>这些是我看过的电影和电视剧. 打分的根本原则是同类比较，不同类型的电影无法比较，五星商业片不代表好于三星文艺片（更不会代表不好于），不会因为导演拍了一部爱情电影而我更喜欢悬疑，就因为爱情电影中没有悬疑而扣分. 综艺节目不标，体育比赛不标. 名字处的链接指向豆瓣，IMDB 编号处的链接指向 IMDB.&lt;/p></description></item><item><title>读过的书</title><link>/zh/record/book/</link><pubDate>2010-01-01</pubDate><guid>/zh/record/book/</guid><description>&lt;p>这些是我读过的书. 文集之类的书读过其中某个完整的部分也会标，教材、专业书、工具书不标. 书名处的链接指向豆瓣.&lt;/p></description></item><item><title>关于我</title><link>/zh/about/me/</link><pubDate>2000-01-01</pubDate><guid>/zh/about/me/</guid><description>&lt;p>通过邮件联系我：&lt;mark class='notation_color'>zer0zero-blog [AT] yahoo [DOT] com&lt;/mark> 或 &lt;mark class='notation_color'>zer0zero [AT] sina [DOT] cn&lt;/mark>. 如需要给我发送加密邮件：&lt;/p>
 &lt;ul>
 &lt;li>uid: &lt;code>A551B8F6A13D8A90&lt;/code> (zer0zero &amp;lt;zer0zero@yahoo.com&amp;gt;)；&lt;/li>
 &lt;li>fingerprint: &lt;code>AD3F 2207 E311 7C13 155D 40D1 A551 B8F6 A13D 8A90&lt;/code>；&lt;/li>
@@ -12820,7 +12822,7 @@ target="_blank" rel="noreferrer noopener"
 &lt;p>例如，这篇文章的网址是 &lt;code>https://zerovip.github.io/zh/about/site/&lt;/code>，则这篇文章的 path 为 &lt;code>zh/about/site/&lt;/code>，即去掉前面的 &lt;code>https://zerovip.github.io/&lt;/code>.&lt;/p>
 &lt;p>如果您没有 GitHub 账户，您可以&lt;a href="https://github.com/join"
 target="_blank" rel="noreferrer noopener"
->免费注册一个&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a>；若您不愿意注册，也可以给我发邮件（&lt;span class='notation_color'>zer0zero-blog [AT] yahoo [DOT] com&lt;/span> 或 &lt;span class='notation_color'>zer0zero [AT] sina [DOT] cn&lt;/span>）进行交流. 如果希望与我进行加密的邮件交流，请到&lt;a href="../zh/about/me/"
+>免费注册一个&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a>；若您不愿意注册，也可以给我发邮件（&lt;mark class='notation_color'>zer0zero-blog [AT] yahoo [DOT] com&lt;/mark> 或 &lt;mark class='notation_color'>zer0zero [AT] sina [DOT] cn&lt;/mark>）进行交流. 如果希望与我进行加密的邮件交流，请到&lt;a href="../zh/about/me/"
 >关于我&lt;/a>页面查看我的公钥.&lt;/p>
 &lt;h1 id="订阅">
 订阅
