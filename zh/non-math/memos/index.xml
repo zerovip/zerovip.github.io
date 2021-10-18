@@ -7185,12 +7185,23 @@ style="filter: var(--c-img-filter);"
 &lt;p>如果想用 &lt;code>-R&lt;/code> 的话，它的格式是：把 &lt;code>COMMANDS&lt;/code> 替换为 &lt;code>-R 90&lt;/code> 或 &lt;code>-R 270&lt;/code> 或 &lt;code>-R 180&lt;/code> 三选一，含义分别是：以刚刚选择的 &lt;code>NODE_SEL&lt;/code> 节点为根，对它下面的所有子树进行顺时针 90 或 270 或 180 度的旋转.&lt;/p>
 &lt;p>剩下的问题就是 &lt;code>NODE_SEL&lt;/code> 到底能替换成什么了，它的语法格式是怎么样的. 我们在这几行附近并没有看到说明，那就再用 / 键搜索 &lt;code>NODE_SEL&lt;/code>，就找到了我上个视频的结尾处仔细分析过的一大串语法格式（见上面大纲图中第 10 行）：&lt;/p>
 &lt;blockquote>
-&lt;pre>&lt;code>NODE_SEL := [NODE_SEL#](DIR|CYCLE_DIR|PATH|any|first_ancestor|last|newest|
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">NODE_SEL := [NODE_SEL#](DIR|CYCLE_DIR|PATH|any|first_ancestor|last|newest|
 older|newer|focused|pointed|biggest|smallest|
 &amp;lt;node_id&amp;gt;)[.[!]focused][.[!]active][.[!]automatic][.[!]local]
 [.[!]leaf][.[!]window][.[!]STATE][.[!]FLAG][.[!]LAYER][.[!]SPLIT_TYPE]
 [.[!]same_class][.[!]descendant_of][.[!]ancestor_of]
-&lt;/code>&lt;/pre>&lt;/blockquote>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/blockquote>
 &lt;p>网友给出的 &lt;code>@/&lt;/code> 是怎么来的呢？它表示什么意思呢？&lt;/p>
 &lt;ul>
 &lt;li>第一步：不选前面的 &lt;code>NODE_SEL#&lt;/code>；也不选后面的一大堆中括号里的东西；小括号里的 13 选 1 选择 &lt;code>PATH&lt;/code>. 现在 &lt;code>NODE_SEL&lt;/code> 被替换变成了 &lt;code>PATH&lt;/code>.&lt;/li>
@@ -10988,18 +10999,18 @@ target="_blank" rel="noreferrer noopener"
 target="_blank" rel="noreferrer noopener"
 >vjeantet 的评论&lt;b>&lt;sub>&lt;/sup>⧉&lt;/sup>&lt;/b>&lt;/a>中的例子给了我非常多的启发，这个例子因为部署在 GitHub 上而在四年后的今天依然是可以查看的，表示感谢！而这个特性直至四年后的今天依然没有被官方支持，表示谴责！）&lt;/p>
 &lt;p>目录结构：&lt;/p>
-&lt;pre>&lt;code>$ tree -a content/
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">$ tree -a content/
 content/
 |-- section1
 | |-- _index.md
 | |-- _index.en.md
 | |-- section11
 | | |-- _index.md
-| | '-- _index.en.md
+| | &amp;#39;-- _index.en.md
 |-- section2
 | |-- _index.md
-' '-- _index.en.md
-&lt;/code>&lt;/pre>&lt;p>方法 1——在配置文件里写：&lt;/p>
+&amp;#39; &amp;#39;-- _index.en.md
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>方法 1——在配置文件里写：&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1

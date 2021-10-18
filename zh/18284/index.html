@@ -180,7 +180,7 @@ section 的陈列
 <p>正如官方文档所说，创建 menu 有两种方法：在<a href="https://gohugo.io/content-management/menus/#add-non-content-entries-to-a-menu" rel="noreferrer noopener" target="_blank">配置文件里写<b><sub>⧉</sub></b></a>或在多个 _index.md 的<a href="https://gohugo.io/content-management/menus/#add-content-to-menus" rel="noreferrer noopener" target="_blank"> front matter 里写<b><sub>⧉</sub></b></a>. 我没在网络上找到合适的例子，所以在这里摸索了一段时间，我也是在这个时候才学习了前面小节中提到的三种配置文件的语法. 这里给出我个人摸索出的成果——多语言版本的、 YAML 格式配置文件的、创建多级别 section 的 Menu Entry 的代码：</p>
 <p>（在这个问题上 gohugoio 的 hugo 官方项目的 <a href="https://github.com/gohugoio/hugo/issues/465" rel="noreferrer noopener" target="_blank">issue#465<b><sub>⧉</sub></b></a> 下的讨论尤其是 <a href="https://github.com/gohugoio/hugo/issues/465#issuecomment-121677318" rel="noreferrer noopener" target="_blank">vjeantet 的评论<b><sub>⧉</sub></b></a>中的例子给了我非常多的启发，这个例子因为部署在 GitHub 上而在四年后的今天依然是可以查看的，表示感谢！而这个特性直至四年后的今天依然没有被官方支持，表示谴责！）</p>
 <p>目录结构：</p>
-<pre><code>$ tree -a content/
+<div class="highlight"><pre class="chroma" tabindex="0"><code class="language-fallback" data-lang="fallback">$ tree -a content/
 content/
 |-- section1
 |   |-- _index.md
@@ -191,7 +191,7 @@ content/
 |-- section2
 |   |-- _index.md
 '   '-- _index.en.md
-</code></pre><p>方法 1——在配置文件里写：</p>
+</code></pre></div><p>方法 1——在配置文件里写：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma" tabindex="0"><code><span class="lnt"> 1
