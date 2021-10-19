@@ -120,7 +120,7 @@ RSS 订阅 ⊠
 bspwm 入门
 </div>
 <div class="right_head_des">
-<time>2021年6月10日</time> - 10820 字
+<time>2021年6月10日</time> - 10815 字
 </div>
 </header>
 <div class="right_main">
@@ -230,23 +230,12 @@ super + r
 <p>如果想用 <code>-R</code> 的话，它的格式是：把 <code>COMMANDS</code> 替换为 <code>-R 90</code> 或 <code>-R 270</code> 或 <code>-R 180</code> 三选一，含义分别是：以刚刚选择的 <code>NODE_SEL</code> 节点为根，对它下面的所有子树进行顺时针 90 或 270 或 180 度的旋转.</p>
 <p>剩下的问题就是 <code>NODE_SEL</code> 到底能替换成什么了，它的语法格式是怎么样的. 我们在这几行附近并没有看到说明，那就再用 / 键搜索 <code>NODE_SEL</code>，就找到了我上个视频的结尾处仔细分析过的一大串语法格式（见上面大纲图中第 10 行）：</p>
 <blockquote>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma" tabindex="0"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma" tabindex="0"><code class="language-fallback" data-lang="fallback">NODE_SEL := [NODE_SEL#](DIR|CYCLE_DIR|PATH|any|first_ancestor|last|newest|
+<div class="highlight"><pre class="chroma" tabindex="0"><code class="language-fallback" data-lang="fallback">NODE_SEL := [NODE_SEL#](DIR|CYCLE_DIR|PATH|any|first_ancestor|last|newest|
     older|newer|focused|pointed|biggest|smallest|
     &lt;node_id&gt;)[.[!]focused][.[!]active][.[!]automatic][.[!]local]
         [.[!]leaf][.[!]window][.[!]STATE][.[!]FLAG][.[!]LAYER][.[!]SPLIT_TYPE]
         [.[!]same_class][.[!]descendant_of][.[!]ancestor_of]
-</code></pre></td></tr></table>
-</div>
-</div></blockquote>
+</code></pre></div></blockquote>
 <p>网友给出的 <code>@/</code> 是怎么来的呢？它表示什么意思呢？</p>
 <ul>
 <li>第一步：不选前面的 <code>NODE_SEL#</code>；也不选后面的一大堆中括号里的东西；小括号里的 13 选 1 选择 <code>PATH</code>. 现在 <code>NODE_SEL</code> 被替换变成了 <code>PATH</code>.</li>

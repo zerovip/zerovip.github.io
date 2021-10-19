@@ -9,41 +9,7 @@
 &lt;li>fingerprint: &lt;code>AD3F 2207 E311 7C13 155D 40D1 A551 B8F6 A13D 8A90&lt;/code>；&lt;/li>
 &lt;li>public key:&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
-&lt;/span>&lt;span class="lnt"> 2
-&lt;/span>&lt;span class="lnt"> 3
-&lt;/span>&lt;span class="lnt"> 4
-&lt;/span>&lt;span class="lnt"> 5
-&lt;/span>&lt;span class="lnt"> 6
-&lt;/span>&lt;span class="lnt"> 7
-&lt;/span>&lt;span class="lnt"> 8
-&lt;/span>&lt;span class="lnt"> 9
-&lt;/span>&lt;span class="lnt">10
-&lt;/span>&lt;span class="lnt">11
-&lt;/span>&lt;span class="lnt">12
-&lt;/span>&lt;span class="lnt">13
-&lt;/span>&lt;span class="lnt">14
-&lt;/span>&lt;span class="lnt">15
-&lt;/span>&lt;span class="lnt">16
-&lt;/span>&lt;span class="lnt">17
-&lt;/span>&lt;span class="lnt">18
-&lt;/span>&lt;span class="lnt">19
-&lt;/span>&lt;span class="lnt">20
-&lt;/span>&lt;span class="lnt">21
-&lt;/span>&lt;span class="lnt">22
-&lt;/span>&lt;span class="lnt">23
-&lt;/span>&lt;span class="lnt">24
-&lt;/span>&lt;span class="lnt">25
-&lt;/span>&lt;span class="lnt">26
-&lt;/span>&lt;span class="lnt">27
-&lt;/span>&lt;span class="lnt">28
-&lt;/span>&lt;span class="lnt">29
-&lt;/span>&lt;span class="lnt">30
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">-----BEGIN PGP PUBLIC KEY BLOCK-----
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">-----BEGIN PGP PUBLIC KEY BLOCK-----
 mQENBF4N4FIBCACzySXW+/MYM6fUPXsJj89icJ9hVfsQQldNVZ3QQeUdU5htQH4E
 XcxYT+OIEO9c+O3dcUJvaP2LrOCjdSvz3sOVDZ7QCLIyxzbDkWowaaF2LouI8Ixt
 wnfd7rHD6aJxgDsjSEFJ+mE0rdQVnVp8mkwQq9m0yW1f97KD9kIyPEYAioV7DTgG
@@ -72,9 +38,7 @@ g/iSvStzHFhUnLIoPRF0YeYBuUjiBh9Xwgi93PuSMxEHA8bk5yeSQL1QXZTxeCXg
 veL/x/fXMw1e5Ou5KKhroxS6160gLopRcw==
 =sMrg
 -----END PGP PUBLIC KEY BLOCK-----
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div></description></item><item><title>关于本站</title><link>/zh/about/site/</link><pubDate>2000-01-01</pubDate><guid>/zh/about/site/</guid><description>&lt;h1 id="介绍">
+&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>关于本站</title><link>/zh/about/site/</link><pubDate>2000-01-01</pubDate><guid>/zh/about/site/</guid><description>&lt;h1 id="介绍">
 介绍
 &lt;a href="#%e4%bb%8b%e7%bb%8d">&lt;small>¶&lt;/small>&lt;/a>
 &lt;/h1>
