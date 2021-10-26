@@ -154,15 +154,24 @@ RSS 订阅 ⊠
 <p>常见的联邦协议有：</p>
 <ul>
 <li><strong>Zot 或 Zot/6 协议</strong>：给独立网站提供通信、身份（用户）管理、权限控制的去中心化网络连接. 是一个近两年才出现的协议，但网站好像已经访问不了了，维基百科 Fediverse 词条中介绍到这里时给了一个官网的 InternetArchive 存档.</li>
-<li><strong><a href="https://diasporafoundation.org/" rel="noreferrer noopener" target="_blank">Diaspora<b><sub>⧉</sub></b></a> 协议</strong>：<a href="https://en.wikipedia.org/wiki/Diaspora_%28social_network%29" rel="noreferrer noopener" target="_blank">维基百科<b><sub>⧉</sub></b></a>上写的是非营利、用户所有、分布式社交网络；<a href="https://github.com/diaspora/diaspora" rel="noreferrer noopener" target="_blank">Github 主页<b><sub>⧉</sub></b></a>上写的是隐私感知、分布式、开源社交网络.</li>
+<li><strong><a href="https://diasporafoundation.org/" rel="noreferrer noopener" target="_blank">Diaspora<b><sub>⧉</sub></b></a> 协议</strong>：<a href="https://en.wikipedia.org/wiki/Diaspora_%28social_network%29" rel="noreferrer noopener" target="_blank">维基百科<b><sub>⧉</sub></b></a>上写的是非营利、用户所有、分布式社交网络；<a href="https://github.com/diaspora/diaspora" rel="noreferrer noopener" target="_blank">Github 主页<b><sub>⧉</sub></b></a>上写的是隐私感知、分布式、开源社交网络.
+<ul>
 <li>使用这个协议的联邦宇宙软件应该只有 diaspora*，也就是他们自己在用. 这个联邦宇宙软件在 GitHub 上有 12.5k 的 star，2.9k 的 fork，2010 年开始的项目，到现在已经十年了，开发还是很活跃，release 有 88 个，但版本号升得很保守，才到 0.7.14.0.</li>
 <li>说句题外话，在他们的 GitHub 主页我找到了一个<a href="https://podupti.me/" rel="noreferrer noopener" target="_blank">所有开源社交网络服务的列表<b><sub>⧉</sub></b></a>，里面记录了非常多的实例，以及它们的实例版本、所用的联邦宇宙软件、使用的协议、服务在线的运行时间（多少百分比的时间里服务没有宕机）、是否支持 IPv6、网络延迟、是否开放注册、用户数量等等非常非常多的信息. 我试着搜索了一下我自己所在的实例，是可以搜索得到的. 这个列表更新及时，真是一个宝藏列表！</li>
-<li><strong>OStatus 协议</strong>：根据<a href="https://en.wikipedia.org/wiki/OStatus" rel="noreferrer noopener" target="_blank">维基百科<b><sub>⧉</sub></b></a>，这是一个专门搞联邦微博客的协议，像长毛象（Mastodon）最早就是使用的这个协议.</li>
+</ul>
+</li>
+<li><strong>OStatus 协议</strong>：根据<a href="https://en.wikipedia.org/wiki/OStatus" rel="noreferrer noopener" target="_blank">维基百科<b><sub>⧉</sub></b></a>，这是一个专门搞联邦微博客的协议，像长毛象（Mastodon）最早就是使用的这个协议.
+<ul>
 <li>这个协议是老前辈协议了，2010 年左右就搞出来了. 2012 年 1 月 W3C 社区小组想维护并进一步开发这个协议，结果好景不长，2014 年 7 月来了个<strong>联邦社交网络工作小组（W3C Federated Social Web Working Group）</strong>，这个联邦社交网络工作小组直接创造了一个新的协议，就把 Ostatus 协议给干趴下了.</li>
-<li><strong>ActivityPub 协议</strong>：这就是联邦社交网络工作小组创造出来的新协议，就是它掩盖了 Ostatus 协议的光芒.</li>
+</ul>
+</li>
+<li><strong>ActivityPub 协议</strong>：这就是联邦社交网络工作小组创造出来的新协议，就是它掩盖了 Ostatus 协议的光芒.
+<ul>
 <li>按照维基百科、一个<a href="https://github.com/w3c/activitypub/issues/228" rel="noreferrer noopener" target="_blank">Github issue: Ostatus, pump,io 和 ActivityPub 有什么不同<b><sub>⧉</sub></b></a>以及 <a href="https://www.w3.org/TR/activitypub/#acknowledgements" rel="noreferrer noopener" target="_blank">ActivityPub 协议最后的致谢部分<b><sub>⧉</sub></b></a>来看，这个协议是基于 pump.io 的 api 设计的. 且在设计之初就充分吸取了 OStatus 的经验教训，最后成为了一个成功的协议.</li>
 <li>这个地方不知道有没有大佬给讲讲它和 Ostatus 协议具体的区别和改进的点是什么呀~ 我没有深入去查，反正知道 ActivityPub 很厉害就对了.</li>
 <li>2017 年 9 月长毛象开始使用 ActivityPub 协议；2018 年 1 月 W3C 把这个协议作为了推荐标准；2019 年 1 月长毛象<a href="https://github.com/tootsuite/mastodon/pull/11205" rel="noreferrer noopener" target="_blank">不再支持之前的 OStatus 协议<b><sub>⧉</sub></b></a>.</li>
+</ul>
+</li>
 </ul>
 <h1 id="联邦宇宙列表">
 联邦宇宙列表

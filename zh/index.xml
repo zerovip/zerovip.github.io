@@ -7271,10 +7271,13 @@ Lutris&lt;span class="p">|&lt;/span>Liferea&lt;span class="o">)&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;ul>
-&lt;li>第 13 - 35 行就是定义的函数 &lt;code>strip&lt;/code> 的函数体，它接受了 sub 和 sel 两个参数：&lt;/li>
+&lt;li>第 13 - 35 行就是定义的函数 &lt;code>strip&lt;/code> 的函数体，它接受了 sub 和 sel 两个参数：
+&lt;ul>
 &lt;li>&lt;code>sub&lt;/code>：第一参数是整个字幕中的所有数据，里面包含的东西非常非常多，我们不需要知道它里面各种数据的组织形式，只需要知道用 &lt;code>sub[num]&lt;/code> 能取出第 &lt;code>num&lt;/code> 行的字幕就可以了.&lt;/li>
 &lt;li>&lt;code>sel&lt;/code>：第二个参数是一个 table，它表示当前用户在 Aegisub 软件里选中的那些行，键就是从 1 开始的递增序列，值则是其对应的行号.&lt;/li>
 &lt;li>实际上，还有第三个参数是可选的，用来表示当前激活的那一行字幕. 一般情况下都用不太到.&lt;/li>
+&lt;/ul>
+&lt;/li>
 &lt;li>第 16 - 27 行的 &lt;code>for&lt;/code> 循环基本上就是很多 lua 脚本的固定套路了，先按行遍历把字幕取出来，然后对字幕进行一些操作，最后再把操作完成后的字幕放回去. 这里一定要参考的是官方文档中的 Dialogue line table 部分，看一看每一行取出来的是什么数据类型，它有哪些可以拿来用的域. 就像这里的 &lt;code>line.text&lt;/code>，其实还有 &lt;code>line.class&lt;/code>, &lt;code>line.raw&lt;/code>, &lt;code>line.section&lt;/code>, &lt;code>line.comment&lt;/code>, &lt;code>line.layer&lt;/code>, &lt;code>line.start_time&lt;/code>, &lt;code>line.end_time&lt;/code> 等等等等.&lt;/li>
 &lt;li>第 30 行是设置一个撤销点，这样一来，通过菜单栏 - “自动化” - “去掉换行”运行了这个脚本以后，可以通过菜单栏 - “编辑” - “恢复 去掉换行”来撤销操作. 实际上，从 Aegisub 3.0 版本以后，这句话即便没有写，软件也会自动帮你生成撤销点，但我们还是养成一个良好的习惯，把它写上. 而且通过这句话可以自主指定撤销点的名字.&lt;/li>
 &lt;li>第 33 行是函数的返回值，返回值应该是一个 table，里面是一些行号，软件则在执行完该脚本后将返回值里面的那些行高亮选中. 像这里，我们就还是返回第 2 个参数 &lt;code>sel&lt;/code>，表示那些被选中的行依然保持被选中的状态.&lt;/li>
@@ -7804,15 +7807,24 @@ Lutris&lt;span class="p">|&lt;/span>Liferea&lt;span class="o">)&lt;/span>
 &lt;p>常见的联邦协议有：&lt;/p>
 &lt;ul>
 &lt;li>&lt;strong>Zot 或 Zot/6 协议&lt;/strong>：给独立网站提供通信、身份（用户）管理、权限控制的去中心化网络连接. 是一个近两年才出现的协议，但网站好像已经访问不了了，维基百科 Fediverse 词条中介绍到这里时给了一个官网的 InternetArchive 存档.&lt;/li>
-&lt;li>&lt;strong>&lt;a href="https://diasporafoundation.org/">Diaspora&lt;/a> 协议&lt;/strong>：&lt;a href="https://en.wikipedia.org/wiki/Diaspora_%28social_network%29">维基百科&lt;/a>上写的是非营利、用户所有、分布式社交网络；&lt;a href="https://github.com/diaspora/diaspora">Github 主页&lt;/a>上写的是隐私感知、分布式、开源社交网络.&lt;/li>
+&lt;li>&lt;strong>&lt;a href="https://diasporafoundation.org/">Diaspora&lt;/a> 协议&lt;/strong>：&lt;a href="https://en.wikipedia.org/wiki/Diaspora_%28social_network%29">维基百科&lt;/a>上写的是非营利、用户所有、分布式社交网络；&lt;a href="https://github.com/diaspora/diaspora">Github 主页&lt;/a>上写的是隐私感知、分布式、开源社交网络.
+&lt;ul>
 &lt;li>使用这个协议的联邦宇宙软件应该只有 diaspora*，也就是他们自己在用. 这个联邦宇宙软件在 GitHub 上有 12.5k 的 star，2.9k 的 fork，2010 年开始的项目，到现在已经十年了，开发还是很活跃，release 有 88 个，但版本号升得很保守，才到 0.7.14.0.&lt;/li>
 &lt;li>说句题外话，在他们的 GitHub 主页我找到了一个&lt;a href="https://podupti.me/">所有开源社交网络服务的列表&lt;/a>，里面记录了非常多的实例，以及它们的实例版本、所用的联邦宇宙软件、使用的协议、服务在线的运行时间（多少百分比的时间里服务没有宕机）、是否支持 IPv6、网络延迟、是否开放注册、用户数量等等非常非常多的信息. 我试着搜索了一下我自己所在的实例，是可以搜索得到的. 这个列表更新及时，真是一个宝藏列表！&lt;/li>
-&lt;li>&lt;strong>OStatus 协议&lt;/strong>：根据&lt;a href="https://en.wikipedia.org/wiki/OStatus">维基百科&lt;/a>，这是一个专门搞联邦微博客的协议，像长毛象（Mastodon）最早就是使用的这个协议.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>OStatus 协议&lt;/strong>：根据&lt;a href="https://en.wikipedia.org/wiki/OStatus">维基百科&lt;/a>，这是一个专门搞联邦微博客的协议，像长毛象（Mastodon）最早就是使用的这个协议.
+&lt;ul>
 &lt;li>这个协议是老前辈协议了，2010 年左右就搞出来了. 2012 年 1 月 W3C 社区小组想维护并进一步开发这个协议，结果好景不长，2014 年 7 月来了个&lt;strong>联邦社交网络工作小组（W3C Federated Social Web Working Group）&lt;/strong>，这个联邦社交网络工作小组直接创造了一个新的协议，就把 Ostatus 协议给干趴下了.&lt;/li>
-&lt;li>&lt;strong>ActivityPub 协议&lt;/strong>：这就是联邦社交网络工作小组创造出来的新协议，就是它掩盖了 Ostatus 协议的光芒.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>ActivityPub 协议&lt;/strong>：这就是联邦社交网络工作小组创造出来的新协议，就是它掩盖了 Ostatus 协议的光芒.
+&lt;ul>
 &lt;li>按照维基百科、一个&lt;a href="https://github.com/w3c/activitypub/issues/228">Github issue: Ostatus, pump,io 和 ActivityPub 有什么不同&lt;/a>以及 &lt;a href="https://www.w3.org/TR/activitypub/#acknowledgements">ActivityPub 协议最后的致谢部分&lt;/a>来看，这个协议是基于 pump.io 的 api 设计的. 且在设计之初就充分吸取了 OStatus 的经验教训，最后成为了一个成功的协议.&lt;/li>
 &lt;li>这个地方不知道有没有大佬给讲讲它和 Ostatus 协议具体的区别和改进的点是什么呀~ 我没有深入去查，反正知道 ActivityPub 很厉害就对了.&lt;/li>
 &lt;li>2017 年 9 月长毛象开始使用 ActivityPub 协议；2018 年 1 月 W3C 把这个协议作为了推荐标准；2019 年 1 月长毛象&lt;a href="https://github.com/tootsuite/mastodon/pull/11205">不再支持之前的 OStatus 协议&lt;/a>.&lt;/li>
+&lt;/ul>
+&lt;/li>
 &lt;/ul>
 &lt;h1 id="联邦宇宙列表">联邦宇宙列表&lt;/h1>
 &lt;p>多亏了刚刚发现的宝藏列表（见上一小节 Diaspora 协议“说句题外话”），在这里我得以总结一些较有影响力的联邦宇宙软件，以及用这些联邦宇宙软件生成的著名实例. 对我来讲这就提供了一个对上述所有概念以及联邦宇宙本身的一个最直观、最感性的认识，可以感受到目前地球上全体人类在创造去中心化联邦宇宙的进程中处在一个怎么样的阶段，尤其是当所有联邦宇宙软件的用户都声称自己那里实例多、用户数量多、很活跃的时候，这个表格给了我一个客观的、量化的认识. （数据截至于 2020 年 10 月 25 日 14:00 左右）&lt;/p>
@@ -9797,10 +9809,13 @@ style="display: none;"
 &lt;li>&lt;a href="https://www.quantamagazine.org/mathematics/">Quanta Magazine 的数学板块&lt;/a>. 非常好的数学科普的网站.&lt;/li>
 &lt;li>&lt;a href="https://plus.maths.org/content/">Plus Magazine&lt;/a>. 也是比较优秀的数学杂志网站，是剑桥大学旗下 Millennium 数学项目的一部分.&lt;/li>
 &lt;li>&lt;a href="https://oeis.org/">The On-Line Encyclopedia of Integer Sequences® (OEIS®)&lt;/a>. 非常著名的整数数列在线百科全书.&lt;/li>
-&lt;li>&lt;a href="https://people.maths.bris.ac.uk/~matyd/">Tim Dokchitser 的博客&lt;/a>. 他的博客我其实没有仔细看过，但他网页上的一些工具是非常有用的，比如：&lt;/li>
+&lt;li>&lt;a href="https://people.maths.bris.ac.uk/~matyd/">Tim Dokchitser 的博客&lt;/a>. 他的博客我其实没有仔细看过，但他网页上的一些工具是非常有用的，比如：
+&lt;ul>
 &lt;li>&lt;a href="https://people.maths.bris.ac.uk/~matyd/GroupNames/index.html">群字典&lt;/a>，500 阶以下的群的名字和各种有用的性质的汇总，我曾在这里查过特征表；&lt;/li>
 &lt;li>&lt;a href="https://people.maths.bris.ac.uk/~matyd/newton/">Models of curves&lt;/a>，没用过；&lt;/li>
 &lt;li>&lt;a href="https://people.maths.bris.ac.uk/~matyd/HE/index.html">Small hyperelliptic curves over Q&lt;/a>，没用过.&lt;/li>
+&lt;/ul>
+&lt;/li>
 &lt;li>&lt;a href="http://www.mathcounterexamples.net/">数学反例网&lt;/a>. 有一次我查&lt;a href="http://www.mathcounterexamples.net/a-separable-space-that-is-not-second-countable/">可分但不第二可数空间的例子&lt;/a>时发现的网站，内容挺多，但我没怎么随意看过. 我学数学的方式还是很原始的那种遇到问题就去查问题的方式，以后没事干的时候也应该随意浏览浏览这些网站，用碰运气的方式学数学.&lt;/li>
 &lt;li>&lt;a href="http://ddmf.msr-inria.inria.fr/">数学函数交互字典&lt;/a>. 用 PNG 渲染格式才比较好看，不过貌似 2013 年就已经停止维护了.&lt;/li>
 &lt;li>&lt;a href="https://en.wikibooks.org/wiki/LaTeX/PGF/TikZ">LaTeX / PGF / TikZ 的 Wikibooks&lt;/a>. LaTeX 的 TikZ 包手册太长了，根本就不想读！这篇文档就稍稍简单多了，很快读完，给了我非常大的帮助.&lt;/li>

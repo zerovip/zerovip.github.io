@@ -367,10 +367,13 @@ RSS 订阅 ⊠
 </code></pre></td></tr></table>
 </div>
 </div><ul>
-<li>第 13 - 35 行就是定义的函数 <code>strip</code> 的函数体，它接受了 sub 和 sel 两个参数：</li>
+<li>第 13 - 35 行就是定义的函数 <code>strip</code> 的函数体，它接受了 sub 和 sel 两个参数：
+<ul>
 <li><code>sub</code>：第一参数是整个字幕中的所有数据，里面包含的东西非常非常多，我们不需要知道它里面各种数据的组织形式，只需要知道用 <code>sub[num]</code> 能取出第 <code>num</code> 行的字幕就可以了.</li>
 <li><code>sel</code>：第二个参数是一个 table，它表示当前用户在 Aegisub 软件里选中的那些行，键就是从 1 开始的递增序列，值则是其对应的行号.</li>
 <li>实际上，还有第三个参数是可选的，用来表示当前激活的那一行字幕. 一般情况下都用不太到.</li>
+</ul>
+</li>
 <li>第 16 - 27 行的 <code>for</code> 循环基本上就是很多 lua 脚本的固定套路了，先按行遍历把字幕取出来，然后对字幕进行一些操作，最后再把操作完成后的字幕放回去. 这里一定要参考的是官方文档中的 Dialogue line table 部分，看一看每一行取出来的是什么数据类型，它有哪些可以拿来用的域. 就像这里的 <code>line.text</code>，其实还有 <code>line.class</code>, <code>line.raw</code>, <code>line.section</code>, <code>line.comment</code>, <code>line.layer</code>, <code>line.start_time</code>, <code>line.end_time</code> 等等等等.</li>
 <li>第 30 行是设置一个撤销点，这样一来，通过菜单栏 - “自动化” - “去掉换行”运行了这个脚本以后，可以通过菜单栏 - “编辑” - “恢复 去掉换行”来撤销操作. 实际上，从 Aegisub 3.0 版本以后，这句话即便没有写，软件也会自动帮你生成撤销点，但我们还是养成一个良好的习惯，把它写上. 而且通过这句话可以自主指定撤销点的名字.</li>
 <li>第 33 行是函数的返回值，返回值应该是一个 table，里面是一些行号，软件则在执行完该脚本后将返回值里面的那些行高亮选中. 像这里，我们就还是返回第 2 个参数 <code>sel</code>，表示那些被选中的行依然保持被选中的状态.</li>
