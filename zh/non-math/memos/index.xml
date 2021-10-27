@@ -9514,7 +9514,7 @@ content/
 &lt;li>&lt;input disabled="" type="checkbox"> 支持 webmention（还需要了解、学习并评估），可以参考&lt;a href="https://palant.info/2020/09/03/added-webmention-support-to-the-blog/">这篇文章&lt;/a>&lt;/li>
 &lt;li>&lt;input checked="" disabled="" type="checkbox"> &lt;del>CSS 越写越多，修修补补，应该统一整理、化简一下&lt;/del>（基本完成）&lt;/li>
 &lt;li>&lt;input disabled="" type="checkbox"> 代码块是否需要折叠显示？参考：&lt;a href="https://github.com/reuixiy/hugo-theme-meme/issues/76">reuixiy&amp;rsquo;s meme&lt;/a>&lt;/li>
-&lt;li>&lt;input disabled="" type="checkbox"> 有什么办法可以不在文章中指定所属 section，根据目录结构在左边完成箭头的指示&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> 有什么办法可以不在文章中指定所属 section，根据目录结构在左边完成箭头的指示. 看下官方文档的 Breadcrumb Navigation 那里，毕竟官方文档那个网站就做到了. 可以阅读 #465.&lt;/li>
 &lt;li>&lt;input checked="" disabled="" type="checkbox"> &lt;del>换语言那里的 &lt;code>substr&lt;/code> 之前应该数一下当前语言的字符串数量存进变量里，以能更好地应对普适的情况&lt;/del>（使用 dict 更加优雅地完成了）&lt;/li>
 &lt;li>&lt;input disabled="" type="checkbox"> 等所有 todo 都完成之后，这个主题才算是基本成型了，可以考虑一下要不要写个文章介绍一下自己的主题，以及要不要加进 hugo 的官方主题仓库，适当做个小推广呢？&lt;/li>
 &lt;li>&lt;input disabled="" type="checkbox"> 一个超链接后面如果有标点符号，这里可能会形成断行，导致标点符号出现在下一行行首. 查到一个 &lt;a href="https://stackoverflow.com/questions/58257080/">js 的解决方法&lt;/a>.&lt;/li>
@@ -9530,8 +9530,20 @@ content/
 &lt;li>&lt;input disabled="" type="checkbox"> utterence 评论插件的主题更换脚本应在加载完成后运行. 或者干脆用 invert 的办法暴力转换算了……&lt;/li>
 &lt;li>&lt;input disabled="" type="checkbox"> &lt;del>无障碍友好问题需要关注！&lt;/del> 重新配色以方便色盲和色弱，&lt;del>以及多多使用 HTML 5 无障碍标签，让使用 TalkBack 的人可以方便使用.&lt;/del>&lt;/li>
 &lt;li>&lt;input disabled="" type="checkbox"> 行内代码样式难看，尤其是亮色模式下，配色需要重新调整，亮色、暗色的代码应该使用不同的配色方案.&lt;/li>
-&lt;li>&lt;input disabled="" type="checkbox"> 列表页不好看，每一个条目的渲染还需要再重新设计一下，用上点漂亮的图标如 &lt;a href="https://openmoji.org/">OpenMoji&lt;/a>，主页的列表需要标注来自哪个 section，摘要的长度也需要好好考虑.&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> 列表页不好看，每一个条目的渲染还需要再重新设计一下，用上点漂亮的图标如 &lt;a href="https://openmoji.org/">OpenMoji&lt;/a>，主页的列表需要标注来自哪个 section，摘要的长度也需要好好考虑. 可以考虑设计成卡片的样子.&lt;/li>
 &lt;li>&lt;input disabled="" type="checkbox"> 文章页也应该渲染摘要，可以简简单单地放在发表时间、字数那一行的下面.&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> 关于加密与执行外部命令，阅读 #7547，AES 的不安全性，secretbox 的问题.&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> 阅读 #847 关于改 hugo 代码让它执行外部命令的 pr，试着学习 hugo 源码.&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> 生成的 html 里很多空格、换行，要不要全用上 &lt;code>{{- xxx -}}&lt;/code> 呢？&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> 在 sitemap 里去掉隐藏的文章. 加一个新的变量？&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> 关于和记录这两个一级列表板块，要不要去掉这两个列表页？&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> 关于和记录这两个一级列表板块，要不要去掉它们的 rss？&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> Mathjax 换 Katex.&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> 学习 commonmark 规范，写一篇示例文章，包含所有可能的格式及其嵌套，在此基础上重新把样式表设计一下.&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> 把 validator.w3.org 上建议的对 RSS 的改进都给修了……文章里的 url 都用绝对路径，改 render hooks；&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> 把 validator.w3.org 上建议的对 RSS 的改进都给修了……文章里不使用 role attribute. 啥意思？&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> 把 validator.w3.org 上建议的对 RSS 的改进都给修了……文章里不使用 aria-hidden attribute. 啥意思？&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> 把 validator.w3.org 上建议的对 RSS 的改进都给修了……Invalid HTML: Unexpected end tag (p). 这能修吗？看看吧.&lt;/li>
 &lt;/ol>
 &lt;section class="footnotes" role="doc-endnotes">
 &lt;hr>
