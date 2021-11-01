@@ -54,10 +54,10 @@ English ⨂
 Français ⨂
 </li>
 </ul>
-<div class="left_non-footer_option_rss" role="button">
-<li class="left_non-footer_option_non-active">
+<div class="left_non-footer_option_rss">
+<dl class="left_non-footer_option_non-active">
 RSS 订阅 ⊠
-</li>
+</dl>
 </div>
 </div>
 <header class="left_non-footer_head">
@@ -125,7 +125,7 @@ bspwm 入门
 </header>
 <div class="right_main">
 <article class="right_main_article">
-<div class="notation_color" role="mark">
+<div class="notation_color" role="note">
 <p>本文首发于 bilibili：<a href="https://www.bilibili.com/read/cv7417123" rel="noreferrer noopener" target="_blank">bspwm 入门<b><sub>⧉</sub></b></a>. 考虑到 b 站的专栏格式非常差，链接不支持、代码格式也不支持. 另外自己写的东西放在一个商业公司的平台上不如放在自己手里，所以在这里也发一份.</p></div>
 <p>在<a href="https://www.bilibili.com/video/BV1kZ4y1u7dw" rel="noreferrer noopener" target="_blank">我之前的视频（BV1kZ4y1u7dw）<b><sub>⧉</sub></b></a>中我简单介绍了 bspwm 并展示了一些它自带的例子中的功能. 但那个视频只是一个简单介绍，其本质是一个安利，目标观众是使用其他 wm 或不使用 wm 的路人；那么针对被我成功安利决定来体验体验 bspwm 的新用户呢，我决定写这样一篇专栏，帮助大家入门 bspwm. 因此这篇文章的目标读者是<strong>正在使用或准备使用 bspwm 的用户</strong>，需要的前置知识为<strong>我上个视频中讲到的基本概念</strong>.</p>
 <p>在这篇文章中，我会先对之前的视频做一些补充说明；然后我会举三个例子讲解一下怎么写简单的 bspc 语句来实现简单的功能，帮助大家巩固练习阅读文档的能力；接着我会讲一下 bspwm 自带的例子中的其他有趣的东西，包括 rules（规则）、panel（面板） 和 receptacle（容器）等；最后再随便谈点哲学.</p>
@@ -394,7 +394,7 @@ external rules
 </blockquote>
 <p>如果在上一节中你按照我的指示去读了文档中关于 Rule 的部分那不到 15 行的内容，那你现在看到它最后一句说的键值对时一定能够会心一笑了.</p>
 <p>现在我们知道了这短短的一行 <code>bspc config</code> 语句中最后的 <code>"$(which external_rules)"</code> 就是这里说的绝对路径了，再结合我们对 Linux 基本语句 <code>which</code> 的知识，我们就明白了另一份文件 external_rules 一定是一份脚本文件，而且要把它加到环境变量中以便我们能直接调用它，就像使用 <code>ls</code>、<code>cd</code> 一样直接使用 <code>external_rules</code> 作为一个命令，而且这个命令必须带四个参数，输出必须是键值对.</p>
-<div class="notation_color" role="mark">
+<div class="notation_color" role="note">
 <p>写自己的命令的方法：</p>
 <p>（这一段是 Linux 使用基础中的基础，因为 Linux 的灵魂就是自己写脚本，如果你连这都不知道的话，就要加强 Linux 基础知识的学习了）</p>
 <p>完成这件事有很多种做法，我个人的做法是建一个 <code>~/.bin/</code> 文件夹，然后在里面写脚本，shell 脚本也行，python 脚本也行，比如：</p>
