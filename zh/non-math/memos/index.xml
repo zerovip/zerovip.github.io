@@ -8082,7 +8082,7 @@ If you kick the can down the road, you delay a decision in hopes that the proble
 &lt;h1 id="介绍">介绍&lt;/h1>
 &lt;p>&lt;a href="https://github.com/Li4n0/hugo_encryptor">Hugo encryptor&lt;/a> 是一款我偶然发现的可以给静态博客文章进行加密的小工具，配置使用很简单，可惜的是不能在本地测试.&lt;/p>
 &lt;p>不过它足够简单，一经测试成功可以投入使用便不再需要反复测试，因此这篇博文是专门用来测试的.&lt;/p>
-&lt;p>下面加密内容的密码是【PASS3word】. 这部分内容在 RSS 中没有被加密，在&lt;a href="https://zerovip.github.io/zh/non-math/memos/index.xml">“备忘分区”的 RSS&lt;/a> 中可以找到加密的内容.&lt;/p>
+&lt;p>下面加密内容的密码是【PASS3word】. 这部分内容在 RSS 中没有被加密，在&lt;a href="../../../zh/non-math/memos/index.xml">“备忘分区”的 RSS&lt;/a> 中可以找到加密的内容.&lt;/p>
 &lt;div class="hugo-encryptor-container">
 &lt;div class="hugo-encryptor-prompt">
 &lt;p>文章的部分内容被密码保护：&lt;/p>
@@ -9401,10 +9401,10 @@ content/
 &lt;/blockquote>
 &lt;p>然而真正操作的时候，Hugo 把 404.html 分别放到了不同的语言文件夹下. 这样一来我虽然可以定制不同语言版本的 404 页面，却没法在 GitHub Pages 上使用. 想了想也许可以手动建一个根目录下的 404.html 并用 JS 进行重定向，但觉得不爽所以我没有这样做，目前本站还是 GitHub Pages 默认的 404 页面. 网络上&lt;a href="https://github.com/gohugoio/hugo/issues/3075">这个 issue&lt;/a> 的解决可能是导致这个问题的根源，与此相关的还有&lt;a href="https://discourse.gohugo.io/t/define-404-page-content-in-an-md-file-under-the-content-directory/13943">这个讨论&lt;/a>.&lt;/p>
 &lt;h2 id="博客文章的加密与隐藏">博客文章的加密与隐藏&lt;/h2>
-&lt;p>2019 年 12 月有了给博客文章加密的需求，发现了 &lt;a href="https://github.com/Li4n0/hugo_encryptor">Hugo encryptor&lt;/a> 这款工具，试了一下，效果良好，测试文章见&lt;a href="https://zerovip.github.io/zh/62772">这里&lt;/a>.&lt;/p>
+&lt;p>2019 年 12 月有了给博客文章加密的需求，发现了 &lt;a href="https://github.com/Li4n0/hugo_encryptor">Hugo encryptor&lt;/a> 这款工具，试了一下，效果良好，测试文章见&lt;a href="../../../zh/62772">这里&lt;/a>.&lt;/p>
 &lt;p>这个工具的原理是在 layouts 目录中弄了一个 shortcodes 代码片段，里面包含了使用 &lt;a href="https://github.com/brix/crypto-js">crypto-js&lt;/a> 这个工具的 javascript 片段用以判断密码是否输入正确并展示被加密文字. 之后 Hugo 生成静态网页时就会把 Markdown 中需要加密的部分的明文用那部分代码片段包裹，然后用 python 强行把 Hugo 生成的 &lt;code>public&lt;/code> 目录下的 html 进行遍历，只要有被那个代码片段包裹的文字就直接用 python 加密替换进去，这样就完成了博客文章的加密. 上传后展示出来输入密码解密的过程就是纯 javascript 了.&lt;/p>
-&lt;p>而隐藏的需求就是让文章不在列表中显示出来，比如上面给出链接的那篇&lt;a href="https://zerovip.github.io/zh/62772">测试文章&lt;/a>，它是“备忘”这个分区下的文章，却不能在分区列表页找到，也不会在首页的最近 5 篇中出现，用的是技术是在文章 Markdown 的 front matter 里引入新的参数，并在列表页用 &lt;code>where&lt;/code> 函数判断.&lt;/p>
-&lt;p>这里需要额外注意的是 RSS 页也需要进行隐藏，因为 Hugo encryptor 这个工具只对 html 文件进行了加密，没有加密 xml 文件，如果不隐藏就会导致在 RSS 中可以看到密码和加密内容. 比如对上面给出链接的测试文章我故意没有在 RSS 列表页隐藏，这样在&lt;a href="https://zerovip.github.io/zh/non-math/memos/index.xml">“备忘分区”的 RSS&lt;/a> 中可以看到密码 &lt;code>&amp;lt;cipher-text data-password=&amp;quot;PASS3word&amp;quot; style=&amp;quot;display:none;&amp;quot;&amp;gt;&lt;/code> 以及加密的内容.&lt;/p>
+&lt;p>而隐藏的需求就是让文章不在列表中显示出来，比如上面给出链接的那篇&lt;a href="../../../zh/62772">测试文章&lt;/a>，它是“备忘”这个分区下的文章，却不能在分区列表页找到，也不会在首页的最近 5 篇中出现，用的是技术是在文章 Markdown 的 front matter 里引入新的参数，并在列表页用 &lt;code>where&lt;/code> 函数判断.&lt;/p>
+&lt;p>这里需要额外注意的是 RSS 页也需要进行隐藏，因为 Hugo encryptor 这个工具只对 html 文件进行了加密，没有加密 xml 文件，如果不隐藏就会导致在 RSS 中可以看到密码和加密内容. 比如对上面给出链接的测试文章我故意没有在 RSS 列表页隐藏，这样在&lt;a href="../../../zh/non-math/memos/index.xml">“备忘分区”的 RSS&lt;/a> 中可以看到密码 &lt;code>&amp;lt;cipher-text data-password=&amp;quot;PASS3word&amp;quot; style=&amp;quot;display:none;&amp;quot;&amp;gt;&lt;/code> 以及加密的内容.&lt;/p>
 &lt;p>总而言之，列表隐藏和文字加密可随意配合使用，列表隐藏但不文字加密、文字加密但不列表隐藏、文字加密并列表隐藏，这都是可以的；但只要文字加密就必须 RSS 隐藏.&lt;/p>
 &lt;p>&lt;mark class='notation_color'>这一小节补充于 2019 年 12 月 27 日.&lt;/mark>&lt;/p>
 &lt;h2 id="统计信息">统计信息&lt;/h2>
@@ -9520,9 +9520,9 @@ content/
 &lt;li>&lt;input disabled="" type="checkbox"> 一个超链接后面如果有标点符号，这里可能会形成断行，导致标点符号出现在下一行行首. 查到一个 &lt;a href="https://stackoverflow.com/questions/58257080/">js 的解决方法&lt;/a>.&lt;/li>
 &lt;li>&lt;input disabled="" type="checkbox"> 代码块的横向滚动，应该保持行号不动，只有代码块滚动. 是一个 CSS 的问题.&lt;/li>
 &lt;li>&lt;input checked="" disabled="" type="checkbox"> &lt;del>透明背景的图片在黑暗模式下应进行反色操作.&lt;/del>（已完成. 需要在暗色主题下反色的图片只需在文件后缀名前加上 &lt;code>.i&lt;/code> 即可，也就是说以 &lt;code>file_name.i.{png|jpg|jpeg|gif|webp|…}&lt;/code> 的格式命名.）&lt;/li>
-&lt;li>&lt;input checked="" disabled="" type="checkbox"> &lt;del>考虑把豆瓣的书影音游的数据迁移到博客里，单独弄一个页面，使用&lt;a href="https://gohugo.io/templates/data-templates/">Data Templates&lt;/a>来做这件事.&lt;/del>（&lt;a href="https://zerovip.github.io/zh/82988/">已完成&lt;/a>）&lt;/li>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> &lt;del>考虑把豆瓣的书影音游的数据迁移到博客里，单独弄一个页面，使用&lt;a href="https://gohugo.io/templates/data-templates/">Data Templates&lt;/a>来做这件事.&lt;/del>（&lt;a href="../../../zh/82988/">已完成&lt;/a>）&lt;/li>
 &lt;li>&lt;input checked="" disabled="" type="checkbox"> &lt;del>考虑列表页的分页问题？（如果文章太多了的话）参考：&lt;a href="https://gohugo.io/templates/pagination/">Pagination&lt;/a>.&lt;/del> 不再考虑，不用分页，一页就挺好.&lt;/li>
-&lt;li>&lt;input checked="" disabled="" type="checkbox"> &lt;del>暗色模式下加载新页面闪烁的问题.&lt;/del>（&lt;a href="https://zerovip.github.io/zh/01901">已完成&lt;/a>）&lt;/li>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> &lt;del>暗色模式下加载新页面闪烁的问题.&lt;/del>（&lt;a href="../../../zh/01901">已完成&lt;/a>）&lt;/li>
 &lt;li>&lt;input checked="" disabled="" type="checkbox"> &lt;del>支持图片懒加载，使用 render hooks 技术.&lt;/del>&lt;/li>
 &lt;li>&lt;input checked="" disabled="" type="checkbox"> &lt;del>Open Graph 和 Twitter Cards 的支持，见&lt;a href="https://gohugo.io/templates/internal/">Hugo Internal Templates&lt;/a>.&lt;/del>（暂不考虑，觉得不是很有必要. 不过如果打算宣传自己的主题的话 (35) 还是要加上.）&lt;/li>
 &lt;li>&lt;input checked="" disabled="" type="checkbox"> &lt;del>使用 &lt;a href="https://gohugo.io/content-management/page-bundles/">Page Bundles&lt;/a> 重新整理整个博客的目录结构.&lt;/del>（已完成，写了一个&lt;a href="https://gist.github.com/zerovip/ddd1036e74fb62e7296ef4b7e00b2765">脚本&lt;/a>来做这件事.）&lt;/li>
