@@ -120,7 +120,7 @@ RSS 订阅 ⊠
 Hugo 静态博客建站记 - 自写主题
 </div>
 <div class="right_head_des">
-<time>2019年6月22日</time> - 13219 字
+<time>2019年6月22日</time> - 13186 字
 </div>
 </header>
 <div class="right_main">
@@ -497,14 +497,21 @@ MathJax 的布置与 Markdown 数学支持的了解
 <p>按照心中预计的样子编写 CSS 文件，如果需要的话也写一些 JS. 就像 HTML 语言一样，关于它们的使用方法可以在任意相关的网站上找到，不是建立本站的难点，也不会成为这篇文章的重点.</p>
 <p>关于目录的下拉样式主要参考了<a href="https://www.runoob.com/css/css-dropdowns.html" rel="noreferrer noopener" target="_blank">菜鸟教程, CSS 下拉菜单<b><sub>⧉</sub></b></a>，目录序号的生成主要参考了<a href="https://clickhelp.com/clickhelp-technical-writing-blog/advanced-autonumbering-techniques-with-css/" rel="noreferrer noopener" target="_blank">Anastasia, Advanced Autonumbering Techniques with CSS<b><sub>⧉</sub></b></a>.</p>
 <p>然后就是我的文章排版，用了两端对齐，但是又有中文又有英文有时还有数学内容的文章就特别丑，中间的间距不均匀，我也不知道该怎么办.</p>
-<p>注：2019 年 12 月 29 日我对所有的 CSS 进行了重写，使用了更为方便更为强大的 CSS3 技术，包括 flex 弹性盒子（主要参考的是<a href="https://www.ruanyifeng.com/blog/2015/07/flex-grammar.html" rel="noreferrer noopener" target="_blank">阮一峰, Flex 布局教程：语法篇<b><sub>⧉</sub></b></a>、<a href="https://www.ruanyifeng.com/blog/2015/07/flex-examples.html" rel="noreferrer noopener" target="_blank">阮一峰, Flex 布局教程：实例篇<b><sub>⧉</sub></b></a>）、transition 过渡动画以及 @media 多媒体查询，重新为小屏幕手机端写了新的 CSS，并做了响应式布局. 目前这个博客就更好看、更好用了——无论在电脑屏幕上还是手机屏幕上. 这里需要特别记录的一点是关于“视口”这个概念的理解，这篇<a href="https://www.zhihu.com/question/35221839/answer/66825618" rel="noreferrer noopener" target="_blank">知乎上的回答<b><sub>⧉</sub></b></a>解答了我和提问者同样的困惑. 同时，之前的两端对齐的排版被我取消了，因为实在是太丑了，我宁愿让右侧不对齐.</p>
-<p>再注：新的 CSS 在奇葩的内核下显示不正常，波及了 QQ 浏览器、UC 浏览器等. 试着解决了一次，但终究找不到问题的根源——明明我用这些浏览器跑<a href="https://css3test.com" rel="noreferrer noopener" target="_blank">CSS3 测试<b><sub>⧉</sub></b></a>支持率很高，而且我用到的技术它都支持. 我懒得解决了，除非有人帮我定位一下问题，因为我 Linux 的生产环境没法装 QQ 浏览器，也不知道前端大佬们都是怎么测试的. 我的网站在 Firefox、Chrome 等浏览器上都显示得超级好，更何况这些问题就应该浏览器厂商解决，哪有留给前端解决的？留给我解决我就偏要留给用户解决. 要是所有前端都这么硬气，倒逼用户换成更现代的浏览器，我才不信浏览器厂商敢这么不作为. 反正我这个博客也没什么人看，就让用[显示不好的浏览器]的人不再来看我的博客好了. 补充于 2020 年 1 月 2 日.</p>
-<p>再注：今天想起这件事，不死心又查了一下，怀疑是那些浏览器不支持 flex 的标准写法的缘故，于是找到这样一个解决此问题的工具：<a href="https://github.com/postcss/autoprefixer" rel="noreferrer noopener" target="_blank">Autoprefixer<b><sub>⧉</sub></b></a>，可以集成到 IDE 中使用，它有一个在线版本：<a href="https://autoprefixer.github.io/" rel="noreferrer noopener" target="_blank">Autoprefixer CSS online<b><sub>⧉</sub></b></a>，能自动帮我们把那些非标准的写法补齐，而且还可以选择<a href="https://browserl.ist/" rel="noreferrer noopener" target="_blank">支持浏览器的覆盖范围<b><sub>⧉</sub></b></a>，查询语法可以看<a href="https://github.com/browserslist/browserslist#queries" rel="noreferrer noopener" target="_blank">这里<b><sub>⧉</sub></b></a>. 这两个工具配合起来非常方便，我选择 last 4 version（可以支持 92.18% 的浏览器）试了一下，还是没有解决问题. 补充于 2020 年 4 月 10 日.</p>
-<p>再注：还是不死心，到思否论坛上问了一下，然后在一个关键提示下，顺利找到问题并解决. 问题的根源在于 QQ 浏览器看到 flex 容器写着 <code>height: 100vh</code> 就想要帮我在一个屏幕高度内塞下所有 flex 项目，解决的办法是把 <code>flex-shrink</code> 调整到 0. 详见<a href="https://segmentfault.com/q/1010000022523106" rel="noreferrer noopener" target="_blank">思否论坛的这个帖子<b><sub>⧉</sub></b></a>. 补充于 2020 年 5 月 2 日.</p>
-<p>注：今天对 CSS 的颜色变量进行了抽象提出，并在<a href="https://dev.to/lampewebdev/css-quickies-css-variables-or-how-you-create-a-white-dark-theme-easily-1i0i" rel="noreferrer noopener" target="_blank">Michael “lampe” Lazarski, CSS Quickies: CSS Variables<b><sub>⧉</sub></b></a>这篇教程的指导下完成了主题颜色的切换功能，这样一来本站便支持明暗两个主题了. 等过些日子好好配置出一套令人满意的明暗配色之后会在首页写个短消息公布一下. 补充于 2020 年 8 月 8 日.（啊刚刚皇马被曼城淘汰出局了，好伤心，瓦拉内两次失误啊.）</p>
+<div class="notation_color" role="mark">
+<p>注：2019 年 12 月 29 日我对所有的 CSS 进行了重写，使用了更为方便更为强大的 CSS3 技术，包括 flex 弹性盒子（主要参考的是<a href="https://www.ruanyifeng.com/blog/2015/07/flex-grammar.html" rel="noreferrer noopener" target="_blank">阮一峰, Flex 布局教程：语法篇<b><sub>⧉</sub></b></a>、<a href="https://www.ruanyifeng.com/blog/2015/07/flex-examples.html" rel="noreferrer noopener" target="_blank">阮一峰, Flex 布局教程：实例篇<b><sub>⧉</sub></b></a>）、transition 过渡动画以及 @media 多媒体查询，重新为小屏幕手机端写了新的 CSS，并做了响应式布局. 目前这个博客就更好看、更好用了——无论在电脑屏幕上还是手机屏幕上. 这里需要特别记录的一点是关于“视口”这个概念的理解，这篇<a href="https://www.zhihu.com/question/35221839/answer/66825618" rel="noreferrer noopener" target="_blank">知乎上的回答<b><sub>⧉</sub></b></a>解答了我和提问者同样的困惑. 同时，之前的两端对齐的排版被我取消了，因为实在是太丑了，我宁愿让右侧不对齐.</p></div>
+<div class="notation_color" role="mark">
+<p>再注：新的 CSS 在奇葩的内核下显示不正常，波及了 QQ 浏览器、UC 浏览器等. 试着解决了一次，但终究找不到问题的根源——明明我用这些浏览器跑<a href="https://css3test.com" rel="noreferrer noopener" target="_blank">CSS3 测试<b><sub>⧉</sub></b></a>支持率很高，而且我用到的技术它都支持. 我懒得解决了，除非有人帮我定位一下问题，因为我 Linux 的生产环境没法装 QQ 浏览器，也不知道前端大佬们都是怎么测试的. 我的网站在 Firefox、Chrome 等浏览器上都显示得超级好，更何况这些问题就应该浏览器厂商解决，哪有留给前端解决的？留给我解决我就偏要留给用户解决. 要是所有前端都这么硬气，倒逼用户换成更现代的浏览器，我才不信浏览器厂商敢这么不作为. 反正我这个博客也没什么人看，就让用[显示不好的浏览器]的人不再来看我的博客好了. 补充于 2020 年 1 月 2 日.</p></div>
+<div class="notation_color" role="mark">
+<p>再注：今天想起这件事，不死心又查了一下，怀疑是那些浏览器不支持 flex 的标准写法的缘故，于是找到这样一个解决此问题的工具：<a href="https://github.com/postcss/autoprefixer" rel="noreferrer noopener" target="_blank">Autoprefixer<b><sub>⧉</sub></b></a>，可以集成到 IDE 中使用，它有一个在线版本：<a href="https://autoprefixer.github.io/" rel="noreferrer noopener" target="_blank">Autoprefixer CSS online<b><sub>⧉</sub></b></a>，能自动帮我们把那些非标准的写法补齐，而且还可以选择<a href="https://browserl.ist/" rel="noreferrer noopener" target="_blank">支持浏览器的覆盖范围<b><sub>⧉</sub></b></a>，查询语法可以看<a href="https://github.com/browserslist/browserslist#queries" rel="noreferrer noopener" target="_blank">这里<b><sub>⧉</sub></b></a>. 这两个工具配合起来非常方便，我选择 last 4 version（可以支持 92.18% 的浏览器）试了一下，还是没有解决问题. 补充于 2020 年 4 月 10 日.</p></div>
+<div class="notation_color" role="mark">
+<p>再注：还是不死心，到思否论坛上问了一下，然后在一个关键提示下，顺利找到问题并解决. 问题的根源在于 QQ 浏览器看到 flex 容器写着 <code>height: 100vh</code> 就想要帮我在一个屏幕高度内塞下所有 flex 项目，解决的办法是把 <code>flex-shrink</code> 调整到 0. 详见<a href="https://segmentfault.com/q/1010000022523106" rel="noreferrer noopener" target="_blank">思否论坛的这个帖子<b><sub>⧉</sub></b></a>. 补充于 2020 年 5 月 2 日.</p></div>
+<div class="notation_color" role="mark">
+<p>注：今天对 CSS 的颜色变量进行了抽象提出，并在<a href="https://dev.to/lampewebdev/css-quickies-css-variables-or-how-you-create-a-white-dark-theme-easily-1i0i" rel="noreferrer noopener" target="_blank">Michael “lampe” Lazarski, CSS Quickies: CSS Variables<b><sub>⧉</sub></b></a>这篇教程的指导下完成了主题颜色的切换功能，这样一来本站便支持明暗两个主题了. 等过些日子好好配置出一套令人满意的明暗配色之后会在首页写个短消息公布一下. 补充于 2020 年 8 月 8 日.（啊刚刚皇马被曼城淘汰出局了，好伤心，瓦拉内两次失误啊.）</p></div>
+<div class="notation_color" role="mark">
 <p>注：在 <a href="https://colorschemedesigner.com/" rel="noreferrer noopener" target="_blank">Color Scheme Designer<b><sub>⧉</sub></b></a> 的帮助下，我重新设计了明亮模式的配色，只是稍微有一点点变动，基本感官没有变化. 接着我又一鼓作气，把黑暗模式的配色也完成了，主要参考了 <a href="https://blog.prototypr.io/how-to-design-a-dark-theme-for-your-android-app-3daeb264637" rel="noreferrer noopener" target="_blank">Chethan KVS, The Ultimate Guide on Designing a Dark Theme for your Android app<b><sub>⧉</sub></b></a>、<a href="https://material.io/design/color/dark-theme.html" rel="noreferrer noopener" target="_blank">Material Design, Dark Theme<b><sub>⧉</sub></b></a> 以及 <a href="https://uxdesign.cc/dark-mode-ui-design-the-definitive-guide-part-1-color-53dcfaea5129" rel="noreferrer noopener" target="_blank">Atharva Kulkarni, Dark Mode UI: the definitive guide<b><sub>⧉</sub></b></a>，当然依然使用了 <a href="https://colorschemedesigner.com/" rel="noreferrer noopener" target="_blank">Color Scheme Designer<b><sub>⧉</sub></b></a>. 黑暗模式的配色基本上是可以了，但我还是不是很满意. 一来觉得配色还是有不合理的地方，二是像一些图片在黑暗背景下显得很不协调——透明背景加黑色字体的图片几乎无法辨认、白色背景的又显得很突兀. 如果有人对配色比较在行，可以给我提供配色方案.</p>
-<p>还应该完善的一个小功能是：应该用 prefers-color-scheme 技术判断一下用户的系统环境颜色，当然比较简单，在 main.js 里把初始化的那个 if 语句的最后一个 else 里写点东西判断一下就行，但我不是很想搞，还是觉得给所有人默认明亮模式比较好，或许等我的黑暗模式配色更好看一点再说吧. 补充于 2020 年 8 月 10 日.</p>
-<p>prefers-color-scheme 已支持. 补充于 2021 年 8 月 27 日.</p>
+<p>还应该完善的一个小功能是：应该用 prefers-color-scheme 技术判断一下用户的系统环境颜色，当然比较简单，在 main.js 里把初始化的那个 if 语句的最后一个 else 里写点东西判断一下就行，但我不是很想搞，还是觉得给所有人默认明亮模式比较好，或许等我的黑暗模式配色更好看一点再说吧. 补充于 2020 年 8 月 10 日.</p></div>
+<div class="notation_color" role="mark">
+<p>prefers-color-scheme 已支持. 补充于 2021 年 8 月 27 日.</p></div>
 <h2 id="评论系统的支持">
 评论系统的支持
 <a href="#%e8%af%84%e8%ae%ba%e7%b3%bb%e7%bb%9f%e7%9a%84%e6%94%af%e6%8c%81"><small>¶</small></a>
@@ -532,14 +539,14 @@ MathJax 的布置与 Markdown 数学支持的了解
 <p>而隐藏的需求就是让文章不在列表中显示出来，比如上面给出链接的那篇<a href="/zh/62772">测试文章</a>，它是“备忘”这个分区下的文章，却不能在分区列表页找到，也不会在首页的最近 5 篇中出现，用的是技术是在文章 Markdown 的 front matter 里引入新的参数，并在列表页用 <code>where</code> 函数判断.</p>
 <p>这里需要额外注意的是 RSS 页也需要进行隐藏，因为 Hugo encryptor 这个工具只对 html 文件进行了加密，没有加密 xml 文件，如果不隐藏就会导致在 RSS 中可以看到密码和加密内容. 比如对上面给出链接的测试文章我故意没有在 RSS 列表页隐藏，这样在<a href="/zh/non-math/memos/index.xml">“备忘分区”的 RSS</a> 中可以看到密码 <code>&lt;cipher-text data-password="PASS3word" style="display:none;"&gt;</code> 以及加密的内容.</p>
 <p>总而言之，列表隐藏和文字加密可随意配合使用，列表隐藏但不文字加密、文字加密但不列表隐藏、文字加密并列表隐藏，这都是可以的；但只要文字加密就必须 RSS 隐藏.</p>
-<p>这一小节补充于 2019 年 12 月 27 日.</p>
+<p><mark class="notation_color">这一小节补充于 2019 年 12 月 27 日.</mark></p>
 <h2 id="统计信息">
 统计信息
 <a href="#%e7%bb%9f%e8%ae%a1%e4%bf%a1%e6%81%af"><small>¶</small></a>
 </h2>
 <p>最开始只用了 Google Analytics，没什么难的，本身 Hugo 就支持，只要在配置文件里把 Google Analytics 的代号写进去，有一个现成的语句片段可以用. 唯一要注意的是要用<code>{{ if not .Site.IsServer }}</code>判断一下别把本地测试的也统计进去就行了.</p>
 <p>2020 年 3 月 6 日我听说了一个新的开源统计工具：<a href="https://www.goatcounter.com/" rel="noreferrer noopener" target="_blank">Goat Counter<b><sub>⧉</sub></b></a>，使用非常简单，我也马上就把它加进来了.</p>
-<p>这一小节补充于 2020 年 3 月 6 日.</p>
+<p><mark class="notation_color">这一小节补充于 2020 年 3 月 6 日.</mark></p>
 <h2 id="同栏目下的文章互链">
 同栏目下的文章互链
 <a href="#%e5%90%8c%e6%a0%8f%e7%9b%ae%e4%b8%8b%e7%9a%84%e6%96%87%e7%ab%a0%e4%ba%92%e9%93%be"><small>¶</small></a>
@@ -587,7 +594,7 @@ MathJax 的布置与 Markdown 数学支持的了解
 </code></pre></td></tr></table>
 </div>
 </div><p>最后把中文的内容翻译翻译写成 <code>{{ i18n "xxx" }}</code> 的形式就可以了.</p>
-<p>这一小节补充于 2020 年 7 月 29 日.</p>
+<p><mark class="notation_color">这一小节补充于 2020 年 7 月 29 日.</mark></p>
 <h1 id="部署">
 部署
 <a href="#%e9%83%a8%e7%bd%b2"><small>¶</small></a>
@@ -606,7 +613,7 @@ Netlify
 <p>第一，这个方法和 Github Pages 不兼容，因为 Github Pages 用了 submodule，相当于仓库里面还有一个仓库，而 Netlify 管 Github 要授权的时候只授权了大仓库，这导致 Netlify 运行时会产生权限的错误. <a href="https://www.synesthesia.co.uk/note/2019/06/13/hugo-netlify-and-github-pages/" rel="noreferrer noopener" target="_blank">这篇文章<b><sub>⧉</sub></b></a>报告了这个问题并提供了一个看上去极其不自然的方法解决了这个问题. 我觉得那个方法实在是有点愚蠢，我没有更好的办法.</p>
 <p>第二，如果让 Netlify 重新帮我用它那里的 Hugo 生成静态文件，那加密的部分怎么办？难道我要把加密的 python 文件上传到 Netlify 再设置一个钩子么？这听上去也很愚蠢，因为我已经有生成好的静态文件了，你只管帮我 host 就好了，搞这么麻烦干什么？</p>
 <p>于是我就直接把<a href="https://github.com/zerovip/zerovip.github.io" rel="noreferrer noopener" target="_blank">静态文件的仓库 zerovip.github.io<b><sub>⧉</sub></b></a>，也就是 Github Pages 用的那个 username.github.io 那个仓库关联到 Netlify 网站项目上了，也运行得非常好. 这时我才发现 Netlify 并没有想象中那样变得加载更快，我还是要寻找更好的解决方案.</p>
-<p>这一小节补充于 2019 年 12 月 30 日.</p>
+<p><mark class="notation_color">这一小节补充于 2019 年 12 月 30 日.</mark></p>
 <h2 id="其他">
 其他
 <a href="#%e5%85%b6%e4%bb%96"><small>¶</small></a>
@@ -615,20 +622,20 @@ Netlify
 <p>一，弄一个 CDN，但国外的 CDN 不满足 4，国内的 CDN 不满足 3.</p>
 <p>二，反正是静态的博客，再找地方托管，考虑过：Firebase（不满足 1）、Gitee（不满足 3）、Coding（不满足 3）、Gitlab（不满足 4）等等.</p>
 <p>于是干脆就不弄了.</p>
-<p>这一小节补充于 2019 年 12 月 30 日.</p>
+<p><mark class="notation_color">这一小节补充于 2019 年 12 月 30 日.</mark></p>
 <h2 id="vercel">
 Vercel
 <a href="#vercel"><small>¶</small></a>
 </h2>
 <p>最近 <a href="https://vercel.com" rel="noreferrer noopener" target="_blank">Vercel<b><sub>⧉</sub></b></a> 这个东西感觉有点流行起来了，中文世界里的一些平台上出现了越来越多关于它的很多讨论. 于是我又花了五分钟把我的博客多部署了一份，感觉它确实访问速度稍稍快一些. 它的部署也非常简单，用 GitHub 登录，从 GitHub 导入项目，在 GitHub 的相关 repo 中安装 Vercel app，然后就行了，后面有任何变化也会同步推送出来. 整体上感觉是 Netlify 的竞品，因为和 Netlify 一样它也支持各种框架——Hugo、Hexo、Jekyll、Next.js、Gatsby、Vue.js 等等等等等等，有一大堆都是我没听说过的东西. 原理应该和 Netlify 完全一样，可以设置部署的命令，环境变量等等，相当于是一台受到限制的 VPS.</p>
 <p>我当然还是直接把静态仓库 zerovip.github.io 给部署上去了，因为涉及到用 python 脚本给渲染好的 html 加密. 但即便不涉及加密过程我也会这么部署的，因为 Hugo 本身就很强大，软件安装极其容易，生成静态文件速度极快，像我这样直接部署所有静态文件才不会因为版本号不同、环境不同等原因产生任何偏差，严格保证了所有内容完全一致. 像 Hexo 那种生成静态文件要好几秒且安装起来比较费事的框架可能这么搞稍微容易一点吧，这样搞的话本地不需要安装，只专注写 markdown 文档就好. 但缺点就是只能用别人的主题，不能像我这样自己写主题，对主题上的任何需求和不满意的地方也没法随时进行调整. 说起来，我对我自己的这个主题真的是相当满意，我对我的一切选择（选择了 Hugo、选择了自己写主题）都太满意了，前期辛苦一点点换来的是持久的幸福啊！</p>
-<p>这一小节补充于 2020 年 8 月 21 日.</p>
+<p><mark class="notation_color">这一小节补充于 2020 年 8 月 21 日.</mark></p>
 <h2 id="cloudflare-pages">
 CloudFlare Pages
 <a href="#cloudflare-pages"><small>¶</small></a>
 </h2>
 <p>CloudFlare 也搞了一个 Pages 服务，不得不感慨，现在做托管的服务越来越多了. 于是又欢喜地把我的博客托管到了这上面一份.</p>
-<p>这一小节补充于 2021 年 3 月 12 日.</p>
+<p><mark class="notation_color">这一小节补充于 2021 年 3 月 12 日.</mark></p>
 <h1 id="是为记">
 是为记.
 <a href="#%e6%98%af%e4%b8%ba%e8%ae%b0"><small>¶</small></a>
