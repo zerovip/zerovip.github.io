@@ -10,16 +10,19 @@
 </title>
 <link href="../../css/base.min.7a1b5c1c1d7e43ac09f0cd1df239e034cbdf5fa7439794fb7b5fe1225963173c.css" rel="stylesheet" type="text/css"/>
 <link href="../../css/small.min.f9c67371e05b88a9468d51903bbe4d52be301b7e498d3f1dc7fbff95f35f2929.css" media="screen and (max-width: 1200px)" rel="stylesheet" type="text/css"/>
-<link href="../../css/normal.min.b2c3863a3378b939831ae6c21fa348234f23ec0c6879be2c4a92cf6be2a9fa56.css" media="screen and (min-width: 1201px)" rel="stylesheet" type="text/css"/>
-<script src="../../js/ctheme.min.2b9744ea6df95f636aae562954ce13add68a9c7b99203c9ac1aa4671b6238958.js"></script>
+<link href="../../css/normal.min.7fe55f32650b9c713cce8ccc9a63d23eecaff2b247b70a69bf3650b249319609.css" media="screen and (min-width: 1201px)" rel="stylesheet" type="text/css"/>
 <link href="../../css/syntax.min.ed5b37c3a50997d5ccd8b81bf0d00a7ac1f92c82985623c2dbf0cb422596726a.css" rel="stylesheet" type="text/css"/>
+<script src="../../js/ctheme.min.2b9744ea6df95f636aae562954ce13add68a9c7b99203c9ac1aa4671b6238958.js"></script>
+<link href="../../katex/katex.min.a71d971f9455676aedb060ea5e4739b69e81da21ed04ef70d1a6222fad6aaacd.css" rel="stylesheet" type="text/css"/>
+<script defer="" src="../../katex/katex.min.498ba854f327e6deada33ec1fd22479087da513688bf2e6c3a9a6b6c16c5c017.js"></script>
+<script defer="" onload="renderMathInElement(document.body)" src="../../katex/auto-render.min.f72a9fcf52742d0d84c4b1e0498595bfee4dbe68863e496c8afd4114a6d9336e.js"></script>
+<link href="../../katex/copy-tex.min.cf8e3e934d92a839d209ffdac331fa693da5958a6dff2c8788a4713cc1f50a47.css" rel="stylesheet" type="text/css"/>
+<script defer="" src="../../katex/copy-tex.min.0d896433ee909fb871eaf26523394d5b579fa64e1c1e42633ca33e52bfaa3b0f.js"></script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-6CF2JBMYH3"></script>
 <script>var doNotTrack=!1;if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','G-6CF2JBMYH3',{anonymize_ip:!1})}</script>
 <script async="" data-goatcounter="https://zerovip.goatcounter.com/count" src="//gc.zgo.at/count.js"></script>
 </head>
 <body>
-<script async="" src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-svg.js"></script>
 <nav class="bar_for_phone">
 <div class="bar_left_button">
 <div class="left_button_for_bar" onclick="ChangeClassLeft()">
@@ -122,7 +125,7 @@ RSS 订阅 ⊠
 代数无理数的小数展开 - 21 世纪的定理
 </div>
 <div class="right_head_des">
-<time>2019年7月14日</time> - 2982 字
+<time>2019年7月14日</time> - 2986 字
 </div>
 </header>
 <div class="right_main">
@@ -136,14 +139,14 @@ RSS 订阅 ⊠
 <p>代数数的等价定义是“实系数多项式的复根”，因为有理系数都写成分数后用分母的公倍数去乘就是一个同根的实系数多项式.</p>
 <p>代数数不一定是实数. 是实数的代数数叫<strong>实代数数</strong>.</p>
 <p>代数数集是可数集.</p>
-<p>不是代数数的数（实数或复数）叫<strong>超越数</strong>. 常见的超越数有：<span class="math inline">\(e, \pi, ...\)</span></p>
-<p>有很多数人类还不知道它是实代数数还是实超越数，比如：<span class="math inline">\(\pi + e, \pi - e, \pi e, \frac{\pi}{e}, \pi^{\pi}, e^e, \pi^{e}, ...\)</span>，不过 <span class="math inline">\(e^{\pi}\)</span> 是超越数.</p>
+<p>不是代数数的数（实数或复数）叫<strong>超越数</strong>. 常见的超越数有：<span class="math inline">\(e\)</span>, <span class="math inline">\(\pi\)</span>, ……</p>
+<p>有很多数人类还不知道它是实代数数还是实超越数，比如：<span class="math inline">\(\pi + e\)</span>, <span class="math inline">\(\pi - e\)</span>, <span class="math inline">\(\pi e\)</span>, <span class="math inline">\(\frac{\pi}{e}\)</span>, <span class="math inline">\(\pi^{\pi}\)</span>, <span class="math inline">\(e^e\)</span>, <span class="math inline">\(\pi^{e}\)</span>, ……，不过 <span class="math inline">\(e^{\pi}\)</span> 是超越数.</p>
 <figure>
 <img alt="实数分类图" src="real-numbers.i.png"/><figcaption aria-hidden="true">实数分类图</figcaption>
 </figure>
 <h2 id="实数的小数展开">实数的小数展开</h2>
 <p>实数（在十进制下）总能写成小数的形式，可能是<strong>有限小数</strong>、<strong>无限循环小数</strong>（这二者统称<strong>有理数</strong>），<strong>无限不循环小数</strong>（也叫<strong>无理数</strong>），<strong>实数的小数展开</strong>就是指把实数写成小数的形式.</p>
-<p>实代数数一定是实数：如小数展开是有限小数的实代数数（1.2）、小数展开是无限循环小数的实代数数（<span class="math inline">\(\frac{1}{7} = 0.142857142857...\)</span>）、小数展开是无限不循环小数的实代数数（<span class="math inline">\(\sqrt{2} = 1.414213562...\)</span>）.</p>
+<p>实代数数一定是实数：如小数展开是有限小数的实代数数（<span class="math inline">\(1.2\)</span>）、小数展开是无限循环小数的实代数数（<span class="math inline">\(\frac{1}{7} = 0.142857142857...\)</span>）、小数展开是无限不循环小数的实代数数（<span class="math inline">\(\sqrt{2} = 1.414213562...\)</span>）.</p>
 <p>实数不一定是实代数数：有限小数和无限循环小数是有理数，有理数一定是实代数数；无限不循环小数是无理数，它可能是实代数数（<span class="math inline">\(\sqrt{2}\)</span>），也有可能不是实代数数而是实超越数（<span class="math inline">\(\pi = 3.141592653589...\)</span>、<span class="math inline">\(e = 2.7182818284...\)</span>）.</p>
 <h2 id="小数展开的长度为-n-的区块数量-pn">[小数展开的[长度为 <span class="math inline">\(n\)</span> 的区块]]数量 <span class="math inline">\(p(n)\)</span></h2>
 <p>这个标题的断句为：<span class="math inline">\(p(n)\)</span> 是一个数，表示一个数量，是区块的数量；区块是长度为 <span class="math inline">\(n\)</span> 的区块，是某一个实数的小数展开中的[长度为 <span class="math inline">\(n\)</span> 的区块]. 这里的“区块”不是什么数学名词，就是小数展开的一些连续的片段（去掉小数点），区块的长度就是这个片段中包含的数字的个数.</p>

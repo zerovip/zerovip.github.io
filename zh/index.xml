@@ -9078,14 +9078,14 @@ style="display: none;"
 &lt;p>代数数的等价定义是“实系数多项式的复根”，因为有理系数都写成分数后用分母的公倍数去乘就是一个同根的实系数多项式.&lt;/p>
 &lt;p>代数数不一定是实数. 是实数的代数数叫&lt;strong>实代数数&lt;/strong>.&lt;/p>
 &lt;p>代数数集是可数集.&lt;/p>
-&lt;p>不是代数数的数（实数或复数）叫&lt;strong>超越数&lt;/strong>. 常见的超越数有：&lt;span class="math inline">\(e, \pi, ...\)&lt;/span>&lt;/p>
-&lt;p>有很多数人类还不知道它是实代数数还是实超越数，比如：&lt;span class="math inline">\(\pi + e, \pi - e, \pi e, \frac{\pi}{e}, \pi^{\pi}, e^e, \pi^{e}, ...\)&lt;/span>，不过 &lt;span class="math inline">\(e^{\pi}\)&lt;/span> 是超越数.&lt;/p>
+&lt;p>不是代数数的数（实数或复数）叫&lt;strong>超越数&lt;/strong>. 常见的超越数有：&lt;span class="math inline">\(e\)&lt;/span>, &lt;span class="math inline">\(\pi\)&lt;/span>, ……&lt;/p>
+&lt;p>有很多数人类还不知道它是实代数数还是实超越数，比如：&lt;span class="math inline">\(\pi + e\)&lt;/span>, &lt;span class="math inline">\(\pi - e\)&lt;/span>, &lt;span class="math inline">\(\pi e\)&lt;/span>, &lt;span class="math inline">\(\frac{\pi}{e}\)&lt;/span>, &lt;span class="math inline">\(\pi^{\pi}\)&lt;/span>, &lt;span class="math inline">\(e^e\)&lt;/span>, &lt;span class="math inline">\(\pi^{e}\)&lt;/span>, ……，不过 &lt;span class="math inline">\(e^{\pi}\)&lt;/span> 是超越数.&lt;/p>
 &lt;figure>
 &lt;img src="real-numbers.i.png" alt="实数分类图" />&lt;figcaption aria-hidden="true">实数分类图&lt;/figcaption>
 &lt;/figure>
 &lt;h2 id="实数的小数展开">实数的小数展开&lt;/h2>
 &lt;p>实数（在十进制下）总能写成小数的形式，可能是&lt;strong>有限小数&lt;/strong>、&lt;strong>无限循环小数&lt;/strong>（这二者统称&lt;strong>有理数&lt;/strong>），&lt;strong>无限不循环小数&lt;/strong>（也叫&lt;strong>无理数&lt;/strong>），&lt;strong>实数的小数展开&lt;/strong>就是指把实数写成小数的形式.&lt;/p>
-&lt;p>实代数数一定是实数：如小数展开是有限小数的实代数数（1.2）、小数展开是无限循环小数的实代数数（&lt;span class="math inline">\(\frac{1}{7} = 0.142857142857...\)&lt;/span>）、小数展开是无限不循环小数的实代数数（&lt;span class="math inline">\(\sqrt{2} = 1.414213562...\)&lt;/span>）.&lt;/p>
+&lt;p>实代数数一定是实数：如小数展开是有限小数的实代数数（&lt;span class="math inline">\(1.2\)&lt;/span>）、小数展开是无限循环小数的实代数数（&lt;span class="math inline">\(\frac{1}{7} = 0.142857142857...\)&lt;/span>）、小数展开是无限不循环小数的实代数数（&lt;span class="math inline">\(\sqrt{2} = 1.414213562...\)&lt;/span>）.&lt;/p>
 &lt;p>实数不一定是实代数数：有限小数和无限循环小数是有理数，有理数一定是实代数数；无限不循环小数是无理数，它可能是实代数数（&lt;span class="math inline">\(\sqrt{2}\)&lt;/span>），也有可能不是实代数数而是实超越数（&lt;span class="math inline">\(\pi = 3.141592653589...\)&lt;/span>、&lt;span class="math inline">\(e = 2.7182818284...\)&lt;/span>）.&lt;/p>
 &lt;h2 id="小数展开的长度为-n-的区块数量-pn">[小数展开的[长度为 &lt;span class="math inline">\(n\)&lt;/span> 的区块]]数量 &lt;span class="math inline">\(p(n)\)&lt;/span>&lt;/h2>
 &lt;p>这个标题的断句为：&lt;span class="math inline">\(p(n)\)&lt;/span> 是一个数，表示一个数量，是区块的数量；区块是长度为 &lt;span class="math inline">\(n\)&lt;/span> 的区块，是某一个实数的小数展开中的[长度为 &lt;span class="math inline">\(n\)&lt;/span> 的区块]. 这里的“区块”不是什么数学名词，就是小数展开的一些连续的片段（去掉小数点），区块的长度就是这个片段中包含的数字的个数.&lt;/p>
@@ -10113,6 +10113,10 @@ content/
 &lt;h3 id="mathjax-的布置与-markdown-数学支持的了解">MathJax 的布置与 Markdown 数学支持的了解&lt;/h3>
 &lt;p>希望浏览器能支持渲染数学公式，我这里选择了 &lt;a href="https://www.mathjax.org/">MathJax&lt;/a>. 按照其官方的文档，在模板中添加一行代码即可完成.&lt;/p>
 &lt;p>我同时又希望能无缝接轨 LaTeX 文件，这样我既可以自己本地编译 PDF 格式的文档，又可以让它以同样漂亮的格式显示在网页上. 关于 Markdown 的支持，这里值得参考的文章是&lt;a href="https://yihui.name/cn/2017/04/mathjax-markdown/">谢益辉, MathJax 与 Markdown 的究极融合&lt;/a>. 不过由于数学环境在 Markdown 中不得不以代码块 &lt;code>`$math code$`&lt;/code> 的样式用反引号将它包裹起来，而我需要的是把 LaTeX 代码直接拿过来就能用，不需要再进行额外的更改，因此继续寻找更好的工具.&lt;/p>
+&lt;div role="note" class='notation_color'>
+&lt;p>我把 MathJax 换成了 &lt;a href="https://katex.org/">KaTeX&lt;/a>，因为后者无任何依赖、速度快、而且能自己部署. 这样一来，除了流量分析以及评论功能部分以外，本站完全没有使用任何其他的第三方 JavaScript 了！在本地预览的时候根本不需要联网，离线就能使用！KaTeX 的使用方法也很简单，按照其文档引入 CSS 和 JavaScript，然后我又加了两个插件，分别是自动渲染（&lt;a href="https://katex.org/docs/autorender.html">auto-render&lt;/a>）和复制 TeX 代码支持（&lt;a href="https://github.com/KaTeX/KaTeX/tree/main/contrib/copy-tex">copy-tex&lt;/a>）. 虽然比起 MathJax 它支持的 LaTeX 格式不够多，但对我来说写点简单的东西已经足够了，复杂的东西我就直接生成 PDF 了.&lt;/p>
+&lt;p>2021.11.02&lt;/p>
+&lt;/div>
 &lt;h3 id="配合-pandoc-尝试-markdown">配合 Pandoc 尝试 Markdown&lt;/h3>
 &lt;p>听闻 &lt;a href="https://pandoc.org/">Pandoc&lt;/a> 是一个强大的工具，而 Hugo 是&lt;a href="https://gohugo.io/content-management/formats/#additional-formats-through-external-helpers">支持&lt;/a>它的，于是进行尝试：安装 Pandoc、在 front matter 中写上 &lt;code>markup: pandoc&lt;/code> 或 &lt;code>markup: pdc&lt;/code> （YAML 格式）、把我已经写好的 LaTeX 代码拷贝进来、渲染网页，结果极其糟糕. LaTeX 代码前面的导言区完全被当成了注释不起任何作用，这就意味着整个 LaTeX 完全不能用. 另外，我行间公式的书写习惯为&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -10347,7 +10351,7 @@ content/
 &lt;li>&lt;input disabled="" type="checkbox"> 在 sitemap 里去掉隐藏的文章. 加一个新的变量？&lt;/li>
 &lt;li>&lt;input disabled="" type="checkbox"> 关于和记录这两个一级列表板块，要不要去掉这两个列表页？&lt;/li>
 &lt;li>&lt;input disabled="" type="checkbox"> 关于和记录这两个一级列表板块，要不要去掉它们的 rss？&lt;/li>
-&lt;li>&lt;input disabled="" type="checkbox"> Mathjax 换 Katex.&lt;/li>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> &lt;del>Mathjax 换 Katex.&lt;/del>&lt;/li>
 &lt;li>&lt;input disabled="" type="checkbox"> 学习 commonmark 规范，写一篇示例文章，包含所有可能的格式及其嵌套，在此基础上重新把样式表设计一下.&lt;/li>
 &lt;li>&lt;input disabled="" type="checkbox"> 把 validator.w3.org 上建议的对 RSS 的改进都给修了……文章里的 url 都用绝对路径，改 render hooks；&lt;/li>
 &lt;li>&lt;input disabled="" type="checkbox"> 把 validator.w3.org 上建议的对 RSS 的改进都给修了……文章里不使用 role attribute. 啥意思？&lt;/li>

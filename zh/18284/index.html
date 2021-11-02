@@ -10,9 +10,9 @@ Hugo 静态博客建站记 - 自写主题
 </title>
 <link href="../../css/base.min.7a1b5c1c1d7e43ac09f0cd1df239e034cbdf5fa7439794fb7b5fe1225963173c.css" rel="stylesheet" type="text/css"/>
 <link href="../../css/small.min.f9c67371e05b88a9468d51903bbe4d52be301b7e498d3f1dc7fbff95f35f2929.css" media="screen and (max-width: 1200px)" rel="stylesheet" type="text/css"/>
-<link href="../../css/normal.min.b2c3863a3378b939831ae6c21fa348234f23ec0c6879be2c4a92cf6be2a9fa56.css" media="screen and (min-width: 1201px)" rel="stylesheet" type="text/css"/>
-<script src="../../js/ctheme.min.2b9744ea6df95f636aae562954ce13add68a9c7b99203c9ac1aa4671b6238958.js"></script>
+<link href="../../css/normal.min.7fe55f32650b9c713cce8ccc9a63d23eecaff2b247b70a69bf3650b249319609.css" media="screen and (min-width: 1201px)" rel="stylesheet" type="text/css"/>
 <link href="../../css/syntax.min.ed5b37c3a50997d5ccd8b81bf0d00a7ac1f92c82985623c2dbf0cb422596726a.css" rel="stylesheet" type="text/css"/>
+<script src="../../js/ctheme.min.2b9744ea6df95f636aae562954ce13add68a9c7b99203c9ac1aa4671b6238958.js"></script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-6CF2JBMYH3"></script>
 <script>var doNotTrack=!1;if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','G-6CF2JBMYH3',{anonymize_ip:!1})}</script>
 <script async="" data-goatcounter="https://zerovip.goatcounter.com/count" src="//gc.zgo.at/count.js"></script>
@@ -120,7 +120,7 @@ RSS 订阅 ⊠
 Hugo 静态博客建站记 - 自写主题
 </div>
 <div class="right_head_des">
-<time>2019年6月22日</time> - 13186 字
+<time>2019年6月22日</time> - 13421 字
 </div>
 </header>
 <div class="right_main">
@@ -416,6 +416,10 @@ MathJax 的布置与 Markdown 数学支持的了解
 </h3>
 <p>希望浏览器能支持渲染数学公式，我这里选择了 <a href="https://www.mathjax.org/" rel="noreferrer noopener" target="_blank">MathJax<b><sub>⧉</sub></b></a>. 按照其官方的文档，在模板中添加一行代码即可完成.</p>
 <p>我同时又希望能无缝接轨 LaTeX 文件，这样我既可以自己本地编译 PDF 格式的文档，又可以让它以同样漂亮的格式显示在网页上. 关于 Markdown 的支持，这里值得参考的文章是<a href="https://yihui.name/cn/2017/04/mathjax-markdown/" rel="noreferrer noopener" target="_blank">谢益辉, MathJax 与 Markdown 的究极融合<b><sub>⧉</sub></b></a>. 不过由于数学环境在 Markdown 中不得不以代码块 <code>`$math code$`</code> 的样式用反引号将它包裹起来，而我需要的是把 LaTeX 代码直接拿过来就能用，不需要再进行额外的更改，因此继续寻找更好的工具.</p>
+<div class="notation_color" role="note">
+<p>我把 MathJax 换成了 <a href="https://katex.org/" rel="noreferrer noopener" target="_blank">KaTeX<b><sub>⧉</sub></b></a>，因为后者无任何依赖、速度快、而且能自己部署. 这样一来，除了流量分析以及评论功能部分以外，本站完全没有使用任何其他的第三方 JavaScript 了！在本地预览的时候根本不需要联网，离线就能使用！KaTeX 的使用方法也很简单，按照其文档引入 CSS 和 JavaScript，然后我又加了两个插件，分别是自动渲染（<a href="https://katex.org/docs/autorender.html" rel="noreferrer noopener" target="_blank">auto-render<b><sub>⧉</sub></b></a>）和复制 TeX 代码支持（<a href="https://github.com/KaTeX/KaTeX/tree/main/contrib/copy-tex" rel="noreferrer noopener" target="_blank">copy-tex<b><sub>⧉</sub></b></a>）. 虽然比起 MathJax 它支持的 LaTeX 格式不够多，但对我来说写点简单的东西已经足够了，复杂的东西我就直接生成 PDF 了.</p>
+<p>2021.11.02</p>
+</div>
 <h3 id="配合-pandoc-尝试-markdown">
 配合 Pandoc 尝试 Markdown
 <a href="#%e9%85%8d%e5%90%88-pandoc-%e5%b0%9d%e8%af%95-markdown"><small>¶</small></a>
@@ -701,7 +705,7 @@ TODO 清单
 <li><input disabled="" type="checkbox"/> 在 sitemap 里去掉隐藏的文章. 加一个新的变量？</li>
 <li><input disabled="" type="checkbox"/> 关于和记录这两个一级列表板块，要不要去掉这两个列表页？</li>
 <li><input disabled="" type="checkbox"/> 关于和记录这两个一级列表板块，要不要去掉它们的 rss？</li>
-<li><input disabled="" type="checkbox"/> Mathjax 换 Katex.</li>
+<li><input checked="" disabled="" type="checkbox"/> <del>Mathjax 换 Katex.</del></li>
 <li><input disabled="" type="checkbox"/> 学习 commonmark 规范，写一篇示例文章，包含所有可能的格式及其嵌套，在此基础上重新把样式表设计一下.</li>
 <li><input disabled="" type="checkbox"/> 把 validator.w3.org 上建议的对 RSS 的改进都给修了……文章里的 url 都用绝对路径，改 render hooks；</li>
 <li><input disabled="" type="checkbox"/> 把 validator.w3.org 上建议的对 RSS 的改进都给修了……文章里不使用 role attribute. 啥意思？</li>
