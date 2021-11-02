@@ -4,21 +4,21 @@ Recent Content |
 Memos
 | Zero's Ivory Tower</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>
 Sat, 28 Aug 2021 00:00:00 CST</lastBuildDate><item><title>Make Hugo Invert Color for Images when Using a Dark Mode - Build a Theme</title><link>https://zerovip.github.io/en/15738/</link><pubDate>Sat, 28 Aug 2021 00:00:00 CST</pubDate><guid isPermaLink="false">/en/15738/</guid><description>&lt;p>This post will discuss the display problem of images in light / dark mode, and there are some sample images as examples. You can test their display by manually switch the theme of this site. The switcher is in the upper right corner of the left menu bar, and if you are using a phone you can tap the burger button in the upper left corner to call out the menu bar.&lt;/p>
-&lt;h1 id="the-problem">The problem&lt;/h1>
+&lt;h1>The problem&lt;/h1>
 &lt;p>Some images have black text on a white background, which is harsh when using the dark mode:&lt;/p>
 &lt;p>&lt;figure>
-&lt;img loading="lazy" src="https://zerovip.github.io/en/15738/lorem.jpg" alt="A sample image have black text on a white background">
+&lt;img loading='lazy' src='https://zerovip.github.io/en/15738/lorem.jpg' alt='A sample image have black text on a white background'>
 &lt;figcaption>◉ Figure. A sample image have black text on a white background&lt;/figcaption>
 &lt;/figure>
 &lt;/p>
 &lt;p>While some images have black text on a transparent background, which is not visible when using the dark mode:&lt;/p>
 &lt;p>&lt;figure>
-&lt;img loading="lazy" src="https://zerovip.github.io/en/15738/lorem.png" alt="A sample image have black text on a transparent background">
+&lt;img loading='lazy' src='https://zerovip.github.io/en/15738/lorem.png' alt='A sample image have black text on a transparent background'>
 &lt;figcaption>◉ Figure. A sample image have black text on a transparent background&lt;/figcaption>
 &lt;/figure>
 &lt;/p>
 &lt;p>Both of these cases need the image to be inverted when the reader selects the dark mode.&lt;/p>
-&lt;h1 id="how-to-deal-with">How to deal with&lt;/h1>
+&lt;h1>How to deal with&lt;/h1>
 &lt;p>The approach is using the CSS filters technique. For example, in the following code, &lt;code>.normal&lt;/code> is for the normal color and &lt;code>.inverted&lt;/code> is for the inverted color.&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -39,9 +39,13 @@ Sat, 28 Aug 2021 00:00:00 CST</lastBuildDate><item><title>Make Hugo Invert Color
 &lt;span class="p">}&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>We can put the above code into a CSS variable, together with the dark mode switch part. Then we edit &lt;a href="https://gohugo.io/getting-started/configuration-markup/#markdown-render-hooks">render hooks&lt;/a> in the Hugo template, one of which is for image processing, just add appropriate style to the image there.&lt;/p>
-&lt;p>About the dark mode switching function I refer to &lt;a href="https://dev.to/lampewebdev/css-quickies-css-variables-or-how-you-create-a-white-dark-theme-easily-1i0i">this article&lt;/a> in the practice. Roughly speaking, when the reader switch the site theme to dark mode, the whole &lt;code>&amp;lt;html&amp;gt;&lt;/code> container will be added a class to indicate that the page in dark mode now (&lt;code>.classList.add(&amp;quot;dark&amp;quot;)&lt;/code>); and when the reader switch to light mode, this class will be deleted (&lt;code>.classList.remove(&amp;quot;dark&amp;quot;)&lt;/code>). On the CSS’ hand, we assign different values to a same variable depending on whether the container has the &lt;code>dark&lt;/code> class. While this variable will be used for HTML elements’ styles. See the code below for details.&lt;/p>
-&lt;h1 id="the-code">The code&lt;/h1>
+&lt;/div>&lt;p>We can put the above code into a CSS variable, together with the dark mode switch part. Then we edit &lt;a href='https://gohugo.io/getting-started/configuration-markup/#markdown-render-hooks'
+target='_blank' rel='noreferrer noopener'
+>render hooks&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a> in the Hugo template, one of which is for image processing, just add appropriate style to the image there.&lt;/p>
+&lt;p>About the dark mode switching function I refer to &lt;a href='https://dev.to/lampewebdev/css-quickies-css-variables-or-how-you-create-a-white-dark-theme-easily-1i0i'
+target='_blank' rel='noreferrer noopener'
+>this article&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a> in the practice. Roughly speaking, when the reader switch the site theme to dark mode, the whole &lt;code>&amp;lt;html&amp;gt;&lt;/code> container will be added a class to indicate that the page in dark mode now (&lt;code>.classList.add(&amp;quot;dark&amp;quot;)&lt;/code>); and when the reader switch to light mode, this class will be deleted (&lt;code>.classList.remove(&amp;quot;dark&amp;quot;)&lt;/code>). On the CSS’ hand, we assign different values to a same variable depending on whether the container has the &lt;code>dark&lt;/code> class. While this variable will be used for HTML elements’ styles. See the code below for details.&lt;/p>
+&lt;h1>The code&lt;/h1>
 &lt;p>Here is the HTML code. Give a class to the whole &lt;code>&amp;lt;html&amp;gt;&lt;/code> container:&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -113,7 +117,7 @@ Sat, 28 Aug 2021 00:00:00 CST</lastBuildDate><item><title>Make Hugo Invert Color
 &lt;li>This image is named as &lt;code>lorem.i.jpg&lt;/code>, which is black text on a white background for light mode, and white text on a black background for dark mode.&lt;/li>
 &lt;/ul>
 &lt;p>&lt;figure>
-&lt;img loading="lazy" src="https://zerovip.github.io/en/15738/lorem.i.jpg" alt="lorem.i.jpg">
+&lt;img loading='lazy' src='https://zerovip.github.io/en/15738/lorem.i.jpg' alt='lorem.i.jpg'>
 &lt;figcaption>◉ Figure. lorem.i.jpg&lt;/figcaption>
 &lt;/figure>
 &lt;/p>
@@ -122,7 +126,7 @@ Sat, 28 Aug 2021 00:00:00 CST</lastBuildDate><item><title>Make Hugo Invert Color
 &lt;li>This image is named as &lt;code>lorem.i.png&lt;/code>, which is black text on a transparent background for light mode, and white text for dark mode.&lt;/li>
 &lt;/ul>
 &lt;p>&lt;figure>
-&lt;img loading="lazy" src="https://zerovip.github.io/en/15738/lorem.i.png" alt="lorem.i.png">
+&lt;img loading='lazy' src='https://zerovip.github.io/en/15738/lorem.i.png' alt='lorem.i.png'>
 &lt;figcaption>◉ Figure. lorem.i.png&lt;/figcaption>
 &lt;/figure>
 &lt;/p>
@@ -131,15 +135,21 @@ Sat, 28 Aug 2021 00:00:00 CST</lastBuildDate><item><title>Make Hugo Invert Color
 &lt;li>This image is named as &lt;code>cat.jpg&lt;/code>, its color is normal for both light and dark mode.&lt;/li>
 &lt;/ul>
 &lt;p>&lt;figure>
-&lt;img loading="lazy" src="https://zerovip.github.io/en/15738/cat.jpg" alt="cat.jpg">
+&lt;img loading='lazy' src='https://zerovip.github.io/en/15738/cat.jpg' alt='cat.jpg'>
 &lt;figcaption>◉ Figure. cat.jpg&lt;/figcaption>
 &lt;/figure>
 &lt;/p>
-&lt;hr></description></item><item><title>Fix the White Flash on Page Load When Using a Dark Mode on a Static Site - Build a Theme</title><link>https://zerovip.github.io/en/01901/</link><pubDate>Fri, 27 Aug 2021 00:00:00 CST</pubDate><guid isPermaLink="false">/en/01901/</guid><description>&lt;h1 id="the-problem">The problem&lt;/h1>
-&lt;p>This Hugo theme I wrote have had a problem. It defaults to the light mode, but if you switch to the dark mode&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>, then when loading a new page it will first render the light mode and then automatically switch to the dark, looks like it flashes white a little bit. I thought all the static sites have to face this problem, until one day I found some healthy themes, for instance, &lt;a href="https://adityatelange.github.io/hugo-PaperMod/">PaperMod&lt;/a>. So, there must be a way to solve this.&lt;/p>
-&lt;p>I searched this on the internet. There is an article &lt;a href="https://zwbetz.com/fix-the-white-flash-on-page-load-when-using-a-dark-theme-on-a-static-site/">Fix the White Flash on Page Load When Using a Dark Theme on a Static Site&lt;/a> by the maintainer of &lt;a href="https://github.com/zwbetz-gh/cupper-hugo-theme">theme Cupper&lt;/a>. I tried their solution. In Chrome, it indeed works; but in Firefox it doesn’t. Firefox will render &lt;code>visibility: hidden; opacity: 0;&lt;/code> to a whole blank page, and only after &lt;code>DOMContentLoaded&lt;/code> happens &lt;code>showContent()&lt;/code> function will show the content. Means: the page still flashes. Before it flashes the &lt;strong>light mode&lt;/strong>, now it flashes the &lt;strong>blank page&lt;/strong>. Just as bad as before.&lt;/p>
+&lt;hr></description></item><item><title>Fix the White Flash on Page Load When Using a Dark Mode on a Static Site - Build a Theme</title><link>https://zerovip.github.io/en/01901/</link><pubDate>Fri, 27 Aug 2021 00:00:00 CST</pubDate><guid isPermaLink="false">/en/01901/</guid><description>&lt;h1>The problem&lt;/h1>
+&lt;p>This Hugo theme I wrote have had a problem. It defaults to the light mode, but if you switch to the dark mode&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>, then when loading a new page it will first render the light mode and then automatically switch to the dark, looks like it flashes white a little bit. I thought all the static sites have to face this problem, until one day I found some healthy themes, for instance, &lt;a href='https://adityatelange.github.io/hugo-PaperMod/'
+target='_blank' rel='noreferrer noopener'
+>PaperMod&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>. So, there must be a way to solve this.&lt;/p>
+&lt;p>I searched this on the internet. There is an article &lt;a href='https://zwbetz.com/fix-the-white-flash-on-page-load-when-using-a-dark-theme-on-a-static-site/'
+target='_blank' rel='noreferrer noopener'
+>Fix the White Flash on Page Load When Using a Dark Theme on a Static Site&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a> by the maintainer of &lt;a href='https://github.com/zwbetz-gh/cupper-hugo-theme'
+target='_blank' rel='noreferrer noopener'
+>theme Cupper&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>. I tried their solution. In Chrome, it indeed works; but in Firefox it doesn’t. Firefox will render &lt;code>visibility: hidden; opacity: 0;&lt;/code> to a whole blank page, and only after &lt;code>DOMContentLoaded&lt;/code> happens &lt;code>showContent()&lt;/code> function will show the content. Means: the page still flashes. Before it flashes the &lt;strong>light mode&lt;/strong>, now it flashes the &lt;strong>blank page&lt;/strong>. Just as bad as before.&lt;/p>
 &lt;p>I think the difference between Firefox and Chrome is because the developers of Chrome used magic, they tried their best to bring Chrome users a better experience. And this covers up the real problem for the Hugo theme developers who use Chrome.&lt;/p>
-&lt;h1 id="find-the-cause">Find the cause&lt;/h1>
+&lt;h1>Find the cause&lt;/h1>
 &lt;p>The main idea is still to understand the process of how the browser render a page. Simply put:&lt;/p>
 &lt;ul>
 &lt;li>You request for a page;&lt;/li>
@@ -171,7 +181,7 @@ Sat, 28 Aug 2021 00:00:00 CST</lastBuildDate><item><title>Make Hugo Invert Color
 &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">html&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h1 id="the-solution">The solution&lt;/h1>
+&lt;/div>&lt;h1>The solution&lt;/h1>
 &lt;p>The solution to this problem is quite simple, with two points:&lt;/p>
 &lt;ul>
 &lt;li>
@@ -268,7 +278,9 @@ Sat, 28 Aug 2021 00:00:00 CST</lastBuildDate><item><title>Make Hugo Invert Color
 &lt;hr>
 &lt;ol>
 &lt;li id="fn:1" role="doc-endnote">
-&lt;p>The approach to dark mode in this theme is CSS variable, see &lt;a href="https://dev.to/lampewebdev/css-quickies-css-variables-or-how-you-create-a-white-dark-theme-easily-1i0i">this tutorial&lt;/a> for reference.&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;p>The approach to dark mode in this theme is CSS variable, see &lt;a href='https://dev.to/lampewebdev/css-quickies-css-variables-or-how-you-create-a-white-dark-theme-easily-1i0i'
+target='_blank' rel='noreferrer noopener'
+>this tutorial&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a> for reference.&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
 &lt;/section></description></item></channel></rss>
