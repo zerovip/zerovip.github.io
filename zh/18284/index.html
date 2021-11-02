@@ -120,7 +120,7 @@ RSS 订阅 ⊠
 Hugo 静态博客建站记 - 自写主题
 </div>
 <div class="right_head_des">
-<time>2019年6月22日</time> - 13477 字
+<time>2019年6月22日</time> - 13523 字
 </div>
 </header>
 <div class="right_main">
@@ -714,10 +714,10 @@ TODO 清单
 <li><input disabled="" type="checkbox"/> 关于和记录这两个一级列表板块，要不要去掉它们的 rss？</li>
 <li><input checked="" disabled="" type="checkbox"/> <del>Mathjax 换 Katex.</del></li>
 <li><input disabled="" type="checkbox"/> 学习 commonmark 规范，写一篇示例文章，包含所有可能的格式及其嵌套，在此基础上重新把样式表设计一下.</li>
-<li><input checked="" disabled="" type="checkbox"/> <del>把 validator.w3.org 上建议的对 RSS 的改进都给修了……文章里的 url 都用绝对路径，改 render hooks.</del></li>
+<li><input disabled="" type="checkbox"/> RSS 里的 url 都应该用绝对路径，但是有些脚注什么的是 #fn:1 这种. workaround：在 baseof.xml 里对 <code>{{ .Content }}</code> 做修正？</li>
 <li><input disabled="" type="checkbox"/> RSS 里不应使用 role attribute，但是脚标的生成就含有 endnotes, backlink, noteref 等 role. workaround：在 baseof.xml 里对 <code>{{ .Content }}</code> 做修正？</li>
 <li><input disabled="" type="checkbox"/> RSS 里不应使用 aria-hidden attribute，但 pandoc 渲染的不走 render hooks，图片的 figcaption 都加了这个字段. workaround：在 baseof.xml 里对 <code>{{ .Content }}</code> 做修正？</li>
-<li><input disabled="" type="checkbox"/> 把 validator.w3.org 上建议的对 RSS 的改进都给修了……Invalid HTML: Unexpected end tag (p). 这能修吗？看看吧.</li>
+<li><input disabled="" type="checkbox"/> 把 validator.w3.org 上建议的对 RSS 的改进都给修了……Invalid HTML: Unexpected end tag (p). 大部分都修了，因为 shortcode 那个段落的 <code>&lt;/div&gt;</code> 没有另起一行导致的. 但还剩 4 个……咋回事呢？</li>
 </ol>
 <section class="footnotes" role="doc-endnotes">
 <hr/>
