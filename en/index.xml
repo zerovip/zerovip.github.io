@@ -1,15 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Zero's Ivory Tower</title><link>https://zerovip.github.io/en/</link><atom:link href="https://zerovip.github.io/en/index.xml" rel="self" type="application/rss+xml"/><description>Recent Content | Zero's Ivory Tower</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>RSS feed
+| Zero's Ivory Tower</title><link>https://zerovip.github.io/en/</link><atom:link href="https://zerovip.github.io/en/index.xml" rel="self" type="application/rss+xml"/><description>
+Recent Content |
+RSS feed
+| Zero's Ivory Tower</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>
 Sat, 28 Aug 2021 00:00:00 CST</lastBuildDate><item><title>Make Hugo Invert Color for Images when Using a Dark Mode - Build a Theme</title><link>https://zerovip.github.io/en/15738/</link><pubDate>Sat, 28 Aug 2021 00:00:00 CST</pubDate><guid isPermaLink="false">/en/15738/</guid><description>&lt;p>This post will discuss the display problem of images in light / dark mode, and there are some sample images as examples. You can test their display by manually switch the theme of this site. The switcher is in the upper right corner of the left menu bar, and if you are using a phone you can tap the burger button in the upper left corner to call out the menu bar.&lt;/p>
 &lt;h1>The problem&lt;/h1>
 &lt;p>Some images have black text on a white background, which is harsh when using the dark mode:&lt;/p>
 &lt;p>&lt;figure>
-&lt;img loading='lazy' src='https://zerovip.github.io/en/15738/lorem.jpg' alt='A sample image have black text on a white background'>
+&lt;img loading='lazy' src='https://zerovip.github.io/en/15738/lorem.jpg' alt='A sample image have black text on a white background'/>
 &lt;figcaption>◉ Figure. A sample image have black text on a white background&lt;/figcaption>
 &lt;/figure>
 &lt;/p>
 &lt;p>While some images have black text on a transparent background, which is not visible when using the dark mode:&lt;/p>
 &lt;p>&lt;figure>
-&lt;img loading='lazy' src='https://zerovip.github.io/en/15738/lorem.png' alt='A sample image have black text on a transparent background'>
+&lt;img loading='lazy' src='https://zerovip.github.io/en/15738/lorem.png' alt='A sample image have black text on a transparent background'/>
 &lt;figcaption>◉ Figure. A sample image have black text on a transparent background&lt;/figcaption>
 &lt;/figure>
 &lt;/p>
@@ -113,7 +117,7 @@ target='_blank' rel='noreferrer noopener'
 &lt;li>This image is named as &lt;code>lorem.i.jpg&lt;/code>, which is black text on a white background for light mode, and white text on a black background for dark mode.&lt;/li>
 &lt;/ul>
 &lt;p>&lt;figure>
-&lt;img loading='lazy' src='https://zerovip.github.io/en/15738/lorem.i.jpg' alt='lorem.i.jpg'>
+&lt;img loading='lazy' src='https://zerovip.github.io/en/15738/lorem.i.jpg' alt='lorem.i.jpg'/>
 &lt;figcaption>◉ Figure. lorem.i.jpg&lt;/figcaption>
 &lt;/figure>
 &lt;/p>
@@ -122,7 +126,7 @@ target='_blank' rel='noreferrer noopener'
 &lt;li>This image is named as &lt;code>lorem.i.png&lt;/code>, which is black text on a transparent background for light mode, and white text for dark mode.&lt;/li>
 &lt;/ul>
 &lt;p>&lt;figure>
-&lt;img loading='lazy' src='https://zerovip.github.io/en/15738/lorem.i.png' alt='lorem.i.png'>
+&lt;img loading='lazy' src='https://zerovip.github.io/en/15738/lorem.i.png' alt='lorem.i.png'/>
 &lt;figcaption>◉ Figure. lorem.i.png&lt;/figcaption>
 &lt;/figure>
 &lt;/p>
@@ -131,7 +135,7 @@ target='_blank' rel='noreferrer noopener'
 &lt;li>This image is named as &lt;code>cat.jpg&lt;/code>, its color is normal for both light and dark mode.&lt;/li>
 &lt;/ul>
 &lt;p>&lt;figure>
-&lt;img loading='lazy' src='https://zerovip.github.io/en/15738/cat.jpg' alt='cat.jpg'>
+&lt;img loading='lazy' src='https://zerovip.github.io/en/15738/cat.jpg' alt='cat.jpg'/>
 &lt;figcaption>◉ Figure. cat.jpg&lt;/figcaption>
 &lt;/figure>
 &lt;/p>

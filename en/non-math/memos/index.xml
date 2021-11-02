@@ -7,13 +7,13 @@ Sat, 28 Aug 2021 00:00:00 CST</lastBuildDate><item><title>Make Hugo Invert Color
 &lt;h1>The problem&lt;/h1>
 &lt;p>Some images have black text on a white background, which is harsh when using the dark mode:&lt;/p>
 &lt;p>&lt;figure>
-&lt;img loading='lazy' src='https://zerovip.github.io/en/15738/lorem.jpg' alt='A sample image have black text on a white background'>
+&lt;img loading='lazy' src='https://zerovip.github.io/en/15738/lorem.jpg' alt='A sample image have black text on a white background'/>
 &lt;figcaption>◉ Figure. A sample image have black text on a white background&lt;/figcaption>
 &lt;/figure>
 &lt;/p>
 &lt;p>While some images have black text on a transparent background, which is not visible when using the dark mode:&lt;/p>
 &lt;p>&lt;figure>
-&lt;img loading='lazy' src='https://zerovip.github.io/en/15738/lorem.png' alt='A sample image have black text on a transparent background'>
+&lt;img loading='lazy' src='https://zerovip.github.io/en/15738/lorem.png' alt='A sample image have black text on a transparent background'/>
 &lt;figcaption>◉ Figure. A sample image have black text on a transparent background&lt;/figcaption>
 &lt;/figure>
 &lt;/p>
@@ -117,7 +117,7 @@ target='_blank' rel='noreferrer noopener'
 &lt;li>This image is named as &lt;code>lorem.i.jpg&lt;/code>, which is black text on a white background for light mode, and white text on a black background for dark mode.&lt;/li>
 &lt;/ul>
 &lt;p>&lt;figure>
-&lt;img loading='lazy' src='https://zerovip.github.io/en/15738/lorem.i.jpg' alt='lorem.i.jpg'>
+&lt;img loading='lazy' src='https://zerovip.github.io/en/15738/lorem.i.jpg' alt='lorem.i.jpg'/>
 &lt;figcaption>◉ Figure. lorem.i.jpg&lt;/figcaption>
 &lt;/figure>
 &lt;/p>
@@ -126,7 +126,7 @@ target='_blank' rel='noreferrer noopener'
 &lt;li>This image is named as &lt;code>lorem.i.png&lt;/code>, which is black text on a transparent background for light mode, and white text for dark mode.&lt;/li>
 &lt;/ul>
 &lt;p>&lt;figure>
-&lt;img loading='lazy' src='https://zerovip.github.io/en/15738/lorem.i.png' alt='lorem.i.png'>
+&lt;img loading='lazy' src='https://zerovip.github.io/en/15738/lorem.i.png' alt='lorem.i.png'/>
 &lt;figcaption>◉ Figure. lorem.i.png&lt;/figcaption>
 &lt;/figure>
 &lt;/p>
@@ -135,7 +135,7 @@ target='_blank' rel='noreferrer noopener'
 &lt;li>This image is named as &lt;code>cat.jpg&lt;/code>, its color is normal for both light and dark mode.&lt;/li>
 &lt;/ul>
 &lt;p>&lt;figure>
-&lt;img loading='lazy' src='https://zerovip.github.io/en/15738/cat.jpg' alt='cat.jpg'>
+&lt;img loading='lazy' src='https://zerovip.github.io/en/15738/cat.jpg' alt='cat.jpg'/>
 &lt;figcaption>◉ Figure. cat.jpg&lt;/figcaption>
 &lt;/figure>
 &lt;/p>
