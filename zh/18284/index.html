@@ -120,7 +120,7 @@ RSS 订阅 ⊠
 Hugo 静态博客建站记 - 自写主题
 </div>
 <div class="right_head_des">
-2019年6月22日 - 13523 字
+2019年6月22日 - 13636 字
 </div>
 </header>
 <div class="right_main">
@@ -718,6 +718,7 @@ TODO 清单
 <li><input disabled="" type="checkbox"/> RSS 里不应使用 role attribute，但是脚标的生成就含有 endnotes, backlink, noteref 等 role. workaround：在 baseof.xml 里对 <code>{{ .Content }}</code> 做修正？</li>
 <li><input disabled="" type="checkbox"/> RSS 里不应使用 aria-hidden attribute，但 pandoc 渲染的不走 render hooks，图片的 figcaption 都加了这个字段. workaround：在 baseof.xml 里对 <code>{{ .Content }}</code> 做修正？</li>
 <li><input disabled="" type="checkbox"/> 把 validator.w3.org 上建议的对 RSS 的改进都给修了……Invalid HTML: Unexpected end tag (p). 大部分都修了，因为 shortcode 那个段落的 <code>&lt;/div&gt;</code> 没有另起一行导致的. 但还剩 4 个……咋回事呢？</li>
+<li><input disabled="" type="checkbox"/> 渲染图片的 render-hooks，会被用 <code>&lt;p&gt;</code> 标签给包裹起来，如果 render-hooks 里面用的是 <code>&lt;figure&gt;</code> 标签，这就这不太对. 感觉 Hugo 很多细节上的处理都不是很讲究，当然 GoldenMark 的部分我也不懂. 需要对整个 markdown 转 html 的规范与流程做一个深入的调查，尤其是 render-hooks 相关以及 shortcodes 相关.</li>
 </ol>
 <section class="footnotes" role="doc-endnotes">
 <hr/>
