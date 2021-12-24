@@ -1,21 +1,19 @@
-<!DOCTYPE html>
-<html class="theme-container" lang="zh">
-<head>
+<!DOCTYPE html><html lang="zh" class="theme-container"><head>
 <meta charset="utf-8"/>
-<meta content="width=divice-width,initial-scale=1" name="viewport"/>
-<meta content="Hugo 0.89.4" name="generator"/>
+<meta name="viewport" content="width=divice-width,initial-scale=1"/>
+<meta name="generator" content="Hugo 0.90.0"/>
 <title>
 静态博客文章加密工具测试
 | 赤赤的象牙塔
 </title>
-<link href="../../css/base.min.7a1b5c1c1d7e43ac09f0cd1df239e034cbdf5fa7439794fb7b5fe1225963173c.css" rel="stylesheet" type="text/css"/>
-<link href="../../css/small.min.f9c67371e05b88a9468d51903bbe4d52be301b7e498d3f1dc7fbff95f35f2929.css" media="screen and (max-width: 1200px)" rel="stylesheet" type="text/css"/>
-<link href="../../css/normal.min.7fe55f32650b9c713cce8ccc9a63d23eecaff2b247b70a69bf3650b249319609.css" media="screen and (min-width: 1201px)" rel="stylesheet" type="text/css"/>
-<link href="../../css/syntax.min.ed5b37c3a50997d5ccd8b81bf0d00a7ac1f92c82985623c2dbf0cb422596726a.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" type="text/css" href="../../css/base.min.7a1b5c1c1d7e43ac09f0cd1df239e034cbdf5fa7439794fb7b5fe1225963173c.css"/>
+<link rel="stylesheet" media="screen and (max-width: 1200px)" type="text/css" href="../../css/small.min.f9c67371e05b88a9468d51903bbe4d52be301b7e498d3f1dc7fbff95f35f2929.css"/>
+<link rel="stylesheet" media="screen and (min-width: 1201px)" type="text/css" href="../../css/normal.min.7fe55f32650b9c713cce8ccc9a63d23eecaff2b247b70a69bf3650b249319609.css"/>
+<link rel="stylesheet" type="text/css" href="../../css/syntax.min.ed5b37c3a50997d5ccd8b81bf0d00a7ac1f92c82985623c2dbf0cb422596726a.css"/>
 <script src="../../js/ctheme.min.2b9744ea6df95f636aae562954ce13add68a9c7b99203c9ac1aa4671b6238958.js"></script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-6CF2JBMYH3"></script>
 <script>var doNotTrack=!1;if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','G-6CF2JBMYH3',{anonymize_ip:!1})}</script>
-<script async="" data-goatcounter="https://zerovip.goatcounter.com/count" src="//gc.zgo.at/count.js"></script>
+<script data-goatcounter="https://zerovip.goatcounter.com/count" async="" src="//gc.zgo.at/count.js"></script>
 </head>
 <body>
 <nav class="bar_for_phone">
@@ -37,20 +35,22 @@
 <aside class="left" id="left">
 <div class="left_non-footer">
 <div class="left_non-footer_option">
-<div aria-checked="true" class="left_non-footer_option_theme-switch" role="checkbox">
+<div role="checkbox" aria-checked="true" class="left_non-footer_option_theme-switch">
 <label class="switch">
-<input class="theme-switcher" onchange="themeSwitch()" type="checkbox"/>
+<input type="checkbox" class="theme-switcher" onchange="themeSwitch()"/>
 <span class="slider round"></span>
 </label>
 </div>
-<ul class="left_non-footer_option_language" role="listbox">
-<li aria-selected="true" class="left_non-footer_option_active" role="option">
+<ul role="listbox" class="left_non-footer_option_language">
+<li role="option" aria-selected="true" class="left_non-footer_option_active">
 简体中文 ⦿
 </li>
-<li class="left_non-footer_option_non-active" role="option">
-English ⨂
+<li role="option" aria-selected="false" class="left_non-footer_option_non-active">
+<a href="../../en/62772/">
+English ○
+</a>
 </li>
-<li class="left_non-footer_option_non-active" role="option">
+<li role="option" class="left_non-footer_option_non-active">
 Français ⨂
 </li>
 </ul>
@@ -120,29 +120,37 @@ RSS 订阅 ⊠
 静态博客文章加密工具测试
 </div>
 <div class="right_head_des">
-2019年12月23日 - 664 字
+2019年12月23日 - 1191 字
 </div>
 </header>
 <div class="right_main">
 <article class="right_main_article">
-<p>一次测试.（这里是 summary 的内容.）</p>
 <h1 id="介绍">
 介绍
 <a href="#%e4%bb%8b%e7%bb%8d"><small>¶</small></a>
 </h1>
-<p><a href="https://github.com/Li4n0/hugo_encryptor" rel="noreferrer noopener" target="_blank">Hugo encryptor<b><sub>⧉</sub></b></a> 是一款我偶然发现的可以给静态博客文章进行加密的小工具，配置使用很简单，可惜的是不能在本地测试.</p>
+<p><a href="https://github.com/Li4n0/hugo_encryptor" target="_blank" rel="noreferrer noopener">Hugo encryptor<b><sub>⧉</sub></b></a> 是一款我偶然发现的可以给静态博客文章进行加密的小工具，配置使用很简单，可惜的是不能在本地测试.</p>
 <p>不过它足够简单，一经测试成功可以投入使用便不再需要反复测试，因此这篇博文是专门用来测试的.</p>
 <p>下面加密内容的密码是【PASS3word】. 这部分内容在 RSS 中没有被加密，在<a href="../../zh/non-math/memos/index.xml">“备忘分区”的 RSS</a> 中可以找到加密的内容.</p>
-<div class="hugo-encryptor-container">
-<div class="hugo-encryptor-prompt">
-<p>文章的部分内容被密码保护：</p>
+<div role="note" class="notation_color">
+<p>由于那个 python 的工具在 python 升级之后还要重新设置 venv 什么的，我嫌麻烦，于是找到类似的用 go 语言写的<a href="https://github.com/Izumiko/hugo-encrypt" target="_blank" rel="noreferrer noopener">加密工具<b><sub>⧉</sub></b></a>. 原理都是一样的，但这个工具的好处是：编译成二进制文件，随时都能使用；不需要那个奇怪的 <code>&lt;!-- more --&gt;</code> 写摘要了；提示文字可以通过 i18n 变量写成各种语言了；有了默认密码，我暂时设置为了“qwertyu”.</p>
+<p>最后两项功能在<a href="../../en/62772/">英文页面</a>进行测试.</p>
 </div>
-<div class="hugo-encryptor-form">
-<input class="hugo-encryptor-input" placeholder="请输入密码"/>
-<input class="hugo-encryptor-button" onclick="_click_handler(this)" type="button" value="点击验证"/>
+<hugo-encrypt>
+<div id="hugo-encrypt-encryption-notice">
+<p>以下内容被密码保护.</p>
+<noscript><span id=hugo-encrypt-enable-js>Javascript needs to be enabled to decrypt content</span></noscript>
+<div class="hugo-encrypt-form">
+<input class="hugo-encrypt-input" id="hugo-encrypt-password" placeholder="请输入密码."/>
+<input class="hugo-encrypt-button" type="button" value="提交" id="button" onclick="hugoDecrypt(document.getElementById(&#39;hugo-encrypt-password&#39;).value,&#39;input&#39;)"/>
+<div id="hugo-encrypt-input-response"></div>
 </div>
-<div class="hugo-encryptor-cipher-text" style="display:none">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</div>
 </div>
+<cipher-text style="display:none;">9180fa1ecc47c995-8ea3d10542e6cc00ba201b22-c076aeaa6bd1145ee96a4ac3ea3a7757c44b83e9a289a25d328aa5155b29c52104bfa64c65c0c3a5ce5a3bbb12642fc4bde99a9a0ad5d1a99e147aa769afa4c50de7a855a54f6c61336804f2b44119f4c313157d0d949b3f3498ad3fcbb796b17747a22c98fdc9c1e73e429d3ae84adfb9e82971b3b0f0400fac35f84ed788886c09d2241b064a6e50ee868b965b11e9e0f07a7f8c2ea66f1e90cfa1d113c7bee4272c5f6f9ff80d6e19f3e084c07ce69d56436b1e8bda09fda03eb8fca8c0d80f524dd1159a6a64fd684af4d15930bf574e05a55eea6fe6d7c848e222142fdf241827a408c3edc5153fdca69c7055548b5975173b76758c1d6f9016c337940218099b457639261ca0a46472f4a003c1bfd4fcdddc5690e88550163a8d07ea09db34ad79260e94f34c20e1b867feb28c2e48d713f0b0471910082610b1d6aed017ef4bdc883bc9c2efe3c07aa506eead6ebf9a7e08b6571aecf7ff1863a76f2c19317251d61ef39ae161733e251e7acadb53565dd74bc58caa5cb581a96f5aacfb8c83e0693ff7bfcb5004114cc97f2cbf4ae2f04d76ba488a989a895d0bb5181bef9997cdd316e5addd6cf989bb980d79c48132f3b038cfcc943df09751a0e19036e7c6db4498a34a2f76a7107ffe9b6c8d925b907b832017ae79f52c3965c2a06c133a74bdbe45cedbde4a683d58a8d7084e26d76783c1e07e0582d8db689addf4ae8bfc65b0e6c6358654c48e2b4a7345e7648be22eea3f125d8e9b676d16a99cea6728600c6e7fd0541979baac48b752d4657543fa7d85559ebb856ca20e7534e7667a1fc96e534a3d3242be66145c1097d9ae1e69f3586397140da70a6b82ed3c4f8738eb4865091ab1d51968b873ec931ec4a52000b37bb6ee6cf6f6901c3569a46528b0bffcdb63eaa246c5267b44ffcee8ba9e722dc606bf247ac0f0a67902714c03f91f03a510f46a63d3b0b99ecbb0b0aa6f0440e7e5b4a79ade039b3275ea6864585314f78dfd036531c5362cd8d724237458031a3f02f8ba7cdcd65c9087229d8a18e79321fc2f327a49bb5228e1a947c556870473efb538785eb78d804beb81d09a5d8b98490ea2cb1caa9636495e0356aed37e256d420834e076daf809dad132c61cc46c170858b5a9ab2d943c25a3034c85a9353349d9059ab51926cdcddf949ac4abbdc7a8fc43a5a3f08d79e154ef822e4dc702f7c1430caae050036ea7109deb18402ced12419348772e11f2ac66d7d73d32d2a762432a8b932426cff65a266a92eaf9455e2eb70d688189ff8a8f5580d4598225ac30669c082239fc930dd352f9cf03ea339f1ebac6f1ce17a598086b112be854d6c8afcd839a6c1e571076cbabe37a26fb6dd5b2c0f78f5bfbc766cb0079d1ba515a086c65355d1b6b98a1f88b2e99733ba42ff99dc867b3ca8ebf508a4e2573e9dda0ae7115904aea24848cf5e41248e1417d0f3c65edd94212cb36f45f90743d45d65f0ee54b70da2ee52bf4d46a77a3dc29a4b4959442a290a1511c3e45d9870552806f0c50b6423f197e6706b2ef258bf6f567725a1714a157fd5b81e22ebd4fee6fb6f4d35c64e1bba9e3522b8add581d24d786b397a450f4b8575dae11ee0f233ce15d59cfd671ac3e99f742f93b4ba09ddfc4a95dac490d6e605dda4a0c7ec2dab4d5b5f161ea71c3c3ce164c3880cfb94137bf3c6783c23fec7a706ab4492a74ab62a687292b2db5a60a44ae4f2bedd3ce9b5f24782cb500ed7e632244df89827dc4e75ec9e8d263798259ff4e50d42a13dc077d62954bc823ec3d3aab82048d578ebd2692caa2b81906c38839f190a47fddcf1c189ff8d391c3ab7409fb1dd0f1d2f2d9b5ce7785209c537ef68863571d79cb218ead452a2d911ae2ec68581d28441d755f73b547b5ecb78777b630d09b4b5ca835642620c45a3ef85c4afc4c03280a4b471fb3e91f8f0a26e3403cc172f071f21c69e0027a648bb8ae2830e4f783bbc1ac1114f671539bd6ca509ac3bbfb4c87d42271340ce12916a0937832f4d1c0174ce4917235eca038db5bf6e5c100029d786de19c4276f05896d510dfd5c94bb8ca117d4d28f91c0e68fa3362fee84112a4c763a84bc2e1b4c9bfa6e094acdfbea16ebbb96f6b404cdac59a0f031885ef28b579fb3c88e25a6d0f7060e3b1cc92782faa350f26d782012542cb94010d36730f8a480ea7d01a5835d0b25d461d319b074442791955245a2ee702fee1f75da8e0</cipher-text>
+<style type="text/css">div#hugo-encrypt-sha1sum{display:none}</style>
+<script>const storageKey=location.pathname+"password",userStorage=window.sessionStorage;function str2buf(a){return new TextEncoder("utf-8").encode(a)}function buf2str(a){return new TextDecoder("utf-8").decode(a)}function hex2buf(a){return new Uint8Array(a.match(/.{2}/g).map(a=>parseInt(a,16)))}function deriveKey(b,a){return a=a||crypto.getRandomValues(new Uint8Array(8)),crypto.subtle.importKey("raw",str2buf(b),"PBKDF2",!1,["deriveKey"]).then(b=>crypto.subtle.deriveKey({name:"PBKDF2",salt:a,iterations:1e3,hash:"SHA-256"},b,{name:"AES-GCM",length:256},!1,["encrypt","decrypt"])).then(b=>[b,a])}function decrypt(a,b){const[c,d,e]=b.split("-").map(hex2buf);return deriveKey(a,c).then(([a])=>crypto.subtle.decrypt({name:"AES-GCM",iv:d},a,e)).then(a=>buf2str(new Uint8Array(a)))}async function digestMessage(a){const b=(new TextEncoder).encode(a),c=await crypto.subtle.digest('SHA-1',b),d=Array.from(new Uint8Array(c)),e=d.map(a=>a.toString(16).padStart(2,'0')).join('');return e}const hugoDecrypt=function(a,b){for(const c of ciphers)decrypt(a,c.innerText).then(function(b){digestMessage(b.replace(/\r?\n?[^\r\n]*$/,"")).then(function(d){b.includes(d)&&(document.getElementById("hugo-encrypt-encryption-notice").remove(),c.outerHTML=b,userStorage.setItem(storageKey,a),document.getElementById("hugo-encrypt-sha1sum").innerHTML="Success: "+d,console.log("Decryption successful. Storing password in sessionStorage."))})}).catch(function(a){b==="input"?(document.getElementById("hugo-encrypt-input-response").innerHTML="密码错误！",console.log('密码错误！',a)):b==="storage"&&(userStorage.removeItem(location.pathname+"password"),console.log("Password changed. Clearing userStorage.",a))})}</script>
+<script>window.onload=()=>{ciphers=Array.from(document.querySelectorAll("cipher-text")),userStorage.getItem(storageKey)&&(console.log("Found storageKey in userStorage. Attemtping decryption"),hugoDecrypt(userStorage.getItem(storageKey),"storage"))}</script>
+</hugo-encrypt>
 <h2 id="未被加密的标题">
 未被加密的标题
 <a href="#%e6%9c%aa%e8%a2%ab%e5%8a%a0%e5%af%86%e7%9a%84%e6%a0%87%e9%a2%98"><small>¶</small></a>
@@ -160,13 +168,16 @@ RSS 订阅 ⊠
 <ol>
 <li>目录会出现问题. 可能是 css 标签被改了的原因，具体没有仔细看，也不着急解决这个问题.</li>
 <li>本地测试时把加密内容直接隐藏了，以至于只能先把文章写完再进行加密操作. 有个解决思路是用 <code>{{ if not .Site.IsServer }} {{ end }}</code> 在 <code>layouts/shortcodes/hugo-encryptor.html</code> 里做一下限制，不过试了一下不太会写，留待以后愿意解决再解决吧.</li>
-<li>那个 <code>&lt;!--more--&gt;</code> 的标签导致它上面的内容成为了 summary，而 front matter 里的 summary 不再起作用. 这倒不是什么大问题.</li>
+<li><del>那个 <code>&lt;!-- more --&gt;</code> 的标签导致它上面的内容成为了 summary，而 front matter 里的 summary 不再起作用. 这倒不是什么大问题.</del></li>
+<li>如果有两段加密内容的话，页面里有些 js 可能会重复，可以考虑精简精简. 还有就是“密码错误”的弹出位置可能不对，输入第二个密码却弹在第一个.（见英文页面）</li>
+<li>阅读并理解代码，确定它的可靠性.（做那个 sha 之类的.）确定它没有从网络上获取什么 js.</li>
+<li>弄得好看一点？</li>
 </ol>
 <p></p><p></p><p></p><p></p>
 </article>
 </div>
 <div class="right_comments">
-<script async="" crossorigin="anonymous" issue-term="pathname" repo="zerovip/bcsu" src="https://utteranc.es/client.js" theme="github-light"></script>
+<script src="https://utteranc.es/client.js" repo="zerovip/bcsu" issue-term="pathname" theme="github-light" crossorigin="anonymous" async=""></script>
 </div>
 </div>
 <aside class="toc" id="toc">
@@ -190,79 +201,5 @@ RSS 订阅 ⊠
 </aside>
 </div>
 <script src="../../js/main.min.60aa2f3f5fd2bd0fbc6bfb7a3e14b1eb89f8dd2b4caa083c22b7f3cb656ea273.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script><script>
-const _do_decrypt = function(encrypted, password) {
-  let key = CryptoJS.enc.Utf8.parse(password);
-  let iv = CryptoJS.enc.Utf8.parse(password.substr(16));
 
-  let decrypted_data = CryptoJS.AES.decrypt(encrypted, key, {
-    iv: iv,
-    mode: CryptoJS.mode.CBC,
-    padding: CryptoJS.pad.Pkcs7
-  });
-  return decrypted_data.toString(CryptoJS.enc.Utf8);
-};
-
-const _click_handler = function(element) {
-  let parent = element.parentNode.parentNode;
-  let encrypted = parent.querySelector(
-    ".hugo-encryptor-cipher-text").innerText;
-  let password = parent.querySelector(
-    ".hugo-encryptor-input").value;
-  password = CryptoJS.MD5(password).toString();
-
-  let index = -1;
-  let elements = document.querySelectorAll(
-    ".hugo-encryptor-container");
-  for (index = 0; index < elements.length; ++index) {
-    if (elements[index].isSameNode(parent)) {
-      break;
-    }
-  }
-
-  let decrypted = "";
-  try {
-    decrypted = _do_decrypt(encrypted, password);
-  } catch (err) {
-    console.error(err);
-    alert("Failed to decrypt.");
-    return;
-  }
-
-  if (!decrypted.includes("--- DON'T MODIFY THIS LINE ---")) {
-    alert("Incorrect password.");
-    return;
-  }
-
-  let storage = localStorage;
-
-  let key = location.pathname + ".password." + index;
-  storage.setItem(key, password);
-  parent.innerHTML = decrypted;
-}
-
-window.onload = () => {
-  let index = -1;
-  let elements = document.querySelectorAll(
-    ".hugo-encryptor-container");
-
-  while (1) {
-    ++index;
-
-    let key = location.pathname + ".password." + index;
-    let password = localStorage.getItem(key);
-
-    if (!password) {
-      break;
-
-    } else {
-      console.log("Found password for part " + index);
-
-      let parent = elements[index];
-      let encrypted = parent.querySelector(".hugo-encryptor-cipher-text").innerText;
-      let decrypted = _do_decrypt(encrypted, password);
-      elements[index].innerHTML = decrypted;
-    }
-  }
-};</script></body>
-</html>
+</body></html>

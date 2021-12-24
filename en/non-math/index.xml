@@ -283,4 +283,53 @@ target='_blank' rel='noreferrer noopener'
 >this tutorial&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a> for reference.&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;/section></description></item></channel></rss>
+&lt;/section></description></item><item><title>A Test for Hugo Encryptor</title><link>https://zerovip.github.io/en/62772/</link><pubDate>Mon, 23 Dec 2019 00:00:00 CST</pubDate><guid isPermaLink="false">/en/62772/</guid><description>&lt;p>In this case, I want to test about the i18n text in English version. Plus, this time I didn’t use a password. It passes the test only if the password fall back to default password: qwertyu.&lt;/p>
+&lt;hugo-encrypt>
+&lt;div id="hugo-encrypt-encryption-notice">
+&lt;p>The following content is protected.&lt;/p>
+&lt;noscript>&lt;span id="hugo-encrypt-enable-js">Javascript needs to be enabled to decrypt content&lt;/span>&lt;/noscript>
+&lt;div class='hugo-encrypt-form'>
+&lt;input
+class="hugo-encrypt-input"
+id="hugo-encrypt-password"
+placeholder='Please enter the password.'
+/>
+&lt;input
+class="hugo-encrypt-button"
+type="button"
+value='Decrypt'
+id="button" onclick="hugoDecrypt(document.getElementById('hugo-encrypt-password').value,'input')"
+/>
+&lt;div id="hugo-encrypt-input-response">&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;cipher-text data-password='qwertyu' style="display:none;">
+&lt;p>This sentence should be encrypted.&lt;/p>
+&lt;/cipher-text>
+&lt;/hugo-encrypt>
+&lt;hr>
+&lt;p>What about encrypt two part? This time the password is “PASSWORD”.
+&lt;hugo-encrypt>
+&lt;div id="hugo-encrypt-encryption-notice">
+&lt;p>The following content is protected.&lt;/p>
+&lt;noscript>&lt;span id="hugo-encrypt-enable-js">Javascript needs to be enabled to decrypt content&lt;/span>&lt;/noscript>
+&lt;div class='hugo-encrypt-form'>
+&lt;input
+class="hugo-encrypt-input"
+id="hugo-encrypt-password"
+placeholder='Please enter the password.'
+/>
+&lt;input
+class="hugo-encrypt-button"
+type="button"
+value='Decrypt'
+id="button" onclick="hugoDecrypt(document.getElementById('hugo-encrypt-password').value,'input')"
+/>
+&lt;div id="hugo-encrypt-input-response">&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;cipher-text data-password='PASSWORD' style="display:none;">
+&lt;p>This is the second sentence that should be encrypted.&lt;/p>
+&lt;/cipher-text>
+&lt;/hugo-encrypt>
+&lt;/p></description></item></channel></rss>

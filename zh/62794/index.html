@@ -1,21 +1,19 @@
-<!DOCTYPE html>
-<html class="theme-container" lang="zh">
-<head>
+<!DOCTYPE html><html lang="zh" class="theme-container"><head>
 <meta charset="utf-8"/>
-<meta content="width=divice-width,initial-scale=1" name="viewport"/>
-<meta content="Hugo 0.89.4" name="generator"/>
+<meta name="viewport" content="width=divice-width,initial-scale=1"/>
+<meta name="generator" content="Hugo 0.90.0"/>
 <title>
 给 Aegisub 写 lua 脚本来辅助翻译既有字幕
 | 赤赤的象牙塔
 </title>
-<link href="../../css/base.min.7a1b5c1c1d7e43ac09f0cd1df239e034cbdf5fa7439794fb7b5fe1225963173c.css" rel="stylesheet" type="text/css"/>
-<link href="../../css/small.min.f9c67371e05b88a9468d51903bbe4d52be301b7e498d3f1dc7fbff95f35f2929.css" media="screen and (max-width: 1200px)" rel="stylesheet" type="text/css"/>
-<link href="../../css/normal.min.7fe55f32650b9c713cce8ccc9a63d23eecaff2b247b70a69bf3650b249319609.css" media="screen and (min-width: 1201px)" rel="stylesheet" type="text/css"/>
-<link href="../../css/syntax.min.ed5b37c3a50997d5ccd8b81bf0d00a7ac1f92c82985623c2dbf0cb422596726a.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" type="text/css" href="../../css/base.min.7a1b5c1c1d7e43ac09f0cd1df239e034cbdf5fa7439794fb7b5fe1225963173c.css"/>
+<link rel="stylesheet" media="screen and (max-width: 1200px)" type="text/css" href="../../css/small.min.f9c67371e05b88a9468d51903bbe4d52be301b7e498d3f1dc7fbff95f35f2929.css"/>
+<link rel="stylesheet" media="screen and (min-width: 1201px)" type="text/css" href="../../css/normal.min.7fe55f32650b9c713cce8ccc9a63d23eecaff2b247b70a69bf3650b249319609.css"/>
+<link rel="stylesheet" type="text/css" href="../../css/syntax.min.ed5b37c3a50997d5ccd8b81bf0d00a7ac1f92c82985623c2dbf0cb422596726a.css"/>
 <script src="../../js/ctheme.min.2b9744ea6df95f636aae562954ce13add68a9c7b99203c9ac1aa4671b6238958.js"></script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-6CF2JBMYH3"></script>
 <script>var doNotTrack=!1;if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','G-6CF2JBMYH3',{anonymize_ip:!1})}</script>
-<script async="" data-goatcounter="https://zerovip.goatcounter.com/count" src="//gc.zgo.at/count.js"></script>
+<script data-goatcounter="https://zerovip.goatcounter.com/count" async="" src="//gc.zgo.at/count.js"></script>
 </head>
 <body>
 <nav class="bar_for_phone">
@@ -37,20 +35,20 @@
 <aside class="left" id="left">
 <div class="left_non-footer">
 <div class="left_non-footer_option">
-<div aria-checked="true" class="left_non-footer_option_theme-switch" role="checkbox">
+<div role="checkbox" aria-checked="true" class="left_non-footer_option_theme-switch">
 <label class="switch">
-<input class="theme-switcher" onchange="themeSwitch()" type="checkbox"/>
+<input type="checkbox" class="theme-switcher" onchange="themeSwitch()"/>
 <span class="slider round"></span>
 </label>
 </div>
-<ul class="left_non-footer_option_language" role="listbox">
-<li aria-selected="true" class="left_non-footer_option_active" role="option">
+<ul role="listbox" class="left_non-footer_option_language">
+<li role="option" aria-selected="true" class="left_non-footer_option_active">
 简体中文 ⦿
 </li>
-<li class="left_non-footer_option_non-active" role="option">
+<li role="option" class="left_non-footer_option_non-active">
 English ⨂
 </li>
-<li class="left_non-footer_option_non-active" role="option">
+<li role="option" class="left_non-footer_option_non-active">
 Français ⨂
 </li>
 </ul>
@@ -132,7 +130,7 @@ RSS 订阅 ⊠
 </h1>
 <p>看了纪录片《波士顿市政厅》（<em>City Hall</em>），因为没有看到这部纪录片有中文字幕，就一直想自己翻译一个出来，帮助其他想看的人.</p>
 <p>我手里已经有这部纪录片的英文字幕了，而且时间轴都是对齐的，因此可以直接在原有时间轴上进行翻译. 如果没有本来的字幕，则应该按照大多数字幕组的工作流程，先听写、断句、打轴，然后再翻译. 这篇文章默认已经拥有了时间轴对齐的原文，只剩下翻译的工作要做. 我使用 Aegisub 软件，我的工作环境是 Linux.</p>
-<p>为了放便感兴趣的读者动手尝试，我在这里提供一个字幕文件样本，里面只保留了前 20 行的字幕内容，使用它可以完整地操作这篇文章中的所有步骤. 点击<a download="" href="CityHall.srt">这里</a>下载.</p>
+<p>为了放便感兴趣的读者动手尝试，我在这里提供一个字幕文件样本，里面只保留了前 20 行的字幕内容，使用它可以完整地操作这篇文章中的所有步骤. 点击<a href="CityHall.srt" download="">这里</a>下载.</p>
 <h1 id="思路与流程">
 思路与流程
 <a href="#%e6%80%9d%e8%b7%af%e4%b8%8e%e6%b5%81%e7%a8%8b"><small>¶</small></a>
@@ -177,8 +175,8 @@ RSS 订阅 ⊠
 </h1>
 <p>我们先来完成第 8 条的任务，把字幕中的换行符 <code>\N</code> 替换成空格. 脚本如下：</p>
 <div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma" tabindex="0"><code><span class="lnt"> 1
+<table class="lntable"><tbody><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -218,16 +216,16 @@ RSS 订阅 ⊠
 </span><span class="lnt">38
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma" tabindex="0"><code class="language-lua" data-lang="lua"><span class="cm">--[[
+<pre tabindex="0" class="chroma"><code class="language-lua" data-lang="lua"><span class="cm">--[[
 </span><span class="cm">说明：
 </span><span class="cm">    这个脚本是用来去除字幕中的 \N.
 </span><span class="cm">]]</span>
 
 <span class="c1">-- 一些描述性的信息</span>
-<span class="n">script_name</span> <span class="o">=</span> <span class="s1">'去掉换行'</span>
-<span class="n">script_description</span> <span class="o">=</span> <span class="s1">'把每一行字幕中的 `</span><span class="se">\\</span><span class="s1">N` 去掉.'</span>
-<span class="n">script_author</span> <span class="o">=</span> <span class="s1">'Zero'</span>
-<span class="n">script_version</span> <span class="o">=</span> <span class="s1">'0.1'</span>
+<span class="n">script_name</span> <span class="o">=</span> <span class="s1">&#39;去掉换行&#39;</span>
+<span class="n">script_description</span> <span class="o">=</span> <span class="s1">&#39;把每一行字幕中的 `</span><span class="se">\\</span><span class="s1">N` 去掉.&#39;</span>
+<span class="n">script_author</span> <span class="o">=</span> <span class="s1">&#39;Zero&#39;</span>
+<span class="n">script_version</span> <span class="o">=</span> <span class="s1">&#39;0.1&#39;</span>
 
 <span class="c1">-- 这是我们的函数，第 38 行保证了它会被执行.</span>
 <span class="kr">function</span> <span class="nf">strip</span><span class="p">(</span><span class="n">sub</span><span class="p">,</span> <span class="n">sel</span><span class="p">)</span>
@@ -239,7 +237,7 @@ RSS 订阅 ⊠
         <span class="kd">local</span> <span class="n">line</span> <span class="o">=</span> <span class="n">sub</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
 
         <span class="c1">-- 对字幕进行一些操作</span>
-        <span class="n">line.text</span> <span class="o">=</span> <span class="n">string.gsub</span><span class="p">(</span><span class="n">line.text</span><span class="p">,</span> <span class="s1">'</span><span class="se">\\</span><span class="s1">N'</span><span class="p">,</span> <span class="s1">' '</span><span class="p">)</span>
+        <span class="n">line.text</span> <span class="o">=</span> <span class="n">string.gsub</span><span class="p">(</span><span class="n">line.text</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\\</span><span class="s1">N&#39;</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">)</span>
 
         <span class="c1">-- 把操作好的字幕再放回去</span>
         <span class="n">sub</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">line</span>
@@ -256,7 +254,7 @@ RSS 订阅 ⊠
 
 <span class="c1">-- 为上面的函数进行注册</span>
 <span class="n">aegisub.register_macro</span><span class="p">(</span><span class="n">script_name</span><span class="p">,</span> <span class="n">script_description</span><span class="p">,</span> <span class="n">strip</span><span class="p">)</span>
-</code></pre></td></tr></table>
+</code></pre></td></tr></tbody></table>
 </div>
 </div><p>具体的解释见下面两个小节.</p>
 <h2 id="脚本的结构">
@@ -264,57 +262,57 @@ RSS 订阅 ⊠
 <a href="#%e8%84%9a%e6%9c%ac%e7%9a%84%e7%bb%93%e6%9e%84"><small>¶</small></a>
 </h2>
 <div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma" tabindex="0"><code><span class="lnt">1
+<table class="lntable"><tbody><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma" tabindex="0"><code class="language-lua" data-lang="lua"><span class="cm">--[[
+<pre tabindex="0" class="chroma"><code class="language-lua" data-lang="lua"><span class="cm">--[[
 </span><span class="cm">说明：
 </span><span class="cm">    这个脚本是用来去除字幕中的 \N.
 </span><span class="cm">]]</span>
-</code></pre></td></tr></table>
+</code></pre></td></tr></tbody></table>
 </div>
 </div><ul>
 <li>第 1 - 4 行是 lua 的注释语句，我们一般会在脚本的最开始用这样的格式对这个脚本的用途、许可证等问题进行一定的说明；</li>
 </ul>
 <div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma" tabindex="0"><code><span class="lnt"> 6
+<table class="lntable"><tbody><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 6
 </span><span class="lnt"> 7
 </span><span class="lnt"> 8
 </span><span class="lnt"> 9
 </span><span class="lnt">10
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma" tabindex="0"><code class="language-lua" data-lang="lua"><span class="c1">-- 一些描述性的信息</span>
-<span class="n">script_name</span> <span class="o">=</span> <span class="s1">'去掉换行'</span>
-<span class="n">script_description</span> <span class="o">=</span> <span class="s1">'把每一行字幕中的 `</span><span class="se">\\</span><span class="s1">N` 去掉.'</span>
-<span class="n">script_author</span> <span class="o">=</span> <span class="s1">'Zero'</span>
-<span class="n">script_version</span> <span class="o">=</span> <span class="s1">'0.1'</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-lua" data-lang="lua"><span class="c1">-- 一些描述性的信息</span>
+<span class="n">script_name</span> <span class="o">=</span> <span class="s1">&#39;去掉换行&#39;</span>
+<span class="n">script_description</span> <span class="o">=</span> <span class="s1">&#39;把每一行字幕中的 `</span><span class="se">\\</span><span class="s1">N` 去掉.&#39;</span>
+<span class="n">script_author</span> <span class="o">=</span> <span class="s1">&#39;Zero&#39;</span>
+<span class="n">script_version</span> <span class="o">=</span> <span class="s1">&#39;0.1&#39;</span>
+</code></pre></td></tr></tbody></table>
 </div>
 </div><ul>
 <li>第 7 - 10 行是一些对这个脚本的描述，它们会显示在菜单栏 - “自动化” - “自动化”打开的窗口中，并通过第 38 行函数的第一个参数显示为菜单栏 - “自动化” - “去掉换行”；</li>
 </ul>
 <div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma" tabindex="0"><code><span class="lnt">37
+<table class="lntable"><tbody><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">37
 </span><span class="lnt">38
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma" tabindex="0"><code class="language-lua" data-lang="lua"><span class="c1">-- 为上面的函数进行注册</span>
+<pre tabindex="0" class="chroma"><code class="language-lua" data-lang="lua"><span class="c1">-- 为上面的函数进行注册</span>
 <span class="n">aegisub.register_macro</span><span class="p">(</span><span class="n">script_name</span><span class="p">,</span> <span class="n">script_description</span><span class="p">,</span> <span class="n">strip</span><span class="p">)</span>
-</code></pre></td></tr></table>
+</code></pre></td></tr></tbody></table>
 </div>
 </div><ul>
 <li>第 38 行除了将脚本名、脚本描述进行注册以外，还注册了一个函数 <code>strip</code>，这个函数就是在 Aegisub 中点击“去掉换行”之后会执行的函数了；</li>
 </ul>
 <div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma" tabindex="0"><code><span class="lnt">12
+<table class="lntable"><tbody><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">12
 </span><span class="lnt">13
 </span><span class="lnt">14
 </span><span class="lnt">15
@@ -340,7 +338,7 @@ RSS 订阅 ⊠
 </span><span class="lnt">35
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma" tabindex="0"><code class="language-lua" data-lang="lua"><span class="c1">-- 这是我们的函数，第 38 行保证了它会被执行.</span>
+<pre tabindex="0" class="chroma"><code class="language-lua" data-lang="lua"><span class="c1">-- 这是我们的函数，第 38 行保证了它会被执行.</span>
 <span class="kr">function</span> <span class="nf">strip</span><span class="p">(</span><span class="n">sub</span><span class="p">,</span> <span class="n">sel</span><span class="p">)</span>
 
     <span class="c1">-- 对选中行进行遍历</span>
@@ -350,7 +348,7 @@ RSS 订阅 ⊠
         <span class="kd">local</span> <span class="n">line</span> <span class="o">=</span> <span class="n">sub</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
 
         <span class="c1">-- 对字幕进行一些操作</span>
-        <span class="n">line.text</span> <span class="o">=</span> <span class="n">string.gsub</span><span class="p">(</span><span class="n">line.text</span><span class="p">,</span> <span class="s1">'</span><span class="se">\\</span><span class="s1">N'</span><span class="p">,</span> <span class="s1">' '</span><span class="p">)</span>
+        <span class="n">line.text</span> <span class="o">=</span> <span class="n">string.gsub</span><span class="p">(</span><span class="n">line.text</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\\</span><span class="s1">N&#39;</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">)</span>
 
         <span class="c1">-- 把操作好的字幕再放回去</span>
         <span class="n">sub</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">line</span>
@@ -364,7 +362,7 @@ RSS 订阅 ⊠
     <span class="kr">return</span> <span class="n">sel</span>
 
 <span class="kr">end</span>
-</code></pre></td></tr></table>
+</code></pre></td></tr></tbody></table>
 </div>
 </div><ul>
 <li>第 13 - 35 行就是定义的函数 <code>strip</code> 的函数体，它接受了 sub 和 sel 两个参数：
@@ -394,8 +392,8 @@ lua 代码中要注意的细节
 </h1>
 <p>现在还剩第 9 条任务，把所有字幕按时间进行重新排序，即一行英文一行中文. 先分析一下：我们已经有的是上半截英文、下半截中文的字幕，它们的顺序都是正确的，只要把它们穿插起来就行了. 那我们只要先预先判断一下，看看用户选择的行（需要用户提前全选或选择一部分）的总数是不是偶数，如果是偶数的话就把它们从中间一分为二，然后从上半部分取一行、从下半部分取一行，如此循环，也就完成了我们的任务. 代码如下：</p>
 <div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma" tabindex="0"><code><span class="lnt"> 1
+<table class="lntable"><tbody><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -440,16 +438,16 @@ lua 代码中要注意的细节
 </span><span class="lnt">43
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma" tabindex="0"><code class="language-lua" data-lang="lua"><span class="cm">--[[
+<pre tabindex="0" class="chroma"><code class="language-lua" data-lang="lua"><span class="cm">--[[
 </span><span class="cm">说明：
 </span><span class="cm">    把中文的字幕和翻译好的英文字幕穿插在一起. 要求用户所选行数一定要是偶数，
 </span><span class="cm">    且一半英文字幕、一半中文字幕，都是按照相同的顺序上下对应起来的.
 </span><span class="cm">]]</span>
 
-<span class="n">script_name</span> <span class="o">=</span> <span class="s1">'双语穿插'</span>
-<span class="n">script_description</span> <span class="o">=</span> <span class="s1">'把中文的字幕和翻译好的英文字幕穿插在一起.'</span>
-<span class="n">script_author</span> <span class="o">=</span> <span class="s1">'Zero'</span>
-<span class="n">script_version</span> <span class="o">=</span> <span class="s1">'0.1'</span>
+<span class="n">script_name</span> <span class="o">=</span> <span class="s1">&#39;双语穿插&#39;</span>
+<span class="n">script_description</span> <span class="o">=</span> <span class="s1">&#39;把中文的字幕和翻译好的英文字幕穿插在一起.&#39;</span>
+<span class="n">script_author</span> <span class="o">=</span> <span class="s1">&#39;Zero&#39;</span>
+<span class="n">script_version</span> <span class="o">=</span> <span class="s1">&#39;0.1&#39;</span>
 
 <span class="kr">function</span> <span class="nf">mix</span><span class="p">(</span><span class="n">sub</span><span class="p">,</span> <span class="n">sel</span><span class="p">)</span>
     
@@ -483,7 +481,7 @@ lua 代码中要注意的细节
 <span class="kr">end</span>
 
 <span class="n">aegisub.register_macro</span><span class="p">(</span><span class="n">script_name</span><span class="p">,</span> <span class="n">script_description</span><span class="p">,</span> <span class="n">mix</span><span class="p">,</span> <span class="n">mix_validation</span><span class="p">)</span>
-</code></pre></td></tr></table>
+</code></pre></td></tr></tbody></table>
 </div>
 </div><p>具体的解释见下面两个小节.</p>
 <h2 id="关于-aegisub-的验证函数">
@@ -494,18 +492,18 @@ lua 代码中要注意的细节
 <li>第 43 行，这里的注册函数和之前的有所不同，还多注册了一个 <code>mix_validation</code> 函数. 这个函数作为注册函数的第 4 个参数，表示软件要预先判断一下目前的状况能不能运行这个脚本.</li>
 </ul>
 <div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma" tabindex="0"><code><span class="lnt">38
+<table class="lntable"><tbody><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">38
 </span><span class="lnt">39
 </span><span class="lnt">40
 </span><span class="lnt">41
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma" tabindex="0"><code class="language-lua" data-lang="lua"><span class="c1">-- 验证函数</span>
+<pre tabindex="0" class="chroma"><code class="language-lua" data-lang="lua"><span class="c1">-- 验证函数</span>
 <span class="kr">function</span> <span class="nf">mix_validation</span><span class="p">(</span><span class="n">sub</span><span class="p">,</span> <span class="n">sel</span><span class="p">)</span>
     <span class="kr">return</span> <span class="o">#</span><span class="n">sel</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span>
 <span class="kr">end</span>
-</code></pre></td></tr></table>
+</code></pre></td></tr></tbody></table>
 </div>
 </div><ul>
 <li>第 39 - 41 行就是这里注册的验证函数. 这里的验证函数很简单，就是看一下当前用户选择的行的总数能否被 2 整除，如果可以就返回 <code>true</code>，如果不行就返回 <code>false</code>. 体现在软件的操作上就是：如果你选择的行的数量是偶数，那么在菜单栏 - “自动化” 里就能点击“双语穿插”来运行这个脚本；如果你选择的行的数量是奇数，那么在菜单栏 - “自动化”里，你会看到灰色的“双语穿插”，不能点击，表示目前这种情况下你不能运行这个脚本.</li>
@@ -516,8 +514,8 @@ lua 代码中要注意的细节
 <a href="#lua-%e4%bb%a3%e7%a0%81%e4%b8%ad%e8%a6%81%e6%b3%a8%e6%84%8f%e7%9a%84%e7%bb%86%e8%8a%82-1"><small>¶</small></a>
 </h2>
 <div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma" tabindex="0"><code><span class="lnt">20
+<table class="lntable"><tbody><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">20
 </span><span class="lnt">21
 </span><span class="lnt">22
 </span><span class="lnt">23
@@ -530,7 +528,7 @@ lua 代码中要注意的细节
 </span><span class="lnt">30
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma" tabindex="0"><code class="language-lua" data-lang="lua"><span class="kd">local</span> <span class="n">slen</span> <span class="o">=</span> <span class="o">#</span><span class="n">sel</span>
+<pre tabindex="0" class="chroma"><code class="language-lua" data-lang="lua"><span class="kd">local</span> <span class="n">slen</span> <span class="o">=</span> <span class="o">#</span><span class="n">sel</span>
     
 <span class="kr">for</span> <span class="n">subi</span><span class="p">,</span> <span class="n">seli</span> <span class="kr">in</span> <span class="n">ipairs</span><span class="p">(</span><span class="n">sel</span><span class="p">)</span> <span class="kr">do</span>
     <span class="kr">if</span> <span class="n">subi</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">~=</span> <span class="mi">0</span> <span class="kr">then</span>
@@ -541,30 +539,30 @@ lua 代码中要注意的细节
         <span class="n">sub</span><span class="p">[</span><span class="n">seli</span><span class="p">]</span> <span class="o">=</span> <span class="n">sub_backup</span><span class="p">[</span><span class="n">sel</span><span class="p">[(</span><span class="n">subi</span> <span class="o">+</span> <span class="n">slen</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">]]</span>
     <span class="kr">end</span>
 <span class="kr">end</span>
-</code></pre></td></tr></table>
+</code></pre></td></tr></tbody></table>
 </div>
 </div><p>第 20 - 30 行的代码和注释已经足够清楚了，这就是完成穿插的核心代码，主要是数学上的逻辑：判断行号是奇数还是偶数，如果是奇数就从上半部分英文的部分选一行放进来，如果是偶数就从下半部份中文的部分选一行放进来.</p>
 <p>第 14 - 18 行的操作值得一说.</p>
 <div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma" tabindex="0"><code><span class="lnt">14
+<table class="lntable"><tbody><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">14
 </span><span class="lnt">15
 </span><span class="lnt">16
 </span><span class="lnt">17
 </span><span class="lnt">18
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma" tabindex="0"><code class="language-lua" data-lang="lua"><span class="kd">local</span> <span class="n">sub_backup</span> <span class="o">=</span> <span class="p">{}</span>
+<pre tabindex="0" class="chroma"><code class="language-lua" data-lang="lua"><span class="kd">local</span> <span class="n">sub_backup</span> <span class="o">=</span> <span class="p">{}</span>
     
 <span class="kr">for</span> <span class="n">subi</span><span class="p">,</span> <span class="n">seli</span> <span class="kr">in</span> <span class="n">ipairs</span><span class="p">(</span><span class="n">sel</span><span class="p">)</span> <span class="kr">do</span>
     <span class="n">sub_backup</span><span class="p">[</span><span class="n">seli</span><span class="p">]</span> <span class="o">=</span> <span class="n">sub</span><span class="p">[</span><span class="n">seli</span><span class="p">]</span>
 <span class="kr">end</span>
-</code></pre></td></tr></table>
+</code></pre></td></tr></tbody></table>
 </div>
-</div><p>14 - 18 行做的是把用户选中的那些字幕复制一份出来作为备份，这样在 <code>sub</code> 这个变量上随心所欲地做一些改动就不会影响到备份出来的原始数据了. 这里的关键在于，<a href="http://lua-users.org/wiki/CopyTable" rel="noreferrer noopener" target="_blank">lua 用 <code>=</code> 传递 table 或 userdata 的本质是引用<b><sub>⧉</sub></b></a>，对其中一个做更改会影响到另一个，所以我们必须自己手动把它们复制出来. 举个例子：</p>
+</div><p>14 - 18 行做的是把用户选中的那些字幕复制一份出来作为备份，这样在 <code>sub</code> 这个变量上随心所欲地做一些改动就不会影响到备份出来的原始数据了. 这里的关键在于，<a href="http://lua-users.org/wiki/CopyTable" target="_blank" rel="noreferrer noopener">lua 用 <code>=</code> 传递 table 或 userdata 的本质是引用<b><sub>⧉</sub></b></a>，对其中一个做更改会影响到另一个，所以我们必须自己手动把它们复制出来. 举个例子：</p>
 <div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma" tabindex="0"><code><span class="lnt">1
+<table class="lntable"><tbody><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -574,20 +572,20 @@ lua 代码中要注意的细节
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma" tabindex="0"><code class="language-lua" data-lang="lua"><span class="n">old</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">}</span>
+<pre tabindex="0" class="chroma"><code class="language-lua" data-lang="lua"><span class="n">old</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">}</span>
 <span class="n">new</span> <span class="o">=</span> <span class="n">old</span>
 <span class="n">print</span><span class="p">(</span><span class="n">old</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">old</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">old</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span> <span class="c1">-- output：1 2 3</span>
 <span class="n">print</span><span class="p">(</span><span class="n">new</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">new</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">new</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span> <span class="c1">-- output：1 2 3</span>
-<span class="n">old</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'interesting'</span>        <span class="c1">--对旧的变量做一些更改</span>
+<span class="n">old</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;interesting&#39;</span>        <span class="c1">--对旧的变量做一些更改</span>
 <span class="n">print</span><span class="p">(</span><span class="n">old</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">old</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">old</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span> <span class="c1">-- output：interesting 2 3</span>
 <span class="n">print</span><span class="p">(</span><span class="n">new</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">new</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">new</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span> <span class="c1">-- output：interesting 2 3</span>
                               <span class="c1">--导致新的变量也同步了那个更改</span>
-</code></pre></td></tr></table>
+</code></pre></td></tr></tbody></table>
 </div>
 </div><p>实际上，这样的语言有很多，大部分引用语义的语言都是传引用的. 比如 java, javascript, python. 一个 python 的例子如下：</p>
 <div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma" tabindex="0"><code><span class="lnt">1
+<table class="lntable"><tbody><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -596,32 +594,32 @@ lua 代码中要注意的细节
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma" tabindex="0"><code class="language-python" data-lang="python"><span class="n">old</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">old</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
 <span class="n">new</span> <span class="o">=</span> <span class="n">old</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">old</span><span class="p">)</span> <span class="c1"># output：[1, 2, 3]</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">new</span><span class="p">)</span> <span class="c1"># output：[1, 2, 3]</span>
-<span class="n">old</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'interesting'</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">old</span><span class="p">)</span> <span class="c1"># output：['interesting', 2, 3]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">new</span><span class="p">)</span> <span class="c1"># output：['interesting', 2, 3]</span>
-</code></pre></td></tr></table>
+<span class="n">old</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;interesting&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">old</span><span class="p">)</span> <span class="c1"># output：[&#39;interesting&#39;, 2, 3]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">new</span><span class="p">)</span> <span class="c1"># output：[&#39;interesting&#39;, 2, 3]</span>
+</code></pre></td></tr></tbody></table>
 </div>
 </div><p>实话说，我以为我对 python 还算是熟悉，但我真的第一次知道这件事. 好像之前没有遇到过这种操作吧？总之这是写这份脚本时遇到的一个小小的坑.</p>
 <h1 id="其他">
 其他
 <a href="#%e5%85%b6%e4%bb%96"><small>¶</small></a>
 </h1>
-<p>有了上面两个脚本的帮助，我们就能快速把 1 - 9 完成了. 在输出字幕之前，我一般还会做点微小的调整：点击菜单栏 - “计时” - “时间后续处理器”，关闭“开始提前”，保留“结束延后”，并设置结束延后的时长为 500 ms，然后启用相邻字幕行连续的功能. 这是为了使字幕在台词说完以后还能再显示半秒，给观众一个更舒适的时间来阅读字幕；另外对于两行时间非常接近的字幕，就让第二行开始的时间作为第一行结束的时间，不会看起来一闪一闪的. 这个技巧来自 <a href="https://www.bilibili.com/video/BV1ps411b7as" rel="noreferrer noopener" target="_blank">b 站教程：快速打轴法<b><sub>⧉</sub></b></a>.</p>
+<p>有了上面两个脚本的帮助，我们就能快速把 1 - 9 完成了. 在输出字幕之前，我一般还会做点微小的调整：点击菜单栏 - “计时” - “时间后续处理器”，关闭“开始提前”，保留“结束延后”，并设置结束延后的时长为 500 ms，然后启用相邻字幕行连续的功能. 这是为了使字幕在台词说完以后还能再显示半秒，给观众一个更舒适的时间来阅读字幕；另外对于两行时间非常接近的字幕，就让第二行开始的时间作为第一行结束的时间，不会看起来一闪一闪的. 这个技巧来自 <a href="https://www.bilibili.com/video/BV1ps411b7as" target="_blank" rel="noreferrer noopener">b 站教程：快速打轴法<b><sub>⧉</sub></b></a>.</p>
 <p>至此，所有任务完成，我感受到了自己写脚本的强大之处. 总的来说，Aegisub 的 lua 脚本并不难写，思路理解起来也非常自然，以后在做字幕的时候遇到任何麻烦的事情就都可以用脚本来做了，这次的学习性价比极高！</p>
 <h2 id="参考资料">
 参考资料
 <a href="#%e5%8f%82%e8%80%83%e8%b5%84%e6%96%99"><small>¶</small></a>
 </h2>
-<p>我的学习主要参考了 <a href="https://unanimated.github.io/ts/lua/ts-auto_tutorial.htm" rel="noreferrer noopener" target="_blank">Lyger, Creating Lua Automation Scripts for Aegisub<b><sub>⧉</sub></b></a>——这篇文章是一篇正儿八经的教程，而且它前面还包含了 lua 语言的基础知识，推荐给大家，值得参考.</p>
-<p>另外 Aegisub 的官方文档也是非常值得参考的，上面推荐的文章也多次引用. 可惜的是，Aegisub 软件已经很长时间没有更新，其官网也缺乏维护，因此无法找到在线的官方文档了，只能是 Google 搜索后下载离线的 PDF 格式文档以备查阅. 还有一篇中文的学习笔记，在这里一并列出：<a href="https://gist.github.com/yin8086/2ee4abd4eef39003eba4440a8a94d4f0" rel="noreferrer noopener" target="_blank">Aegisub32 Lua Script 学习<b><sub>⧉</sub></b></a>.</p>
+<p>我的学习主要参考了 <a href="https://unanimated.github.io/ts/lua/ts-auto_tutorial.htm" target="_blank" rel="noreferrer noopener">Lyger, Creating Lua Automation Scripts for Aegisub<b><sub>⧉</sub></b></a>——这篇文章是一篇正儿八经的教程，而且它前面还包含了 lua 语言的基础知识，推荐给大家，值得参考.</p>
+<p>另外 Aegisub 的官方文档也是非常值得参考的，上面推荐的文章也多次引用. 可惜的是，Aegisub 软件已经很长时间没有更新，其官网也缺乏维护，因此无法找到在线的官方文档了，只能是 Google 搜索后下载离线的 PDF 格式文档以备查阅. 还有一篇中文的学习笔记，在这里一并列出：<a href="https://gist.github.com/yin8086/2ee4abd4eef39003eba4440a8a94d4f0" target="_blank" rel="noreferrer noopener">Aegisub32 Lua Script 学习<b><sub>⧉</sub></b></a>.</p>
 <p>其他人写的 lua 脚本：</p>
 <ul>
-<li><a href="https://gitee.com/syler/aegisub-lua/" rel="noreferrer noopener" target="_blank">syler, Gitee 仓库<b><sub>⧉</sub></b></a>. 里面有一个把同一行的中英文字幕分割成两行的脚本.</li>
-<li><a href="https://github.com/magnum357i/Magnum-s-Aegisub-Scripts" rel="noreferrer noopener" target="_blank">magnum357i, GitHub 仓库<b><sub>⧉</sub></b></a>. 里面有超多脚本，只不过我都没有仔细看.</li>
+<li><a href="https://gitee.com/syler/aegisub-lua/" target="_blank" rel="noreferrer noopener">syler, Gitee 仓库<b><sub>⧉</sub></b></a>. 里面有一个把同一行的中英文字幕分割成两行的脚本.</li>
+<li><a href="https://github.com/magnum357i/Magnum-s-Aegisub-Scripts" target="_blank" rel="noreferrer noopener">magnum357i, GitHub 仓库<b><sub>⧉</sub></b></a>. 里面有超多脚本，只不过我都没有仔细看.</li>
 </ul>
 <h2 id="把中英文的字幕分开">
 把中英文的字幕分开
@@ -629,8 +627,8 @@ lua 代码中要注意的细节
 </h2>
 <p>我们在上面写了脚本实现了中英文字幕的混排. 很自然地，我们也会想做一个逆操作，把已经混排的双语字幕分开. 这已经非常简单了，只需要在上面的脚本中简单改几个地方即可：</p>
 <div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma" tabindex="0"><code><span class="lnt"> 1
+<table class="lntable"><tbody><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -665,16 +663,16 @@ lua 代码中要注意的细节
 </span><span class="lnt">33
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma" tabindex="0"><code class="language-lua" data-lang="lua"><span class="cm">--[[
+<pre tabindex="0" class="chroma"><code class="language-lua" data-lang="lua"><span class="cm">--[[
 </span><span class="cm">说明：
 </span><span class="cm">    把穿插在一起的中英文字幕分开. 要求用户所选行数一定要是偶数，
 </span><span class="cm">    且每行英文字幕相邻的下面一行都是其对应的中文字幕.
 </span><span class="cm">]]</span>
 
-<span class="n">script_name</span> <span class="o">=</span> <span class="s1">'分开穿插的双语'</span>
-<span class="n">script_description</span> <span class="o">=</span> <span class="s1">'把穿插在一起的中英文字幕分开.'</span>
-<span class="n">script_author</span> <span class="o">=</span> <span class="s1">'Zero'</span>
-<span class="n">script_version</span> <span class="o">=</span> <span class="s1">'0.1'</span>
+<span class="n">script_name</span> <span class="o">=</span> <span class="s1">&#39;分开穿插的双语&#39;</span>
+<span class="n">script_description</span> <span class="o">=</span> <span class="s1">&#39;把穿插在一起的中英文字幕分开.&#39;</span>
+<span class="n">script_author</span> <span class="o">=</span> <span class="s1">&#39;Zero&#39;</span>
+<span class="n">script_version</span> <span class="o">=</span> <span class="s1">&#39;0.1&#39;</span>
 
 <span class="kr">function</span> <span class="nf">seperate</span><span class="p">(</span><span class="n">sub</span><span class="p">,</span> <span class="n">sel</span><span class="p">)</span>
     <span class="kd">local</span> <span class="n">sub_backup</span> <span class="o">=</span> <span class="p">{}</span>
@@ -698,7 +696,7 @@ lua 代码中要注意的细节
 <span class="kr">end</span>
 
 <span class="n">aegisub.register_macro</span><span class="p">(</span><span class="n">script_name</span><span class="p">,</span> <span class="n">script_description</span><span class="p">,</span> <span class="n">seperate</span><span class="p">,</span> <span class="n">seperate_validation</span><span class="p">)</span>
-</code></pre></td></tr></table>
+</code></pre></td></tr></tbody></table>
 </div>
 </div><p>有了我写的这两个混排和分开的脚本，再加上上一小节参考资料中提到的 syler 写的把中英文字幕分成两行的脚本，这三个工具在处理双语字幕时已经非常游刃有余了.</p>
 <h2 id="机翻脚本">
@@ -707,21 +705,21 @@ lua 代码中要注意的细节
 </h2>
 <p>最后离题记录一下第 7 条关于自动机翻的问题. 我本来想的是，把自动机翻也写成一个 lua 脚本，但我对 lua 的网络库不太熟悉，找了半天也没找到现成的代码，感觉自己写起来会比较费劲，尤其是那个 Google 翻译的 token key 问题，看着就比较棘手. 所以我就转头寻找起了 python 的现成的翻译库：</p>
 <ul>
-<li>googletrans：<a href="https://pypi.org/project/googletrans/" rel="noreferrer noopener" target="_blank">项目主页<b><sub>⧉</sub></b></a>、<a href="https://github.com/ssut/py-googletrans" rel="noreferrer noopener" target="_blank">源代码<b><sub>⧉</sub></b></a>. 这个项目相当于是用非正常手段（aka 爬虫）获得免费翻译的使用，而且它有个优势是可以指定 Google 翻译的服务器地址，因为中国大陆这边访问 translate.google.com 受到限制，但可以访问 translate.google.cn. 不过我尝试的时候遇到了<a href="https://github.com/ssut/py-googletrans/issues/234" rel="noreferrer noopener" target="_blank">问题<b><sub>⧉</sub></b></a>，没有很好的解决办法.</li>
-<li>deep-translator：<a href="https://pypi.org/project/deep-translator/" rel="noreferrer noopener" target="_blank">项目主页<b><sub>⧉</sub></b></a>、<a href="https://github.com/nidhaloff/deep_translator" rel="noreferrer noopener" target="_blank">源代码<b><sub>⧉</sub></b></a>. 这个项目就没法指定 Google 翻译的服务器地址了；它的优势是翻译服务众多：microsoft、Pons、Linguee、Mymemory、Yandex、QCRI、DeepL. 我猜想它们的英译中可能还不如百度翻译，所以没有尝试. DeepL 口碑不错，想试来着，但它需要注册 DeepL 帐号后用自己的 key 去使用官方接口. 可惜 DeepL 不支持中国地区的注册，遂作罢.</li>
+<li>googletrans：<a href="https://pypi.org/project/googletrans/" target="_blank" rel="noreferrer noopener">项目主页<b><sub>⧉</sub></b></a>、<a href="https://github.com/ssut/py-googletrans" target="_blank" rel="noreferrer noopener">源代码<b><sub>⧉</sub></b></a>. 这个项目相当于是用非正常手段（aka 爬虫）获得免费翻译的使用，而且它有个优势是可以指定 Google 翻译的服务器地址，因为中国大陆这边访问 translate.google.com 受到限制，但可以访问 translate.google.cn. 不过我尝试的时候遇到了<a href="https://github.com/ssut/py-googletrans/issues/234" target="_blank" rel="noreferrer noopener">问题<b><sub>⧉</sub></b></a>，没有很好的解决办法.</li>
+<li>deep-translator：<a href="https://pypi.org/project/deep-translator/" target="_blank" rel="noreferrer noopener">项目主页<b><sub>⧉</sub></b></a>、<a href="https://github.com/nidhaloff/deep_translator" target="_blank" rel="noreferrer noopener">源代码<b><sub>⧉</sub></b></a>. 这个项目就没法指定 Google 翻译的服务器地址了；它的优势是翻译服务众多：microsoft、Pons、Linguee、Mymemory、Yandex、QCRI、DeepL. 我猜想它们的英译中可能还不如百度翻译，所以没有尝试. DeepL 口碑不错，想试来着，但它需要注册 DeepL 帐号后用自己的 key 去使用官方接口. 可惜 DeepL 不支持中国地区的注册，遂作罢.</li>
 <li>还有很多很多类似的 python 库，但时间有点太久远了，都两三年了，也都没有尝试.</li>
-<li>最后找到一篇文章，<a href="https://1c7.me/translate-subtitle-file/" rel="noreferrer noopener" target="_blank">机翻字幕文件 - 字幕组机翻译小助手<b><sub>⧉</sub></b></a>，虽然是 2018 年的了，不过还是很有借鉴意义. 它让我意识到，各家翻译服务虽然在网页版上是免费的，但没有可以免费调用的官方 api. 要么就写代码和人家的反爬机制做斗争，要不就乖乖交钱使用官方提供的稳定 api. 百度倒是有免费的服务，但也是得注册，而且每秒只能调用 1 次. 该文章作者写了一个<a href="https://github.com/1c7/translate-subtitle-file" rel="noreferrer noopener" target="_blank">软件<b><sub>⧉</sub></b></a>，可以辅助我们（在注册交钱拥有自己的 key 之后）使用各类翻译服务直接翻译字幕软件. 那个软件不支持 Linux，故没有尝试.</li>
+<li>最后找到一篇文章，<a href="https://1c7.me/translate-subtitle-file/" target="_blank" rel="noreferrer noopener">机翻字幕文件 - 字幕组机翻译小助手<b><sub>⧉</sub></b></a>，虽然是 2018 年的了，不过还是很有借鉴意义. 它让我意识到，各家翻译服务虽然在网页版上是免费的，但没有可以免费调用的官方 api. 要么就写代码和人家的反爬机制做斗争，要不就乖乖交钱使用官方提供的稳定 api. 百度倒是有免费的服务，但也是得注册，而且每秒只能调用 1 次. 该文章作者写了一个<a href="https://github.com/1c7/translate-subtitle-file" target="_blank" rel="noreferrer noopener">软件<b><sub>⧉</sub></b></a>，可以辅助我们（在注册交钱拥有自己的 key 之后）使用各类翻译服务直接翻译字幕软件. 那个软件不支持 Linux，故没有尝试.</li>
 </ul>
 <h2 id="结果">
 结果
 <a href="#%e7%bb%93%e6%9e%9c"><small>¶</small></a>
 </h2>
-<p>其实这篇文章早就写好了，我本来计划把电影字幕翻完之后一起发出来的，但《波士顿市政厅》那个电影太长了，我又很拖延，到 2021 年 3 月底我才翻了半个小时的内容；而且网上找的那个英文字幕问题不少，我还得常常做点英文的听写改正一下……结果就有字幕组接手翻完了：<a href="http://www.orangesub.com/detail/394" rel="noreferrer noopener" target="_blank">orange 字幕组 | 波士顿市政厅<b><sub>⧉</sub></b></a>. 因此把这篇文章直接发出了！</p>
+<p>其实这篇文章早就写好了，我本来计划把电影字幕翻完之后一起发出来的，但《波士顿市政厅》那个电影太长了，我又很拖延，到 2021 年 3 月底我才翻了半个小时的内容；而且网上找的那个英文字幕问题不少，我还得常常做点英文的听写改正一下……结果就有字幕组接手翻完了：<a href="http://www.orangesub.com/detail/394" target="_blank" rel="noreferrer noopener">orange 字幕组 | 波士顿市政厅<b><sub>⧉</sub></b></a>. 因此把这篇文章直接发出了！</p>
 <p></p><p></p><p></p><p></p>
 </article>
 </div>
 <div class="right_comments">
-<script async="" crossorigin="anonymous" issue-term="pathname" repo="zerovip/bcsu" src="https://utteranc.es/client.js" theme="github-light"></script>
+<script src="https://utteranc.es/client.js" repo="zerovip/bcsu" issue-term="pathname" theme="github-light" crossorigin="anonymous" async=""></script>
 </div>
 </div>
 <aside class="toc" id="toc">
@@ -759,5 +757,5 @@ lua 代码中要注意的细节
 </aside>
 </div>
 <script src="../../js/main.min.60aa2f3f5fd2bd0fbc6bfb7a3e14b1eb89f8dd2b4caa083c22b7f3cb656ea273.js"></script>
-</body>
-</html>
+
+</body></html>

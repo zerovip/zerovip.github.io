@@ -1,21 +1,19 @@
-<!DOCTYPE html>
-<html class="theme-container" lang="zh">
-<head>
+<!DOCTYPE html><html lang="zh" class="theme-container"><head>
 <meta charset="utf-8"/>
-<meta content="width=divice-width,initial-scale=1" name="viewport"/>
-<meta content="Hugo 0.89.4" name="generator"/>
+<meta name="viewport" content="width=divice-width,initial-scale=1"/>
+<meta name="generator" content="Hugo 0.90.0"/>
 <title>
 Hugo 如何让图片在暗色主题下反色 - 自写主题
 | 赤赤的象牙塔
 </title>
-<link href="../../css/base.min.7a1b5c1c1d7e43ac09f0cd1df239e034cbdf5fa7439794fb7b5fe1225963173c.css" rel="stylesheet" type="text/css"/>
-<link href="../../css/small.min.f9c67371e05b88a9468d51903bbe4d52be301b7e498d3f1dc7fbff95f35f2929.css" media="screen and (max-width: 1200px)" rel="stylesheet" type="text/css"/>
-<link href="../../css/normal.min.7fe55f32650b9c713cce8ccc9a63d23eecaff2b247b70a69bf3650b249319609.css" media="screen and (min-width: 1201px)" rel="stylesheet" type="text/css"/>
-<link href="../../css/syntax.min.ed5b37c3a50997d5ccd8b81bf0d00a7ac1f92c82985623c2dbf0cb422596726a.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" type="text/css" href="../../css/base.min.7a1b5c1c1d7e43ac09f0cd1df239e034cbdf5fa7439794fb7b5fe1225963173c.css"/>
+<link rel="stylesheet" media="screen and (max-width: 1200px)" type="text/css" href="../../css/small.min.f9c67371e05b88a9468d51903bbe4d52be301b7e498d3f1dc7fbff95f35f2929.css"/>
+<link rel="stylesheet" media="screen and (min-width: 1201px)" type="text/css" href="../../css/normal.min.7fe55f32650b9c713cce8ccc9a63d23eecaff2b247b70a69bf3650b249319609.css"/>
+<link rel="stylesheet" type="text/css" href="../../css/syntax.min.ed5b37c3a50997d5ccd8b81bf0d00a7ac1f92c82985623c2dbf0cb422596726a.css"/>
 <script src="../../js/ctheme.min.2b9744ea6df95f636aae562954ce13add68a9c7b99203c9ac1aa4671b6238958.js"></script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-6CF2JBMYH3"></script>
 <script>var doNotTrack=!1;if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','G-6CF2JBMYH3',{anonymize_ip:!1})}</script>
-<script async="" data-goatcounter="https://zerovip.goatcounter.com/count" src="//gc.zgo.at/count.js"></script>
+<script data-goatcounter="https://zerovip.goatcounter.com/count" async="" src="//gc.zgo.at/count.js"></script>
 </head>
 <body>
 <nav class="bar_for_phone">
@@ -37,22 +35,22 @@ Hugo 如何让图片在暗色主题下反色 - 自写主题
 <aside class="left" id="left">
 <div class="left_non-footer">
 <div class="left_non-footer_option">
-<div aria-checked="true" class="left_non-footer_option_theme-switch" role="checkbox">
+<div role="checkbox" aria-checked="true" class="left_non-footer_option_theme-switch">
 <label class="switch">
-<input class="theme-switcher" onchange="themeSwitch()" type="checkbox"/>
+<input type="checkbox" class="theme-switcher" onchange="themeSwitch()"/>
 <span class="slider round"></span>
 </label>
 </div>
-<ul class="left_non-footer_option_language" role="listbox">
-<li aria-selected="true" class="left_non-footer_option_active" role="option">
+<ul role="listbox" class="left_non-footer_option_language">
+<li role="option" aria-selected="true" class="left_non-footer_option_active">
 简体中文 ⦿
 </li>
-<li aria-selected="false" class="left_non-footer_option_non-active" role="option">
+<li role="option" aria-selected="false" class="left_non-footer_option_non-active">
 <a href="../../en/15738/">
 English ○
 </a>
 </li>
-<li class="left_non-footer_option_non-active" role="option">
+<li role="option" class="left_non-footer_option_non-active">
 Français ⨂
 </li>
 </ul>
@@ -133,17 +131,17 @@ Hugo 如何让图片在暗色主题下反色 - 自写主题
 <a href="#%e9%97%ae%e9%a2%98"><small>¶</small></a>
 </h1>
 <p>有些图片是白底黑字，在暗色主题下刺眼：</p>
-<p><figure>
-<img alt="白底黑字的示例图" loading="lazy" src="lorem.jpg" style="filter:var(--c-img-filter2)"/>
+<p></p><figure>
+<img loading="lazy" src="lorem.jpg" alt="白底黑字的示例图" style="filter:var(--c-img-filter2)"/>
 <figcaption>◉ 图. 白底黑字的示例图</figcaption>
 </figure>
-</p>
+<p></p>
 <p>有些图片是透明背景黑字，在暗色主题下看不清：</p>
-<p><figure>
-<img alt="透明背景黑字的示例图" loading="lazy" src="lorem.png" style="filter:var(--c-img-filter2)"/>
+<p></p><figure>
+<img loading="lazy" src="lorem.png" alt="透明背景黑字的示例图" style="filter:var(--c-img-filter2)"/>
 <figcaption>◉ 图. 透明背景黑字的示例图</figcaption>
 </figure>
-</p>
+<p></p>
 <p>以上这两种情况都需要在读者选择暗色主题的时候进行反色处理.</p>
 <h1 id="处理思路">
 处理思路
@@ -151,8 +149,8 @@ Hugo 如何让图片在暗色主题下反色 - 自写主题
 </h1>
 <p>颜色的反转使用 CSS 的滤镜（filters）技术即可，比如在如下代码中，<code>.normal</code> 是正常的颜色，<code>.inverted</code> 是反转的颜色.</p>
 <div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma" tabindex="0"><code><span class="lnt">1
+<table class="lntable"><tbody><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -161,42 +159,42 @@ Hugo 如何让图片在暗色主题下反色 - 自写主题
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma" tabindex="0"><code class="language-CSS" data-lang="CSS"><span class="p">.</span><span class="nc">normal</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-CSS" data-lang="CSS"><span class="p">.</span><span class="nc">normal</span> <span class="p">{</span>
 	<span class="k">filter</span><span class="p">:</span> <span class="nb">invert</span><span class="p">(</span><span class="mi">0</span><span class="kt">%</span><span class="p">);</span>
 <span class="p">}</span>
 
 <span class="p">.</span><span class="nc">inverted</span> <span class="p">{</span>
 	<span class="k">filter</span><span class="p">:</span> <span class="nb">invert</span><span class="p">(</span><span class="mi">100</span><span class="kt">%</span><span class="p">);</span>
 <span class="p">}</span>
-</code></pre></td></tr></table>
+</code></pre></td></tr></tbody></table>
 </div>
-</div><p>我们可以把上面的代码套进 CSS 变量中，和两套主题的变量放在一起. 然后在 Hugo 的模板中更改处理图片用的 <a href="https://gohugo.io/getting-started/configuration-markup/#markdown-render-hooks" rel="noreferrer noopener" target="_blank">render hooks<b><sub>⧉</sub></b></a>，给图片加上适当的样式即可.</p>
-<p>其中暗色主题的切换参考的是<a href="https://dev.to/lampewebdev/css-quickies-css-variables-or-how-you-create-a-white-dark-theme-easily-1i0i" rel="noreferrer noopener" target="_blank">这篇文章<b><sub>⧉</sub></b></a>，简单来说，就是在读者切换成暗色主题时给整个 <code>&lt;html&gt;</code> 容器加上一个表示暗色主题的类名（<code>.classList.add("dark")</code>），读者切换成亮色主题时将这个类名去掉（<code>.classList.remove("dark")</code>），然后在 CSS 中针对是否有那个暗色主题的类名，把不同的值定义给同一个变量，而在指定 HTML 元素的样式时直接使用那个变量即可. 详见下面的代码.</p>
+</div><p>我们可以把上面的代码套进 CSS 变量中，和两套主题的变量放在一起. 然后在 Hugo 的模板中更改处理图片用的 <a href="https://gohugo.io/getting-started/configuration-markup/#markdown-render-hooks" target="_blank" rel="noreferrer noopener">render hooks<b><sub>⧉</sub></b></a>，给图片加上适当的样式即可.</p>
+<p>其中暗色主题的切换参考的是<a href="https://dev.to/lampewebdev/css-quickies-css-variables-or-how-you-create-a-white-dark-theme-easily-1i0i" target="_blank" rel="noreferrer noopener">这篇文章<b><sub>⧉</sub></b></a>，简单来说，就是在读者切换成暗色主题时给整个 <code>&lt;html&gt;</code> 容器加上一个表示暗色主题的类名（<code>.classList.add(&#34;dark&#34;)</code>），读者切换成亮色主题时将这个类名去掉（<code>.classList.remove(&#34;dark&#34;)</code>），然后在 CSS 中针对是否有那个暗色主题的类名，把不同的值定义给同一个变量，而在指定 HTML 元素的样式时直接使用那个变量即可. 详见下面的代码.</p>
 <h1 id="完整代码">
 完整代码
 <a href="#%e5%ae%8c%e6%95%b4%e4%bb%a3%e7%a0%81"><small>¶</small></a>
 </h1>
 <p>首先是 HTML 示例代码，在整个 <code>&lt;html&gt;</code> 容器上定义一个类：</p>
 <div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma" tabindex="0"><code><span class="lnt">1
+<table class="lntable"><tbody><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma" tabindex="0"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">html</span> <span class="na">class</span><span class="o">=</span><span class="s">"theme-container"</span><span class="p">&gt;</span>
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">html</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;theme-container&#34;</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
         <span class="c">&lt;!--Something…--&gt;</span>
     <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
-</code></pre></td></tr></table>
+</code></pre></td></tr></tbody></table>
 </div>
 </div><p>然后在 CSS 中对这个容器是否有暗色主题类名 <code>.dark</code> 分别定义变量 <code>--c-img-filter</code>：</p>
 <div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma" tabindex="0"><code><span class="lnt">1
+<table class="lntable"><tbody><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -204,18 +202,18 @@ Hugo 如何让图片在暗色主题下反色 - 自写主题
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma" tabindex="0"><code class="language-css" data-lang="css"><span class="p">.</span><span class="nc">theme-container</span><span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="p">.</span><span class="nc">theme-container</span><span class="p">{</span>
     <span class="nv">--c-img-filter</span><span class="p">:</span> <span class="nb">invert</span><span class="p">(</span><span class="mi">0</span><span class="kt">%</span><span class="p">);</span>
 <span class="p">}</span>
 <span class="p">.</span><span class="nc">theme-container</span><span class="p">.</span><span class="nc">dark</span><span class="p">{</span>
     <span class="nv">--c-img-filter</span><span class="p">:</span> <span class="nb">invert</span><span class="p">(</span><span class="mi">100</span><span class="kt">%</span><span class="p">);</span>
 <span class="p">}</span>
-</code></pre></td></tr></table>
+</code></pre></td></tr></tbody></table>
 </div>
 </div><p>最后处理 Hugo 模板：</p>
 <div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma" tabindex="0"><code><span class="lnt"> 1
+<table class="lntable"><tbody><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -229,47 +227,47 @@ Hugo 如何让图片在暗色主题下反色 - 自写主题
 </span><span class="lnt">12
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma" tabindex="0"><code class="language-html" data-lang="html"><span class="c">&lt;!-- layouts/_default/_markup/render-image.html --&gt;</span>
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="c">&lt;!-- layouts/_default/_markup/render-image.html --&gt;</span>
 
 {{ $url := .Destination | safeURL }}
 <span class="p">&lt;</span><span class="nt">figure</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">"{{ $url }}"</span>
-        <span class="err">{{</span> <span class="err">$</span><span class="na">file_name_array</span> <span class="na">:</span><span class="o">=</span> <span class="s">split</span> <span class="err">$</span><span class="na">url</span> <span class="err">"."</span> <span class="err">}}</span>
+    <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;{{ $url }}&#34;</span>
+        <span class="err">{{</span> <span class="err">$</span><span class="na">file_name_array</span> <span class="na">:</span><span class="o">=</span> <span class="s">split</span> <span class="err">$</span><span class="na">url</span> <span class="err">&#34;.&#34;</span> <span class="err">}}</span>
         <span class="err">{{</span> <span class="err">$</span><span class="na">file_name_len</span> <span class="na">:</span><span class="o">=</span> <span class="s">len</span> <span class="err">$</span><span class="na">file_name_array</span> <span class="err">}}</span>
-        <span class="err">{{</span> <span class="na">if</span> <span class="na">eq</span> <span class="err">(</span><span class="na">index</span> <span class="err">$</span><span class="na">file_name_array</span> <span class="err">(</span><span class="na">sub</span> <span class="err">$</span><span class="na">file_name_len</span> <span class="na">2</span><span class="err">))</span> <span class="err">"</span><span class="na">i</span><span class="err">"</span> <span class="err">}}</span>
-            <span class="na">style</span><span class="o">=</span><span class="s">"filter: var(--c-img-filter);"</span>
+        <span class="err">{{</span> <span class="na">if</span> <span class="na">eq</span> <span class="err">(</span><span class="na">index</span> <span class="err">$</span><span class="na">file_name_array</span> <span class="err">(</span><span class="na">sub</span> <span class="err">$</span><span class="na">file_name_len</span> <span class="na">2</span><span class="err">))</span> <span class="err">&#34;</span><span class="na">i</span><span class="err">&#34;</span> <span class="err">}}</span>
+            <span class="na">style</span><span class="o">=</span><span class="s">&#34;filter: var(--c-img-filter);&#34;</span>
         <span class="err">{{</span> <span class="na">end</span> <span class="err">}}</span>
     <span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">figure</span><span class="p">&gt;</span>
-</code></pre></td></tr></table>
+</code></pre></td></tr></tbody></table>
 </div>
-</div><p>这里没有贸然对所有的图片都加上 <code>style="filter: var(--c-img-filter);"</code>，而是先对文件名进行分析，最后达到的效果是：以 <code>.i.{png|jpg|gif|jpeg|webp|…}</code> 作为文件名后缀的图片会在选择暗色主题时进行反色处理，而没有 <code>.i</code> 这个文件名修饰的图片则永远保持原样. 例如：</p>
+</div><p>这里没有贸然对所有的图片都加上 <code>style=&#34;filter: var(--c-img-filter);&#34;</code>，而是先对文件名进行分析，最后达到的效果是：以 <code>.i.{png|jpg|gif|jpeg|webp|…}</code> 作为文件名后缀的图片会在选择暗色主题时进行反色处理，而没有 <code>.i</code> 这个文件名修饰的图片则永远保持原样. 例如：</p>
 <ul>
 <li>这张图片文件名为 lorem.i.jpg，亮色模式下白底黑字、暗色模式下黑底白字</li>
 </ul>
-<p><figure>
-<img alt="lorem.i.jpg" loading="lazy" src="lorem.i.jpg" style="filter:var(--c-img-filter)"/>
+<p></p><figure>
+<img loading="lazy" src="lorem.i.jpg" alt="lorem.i.jpg" style="filter:var(--c-img-filter)"/>
 <figcaption>◉ 图. lorem.i.jpg</figcaption>
 </figure>
-</p>
+<p></p>
 <hr/>
 <ul>
 <li>这张图片文件名为 lorem.i.png，亮色模式下透明底黑字、暗色模式下透明底白字</li>
 </ul>
-<p><figure>
-<img alt="lorem.i.png" loading="lazy" src="lorem.i.png" style="filter:var(--c-img-filter)"/>
+<p></p><figure>
+<img loading="lazy" src="lorem.i.png" alt="lorem.i.png" style="filter:var(--c-img-filter)"/>
 <figcaption>◉ 图. lorem.i.png</figcaption>
 </figure>
-</p>
+<p></p>
 <hr/>
 <ul>
 <li>这张图片文件名为 cat.jpg，亮色模式与暗色模式下都是正常的颜色</li>
 </ul>
-<p><figure>
-<img alt="cat.jpg" loading="lazy" src="cat.jpg" style="filter:var(--c-img-filter2)"/>
+<p></p><figure>
+<img loading="lazy" src="cat.jpg" alt="cat.jpg" style="filter:var(--c-img-filter2)"/>
 <figcaption>◉ 图. cat.jpg</figcaption>
 </figure>
-</p>
+<p></p>
 <hr/>
 <p></p><p></p><p></p><p></p><p></p><p></p>
 <h1>友情链接（该栏目下的其他文章）</h1>
@@ -283,7 +281,7 @@ Hugo 如何让图片在暗色主题下反色 - 自写主题
 </article>
 </div>
 <div class="right_comments">
-<script async="" crossorigin="anonymous" issue-term="pathname" repo="zerovip/bcsu" src="https://utteranc.es/client.js" theme="github-light"></script>
+<script src="https://utteranc.es/client.js" repo="zerovip/bcsu" issue-term="pathname" theme="github-light" crossorigin="anonymous" async=""></script>
 </div>
 </div>
 <aside class="toc" id="toc">
@@ -300,5 +298,5 @@ Hugo 如何让图片在暗色主题下反色 - 自写主题
 </aside>
 </div>
 <script src="../../js/main.min.60aa2f3f5fd2bd0fbc6bfb7a3e14b1eb89f8dd2b4caa083c22b7f3cb656ea273.js"></script>
-</body>
-</html>
+
+</body></html>
