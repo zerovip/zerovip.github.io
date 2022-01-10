@@ -979,10 +979,13 @@ target='_blank' rel='noreferrer noopener'
 &lt;li>【&lt;strong>词&lt;/strong>】：由两个或以上的【字】组成的，经常一起使用的整体.&lt;/li>
 &lt;li>【&lt;strong>码&lt;/strong>】：为了往屏幕上打出某个【字】或某个【词】而按顺序敲击的键位，用 26 个英文字母表示.&lt;/li>
 &lt;li>【&lt;strong>全码&lt;/strong>】：在【小鹤音形】中，4 个键位的【码】称为全码.&lt;/li>
-&lt;li>【&lt;strong>简码&lt;/strong>】：在【小鹤音形】中，不到 4 个键位的【码】称为简码.&lt;/li>
+&lt;li>【&lt;strong>简码&lt;/strong>】：在【小鹤音形】中，不到 4 个键位的【码】称为简码.
+&lt;ul>
 &lt;li>1 个键位的码叫【&lt;strong>一简码&lt;/strong>】；&lt;/li>
 &lt;li>2 个键位的码叫【&lt;strong>二简码&lt;/strong>】；&lt;/li>
 &lt;li>3 个键位的码叫【&lt;strong>三简码&lt;/strong>】.&lt;/li>
+&lt;/ul>
+&lt;/li>
 &lt;/ul>
 &lt;h1>单字全码码表&lt;/h1>
 &lt;h2>字的全码数据&lt;/h2>
