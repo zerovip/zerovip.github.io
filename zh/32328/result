@@ -1,0 +1,539 @@
+| a and/or b                   | a or b or both                |
+| a number of                  | some                          |
+|{{% notice %}}(an) absence of{{% /notice %}}|{{% notice %}}no, none{{% /notice %}}|
+|{{% notice %}}abundance{{% /notice %}}|{{% notice %}}enough, plenty, a lot (or say how many){{% /notice %}}|
+|{{% notice %}}accede to{{% /notice %}}|{{% notice %}}allow, agree to{{% /notice %}}|
+|{{% notice %}}accelerate{{% /notice %}}|{{% notice %}}speed up{{% /notice %}}|
+|{{% notice %}}accentuate{{% /notice %}}|{{% notice %}}stress{{% /notice %}}|
+|{{% notice %}}accommodation{{% /notice %}}|{{% notice %}}where you live, home{{% /notice %}}|
+| accompany                    | go with                       |
+|{{% notice %}}accompanying{{% /notice %}}|{{% notice %}}with{{% /notice %}}|
+| accomplish                   | carry out, do                 |
+| accorded                     | given                         |
+|{{% notice %}}according to our records{{% /notice %}}|{{% notice %}}our records show{{% /notice %}}|
+| accordingly                  | so                            |
+| accrue                       | add, gain                     |
+| accurate                     | correct, exact, right         |
+|{{% notice %}}acknowledge{{% /notice %}}|{{% notice %}}thank you for{{% /notice %}}|
+|{{% notice %}}acquaint yourself with{{% /notice %}}|{{% notice %}}find out about, read{{% /notice %}}|
+|{{% notice %}}acquiesce{{% /notice %}}|{{% notice %}}agree{{% /notice %}}|
+|{{% notice %}}acquire{{% /notice %}}|{{% notice %}}buy, get{{% /notice %}}|
+| additional                   | added, more, other            |
+| address                      | discuss                       |
+| **addressees**               | **you**                       |
+| addressees are requested     | (省略), please                |
+|{{% notice %}}adjacent{{% /notice %}}|{{% notice %}}next to{{% /notice %}}|
+| adjacent to                  | next to                       |
+|{{% notice %}}adjustment{{% /notice %}}|{{% notice %}}change, alteration{{% /notice %}}|
+|{{% notice %}}admissible{{% /notice %}}|{{% notice %}}allowed, acceptable{{% /notice %}}|
+| advantageous                 | helpful                       |
+| adversely impact on          | hurt, set back                |
+| advise                       | recommend, tell               |
+|{{% notice %}}affix{{% /notice %}}|{{% notice %}}add, write, fasten, stick on, fix to{{% /notice %}}|
+| afford an opportunity        | allow, let                    |
+|{{% notice %}}afforded{{% /notice %}}|{{% notice %}}given{{% /notice %}}|
+|{{% notice %}}aforesaid{{% /notice %}}|{{% notice %}}this, earlier in this document{{% /notice %}}|
+|{{% notice %}}aggregate{{% /notice %}}|{{% notice %}}total{{% /notice %}}|
+| aircraft                     | plane                         |
+|{{% notice %}}aligned{{% /notice %}}|{{% notice %}}lined up, in line{{% /notice %}}|
+|{{% notice %}}alleviate{{% /notice %}}|{{% notice %}}ease, reduce{{% /notice %}}|
+| allocate                     | divide                        |
+|{{% notice %}}along the lines of{{% /notice %}}|{{% notice %}}like, as in{{% /notice %}}|
+|{{% notice %}}alternative{{% /notice %}}|{{% notice %}}(a) choice, (the) other{{% /notice %}}|
+|{{% notice %}}alternatively{{% /notice %}}|{{% notice %}}or, on the other hand{{% /notice %}}|
+|{{% notice %}}ameliorate{{% /notice %}}|{{% notice %}}improve, help{{% /notice %}}|
+|{{% notice %}}amendment{{% /notice %}}|{{% notice %}}change{{% /notice %}}|
+| anticipate                   | expect                        |
+| apparent                     | clear, plain                  |
+|{{% notice %}}applicant (the){{% /notice %}}|{{% notice %}}you{{% /notice %}}|
+|{{% notice %}}application{{% /notice %}}|{{% notice %}}use{{% /notice %}}|
+| appreciable                  | many                          |
+|{{% notice %}}apprise{{% /notice %}}|{{% notice %}}inform, tell{{% /notice %}}|
+| appropriate                  | (省略), proper, right         |
+|{{% notice %}}appropriate to{{% /notice %}}|{{% notice %}}suitable for{{% /notice %}}|
+| approximate                  | about                         |
+|{{% notice %}}approximately{{% /notice %}}|{{% notice %}}about, roughly{{% /notice %}}|
+| arrive onboard               | arrive                        |
+|{{% notice %}}as a consequence of{{% /notice %}}|{{% notice %}}because{{% /notice %}}|
+| as a means of                | to                            |
+|{{% notice %}}as of the date of{{% /notice %}}|{{% notice %}}from{{% /notice %}}|
+| as prescribed by             | in, under                     |
+|{{% notice %}}as regards{{% /notice %}}|{{% notice %}}about, on the subject of{{% /notice %}}|
+| ascertain                    | find out, learn               |
+|{{% notice %}}assemble{{% /notice %}}|{{% notice %}}build, gather, put together{{% /notice %}}|
+| **assist, assistance**       | **aid, help**                 |
+|{{% notice %}}assistance{{% /notice %}}|{{% notice %}}help{{% /notice %}}|
+|{{% notice %}}at an early date{{% /notice %}}|{{% notice %}}soon (or say when){{% /notice %}}|
+|{{% notice %}}at its discretion{{% /notice %}}|{{% notice %}}can, may (or edit out){{% /notice %}}|
+|{{% notice %}}at the moment{{% /notice %}}|{{% notice %}}now (or edit out){{% /notice %}}|
+| at the present time          | at present, now               |
+| attain                       | meet                          |
+| attempt                      | try                           |
+|{{% notice %}}attend{{% /notice %}}|{{% notice %}}come to, go to, be at{{% /notice %}}|
+|{{% notice %}}attributable to{{% /notice %}}|{{% notice %}}due to, because of{{% /notice %}}|
+|{{% notice %}}authorise{{% /notice %}}|{{% notice %}}allow, let{{% /notice %}}|
+|{{% notice %}}authority{{% /notice %}}|{{% notice %}}right, power, may (as in 'have the authority to'){{% /notice %}}|
+|{{% notice %}}axiomatic{{% /notice %}}|{{% notice %}}obvious, goes without saying{{% /notice %}}|
+| be advised                   | (省略)                        |
+|{{% notice %}}belated{{% /notice %}}|{{% notice %}}late{{% /notice %}}|
+|{{% notice %}}beneficial{{% /notice %}}|{{% notice %}}helpful, useful{{% /notice %}}|
+| benefit                      | help                          |
+|{{% notice %}}bestow{{% /notice %}}|{{% notice %}}give, award{{% /notice %}}|
+|{{% notice %}}breach{{% /notice %}}|{{% notice %}}break{{% /notice %}}|
+| by means of                  | by, with                      |
+|{{% notice %}}calculate{{% /notice %}}|{{% notice %}}work out, decide{{% /notice %}}|
+| capability                   | ability                       |
+| caveat                       | warning                       |
+|{{% notice %}}cease{{% /notice %}}|{{% notice %}}finish, stop, end{{% /notice %}}|
+|{{% notice %}}circumvent{{% /notice %}}|{{% notice %}}get round, avoid, skirt, circle{{% /notice %}}|
+|{{% notice %}}clarification{{% /notice %}}|{{% notice %}}explanation, help{{% /notice %}}|
+| close proximity              | near                          |
+| combat environment           | combat                        |
+|{{% notice %}}combine{{% /notice %}}|{{% notice %}}mix{{% /notice %}}|
+| combined                     | joint                         |
+| **commence**                 | **begin, start**              |
+|{{% notice %}}communicate{{% /notice %}}|{{% notice %}}talk, write, telephone (be specific){{% /notice %}}|
+|{{% notice %}}competent{{% /notice %}}|{{% notice %}}able, can{{% /notice %}}|
+|{{% notice %}}compile{{% /notice %}}|{{% notice %}}make, collect{{% /notice %}}|
+|{{% notice %}}complete{{% /notice %}}|{{% notice %}}fill in, finish{{% /notice %}}|
+|{{% notice %}}completion{{% /notice %}}|{{% notice %}}end{{% /notice %}}|
+| comply with                  | follow                        |
+| component                    | part                          |
+| comprise                     | form, include, make up        |
+|{{% notice %}}comprises{{% /notice %}}|{{% notice %}}is made up of, includes{{% /notice %}}|
+|{{% notice %}}(it is) compulsory{{% /notice %}}|{{% notice %}}(you) must{{% /notice %}}|
+|{{% notice %}}conceal{{% /notice %}}|{{% notice %}}hide{{% /notice %}}|
+| concerning                   | about, on                     |
+|{{% notice %}}conclusion{{% /notice %}}|{{% notice %}}end{{% /notice %}}|
+|{{% notice %}}concur{{% /notice %}}|{{% notice %}}agree{{% /notice %}}|
+|{{% notice %}}condition{{% /notice %}}|{{% notice %}}rule{{% /notice %}}|
+| consequently                 | so                            |
+|{{% notice %}}considerable{{% /notice %}}|{{% notice %}}great, important{{% /notice %}}|
+| consolidate                  | combine, join, merge          |
+| constitutes                  | is, forms, makes up           |
+|{{% notice %}}construe{{% /notice %}}|{{% notice %}}interpret{{% /notice %}}|
+|{{% notice %}}consult{{% /notice %}}|{{% notice %}}talk to, meet, ask{{% /notice %}}|
+|{{% notice %}}consumption{{% /notice %}}|{{% notice %}}amount used{{% /notice %}}|
+| contains                     | has                           |
+|{{% notice %}}contemplate{{% /notice %}}|{{% notice %}}think about{{% /notice %}}|
+|{{% notice %}}contrary to{{% /notice %}}|{{% notice %}}against, despite{{% /notice %}}|
+| convene                      | meet                          |
+|{{% notice %}}correct{{% /notice %}}|{{% notice %}}put right{{% /notice %}}|
+|{{% notice %}}correspond{{% /notice %}}|{{% notice %}}write{{% /notice %}}|
+|{{% notice %}}costs the sum of{{% /notice %}}|{{% notice %}}costs{{% /notice %}}|
+|{{% notice %}}counter{{% /notice %}}|{{% notice %}}against{{% /notice %}}|
+|{{% notice %}}courteous{{% /notice %}}|{{% notice %}}polite{{% /notice %}}|
+|{{% notice %}}cumulative{{% /notice %}}|{{% notice %}}added up, added together{{% /notice %}}|
+| currently                    | (省略), now                   |
+|{{% notice %}}customary{{% /notice %}}|{{% notice %}}usual, normal{{% /notice %}}|
+|{{% notice %}}deduct{{% /notice %}}|{{% notice %}}take off, take away{{% /notice %}}|
+| deem                         | believe, consider, think      |
+|{{% notice %}}deem to be{{% /notice %}}|{{% notice %}}treat as{{% /notice %}}|
+|{{% notice %}}defer{{% /notice %}}|{{% notice %}}put off, delay{{% /notice %}}|
+|{{% notice %}}deficiency{{% /notice %}}|{{% notice %}}lack of{{% /notice %}}|
+| delete                       | cut, drop                     |
+| demonstrate                  | prove, show                   |
+|{{% notice %}}denote{{% /notice %}}|{{% notice %}}show{{% /notice %}}|
+| depart                       | leave                         |
+|{{% notice %}}depict{{% /notice %}}|{{% notice %}}show{{% /notice %}}|
+| designate                    | appoint, choose, name         |
+| desire                       | want, wish                    |
+|{{% notice %}}despatch or dispatch{{% /notice %}}|{{% notice %}}send, post{{% /notice %}}|
+|{{% notice %}}despite the fact that{{% /notice %}}|{{% notice %}}though, although{{% /notice %}}|
+| determine                    | decide, figure, find          |
+|{{% notice %}}detrimental{{% /notice %}}|{{% notice %}}harmful, damaging{{% /notice %}}|
+|{{% notice %}}difficulties{{% /notice %}}|{{% notice %}}problems{{% /notice %}}|
+|{{% notice %}}diminish{{% /notice %}}|{{% notice %}}lessen, reduce{{% /notice %}}|
+|{{% notice %}}disburse{{% /notice %}}|{{% notice %}}pay, pay out{{% /notice %}}|
+|{{% notice %}}discharge{{% /notice %}}|{{% notice %}}carry out{{% /notice %}}|
+| disclose                     | show                          |
+|{{% notice %}}disconnect{{% /notice %}}|{{% notice %}}cut off, unplug{{% /notice %}}|
+| discontinue                  | drop, stop                    |
+|{{% notice %}}discrete{{% /notice %}}|{{% notice %}}separate{{% /notice %}}|
+|{{% notice %}}discuss{{% /notice %}}|{{% notice %}}talk about{{% /notice %}}|
+| disseminate                  | give, issue, pass, send       |
+|{{% notice %}}documentation{{% /notice %}}|{{% notice %}}papers, documents{{% /notice %}}|
+|{{% notice %}}domiciled in{{% /notice %}}|{{% notice %}}living in{{% /notice %}}|
+|{{% notice %}}dominant{{% /notice %}}|{{% notice %}}main{{% /notice %}}|
+| due to the fact that         | due to, since                 |
+|{{% notice %}}duration{{% /notice %}}|{{% notice %}}time, life{{% /notice %}}|
+| during the period            | during                        |
+|{{% notice %}}during which time{{% /notice %}}|{{% notice %}}while{{% /notice %}}|
+|{{% notice %}}dwelling{{% /notice %}}|{{% notice %}}home{{% /notice %}}|
+|{{% notice %}}economical{{% /notice %}}|{{% notice %}}cheap, good value{{% /notice %}}|
+| effect modifications         | make changes                  |
+| elect                        | choose, pick                  |
+|{{% notice %}}eligible{{% /notice %}}|{{% notice %}}allowed, qualified{{% /notice %}}|
+| eliminate                    | cut, drop, end                |
+|{{% notice %}}elucidate{{% /notice %}}|{{% notice %}}explain, make clear{{% /notice %}}|
+|{{% notice %}}emphasise{{% /notice %}}|{{% notice %}}stress{{% /notice %}}|
+| employ                       | use                           |
+|{{% notice %}}empower{{% /notice %}}|{{% notice %}}allow, let{{% /notice %}}|
+|{{% notice %}}enable{{% /notice %}}|{{% notice %}}allow{{% /notice %}}|
+|{{% notice %}}(please find) enclosed{{% /notice %}}|{{% notice %}}I enclose{{% /notice %}}|
+| encounter                    | meet                          |
+| endeavor                     | try                           |
+|{{% notice %}}endeavour{{% /notice %}}|{{% notice %}}try{{% /notice %}}|
+|{{% notice %}}enquire{{% /notice %}}|{{% notice %}}ask{{% /notice %}}|
+|{{% notice %}}enquiry{{% /notice %}}|{{% notice %}}question{{% /notice %}}|
+| ensure                       | make sure                     |
+|{{% notice %}}entitlement{{% /notice %}}|{{% notice %}}right{{% /notice %}}|
+| enumerate                    | count                         |
+|{{% notice %}}envisage{{% /notice %}}|{{% notice %}}expect, imagine{{% /notice %}}|
+| equipments                   | equipment                     |
+| equitable                    | fair                          |
+|{{% notice %}}equivalent{{% /notice %}}|{{% notice %}}equal, the same{{% /notice %}}|
+|{{% notice %}}erroneous{{% /notice %}}|{{% notice %}}wrong{{% /notice %}}|
+| establish                    | set up, prove, show           |
+|{{% notice %}}evaluate{{% /notice %}}|{{% notice %}}test, check{{% /notice %}}|
+| evidenced                    | showed                        |
+| evident                      | clear                         |
+|{{% notice %}}evince{{% /notice %}}|{{% notice %}}show, prove{{% /notice %}}|
+|{{% notice %}}ex officio{{% /notice %}}|{{% notice %}}because of his or her position{{% /notice %}}|
+|{{% notice %}}exceptionally{{% /notice %}}|{{% notice %}}only when, in this case{{% /notice %}}|
+|{{% notice %}}excessive{{% /notice %}}|{{% notice %}}too many, too much{{% /notice %}}|
+|{{% notice %}}exclude{{% /notice %}}|{{% notice %}}leave out{{% /notice %}}|
+|{{% notice %}}excluding{{% /notice %}}|{{% notice %}}apart from, except{{% /notice %}}|
+|{{% notice %}}exclusively{{% /notice %}}|{{% notice %}}only{{% /notice %}}|
+|{{% notice %}}exempt from{{% /notice %}}|{{% notice %}}free from{{% /notice %}}|
+| exhibit                      | show                          |
+| expedite                     | hasten, speed up              |
+| expeditious                  | fast, quick                   |
+|{{% notice %}}expeditiously{{% /notice %}}|{{% notice %}}as soon as possible, quickly{{% /notice %}}|
+| expend                       | spend                         |
+|{{% notice %}}expenditure{{% /notice %}}|{{% notice %}}spending{{% /notice %}}|
+| expertise                    | ability                       |
+| expiration                   | end                           |
+|{{% notice %}}expire{{% /notice %}}|{{% notice %}}run out{{% /notice %}}|
+|{{% notice %}}extant{{% /notice %}}|{{% notice %}}current, in force{{% /notice %}}|
+|{{% notice %}}extremity{{% /notice %}}|{{% notice %}}limit{{% /notice %}}|
+|{{% notice %}}fabricate{{% /notice %}}|{{% notice %}}make, make up{{% /notice %}}|
+| facilitate                   | ease, help                    |
+|{{% notice %}}factor{{% /notice %}}|{{% notice %}}reason{{% /notice %}}|
+| failed to                    | didn’t                        |
+|{{% notice %}}failure to{{% /notice %}}|{{% notice %}}if you do not{{% /notice %}}|
+| feasible                     | can be done, workable         |
+| females                      | women                         |
+|{{% notice %}}finalise{{% /notice %}}|{{% notice %}}end, finish{{% /notice %}}|
+| finalize                     | complete, finish              |
+|{{% notice %}}following{{% /notice %}}|{{% notice %}}after{{% /notice %}}|
+| for a period of              | for                           |
+| for example,\_\_\_\_\_\_etc. | for example, such as          |
+|{{% notice %}}for the duration of{{% /notice %}}|{{% notice %}}during, while{{% /notice %}}|
+|{{% notice %}}for the purpose of{{% /notice %}}|{{% notice %}}to, for{{% /notice %}}|
+|{{% notice %}}for the reason that{{% /notice %}}|{{% notice %}}because{{% /notice %}}|
+| forfeit                      | give up, lose                 |
+|{{% notice %}}formulate{{% /notice %}}|{{% notice %}}plan, devise{{% /notice %}}|
+|{{% notice %}}forthwith{{% /notice %}}|{{% notice %}}now, at once{{% /notice %}}|
+| forward                      | send                          |
+| frequently                   | often                         |
+| function                     | act, role, work               |
+| furnish                      | give, send                    |
+|{{% notice %}}further to{{% /notice %}}|{{% notice %}}after, following{{% /notice %}}|
+|{{% notice %}}furthermore{{% /notice %}}|{{% notice %}}then, also, and{{% /notice %}}|
+|{{% notice %}}generate{{% /notice %}}|{{% notice %}}produce, give, make{{% /notice %}}|
+|{{% notice %}}give consideration to{{% /notice %}}|{{% notice %}}consider, think about{{% /notice %}}|
+|{{% notice %}}grant{{% /notice %}}|{{% notice %}}give{{% /notice %}}|
+| has a requirement for        | needs                         |
+|{{% notice %}}henceforth{{% /notice %}}|{{% notice %}}from now on, from today{{% /notice %}}|
+|{{% notice %}}hereby{{% /notice %}}|{{% notice %}}now, by this (or edit out){{% /notice %}}|
+| herein                       | here                          |
+|{{% notice %}}hereinafter{{% /notice %}}|{{% notice %}}after this (or edit out){{% /notice %}}|
+|{{% notice %}}hereof{{% /notice %}}|{{% notice %}}of this{{% /notice %}}|
+|{{% notice %}}hereto{{% /notice %}}|{{% notice %}}to this{{% /notice %}}|
+| heretofore                   | until now                     |
+|{{% notice %}}hereunder{{% /notice %}}|{{% notice %}}below{{% /notice %}}|
+| herewith                     | below, here                   |
+|{{% notice %}}hitherto{{% /notice %}}|{{% notice %}}until now{{% /notice %}}|
+|{{% notice %}}hold in abeyance{{% /notice %}}|{{% notice %}}wait, postpone{{% /notice %}}|
+|{{% notice %}}hope and trust{{% /notice %}}|{{% notice %}}hope, trust (but not both){{% /notice %}}|
+| however                      | but                           |
+| identical                    | same                          |
+| identify                     | find, name, show              |
+|{{% notice %}}if and when{{% /notice %}}|{{% notice %}}if, when (but not both){{% /notice %}}|
+|{{% notice %}}illustrate{{% /notice %}}|{{% notice %}}show, explain{{% /notice %}}|
+| immediately                  | at once                       |
+| impacted                     | affected, changed             |
+| **implement**                | **carry out, start**          |
+|{{% notice %}}imply{{% /notice %}}|{{% notice %}}suggest, hint at{{% /notice %}}|
+|{{% notice %}}in a number of cases{{% /notice %}}|{{% notice %}}some (or say how many){{% /notice %}}|
+| in a timely manner           | on time, promptly             |
+| **in accordance with**       | **by, following, per, under** |
+| in addition                  | also, besides, too            |
+|{{% notice %}}in advance{{% /notice %}}|{{% notice %}}before{{% /notice %}}|
+| in an effort to              | to                            |
+|{{% notice %}}in case of{{% /notice %}}|{{% notice %}}if{{% /notice %}}|
+|{{% notice %}}in conjunction with{{% /notice %}}|{{% notice %}}and, with{{% /notice %}}|
+|{{% notice %}}in connection with{{% /notice %}}|{{% notice %}}for, about{{% /notice %}}|
+|{{% notice %}}in consequence{{% /notice %}}|{{% notice %}}because, as a result{{% /notice %}}|
+|{{% notice %}}in excess of{{% /notice %}}|{{% notice %}}more than{{% /notice %}}|
+| in lieu of                   | instead                       |
+| **in order that**            | **for, so**                   |
+| in order to                  | to                            |
+|{{% notice %}}in receipt of{{% /notice %}}|{{% notice %}}get, have, receive{{% /notice %}}|
+| in regard to                 | about, concerning, on         |
+| in relation to               | about, with, to               |
+|{{% notice %}}in respect of{{% /notice %}}|{{% notice %}}about, for{{% /notice %}}|
+|{{% notice %}}in the absence of{{% /notice %}}|{{% notice %}}without{{% /notice %}}|
+| **in the amount of**         | **for**                       |
+|{{% notice %}}in the course of{{% /notice %}}|{{% notice %}}while, during{{% /notice %}}|
+| **in the event of**          | **if**                        |
+|{{% notice %}}in the event of/that{{% /notice %}}|{{% notice %}}if{{% /notice %}}|
+|{{% notice %}}in the majority of instances{{% /notice %}}|{{% notice %}}most, mostly{{% /notice %}}|
+| in the near future           | shortly, soon                 |
+|{{% notice %}}in the neighbourhood of{{% /notice %}}|{{% notice %}}about, around{{% /notice %}}|
+| in the process of            | (省略)                        |
+| in view of                   | since                         |
+| in view of the above         | so                            |
+|{{% notice %}}in view of the fact that{{% /notice %}}|{{% notice %}}as, because{{% /notice %}}|
+|{{% notice %}}inappropriate{{% /notice %}}|{{% notice %}}wrong, unsuitable{{% /notice %}}|
+| inasmuch as                  | since                         |
+| inception                    | start                         |
+|{{% notice %}}incorporating{{% /notice %}}|{{% notice %}}which includes{{% /notice %}}|
+| incumbent upon               | must                          |
+|{{% notice %}}incur{{% /notice %}}|{{% notice %}}have to pay, owe{{% /notice %}}|
+| indicate                     | show, write down              |
+| indication                   | sign                          |
+|{{% notice %}}inform{{% /notice %}}|{{% notice %}}tell{{% /notice %}}|
+| initial                      | first                         |
+|{{% notice %}}initially{{% /notice %}}|{{% notice %}}at first{{% /notice %}}|
+| initiate                     | start                         |
+|{{% notice %}}insert{{% /notice %}}|{{% notice %}}put in{{% /notice %}}|
+|{{% notice %}}instances{{% /notice %}}|{{% notice %}}cases{{% /notice %}}|
+|{{% notice %}}intend to{{% /notice %}}|{{% notice %}}will{{% /notice %}}|
+| inter alia                   | (省略)                        |
+| interface                    | meet, work with               |
+| interpose no objection       | don’t object                  |
+|{{% notice %}}intimate{{% /notice %}}|{{% notice %}}say, hint{{% /notice %}}|
+|{{% notice %}}irrespective of{{% /notice %}}|{{% notice %}}despite, even if{{% /notice %}}|
+| is applicable to             | applies to                    |
+| is authorized to             | may                           |
+| is in consonance with        | agrees with, follows          |
+|{{% notice %}}is of the opinion{{% /notice %}}|{{% notice %}}thinks{{% /notice %}}|
+| is responsible for           | (省略) handles                |
+|{{% notice %}}issue{{% /notice %}}|{{% notice %}}give, send{{% /notice %}}|
+| it appears                   | seems                         |
+| **it is**                    | (省略)                        |
+| it is essential              | must, need to                 |
+|{{% notice %}}it is known that{{% /notice %}}|{{% notice %}}I/we know that{{% /notice %}}|
+| it is requested              | please, we request, I request |
+|{{% notice %}}jeopardise{{% /notice %}}|{{% notice %}}risk, threaten{{% /notice %}}|
+|{{% notice %}}(a) large number of{{% /notice %}}|{{% notice %}}many, most (or say how many){{% /notice %}}|
+| liaison                      | discussion                    |
+| limited number               | limits                        |
+|{{% notice %}}locality{{% /notice %}}|{{% notice %}}place, area{{% /notice %}}|
+|{{% notice %}}locate{{% /notice %}}|{{% notice %}}find, put{{% /notice %}}|
+| magnitude                    | size                          |
+| maintain                     | keep, support                 |
+|{{% notice %}}(it is) mandatory{{% /notice %}}|{{% notice %}}(you) must{{% /notice %}}|
+|{{% notice %}}manner{{% /notice %}}|{{% notice %}}way{{% /notice %}}|
+|{{% notice %}}manufacture{{% /notice %}}|{{% notice %}}make{{% /notice %}}|
+|{{% notice %}}marginal{{% /notice %}}|{{% notice %}}small, slight{{% /notice %}}|
+|{{% notice %}}material{{% /notice %}}|{{% notice %}}relevant{{% /notice %}}|
+|{{% notice %}}materialise{{% /notice %}}|{{% notice %}}happen, occur{{% /notice %}}|
+| maximum                      | greatest, largest, most       |
+|{{% notice %}}may in the future{{% /notice %}}|{{% notice %}}may, might, could{{% /notice %}}|
+|{{% notice %}}merchandise{{% /notice %}}|{{% notice %}}goods{{% /notice %}}|
+| methodology                  | method                        |
+| minimize                     | decrease, method              |
+| minimum                      | least, smallest               |
+|{{% notice %}}mislay{{% /notice %}}|{{% notice %}}lose{{% /notice %}}|
+|{{% notice %}}modification{{% /notice %}}|{{% notice %}}change{{% /notice %}}|
+| modify                       | change                        |
+| monitor                      | check, watch                  |
+|{{% notice %}}moreover{{% /notice %}}|{{% notice %}}and, also, as well{{% /notice %}}|
+| necessitate                  | cause, need                   |
+|{{% notice %}}negligible{{% /notice %}}|{{% notice %}}very small{{% /notice %}}|
+|{{% notice %}}nevertheless{{% /notice %}}|{{% notice %}}but, however, even so{{% /notice %}}|
+| not later than 10 May        | by 10 May, before 11 May      |
+| not later than 1600          | by 1600                       |
+| notify                       | let know, tell                |
+| notwithstanding              | inspite of, still             |
+| numerous                     | many                          |
+| objective                    | aim, goal                     |
+| obligate                     | bind, compel                  |
+|{{% notice %}}(it is) obligatory{{% /notice %}}|{{% notice %}}(you) must{{% /notice %}}|
+| observe                      | see                           |
+|{{% notice %}}obtain{{% /notice %}}|{{% notice %}}get, receive{{% /notice %}}|
+|{{% notice %}}occasioned by{{% /notice %}}|{{% notice %}}caused by, because of{{% /notice %}}|
+| on a regular basis           | (省略)                        |
+|{{% notice %}}on behalf of{{% /notice %}}|{{% notice %}}for{{% /notice %}}|
+|{{% notice %}}on numerous occasions{{% /notice %}}|{{% notice %}}often{{% /notice %}}|
+|{{% notice %}}on request{{% /notice %}}|{{% notice %}}if you ask{{% /notice %}}|
+|{{% notice %}}on the grounds that{{% /notice %}}|{{% notice %}}because{{% /notice %}}|
+|{{% notice %}}on the occasion that{{% /notice %}}|{{% notice %}}when, if{{% /notice %}}|
+| operate                      | run, use, work                |
+| optimum                      | best, greatest, most          |
+| option                       | choice, way                   |
+|{{% notice %}}ordinarily{{% /notice %}}|{{% notice %}}normally, usually{{% /notice %}}|
+|{{% notice %}}otherwise{{% /notice %}}|{{% notice %}}or{{% /notice %}}|
+|{{% notice %}}outstanding{{% /notice %}}|{{% notice %}}unpaid{{% /notice %}}|
+|{{% notice %}}owing to{{% /notice %}}|{{% notice %}}because of{{% /notice %}}|
+| parameters                   | limits                        |
+|{{% notice %}}partially{{% /notice %}}|{{% notice %}}partly{{% /notice %}}|
+| participate                  | take part                     |
+|{{% notice %}}particulars{{% /notice %}}|{{% notice %}}details, facts{{% /notice %}}|
+|{{% notice %}}per annum{{% /notice %}}|{{% notice %}}a year{{% /notice %}}|
+| perform                      | do                            |
+|{{% notice %}}permissible{{% /notice %}}|{{% notice %}}allowed{{% /notice %}}|
+| permit                       | let                           |
+|{{% notice %}}personnel{{% /notice %}}|{{% notice %}}people, staff{{% /notice %}}|
+|{{% notice %}}persons{{% /notice %}}|{{% notice %}}people, anyone{{% /notice %}}|
+| pertaining to                | about, of, on                 |
+|{{% notice %}}peruse{{% /notice %}}|{{% notice %}}read, read carefully, look at{{% /notice %}}|
+|{{% notice %}}place{{% /notice %}}|{{% notice %}}put{{% /notice %}}|
+| portion                      | part                          |
+| possess                      | have, own                     |
+|{{% notice %}}possessions{{% /notice %}}|{{% notice %}}belongings{{% /notice %}}|
+| practicable                  | practical                     |
+|{{% notice %}}practically{{% /notice %}}|{{% notice %}}almost, nearly{{% /notice %}}|
+| preclude                     | prevent                       |
+|{{% notice %}}predominant{{% /notice %}}|{{% notice %}}main{{% /notice %}}|
+|{{% notice %}}prescribe{{% /notice %}}|{{% notice %}}set, fix{{% /notice %}}|
+|{{% notice %}}preserve{{% /notice %}}|{{% notice %}}keep, protect{{% /notice %}}|
+| previous                     | earlier                       |
+| previously                   | before                        |
+|{{% notice %}}principal{{% /notice %}}|{{% notice %}}main{{% /notice %}}|
+| prior to                     | before                        |
+| prioritize                   | rank                          |
+| proceed                      | do, go ahead, try             |
+| procure                      | (省略)                        |
+| proficiency                  | skill                         |
+|{{% notice %}}profusion of{{% /notice %}}|{{% notice %}}plenty, too many (or say how many){{% /notice %}}|
+|{{% notice %}}prohibit{{% /notice %}}|{{% notice %}}ban, stop{{% /notice %}}|
+|{{% notice %}}projected{{% /notice %}}|{{% notice %}}estimated{{% /notice %}}|
+|{{% notice %}}prolonged{{% /notice %}}|{{% notice %}}long{{% /notice %}}|
+|{{% notice %}}promptly{{% /notice %}}|{{% notice %}}quickly, at once{{% /notice %}}|
+| **promulgate**               | **issue, publish**            |
+|{{% notice %}}proportion{{% /notice %}}|{{% notice %}}part{{% /notice %}}|
+| provide                      | give, offer, say              |
+| provided that                | if                            |
+| provides guidance for        | guides                        |
+|{{% notice %}}provisions{{% /notice %}}|{{% notice %}}rules, terms{{% /notice %}}|
+|{{% notice %}}proximity{{% /notice %}}|{{% notice %}}closeness, nearness{{% /notice %}}|
+| purchase                     | buy                           |
+| pursuant to                  | by, following, per, under     |
+|{{% notice %}}reconsider{{% /notice %}}|{{% notice %}}think again about, look again at{{% /notice %}}|
+|{{% notice %}}reduce{{% /notice %}}|{{% notice %}}cut{{% /notice %}}|
+|{{% notice %}}reduction{{% /notice %}}|{{% notice %}}cut{{% /notice %}}|
+|{{% notice %}}referred to as{{% /notice %}}|{{% notice %}}called{{% /notice %}}|
+|{{% notice %}}refers to{{% /notice %}}|{{% notice %}}talks about, mentions{{% /notice %}}|
+| reflect                      | say, show                     |
+|{{% notice %}}(have) regard to{{% /notice %}}|{{% notice %}}take into account{{% /notice %}}|
+| regarding                    | about, of, on                 |
+|{{% notice %}}regulation{{% /notice %}}|{{% notice %}}rule{{% /notice %}}|
+|{{% notice %}}reimburse{{% /notice %}}|{{% notice %}}repay, pay back{{% /notice %}}|
+|{{% notice %}}reiterate{{% /notice %}}|{{% notice %}}repeat, restate{{% /notice %}}|
+|{{% notice %}}relating to{{% /notice %}}|{{% notice %}}about{{% /notice %}}|
+| relative to                  | about, on                     |
+| relocate                     | move                          |
+| remain                       | stay                          |
+| remainder                    | rest                          |
+|{{% notice %}}remittance{{% /notice %}}|{{% notice %}}payment{{% /notice %}}|
+| remuneration                 | pay, payment                  |
+| render                       | give, make                    |
+|{{% notice %}}report{{% /notice %}}|{{% notice %}}tell{{% /notice %}}|
+| represents                   | is                            |
+| request                      | ask                           |
+| require                      | must, need                    |
+| requirement                  | need                          |
+|{{% notice %}}requirements{{% /notice %}}|{{% notice %}}needs, rules{{% /notice %}}|
+| reside                       | live                          |
+|{{% notice %}}residence{{% /notice %}}|{{% notice %}}home, where you live{{% /notice %}}|
+|{{% notice %}}restriction{{% /notice %}}|{{% notice %}}limit{{% /notice %}}|
+| retain                       | keep                          |
+|{{% notice %}}review{{% /notice %}}|{{% notice %}}look at (again){{% /notice %}}|
+|{{% notice %}}revised{{% /notice %}}|{{% notice %}}new, changed{{% /notice %}}|
+| said, some, such             | the, this, that               |
+|{{% notice %}}said/such/same{{% /notice %}}|{{% notice %}}the, this, that{{% /notice %}}|
+|{{% notice %}}scrutinise{{% /notice %}}|{{% notice %}}read (look at) carefully{{% /notice %}}|
+|{{% notice %}}select{{% /notice %}}|{{% notice %}}choose{{% /notice %}}|
+| selection                    | choice                        |
+| set forth in                 | in                            |
+|{{% notice %}}settle{{% /notice %}}|{{% notice %}}pay{{% /notice %}}|
+| similar to                   | like                          |
+|{{% notice %}}similarly{{% /notice %}}|{{% notice %}}also, in the same way{{% /notice %}}|
+|{{% notice %}}solely{{% /notice %}}|{{% notice %}}only{{% /notice %}}|
+| solicit                      | ask for, request              |
+|{{% notice %}}specified{{% /notice %}}|{{% notice %}}given, written, set{{% /notice %}}|
+|{{% notice %}}state{{% /notice %}}|{{% notice %}}say, tell us, write down{{% /notice %}}|
+| state-of-the-art             | latest                        |
+|{{% notice %}}statutory{{% /notice %}}|{{% notice %}}legal, by law{{% /notice %}}|
+| subject                      | the, this, your               |
+|{{% notice %}}subject to{{% /notice %}}|{{% notice %}}depending on, under, keeping to{{% /notice %}}|
+| submit                       | give, send                    |
+| subsequent                   | later, next                   |
+|{{% notice %}}subsequent to/upon{{% /notice %}}|{{% notice %}}after{{% /notice %}}|
+| subsequently                 | after, later, then            |
+| substantial                  | large, much                   |
+|{{% notice %}}substantially{{% /notice %}}|{{% notice %}}more or less{{% /notice %}}|
+| successfully complete        | complete, pass                |
+| sufficient                   | enough                        |
+|{{% notice %}}supplement{{% /notice %}}|{{% notice %}}go with, add to{{% /notice %}}|
+|{{% notice %}}supplementary{{% /notice %}}|{{% notice %}}extra, more{{% /notice %}}|
+|{{% notice %}}supply{{% /notice %}}|{{% notice %}}give, sell, deliver{{% /notice %}}|
+| take action to               | (省略)                        |
+|{{% notice %}}(the) tenant{{% /notice %}}|{{% notice %}}you{{% /notice %}}|
+| terminate                    | end, stop                     |
+|{{% notice %}}that being the case{{% /notice %}}|{{% notice %}}if so{{% /notice %}}|
+| the month of                 | (省略)                        |
+|{{% notice %}}the question as to whether{{% /notice %}}|{{% notice %}}whether{{% /notice %}}|
+| the undersigned              | I                             |
+| the use of                   | (省略)                        |
+| there are                    | (省略)                        |
+| there is                     | (省略)                        |
+|{{% notice %}}thereafter{{% /notice %}}|{{% notice %}}then, afterwards{{% /notice %}}|
+|{{% notice %}}thereby{{% /notice %}}|{{% notice %}}by that, because of that{{% /notice %}}|
+| therefore                    | so                            |
+| therein                      | there                         |
+| thereof                      | its, their                    |
+|{{% notice %}}thereto{{% /notice %}}|{{% notice %}}to that{{% /notice %}}|
+| **this activity, command**   | **us, we**                    |
+|{{% notice %}}thus{{% /notice %}}|{{% notice %}}so, therefore{{% /notice %}}|
+| time period                  | (任选一个)                    |
+| timely                       | prompt                        |
+|{{% notice %}}to date{{% /notice %}}|{{% notice %}}so far, up to now{{% /notice %}}|
+|{{% notice %}}to the extent that{{% /notice %}}|{{% notice %}}if, when{{% /notice %}}|
+|{{% notice %}}transfer{{% /notice %}}|{{% notice %}}change, move{{% /notice %}}|
+| transmit                     | send                          |
+| type                         | (省略)                        |
+|{{% notice %}}ultimately{{% /notice %}}|{{% notice %}}in the end, finally{{% /notice %}}|
+|{{% notice %}}unavailability{{% /notice %}}|{{% notice %}}lack of{{% /notice %}}|
+| under the provisions of      | under                         |
+|{{% notice %}}undernoted{{% /notice %}}|{{% notice %}}the following{{% /notice %}}|
+|{{% notice %}}undersigned{{% /notice %}}|{{% notice %}}I, we{{% /notice %}}|
+|{{% notice %}}undertake{{% /notice %}}|{{% notice %}}agree, promise, do{{% /notice %}}|
+|{{% notice %}}uniform{{% /notice %}}|{{% notice %}}same, similar{{% /notice %}}|
+|{{% notice %}}unilateral{{% /notice %}}|{{% notice %}}one-sided, one-way{{% /notice %}}|
+|{{% notice %}}unoccupied{{% /notice %}}|{{% notice %}}empty{{% /notice %}}|
+|{{% notice %}}until such time{{% /notice %}}|{{% notice %}}until{{% /notice %}}|
+| until such time as           | until                         |
+|{{% notice %}}utilisation{{% /notice %}}|{{% notice %}}use{{% /notice %}}|
+|{{% notice %}}utilise{{% /notice %}}|{{% notice %}}use{{% /notice %}}|
+| **utilize, utilization**     | **use**                       |
+| validate                     | confirm                       |
+|{{% notice %}}variation{{% /notice %}}|{{% notice %}}change{{% /notice %}}|
+| viable                       | practical, workable           |
+| vice                         | instead of, versus            |
+|{{% notice %}}virtually{{% /notice %}}|{{% notice %}}almost (or edit out){{% /notice %}}|
+|{{% notice %}}visualise{{% /notice %}}|{{% notice %}}see, predict{{% /notice %}}|
+| warrant                      | call for, permit              |
+|{{% notice %}}ways and means{{% /notice %}}|{{% notice %}}ways{{% /notice %}}|
+|{{% notice %}}we have pleasure in{{% /notice %}}|{{% notice %}}we are glad to{{% /notice %}}|
+|{{% notice %}}whatsoever{{% /notice %}}|{{% notice %}}whatever, what, any{{% /notice %}}|
+|{{% notice %}}whensoever{{% /notice %}}|{{% notice %}}when{{% /notice %}}|
+| whereas                      | because, since                |
+|{{% notice %}}whether or not{{% /notice %}}|{{% notice %}}whether{{% /notice %}}|
+|{{% notice %}}with a view to{{% /notice %}}|{{% notice %}}to, so that{{% /notice %}}|
+|{{% notice %}}with effect from{{% /notice %}}|{{% notice %}}from{{% /notice %}}|
+| with reference to            | about                         |
+|{{% notice %}}with regard to{{% /notice %}}|{{% notice %}}about, for{{% /notice %}}|
+|{{% notice %}}with respect to{{% /notice %}}|{{% notice %}}about, for{{% /notice %}}|
+| with the exception of        | except for                    |
+|{{% notice %}}with the minimum of delay{{% /notice %}}|{{% notice %}}quickly (or say when){{% /notice %}}|
+| witnessed                    | saw                           |
+|{{% notice %}}you are requested{{% /notice %}}|{{% notice %}}please{{% /notice %}}|
+|{{% notice %}}your attention is drawn to{{% /notice %}}|{{% notice %}}please see, please note{{% /notice %}}|
+| your office                  | you                           |
+|{{% notice %}}zone{{% /notice %}}|{{% notice %}}area, region{{% /notice %}}|
+| / (斜线)                     | and, or                       |
