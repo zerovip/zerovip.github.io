@@ -3,7 +3,1374 @@
 近期内容 |
 RSS 订阅
 | 赤赤的象牙塔</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>
-Wed, 15 Sep 2021 00:00:00 CST</lastBuildDate><item><title>平板与电子纸类工具的犹豫 - 消费指南</title><link>https://zerovip.github.io/zh/82178/</link><pubDate>Wed, 15 Sep 2021 00:00:00 CST</pubDate><guid isPermaLink="false">/zh/82178/</guid><description>&lt;div style='background-color:#FDE763;'>
+Mon, 17 Jan 2022 00:00:00 CST</lastBuildDate><item><title>【译】如何用简明英语写作 - 语言表达法</title><link>https://zerovip.github.io/zh/32328/</link><pubDate>Mon, 17 Jan 2022 00:00:00 CST</pubDate><guid isPermaLink="false">/zh/32328/</guid><description>&lt;h1>博主按&lt;/h1>
+&lt;div style='background-color:#FDE763;'>
+&lt;p>本文分为两个部分，前一部分是&lt;a href='http://www.plainenglish.co.uk/how-to-write-in-plain-english.html'
+target='_blank' rel='noreferrer noopener'
+>How to write in plain English&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>的翻译. 版权归“简明英语运动”所有. 这篇文章的版权不遵守本站的知识共享协议. 我在翻译之前给他们发了邮件想要得到许可，但一直没有收到回复. 本翻译仅作学习用途，如有任何不妥可以联系我删除. 任何翻译得不好的地方可以评论或邮件联系我指出. 另外，他们的网站里有很多&lt;a href='http://www.plainenglish.co.uk/free-guides.html'
+target='_blank' rel='noreferrer noopener'
+>免费的指南&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>，包括一些特定主题的简明英语写作以及基本的语法知识等，未来如果有时间我也可以继续翻译一部分.&lt;/p>
+&lt;p>另外，我找到了来自美国政府官方网站的这份简单词语列表：&lt;a href='https://www.plainlanguage.gov/guidelines/words/use-simple-words-phrases/'
+target='_blank' rel='noreferrer noopener'
+>Use simple words and phrases&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>，我把它以附录的形式放在本文的后面作为补充. &lt;a href='https://www.plainlanguage.gov/about/'
+target='_blank' rel='noreferrer noopener'
+>简明语言行动与信息网络&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>是一个没有资金支持的工作小组，他们提倡在政府公文写作中使用简明的语言，这样可以节约时间和金钱. 该网站为联邦网站，内容均属公共领域，无需要求授权即可任意使用. 该网站也提供大量的教程、指引、用例、资源和训练课程，读者也可以自行阅读、浏览.&lt;/p>
+&lt;p>这两份材料虽然分别来自英国和美国，英式英语和美式英语也稍有差异，但“简明英语”的思想应该是一致的.&lt;/p>
+&lt;/div>
+&lt;h1>正文&lt;/h1>
+&lt;div style='background-color:#FDE763;'>
+&lt;p>版权：&lt;a href='http://www.plainenglish.co.uk/'
+target='_blank' rel='noreferrer noopener'
+>“简明英语运动”（Plain English Campaign）&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>拥有这份指南的版权. 你可以将他们的指南打印出来或保存在硬盘里自用. 如果没有经过允许，你不能影印任何指南，也不能将电子版的拷贝传阅给他人.&lt;/p>
+&lt;/div>
+&lt;hr>
+&lt;p>“所以，简明英语是什么呢？”这份指南将以此作为开始.&lt;/p>
+&lt;p>接下来这份指南还会关照如何让写作更加清晰：&lt;/p>
+&lt;ul>
+&lt;li>让你的句子保持短小&lt;/li>
+&lt;li>尽量用主动的动词&lt;/li>
+&lt;li>使用“you（你）”和“we（我们）”&lt;/li>
+&lt;li>使用对读者来说适当的单词&lt;/li>
+&lt;li>不要害怕下达指示&lt;/li>
+&lt;li>避免名词化&lt;/li>
+&lt;li>在合适的地方使用列表&lt;/li>
+&lt;/ul>
+&lt;p>然后这份指南会研究道歉的难题，并会处理一些迷思（myths），那些迷思会妨碍清晰的交流.&lt;/p>
+&lt;p>最后这份指南会做个总结，并给出一份应该避免使用的单词的列表.&lt;/p>
+&lt;hr>
+&lt;h2>所以简明英语是什么？&lt;/h2>
+&lt;p>首先让我们先说说简明英语不是什么，并来打破一些关于它的迷思.&lt;/p>
+&lt;ul>
+&lt;li>它并不是诸如“cat sat on the mat”或“Janet and John”&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>的写作. 无论是传单、信件，还是法律的文档，几乎任何东西都可以用简明英语写出，不需要屈尊俯就或过度简化.&lt;/li>
+&lt;li>它并不意味着缩减你信息的长度或改变它的意思. 大多数英国最大型的保险公司出台的保险单就是用简明英语写成的，那些保险单把所有事项都完整地解释了.&lt;/li>
+&lt;li>它不是关于禁止新词汇、排除长单词、或推动绝对完美语法的. 当然也不是关于放任语法变差的.&lt;/li>
+&lt;li>它不是交流沟通的业余方法. 大多数有远见的高级经理一直在使用简明英语写作.&lt;/li>
+&lt;li>以及最后，它没有我们想象的那么容易.&lt;/li>
+&lt;/ul>
+&lt;p>令人遗憾的是，由于公共服务行业（比如地方议会、银行、建筑协会、保险公司、政府部门）的官僚主义，我们已经学会了接受一种官方的写作风格，这种写作风格是低效的，而且常常并不友好.&lt;/p>
+&lt;p>不过在最近几年中，这些罪魁祸首中的一些人已经开始纠正问题. 要么他们清楚地重写了他们的文档，要么他们给员工培训了简明英语的艺术，或者是两者兼有.&lt;/p>
+&lt;p>简明英语的主要优点有：&lt;/p>
+&lt;ul>
+&lt;li>它写起来很快；&lt;/li>
+&lt;li>它读起来很快；而且&lt;/li>
+&lt;li>你可以更经常地、更容易地、更友好地把你的信息传达清楚.&lt;/li>
+&lt;/ul>
+&lt;p>如果你每天花费多于一个小时的时间写作，那么你在某种程度上就是一位专业的作家. 所以正确的写作是至关重要的.&lt;/p>
+&lt;p>所以简明英语是什么呢？就是以读者为中心，用正确的语气写出的信息，它清晰又简洁.&lt;/p>
+&lt;hr>
+&lt;h2>让你的句子保持短小&lt;/h2>
+&lt;p>大多数专家都会同意，清晰的写作中句子的平均长度应该是 15 到 20 个单词.&lt;/p>
+&lt;p>这并不意味着要让每句话都一样长. 要有冲击力. 通过将短句（比如上一个句子）和长句（比如这一句）混合在一起，来让你的写作富于变化. 遵循[在一句话中只围绕一个主旨]的基本原则，可能再加上一个其他的相关的点. 你应该很快就能保持住句子的平均长度，就像顶级记者和作者一样，这十分容易.&lt;/p>
+&lt;p>然而，一开始你可能会发现自己还是会写一些奇怪的长句子，特别是在试图解释一个复杂的观点时. 不过大多数长句子都可以用某种方式拆分.&lt;/p>
+&lt;hr>
+&lt;h2>尽量用主动动词&lt;/h2>
+&lt;p>你想让你的信件听起来是主动的还是被动的——利落且专业的还是古板且官僚的？&lt;/p>
+&lt;p>为了解释主动动词和被动动词之间的区别，我们需要简单地看一下一个句子是如何组合在一起的. 几乎每个句子都有三个主要部分：&lt;/p>
+&lt;ul>
+&lt;li>一个&lt;strong>主语&lt;/strong>（做出行为的人、组织或事物）；&lt;/li>
+&lt;li>一个&lt;strong>动词&lt;/strong>（行为本身）；以及&lt;/li>
+&lt;li>一个&lt;strong>宾语&lt;/strong>（行为所针对的人、组织或事物）.&lt;/li>
+&lt;/ul>
+&lt;p>举个例子，在“Peter watched the television（Peter 看电视）”这个句子中：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>主语&lt;/strong>是 Peter［他是做出 watching（看）这个动作的人］;&lt;/li>
+&lt;li>&lt;strong>动词&lt;/strong>是 watched（看）；以及&lt;/li>
+&lt;li>&lt;strong>宾语&lt;/strong>是 the television（电视）［它是被 watched（看）的对象］.&lt;/li>
+&lt;/ul>
+&lt;p>当然，通常还会有很多其他词语. 比如：“Peter, the boy from number 13, watched the television every Friday night（13 岁的男孩 Peter 每个周五晚上都看电视）”. 但主语、动词和宾语还是那些.&lt;/p>
+&lt;hr>
+&lt;p>Peter（&lt;strong>主语&lt;/strong>） watched（&lt;strong>动词&lt;/strong>） the television（&lt;strong>宾语&lt;/strong>）.
+［Peter（&lt;strong>主语&lt;/strong>）看（&lt;strong>动词&lt;/strong>）电视（&lt;strong>宾语&lt;/strong>）.］&lt;/p>
+&lt;p>“watched（看）”在这里是一个主动动词. 句子先说谁在 watched（看），再说 watched（看）的是什么.&lt;/p>
+&lt;hr>
+&lt;p>如果是被动句的话，&lt;strong>宾语&lt;/strong>变成&lt;strong>主语&lt;/strong>，&lt;strong>主语&lt;/strong>变成&lt;strong>宾语&lt;/strong>. The television（&lt;strong>主语&lt;/strong>） was watched（&lt;strong>动词&lt;/strong>） by Peter（&lt;strong>宾语&lt;/strong>）.［电视被 Peter 看.］&lt;/p>
+&lt;p>watched（被看）在这里是一个被动动词.&lt;/p>
+&lt;p>你可以看到，为了把句子变成被动的，我们不得不引入“was（被）”和“by（由）”这两个词，于是句子变得更加笨拙了.&lt;/p>
+&lt;hr>
+&lt;p>请记住，主语不一定是人，宾语不一定是物！“The tree crushed Peter.（大树砸到了 Peter.）”是主动句，但“Peter was crushed by the tree（Peter 被大树砸到了.）”是被动句.&lt;/p>
+&lt;p>下面再举一些例子，说明如何把被动动词变成主动动词.&lt;/p>
+&lt;blockquote>
+&lt;p>This matter will be considered by us shortly.（此事将尽快被我们考虑.）（被动）&lt;/p>
+&lt;p>&lt;strong>We will consider this matter shortly.（我们将尽快考虑此事.）（主动）&lt;/strong>&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>The riot was stopped by the police.（暴动被警察制止.）（被动）&lt;/p>
+&lt;p>&lt;strong>The police stopped the riot.（警察制止了暴动.）（主动）&lt;/strong>&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>The mine had to be closed by the authority.（这个矿场不得不被当局关闭.）（被动）&lt;/p>
+&lt;p>&lt;strong>The authority had to close the mine.（当局不得不关闭了这个矿场.）（主动）&lt;/strong>&lt;/p>
+&lt;/blockquote>
+&lt;p>被动动词会带来许多问题.&lt;/p>
+&lt;ul>
+&lt;li>它们会让人感到困惑.&lt;/li>
+&lt;li>它们常常使写作变得唠唠叨叨.&lt;/li>
+&lt;li>它们让写作缺乏生气.&lt;/li>
+&lt;/ul>
+&lt;h3>被动语态的良好使用&lt;/h3>
+&lt;p>当然，有些时候，使用被动语态可能是更合适的.&lt;/p>
+&lt;ul>
+&lt;li>为了减少敌意——“这个账单还没有支付（this bill has not been paid）”（被动）比“你还没有支付账单（you have not paid this bill）”（主动）要更加柔和.&lt;/li>
+&lt;li>为了避免承担责任——“一个错误被犯下了（a mistake was made）”（被动），而不是“我们犯了一个错误（we made a mistake）”（主动）.&lt;/li>
+&lt;li>当你不知道做出行为的人是谁时——“英格兰队被选中了（the England team has been picked）”.&lt;/li>
+&lt;li>如果只是听上去更好.&lt;/li>
+&lt;/ul>
+&lt;p>但尽量确保你有大约 80-90% 的动词都是主动的.&lt;/p>
+&lt;p>主动动词和被动动词之间的这种区别并不容易掌握. 有些人从来没有真正理解过. 所以，如果你感到困惑，请再次阅读这一小节.&lt;/p>
+&lt;hr>
+&lt;h2>使用“you（你）”和“we（我们）”&lt;/h2>
+&lt;p>试着用“you（你）”来称呼读者，即使读者只是你所泛泛而谈的许多人中的一个. 如果在一开始这么做让你感觉不对，请记住，如果你对某个坐在你桌子对面的人说话，你是不会使用类似“the applicant（这位申请人）”和“the supplier（这位供货商）”这样的词的.&lt;/p>
+&lt;p>以下是一些例子.&lt;/p>
+&lt;blockquote>
+&lt;p>Applicants must send us…（申请人必须给我们……）&lt;/p>
+&lt;p>&lt;strong>You must send us…（你必须给我们……）&lt;/strong>&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>We always tell customers before we…（我们会先告诉客户，然后再……）&lt;/p>
+&lt;p>&lt;strong>We will tell you before we…（我们会先告诉你，然后再……）&lt;/strong>&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>Advice is available from…（建议可以从以下地方获得：……）&lt;/p>
+&lt;p>&lt;strong>You can get advice from…（你可以从以下地方获得建议：……）&lt;/strong>&lt;/p>
+&lt;/blockquote>
+&lt;p>类似地，要称你的组织为“we（我们）”. 另外在同一封信中同时使用“we（我们）”和“I（我）”是没有问题的.&lt;/p>
+&lt;hr>
+&lt;h2>使用对读者来说适当的单词&lt;/h2>
+&lt;p>当你与你的读者交谈时，要准确地说出你的意思，用最简单的合适的单词来表达. 这并不一定意味着仅使用简单的单词——使用读者能理解的单词就可以了.&lt;/p>
+&lt;p>在这份指南的末尾，有一个列表，列出了一些我们建议你避免使用的单词. 但对于大多数单词，你必须自己决定它们是否合适.&lt;/p>
+&lt;p>行话（jargon）是一种只有特定人群才能理解的语言. 当你写给能够理解这些术语和短语的人的时候，你可以使用行话，这是一种很有用的简略表达的方式. 但是，要尽量避免对普通公众使用专业的行话.&lt;/p>
+&lt;p>所以在一般情况下，尽可能地保持使用日常的英语. 另外再想象一下，你正隔着一张桌子与你的读者对话.&lt;/p>
+&lt;hr>
+&lt;h2>不要害怕下达指令&lt;/h2>
+&lt;ul>
+&lt;li>Sit!（坐下！）&lt;/li>
+&lt;li>Brush your teeth.（刷刷你的牙.）&lt;/li>
+&lt;li>Please send it to me.（请把它送到我这里来.）&lt;/li>
+&lt;/ul>
+&lt;p>它们都是命令——正式点说叫做祈使句. 它们是给别人下达指令时最快、最直接的方式.&lt;/p>
+&lt;p>然而，如果我们让一个顽固的官僚来写出这样的表达，我们最终会得到类似如下的句子.&lt;/p>
+&lt;ul>
+&lt;li>Dogs are advised that they should sit down.（狗狗被告知它们应该坐下. ）&lt;/li>
+&lt;li>Your teeth should be brushed.（你的牙需要被刷刷.）&lt;/li>
+&lt;li>I should be grateful if you would send it to me.（如果你能把它送到我这里来，我会很感激.）&lt;/li>
+&lt;/ul>
+&lt;p>似乎他们总是有一种对命令的恐惧. 最常见的错误是在该说“do this（做这件事）”时却说了“customers should do this（顾客应该做这件事）”或“you should do this（你应该做这件事）”. 也许人们担心命令听起来太刺耳，但你往往可以通过在前面加上“please（请）”来解决这个问题. 不过，如果某件事是必须要做的，那你最好不要说“please（请）”，因为它给了读者拒绝这个请求的选择.&lt;/p>
+&lt;p>下面是一些啰哩啰嗦的表达，以及使用命令的短一点的版本的例子.&lt;/p>
+&lt;blockquote>
+&lt;p>You should just think of it as a complete statement.（你应该只把它当作一个完整的陈述.）&lt;/p>
+&lt;p>&lt;strong>Just think of it as a complete statement.（只要把它当作一个完整的陈述就好了.）&lt;/strong>&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>Writers should aim to be punchy.（作家应该以言简意赅为目标.）&lt;/p>
+&lt;p>&lt;strong>Be punchy. 要言简意赅.&lt;/strong>&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>They should be split where suitable.（它们应该在合适的地方被拆开.）&lt;/p>
+&lt;p>&lt;strong>Split them where suitable.（在合适的地方拆开它们.）&lt;/strong>&lt;/p>
+&lt;/blockquote>
+&lt;p>最后一个例子可能是最差的，因为它使用了一个被动动词——“should be split（应该被拆开）”. 不幸的是，这在指令中非常常见. 例如：&lt;/p>
+&lt;blockquote>
+&lt;p>The packet should be removed from the box. The contents should then be placed in the oven.（包装应该被从盒子里取出来，然后里面的东西应该被放进烤箱.）&lt;/p>
+&lt;p>&lt;strong>Remove the packet from the box. Then place the contents in the oven. （取出盒子里的包装，再把里面的东西放进烤箱.）&lt;/strong>&lt;/p>
+&lt;/blockquote>
+&lt;hr>
+&lt;h2>避免名词化&lt;/h2>
+&lt;p>名词化（nominalisation）是抽象名词的一种类型. （这是简明英语吗？）换句话说，它是一种非物理对象的事物的名字，比如 process（过程）、technique（技术）或 emotion（情感）.&lt;/p>
+&lt;p>名词化是由动词形成的.&lt;/p>
+&lt;p>例如：&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>动词&lt;/th>
+&lt;th>名词化&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>complete（完成）&lt;/td>
+&lt;td>completion&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>introduce（介绍）&lt;/td>
+&lt;td>introduction&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>provide（提供）&lt;/td>
+&lt;td>provision&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>fail（失败）&lt;/td>
+&lt;td>failure&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>arrange（安排）&lt;/td>
+&lt;td>arrangement&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>investigate（调查）&lt;/td>
+&lt;td>investigation&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3>那么它们有什么问题呢？&lt;/h3>
+&lt;p>问题在于，被使用的经常是这些名词，而不是它们所来自的动词. 而且因为它们仅仅是事物的名字，所以听起来好像句子中实际什么都没有发生一样. 就像被动动词一样，太多的名词化会让文字变得非常沉闷乏味、难以理解.&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>&lt;/p>
+&lt;p>下面是一些例子.&lt;/p>
+&lt;blockquote>
+&lt;p>We had a discussion about the matter.（我们对此事做了讨论.）&lt;/p>
+&lt;p>&lt;strong>We discussed the matter.（我们讨论了此事.）&lt;/strong>&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>There will be a stoppage of trains by drivers.（这里会有火车司机的停车.）&lt;/p>
+&lt;p>&lt;strong>Drivers will stop the trains.（司机会停下火车.）&lt;/strong>&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>The implementation of the method has been done by a team.（该方法的实现已经由一个团队完成.）&lt;/p>
+&lt;p>&lt;strong>A team has implemented the method.（一个团队已经实现了该方法.）&lt;/strong>&lt;/p>
+&lt;/blockquote>
+&lt;hr>
+&lt;h2>在合适的地方使用列表&lt;/h2>
+&lt;p>列表是分解信息的绝佳办法.&lt;/p>
+&lt;p>有两种类型的列表.&lt;/p>
+&lt;ul>
+&lt;li>整体是一个连续句子的列表. 只是在开头、中间或结尾挑出几个列举的要点.&lt;/li>
+&lt;li>有几个独立要点的列表. 每个要点有一句介绍性的阐述（比如这个列表）.&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>原文：&lt;/p>
+&lt;ul>
+&lt;li>A list that is a continuous sentence with several listed points picked out at the beginning, middle or end.&lt;/li>
+&lt;li>A list of separate points with an introductory statement (like this list).&lt;/li>
+&lt;/ul>
+&lt;/blockquote>
+&lt;p>在上面的列表中，每个要点都是一个完整的句子，所以它们每一句都以大写字母开头，以句号结尾.&lt;/p>
+&lt;p>如果列表是一个连续句子的一部分，则在每个要点后面加上分号（；），并以小写字母开头.&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;strong>If you can prove that:&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>you were somewhere else at the time;&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>you were not related to Mary; and&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>you are over 21;&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>you should be all right.&lt;/strong>&lt;/p>
+&lt;hr>
+&lt;p>如果你能证明：&lt;/p>
+&lt;ul>
+&lt;li>你当时在别的地方；&lt;/li>
+&lt;li>你和 Mary 没有关系；以及&lt;/li>
+&lt;li>你已经超过 21 岁；&lt;/li>
+&lt;/ul>
+&lt;p>那就没问题.&lt;/p>
+&lt;/blockquote>
+&lt;p>正如你所看到的，倒数第二个要点在分号之后有个“and（以及）”. 如果你只需要证明三点中的一点而不是全部，这个词就是“or（或者）”.&lt;/p>
+&lt;p>要确保每一个要点在逻辑和语法上都与前面的引言部分能连得上. 例如，如果你把第二个要点和第三个要点中的“you（你）”去掉，它仍然流畅得像是一个句子，但那就不是一个列表了，因为引言部分和第三个要点拼凑到一起就变成了“If you can prove that are over 21（如果你能证明已经超过 21 岁）”，这显然是读不通的.&lt;/p>
+&lt;p>对于要点很短的列表，最好用以下的一种方式来写.&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;strong>Kevin needed to take the following.&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>A penknife&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>Some string&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>A pad of paper&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>A pen&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;p>Kevin 需要拿上以下的东西.&lt;/p>
+&lt;ul>
+&lt;li>一把小刀&lt;/li>
+&lt;li>一些线&lt;/li>
+&lt;li>一张纸&lt;/li>
+&lt;li>一支笔&lt;/li>
+&lt;/ul>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>&lt;strong>Kevin needed to take:&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>a penknife&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>some string&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>a pad of paper; and&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>a pen.&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;p>Kevin 需要拿上：&lt;/p>
+&lt;ul>
+&lt;li>一把小刀&lt;/li>
+&lt;li>一些线&lt;/li>
+&lt;li>一张纸；以及&lt;/li>
+&lt;li>一支笔.&lt;/li>
+&lt;/ul>
+&lt;/blockquote>
+&lt;p>你应该在列表中使用圆点，它比数字或字母更好. 因为圆点能让你注意每一个要点，而不会给你额外的信息.&lt;/p>
+&lt;hr>
+&lt;h2>道歉&lt;/h2>
+&lt;p>如果你正在回复一封棘手的信件或投诉，或者正在处理一个麻烦的问题，请站在读者的角度考虑问题. 要专业，不要感情用事. 你可能不得不给出一个坚决的、不受欢迎的答案，但要尽可能地提供帮助、尽可能地礼貌. 如果你要道歉，请尽早. 如果问题是你的错，请把它说出来. 道歉要彻底、简洁、富有同情心、真诚. 另外，无论是否是你的错，都试着去强调你能为对方做什么.&lt;/p>
+&lt;hr>
+&lt;h2>迷思&lt;/h2>
+&lt;p>我们不是想通过打破语法规则来赶时髦. 我们只是要消灭一些语法上的迷思.&lt;/p>
+&lt;ul>
+&lt;li>你可以用 &lt;strong>and（而且）&lt;/strong>、&lt;strong>but（但是）&lt;/strong>、&lt;strong>because（因为）&lt;/strong>、&lt;strong>so（所以）&lt;/strong> 或 &lt;strong>however（然而）&lt;/strong> 来开始一个句子.&lt;/li>
+&lt;li>你可以拆分动词不定式. 所以你可以说 &lt;strong>to boldly go&lt;/strong>.&lt;/li>
+&lt;li>你可以用介词来结束一个句子. 实际上，这是我们应该支持的.（You can end a sentence with a preposition. In fact, it is something &lt;strong>we should stand up for&lt;/strong>.）&lt;/li>
+&lt;li>而且如果&lt;strong>你&lt;/strong>找不到更好的&lt;strong>单词&lt;/strong>的话，&lt;strong>你&lt;/strong>可以在同一个句子中使用同一个&lt;strong>单词&lt;/strong>两次.（And &lt;strong>you&lt;/strong> can use the same &lt;strong>word&lt;/strong> twice in a sentence if &lt;strong>you&lt;/strong> can&amp;rsquo;t find a better &lt;strong>word&lt;/strong>.）&lt;/li>
+&lt;/ul>
+&lt;p>当然，这并不意味着你总是应该打破这些所谓的规则——只应该在它们能让一个句子更流畅的时候这样做.&lt;/p>
+&lt;hr>
+&lt;h2>总结&lt;/h2>
+&lt;ul>
+&lt;li>先&lt;strong>停下来思考&lt;/strong>，再写作. 把你要表达的观点按逻辑顺序记下来.&lt;/li>
+&lt;li>&lt;strong>优先选择短单词&lt;/strong>. 长单词既不会给你的读者留下深刻印象，也对你的写作风格没有帮助.&lt;/li>
+&lt;li>尽可能&lt;strong>使用日常英语&lt;/strong>. 避免使用行话和法律术语，并在不得不使用它们时解释一下这些专业术语.&lt;/li>
+&lt;li>&lt;strong>将你的句子长度保持&lt;/strong>在平均 15 至 20 个单词的范围内. 尽量在一个句子中围绕一个主旨.&lt;/li>
+&lt;li>&lt;strong>尽量多地使用主动动词&lt;/strong>. 说“we will do it（我们会做）”而不是“it will be done by us（它会被我们做）”.&lt;/li>
+&lt;li>&lt;strong>言简意赅&lt;/strong>.&lt;/li>
+&lt;li>&lt;strong>想象一下你是在和你的读者交谈&lt;/strong>. 写作时要真诚、个人化，风格要合适、语气要恰当.&lt;/li>
+&lt;li>&lt;strong>并且经常检查一下，你的写作是清晰的、有益的、人性化的和礼貌的.&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h2>要避免使用的单词&lt;/h2>
+&lt;p>试着使用我们在括号中建议的单词作为替代.&lt;/p>
+&lt;ul>
+&lt;li>additional (extra)&lt;/li>
+&lt;li>advise (tell)&lt;/li>
+&lt;li>applicant (you)&lt;/li>
+&lt;li>commence (start)&lt;/li>
+&lt;li>complete (fill in)&lt;/li>
+&lt;li>comply with (keep to)&lt;/li>
+&lt;li>consequently (so)&lt;/li>
+&lt;li>ensure (make sure)&lt;/li>
+&lt;li>forward (send)&lt;/li>
+&lt;li>in accordance with (under, keeping to)&lt;/li>
+&lt;li>in excess of (more than)&lt;/li>
+&lt;li>in respect of (for)&lt;/li>
+&lt;li>in the event of (if)&lt;/li>
+&lt;li>on receipt (when we/you get)&lt;/li>
+&lt;li>on request (if you ask)&lt;/li>
+&lt;li>particulars (details)&lt;/li>
+&lt;li>per annum (a year)&lt;/li>
+&lt;li>persons (people)&lt;/li>
+&lt;li>prior to (before)&lt;/li>
+&lt;li>purchase (buy)&lt;/li>
+&lt;li>regarding (about)&lt;/li>
+&lt;li>should you wish (if you want)&lt;/li>
+&lt;li>terminate (end)&lt;/li>
+&lt;li>whilst (while)&lt;/li>
+&lt;/ul>
+&lt;p>这些只是一些建议. 我们提供了更为全面的 &lt;a href='http://www.plainenglish.co.uk/the-a-z-of-alternative-words.html'
+target='_blank' rel='noreferrer noopener'
+>A-Z 单词表&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>.&lt;/p>
+&lt;hr>
+&lt;h2>来自简明英语运动（Plain English Campaign）的培训&lt;/h2>
+&lt;p>我们提供培训课程，教你如何用简明英语撰写文件. 我们开设了以下类型的课程.&lt;/p>
+&lt;ul>
+&lt;li>公开课程，在全国各地&lt;sup id="fnref:3">&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref">3&lt;/a>&lt;/sup>的酒店举办.&lt;/li>
+&lt;li>内部课程，也就是我们到你的公司里去培训你的员工. 这意味着我们可以根据你们的工作情况定制培训内容.&lt;/li>
+&lt;/ul>
+&lt;p>你也可以关注我们的简明英语文凭课程（Plain English Diploma Course）. 这是一个为期 12 个月的课程，最后可获得简明英语的资格证书.&lt;/p>
+&lt;p>我们现在提供两个英语语法课程. 我们的语法检查课程（Grammarcheck Course）旨在教授学员语法、标点、句子结构和拼写的基本知识，这些知识对于清晰的沟通至关重要. 我们偶尔也会开办高级语法课程（Advanced Grammar Course），更详细地讲解标准英语的语法.&lt;/p>
+&lt;p>您可能也会对简明英语课程（The Plain English Course）感兴趣——我们的教材资料包可以帮助你培训自己的员工.&lt;/p>
+&lt;p>有关任何课程的详细信息，请访问我们的&lt;a href='http://www.plainenglish.co.uk/services/training.html'
+target='_blank' rel='noreferrer noopener'
+>培训页面&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>. 如果你对培训课程有任何具体问题，请致电我们的培训管理员 Terri Schabel，电话：01663 744409，或发送电子邮件至 &lt;a href='https://zerovip.github.iomailto:info@plainenglish.co.uk'
+>info@plainenglish.co.uk&lt;/a>.&lt;/p>
+&lt;hr>
+&lt;h1>附录&lt;/h1>
+&lt;div style='background-color:#FDE763;'>
+&lt;p>以下内容来自美国政府网站：&lt;a href='https://www.plainlanguage.gov/guidelines/words/use-simple-words-phrases/'
+target='_blank' rel='noreferrer noopener'
+>Use simple words and phrases&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>. 上面的正文最后，“英语简明运动”也按字母顺序提供了一个完整的建议替换用词的&lt;a href='http://www.plainenglish.co.uk/the-a-z-of-alternative-words.html'
+target='_blank' rel='noreferrer noopener'
+>表格&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>，我把那个表格也吸收进来，这里已经有的就不做任何标示了；这里没有的我都额外补充上，并使用黄颜色的突出标记标示.&lt;/p>
+&lt;/div>
+&lt;p>当你选择单词时，请选择熟悉、常见的，而不是罕见、晦涩的. 有很多表格列出了复杂的单词以及建议替换的单词，下面就是这样一个表格. 另外可参见 Kimble (2006) 中的表格.&lt;/p>
+&lt;p>下表中有 12 个单词被加粗标记了，它们是坏的，它们是阻碍你的罪魁祸首.&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>不要这样说&lt;/th>
+&lt;th>要这样说&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>a and/or b&lt;/td>
+&lt;td>a or b or both&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;span style='background-color:#FDE763;'>(an) absence of&lt;/span>&lt;/td>
+&lt;td>&lt;span style='background-color:#FDE763;'>no, none&lt;/span>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;span style='background-color:#FDE763;'>abundance&lt;/span>&lt;/td>
+&lt;td>&lt;span style='background-color:#FDE763;'>enough, plenty, a lot (or say how many)&lt;/span>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;span style='background-color:#FDE763;'>accede to&lt;/span>&lt;/td>
+&lt;td>&lt;span style='background-color:#FDE763;'>allow, agree to&lt;/span>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>accompany&lt;/td>
+&lt;td>go with&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>accomplish&lt;/td>
+&lt;td>carry out, do&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>accorded&lt;/td>
+&lt;td>given&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>accordingly&lt;/td>
+&lt;td>so&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>accrue&lt;/td>
+&lt;td>add, gain&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>accurate&lt;/td>
+&lt;td>correct, exact, right&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>additional&lt;/td>
+&lt;td>added, more, other &lt;span style='background-color:#FDE763;'>, extra&lt;/span>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>address&lt;/td>
+&lt;td>discuss&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>addressees&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>you&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>addressees are requested&lt;/td>
+&lt;td>(省略), please&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>adjacent to&lt;/td>
+&lt;td>next to&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>advantageous&lt;/td>
+&lt;td>helpful&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>adversely impact on&lt;/td>
+&lt;td>hurt, set back&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>advise&lt;/td>
+&lt;td>recommend, tell&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>afford an opportunity&lt;/td>
+&lt;td>allow, let&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>aircraft&lt;/td>
+&lt;td>plane&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>allocate&lt;/td>
+&lt;td>divide&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>anticipate&lt;/td>
+&lt;td>expect&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>a number of&lt;/td>
+&lt;td>some&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>apparent&lt;/td>
+&lt;td>clear, plain&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>appreciable&lt;/td>
+&lt;td>many&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>appropriate&lt;/td>
+&lt;td>(省略), proper, right&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>approximate&lt;/td>
+&lt;td>about&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>arrive onboard&lt;/td>
+&lt;td>arrive&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>as a means of&lt;/td>
+&lt;td>to&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ascertain&lt;/td>
+&lt;td>find out, learn&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>as prescribed by&lt;/td>
+&lt;td>in, under&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>assist, assistance&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>aid, help&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>attain&lt;/td>
+&lt;td>meet&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>attempt&lt;/td>
+&lt;td>try&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>at the present time&lt;/td>
+&lt;td>at present, now&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>be advised&lt;/td>
+&lt;td>(省略)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>benefit&lt;/td>
+&lt;td>help&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>by means of&lt;/td>
+&lt;td>by, with&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>capability&lt;/td>
+&lt;td>ability&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>caveat&lt;/td>
+&lt;td>warning&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>close proximity&lt;/td>
+&lt;td>near&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>combat environment&lt;/td>
+&lt;td>combat&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>combined&lt;/td>
+&lt;td>joint&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>commence&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>begin, start&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>comply with&lt;/td>
+&lt;td>follow&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>component&lt;/td>
+&lt;td>part&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>comprise&lt;/td>
+&lt;td>form, include, make up&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>concerning&lt;/td>
+&lt;td>about, on&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>consequently&lt;/td>
+&lt;td>so&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>consolidate&lt;/td>
+&lt;td>combine, join, merge&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>constitutes&lt;/td>
+&lt;td>is, forms, makes up&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>contains&lt;/td>
+&lt;td>has&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>convene&lt;/td>
+&lt;td>meet&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>currently&lt;/td>
+&lt;td>(省略), now&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>deem&lt;/td>
+&lt;td>believe, consider, think&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>delete&lt;/td>
+&lt;td>cut, drop&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>demonstrate&lt;/td>
+&lt;td>prove, show&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>depart&lt;/td>
+&lt;td>leave&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>designate&lt;/td>
+&lt;td>appoint, choose, name&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>desire&lt;/td>
+&lt;td>want, wish&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>determine&lt;/td>
+&lt;td>decide, figure, find&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>disclose&lt;/td>
+&lt;td>show&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>discontinue&lt;/td>
+&lt;td>drop, stop&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>disseminate&lt;/td>
+&lt;td>give, issue, pass, send&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>due to the fact that&lt;/td>
+&lt;td>due to, since&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>during the period&lt;/td>
+&lt;td>during&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>effect modifications&lt;/td>
+&lt;td>make changes&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>elect&lt;/td>
+&lt;td>choose, pick&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>eliminate&lt;/td>
+&lt;td>cut, drop, end&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>employ&lt;/td>
+&lt;td>use&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>encounter&lt;/td>
+&lt;td>meet&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>endeavor&lt;/td>
+&lt;td>try&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ensure&lt;/td>
+&lt;td>make sure&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>enumerate&lt;/td>
+&lt;td>count&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>equipments&lt;/td>
+&lt;td>equipment&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>equitable&lt;/td>
+&lt;td>fair&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>establish&lt;/td>
+&lt;td>set up, prove, show&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>evidenced&lt;/td>
+&lt;td>showed&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>evident&lt;/td>
+&lt;td>clear&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>exhibit&lt;/td>
+&lt;td>show&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>expedite&lt;/td>
+&lt;td>hasten, speed up&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>expeditious&lt;/td>
+&lt;td>fast, quick&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>expend&lt;/td>
+&lt;td>spend&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>expertise&lt;/td>
+&lt;td>ability&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>expiration&lt;/td>
+&lt;td>end&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>facilitate&lt;/td>
+&lt;td>ease, help&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>failed to&lt;/td>
+&lt;td>didn’t&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>feasible&lt;/td>
+&lt;td>can be done, workable&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>females&lt;/td>
+&lt;td>women&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>finalize&lt;/td>
+&lt;td>complete, finish&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>for a period of&lt;/td>
+&lt;td>for&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>for example,______etc.&lt;/td>
+&lt;td>for example, such as&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>forfeit&lt;/td>
+&lt;td>give up, lose&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>forward&lt;/td>
+&lt;td>send&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>frequently&lt;/td>
+&lt;td>often&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>function&lt;/td>
+&lt;td>act, role, work&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>furnish&lt;/td>
+&lt;td>give, send&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>has a requirement for&lt;/td>
+&lt;td>needs&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>herein&lt;/td>
+&lt;td>here&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>heretofore&lt;/td>
+&lt;td>until now&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>herewith&lt;/td>
+&lt;td>below, here&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>however&lt;/td>
+&lt;td>but&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>identical&lt;/td>
+&lt;td>same&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>identify&lt;/td>
+&lt;td>find, name, show&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>immediately&lt;/td>
+&lt;td>at once&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>impacted&lt;/td>
+&lt;td>affected, changed&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>implement&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>carry out, start&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>in accordance with&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>by, following, per, under&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>in addition&lt;/td>
+&lt;td>also, besides, too&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>in an effort to&lt;/td>
+&lt;td>to&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>inasmuch as&lt;/td>
+&lt;td>since&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>in a timely manner&lt;/td>
+&lt;td>on time, promptly&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>inception&lt;/td>
+&lt;td>start&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>incumbent upon&lt;/td>
+&lt;td>must&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>indicate&lt;/td>
+&lt;td>show, write down&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>indication&lt;/td>
+&lt;td>sign&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>initial&lt;/td>
+&lt;td>first&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>initiate&lt;/td>
+&lt;td>start&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>in lieu of&lt;/td>
+&lt;td>instead&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>in order that&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>for, so&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>in order to&lt;/td>
+&lt;td>to&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>in regard to&lt;/td>
+&lt;td>about, concerning, on&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>in relation to&lt;/td>
+&lt;td>about, with, to&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>inter alia&lt;/td>
+&lt;td>(省略)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>interface&lt;/td>
+&lt;td>meet, work with&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>interpose no objection&lt;/td>
+&lt;td>don’t object&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>in the amount of&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>for&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>in the event of&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>if&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>in the near future&lt;/td>
+&lt;td>shortly, soon&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>in the process of&lt;/td>
+&lt;td>(省略)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>in view of&lt;/td>
+&lt;td>since&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>in view of the above&lt;/td>
+&lt;td>so&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>is applicable to&lt;/td>
+&lt;td>applies to&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>is authorized to&lt;/td>
+&lt;td>may&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>is in consonance with&lt;/td>
+&lt;td>agrees with, follows&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>is responsible for&lt;/td>
+&lt;td>(省略) handles&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>it appears&lt;/td>
+&lt;td>seems&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>it is&lt;/strong>&lt;/td>
+&lt;td>(省略)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>it is essential&lt;/td>
+&lt;td>must, need to&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>it is requested&lt;/td>
+&lt;td>please, we request, I request&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>liaison&lt;/td>
+&lt;td>discussion&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>limited number&lt;/td>
+&lt;td>limits&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>magnitude&lt;/td>
+&lt;td>size&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>maintain&lt;/td>
+&lt;td>keep, support&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>maximum&lt;/td>
+&lt;td>greatest, largest, most&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>methodology&lt;/td>
+&lt;td>method&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>minimize&lt;/td>
+&lt;td>decrease, method&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>minimum&lt;/td>
+&lt;td>least, smallest&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>modify&lt;/td>
+&lt;td>change&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>monitor&lt;/td>
+&lt;td>check, watch&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>necessitate&lt;/td>
+&lt;td>cause, need&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>notify&lt;/td>
+&lt;td>let know, tell&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>not later than 10 May&lt;/td>
+&lt;td>by 10 May, before 11 May&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>not later than 1600&lt;/td>
+&lt;td>by 1600&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>notwithstanding&lt;/td>
+&lt;td>inspite of, still&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>numerous&lt;/td>
+&lt;td>many&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>objective&lt;/td>
+&lt;td>aim, goal&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>obligate&lt;/td>
+&lt;td>bind, compel&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>observe&lt;/td>
+&lt;td>see&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>on a regular basis&lt;/td>
+&lt;td>(省略)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>operate&lt;/td>
+&lt;td>run, use, work&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>optimum&lt;/td>
+&lt;td>best, greatest, most&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>option&lt;/td>
+&lt;td>choice, way&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>parameters&lt;/td>
+&lt;td>limits&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>participate&lt;/td>
+&lt;td>take part&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>perform&lt;/td>
+&lt;td>do&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>permit&lt;/td>
+&lt;td>let&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>pertaining to&lt;/td>
+&lt;td>about, of, on&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>portion&lt;/td>
+&lt;td>part&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>possess&lt;/td>
+&lt;td>have, own&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>practicable&lt;/td>
+&lt;td>practical&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>preclude&lt;/td>
+&lt;td>prevent&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>previous&lt;/td>
+&lt;td>earlier&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>previously&lt;/td>
+&lt;td>before&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>prioritize&lt;/td>
+&lt;td>rank&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>prior to&lt;/td>
+&lt;td>before&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>proceed&lt;/td>
+&lt;td>do, go ahead, try&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>procure&lt;/td>
+&lt;td>(省略)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>proficiency&lt;/td>
+&lt;td>skill&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>promulgate&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>issue, publish&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>provide&lt;/td>
+&lt;td>give, offer, say&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>provided that&lt;/td>
+&lt;td>if&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>provides guidance for&lt;/td>
+&lt;td>guides&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>purchase&lt;/td>
+&lt;td>buy&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>pursuant to&lt;/td>
+&lt;td>by, following, per, under&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>reflect&lt;/td>
+&lt;td>say, show&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>regarding&lt;/td>
+&lt;td>about, of, on&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>relative to&lt;/td>
+&lt;td>about, on&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>relocate&lt;/td>
+&lt;td>move&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>remain&lt;/td>
+&lt;td>stay&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>remain&lt;/td>
+&lt;td>stay&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>remainder&lt;/td>
+&lt;td>rest&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>remuneration&lt;/td>
+&lt;td>pay, payment&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>render&lt;/td>
+&lt;td>give, make&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>represents&lt;/td>
+&lt;td>is&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>request&lt;/td>
+&lt;td>ask&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>require&lt;/td>
+&lt;td>must, need&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>requirement&lt;/td>
+&lt;td>need&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>reside&lt;/td>
+&lt;td>live&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>retain&lt;/td>
+&lt;td>keep&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>said, some, such&lt;/td>
+&lt;td>the, this, that&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>selection&lt;/td>
+&lt;td>choice&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>set forth in&lt;/td>
+&lt;td>in&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>similar to&lt;/td>
+&lt;td>like&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>solicit&lt;/td>
+&lt;td>ask for, request&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>state-of-the-art&lt;/td>
+&lt;td>latest&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>subject&lt;/td>
+&lt;td>the, this, your&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>submit&lt;/td>
+&lt;td>give, send&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>subsequent&lt;/td>
+&lt;td>later, next&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>subsequently&lt;/td>
+&lt;td>after, later, then&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>substantial&lt;/td>
+&lt;td>large, much&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>successfully complete&lt;/td>
+&lt;td>complete, pass&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>sufficient&lt;/td>
+&lt;td>enough&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>take action to&lt;/td>
+&lt;td>(省略)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>terminate&lt;/td>
+&lt;td>end, stop&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>the month of&lt;/td>
+&lt;td>(省略)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>there are&lt;/td>
+&lt;td>(省略)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>therefore&lt;/td>
+&lt;td>so&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>therein&lt;/td>
+&lt;td>there&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>there is&lt;/td>
+&lt;td>(省略)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>thereof&lt;/td>
+&lt;td>its, their&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>the undersigned&lt;/td>
+&lt;td>I&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>the use of&lt;/td>
+&lt;td>(省略)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>this activity, command&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>us, we&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>timely&lt;/td>
+&lt;td>prompt&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>time period&lt;/td>
+&lt;td>(任选一个)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>transmit&lt;/td>
+&lt;td>send&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>type&lt;/td>
+&lt;td>(省略)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>under the provisions of&lt;/td>
+&lt;td>under&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>until such time as&lt;/td>
+&lt;td>until&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>utilize, utilization&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>use&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>validate&lt;/td>
+&lt;td>confirm&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>viable&lt;/td>
+&lt;td>practical, workable&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>vice&lt;/td>
+&lt;td>instead of, versus&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>warrant&lt;/td>
+&lt;td>call for, permit&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>whereas&lt;/td>
+&lt;td>because, since&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>with reference to&lt;/td>
+&lt;td>about&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>with the exception of&lt;/td>
+&lt;td>except for&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>witnessed&lt;/td>
+&lt;td>saw&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>your office&lt;/td>
+&lt;td>you&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>/ (斜线)&lt;/td>
+&lt;td>and, or&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;section class="footnotes" role="doc-endnotes">
+&lt;hr>
+&lt;ol>
+&lt;li id="fn:1" role="doc-endnote">
+&lt;p>&lt;em>cat sat on the mat&lt;/em> 和 &lt;em>Janet and John&lt;/em> 是两本童书，这里指的是写给孩子看的过分简单的东西.&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:2" role="doc-endnote">
+&lt;p>我在这里非常想要跳出来补充一下，因为我之前读到过余光中的&lt;a href='https://open.leancloud.cn/improve-chinese/'
+target='_blank' rel='noreferrer noopener'
+>《论中文的常态与变态》&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>（该文发表于 1987 年 10 月号的杂志《明报月刊》），他在文章中批评&lt;a href='https://zh.wikipedia.org/zh-hans/%e6%ac%a7%e5%8c%96%e4%b8%ad%e6%96%87'
+target='_blank' rel='noreferrer noopener'
+>“中文西化”&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>现象时提到过这个问题. 在文章的第 6-15 段，他就指出了“名词化”的问题：“英文好用抽象名词，其结果是软化了动词，也可以说是架空了动词”、“巴仁（Jacques Barzun）与屈林（Lionel Trilling）等学者把这类广泛的动词叫做「弱动词」（weak verb）”、“巴仁等学者感概现代英文喜欢化简为繁、化动为静、化具体为抽象、化直接为迂回，到了「名词成灾」（noun-plague）的地步”……这里不再过多引用，推荐感兴趣的读者去阅读余光中的文章，很长，但很具体，对我们的中文写作也许会有一些启发.&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:3" role="doc-endnote">
+&lt;p>这里指的是英国.&amp;#160;&lt;a href="#fnref:3" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;/section></description></item><item><title>平板与电子纸类工具的犹豫 - 消费指南</title><link>https://zerovip.github.io/zh/82178/</link><pubDate>Wed, 15 Sep 2021 00:00:00 CST</pubDate><guid isPermaLink="false">/zh/82178/</guid><description>&lt;div style='background-color:#FDE763;'>
 &lt;p>本文最初写于 2020 年 3 月 6 日，当时对购买什么设备比较犹豫，所以简单对比了各种不同的平板与电子纸类工具，最后比较倾向于电子纸；&lt;/p>
 &lt;p>2020 年 3 月 18 日我看到 reMarkable 2 接受预订的消息，再加上互联网上能找到的电子纸类对比实在太少，所以扩充了大量的电子纸类产品的信息汇总与对比. 但因为是在之前的基础上修修补补，所以文章结构非常乱；&lt;/p>
 &lt;p>2021 年 7 月 15 日我注意到 Fujitsu Quaderno 推出了第二代产品，于是借此机会将本文的大部分内容重新做了编排.&lt;/p>
@@ -8229,29 +9596,4 @@ target='_blank' rel='noreferrer noopener'
 &lt;p>第一，我把博物当作一个爱好，可是如果我投入过多的时间，我将变得专业，这是好事吗？我有自己的专业，我需要往我自己的专业上投入大量的时间，在博物这个爱好上，我有必要像专业人士一样去学习、训练吗？&lt;/p>
 &lt;p>第二，我身边的世界终究是太小，那些我接触不到的世界，我要去主动认识它们吗？当我认识了身边 100 种常见的鸟类，我要不要去云南、我要不要出国，去主动寻找那些不常见的鸟类，让我看到过的鸟种数量上升到 200，乃至 300 呢？要知道中国的鸟类就有一千多种，地球上的鸟类有一万多种，游戏式的收集会不会最终成为我的枷锁？&lt;/p>
 &lt;p>第三，我没有照相机，我只有眼睛，我未来应该还会有望远镜. 我的设备终究不会达到顶级，那岂不是在网上看一看鸟类的照片，去观看专业的摄影师拍摄的纪录片也就足够了呢？生活在这样的信息时代，专业人士的照片和视频无论如何也比我能看到的要更清晰、更生动啊！&lt;/p>
-&lt;p>这是一些问题，我没有答案. 我不知道自己在观鸟这条路上能走到哪里，我不知道自己能不能像大佬一样观鸟二十余年. 不过，目前似乎不是放弃的时候，我想等我真的看到了 100 种鸟类，再来思考这些问题不迟.&lt;/p></description></item><item><title>互联网冲浪记</title><link>https://zerovip.github.io/zh/07381/</link><pubDate>Wed, 30 Dec 2020 00:00:00 CST</pubDate><guid isPermaLink="false">/zh/07381/</guid><description>&lt;p>我的爸爸妈妈坚定地奉行了晚婚晚育的政策，所以他们比我同龄人的父母都要大上几岁. 当我身边的同学、朋友家里都买了电脑的时候，我的爸爸妈妈对电脑还一无所知，是小学的电脑课让我接触了电脑. 但电脑课的老师从来都不会在上课时给我们把网连上，所以互联网对我来说一直是陌生的. 直到三年级时我被学校选中参演一个校园话剧比赛，负责这个比赛的老师正是教我们电脑课的老师，排练话剧的地方就是学校的机房. 于是在周六日的排练间隙，老师就会给我们把电脑打开让我们玩. 有一次在两个六年级学生的软磨硬泡下，老师给我们连了网，我还记得我面对着电脑桌面都不知道怎么上网的情景：我窘迫地去问一个五年级的姐姐，她非常耐心地告诉我要用 Internet Explorer 浏览器，还教给我在地址栏输入 &lt;a href='http://www.baidu.com'
-target='_blank' rel='noreferrer noopener'
->www.baidu.com&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>，百度是一个搜索引擎. 我后来知道那个时候的谷歌还没有退出中国，但实际上在谷歌退出之前我都一直对谷歌一无所知. 我互联网的起点就是百度，我想在那个时候百度在中国还应该是做出了点名气的.&lt;/p>
-&lt;p>三年级时班里开始流行 QQ，我是在四年级时注册的. 注册之后只是加了几个班里同学，还是挺没意思的. 我把我的 QQ 号分别加 1、减 1 得到两个和我的 QQ 号相邻的 QQ 号，搜索后添加好友，验证写的是“邻居”二字. 比我 QQ 号大 1 的那个人很快就通过了，我记得是个比我大 10 岁的姐姐，我们好像聊过几次，后来不知道怎么回事就删了. 比我小 1 的那个人一直没有回音，既没有同意，也没有拒绝. 五年级时我的班主任老师传资料什么的都用邮箱，于是在他的影响下，我注册了第一个 163 的邮箱. 我小时候挺崇拜诸葛亮，我的邮箱名字都是 zhugeliang + 一串数字，后来突然觉得非常羞耻就弃掉不再使用，又重新注册了新的. 那个时候用邮箱主要就是用那个“给自己写信”的功能，上传学习资料，完全是在当网盘用. 我记得后来初中、高中甚至大学都还出现过“公共邮箱”这种东西，就是把邮箱地址和密码分享出来，作为一个公共的网盘.&lt;/p>
-&lt;p>初中的时候同学之间都流行使用人人网，但也没有非常流行，可能也就只有一半的人在用. 我就没有去赶人人网的潮流，现在看来这个选择倒是无比正确，人人网现在早就黄了. 从小学到初中再到高中再到大学再到现在，我一直都在用的软件就是 QQ. 它除了能和人聊天，还有 QQ 空间、群组的功能，这些基本上就是我初中和高中以来连接互联网的地方. 我从小学开始，每到一个人生节点就会写几篇回忆录发到 QQ 空间的日志里，分别是在小学毕业、初中毕业和高中毕业，写了三次. 这些内容至今还在，读起来能感受到我语言表达能力的迅猛增长. 等我有时间的时候也许可以考虑把 QQ 空间上的所有回忆录搬运到这个博客上来，毕竟现在看来 QQ 空间我已经不怎么用了，这个博客会成为我未来的家. 我大学也已经毕业了，大学的回忆录暂时还没有动笔，过些日子我也要把大学回忆录提上日程了. 最近几年偶尔回想起小学、初中、高中发生过的事情，发现大多数萦绕在我心头的事件都没有被我记录到回忆录里，回忆录里记录的很多事情我也都快忘记了. 可见人生中的所有事件都很难在发生的时候评估它对未来自己的影响，很多在三年的时间里看似重大的事情放到十年的尺度上看并没有想象中那么重的痕迹；很多当时不觉得怎么样的事情反倒在多年以后常常想起.&lt;/p>
-&lt;p>我初中、高中的时候加了大量的 QQ 群，因为 QQ 能直接用群名搜索，所以我经常有什么新的兴趣爱好就去用 QQ 搜个群出来去加. 这几乎奠定了我对互联网的态度：即互联网应该是开放的. 这样的态度让我在后来投入微博的怀抱，同时一直对微信嗤之以鼻. 很多人喜欢的关于微信的“朋友圈”的特性——即每个人能看到的互动只局限于自己的好友——在我看来是反互联网的，而且它迎合了人性的懒惰与懦弱. 我直到今天都无时无刻不盼望着微信早点倒闭，当然这都是后话. 说回到 QQ 群，我曾经最活跃的两个群分别是一个“数学爱好者联盟”群，一个“高考数学群”. 那个“数学爱好者联盟”群曾经有个每日一题的活动，我因为经常在里面答题还算是小有名气. 而且我当时已经上高中了，我却在那个群里假装自己是初中生，给自己立人设，超级刺激. 后来那个群慢慢就没什么人说话了，再后来好像就解散了，我隐约知道有个管理员考上了清华大学环境学院.&lt;/p>
-&lt;p>“高考数学群”是我高二升高三的那个暑假加的，那好像是一整套群，还有“高考物理群”、“高考化学群”、“高考生物群”，管理员几乎都是同一套班子. 那一整套群我全都加了，但主要是在“高考数学群”里比较活跃. 群里总是有全国各地的高中生发题目问题目，没有人问题目的时候大家就随便闲聊，那几乎是我高中时期相当快乐的一段时光. 因为我做高中数学题目比较快，而且正确率还特别高，我在那个群里非常受欢迎. 常常是大家正闲聊着天，突然有题目发出来，我很快把题目做出来，还不耽误闲聊天. 那个暑假有五六个女生私下加我好友，其中有两个和我保持了一段时间的暧昧关系，我们互相倾诉秘密，觉得时间过得飞快. 在群里我还同时和另两个女生稍稍公开地打情骂俏，现在看来我那个时候真的是渣男本渣了. 那个暑假我没日没夜地在群里聊天，和女孩子们聊天，最后暑假作业都没写完. 到最后我甚至有点分不清那几个女孩子了，她们每个人的一小部分都全部融合在了一起，成为了一个新的形象，我总是在和一个人聊天的时候从她的话语中读出另一个人的影子. 而且那个时候我接触到了 PUA，找来《把妹达人》那本书通读了一遍，然后不自觉地在和那些女孩子们聊天的时候尝试并对书中的方法进行改进. 后来高三开学后我就慢慢不怎么玩手机了，和她们就慢慢淡了. 现在只剩下其中一个姑娘还和我偶有联系.&lt;/p>
-&lt;p>这段时光对于我来说意义重大，我学习并实践了 PUA（当然只实践了建立吸引的部分，后面的肢体接触和上床的部分都没有做），对 PUA 做了深刻的反思. 以至于后来 PUA 在网络上流行起来并逐渐成为“精神控制”的代名词时我可以做出自己的判断——那都是国内的 PUA 课程自己设置的，而且在我看来那是走火入魔的. 按照我对《把妹达人》那本书的理解，关于框架理论（是叫这个名字着么？）之类的，其实离精神控制还差得很远，本质上只是一个小小的玩笑，让女孩子感到放松应该是这里的界限；当各种新闻里的 PUA 最后成为了让女孩子自卑的工具，我觉得那其实已经不是真正的 PUA 了，毕竟 PUA 的全称是 pick-up artist，搭讪艺术家. 无论如何，我掌握了一些和女孩子打交道的办法，知道如何让自己不那么“直男”，同时我的社交得到了极大的锻炼，我的自信心有了很强的提升. 另一方面，那段时光让我接触了好几个不同类型的女孩子，我知道了女孩子各有各的美好，同时也各有各的不美好. 我逐渐形成并确定了我自己的择偶标准（聪明、理智、不情绪化），而且为了筛选出这部分女生，我学会了故意表现得像个“钢铁直男”，把我学到的各种技巧收起来，用最简单的办法做最真实的自己. 实际上，这是我人生中的一个重大的收获，我管它叫“各得其所”定律，那就是不要伪装，做真实的自己，所有人都会各得其所. 这也是我最后放弃了 PUA 并尽量坦诚的原因.&lt;/p>
-&lt;p>后来 QQ 逐渐没落，QQ 群我也退了很多，像“高考数学群”我就是在高考结束的那一天退掉的. 一个和我关系非常好的管理员让我做管理员我也拒绝了. 随着微信的日益壮大，越来越多的人转向微信，QQ 空间里发动态的人也慢慢变少了. 微信对我来说不是互联网，我甚至可以称微信为“互不联网”，这个时候，微博逐渐成为了我生命中很有分量的一个存在.&lt;/p>
-&lt;p>2012 年我注册了微博，发的第一条微博是我在家自己制作肥皂的微博. 当时是化学课学习了皂化反应，但做实验的那天我没有去，所以我决定自己在家搞. 我先是买了烧杯、玻璃棒，又买了两种油和氢氧化钠，那是我第一次使用淘宝买东西. 我还去三联韬奋书店找了一本制作肥皂的书，用手机拍了带回家参考. 我做的肥皂是马赛皂，超级费时，我从上午开始搞，最后终于搞出了形状时天都黑了. 我拍了张照片发到微博上，我记得很短的时间阅读数就突破了 100，还有了 3 个转发！我当时都没有粉丝的，心里大喜，想着这就是互联网吗！于是决定在微博安家. 后来玩得多了才知道，好像发什么微博阅读数都有那么多，这个数据好像并不是很真实；而关于点赞、转发之类，微博上有一大堆僵尸号、机器人等等，当然这也都是后话. 我从 2013 年到 2019 年间生活中各种大大小小的事情我都发了微博，一共发了六千多条. 最神奇的一次经历是我大一的时候钱包丢了，我就发微博艾特我们那里的大媒体，他们还真的非常好心地帮我转发了，结果过了两天我正在校医院接种疫苗的时候，辅导员打电话给我，说一个派出所收到了我的钱包，根据我的学生证联系上了我的辅导员，让我去派出所领取. 于是我就非常神奇地又找回了我的钱包. 我至今不知道钱包的找回与我发的微博是否有关系. 只是再后来我钱包又丢了，我就没有再发微博了，结果那一次就真的丢了.&lt;/p>
-&lt;p>我在微博上还遭受过三次网络暴力. 第一次是有一个新闻，具体什么新闻我都不记得了，反正提供了一段事发时的录像，我对录像的来源比较好奇，就在评论里问是谁录的像，结果就有好多人冷嘲热讽地说“你连执法记录仪都不知道？”还有一个大哥跑到私信里骂我说国家陪养了你们大学生，结果都是书呆子云云……但我之前就是真的不知道执法记录仪的啊！那次就搞得我很害怕. 但评论里还是有人替我说话的，说人家不知道执法记录仪又怎么了，谁没有个不知道的，我就觉得很温暖. 还有一次是讨论转基因的问题，我在评论里支持方舟子批判崔永元，结果就有不同意我观点的网友来骂我. 这次的网暴更加恶劣，真的是有十多个人跑到我私信里实打实地骂我，很多话都非常难听. 但同时那条评论也收获了 800 多赞，让我觉得我是在替那些同意我观点但不敢说话的人抵挡网络暴力. 而且一个健康的社会里不应该只有一种声音，评论里除了我以外全都是支持崔永元的，我想我打破沉默的螺旋到底还是件好事，所以就没有理会那些谩骂，评论也没有删掉. 但一天以后，有个人跑到我私信里说，“xx 大学就是这么教育你的？” ta 显然看了我留在个人信息里的大学的信息. 这条私信让我非常难受，比那些直接上来就“草泥马”的私信还让我难受. 我犹豫半天，把那条评论给删掉了.&lt;/p>
-&lt;p>微博可以说是互联网最彻底的地方了，你可以公开搜索到任何东西，任何一个人的微博你都能点开查看，他的个人信息、他发过的微博都能看到. 然而微博对我来说好像还是少了点什么. 具体少了点什么居然是在我离开微博之后才可以真正说清楚的.&lt;/p>
-&lt;p>2019 年 3 月 4 日，我因发表了关于游戏《还愿》的评论而遭到微博的删除. 我那条被删的微博只是在说“《还愿》剧情好一般啊，游戏性还好，……”之类，只是在谈游戏而已，对游戏内的影射之类完全没有提到. 结果那条微博被删除，理由是：&lt;/p>
-&lt;blockquote>
-&lt;p>因违反相关法律法规和《微博举报投诉操作细则》&lt;/p>
-&lt;/blockquote>
-&lt;p>这件事有太多让我生气的点. 第一，我认为游戏本身和游戏的内涵应该坚定的区分开，就像人的业务水平和人品应该坚定的区分开一样. 一个游戏即便影射了国家领导人习近平，这就妨碍它成为一个游戏了么？作品讽刺的东西是你讨厌的，你就说这个作品有内涵、是伟大的作品；作品讽刺的东西是你热爱的，你就说这个作品阴阳怪气、是垃圾——双标真的是玩得溜啊. 微博上的人永远都是意识形态作为第一位，他们会觉得一个人人品不好，专业能力再强都不行：一个明星吸毒了，就必须封杀他；一个品牌辱华了，就必须封杀它. 第二，我发的东西哪一点违反了相关法律？违反了哪一条法律？这个问题往深了说其实是整个中文互联网的问题. 言论审查里的“相关法律”永远都是一个口袋，觉得什么不该出现就往里装，审查的规则与标准永远不能透明、公开，就是要让中国人人人自危，发言之前先自我审查一遍. 网信办真是高明啊. 第三，看它提到《微博举报投诉操作细则》，我不禁猜测，是有人举报了我的微博. 举报在我看来是一种陋习，看不惯的东西就举报它，借助铁拳的力量将它干掉，而铁拳往往会帮忙，这实在是一种悲哀. 肖站粉丝看 AO3 不爽就举报了 AO3；有人看漫画家 JM 的《帝国社会》不爽就举报他；有人不爽杨笠讽刺男性的脱口秀就举报她……现在网络环境举报成风，在我看来这就是文化大革命的思维. 在这种情况下，微博甚至没有给我一个自我辩护的机会，就直接把我的微博删除了，我感到不被尊重，在微博里没有人权. 我对自由有着偏执的追求，我对统一标准不双标有着极高的要求. 我作出决定，永久退出微博.&lt;/p>
-&lt;blockquote>
-&lt;p>那些哭着喊着要走的人，从来都不会真正离开；真正想要离开的人，挑一个风和日丽的下午，披上一件大衣出门，消失在冬日的阳光里，再也没有回来.&lt;/p>
-&lt;/blockquote>
-&lt;p>微博的缺点有很多很多，比如娱乐新闻太多、营销号太多、水军太多、饭圈太多……其实这些缺点都不是“最后一根稻草”，但它们却真的让我在离开微博后不曾感到一丝后悔. 离开微博后，我短暂地玩了半年推特，搭了这个博客，又玩了一年豆瓣. 玩豆瓣的时候，我终于体会到了在微博看似彻底的互联网下，它到底少了点什么.&lt;/p>
-&lt;p>豆瓣我是 2016 年注册的，但主要是用来标记书影音，一直都是单机版. 离开微博后我在豆瓣上试着发了些广播，也参与到和其他人广播的互动当中. 我对豆瓣最深刻的印象便是，我与他人的互动总是能收到礼貌的回应. 我有一次在一个[去博物馆拒绝使用美团预约的维权广播]下面详细写了一些维权的建议，那一天我获得了两个关注，而且一看就是真实的豆瓣用户，不是机器人，不是僵尸号. 我玩微博 6 年，这 6 年在微博上我一共也只和两个完全不认识的微博网友互相关注了. 我偶尔在微博某个评论区能看到一个有趣的灵魂，但只要 ta 不是粉丝非常多的大 V，我都不敢贸然关注 ta，怕打扰到人家. 这个时候我开始思考起豆瓣和微博的差异. 微博看似的开放是真的开放么？微博的“互联网”是真正的互联网么？&lt;/p>
-&lt;p>回想我的微博经历，我自己的原创微博几乎只能得到和我互相关注的人的互动——除非我对热点事件进行评论，或者直接带上标签，这样搜索热点或标签的人可能会看到我的微博，其中有很少一部分人会与我互动. 我又是如何与其他陌生网友互动的呢？两个途径：一是通过搜索关键词或热搜，二是到我关注的头部用户（如名人、新闻媒体帐号）的评论区参与评论互动. 但那些生活中的小事、完全不热点的评论、很随机的思考，则完完全全得不到陌生网友的互动. 一来除了关注我的人别人根本就看不到；二来微博有一种氛围，就是自我封闭. 在微博有一种约定俗成，评论区是博主自己的“地盘”，博主不喜欢的评论可以随意删掉. 很多博主也不喜欢得到陌生人的评论，好像这很不礼貌. 如果你真的想发表意见，安全的做法是转评，或者是截图后发表意见，反正不要让博主知道，人家也不想知道. ——这真的是互联网么？&lt;/p>
-&lt;p>在豆瓣则没有这个问题，大家以“友邻”相称，氛围十分友好. 不管认识的不认识的，有任何问题都可以直接在评论区互动，有不同意见也可以直接说出来，大家友好讨论. 我想了想，根本原因在于豆瓣没有官方认证的头部用户、官方帐号——所有人都是平等的，无论你粉丝多还是粉丝少. 我在豆瓣终于有在互联网上的感觉了，就好像我高二的暑假在 QQ 群里和大家聊天一样. 但好景不长. 豆瓣比微博的言论审查要严格得多，动不动就敏感、封禁. 2019 年 10 月豆瓣经历了大规模的广播整顿，历时将近一个月；2020 年 10 月，豆瓣又将 #hashtag# 一律作废，把井号改成星号. 广大的豆瓣友邻全都受不了了，大家一起离开豆瓣，以“背井离乡”为暗号迁徙到新的家园——长毛象 Mastodon. 我当然也跟了过去.&lt;/p>
-&lt;p>应该说，Mastodon 是我心目中互联网最理想的样子，如果不出意外，我未来的互联网社交将主要在 Mastodon 上完成. Mastodon 是一个联邦宇宙项目，它旨在提供一个去中心化的社交网络. 就好比邮箱服务就是一个去中心化的服务，你可以注册 163 邮箱，可以注册 QQ 邮箱，可以注册 outlook 邮箱，任何邮箱之间都能互发消息；Mastodon 也是这样，它有众多的实例，你可以在 A 实例注册帐号，可以在 B 实例注册帐号，可以在 C 实例注册帐号，任何两个帐号之间都能互相关注. 所有的实例都是个人运营的，只有运营实例的站长才能管理实例. 它不像中心化的微博由新浪运营，必须要听新浪的，新浪给你把微博改版你就只能默默忍受，新浪要删除你的言论你也无法反抗. 在 Mastodon 你可以选择自己喜欢的实例，如果一个实例让你不爽，你可以换另一个；如果所有实例都不让人满意，你还能运营自己的实例，自己说了算，要不要改版，要改成什么样，要去掉什么功能，要添加什么功能，要不要言论审查，全都你说了算. 而且你的实例依然是和其他所有实例互联的，即便你的实例只有你一个人你也不会感到孤单.&lt;/p>
-&lt;p>从 2020 年 10 月加入 Mastodon 以来，我感到无比快乐. 大家非常友善，而且乐于交流. 这里没有营销号、没有广告、没有热搜、没有算法，大家的发言按照时间顺序排列，我在这里总能看到各种各样丰富多彩又真实的生活. 我的任何发言都很有可能被人看到，大家也毫不拘束，乐于互动，三个月以来我已经在这里收获了 40 多位粉丝（全都是陌生的网友），认识到了很多优秀的人，交到了很多要好的朋友. 我在这里感受到了互联网的魅力. 它轻轻地向我诉说着开放与自由的精神，向我展示着人与人交流的无限可能.&lt;/p></description></item></channel></rss>
+&lt;p>这是一些问题，我没有答案. 我不知道自己在观鸟这条路上能走到哪里，我不知道自己能不能像大佬一样观鸟二十余年. 不过，目前似乎不是放弃的时候，我想等我真的看到了 100 种鸟类，再来思考这些问题不迟.&lt;/p></description></item></channel></rss>
