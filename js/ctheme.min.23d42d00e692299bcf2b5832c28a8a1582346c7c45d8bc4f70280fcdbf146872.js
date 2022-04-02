@@ -1,0 +1,1 @@
+const themeContainer=document.querySelector(".theme-container");var ctheme=localStorage.getItem("ctheme"),checked=1;ctheme=="dark"?(themeContainer.classList.add("dark"),checked=0):ctheme=="light"?themeContainer.classList.remove("dark"):window.matchMedia("(prefers-color-scheme: dark)").matches?(themeContainer.classList.add("dark"),checked=0):themeContainer.classList.remove("dark")

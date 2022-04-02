@@ -1,154 +1,10 @@
-<!DOCTYPE html><html lang="zh" class="theme-container"><head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=divice-width,initial-scale=1"/>
-<meta name="generator" content="Hugo 0.92.2"/>
-<title>
-如何让静态网站的暗色主题换页不闪烁 - 自写主题
-| 赤赤的象牙塔
-</title>
-<link rel="stylesheet" type="text/css" href="../../css/base.min.7a1b5c1c1d7e43ac09f0cd1df239e034cbdf5fa7439794fb7b5fe1225963173c.css"/>
-<link rel="stylesheet" media="screen and (max-width: 1200px)" type="text/css" href="../../css/small.min.f9c67371e05b88a9468d51903bbe4d52be301b7e498d3f1dc7fbff95f35f2929.css"/>
-<link rel="stylesheet" media="screen and (min-width: 1201px)" type="text/css" href="../../css/normal.min.7fe55f32650b9c713cce8ccc9a63d23eecaff2b247b70a69bf3650b249319609.css"/>
-<link rel="stylesheet" type="text/css" href="../../css/syntax.min.ed5b37c3a50997d5ccd8b81bf0d00a7ac1f92c82985623c2dbf0cb422596726a.css"/>
-<script src="../../js/ctheme.min.2b9744ea6df95f636aae562954ce13add68a9c7b99203c9ac1aa4671b6238958.js"></script>
+<!DOCTYPE html><html lang="zh" class="theme-container"><head><meta charset="utf-8"/><meta name="viewport" content="width=divice-width,initial-scale=1"/><meta name="generator" content="Hugo 0.96.0"/><title>如何让静态网站的暗色主题换页不闪烁 - 自写主题
+| 赤赤的象牙塔</title><link rel="stylesheet" type="text/css" href="../../css/base.min.7a1b5c1c1d7e43ac09f0cd1df239e034cbdf5fa7439794fb7b5fe1225963173c.css"/><link rel="stylesheet" media="screen and (max-width: 1200px)" type="text/css" href="../../css/small.min.f9c67371e05b88a9468d51903bbe4d52be301b7e498d3f1dc7fbff95f35f2929.css"/><link rel="stylesheet" media="screen and (min-width: 1201px)" type="text/css" href="../../css/normal.min.7fe55f32650b9c713cce8ccc9a63d23eecaff2b247b70a69bf3650b249319609.css"/><link rel="stylesheet" type="text/css" href="../../css/syntax.min.ed5b37c3a50997d5ccd8b81bf0d00a7ac1f92c82985623c2dbf0cb422596726a.css"/><script src="../../js/ctheme.min.23d42d00e692299bcf2b5832c28a8a1582346c7c45d8bc4f70280fcdbf146872.js"></script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-6CF2JBMYH3"></script>
-<script>var doNotTrack=!1;if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','G-6CF2JBMYH3',{anonymize_ip:!1})}</script>
-<script data-goatcounter="https://zerovip.goatcounter.com/count" async="" src="//gc.zgo.at/count.js"></script>
-</head>
-<body>
-<nav class="bar_for_phone">
-<div class="bar_left_button">
-<div class="left_button_for_bar" onclick="ChangeClassLeft()">
-<div class="bar1"></div>
-<div class="bar2"></div>
-<div class="bar3"></div>
-</div>
-</div>
-<div class="bar_title">
-<a href="../../zh/">赤赤的象牙塔</a>
-</div>
-<div class="bar_right_button">
-<button class="toc_title_for_bar" onclick="ChangeClassTOC()">目录</button>
-</div>
-</nav>
-<div class="body_for_pc">
-<aside class="left" id="left">
-<div class="left_non-footer">
-<div class="left_non-footer_option">
-<div role="checkbox" aria-checked="true" class="left_non-footer_option_theme-switch">
-<label class="switch">
-<input type="checkbox" class="theme-switcher" onchange="themeSwitch()"/>
-<span class="slider round"></span>
-</label>
-</div>
-<ul role="listbox" class="left_non-footer_option_language">
-<li role="option" aria-selected="true" class="left_non-footer_option_active">
-简体中文 ⦿
-</li>
-<li role="option" aria-selected="false" class="left_non-footer_option_non-active">
-<a href="../../en/01901/">
-English ○
-</a>
-</li>
-<li role="option" class="left_non-footer_option_non-active">
-Français ⨂
-</li>
-</ul>
-<div class="left_non-footer_option_rss">
-<div class="left_non-footer_option_non-active">
-RSS 订阅 ⊠
-</div>
-</div>
-</div>
-<header class="left_non-footer_head">
-<div class="left_non-footer_head_title">
-<a href="../../zh/">
-赤赤的象牙塔
-</a>
-</div>
-<div class="left_non-footer_head_subtitle">(●’◡’●)ﾉ</div>
-</header>
-<nav class="left_non-footer_main">
-<div class="h1">
-<a href="../../zh/math/">数学</a>
-</div>
-<div class="h2">
-<a href="../../zh/math/notes/">数学笔记 </a>
-</div>
-<div class="h2">
-<a href="../../zh/math/stories/">数学科普 </a>
-</div>
-<div class="h1 active">
-<a href="../../zh/non-math/">非数学</a>
-</div>
-<div class="h2">
-<a href="../../zh/non-math/journal/">日志 </a>
-</div>
-<div class="h2">
-<a href="../../zh/non-math/literature/">写作 </a>
-</div>
-<div class="h2 active">
-<a href="../../zh/non-math/memos/">备忘 </a>
-</div>
-<div class="h1">
-<a href="../../zh/record/">记录</a>
-</div>
-<div class="h2">
-<a href="../../zh/record/book/">读过的书 </a>
-</div>
-<div class="h2">
-<a href="../../zh/record/film/">看过的电影 </a>
-</div>
-<div class="h1">
-<a href="../../zh/about/">关于</a>
-</div>
-<div class="h2">
-<a href="../../zh/about/me/">关于我 </a>
-</div>
-<div class="h2">
-<a href="../../zh/about/site/">关于本站 </a>
-</div>
-</nav>
-</div>
-<footer class="left_footer">
-<div class="copyright">©2019-2022 版权所有.</div>
-</footer>
-</aside>
-<div class="right" onclick="HideBothSide()">
-<header class="right_head">
-<div class="right_head_title">
-如何让静态网站的暗色主题换页不闪烁 - 自写主题
-</div>
-<div class="right_head_des">
-2021年8月27日 - 955 字
-</div>
-</header>
-<div class="right_main">
-<article class="right_main_article">
-<h1 id="问题">
-问题
-<a href="#%e9%97%ae%e9%a2%98"><small>¶</small></a>
-</h1>
-<p>我写的这个 Hugo 主题之前一直有个毛病. 它默认是亮色主题，但如果调到暗色主题<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>，那么加载新页面时网站会先渲染亮色主题，然后再自动切换到暗色主题，观感上就是它闪烁了一下. 我本来以为这是静态网站的通病，直到我看到别人的主题就没这个毛病，比如 <a href="https://adityatelange.github.io/hugo-PaperMod/" target="_blank" rel="noreferrer noopener">PaperMod<b><sub>⧉</sub></b></a>. 所以这个问题是一定有解决方案的.</p>
-<p>我先查了一下，<a href="https://github.com/zwbetz-gh/cupper-hugo-theme" target="_blank" rel="noreferrer noopener">Cupper 主题<b><sub>⧉</sub></b></a>的维护者写过一篇文章：<a href="https://zwbetz.com/fix-the-white-flash-on-page-load-when-using-a-dark-theme-on-a-static-site/" target="_blank" rel="noreferrer noopener">Fix the White Flash on Page Load When Using a Dark Theme on a Static Site<b><sub>⧉</sub></b></a>. 我试了 ta 的方案，Chrome 浏览器下此方案确实解决了问题，但是 Firefox 下问题依然存在：Firefox 会把 <code>visibility: hidden; opacity: 0;</code> 渲染成白色，等 <code>DOMContentLoaded</code> 事件发生后，<code>showContent()</code> 函数再把内容展示出来，也就是说它还是会闪烁，只不过之前是闪一下<strong>亮色主题</strong>，现在是闪一下<strong>纯白页</strong>，实际观感同样糟糕.</p>
-<p>Firefox 与 Chrome 的差异我觉得更像是 Chrome 的开发者使用了魔法，来帮助其用户获得更好的使用体验，同时这也掩盖了真正的问题，迷惑了使用 Chrome 浏览器的 Hugo 主题开发者.</p>
-<h1 id="找到问题的根源">
-找到问题的根源
-<a href="#%e6%89%be%e5%88%b0%e9%97%ae%e9%a2%98%e7%9a%84%e6%a0%b9%e6%ba%90"><small>¶</small></a>
-</h1>
-<p>核心的思路仍然是理解浏览器渲染页面的流程. 简单来说：</p>
-<ul>
-<li>你请求了一个网页；</li>
-<li>浏览器先把整个 HTML 下载下来，存成 DOM，然后从上到下依次解析、渲染页面；</li>
-<li>遇到外链的 CSS 或 JavaScript 就停止解析，先去把外链的文件下载回来装载上再继续；</li>
-<li>遇到 <code>&lt;style&gt;&lt;/style&gt;</code> 或刚刚装载了外部的 CSS 就把样式表存成 CSSOM 并重新渲染有影响的部分；</li>
-<li>遇到 <code>&lt;script&gt;&lt;/script&gt;</code> 或刚刚装载了外部的 JavaScript 就停止解析并运行脚本，运行完脚本后再继续解析、渲染；</li>
-<li>以此类推，直到完成.</li>
-</ul>
-<p>而发生闪烁问题的原因就在于我把判断颜色的 JavaScript 脚本放在了 <code>&lt;body&gt;</code> 的最后，像这样：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tbody><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
+<script>var doNotTrack=!1;if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-6CF2JBMYH3",{anonymize_ip:!1})}</script><script data-goatcounter="https://zerovip.goatcounter.com/count" async="" src="//gc.zgo.at/count.js"></script></head><body><nav class="bar_for_phone"><div class="bar_left_button"><div class="left_button_for_bar" onclick="ChangeClassLeft()"><div class="bar1"></div><div class="bar2"></div><div class="bar3"></div></div></div><div class="bar_title"><a href="../../zh/">赤赤的象牙塔</a></div><div class="bar_right_button"><button class="toc_title_for_bar" onclick="ChangeClassTOC()">目录</button></div></nav><div class="body_for_pc"><aside class="left" id="left"><div class="left_non-footer"><div class="left_non-footer_option"><div role="checkbox" aria-checked="true" class="left_non-footer_option_theme-switch"><label class="switch"><input type="checkbox" class="theme-switcher" onchange="themeSwitch()"/>
+<span class="slider round"></span></label></div><ul role="listbox" class="left_non-footer_option_language"><li role="option" aria-selected="true" class="left_non-footer_option_active">简体中文 ⦿</li><li role="option" aria-selected="false" class="left_non-footer_option_non-active"><a href="../../en/01901/">English ○</a></li><li role="option" class="left_non-footer_option_non-active">Français ⨂</li></ul><div class="left_non-footer_option_rss"><div class="left_non-footer_option_non-active">RSS 订阅 ⊠</div></div></div><header class="left_non-footer_head"><div class="left_non-footer_head_title"><a href="../../zh/">赤赤的象牙塔</a></div><div class="left_non-footer_head_subtitle">(●’◡’●)ﾉ</div></header><nav class="left_non-footer_main"><div class="h1"><a href="../../zh/math/">数学</a></div><div class="h2"><a href="../../zh/math/notes/">数学笔记</a></div><div class="h2"><a href="../../zh/math/stories/">数学科普</a></div><div class="h1 active"><a href="../../zh/non-math/">非数学</a></div><div class="h2"><a href="../../zh/non-math/journal/">日志</a></div><div class="h2"><a href="../../zh/non-math/literature/">写作</a></div><div class="h2 active"><a href="../../zh/non-math/memos/">备忘</a></div><div class="h1"><a href="../../zh/record/">记录</a></div><div class="h2"><a href="../../zh/record/book/">读过的书</a></div><div class="h2"><a href="../../zh/record/film/">看过的电影</a></div><div class="h1"><a href="../../zh/about/">关于</a></div><div class="h2"><a href="../../zh/about/me/">关于我</a></div><div class="h2"><a href="../../zh/about/site/">关于本站</a></div></nav></div><footer class="left_footer"><div class="copyright">©2019-2022 版权所有.</div></footer></aside><div class="right" onclick="HideBothSide()"><header class="right_head"><div class="right_head_title">如何让静态网站的暗色主题换页不闪烁 - 自写主题</div><div class="right_head_des">2021年8月27日 - 955 字</div></header><div class="right_main"><article class="right_main_article"><h1 id="问题">问题
+<a href="#%e9%97%ae%e9%a2%98"><small>¶</small></a></h1><p>我写的这个 Hugo 主题之前一直有个毛病. 它默认是亮色主题，但如果调到暗色主题<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>，那么加载新页面时网站会先渲染亮色主题，然后再自动切换到暗色主题，观感上就是它闪烁了一下. 我本来以为这是静态网站的通病，直到我看到别人的主题就没这个毛病，比如 <a href="https://adityatelange.github.io/hugo-PaperMod/" target="_blank" rel="noreferrer noopener">PaperMod<b><sub>⧉</sub></b></a>. 所以这个问题是一定有解决方案的.</p><p>我先查了一下，<a href="https://github.com/zwbetz-gh/cupper-hugo-theme" target="_blank" rel="noreferrer noopener">Cupper 主题<b><sub>⧉</sub></b></a>的维护者写过一篇文章：<a href="https://zwbetz.com/fix-the-white-flash-on-page-load-when-using-a-dark-theme-on-a-static-site/" target="_blank" rel="noreferrer noopener">Fix the White Flash on Page Load When Using a Dark Theme on a Static Site<b><sub>⧉</sub></b></a>. 我试了 ta 的方案，Chrome 浏览器下此方案确实解决了问题，但是 Firefox 下问题依然存在：Firefox 会把 <code>visibility: hidden; opacity: 0;</code> 渲染成白色，等 <code>DOMContentLoaded</code> 事件发生后，<code>showContent()</code> 函数再把内容展示出来，也就是说它还是会闪烁，只不过之前是闪一下<strong>亮色主题</strong>，现在是闪一下<strong>纯白页</strong>，实际观感同样糟糕.</p><p>Firefox 与 Chrome 的差异我觉得更像是 Chrome 的开发者使用了魔法，来帮助其用户获得更好的使用体验，同时这也掩盖了真正的问题，迷惑了使用 Chrome 浏览器的 Hugo 主题开发者.</p><h1 id="找到问题的根源">找到问题的根源
+<a href="#%e6%89%be%e5%88%b0%e9%97%ae%e9%a2%98%e7%9a%84%e6%a0%b9%e6%ba%90"><small>¶</small></a></h1><p>核心的思路仍然是理解浏览器渲染页面的流程. 简单来说：</p><ul><li>你请求了一个网页；</li><li>浏览器先把整个 HTML 下载下来，存成 DOM，然后从上到下依次解析、渲染页面；</li><li>遇到外链的 CSS 或 JavaScript 就停止解析，先去把外链的文件下载回来装载上再继续；</li><li>遇到 <code>&lt;style&gt;&lt;/style&gt;</code> 或刚刚装载了外部的 CSS 就把样式表存成 CSSOM 并重新渲染有影响的部分；</li><li>遇到 <code>&lt;script&gt;&lt;/script&gt;</code> 或刚刚装载了外部的 JavaScript 就停止解析并运行脚本，运行完脚本后再继续解析、渲染；</li><li>以此类推，直到完成.</li></ul><p>而发生闪烁问题的原因就在于我把判断颜色的 JavaScript 脚本放在了 <code>&lt;body&gt;</code> 的最后，像这样：</p><div class="highlight"><div class="chroma"><table class="lntable"><tbody><tr><td class="lntd"><pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -156,70 +12,32 @@ RSS 订阅 ⊠
 </span><span class="lnt">6
 </span><span class="lnt">7
 </span><span class="lnt">8
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-        <span class="c">&lt;!-- lots of stuff…… --&gt;</span>
-
-        <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;changeTheme.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
-</code></pre></td></tr></tbody></table>
-</div>
-</div><h1 id="解决">
-解决
-<a href="#%e8%a7%a3%e5%86%b3"><small>¶</small></a>
-</h1>
-<p>问题的解决其实也简单，核心有二：</p>
-<ul>
-<li>
-<ol>
-<li>把读取主题的脚本放进 <code>&lt;head&gt;</code> 里，这样刚刚加载还没开始渲染时就能够确定用户当前选择的主题；</li>
-</ol>
-</li>
-<li>
-<ol start="2">
-<li>把更改主题的容器提升成整个 <code>&lt;html&gt;</code>，即：从原来的</li>
-</ol>
-</li>
-</ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tbody><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td><td class="lntd"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="c">&lt;!-- lots of stuff…… --&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;changeTheme.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></tbody></table></div></div><h1 id="解决">解决
+<a href="#%e8%a7%a3%e5%86%b3"><small>¶</small></a></h1><p>问题的解决其实也简单，核心有二：</p><ul><li><ol><li>把读取主题的脚本放进 <code>&lt;head&gt;</code> 里，这样刚刚加载还没开始渲染时就能够确定用户当前选择的主题；</li></ol></li><li><ol start="2"><li>把更改主题的容器提升成整个 <code>&lt;html&gt;</code>，即：从原来的</li></ol></li></ul><div class="highlight"><div class="chroma"><table class="lntable"><tbody><tr><td class="lntd"><pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">body</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;theme-container&#34;</span><span class="p">&gt;</span>
-    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
-</code></pre></td></tr></tbody></table>
-</div>
-</div><p>变成现在的</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tbody><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td><td class="lntd"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">body</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;theme-container&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></tbody></table></div></div><p>变成现在的</p><div class="highlight"><div class="chroma"><table class="lntable"><tbody><tr><td class="lntd"><pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">html</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;theme-container&#34;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
-</code></pre></td></tr></tbody></table>
-</div>
-</div><p>这是因为 <code>&lt;body&gt;</code> 在这个时候还没有被渲染，<code>&lt;head&gt;</code> 里的脚本能操作的对象只有 <code>&lt;html&gt;</code>.</p>
-<hr/>
-<p>至此问题完全解决，完整的代码如下：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tbody><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span></code></pre></td><td class="lntd"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">html</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;theme-container&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></tbody></table></div></div><p>这是因为 <code>&lt;body&gt;</code> 在这个时候还没有被渲染，<code>&lt;head&gt;</code> 里的脚本能操作的对象只有 <code>&lt;html&gt;</code>.</p><hr/><p>至此问题完全解决，完整的代码如下：</p><div class="highlight"><div class="chroma"><table class="lntable"><tbody><tr><td class="lntd"><pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -241,68 +59,26 @@ RSS 订阅 ⊠
 </span><span class="lnt">20
 </span><span class="lnt">21
 </span><span class="lnt">22
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="p">&lt;</span><span class="nt">html</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;theme-container&#34;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
-        <span class="c">&lt;!-- lots of stuff…… --&gt;</span>
-
-        <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
-            <span class="kr">const</span> <span class="nx">themeContainer</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&#34;.theme-container&#34;</span><span class="p">);</span>
-            <span class="kd">var</span> <span class="nx">theme</span> <span class="o">=</span> <span class="nx">localStorage</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="s2">&#34;theme&#34;</span><span class="p">);</span>
-            <span class="k">if</span> <span class="p">(</span><span class="nx">theme</span> <span class="o">==</span> <span class="s2">&#34;dark&#34;</span><span class="p">)</span> <span class="p">{</span>
-                <span class="nx">themeContainer</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s2">&#34;dark&#34;</span><span class="p">);</span>
-            <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">theme</span> <span class="o">==</span> <span class="s2">&#34;light&#34;</span><span class="p">)</span> <span class="p">{</span>
-                <span class="nx">themeContainer</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="s2">&#34;dark&#34;</span><span class="p">);</span>
-            <span class="p">}</span>
-        <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
-
-    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-        <span class="c">&lt;!-- lots of stuff…… --&gt;</span>
-
-        <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;others.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
-</code></pre></td></tr></tbody></table>
-</div>
-</div><section class="footnotes" role="doc-endnotes">
-<hr/>
-<ol>
-<li id="fn:1" role="doc-endnote">
-<p>本主题中暗色模式的实现方法为 CSS 变量，详见<a href="https://dev.to/lampewebdev/css-quickies-css-variables-or-how-you-create-a-white-dark-theme-easily-1i0i" target="_blank" rel="noreferrer noopener">这篇教程<b><sub>⧉</sub></b></a>. <a href="#fnref:1" class="footnote-backref" role="doc-backlink">↩︎</a></p>
-</li>
-</ol>
-</section>
-<p></p><p></p><p></p><p></p><p></p><p></p>
-<h1>友情链接（该栏目下的其他文章）</h1>
-<ol>
-<li> 第 1 期：<a href="../../zh/18284/">Hugo 静态博客建站记 - 自写主题</a></li>
-<li> 第 2 期：<a href="../../zh/82988/">博客记录书影音——Hugo 的 Data Templates - 自写主题</a></li>
-<li> 第 3 期：如何让静态网站的暗色主题换页不闪烁 - 自写主题（就是这篇！）</li>
-<li> 第 4 期：<a href="../../zh/15738/">Hugo 如何让图片在暗色主题下反色 - 自写主题</a></li>
-</ol>
-<p></p><p></p><p></p><p></p>
-</article>
-</div>
-<div class="right_comments">
-<script src="https://utteranc.es/client.js" repo="zerovip/bcsu" issue-term="pathname" theme="github-light" crossorigin="anonymous" async=""></script>
-</div>
-</div>
-<aside class="toc" id="toc">
-<button class="toc_title">目录</button>
-<div class="toc_content">
-<nav id="TableOfContents">
-<ul>
-<li><a href="#问题">问题</a></li>
-<li><a href="#找到问题的根源">找到问题的根源</a></li>
-<li><a href="#解决">解决</a></li>
-</ul>
-</nav>
-</div>
-</aside>
-</div>
-<script src="../../js/main.min.60aa2f3f5fd2bd0fbc6bfb7a3e14b1eb89f8dd2b4caa083c22b7f3cb656ea273.js"></script>
-
-</body></html>
+</span></code></pre></td><td class="lntd"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">html</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;theme-container&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="c">&lt;!-- lots of stuff…… --&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="kr">const</span> <span class="nx">themeContainer</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&#34;.theme-container&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="kd">var</span> <span class="nx">theme</span> <span class="o">=</span> <span class="nx">localStorage</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="s2">&#34;theme&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(</span><span class="nx">theme</span> <span class="o">==</span> <span class="s2">&#34;dark&#34;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">themeContainer</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s2">&#34;dark&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">theme</span> <span class="o">==</span> <span class="s2">&#34;light&#34;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">themeContainer</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="s2">&#34;dark&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="c">&lt;!-- lots of stuff…… --&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;others.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></tbody></table></div></div><section class="footnotes" role="doc-endnotes"><hr/><ol><li id="fn:1" role="doc-endnote"><p>本主题中暗色模式的实现方法为 CSS 变量，详见<a href="https://dev.to/lampewebdev/css-quickies-css-variables-or-how-you-create-a-white-dark-theme-easily-1i0i" target="_blank" rel="noreferrer noopener">这篇教程<b><sub>⧉</sub></b></a>. <a href="#fnref:1" class="footnote-backref" role="doc-backlink">↩︎</a></p></li></ol></section><p></p><p></p><p></p><p></p><p></p><p></p><h1>友情链接（该栏目下的其他文章）</h1><ol><li>第 1 期：<a href="../../zh/18284/">Hugo 静态博客建站记 - 自写主题</a></li><li>第 2 期：<a href="../../zh/82988/">博客记录书影音——Hugo 的 Data Templates - 自写主题</a></li><li>第 3 期：如何让静态网站的暗色主题换页不闪烁 - 自写主题（就是这篇！）</li><li>第 4 期：<a href="../../zh/15738/">Hugo 如何让图片在暗色主题下反色 - 自写主题</a></li></ol><p></p><p></p><p></p><p></p></article></div><div class="right_comments"><script src="https://utteranc.es/client.js" repo="zerovip/bcsu" issue-term="pathname" theme="github-light" crossorigin="anonymous" async=""></script></div></div><aside class="toc" id="toc"><button class="toc_title">目录</button><div class="toc_content"><nav id="TableOfContents"><ul><li><a href="#问题">问题</a></li><li><a href="#找到问题的根源">找到问题的根源</a></li><li><a href="#解决">解决</a></li></ul></nav></div></aside></div><script src="../../js/main.min.320be488d7313796cab3e8d6445bfce6f4e1740c6cbe4d20e8b19d3e82a9a532.js"></script></body></html>

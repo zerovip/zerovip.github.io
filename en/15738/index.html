@@ -1,219 +1,47 @@
-<!DOCTYPE html><html lang="en" class="theme-container"><head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=divice-width,initial-scale=1"/>
-<meta name="generator" content="Hugo 0.92.2"/>
-<title>
-Make Hugo Invert Color for Images when Using a Dark Mode - Build a Theme
-| Zero&#39;s Ivory Tower
-</title>
-<link rel="stylesheet" type="text/css" href="../../css/base.min.7a1b5c1c1d7e43ac09f0cd1df239e034cbdf5fa7439794fb7b5fe1225963173c.css"/>
-<link rel="stylesheet" media="screen and (max-width: 1200px)" type="text/css" href="../../css/small.min.f9c67371e05b88a9468d51903bbe4d52be301b7e498d3f1dc7fbff95f35f2929.css"/>
-<link rel="stylesheet" media="screen and (min-width: 1201px)" type="text/css" href="../../css/normal.min.7fe55f32650b9c713cce8ccc9a63d23eecaff2b247b70a69bf3650b249319609.css"/>
-<link rel="stylesheet" type="text/css" href="../../css/syntax.min.ed5b37c3a50997d5ccd8b81bf0d00a7ac1f92c82985623c2dbf0cb422596726a.css"/>
-<script src="../../js/ctheme.min.2b9744ea6df95f636aae562954ce13add68a9c7b99203c9ac1aa4671b6238958.js"></script>
+<!DOCTYPE html><html lang="en" class="theme-container"><head><meta charset="utf-8"/><meta name="viewport" content="width=divice-width,initial-scale=1"/><meta name="generator" content="Hugo 0.96.0"/><title>Make Hugo Invert Color for Images when Using a Dark Mode - Build a Theme
+| Zero&#39;s Ivory Tower</title><link rel="stylesheet" type="text/css" href="../../css/base.min.7a1b5c1c1d7e43ac09f0cd1df239e034cbdf5fa7439794fb7b5fe1225963173c.css"/><link rel="stylesheet" media="screen and (max-width: 1200px)" type="text/css" href="../../css/small.min.f9c67371e05b88a9468d51903bbe4d52be301b7e498d3f1dc7fbff95f35f2929.css"/><link rel="stylesheet" media="screen and (min-width: 1201px)" type="text/css" href="../../css/normal.min.7fe55f32650b9c713cce8ccc9a63d23eecaff2b247b70a69bf3650b249319609.css"/><link rel="stylesheet" type="text/css" href="../../css/syntax.min.ed5b37c3a50997d5ccd8b81bf0d00a7ac1f92c82985623c2dbf0cb422596726a.css"/><script src="../../js/ctheme.min.23d42d00e692299bcf2b5832c28a8a1582346c7c45d8bc4f70280fcdbf146872.js"></script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-6CF2JBMYH3"></script>
-<script>var doNotTrack=!1;if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','G-6CF2JBMYH3',{anonymize_ip:!1})}</script>
-<script data-goatcounter="https://zerovip.goatcounter.com/count" async="" src="//gc.zgo.at/count.js"></script>
-</head>
-<body>
-<nav class="bar_for_phone">
-<div class="bar_left_button">
-<div class="left_button_for_bar" onclick="ChangeClassLeft()">
-<div class="bar1"></div>
-<div class="bar2"></div>
-<div class="bar3"></div>
-</div>
-</div>
-<div class="bar_title">
-<a href="../../en/">Zero&#39;s Ivory Tower</a>
-</div>
-<div class="bar_right_button">
-<button class="toc_title_for_bar" onclick="ChangeClassTOC()">Table of Content</button>
-</div>
-</nav>
-<div class="body_for_pc">
-<aside class="left" id="left">
-<div class="left_non-footer">
-<div class="left_non-footer_option">
-<div role="checkbox" aria-checked="true" class="left_non-footer_option_theme-switch">
-<label class="switch">
-<input type="checkbox" class="theme-switcher" onchange="themeSwitch()"/>
-<span class="slider round"></span>
-</label>
-</div>
-<ul role="listbox" class="left_non-footer_option_language">
-<li role="option" aria-selected="false" class="left_non-footer_option_non-active">
-<a href="../../zh/15738/">
-简体中文 ○
-</a>
-</li>
-<li role="option" aria-selected="true" class="left_non-footer_option_active">
-English ⦿
-</li>
-<li role="option" class="left_non-footer_option_non-active">
-Français ⨂
-</li>
-</ul>
-<div class="left_non-footer_option_rss">
-<div class="left_non-footer_option_non-active">
-RSS feed ⊠
-</div>
-</div>
-</div>
-<header class="left_non-footer_head">
-<div class="left_non-footer_head_title">
-<a href="../../en/">
-Zero&#39;s Ivory Tower
-</a>
-</div>
-<div class="left_non-footer_head_subtitle">(●’◡’●)ﾉ</div>
-</header>
-<nav class="left_non-footer_main">
-<div class="h1">
-<a href="../../en/math/">MATHEMATICS</a>
-</div>
-<div class="h2">
-<a href="../../en/math/notes/">Math Noes </a>
-</div>
-<div class="h2">
-<a href="../../en/math/stories/">Math Stories </a>
-</div>
-<div class="h1 active">
-<a href="../../en/non-math/">NON-MATHMATICS</a>
-</div>
-<div class="h2">
-<a href="../../en/non-math/journal/">Journal </a>
-</div>
-<div class="h2">
-<a href="../../en/non-math/literature/">Literature </a>
-</div>
-<div class="h2 active">
-<a href="../../en/non-math/memos/">Memos </a>
-</div>
-<div class="h1">
-<a href="../../en/record/">RECORD</a>
-</div>
-<div class="h2">
-<a href="../../en/record/book/">Books Read </a>
-</div>
-<div class="h2">
-<a href="../../en/record/film/">Films Watched </a>
-</div>
-<div class="h1">
-<a href="../../en/about/">ABOUT</a>
-</div>
-<div class="h2">
-<a href="../../en/about/me/">About Me </a>
-</div>
-<div class="h2">
-<a href="../../en/about/site/">About The Site </a>
-</div>
-</nav>
-</div>
-<footer class="left_footer">
-<div class="copyright">©2019-2022 All Right Reserved.</div>
-</footer>
-</aside>
-<div class="right" onclick="HideBothSide()">
-<header class="right_head">
-<div class="right_head_title">
-Make Hugo Invert Color for Images when Using a Dark Mode - Build a Theme
-</div>
-<div class="right_head_des">
-August 28, 2021 - 665 words
-</div>
-</header>
-<div class="right_main">
-<article class="right_main_article">
-<p>This post will discuss the display problem of images in light / dark mode, and there are some sample images as examples. You can test their display by manually switch the theme of this site. The switcher is in the upper right corner of the left menu bar, and if you are using a phone you can tap the burger button in the upper left corner to call out the menu bar.</p>
-<h1 id="the-problem">
-The problem
-<a href="#the-problem"><small>¶</small></a>
-</h1>
-<p>Some images have black text on a white background, which is harsh when using the dark mode:</p>
-<p></p><figure>
-<img loading="lazy" src="lorem.jpg" alt="A sample image have black text on a white background" style="filter:var(--c-img-filter2)"/>
-<figcaption>◉ Figure. A sample image have black text on a white background</figcaption>
-</figure>
-<p></p>
-<p>While some images have black text on a transparent background, which is not visible when using the dark mode:</p>
-<p></p><figure>
-<img loading="lazy" src="lorem.png" alt="A sample image have black text on a transparent background" style="filter:var(--c-img-filter2)"/>
-<figcaption>◉ Figure. A sample image have black text on a transparent background</figcaption>
-</figure>
-<p></p>
-<p>Both of these cases need the image to be inverted when the reader selects the dark mode.</p>
-<h1 id="how-to-deal-with">
-How to deal with
-<a href="#how-to-deal-with"><small>¶</small></a>
-</h1>
-<p>The approach is using the CSS filters technique. For example, in the following code, <code>.normal</code> is for the normal color and <code>.inverted</code> is for the inverted color.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tbody><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
+<script>var doNotTrack=!1;if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-6CF2JBMYH3",{anonymize_ip:!1})}</script><script data-goatcounter="https://zerovip.goatcounter.com/count" async="" src="//gc.zgo.at/count.js"></script></head><body><nav class="bar_for_phone"><div class="bar_left_button"><div class="left_button_for_bar" onclick="ChangeClassLeft()"><div class="bar1"></div><div class="bar2"></div><div class="bar3"></div></div></div><div class="bar_title"><a href="../../en/">Zero&#39;s Ivory Tower</a></div><div class="bar_right_button"><button class="toc_title_for_bar" onclick="ChangeClassTOC()">Table of Content</button></div></nav><div class="body_for_pc"><aside class="left" id="left"><div class="left_non-footer"><div class="left_non-footer_option"><div role="checkbox" aria-checked="true" class="left_non-footer_option_theme-switch"><label class="switch"><input type="checkbox" class="theme-switcher" onchange="themeSwitch()"/>
+<span class="slider round"></span></label></div><ul role="listbox" class="left_non-footer_option_language"><li role="option" aria-selected="false" class="left_non-footer_option_non-active"><a href="../../zh/15738/">简体中文 ○</a></li><li role="option" aria-selected="true" class="left_non-footer_option_active">English ⦿</li><li role="option" class="left_non-footer_option_non-active">Français ⨂</li></ul><div class="left_non-footer_option_rss"><div class="left_non-footer_option_non-active">RSS feed ⊠</div></div></div><header class="left_non-footer_head"><div class="left_non-footer_head_title"><a href="../../en/">Zero&#39;s Ivory Tower</a></div><div class="left_non-footer_head_subtitle">(●’◡’●)ﾉ</div></header><nav class="left_non-footer_main"><div class="h1"><a href="../../en/math/">MATHEMATICS</a></div><div class="h2"><a href="../../en/math/notes/">Math Noes</a></div><div class="h2"><a href="../../en/math/stories/">Math Stories</a></div><div class="h1 active"><a href="../../en/non-math/">NON-MATHMATICS</a></div><div class="h2"><a href="../../en/non-math/journal/">Journal</a></div><div class="h2"><a href="../../en/non-math/literature/">Literature</a></div><div class="h2 active"><a href="../../en/non-math/memos/">Memos</a></div><div class="h1"><a href="../../en/record/">RECORD</a></div><div class="h2"><a href="../../en/record/book/">Books Read</a></div><div class="h2"><a href="../../en/record/film/">Films Watched</a></div><div class="h1"><a href="../../en/about/">ABOUT</a></div><div class="h2"><a href="../../en/about/me/">About Me</a></div><div class="h2"><a href="../../en/about/site/">About The Site</a></div></nav></div><footer class="left_footer"><div class="copyright">©2019-2022 All Right Reserved.</div></footer></aside><div class="right" onclick="HideBothSide()"><header class="right_head"><div class="right_head_title">Make Hugo Invert Color for Images when Using a Dark Mode - Build a Theme</div><div class="right_head_des">August 28, 2021 - 665 words</div></header><div class="right_main"><article class="right_main_article"><p>This post will discuss the display problem of images in light / dark mode, and there are some sample images as examples. You can test their display by manually switch the theme of this site. The switcher is in the upper right corner of the left menu bar, and if you are using a phone you can tap the burger button in the upper left corner to call out the menu bar.</p><h1 id="the-problem">The problem
+<a href="#the-problem"><small>¶</small></a></h1><p>Some images have black text on a white background, which is harsh when using the dark mode:</p><p></p><figure><img loading="lazy" src="lorem.jpg" alt="A sample image have black text on a white background" style="filter:var(--c-img-filter2)"/><figcaption>◉ Figure. A sample image have black text on a white background</figcaption></figure><p></p><p>While some images have black text on a transparent background, which is not visible when using the dark mode:</p><p></p><figure><img loading="lazy" src="lorem.png" alt="A sample image have black text on a transparent background" style="filter:var(--c-img-filter2)"/><figcaption>◉ Figure. A sample image have black text on a transparent background</figcaption></figure><p></p><p>Both of these cases need the image to be inverted when the reader selects the dark mode.</p><h1 id="how-to-deal-with">How to deal with
+<a href="#how-to-deal-with"><small>¶</small></a></h1><p>The approach is using the CSS filters technique. For example, in the following code, <code>.normal</code> is for the normal color and <code>.inverted</code> is for the inverted color.</p><div class="highlight"><div class="chroma"><table class="lntable"><tbody><tr><td class="lntd"><pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span><span class="lnt">6
 </span><span class="lnt">7
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-CSS" data-lang="CSS"><span class="p">.</span><span class="nc">normal</span> <span class="p">{</span>
-	<span class="k">filter</span><span class="p">:</span> <span class="nb">invert</span><span class="p">(</span><span class="mi">0</span><span class="kt">%</span><span class="p">);</span>
-<span class="p">}</span>
-
-<span class="p">.</span><span class="nc">inverted</span> <span class="p">{</span>
-	<span class="k">filter</span><span class="p">:</span> <span class="nb">invert</span><span class="p">(</span><span class="mi">100</span><span class="kt">%</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></td></tr></tbody></table>
-</div>
-</div><p>We can put the above code into a CSS variable, together with the dark mode switch part. Then we edit <a href="https://gohugo.io/getting-started/configuration-markup/#markdown-render-hooks" target="_blank" rel="noreferrer noopener">render hooks<b><sub>⧉</sub></b></a> in the Hugo template, one of which is for image processing, just add appropriate style to the image there.</p>
-<p>About the dark mode switching function I refer to <a href="https://dev.to/lampewebdev/css-quickies-css-variables-or-how-you-create-a-white-dark-theme-easily-1i0i" target="_blank" rel="noreferrer noopener">this article<b><sub>⧉</sub></b></a> in the practice. Roughly speaking, when the reader switch the site theme to dark mode, the whole <code>&lt;html&gt;</code> container will be added a class to indicate that the page in dark mode now (<code>.classList.add(&#34;dark&#34;)</code>); and when the reader switch to light mode, this class will be deleted (<code>.classList.remove(&#34;dark&#34;)</code>). On the CSS’ hand, we assign different values to a same variable depending on whether the container has the <code>dark</code> class. While this variable will be used for HTML elements’ styles. See the code below for details.</p>
-<h1 id="the-code">
-The code
-<a href="#the-code"><small>¶</small></a>
-</h1>
-<p>Here is the HTML code. Give a class to the whole <code>&lt;html&gt;</code> container:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tbody><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td><td class="lntd"><pre tabindex="0" class="chroma"><code class="language-CSS" data-lang="CSS"><span class="line"><span class="cl"><span class="p">.</span><span class="nc">normal</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="k">filter</span><span class="p">:</span> <span class="nb">invert</span><span class="p">(</span><span class="mi">0</span><span class="kt">%</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">inverted</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="k">filter</span><span class="p">:</span> <span class="nb">invert</span><span class="p">(</span><span class="mi">100</span><span class="kt">%</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></tbody></table></div></div><p>We can put the above code into a CSS variable, together with the dark mode switch part. Then we edit <a href="https://gohugo.io/getting-started/configuration-markup/#markdown-render-hooks" target="_blank" rel="noreferrer noopener">render hooks<b><sub>⧉</sub></b></a> in the Hugo template, one of which is for image processing, just add appropriate style to the image there.</p><p>About the dark mode switching function I refer to <a href="https://dev.to/lampewebdev/css-quickies-css-variables-or-how-you-create-a-white-dark-theme-easily-1i0i" target="_blank" rel="noreferrer noopener">this article<b><sub>⧉</sub></b></a> in the practice. Roughly speaking, when the reader switch the site theme to dark mode, the whole <code>&lt;html&gt;</code> container will be added a class to indicate that the page in dark mode now (<code>.classList.add(&#34;dark&#34;)</code>); and when the reader switch to light mode, this class will be deleted (<code>.classList.remove(&#34;dark&#34;)</code>). On the CSS’ hand, we assign different values to a same variable depending on whether the container has the <code>dark</code> class. While this variable will be used for HTML elements’ styles. See the code below for details.</p><h1 id="the-code">The code
+<a href="#the-code"><small>¶</small></a></h1><p>Here is the HTML code. Give a class to the whole <code>&lt;html&gt;</code> container:</p><div class="highlight"><div class="chroma"><table class="lntable"><tbody><tr><td class="lntd"><pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">html</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;theme-container&#34;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-        <span class="c">&lt;!--Something…--&gt;</span>
-    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
-</code></pre></td></tr></tbody></table>
-</div>
-</div><p>Define the same variable <code>--c-img-filter</code> in two different cases, depending on whether the container has the <code>dark</code> class:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tbody><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td><td class="lntd"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">html</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;theme-container&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="c">&lt;!--Something…--&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></tbody></table></div></div><p>Define the same variable <code>--c-img-filter</code> in two different cases, depending on whether the container has the <code>dark</code> class:</p><div class="highlight"><div class="chroma"><table class="lntable"><tbody><tr><td class="lntd"><pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span><span class="lnt">6
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="p">.</span><span class="nc">theme-container</span><span class="p">{</span>
-    <span class="nv">--c-img-filter</span><span class="p">:</span> <span class="nb">invert</span><span class="p">(</span><span class="mi">0</span><span class="kt">%</span><span class="p">);</span>
-<span class="p">}</span>
-<span class="p">.</span><span class="nc">theme-container</span><span class="p">.</span><span class="nc">dark</span><span class="p">{</span>
-    <span class="nv">--c-img-filter</span><span class="p">:</span> <span class="nb">invert</span><span class="p">(</span><span class="mi">100</span><span class="kt">%</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></td></tr></tbody></table>
-</div>
-</div><p>Finally let’s deal with the Hugo template:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tbody><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span></code></pre></td><td class="lntd"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="p">.</span><span class="nc">theme-container</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">--c-img-filter</span><span class="p">:</span> <span class="nb">invert</span><span class="p">(</span><span class="mi">0</span><span class="kt">%</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">theme-container</span><span class="p">.</span><span class="nc">dark</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">--c-img-filter</span><span class="p">:</span> <span class="nb">invert</span><span class="p">(</span><span class="mi">100</span><span class="kt">%</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></tbody></table></div></div><p>Finally let’s deal with the Hugo template:</p><div class="highlight"><div class="chroma"><table class="lntable"><tbody><tr><td class="lntd"><pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -225,76 +53,16 @@ The code
 </span><span class="lnt">10
 </span><span class="lnt">11
 </span><span class="lnt">12
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="c">&lt;!-- layouts/_default/_markup/render-image.html --&gt;</span>
-
-{{ $url := .Destination | safeURL }}
-<span class="p">&lt;</span><span class="nt">figure</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;{{ $url }}&#34;</span>
-        <span class="err">{{</span> <span class="err">$</span><span class="na">file_name_array</span> <span class="na">:</span><span class="o">=</span> <span class="s">split</span> <span class="err">$</span><span class="na">url</span> <span class="err">&#34;.&#34;</span> <span class="err">}}</span>
-        <span class="err">{{</span> <span class="err">$</span><span class="na">file_name_len</span> <span class="na">:</span><span class="o">=</span> <span class="s">len</span> <span class="err">$</span><span class="na">file_name_array</span> <span class="err">}}</span>
-        <span class="err">{{</span> <span class="na">if</span> <span class="na">eq</span> <span class="err">(</span><span class="na">index</span> <span class="err">$</span><span class="na">file_name_array</span> <span class="err">(</span><span class="na">sub</span> <span class="err">$</span><span class="na">file_name_len</span> <span class="na">2</span><span class="err">))</span> <span class="err">&#34;</span><span class="na">i</span><span class="err">&#34;</span> <span class="err">}}</span>
-            <span class="na">style</span><span class="o">=</span><span class="s">&#34;filter: var(--c-img-filter);&#34;</span>
-        <span class="err">{{</span> <span class="na">end</span> <span class="err">}}</span>
-    <span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">figure</span><span class="p">&gt;</span>
-</code></pre></td></tr></tbody></table>
-</div>
-</div><p>We didn’t simply add <code>style=&#34;filter: var(--c-img-filter);&#34;</code> to all the images. Instead, we analyze file name first. The effect we achieved is: Invert the color of images named as <code>xxx.i.{png|jpg|gif|jpeg|webp|…}</code> when the reader switch to dark mode, while keep as it is for others. For example:</p>
-<ul>
-<li>This image is named as <code>lorem.i.jpg</code>, which is black text on a white background for light mode, and white text on a black background for dark mode.</li>
-</ul>
-<p></p><figure>
-<img loading="lazy" src="lorem.i.jpg" alt="lorem.i.jpg" style="filter:var(--c-img-filter)"/>
-<figcaption>◉ Figure. lorem.i.jpg</figcaption>
-</figure>
-<p></p>
-<hr/>
-<ul>
-<li>This image is named as <code>lorem.i.png</code>, which is black text on a transparent background for light mode, and white text for dark mode.</li>
-</ul>
-<p></p><figure>
-<img loading="lazy" src="lorem.i.png" alt="lorem.i.png" style="filter:var(--c-img-filter)"/>
-<figcaption>◉ Figure. lorem.i.png</figcaption>
-</figure>
-<p></p>
-<hr/>
-<ul>
-<li>This image is named as <code>cat.jpg</code>, its color is normal for both light and dark mode.</li>
-</ul>
-<p></p><figure>
-<img loading="lazy" src="cat.jpg" alt="cat.jpg" style="filter:var(--c-img-filter2)"/>
-<figcaption>◉ Figure. cat.jpg</figcaption>
-</figure>
-<p></p>
-<hr/>
-<p></p><p></p><p></p><p></p><p></p><p></p>
-<h1>See also</h1>
-<ol>
-<li> No.1: <a href="../../en/01901/">Fix the White Flash on Page Load When Using a Dark Mode on a Static Site - Build a Theme</a></li>
-<li> No.2: Make Hugo Invert Color for Images when Using a Dark Mode - Build a Theme (This one!)</li>
-</ol>
-<p></p><p></p><p></p><p></p>
-</article>
-</div>
-<div class="right_comments">
-<script src="https://utteranc.es/client.js" repo="zerovip/bcsu" issue-term="pathname" theme="github-light" crossorigin="anonymous" async=""></script>
-</div>
-</div>
-<aside class="toc" id="toc">
-<button class="toc_title">Table of Content</button>
-<div class="toc_content">
-<nav id="TableOfContents">
-<ul>
-<li><a href="#the-problem">The problem</a></li>
-<li><a href="#how-to-deal-with">How to deal with</a></li>
-<li><a href="#the-code">The code</a></li>
-</ul>
-</nav>
-</div>
-</aside>
-</div>
-<script src="../../js/main.min.60aa2f3f5fd2bd0fbc6bfb7a3e14b1eb89f8dd2b4caa083c22b7f3cb656ea273.js"></script>
-
-</body></html>
+</span></code></pre></td><td class="lntd"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="c">&lt;!-- layouts/_default/_markup/render-image.html --&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">{{ $url := .Destination | safeURL }}
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">figure</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;{{ $url }}&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="err">{{</span> <span class="err">$</span><span class="na">file_name_array</span> <span class="na">:</span><span class="o">=</span> <span class="s">split</span> <span class="err">$</span><span class="na">url</span> <span class="err">&#34;.&#34;</span> <span class="err">}}</span>
+</span></span><span class="line"><span class="cl">        <span class="err">{{</span> <span class="err">$</span><span class="na">file_name_len</span> <span class="na">:</span><span class="o">=</span> <span class="s">len</span> <span class="err">$</span><span class="na">file_name_array</span> <span class="err">}}</span>
+</span></span><span class="line"><span class="cl">        <span class="err">{{</span> <span class="na">if</span> <span class="na">eq</span> <span class="err">(</span><span class="na">index</span> <span class="err">$</span><span class="na">file_name_array</span> <span class="err">(</span><span class="na">sub</span> <span class="err">$</span><span class="na">file_name_len</span> <span class="na">2</span><span class="err">))</span> <span class="err">&#34;</span><span class="na">i</span><span class="err">&#34;</span> <span class="err">}}</span>
+</span></span><span class="line"><span class="cl">            <span class="na">style</span><span class="o">=</span><span class="s">&#34;filter: var(--c-img-filter);&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="err">{{</span> <span class="na">end</span> <span class="err">}}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">figure</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></tbody></table></div></div><p>We didn’t simply add <code>style=&#34;filter: var(--c-img-filter);&#34;</code> to all the images. Instead, we analyze file name first. The effect we achieved is: Invert the color of images named as <code>xxx.i.{png|jpg|gif|jpeg|webp|…}</code> when the reader switch to dark mode, while keep as it is for others. For example:</p><ul><li>This image is named as <code>lorem.i.jpg</code>, which is black text on a white background for light mode, and white text on a black background for dark mode.</li></ul><p></p><figure><img loading="lazy" src="lorem.i.jpg" alt="lorem.i.jpg" style="filter:var(--c-img-filter)"/><figcaption>◉ Figure. lorem.i.jpg</figcaption></figure><p></p><hr/><ul><li>This image is named as <code>lorem.i.png</code>, which is black text on a transparent background for light mode, and white text for dark mode.</li></ul><p></p><figure><img loading="lazy" src="lorem.i.png" alt="lorem.i.png" style="filter:var(--c-img-filter)"/><figcaption>◉ Figure. lorem.i.png</figcaption></figure><p></p><hr/><ul><li>This image is named as <code>cat.jpg</code>, its color is normal for both light and dark mode.</li></ul><p></p><figure><img loading="lazy" src="cat.jpg" alt="cat.jpg" style="filter:var(--c-img-filter2)"/><figcaption>◉ Figure. cat.jpg</figcaption></figure><p></p><hr/><p></p><p></p><p></p><p></p><p></p><p></p><h1>See also</h1><ol><li>No.1: <a href="../../en/01901/">Fix the White Flash on Page Load When Using a Dark Mode on a Static Site - Build a Theme</a></li><li>No.2: Make Hugo Invert Color for Images when Using a Dark Mode - Build a Theme (This one!)</li></ol><p></p><p></p><p></p><p></p></article></div><div class="right_comments"><script src="https://utteranc.es/client.js" repo="zerovip/bcsu" issue-term="pathname" theme="github-light" crossorigin="anonymous" async=""></script></div></div><aside class="toc" id="toc"><button class="toc_title">Table of Content</button><div class="toc_content"><nav id="TableOfContents"><ul><li><a href="#the-problem">The problem</a></li><li><a href="#how-to-deal-with">How to deal with</a></li><li><a href="#the-code">The code</a></li></ul></nav></div></aside></div><script src="../../js/main.min.320be488d7313796cab3e8d6445bfce6f4e1740c6cbe4d20e8b19d3e82a9a532.js"></script></body></html>
