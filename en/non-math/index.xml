@@ -280,16 +280,16 @@ target='_blank' rel='noreferrer noopener'
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">html&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;section class="footnotes" role="doc-endnotes">
+&lt;/div>&lt;div class="footnotes" role="doc-endnotes">
 &lt;hr>
 &lt;ol>
-&lt;li id="fn:1" role="doc-endnote">
+&lt;li id="fn:1">
 &lt;p>The approach to dark mode in this theme is CSS variable, see &lt;a href='https://dev.to/lampewebdev/css-quickies-css-variables-or-how-you-create-a-white-dark-theme-easily-1i0i'
 target='_blank' rel='noreferrer noopener'
 >this tutorial&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a> for reference.&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;/section></description></item><item><title>A Test for Hugo Encryptor</title><link>https://zerovip.github.io/en/62772/</link><pubDate>Mon, 23 Dec 2019 00:00:00 CST</pubDate><guid isPermaLink="false">/en/62772/</guid><description>&lt;p>In this case, I want to test about the i18n text in English version. Plus, this time I didn’t use a password. It passes the test only if the password fall back to default password: qwertyu.&lt;/p>
+&lt;/div></description></item><item><title>A Test for Hugo Encryptor</title><link>https://zerovip.github.io/en/62772/</link><pubDate>Mon, 23 Dec 2019 00:00:00 CST</pubDate><guid isPermaLink="false">/en/62772/</guid><description>&lt;p>In this case, I want to test about the i18n text in English version. Plus, this time I didn’t use a password. It passes the test only if the password fall back to default password: qwertyu.&lt;/p>
 &lt;hugo-encrypt>
 &lt;div id="hugo-encrypt-encryption-notice">
 &lt;p>The following content is protected.&lt;/p>

@@ -3087,24 +3087,24 @@ target='_blank' rel='noreferrer noopener'
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;section class="footnotes" role="doc-endnotes">
+&lt;div class="footnotes" role="doc-endnotes">
 &lt;hr>
 &lt;ol>
-&lt;li id="fn:1" role="doc-endnote">
+&lt;li id="fn:1">
 &lt;p>&lt;em>cat sat on the mat&lt;/em> 和 &lt;em>Janet and John&lt;/em> 是两本童书，这里指的是写给孩子看的过分简单的东西.&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
-&lt;li id="fn:2" role="doc-endnote">
+&lt;li id="fn:2">
 &lt;p>我在这里非常想要跳出来补充一下，因为我之前读到过余光中的&lt;a href='https://open.leancloud.cn/improve-chinese/'
 target='_blank' rel='noreferrer noopener'
 >《论中文的常态与变态》&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>（该文发表于 1987 年 10 月号的杂志《明报月刊》），他在文章中批评&lt;a href='https://zh.wikipedia.org/zh-hans/%e6%ac%a7%e5%8c%96%e4%b8%ad%e6%96%87'
 target='_blank' rel='noreferrer noopener'
 >“中文西化”&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>现象时提到过这个问题. 在文章的第 6-15 段，他就指出了“名词化”的问题：“英文好用抽象名词，其结果是软化了动词，也可以说是架空了动词”、“巴仁（Jacques Barzun）与屈林（Lionel Trilling）等学者把这类广泛的动词叫做「弱动词」（weak verb）”、“巴仁等学者感概现代英文喜欢化简为繁、化动为静、化具体为抽象、化直接为迂回，到了「名词成灾」（noun-plague）的地步”……这里不再过多引用，推荐感兴趣的读者去阅读余光中的文章，很长，但很具体，对我们的中文写作也许会有一些启发.&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
-&lt;li id="fn:3" role="doc-endnote">
+&lt;li id="fn:3">
 &lt;p>这里指的是英国.&amp;#160;&lt;a href="#fnref:3" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;/section></description></item><item><title>平板与电子纸类工具的犹豫 - 消费指南</title><link>https://zerovip.github.io/zh/82178/</link><pubDate>Wed, 15 Sep 2021 00:00:00 CST</pubDate><guid isPermaLink="false">/zh/82178/</guid><description>&lt;div style='background-color:#FDE763;'>
+&lt;/div></description></item><item><title>平板与电子纸类工具的犹豫 - 消费指南</title><link>https://zerovip.github.io/zh/82178/</link><pubDate>Wed, 15 Sep 2021 00:00:00 CST</pubDate><guid isPermaLink="false">/zh/82178/</guid><description>&lt;div style='background-color:#FDE763;'>
 &lt;p>本文最初写于 2020 年 3 月 6 日，当时对购买什么设备比较犹豫，所以简单对比了各种不同的平板与电子纸类工具，最后比较倾向于电子纸；&lt;/p>
 &lt;p>2020 年 3 月 18 日我看到 reMarkable 2 接受预订的消息，再加上互联网上能找到的电子纸类对比实在太少，所以扩充了大量的电子纸类产品的信息汇总与对比. 但因为是在之前的基础上修修补补，所以文章结构非常乱；&lt;/p>
 &lt;p>2021 年 7 月 15 日我注意到 Fujitsu Quaderno 推出了第二代产品，于是借此机会将本文的大部分内容重新做了编排.&lt;/p>
@@ -4063,16 +4063,16 @@ target='_blank' rel='noreferrer noopener'
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">html&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;section class="footnotes" role="doc-endnotes">
+&lt;/div>&lt;div class="footnotes" role="doc-endnotes">
 &lt;hr>
 &lt;ol>
-&lt;li id="fn:1" role="doc-endnote">
+&lt;li id="fn:1">
 &lt;p>本主题中暗色模式的实现方法为 CSS 变量，详见&lt;a href='https://dev.to/lampewebdev/css-quickies-css-variables-or-how-you-create-a-white-dark-theme-easily-1i0i'
 target='_blank' rel='noreferrer noopener'
 >这篇教程&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>.&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;/section></description></item><item><title>小鹤音形单字全码码表与重码分析</title><link>https://zerovip.github.io/zh/95251/</link><pubDate>Sat, 10 Jul 2021 00:00:00 CST</pubDate><guid isPermaLink="false">/zh/95251/</guid><description>&lt;div style='background-color:#FDE763;'>
+&lt;/div></description></item><item><title>小鹤音形单字全码码表与重码分析</title><link>https://zerovip.github.io/zh/95251/</link><pubDate>Sat, 10 Jul 2021 00:00:00 CST</pubDate><guid isPermaLink="false">/zh/95251/</guid><description>&lt;div style='background-color:#FDE763;'>
 &lt;p>原本只是想分析小鹤音形单字全码码表的重码情况的，因为我搜遍了整个互联网没有发现有人谈论这些内容. 结果我越写越多，最后看来本文的部分内容也可以作为小鹤音形的入门指南.&lt;/p>
 &lt;/div>
 &lt;h1>定义&lt;/h1>

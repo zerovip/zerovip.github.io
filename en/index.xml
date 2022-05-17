@@ -280,16 +280,16 @@ target='_blank' rel='noreferrer noopener'
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">html&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;section class="footnotes" role="doc-endnotes">
+&lt;/div>&lt;div class="footnotes" role="doc-endnotes">
 &lt;hr>
 &lt;ol>
-&lt;li id="fn:1" role="doc-endnote">
+&lt;li id="fn:1">
 &lt;p>The approach to dark mode in this theme is CSS variable, see &lt;a href='https://dev.to/lampewebdev/css-quickies-css-variables-or-how-you-create-a-white-dark-theme-easily-1i0i'
 target='_blank' rel='noreferrer noopener'
 >this tutorial&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a> for reference.&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;/section></description></item><item><title>Slides for my seminar of homological algebra</title><link>https://zerovip.github.io/en/20030/</link><pubDate>Fri, 22 May 2020 00:00:00 CST</pubDate><guid isPermaLink="false">/en/20030/</guid><description>&lt;p>All the seminars were held online this semester because everyone were in quarantine. I don&amp;rsquo;t have a pad letting me write on it when give a live broadcast, so I prepared these slides. Using slides is faster than writing on a blackboard, so it took me only one hour to finish this talk. Some proofs are a bit long and I didn&amp;rsquo;t have enough time to prepare, so all the proofs were handwritten, very flexible. That works well.&lt;/p>
+&lt;/div></description></item><item><title>Slides for my seminar of homological algebra</title><link>https://zerovip.github.io/en/20030/</link><pubDate>Fri, 22 May 2020 00:00:00 CST</pubDate><guid isPermaLink="false">/en/20030/</guid><description>&lt;p>All the seminars were held online this semester because everyone were in quarantine. I don&amp;rsquo;t have a pad letting me write on it when give a live broadcast, so I prepared these slides. Using slides is faster than writing on a blackboard, so it took me only one hour to finish this talk. Some proofs are a bit long and I didn&amp;rsquo;t have enough time to prepare, so all the proofs were handwritten, very flexible. That works well.&lt;/p>
 &lt;p>This seminar is about homological algebra, using Joseph J. Rotman, &lt;em>An Introduction to Homological Algebra&lt;/em> as our main reading material. My part is section 4.1 &amp;amp; 4.2, talking about semisimple rings with projective and injective modules, and von Neumann regular rings with flat modules. Somewhat easy.&lt;/p></description></item><item><title>A Test for Hugo Encryptor</title><link>https://zerovip.github.io/en/62772/</link><pubDate>Mon, 23 Dec 2019 00:00:00 CST</pubDate><guid isPermaLink="false">/en/62772/</guid><description>&lt;p>In this case, I want to test about the i18n text in English version. Plus, this time I didn’t use a password. It passes the test only if the password fall back to default password: qwertyu.&lt;/p>
 &lt;hugo-encrypt>
 &lt;div id="hugo-encrypt-encryption-notice">
