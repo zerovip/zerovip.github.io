@@ -2,6 +2,12 @@ User-agent: *
 Disallow: /zh/about/me
 Disallow: /en/about/me
 Disallow: /fr/about/me
+Disallow: /zh/about/site
+Disallow: /en/about/site
+Disallow: /fr/about/site
+Disallow: /zh/about
+Disallow: /en/about
+Disallow: /fr/about
 Disallow: /zh/71828
 Disallow: /zh/record/film
 Disallow: /en/record/film
