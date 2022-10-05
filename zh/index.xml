@@ -3,7 +3,87 @@
 近期内容 |
 RSS 订阅
 | 赤赤的象牙塔</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>
-Mon, 19 Sep 2022 00:00:00 CST</lastBuildDate><item><title>相似性不等于合适吗——营销号是如何曲解研究结论的</title><link>https://zerovip.github.io/zh/89149/</link><pubDate>Mon, 19 Sep 2022 00:00:00 CST</pubDate><guid isPermaLink="false">/zh/89149/</guid><description>&lt;p>今天有朋友在群里分享了公众号“KnowYourself”的一篇文章：&lt;a href='https://mp.weixin.qq.com/s/HkB7CGny6CW1CcmoII7noQ'
+Wed, 05 Oct 2022 00:00:00 CST</lastBuildDate><item><title>语言是文化的钥匙</title><link>https://zerovip.github.io/zh/93488/</link><pubDate>Wed, 05 Oct 2022 00:00:00 CST</pubDate><guid isPermaLink="false">/zh/93488/</guid><description>&lt;h1>起因&lt;/h1>
+&lt;p>最近做了一些语言学的奥赛题，对语言产生了一点点思考. 下文将会拿我做过的两道题举例子详细阐述，如果想要做题的话建议在继续阅读之前先去做题，以免被剧透，破坏第一次做题时的美妙体验. 这两道题分别是：&lt;/p>
+&lt;ol>
+&lt;li>&lt;a href='http://www.ioling.org.cn/wp-content/uploads/2018/08/%E3%80%90%E8%AF%95%E9%A2%98%E3%80%912017%E5%85%A8%E5%9B%BD%E8%AF%AD%E8%A8%80%E5%AD%A6%E5%A5%A5%E6%9E%97%E5%8C%B9%E5%85%8B%E7%AB%9E%E8%B5%9B_%E5%86%B3%E8%B5%9B0529.pdf'
+target='_blank' rel='noreferrer noopener'
+>IOLC 全国语言学奥林匹克竞赛 2017 年决赛第五题，宛本语数字系统&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>&lt;/li>
+&lt;li>&lt;a href='https://ioling.org/booklets/iol-2022-indiv-prob.zh.pdf'
+target='_blank' rel='noreferrer noopener'
+>IOL 第十九届国际语言学奥林匹克竞赛个人赛第四题，阿拉巴纳语亲属关系&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>&lt;/li>
+&lt;/ol>
+&lt;h1>思考&lt;/h1>
+&lt;p>一个最笼统的感受是：语言是文化的钥匙. 人应该努力去学习/掌握/了解各种各样的语言，因为语言当中暗含了一些本质的、哲学的东西，如果接触到了一门非常不一样的语言，那么就会对一个领域产生透彻的、底层的理解，于是思路就能够打开，眼界就能够变得开阔.&lt;/p>
+&lt;p>比如宛本语那道题目，就让我对“数字系统”有了新的认知，知道了除了固定进制以外还能有别的可能性. 目前接触到的所有语言，无论是汉语、英语还是法语，在表达数字这件事上，是明显以进制作为基础的：汉语和英语是 10 进制的，法语在中世纪时是 20 进制的（例如 quatre-vingts 就是 20 进制的遗留），这似乎合理到天经地义——毕竟我们都有 10 个手指头，如果赤脚走路的话还要加上 10 个脚趾头——以至于我们从来没有反思过是否还有其他的可能性. 当然我们在生活中也会用到 7 进制（星期）、12 进制（小时、月份）、60 进制（分钟），但这也顶多让我们扩展了进制的 base 的边界而已，我们反而更加强化了“进制”在数字系统中的合理性，即一个词缀很可能表示进制的 base 的倍数，与词根合在一起是“相加”的关系. 而宛本语这道题目则让我充分反思了这一点，它不再有进制，词缀与词根不再是相加的关系，而是相减的关系，这是非常有趣的事情.&lt;/p>
+&lt;p>再比如阿拉巴纳语的这道题目，让我对亲属关系的称谓系统有了更深了理解. 在我做这道题的时候，我终于意识到，其实亲属称谓关系的本质是一个&lt;strong>三元组&lt;/strong>. 以“甲是乙的兄/弟/姐/妹”这个关系为例，可以表示成 (A, B, X)，其中 A 是甲的性别，B 是乙的性别，X 是甲和乙之间年龄大小的比较关系. 这么一来，根据乘法原理，兄弟姐妹其实是 8 种不同的关系：&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;ol>
+&lt;li>(甲男, 乙男, 甲比乙大) —— 男性作为男性的兄&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;li>
+&lt;ol start="2">
+&lt;li>(甲男, 乙男, 甲比乙小) —— 男性作为男性的弟&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;li>
+&lt;ol start="3">
+&lt;li>(甲男, 乙女, 甲比乙大) —— 男性作为女性的兄&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;li>
+&lt;ol start="4">
+&lt;li>(甲男, 乙女, 甲比乙小) —— 男性作为女性的弟&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;li>
+&lt;ol start="5">
+&lt;li>(甲女, 乙男, 甲比乙大) —— 女性作为男性的姐&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;li>
+&lt;ol start="6">
+&lt;li>(甲女, 乙男, 甲比乙小) —— 女性作为男性的妹&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;li>
+&lt;ol start="7">
+&lt;li>(甲女, 乙女, 甲比乙大) —— 女性作为女性的姐&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;li>
+&lt;ol start="8">
+&lt;li>(甲女, 乙女, 甲比乙小) —— 女性作为女性的妹&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;/ul>
+&lt;p>反过来看我们熟悉的汉语和英语：在汉语中，B 是不重要的，所以只剩下“兄”（1 &amp;amp; 3）、“弟”（2 &amp;amp; 4）、“姐”（5 &amp;amp; 7）、“妹”（6 &amp;amp; 8）四个单词；在英语中 B 和 X 都不重要，所以只剩下“brother”（1 &amp;amp; 2 &amp;amp; 3 &amp;amp; 4）和“sister”（5 &amp;amp; 6 &amp;amp; 7 &amp;amp; 8）两个单词. 这么一分析，我们就知道这并不就是天经地义、理所应当的——也许有的语言中 A 和 B 不重要，只有 X 重要，于是有两个单词，一个单词表示兄或姐（1 &amp;amp; 3 &amp;amp; 5 &amp;amp; 7），另一个单词表示弟或妹（2 &amp;amp; 4 &amp;amp; 6 &amp;amp; 8）；也许有的语言中 A、B、X 都很重要，于是就有 8 个不同的单词表示不同的关系；当然也有可能某一个属性在某些情况下重要，某些情况下就不重要，于是表示兄弟姐妹关系的单词数量并不是 2 的次幂，就比如这个阿拉巴纳语，它用来表示兄弟姐妹关系的有 3 个单词，分别是“nhuthi”（2 &amp;amp; 6）、“kupaka”（1 &amp;amp; 3 &amp;amp; 5 &amp;amp; 7）、“kaku”（4 &amp;amp; 8）. 我想至此我们才可以说，我们对于亲属关系的称谓系统有了比较深刻的认识，父亲称呼儿子和母亲称呼儿子是有可能使用不同的单词的，这就是我想说的，语言是文化的钥匙.&lt;/p>
+&lt;p>我们再深入一步，概括一下上面的例子，我们发现一个单词可以代表多种关系；那么能不能反过来，多个单词代表同一种关系呢？显然是可以的，汉语中就有这样的例子，比如“兄”和“哥”都表示相同的关系. 也就是说，世界上有一种东西是跨越语言而真实存在的东西，比如亲属关系就是这么一种东西（我似乎是一个柏拉图主义者），而语言仅仅是对世界上所有这些真实存在的东西的一种反映，不同的语言就是不同的反映. 而一旦给定了一种语言，这个语言中所有的单词就和这世界上所有真实存在的东西之间建立了一种对应，在大多数情况下，这种对应并不是映射（一个单词代表多种关系），更不可能是单射（多个单词代表同一种关系）.&lt;/p>
+&lt;p>那这两种不同的对应关系分别表征了语言的什么特点呢？我的思考是，一个单词代表多种关系，这表征了语言的精确/灵活性；而多个单词代表同一种关系，这表征了语言的丰富/复杂性.&lt;/p>
+&lt;p>关于丰富/复杂性，我想，大约是越丰富越好吧，这样造出来的句子会更丰富、更多变，但如果太复杂了，可能学习起来会比较困难.&lt;/p>
+&lt;p>关于精确/灵活性，我之前会觉得，越是精确的语言越好（即一个单词尽量代表较少的含义），因为它用更多的单词提升了语言的信息密度. 比方说我会觉得中文的“兄/弟/姐/妹”就比英文的“brother/sister”要好，因为前者的信息密度更高；法语有那么多时态、语式，肯定比英语更精确，那法语就更好. 但现在当我意识到最精确的语言可以把兄弟姐妹表达出 8 个不同的单词之后，我有了新的想法，我开始觉得，也许还是不精确的语言更好，因为它会更灵活.&lt;/p>
+&lt;p>更灵活就意味着，当我不想透露一个信息时，我可以把这个信息模糊掉，这是非常保护个人隐私的语言. 当我用英语说，“X is my brother”的时候，我模糊掉了我的性别，我也模糊掉了我和 X 之间的年龄大小的关系. 而当我想透露我俩谁大谁小时，我可以再多解释一下，“X is my elder brother”或“X is my younger brother”；如果我还想透露我的性别，我也可以额外再多说一句话，“I am a boy”或“I am a girl”. 也就是说，灵活性其实给了我们更大的自由，更大的选择权——当语言中的单词本身不精确时，我们总能多说两句来达到我们想要的精确，用更多的单词、更多的句子来弥补信息密度的不足；但如果语言中的单词过于精确时，想模糊掉一些信息反而就不容易了.&lt;/p>
+&lt;p>语言中的新单词就像是数学中的新定义，定义的意义在于缩短句子. 如果定义太多而没有节制（太追求精确），那每个单词的使用场景就会过少；如果定义太少过于克制（太追求灵活），那为了准确表达总要说太多、解释太多，没有低下. 每一门语言就是在这两者的夹击之下不断发展，适应这门语言的大多数使用者的能力与需要，达到一个动态的平衡. 这也是另一个我之所以说“语言是文化的钥匙”的原因.&lt;/p>
+&lt;h1>扩展阅读&lt;/h1>
+&lt;ul>
+&lt;li>&lt;a href='https://www.bilibili.com/video/BV1ra411a7yn'
+target='_blank' rel='noreferrer noopener'
+>Frank_T_Y_Liu, 7 分钟带你了解语言学奥林匹克竞赛&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>&lt;/li>
+&lt;li>&lt;a href='https://ioling.org/problems/solvers_choice'
+target='_blank' rel='noreferrer noopener'
+>历年国际语言学奥林匹克竞赛的 Solvers’ Choice&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>&lt;/li>
+&lt;li>&lt;a href='https://www.zhihu.com/question/20774349/answer/41256347'
+target='_blank' rel='noreferrer noopener'
+>十一点半, 失传的古文字（象形文字、楔形文字等）最初是如何被破译的？如何确认译文的正确性？&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>&lt;/li>
+&lt;li>&lt;a href='https://nacloweb.org/'
+target='_blank' rel='noreferrer noopener'
+>North American Computational Linguistics Open Competition (NACLO)&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>&lt;/li>
+&lt;li>&lt;a href='https://www.zhihu.com/question/27374271/answer/2501398491'
+target='_blank' rel='noreferrer noopener'
+>虚言, 关于 Evidentiality 的一篇知乎回答&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>相似性不等于合适吗——营销号是如何曲解研究结论的</title><link>https://zerovip.github.io/zh/89149/</link><pubDate>Mon, 19 Sep 2022 00:00:00 CST</pubDate><guid isPermaLink="false">/zh/89149/</guid><description>&lt;p>今天有朋友在群里分享了公众号“KnowYourself”的一篇文章：&lt;a href='https://mp.weixin.qq.com/s/HkB7CGny6CW1CcmoII7noQ'
 target='_blank' rel='noreferrer noopener'
 >《用dating app找对象，如何避开风险成功上岸？ 》&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>，我点进去读了一下.&lt;/p>
 &lt;p>里面有一个小节说“共同点多不等于合适”，这马上吸引了我的注意. 因为我也看过一点心理学，我一直都知道共同点越多越容易互相吸引，它这样说不符合我的直觉. 文章里面是这样写的：&lt;/p>
@@ -10603,167 +10683,4 @@ target='_blank' rel='noreferrer noopener'
 >它自带的 examples&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a> 里有好多内容缺乏系统的介绍，像这里面的 external_rules、overlapping_borders、panel、receptacles 都缺少很好的文章来介绍它们的功能和使用方法.&lt;/p>
 &lt;p>我在这篇文章中对 external_rules 做了一点简单的介绍，本来其他的内容我也计划写一写的，但实在是累了，而且这个 b 站专栏的富文本编辑器用起来太费劲了……所以其他的内容我就不再写了，但是依然列在这里，希望我这块砖头能引到良玉. 大佬们请一定不要吝啬你们的知识啊，稍微分享分享就是好的；像我们普通用户可以把自己使用 bspwm 中遇到的问题和做出的努力稍微力所能及地随便记录一下，这对于中文的 bspwm 社区绝对是一件好事.&lt;/p>
 &lt;hr>
-&lt;p>虽然好多东西没写，这篇文章还是太长了. 希望读完此文的读者能从中学习到：bspc 语句的使用、阅读文档的方法、解决问题的流程、面对陌生事物（以 external_rules 为例）时的手段、调试的方法（写入 log，实时监测变化）以及我想传达的对软件的轻视、对技能的重视——因为随着技术的快速迭代，任何一个软件最终都会被更好的软件所替代，而那些解决问题的方法、面对问题时的耐心与踏实，却是我们使用 Linux 中、甚至是平时生活中一直都需要的.&lt;/p></description></item><item><title>读《守望飞羽》有感</title><link>https://zerovip.github.io/zh/07531/</link><pubDate>Sun, 04 Apr 2021 00:00:00 CST</pubDate><guid isPermaLink="false">/zh/07531/</guid><description>&lt;p>阅读了梁文瑛，《守望飞羽——中国观鸟故事》，商务印书馆，2017 年 10 月，ISBN 978-7-100-15316-4. 一共有四章，第一章是资深观鸟者给初学者的意见，第二章是观鸟人访谈，第三章是四篇国内鸟类调查，第四章是国内鸟类保护概况.&lt;/p>
-&lt;h1>总体印象&lt;/h1>
-&lt;p>正如此书副标题所说，这本书的主题是第二章，中国的“鸟人”访谈. 此书一共访谈了 11 位资深观鸟人、4 位鸟会专家、3 位学院派观鸟人、4 位鸟导、2 位观鸟青年人（新生力量）和 2 位摄影大师，一共 26 人，样本量算是很大了. 就像这几个分类所揭示的那样，这些人虽然都是在中国观鸟多年，但他们的观鸟经历、态度、价值观等却几乎没有共同之处，可以说是百花齐放：&lt;/p>
-&lt;p>他们有中国人，有外国人；有人四五岁就在后花园观鸟，有人成年以后才开始接触；有人以观鸟为兴趣爱好，有人的职业便与鸟类有关；有人追求去看罕见鸟，有人却觉得常见鸟最有价值；有人一年到头全世界跑，有人就在某一个地方做定点观察；有人是摄影师，有的人曾经是打猎的猎人；有人的使命是保护环境、保护大自然，有人则是花大力气推广鸟类教育和观鸟的大众普及；有人是乐观主义者，有人对未来很悲观……&lt;/p>
-&lt;p>可以说，读过这本书后，我的视野被打开了，我知道了观鸟的形式、目的、追求可以多种多样，没有唯一的、正统的、正规的、正确的观鸟方法，观鸟只是一个兴趣爱好，自己开心就好——这其实是一个简单的道理，但我之前并没有意识到.&lt;/p>
-&lt;p>由于人物很多，所以每个人的篇幅都不太长，七八页左右，很浓缩地介绍了每个人的成长经历，如何接触观鸟，如何爱上观鸟，观鸟中的有趣经历，以及其他与鸟类相关的诸如环境保护、教育推广等事迹与成就. 写得没有那么严肃，可以当作奇闻轶事来读，可以算做是鸟圈的八卦集合. 作者时不时会拿自己的知识储备出来串串词，或者是谈谈观点（例如对摄影伦理学的讨论，pp.244-246），可以说是有点“夹带私货”，但我觉得这没什么不好，多多少少还是能学到些东西.&lt;/p>
-&lt;h1>鸟类知识&lt;/h1>
-&lt;p>这本书的鸟类知识主要集中在第三章的四篇鸟类调查中，前面访谈部分鸟类知识极少，但也不是没有，而且非常难能可贵的是，只要出现了专业的知识，就一定是那种非常细节的知识，在讲具体的东西，而不是概括出来泛泛而谈. 比如，第 156 页，讲到了 Per Alström 关于鸟类演化的研究：&lt;/p>
-&lt;blockquote>
-&lt;p>在物种分类的研究里，鸟类确实是一个挺特别的物种，由于它们会做长途迁徙，相比起很多种动物来说，其演化历史发生过很多有趣的变化，甚至经常演变出不同的地理亚种. 例如，属于印度尼西亚小岛布鲁（Buru）的特有种马丹绣眼鸟（Rufous-throated White-eye, Madanga ruficolis），2014 年由佩尔经分子鉴定确认为鹡鸰亚科（Motacillidae，包括鹡鸰与鹨)，最接近的亲属是林鹨. 这完全出乎众人的意料，因为无论从外形、叫声还是生境来看，马丹绣眼鸟跟鹨，甚至鹡鸰都风马牛不相及，但原来二者竟然来自共同的祖先，这就是趋异演化（divergent evolution）的好例子. 佩尔估计，马丹绣眼鸟的祖先跟鹨一样也是长途迁徙鸟，有一部分来到小岛后，便在这里落地生根. 小岛的生境是森林，而鹨的生境是田野、平原，马丹绣眼鸟的祖先来到这里，为了适应截然不同的生境，在觅食与繁殖行为,甚至外表形态上也渐渐变得面目全非，就像变魔术那样令人啧啧称奇.&lt;/p>
-&lt;p>跟趋异演化同样有趣的掩眼魔法，便是趋同演化（convergent evolution），而最佳例子便是深受中国鸟人宠爱的丽星鹩鹛（Spotted Elachura, Elachura formosa）. 丽星鹩鹛的外形、行为和生境跟鹩鹛类十分相似，所以一直“掩人耳目”地隐藏在鹩鹛家族里，但佩尔于 2014 年经分子鉴定，发现这个小家伙的祖先不但跟鹩鹛毫无关系，而且其直属近亲都已统统灭绝，只剩它一种，所以现被归类自成一科，丽星鹩鹛科（Elachuridae）. “毫无血缘关系的鸟种，身处在相同的生境，吃着相同的食物，久而久之演变出了相似的外形和行为，这印证了演化力量的存在，也是我觉得非常有趣的地方.”&lt;/p>
-&lt;/blockquote>
-&lt;p>我最近同时在学习植物和鸟类，所以在生物学分类这块有点自己的感受，同样的一个物种在不同的生境下稍稍有那么一点点差别，久而久之它们就产生了生殖隔离，也就是说演化就发生在我们身边，我们其实正在目睹一些演化的发生！高中学习这里时因为知道演化是需要成千上万年的，所以会觉得它离我很遥远，最近我越来越意识到，其实在人类短暂的生命里，也是能够看到演化的痕迹.&lt;/p>
-&lt;h1>人、事、物&lt;/h1>
-&lt;p>这本书最有价值的一点是，它访谈的这 26 个人都不是什么无名小卒，他们各个都是成就斐然，在圈子里有响当当名号的那种“大”人物. 大家可能有所不知，观鸟在中国的发展才 30 年左右的时间（截至 2021 年），所以在我们短暂的发展历史中那种非常重要的、改变历史走向的大事件可能也就不到 10 件（比如第一本中国本土图鉴的出版、北戴河的“剑桥鸟类考察团”、“塱原事件”等），这本书里的访谈对象其实大多都是某一个事件的主要推动者或参与者，不少事件还是他们合力完成的. 在某一篇人物访谈中谈到一个事件，下面往往就会有一个脚注，写着“请参考本书对某某某的访谈”，意思是那个人在这个事件中有更重要的贡献或者是更加知情的人士，这种前后照应给这本书带来了愉悦的阅读体验.&lt;/p>
-&lt;p>除了书中不同人物之间的前后联系，愉悦的阅读体验还来自于这些人和我的联系、和当下生活的联系. 比如我阅读过许维枢的《鸟类学基础知识》，在这本书里看到有提到许维枢老师（p.101）就会觉得还挺亲切；比如我购买的图鉴《中国鸟类观察手册》的主编之一是刘阳，那在我看到刘阳的访谈（p.160）的时候就觉得这个人和我是有联系的（我的图鉴里另一位主编陈水华也在这本书中 p.271 出现）；比如我在 bilibili 上看过&lt;a href='https://www.bilibili.com/video/BV1ms411978S'
-target='_blank' rel='noreferrer noopener'
->康奈尔大学的观鸟课&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>，那个 up 主叫做“勺嘴鹬在中国”，那么当我读到章麟是“勺嘴鹬在中国”的核心成员并了解到这个名字背后的故事（p.202）的时候，就会觉得，“啊原来是你！勺嘴鹬原来是这样一种鸟！”；比如很多人都有自己的博客、或者是新浪微博，那么我把书里给出的链接输进浏览器里打开，或者在微博里看到那个人近期的生活，更会觉得他们就是活生生的人（见本文后面“资源摘录”一节）；再比如每个访谈的结尾都会有工具箱陈列，包括他们使用的望远镜，他们推荐的鸟书，这些都让我觉得非常真实、非常细节，我非常喜欢（见本文后面“工具箱整理”一节）.&lt;/p>
-&lt;p>书中从始至终都让人痛心且无奈的一个问题就是湿地保护与公众教育. 不少鸟类的数目连年下降，一方面是环境被破坏（为了发展）：东部地区为了盖楼或种地破坏湿地不必多说，比如江苏省政府计划 2020 年完成总面积达 1800 平方公里的填海工程（p.291，本书为 2017 年出版，如今的实施情况还没有去查），让我没有想到的是新疆地区，216 国道以东采矿、卡拉麦里山区开采优质花岗岩，都会破坏猛禽的生境（p.195）；另一方面是人们的非法捕猎：如云南“打雀山”（巍山）每年有平均数十万只候鸟被捕杀（1986 年 - 1995 年）（p.232）、广西冠岭在 2010 年每年有三四千声枪响，2014 年情况有所改善，但每年也有一二百声枪响（pp.266-267）. 情况当然也在慢慢变好，让人印象深刻的例子有：江西鄱阳湖南矶湿地国家级自然保护区组织的“点鸟奖湖”计划：按照停泊在湖里的候鸟数量对渔民进行奖励（pp.219-220）、2009 年实施的《北京市重点保护陆生野生动物造成损失补偿办法》，如果猛禽捕捉了农户的鸡鸭等家禽造成了损失，可以算做是野生动物肇事，可以由国家进行补偿，避免了农户为了报复伤害猛禽（p.269）、铁墩岛利用社群吸引技术做的人工招引种群恢复计划，简单说就是布置燕鸥的模型、播放燕鸥的录音，吸引中华凤头燕鸥来这里繁殖（pp.274-277）.&lt;/p>
-&lt;p>而公众教育这方面我们中国更是起步太晚、落后太多. 作为对比：英国有鸟类信托组织（BTO），常设多项鸟类调查，开放让公众参与，例如“花园观鸟”，每年选定一天，全国市民把他们在自家花园里看到的鸟种和数目记录下来，BTO 便收集数据并分析（p.87）；很多人就算不观鸟，对身边的鸟皆有个感觉，可以说出大概的鸟种（p.164）；英国的鸟类环志早已是普遍使用的科研手段，并设有发牌机制，公众人士接受训练和通过考核，便可获取牌照进行环志工作（p.175），BTO 推行鸟类环志工作已超 100 年（p.176），像英国人 Paul Leader 在 14 岁学习了鸟类环志，每周都到环志中心参与环志工作（p.34），中国 1982 年才建立第一个鸟类环志中心（p.176），北戴河的环志站一直都只让“体制中人”参与，不开放给公众，就算是现在的香港（香港是我国鸟类发展最快的地方），鸟类环志也没有开放给公众参与，甚至没有任何法定的考牌制度和训练课程（p.177）. 这实在不得不让人感慨，英国的自然科学的群众基础真的是好啊，很多英国人都是四五岁就接触观鸟，我读的另一本书《鸟的感官》的作者蒂姆·伯克黑德（英国皇家学会会员）也是五岁开始观鸟的.&lt;/p>
-&lt;h1>资源摘录&lt;/h1>
-&lt;ul>
-&lt;li>&lt;a href='http://www.szbird.org.cn/birdtalker.net/index.asp'
-target='_blank' rel='noreferrer noopener'
->“鸟语者”观鸟记录中心&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>. 来自 p.57，但书中的域名已经失效，这是我另查出来的地址，目前它是挂在深圳市观鸟协会的网站下，下面的友情链接都很有用.&lt;/li>
-&lt;li>&lt;a href='http://surfbirds.com/index.php'
-target='_blank' rel='noreferrer noopener'
->观鸟权威网站&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>，该网站设有多种排行榜，皆备受中外鸟人认可. 例如这个&lt;a href='http://surfbirds.com/cgi-bin/surfbirds/display.cgi?list=list1&amp;amp;lowVal=0&amp;amp;highVal=49'
-target='_blank' rel='noreferrer noopener'
->世界鸟种来福清单&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>，当前最厉害的人见过 9684 种鸟（截至 2021 年 4 月 4 日），估计比他认识的人类还要多. 来自 p.20.&lt;/li>
-&lt;li>&lt;a href='http://johnjemi.hk/ii/ii.html'
-target='_blank' rel='noreferrer noopener'
->John &amp;amp; Jemi 的网站&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>. 来自 p.27，书中提到了他们的网站，但是没有给出链接，但简单搜索一下就找到了，暂时还没有细看，应该是非常值得阅读的.&lt;/li>
-&lt;li>&lt;a href='https://birdingbeijing.com/'
-target='_blank' rel='noreferrer noopener'
->Terry 的个人网站&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>，来自 p.90. 也是还没有细读，但看上去非常不错.&lt;/li>
-&lt;li>&lt;a href='http://www.drmartinwilliams.com/'
-target='_blank' rel='noreferrer noopener'
->Martin 的个人网站&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>，收录了他撰写的所有文章和报告. 来自 p.107. 也是还没有细看，收藏了.&lt;/li>
-&lt;li>&lt;a href='http://www.szbird.org.cn/new/htm/0post_show.asp?xh=912'
-target='_blank' rel='noreferrer noopener'
->两岸三地50种柳莺类辨识 2013&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>，这个链接点进去可以下载到一份柳莺辨识的 PDF 文档（柳莺非常难辨认，因为不同种之间太过于类似），书中 pp.124-125 有提到但没有给出链接，是我专门查到的. 绘制者麦茬和资料的收集者冠羽的故事挺令人感动的.&lt;/li>
-&lt;li>&lt;a href='https://dingliyong.wordpress.com'
-target='_blank' rel='noreferrer noopener'
->杨鼎力的个人网站&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>. 来自 p.166，也是还没有细看，先收藏了.&lt;/li>
-&lt;li>书中 pp.194-197 提到一篇《卡拉麦里：金雕的成长》，我到中国知网上下载下来了，非常好看，推荐给大家. 点击&lt;a href="../files/卡拉麦里金雕的成长.pdf" download>这里&lt;/a>下载. 当事人其一丫丫有新浪微博，这个故事她也写过三篇记录，感兴趣的话也可以找来读一读.&lt;/li>
-&lt;li>p.218 提到一本书：Chris Gooddie, 2011, A Jewel Hunter, Princeton University Press. 八色鸫色彩缤纷但性格羞涩，常常躲在林子深处，很难看到，不少鸟人都喜欢交流他们看到八色鸫的故事. 这本书就是一个外国人花了一年时间看遍了全球的八色鸫，并将其经历写成了书. 听上去还挺有趣的，记录在这里算是 mark 一下.&lt;/li>
-&lt;li>&lt;a href='https://www.justgiving.com/fundraising/jankowskis-bunting'
-target='_blank' rel='noreferrer noopener'
->支持濒危鸟栗斑腹鹀的保护工作&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>，这个网站可以给这项工作捐款. 最少捐 2 美元，支付方式有 visa、visa electron、delta、mastercard. 来自 p.256.&lt;/li>
-&lt;/ul>
-&lt;h1>工具箱整理&lt;/h1>
-&lt;p>我觉得这本书最棒的地方在于每个参与访谈的人最后都把自己使用的望远镜是啥公布出来了！这对于我这种刚刚入门的来说无疑是非常棒的参考！我把它们整理在了这个表格中.&lt;/p>
-&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th style="text-align:center">人&lt;/th>
-&lt;th style="text-align:center">双筒望远镜&lt;/th>
-&lt;th style="text-align:center">单筒望远镜&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td style="text-align:center">陈亮&lt;/td>
-&lt;td style="text-align:center">Leica HD 8 × 42&lt;/td>
-&lt;td style="text-align:center">Swarovski ATM 65HD&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align:center">John &amp;amp; Jemi&lt;/td>
-&lt;td style="text-align:center">Leica 10 × 42s&lt;/td>
-&lt;td style="text-align:center">&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align:center">Geoff Carey（贾知行）&lt;/td>
-&lt;td style="text-align:center">Swarovski 8.5 × 42&lt;/td>
-&lt;td style="text-align:center">&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align:center">Richard Lewthwaite（李察）&lt;/td>
-&lt;td style="text-align:center">Swarovski EL 10 × 42&lt;/td>
-&lt;td style="text-align:center">&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align:center">John McKinnon（马敬能）&lt;/td>
-&lt;td style="text-align:center">父亲留下来的蔡司望远镜&lt;/td>
-&lt;td style="text-align:center">&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align:center">Colm Moore（莫克伦）&lt;/td>
-&lt;td style="text-align:center">Swarovski 10 × 42&lt;/td>
-&lt;td style="text-align:center">&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align:center">Terry Townshend（唐瑞）&lt;/td>
-&lt;td style="text-align:center">Swarovski 8 × 42&lt;/td>
-&lt;td style="text-align:center">Swarovski ATX95&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align:center">王西敏&lt;/td>
-&lt;td style="text-align:center">Kowa 8 × 42&lt;/td>
-&lt;td style="text-align:center">&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align:center">Martin Williams&lt;/td>
-&lt;td style="text-align:center">Leica 10 × 42&lt;/td>
-&lt;td style="text-align:center">&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align:center">张浩辉&lt;/td>
-&lt;td style="text-align:center">Minox BF 10 × 42&lt;/td>
-&lt;td style="text-align:center">Swarovski STS 80HD&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align:center">董江天&lt;/td>
-&lt;td style="text-align:center">Swarovski 8.5 × 42&lt;/td>
-&lt;td style="text-align:center">Swarovski 65mm&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align:center">陈志鸿&lt;/td>
-&lt;td style="text-align:center">Swarovski EL 8 × 32&lt;/td>
-&lt;td style="text-align:center">Swarovski HD 65mm&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align:center">余日东&lt;/td>
-&lt;td style="text-align:center">Swarovski 10 × 42&lt;/td>
-&lt;td style="text-align:center">Swarovski ATS 80&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align:center">Per Alström&lt;/td>
-&lt;td style="text-align:center">Swarovski EL 8.5 × 42&lt;/td>
-&lt;td style="text-align:center">Swarovski ATS 30-70 × 95&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align:center">刘阳&lt;/td>
-&lt;td style="text-align:center">Swarovski 8.5 × 42&lt;/td>
-&lt;td style="text-align:center">&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align:center">赵欣如&lt;/td>
-&lt;td style="text-align:center">Leica 8 × 40&lt;/td>
-&lt;td style="text-align:center">Leica APO77&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align:center">Paul Holt&lt;/td>
-&lt;td style="text-align:center">Zeiss Victory HT 8 × 42&lt;/td>
-&lt;td style="text-align:center">Zeiss Victory Diascope 85&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align:center">章麟&lt;/td>
-&lt;td style="text-align:center">Forrester 森林人 10 × 42&lt;/td>
-&lt;td style="text-align:center">KOWA 60mm&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align:center">雷进宇&lt;/td>
-&lt;td style="text-align:center">奥林巴斯 10 × 42&lt;/td>
-&lt;td style="text-align:center">蔡司 20-60 倍变焦&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align:center">闻丞&lt;/td>
-&lt;td style="text-align:center">Nikon 8 × 42&lt;/td>
-&lt;td style="text-align:center">&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table></description></item></channel></rss>
+&lt;p>虽然好多东西没写，这篇文章还是太长了. 希望读完此文的读者能从中学习到：bspc 语句的使用、阅读文档的方法、解决问题的流程、面对陌生事物（以 external_rules 为例）时的手段、调试的方法（写入 log，实时监测变化）以及我想传达的对软件的轻视、对技能的重视——因为随着技术的快速迭代，任何一个软件最终都会被更好的软件所替代，而那些解决问题的方法、面对问题时的耐心与踏实，却是我们使用 Linux 中、甚至是平时生活中一直都需要的.&lt;/p></description></item></channel></rss>
