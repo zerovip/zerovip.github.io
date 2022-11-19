@@ -290,7 +290,7 @@ target='_blank' rel='noreferrer noopener'
 &lt;/li>
 &lt;/ol>
 &lt;/div></description></item><item><title>A Test for Hugo Encryptor</title><link>https://zerovip.github.io/en/62772/</link><pubDate>Mon, 23 Dec 2019 00:00:00 CST</pubDate><guid isPermaLink="false">/en/62772/</guid><description>&lt;p>In this case, I want to test about the i18n text in English version. Plus, this time I didn’t use a password. It passes the test only if the password fall back to default password: qwertyu.&lt;/p>
-&lt;hugo-encrypt>
+&lt;hugo-encrypt data-pagefind-ignore>
 &lt;div id="hugo-encrypt-encryption-notice">
 &lt;p>The following content is protected.&lt;/p>
 &lt;noscript>&lt;span id="hugo-encrypt-enable-js">Javascript needs to be enabled to decrypt content&lt;/span>&lt;/noscript>
@@ -389,7 +389,7 @@ hugoDecrypt(userStorage.getItem(storageKey), "storage");
 &lt;/hugo-encrypt>
 &lt;hr>
 &lt;p>What about encrypt two part? This time the password is “PASSWORD”.
-&lt;hugo-encrypt>
+&lt;hugo-encrypt data-pagefind-ignore>
 &lt;div id="hugo-encrypt-encryption-notice">
 &lt;p>The following content is protected.&lt;/p>
 &lt;noscript>&lt;span id="hugo-encrypt-enable-js">Javascript needs to be enabled to decrypt content&lt;/span>&lt;/noscript>
