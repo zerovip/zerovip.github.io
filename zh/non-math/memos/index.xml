@@ -3,7 +3,440 @@
 近期内容 |
 备忘
 | 赤赤的象牙塔</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>
-Mon, 17 Jan 2022 00:00:00 CST</lastBuildDate><item><title>【译】如何用简明英语写作 - 语言表达法</title><link>https://zerovip.github.io/zh/32328/</link><pubDate>Mon, 17 Jan 2022 00:00:00 CST</pubDate><guid isPermaLink="false">/zh/32328/</guid><description>&lt;h1>博主按&lt;/h1>
+Tue, 29 Nov 2022 00:00:00 CST</lastBuildDate><item><title>利用 Pagefind 给静态博客添加搜索功能 - 自写主题</title><link>https://zerovip.github.io/zh/41675/</link><pubDate>Tue, 29 Nov 2022 00:00:00 CST</pubDate><guid isPermaLink="false">/zh/41675/</guid><description>&lt;h1>前言&lt;/h1>
+&lt;p>我&lt;a href='https://github.com/zerovip/zerovip.github.io/commit/a0e5595ddbc17c6fb5ec10a732d536b2eea0e8ba#diff-aa481d6e71487ff6b05f479cc7d6958e492757e0ccd6a634dc84f32ffe42545cR396'
+target='_blank' rel='noreferrer noopener'
+>早就&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>想要给自己这个博客站添加站内搜索功能了，前前后后也考察过非常多的工具，&lt;a href='https://gohugo.io/tools/search/'
+target='_blank' rel='noreferrer noopener'
+>官方列出的选择&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>就非常之多，但没有令我满意的：如果想要开箱即用，就要用 npm 安装 Nodejs 的一些工具；稍微简单点办法的就是利用 hugo 能够生成 json 的能力（&lt;a href='https://makewithhugo.com/add-search-to-a-hugo-site/'
+target='_blank' rel='noreferrer noopener'
+>教程一&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>、&lt;a href='https://palant.info/2020/06/04/the-easier-way-to-use-lunr-search-with-hugo/'
+target='_blank' rel='noreferrer noopener'
+>教程二&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>），但需要引入第三方搜索库，自己还要写不少的代码来实现. 所以我就一直拖着没有弄.&lt;/p>
+&lt;!-- 我这个博客从最一开始的设计哲学就是尽可能地简单，全站没有使用任何高级的前端工具，只使用了纯 CSS 和纯 JavaScript，我对此是十分骄傲的. 我认为前端应该是简单的，尤其是静态博客的前端. 预处理器或前端框架的意义应该是节约开发者在开发与维护**大型**项目时的时间和精力，对于小型项目来说，最基础的三件套就已经足够，完全没有必要额外引入编译、转换或打包的工作流程，也没有必要为了一个小小的功能引入过多实际用不到的东西. 所以我拒绝使用 Nodejs、npm、Tailwind、Less、Sass、SCSS 等工具，这些完全破坏了其作为静态博客的优雅，把简单问题复杂化，也不方便其他人对主题做二次开发. -->
+&lt;p>直到上个月我在读阮一峰的&lt;a href='https://www.ruanyifeng.com/blog/2022/10/weekly-issue-226.html'
+target='_blank' rel='noreferrer noopener'
+>科技爱好者周刊（第 226 期）&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>的时候才偶然看到这么一个工具：&lt;a href='https://pagefind.app/'
+target='_blank' rel='noreferrer noopener'
+>Pagefind&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>. 我花了半个小时仔细考察了它，几乎是立刻就确定了它正是我恰好想要、且一直在等待的那个工具. 它吸引到我的有 5 点：&lt;/p>
+&lt;ol>
+&lt;li>它上了 &lt;a href='https://www.youtube.com/watch?v=74lsEXqRQys'
+target='_blank' rel='noreferrer noopener'
+>HugoConf 2022&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>，得到了 Hugo 社区的认可. 阅读它的文档时也能感受得到，这个工具一开始就是为了 Hugo 而设计的；&lt;/li>
+&lt;li>它的开发语言是 Rust，最后所提供出来的产品就是一个简单的二进制可执行文件，不需要安装环境或配置依赖，开箱即用，非常方便；&lt;/li>
+&lt;li>它的&lt;a href='https://pagefind.app/docs/multilingual/'
+target='_blank' rel='noreferrer noopener'
+>多语言&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>支持做得不错：有专门对中文的分词索引支持. 虽然暂不支持查询字段分词，但正努力开发中；&lt;/li>
+&lt;li>它自带了一个简单的 HTTP server，本地调试起来很是方便. 如果是从头建站，它提供了十分钟就能用上的还很好看的 Pagefind UI；即便要自己写，它也提供了简单易用的接口；&lt;/li>
+&lt;li>它充分考虑了大型网站的搜索，将索引分成了不同的小 chunks，节省读者的网络流量，比起用 hugo 直接生成 json 要简洁、优雅得多.&lt;/li>
+&lt;/ol>
+&lt;h1>交互设计&lt;/h1>
+&lt;p>第一个问题是如何设计交互：搜索框应该放在哪里？搜索的流程与步骤该是什么样？宽屏幕怎么做，小屏幕又怎么做？&lt;/p>
+&lt;p>我仔细考察了很多包含搜索功能的网站，现在大家都已经是竖版的布局了，在页面的最上面有一个横着的顶栏，搜索框就放在这里. 当读者键入一些内容之后，交互上的做法大致可以分成三类：&lt;/p>
+&lt;ol>
+&lt;li>第一种是会出现一个专门的区域存放搜索结果，悬浮于整个页面的最顶层（举例：&lt;a href='https://gohugo.io/documentation/'
+target='_blank' rel='noreferrer noopener'
+>Hugo 的官方文档&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>、&lt;a href='https://en.wikipedia.org/wiki/Main_Page'
+target='_blank' rel='noreferrer noopener'
+>维基百科&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>）；
+&lt;figure>
+&lt;img loading='lazy' src='https://zerovip.github.io/zh/41675/hugo-search.png' alt='Hugo 的搜索功能示例'/>
+&lt;figcaption>◉ 图. Hugo 的搜索功能示例&lt;/figcaption>
+&lt;/figure>
+&lt;/li>
+&lt;li>第二种是把搜索结果直接渲染到页面上，把当前网页上的其他内容往下挤（举例：&lt;a href='https://xkcd.pagefind.app/'
+target='_blank' rel='noreferrer noopener'
+>Pagefind 的示例站点&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>）；
+&lt;figure>
+&lt;img loading='lazy' src='https://zerovip.github.io/zh/41675/pagefind-search.png' alt='Pagefind Demo 页的搜索功能示例'/>
+&lt;figcaption>◉ 图. Pagefind Demo 页的搜索功能示例&lt;/figcaption>
+&lt;/figure>
+&lt;/li>
+&lt;li>第三种是在键入内容时不会有任何交互，必须要点击一下搜索按钮或按下回车键之后才开始搜索，此时一般会跳转到一个单独页面用来陈列搜索结果（举例：&lt;a href='https://github.com/'
+target='_blank' rel='noreferrer noopener'
+>GitHub&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>、&lt;a href='https://www.qbitai.com/'
+target='_blank' rel='noreferrer noopener'
+>量子位&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>、&lt;a href='https://segmentfault.com/'
+target='_blank' rel='noreferrer noopener'
+>思否&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>、&lt;a href='https://www.jianshu.com/'
+target='_blank' rel='noreferrer noopener'
+>简书&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>）.
+&lt;figure>
+&lt;img loading='lazy' src='https://zerovip.github.io/zh/41675/github-search.png' alt='Github 的搜索功能展示'/>
+&lt;figcaption>◉ 图. Github 的搜索功能展示&lt;/figcaption>
+&lt;/figure>
+&lt;/li>
+&lt;/ol>
+&lt;hr>
+&lt;p>在 UI 设计上，这个搜索框可能只显示为一个搜索按钮，单击后才展开成为一个搜索框（举例：&lt;a href='https://hugoloveit.com/'
+target='_blank' rel='noreferrer noopener'
+>LoveIt 主题&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>、&lt;a href='https://io-oi.me/hugo-theme-meme/'
+target='_blank' rel='noreferrer noopener'
+>MemE 主题&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>）；或者单击后弹出一个搜索区域，里面囊括更多高级搜索的功能（举例：&lt;a href='https://www.quantamagazine.org/'
+target='_blank' rel='noreferrer noopener'
+>Quanta Magazine&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>、&lt;a href='https://sspai.com/'
+target='_blank' rel='noreferrer noopener'
+>少数派&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>）. 它们的后续交互还是要归结于上面的那三种，相当于是多了一个操作步骤.&lt;/p>
+&lt;p>我认为：直接显示搜索框，且键入内容之后马上就能看到搜索结果的交互设计才是最方便的，体验也是最好的，其中又属第一种交互模式最为优雅、合理，不破坏整体布局. 但是如何在我这个左右两栏布局的网页里实现第一种交互模式就成了新的问题：按道理，搜索功能是每个页面都有的公共的功能，应该放在左边的公共的导航栏里；然而左边本来就空间狭小、信息密集，如果再将搜索结果悬浮于左边的导航文字之上，会显得十分逼仄，感觉也破坏了左栏的导航功能.&lt;/p>
+&lt;p>经过仔细考虑，我决定借鉴 Quanta Magazine 的设计模式：写一个单独的搜索区域，但把它先给隐藏起来，只在左边的导航区留下一个小小的放大镜符号作为搜索入口. 当读者点击搜索按钮时，使用纯前端的技术，将整个左边栏完全替换为那个单独的搜索区域. 正因为不是悬浮于导航栏之上而是覆盖掉整个导航栏，视觉上会干净、清爽得多，同时后续搜索流程上的交互模式也可以完全按照第一种办法来实现，搜索体验也会是相当不错的.&lt;/p>
+&lt;p>对于小屏幕来说，先点开左栏才能看到搜索按钮，再点击搜索按钮才能看到搜索区域，这无疑是过于麻烦的. 因此可以直接把搜索按钮放在顶栏里，点击后把下面整个页面都用搜索区域替换掉.&lt;/p>
+&lt;h1>前端实现&lt;/h1>
+&lt;p>既然是所有页面都共有的功能，那自然是要写到 &lt;code>base.html&lt;/code> 里的. 但由于宽屏幕和小屏幕的搜索区域位置不同，里面的功能却完全一致，所以如果直接写进对应的位置就要写两遍，无法复用代码；而且最开始这个搜索区域应该是隐藏起来的，读者点击搜索按钮后才会出现，这就导致，如果把代码直接写进对应的位置，页面渲染时会先渲染出搜索区域，然后马上才应用 CSS 样式表将其隐藏，观感就是搜索区域整个一闪而过了一下，非常不美观. 我的解决方案就是，将搜索区域写成一个 HTML 的 &lt;a href='https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template'
+target='_blank' rel='noreferrer noopener'
+>template&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>，等整个页面加载完成后（样式表已经应用后）再用 JavaScript 把它装载进相应的位置. 代码结构与原理如下：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">&lt;span class="c">&amp;lt;!-- layouts/_default/baseof.html --&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&amp;lt;!DOCTYPE html&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">html&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">head&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">head&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">body&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="na">id&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;left&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;search-box&amp;#34;&lt;/span> &lt;span class="na">onclick&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;showSearch(&amp;#39;left&amp;#39;)&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Search Icon here
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c">&amp;lt;!-- here needs a search page (for bigger width device) to be loaded--&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="na">id&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;right&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;search-box&amp;#34;&lt;/span> &lt;span class="na">onclick&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;showSearch(&amp;#39;right&amp;#39;)&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Search Icon here
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c">&amp;lt;!-- here needs a search page (for phone) to be loaded --&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">template&lt;/span> &lt;span class="na">id&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;search-template&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="na">id&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;search-zone&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">input&lt;/span> &lt;span class="na">type&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;search&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;close-sign&amp;#34;&lt;/span> &lt;span class="na">onclick&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;hideSearch(this)&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Close Icon here
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;search-results&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">template&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">script&lt;/span> &lt;span class="na">src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;main.js&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">script&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">body&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">html&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// main.js
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="kr">const&lt;/span> &lt;span class="nx">search_template&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getElementById&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;search-template&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">function&lt;/span> &lt;span class="nx">loadTemplate&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">prefix&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">var&lt;/span> &lt;span class="nx">container&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getElementById&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">prefix&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">var&lt;/span> &lt;span class="nx">search_clone&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">search_template&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">content&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">cloneNode&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kc">true&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// can do something here depending on the `prefix` variable
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="nx">search_clone&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getElementById&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;search-zone&amp;#34;&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">id&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">prefix&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="s2">&amp;#34;_search-zone&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">container&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">appendChild&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">search_clone&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">loadTemplate&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;left&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">loadTemplate&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;right&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">function&lt;/span> &lt;span class="nx">showSearch&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">prefix&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getElementById&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">prefix&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="s2">&amp;#34;_search-zone&amp;#34;&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">classList&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">add&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;search_show&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">function&lt;/span> &lt;span class="nx">hideSearch&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">x&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">x&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">parentNode&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">classList&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">remove&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;search_show&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>这里利用这个 &lt;code>prefix&lt;/code> 变量，可以精确地将左右两个搜索区域分开，为了放便起见可以直接在 JavaScript 中更改对应的 id 字段. 调整样式则是根据 &lt;code>search_show&lt;/code> 这个 class 完成隐藏与显示，具体的代码不再赘写. 这样一来，搜索入口、整个搜索区域、搜索框、关闭搜索的按钮以及对应的打开搜索区域、关闭搜索区域的功能，在这里就算是完成了.&lt;/p>
+&lt;h1>接入 Pagefind&lt;/h1>
+&lt;p>Pagefind 只做两件事：索引和搜索. 索引是 Hugo 每次生成完 &lt;code>public/&lt;/code> 静态文件之后，Pagefind 将其作为输入，按照相应的规则，把相应的内容编进索引，最后输出成一个单独的 &lt;code>_pagefind/&lt;/code> 文件夹；搜索则是关于读者在网站上具体搜索时的展示. 打个非常不恰当的比方：索引是后端，搜索是前端.&lt;/p>
+&lt;h2>索引&lt;/h2>
+&lt;p>按照上面的解释，在索引这一块儿，我们要做的就是根据自己的需要，编写相应的索引规则，确定需要索引的内容以及应该排除在外的内容.&lt;/p>
+&lt;p>首先是利用 &lt;code>data-pagefind-body&lt;/code> 框定索引范围（&lt;a href='https://pagefind.app/docs/indexing/'
+target='_blank' rel='noreferrer noopener'
+>参考&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>）. 在我这个博客里，我希望把索引范围框定在文章页的右边区域，也就是说，主页和列表页不参与索引，文章页的左侧导航区也不参与索引. 因此我这样写：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">&lt;span class="c">&amp;lt;!-- layouts/_default/baseof.html --&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&amp;lt;!DOCTYPE html&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">html&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">head&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">head&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">body&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="na">id&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;left&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c">&amp;lt;!-- something --&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="err">{{&lt;/span> &lt;span class="na">if&lt;/span> &lt;span class="err">.&lt;/span>&lt;span class="na">IsPage&lt;/span> &lt;span class="err">}}&lt;/span>&lt;span class="na">data-pagefind-body&lt;/span>&lt;span class="err">{{&lt;/span> &lt;span class="na">end&lt;/span> &lt;span class="err">}}&lt;/span> &lt;span class="na">id&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;right&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c">&amp;lt;!-- something --&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">body&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">html&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;hr>
+&lt;p>接着把一些边边角角的不想被索引到的东西用 &lt;code>data-pagefind-ignore&lt;/code> 指定一下. 在我的博客里，我考虑到的有：发表时间、字数统计、同栏目下的友情链接、数学笔记的 PDF 区域、评论区（生成的 &lt;code>public/&lt;/code> 目录中这个位置本来也是空的，但还是写进去了）、目录. 书影音记录页面，我只索引了“书名”、“电影名”、“我的评价”三个板块的内容，其余内容全部忽略掉了. 接着考虑几个 render hooks：标题忽略章节符号“¶”，链接忽略外链符号“⧉”，图片不需要额外添加索引，因为我有 &lt;code>&amp;lt;figcaption&amp;gt;&lt;/code> 标签，已经可以被索引到了.&lt;/p>
+&lt;p>这里还有加密区域也应该忽略掉索引，在 &lt;code>layouts/shortcodes/hugo-encrypt.html&lt;/code> 里，有一个专门的 &lt;code>&amp;lt;hugo-encrypt&amp;gt;&lt;/code> 标签，在它后面也添加上 &lt;code>data-pagefind-ignore&lt;/code> 就行了. 不过我的加密功能是写在博客源码里而非主题源码里的，这里其实已经不完全是主题的更改了.&lt;/p>
+&lt;hr>
+&lt;p>Pagefind 还提供了&lt;a href='https://pagefind.app/docs/filtering/'
+target='_blank' rel='noreferrer noopener'
+>过滤器&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>功能，十分强大. 针对我这个博客，我则是用它把所有的索引结果打上了所属的 section 的标签，这样一来在展示搜索结果时就可以对文章所属的两级 section 进行展示. 我这个主题在左边栏判断 section 的选中状态（&lt;code>class=&amp;quot;active&amp;quot;&lt;/code>）时就已经写好了相关的逻辑，这里为了代码复用，把原来的逻辑提炼出来，存成两个新的变量（&lt;code>$if_1_on&lt;/code> 和 &lt;code>$if_2_on&lt;/code>）即可.&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">&lt;span class="c">&amp;lt;!-- layouts/_default/baseof.html --&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">{{ range .Site.Menus.main }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{ $if_1_on := 0 }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{ if eq .Identifier (path.Base $currentNode.RelPermalink) |
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> or (eq .Identifier $currentNode.Section) }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{ $if_1_on = 1 }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{ end }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="err">{{&lt;/span> &lt;span class="na">if&lt;/span> &lt;span class="err">$&lt;/span>&lt;span class="na">if_1_on&lt;/span> &lt;span class="err">}}&lt;/span>&lt;span class="na">data-pagefind-filter&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#39;1st-section&amp;#39;&lt;/span>&lt;span class="err">{{&lt;/span> &lt;span class="na">end&lt;/span> &lt;span class="err">}}&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#39;h1 {{ if $if_1_on }}active{{ end }}&amp;#39;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">a&lt;/span> &lt;span class="na">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#39;{{ .URL }}&amp;#39;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>{{ .Name }}&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">a&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{ if .HasChildren }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{ range .Children }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{ if ne .Identifier &amp;#34;&amp;#34; }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{ $if_2_on := 0 }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{ if eq .Identifier (path.Base $currentNode.RelPermalink) |
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> or (eq .Identifier $currentNode.Params.section) }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{ $if_2_on = 1 }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{ end }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="err">{{&lt;/span> &lt;span class="na">if&lt;/span> &lt;span class="err">$&lt;/span>&lt;span class="na">if_2_on&lt;/span> &lt;span class="err">}}&lt;/span>&lt;span class="na">data-pagefind-filter&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#39;2nd-section&amp;#39;&lt;/span>&lt;span class="err">{{&lt;/span> &lt;span class="na">end&lt;/span> &lt;span class="err">}}&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#39;h2 {{ if $if_2_on }}active{{ end }}&amp;#39;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">a&lt;/span> &lt;span class="na">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#39;{{ .URL }}&amp;#39;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>{{ .Name }} &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">a&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{ end }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{ end }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{ end }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">{{end}}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>注意到这里 &lt;code>data-pagefind-filter&lt;/code> 标签并不需要一定在 &lt;code>&amp;lt;body&amp;gt;&lt;/code> 中或 &lt;code>data-pagefind-body&lt;/code> 标签下，所以我能够在这里把它写在左边的导航区，省了不少事儿. 感谢 Pagefind 开发者的周到考虑.&lt;/p>
+&lt;hr>
+&lt;p>Pagefind 还有 &lt;a href='https://pagefind.app/docs/metadata/'
+target='_blank' rel='noreferrer noopener'
+>metadata&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a> 也需要额外配置一下，主要就是文章标题和日期. Pagefind 默认会取第一个 &lt;code>&amp;lt;h1&amp;gt;&lt;/code> 标签作为 metadata 标题，我这个主题中文章标题是单独一个容器，&lt;code>&amp;lt;h1&amp;gt;&lt;/code> 标签并不归文章标题所使用（&lt;code>startLevel&lt;/code> 为 1，&lt;a href='https://gohugo.io/getting-started/configuration-markup/#table-of-contents'
+target='_blank' rel='noreferrer noopener'
+>Hugo 文档&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>），所以这里需要重写；Pagefind 的默认 metadata 中也没有日期字段，这里也给它添加上：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">&lt;span class="c">&amp;lt;!-- layouts/_default/single.html --&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="na">data-pagefind-meta&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;title&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{- .Title -}}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">span&lt;/span> &lt;span class="na">data-pagefind-meta&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;date&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>{{ .Date | time.Format &amp;#34;:date_long&amp;#34; }}&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">span&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>标题那里在双大括号里使用了&lt;a href='https://gohugo.io/templates/introduction/#whitespace'
+target='_blank' rel='noreferrer noopener'
+>短横线&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>，以免取到的题目左右有空格或回车.&lt;/p>
+&lt;hr>
+&lt;p>Pagefind 在索引这件事上还有&lt;a href='https://pagefind.app/docs/multilingual/'
+target='_blank' rel='noreferrer noopener'
+>多语言&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>以及&lt;a href='https://pagefind.app/docs/sorts/'
+target='_blank' rel='noreferrer noopener'
+>搜索顺序&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>可供配置，我这个博客不需要配置这些，它提供的默认选项已经则够好.&lt;/p>
+&lt;h2>搜索&lt;/h2>
+&lt;p>搜索是读者那边的前端交互模块了，Pagefind 自带了一个开箱即用的 Pagefind UI，好看且功能强大，刚开始建站写主题的话可以直接拿过来用. 不过我的前端设计以及交互模式完全是我自己设计的，难以把它这套东西强行塞进去，所以我完全放弃了它提供的这一套 Pagefind UI，转而全都自己写. 好在 Pagefind 也提供了强大的&lt;a href='https://pagefind.app/docs/api/'
+target='_blank' rel='noreferrer noopener'
+>搜索接口&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>，写起来反而是更加容易的.&lt;/p>
+&lt;p>其实这里的[搜索功能的实现]本质上就是定义了下面这个 &lt;code>PagefindSearch(text, canvas)&lt;/code> 函数，它的入参 &lt;code>text&lt;/code> 是读者在搜索框里所打的文字，&lt;code>canvas&lt;/code> 是展示搜索结果的区域，这个函数的功能就是去调用 Pagefind 接口搜索 &lt;code>text&lt;/code> 字段，并将结果渲染到 &lt;code>canvas&lt;/code> 里面. 这段代码只是一个示例，没有详细展示渲染的逻辑，不过其最佳实践仍然是使用 template 技术.&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// main.js
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="kr">async&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="nx">PagefindSearch&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">text&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">canvas&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">const&lt;/span> &lt;span class="nx">pagefind&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kr">await&lt;/span> &lt;span class="kr">import&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;/_pagefind/pagefind.js&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">const&lt;/span> &lt;span class="nx">search&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kr">await&lt;/span> &lt;span class="nx">pagefind&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">search&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">text&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="kr">const&lt;/span> &lt;span class="nx">result&lt;/span> &lt;span class="k">of&lt;/span> &lt;span class="nx">search&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">results&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">let&lt;/span> &lt;span class="nx">result_data&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kr">await&lt;/span> &lt;span class="nx">result&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">data&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">result_data&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// 可以自由发挥来处理 pagefind 返回的结果
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="c1">// 比如想办法渲染到 canvas 这个区域
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;hr>
+&lt;p>前面&lt;a href='https://zerovip.github.io/zh/41675/#%e5%89%8d%e7%ab%af%e5%ae%9e%e7%8e%b0'
+>前端实现&lt;/a>那个小节写过一个 &lt;code>showSearch&lt;/code> 函数，这里稍微扩充一下，以监听用户的输入，并利用&lt;a href='https://schier.co/blog/wait-for-user-to-stop-typing-using-javascript'
+target='_blank' rel='noreferrer noopener'
+>函数防抖（debounce）&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>延迟 600 毫秒把读者的输入传进我们刚刚写的那个 &lt;code>PagefindSearch(text)&lt;/code> 函数中：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// main.js
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="nx">showSearch&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">prefix&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getElementById&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">prefix&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="s2">&amp;#34;_search-zone&amp;#34;&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">classList&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">add&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;search_show&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// 以下为扩充内容
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="kd">let&lt;/span> &lt;span class="nx">search_timeout&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">let&lt;/span> &lt;span class="nx">search_input&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">xxxxxxxx&lt;/span> &lt;span class="c1">// 选中输入框
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="nx">search_input&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">addEventListener&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;keyup&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">e&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">clearTimeout&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">search_timeout&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">search_timeout&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">setTimeout&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">search_input&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">value&lt;/span> &lt;span class="o">!==&lt;/span> &lt;span class="s2">&amp;#34;&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">let&lt;/span> &lt;span class="nx">render_canvas&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">search_input&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">nextElementSibling&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">nextElementSibling&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// 想办法选到 search-results 那个搜索结果展示区域即可
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="nx">PagefindSearch&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">search_input&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">value&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">render_canvas&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span> &lt;span class="mi">600&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">});&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>这样一来，整个前端的搜索工作就也完成了. 这里写得比较简略，实际上还要单独设计搜索结果的展示区域的样式等等.&lt;/p>
+&lt;h2>调试&lt;/h2>
+&lt;p>最后再提一下调试的流程. 因为 Pagefind 是在 Hugo 生成了所有静态文件之后才去建立索引的，所以调试起来稍微有一点麻烦. 每当做了一点改动之后，我会先关掉 Pagefind 自带的 HTTP 服务，删除 &lt;code>public&lt;/code> 文件夹下的所有内容：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">rm -rf ./public/*
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>然后重新生成静态文件：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">hugo
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>最后重新利用 Pagefind 建立索引并开启新的 HTTP 服务：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">./pagefind_extended --serve
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>刷新一下网页（&lt;code>127.0.0.1:1414&lt;/code>），就可以对刚刚修改的内容做个测试了.&lt;/p>
+&lt;p>最后的搜索效果如下：&lt;/p>
+&lt;video width="700" controls>
+&lt;source src="search.mp4" type="video/mp4">
+&lt;/video>
+&lt;h1>其他问题&lt;/h1>
+&lt;p>这里有两个问题也该说明一下. 一是 Pagefind 也是有自己的&lt;a href='https://pagefind.app/docs/config-sources/'
+target='_blank' rel='noreferrer noopener'
+>配置文件&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>的. 像我在终端里可以直接运行 &lt;code>./pagefind_extended&lt;/code> 而不用带 &lt;code>--source public&lt;/code> 这个 flag 就是因为我把 &lt;code>source&lt;/code> 定义在配置文件里面了.&lt;/p>
+&lt;p>二是，引入 Pagefind 所需要的关键模块时使用的语句是 &lt;code>import(&amp;quot;/_pagefind/pagefind.js&amp;quot;);&lt;/code>，而在 Hugo 生成静态文件的过程中，这个模块是不存在的，也就是说，这个 &lt;code>/_pagefind/pagefind.js&lt;/code> 文件是 Pagefind 建立索引时才自动生成的. 这就导致了 Hugo 主题里是没法对 &lt;code>main.js&lt;/code> 做 &lt;a href='https://gohugo.io/hugo-pipes/introduction/#method-aliases'
+target='_blank' rel='noreferrer noopener'
+>minify&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a> 的. 我认为解决办法有二：要么就把 Pagefind 相关的 JavaScript 代码（包含 import 的最小代码单位）单独拿出去独立为一个新的脚本；要么就应该由 Pagefind 项目组考虑到这个问题，release 出一个单独的 &lt;code>pagefind.js&lt;/code> 文件（我自己从生成的文件夹里拷贝也应该可行），放在主题的 &lt;code>assets/&lt;/code> 文件夹里.&lt;/p></description></item><item><title>【译】如何用简明英语写作 - 语言表达法</title><link>https://zerovip.github.io/zh/32328/</link><pubDate>Mon, 17 Jan 2022 00:00:00 CST</pubDate><guid isPermaLink="false">/zh/32328/</guid><description>&lt;h1>博主按&lt;/h1>
 &lt;div style='background-color:#FDE763;'>
 &lt;p>本文分为两个部分，前一部分是&lt;a href='http://www.plainenglish.co.uk/how-to-write-in-plain-english.html'
 target='_blank' rel='noreferrer noopener'
@@ -11444,64 +11877,4 @@ target='_blank' rel='noreferrer noopener'
 &lt;/ul>
 &lt;div style='background-color:#FDE763;'>
 &lt;p>注意：请不要在长毛象给出本文的链接. 出于个人隐私的考虑，本文首发于另一个平台，我在长毛象上的宣传也是用的那个平台的链接. 所以如果你在别的地方已经看到过这篇文章，又通过搜索引擎找到了这里，请不要在长毛象上声张，你自己偷偷知道我有这么个博客站就好了.&lt;/p>
-&lt;/div></description></item><item><title>把豆伴的 Chrome 插件转为 Firefox 插件（未成功）</title><link>https://zerovip.github.io/zh/95260/</link><pubDate>Sat, 05 Sep 2020 00:00:00 CST</pubDate><guid isPermaLink="false">/zh/95260/</guid><description>&lt;p>我是一个豆瓣用户，我会用到一款豆友开发的备份插件：&lt;a href='https://blog.doufen.org/posts/tofu-user-guide/'
-target='_blank' rel='noreferrer noopener'
->豆伴&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>. 这里顺带一提，我看好多友邻都管这个插件叫“豆坟”，实际上这个插件叫“豆伴”；“豆坟”是这个项目的名字，这个项目还包括了浏览器，浏览器的名字倒是叫“豆坟”. 话说回来，这个插件只支持 Chrome 浏览器，而我是一个 Firefox 用户. 在额外安装了 Chrome 浏览器并仔细体验了一下这个插件后，我表示我太爱这个插件了！但我不爱 Chrome 浏览器，我想着能不能把它移植到 Firefox 上. 我对浏览器插件开发一窍不通，前端只会最最最基本的 HTML、CSS 和 JavaScript. 但我想着，还是试试吧，这篇文章就是我的尝试过程，是一篇流水帐.&lt;/p>
-&lt;p>我是一边捣鼓一边写这篇文章的，结果最后没能成功. 好吧，这是一篇失败的流水帐，虽然还没有做太多努力和尝试. 未来我有时间会再次捡起这个问题再尝试一回的！&lt;/p>
-&lt;h1>搜索&lt;/h1>
-&lt;p>在搜索引擎中对这个问题进行搜索，发现了一篇 Firefox 的官方文档：&lt;a href='https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/'
-target='_blank' rel='noreferrer noopener'
->Porting a Google Chrome extension&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>、Quora 上的一个问题：&lt;a href='https://www.quora.com/Whats-the-easiest-way-to-convert-a-Chrome-Extension-to-a-Firefox-Extension'
-target='_blank' rel='noreferrer noopener'
->What&amp;rsquo;s the easiest way to convert a Chrome extension to a Firefox extension?&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>，还有一篇知乎上的文章：&lt;a href='https://zhuanlan.zhihu.com/p/163535578'
-target='_blank' rel='noreferrer noopener'
->利用Firefox开发者网站，转换Chrome插件为Firefox插件&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>.&lt;/p>
-&lt;h1>兼容性检查&lt;/h1>
-&lt;p>Quora 上的答案让我有点灰心，大家都是说没有这样的工具，有些东西不兼容云云. 但 Firefox 的文档给了我很强的信心，它说大多数情况下只需要很少的改动就可以了（Extensions written for these browsers will, in most cases, run in Firefox with just a few changes）. 接着往下读，第 1 步它说让我检查 menifest.json 的设置和 Chrome 的接口看看有没有什么是不兼容的，但代码不是我写的，Chrome 的接口特性我也完全不知道，幸好它提供了一个&lt;a href='https://www.extensiontest.com/'
-target='_blank' rel='noreferrer noopener'
->自动工具：Extension Compatibility Test for Firefox&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>. 可惜的是它只支持 .crx 格式文件上传，而豆伴插件只提供了 .zip 格式下载. 再查了一下，.crx 其实本质就是一个 .zip，只不过又额外添加了插件描述、ID、密钥等信息. 于是我就明目张胆地在选择 .crx 文件时把豆伴的 .zip 文件传了上去. 好消息出现了：Great news! Your extension is compatible with Firefox. 接下来就是测试了.&lt;/p>
-&lt;h1>临时测试&lt;/h1>
-&lt;p>依然按照官方文档第 2 步给出的 &lt;a href='https://developer.mozilla.org/zh-CN/docs/Tools/about:debugging'
-target='_blank' rel='noreferrer noopener'
->about: debugging 帮助&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>，在地址栏输入 &lt;code>about:debugging&lt;/code> 进入调试页面. 由于是要调试本地的 Firefox，点击“此 Firefox”链接，即 &lt;code>about:debugging#/runtime/this-firefox&lt;/code> 进入到本地调试的页面. 然后点击“载入临时附加组件”，把从豆坟官网下载好的 &lt;code>tofu-0.8.2.zip&lt;/code> 导入进去. 第一个错误出现了：File &amp;hellip;/tofu-0.8.2.zip does not contain a valid manifest. 意思是里面不含有合法的 manifest.&lt;/p>
-&lt;h1>重新打包&lt;/h1>
-&lt;p>解压缩看了一下，里面是有一个 manifest.json 的，而且打开看了一下觉得也没什么太大的问题，怀疑可能是压缩时的编码问题，所以尝试重新打包. 也是安装 Firefox 官方文档：&lt;a href='https://extensionworkshop.com/documentation/publish/package-your-extension/'
-target='_blank' rel='noreferrer noopener'
->Package your extension&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a> 的指示重新对解压后的文件进行了打包. 具体地讲，因为我是 Linux 用户，我就按照其中 Linux / Mac OSX Terminal 部分的指示，先进入文件目录（&lt;code>cd tofu-0.8.2&lt;/code>）再使用命令：&lt;code>zip -r -FS ../tofu-zero-test.zip * --exclude '*.git*'&lt;/code>. 重新打包好后，重新在本地调试处上传，这下就没有错误了，只是弹出了两个警告：&lt;/p>
-&lt;blockquote>
-&lt;p>Reading manifest: Warning processing version_name: An unexpected property was found in the WebExtension manifest.&lt;/p>
-&lt;/blockquote>
-&lt;p>但也没有具体说是哪一行的问题，暂且就先不管它，认为是成功了吧.&lt;/p>
-&lt;h1>测试备份&lt;/h1>
-&lt;p>于是就来到了第 3 步：测试. 我试着用了一下. 第一个问题是设置不能保存：比如我设置抓取间隔为 5 秒，并设置好我的 cloudinary 的名字，但点击保存（提示：设置成功！）之后再打开设置依然是没有设置的状态. 不知道是设置成功了但没有显示成功还是压根就没有设置成功. 第二个问题是好像这个插件没法读取 cookie，明明已经登录了豆瓣，它却还认为我没有登录，在它的帐号页面登录之后，再打开又变成了没有登录的状态，我突然怀疑第一个问题其实也是读取 cookie 的问题？&lt;/p>
-&lt;p>无论如何，新建任务直接跑起来看看：看上去没有任何问题. 浏览数据、导出数据都没有任何问题. 导出的数据也没有任何问题. 有问题的话可以根据第 4 步联系官方，但我的问题应该还不至于到这一步，因为目前只有设置有问题，可以先暂时忽略它.&lt;/p>
-&lt;h1>发布&lt;/h1>
-&lt;p>本来按照第 5 步应该是进行打包，不过这一步我在上面已经做过了. 这里直接来到第 6 步，发布. 到这里其实就和之前查到的那篇知乎文章完美衔接了. 按照官方文档：&lt;a href='https://extensionworkshop.com/documentation/publish/submitting-an-add-on/'
-target='_blank' rel='noreferrer noopener'
->Submitting an add-on&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a> 或知乎的文章都是一样的，无非就是登入帐号，到开发者中心&lt;a href='https://addons.mozilla.org/zh-CN/developers/addon/submit/upload-unlisted'
-target='_blank' rel='noreferrer noopener'
->提交附加组件&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>. 上传了 .zip 包之后，没想到这里出现了 1 个错误和 13 个警告.&lt;/p>
-&lt;h1>解决错误&lt;/h1>
-&lt;p>好吧，这里出现的错误终于写出来是错在哪了，感觉这个检测工具比调试工具好用的多——那个调试的开发者工具里好几屏的错误和警告信息真的搞得人不知道该怎么下手. 先来看看那一个错误：&lt;/p>
-&lt;blockquote>
-&lt;p>There is a JavaScript syntax error in your code; validation cannot continue on this file.&lt;/p>
-&lt;/blockquote>
-&lt;p>居然有一个语法错误？我怎么这么不相信呢. 看看是哪个文件的问题：vendor/dexie.js 第 4465 行，第 1 列. 无论如何，打开文件看一看. 其实看到这个行数 4465，我就想喊一声谢天谢地了，写这个 js 的作者也太好心了，没有对 js 进行压缩，依然保持了人类可读的格式. 定位到 4465 行一看，这居然是这份 js 的最后一条语句了，是 &lt;code>export default Dexie;&lt;/code>. 这里我就产生了一个疑问，这看上去并不是语法错误啊，难道是 Firefox 不支持么？检查用关键词搜索了一番，没有找到我想要的答案. 好吧，先搜一搜这个 dexie.js 工具，看看它是干什么的.&lt;/p>
-&lt;p>这个倒是容易搜索到，主页在&lt;a href='https://dexie.org/'
-target='_blank' rel='noreferrer noopener'
->这里&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>，看介绍是好像是负责数据库的. 顺藤摸瓜，通过 GitHub 上的&lt;a href='https://github.com/dfahlander/Dexie.js#hello-world'
-target='_blank' rel='noreferrer noopener'
->示例代码 hello-world&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a> 找到这份 js 的&lt;a href='https://unpkg.com/dexie@latest/dist/dexie.js'
-target='_blank' rel='noreferrer noopener'
->在线版本：https://unpkg.com/dexie@latest/dist/dexie.js&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>，打开一看，它的最后一行语句并不是 &lt;code>export default Dexie;&lt;/code>，难道是豆伴的作者对它进行了魔改？可是我又随便比较了一下，感觉不一样的地方太多了，回到顶上一看版本信息，好嘛，豆伴使用的代码居然没写版本信息，只是一行没有替换的 &lt;code>Version {version}, {date}&lt;/code>，在线的版本已经到 3.0.2 了. 姑且就认为是 dexie 的作者重新写了一版吧.&lt;/p>
-&lt;p>按照一般的软件升级一定会向下兼容接口，这份新版的 dexie.js 又没有那令人崩溃的 export 语法错误，我决定用新版替换一下. 然后重新打包 &lt;code>zip -r -FS ../tofu-0.8.2.1.zip * --exclude '*.git*'&lt;/code>，这里我在版本号后面又加了一个 .1 做了额外区分，然后重新上传——&lt;/p>
-&lt;blockquote>
-&lt;p>您的附加组件已通过验证，无错误，有 13 条警告.&lt;/p>
-&lt;/blockquote>
-&lt;p>我长舒一口气. 13 条警告先不管了.&lt;/p>
-&lt;h1>继续签名提交并测试&lt;/h1>
-&lt;p>按照知乎文章的提示，我暂时只选择了兼容 Firefox（没选兼容 Firefox Android 版），点击“签名附加组件”，不提交源码——毕竟我不是这个插件的作者. 转至我的提交后，果然已经核准，一秒钟都没用，知乎文章诚不我欺！&lt;/p>
-&lt;p>这时我迫不及待地想要再次测试一番，看一看之前的问题会不会因为我替换了 dexie.js 而得到解决，又或者我的替换带来了新的问题？结果果然没有让我失望呢！添加组件后点击豆伴图标正常得到了菜单列表，但任何一个选项都打不开了呢！&lt;/p>
-&lt;p>把新打包的文件导入到 &lt;code>about:debugging#/runtime/this-firefox&lt;/code> 里，确实有这个问题，看来是我的替换带来了问题呢！&lt;/p>
-&lt;h1>TODO&lt;/h1>
-&lt;p>本来生气地想我自己学一下写一个插件算了，因为看上去也就是一个爬虫的事儿. 结果看了看人家的代码，应该是用了好多现成的 js 库什么的，我要是写的话恐怕全是想自己实现了，应该是很难达到同样的功能的. 所以等我有时间了可以好好排查一下这个神奇的 dexie.js 以及那个神奇的 export 语法错误，再解决解决这 13 个警告的问题，看一看那些菜单的点击代码，能不能快速修一下之类的. 至少在没能成功移植的日子里，我还是能通过临时扩展的方法（&lt;code>about:debugging#/runtime/this-firefox&lt;/code>）来备份豆瓣的.&lt;/p></description></item></channel></rss>
+&lt;/div></description></item></channel></rss>

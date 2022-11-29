@@ -3,7 +3,440 @@
 近期内容 |
 RSS 订阅
 | 赤赤的象牙塔</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>
-Wed, 05 Oct 2022 00:00:00 CST</lastBuildDate><item><title>语言是文化的钥匙</title><link>https://zerovip.github.io/zh/93488/</link><pubDate>Wed, 05 Oct 2022 00:00:00 CST</pubDate><guid isPermaLink="false">/zh/93488/</guid><description>&lt;h1>起因&lt;/h1>
+Tue, 29 Nov 2022 00:00:00 CST</lastBuildDate><item><title>利用 Pagefind 给静态博客添加搜索功能 - 自写主题</title><link>https://zerovip.github.io/zh/41675/</link><pubDate>Tue, 29 Nov 2022 00:00:00 CST</pubDate><guid isPermaLink="false">/zh/41675/</guid><description>&lt;h1>前言&lt;/h1>
+&lt;p>我&lt;a href='https://github.com/zerovip/zerovip.github.io/commit/a0e5595ddbc17c6fb5ec10a732d536b2eea0e8ba#diff-aa481d6e71487ff6b05f479cc7d6958e492757e0ccd6a634dc84f32ffe42545cR396'
+target='_blank' rel='noreferrer noopener'
+>早就&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>想要给自己这个博客站添加站内搜索功能了，前前后后也考察过非常多的工具，&lt;a href='https://gohugo.io/tools/search/'
+target='_blank' rel='noreferrer noopener'
+>官方列出的选择&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>就非常之多，但没有令我满意的：如果想要开箱即用，就要用 npm 安装 Nodejs 的一些工具；稍微简单点办法的就是利用 hugo 能够生成 json 的能力（&lt;a href='https://makewithhugo.com/add-search-to-a-hugo-site/'
+target='_blank' rel='noreferrer noopener'
+>教程一&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>、&lt;a href='https://palant.info/2020/06/04/the-easier-way-to-use-lunr-search-with-hugo/'
+target='_blank' rel='noreferrer noopener'
+>教程二&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>），但需要引入第三方搜索库，自己还要写不少的代码来实现. 所以我就一直拖着没有弄.&lt;/p>
+&lt;!-- 我这个博客从最一开始的设计哲学就是尽可能地简单，全站没有使用任何高级的前端工具，只使用了纯 CSS 和纯 JavaScript，我对此是十分骄傲的. 我认为前端应该是简单的，尤其是静态博客的前端. 预处理器或前端框架的意义应该是节约开发者在开发与维护**大型**项目时的时间和精力，对于小型项目来说，最基础的三件套就已经足够，完全没有必要额外引入编译、转换或打包的工作流程，也没有必要为了一个小小的功能引入过多实际用不到的东西. 所以我拒绝使用 Nodejs、npm、Tailwind、Less、Sass、SCSS 等工具，这些完全破坏了其作为静态博客的优雅，把简单问题复杂化，也不方便其他人对主题做二次开发. -->
+&lt;p>直到上个月我在读阮一峰的&lt;a href='https://www.ruanyifeng.com/blog/2022/10/weekly-issue-226.html'
+target='_blank' rel='noreferrer noopener'
+>科技爱好者周刊（第 226 期）&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>的时候才偶然看到这么一个工具：&lt;a href='https://pagefind.app/'
+target='_blank' rel='noreferrer noopener'
+>Pagefind&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>. 我花了半个小时仔细考察了它，几乎是立刻就确定了它正是我恰好想要、且一直在等待的那个工具. 它吸引到我的有 5 点：&lt;/p>
+&lt;ol>
+&lt;li>它上了 &lt;a href='https://www.youtube.com/watch?v=74lsEXqRQys'
+target='_blank' rel='noreferrer noopener'
+>HugoConf 2022&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>，得到了 Hugo 社区的认可. 阅读它的文档时也能感受得到，这个工具一开始就是为了 Hugo 而设计的；&lt;/li>
+&lt;li>它的开发语言是 Rust，最后所提供出来的产品就是一个简单的二进制可执行文件，不需要安装环境或配置依赖，开箱即用，非常方便；&lt;/li>
+&lt;li>它的&lt;a href='https://pagefind.app/docs/multilingual/'
+target='_blank' rel='noreferrer noopener'
+>多语言&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>支持做得不错：有专门对中文的分词索引支持. 虽然暂不支持查询字段分词，但正努力开发中；&lt;/li>
+&lt;li>它自带了一个简单的 HTTP server，本地调试起来很是方便. 如果是从头建站，它提供了十分钟就能用上的还很好看的 Pagefind UI；即便要自己写，它也提供了简单易用的接口；&lt;/li>
+&lt;li>它充分考虑了大型网站的搜索，将索引分成了不同的小 chunks，节省读者的网络流量，比起用 hugo 直接生成 json 要简洁、优雅得多.&lt;/li>
+&lt;/ol>
+&lt;h1>交互设计&lt;/h1>
+&lt;p>第一个问题是如何设计交互：搜索框应该放在哪里？搜索的流程与步骤该是什么样？宽屏幕怎么做，小屏幕又怎么做？&lt;/p>
+&lt;p>我仔细考察了很多包含搜索功能的网站，现在大家都已经是竖版的布局了，在页面的最上面有一个横着的顶栏，搜索框就放在这里. 当读者键入一些内容之后，交互上的做法大致可以分成三类：&lt;/p>
+&lt;ol>
+&lt;li>第一种是会出现一个专门的区域存放搜索结果，悬浮于整个页面的最顶层（举例：&lt;a href='https://gohugo.io/documentation/'
+target='_blank' rel='noreferrer noopener'
+>Hugo 的官方文档&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>、&lt;a href='https://en.wikipedia.org/wiki/Main_Page'
+target='_blank' rel='noreferrer noopener'
+>维基百科&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>）；
+&lt;figure>
+&lt;img loading='lazy' src='https://zerovip.github.io/zh/41675/hugo-search.png' alt='Hugo 的搜索功能示例'/>
+&lt;figcaption>◉ 图. Hugo 的搜索功能示例&lt;/figcaption>
+&lt;/figure>
+&lt;/li>
+&lt;li>第二种是把搜索结果直接渲染到页面上，把当前网页上的其他内容往下挤（举例：&lt;a href='https://xkcd.pagefind.app/'
+target='_blank' rel='noreferrer noopener'
+>Pagefind 的示例站点&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>）；
+&lt;figure>
+&lt;img loading='lazy' src='https://zerovip.github.io/zh/41675/pagefind-search.png' alt='Pagefind Demo 页的搜索功能示例'/>
+&lt;figcaption>◉ 图. Pagefind Demo 页的搜索功能示例&lt;/figcaption>
+&lt;/figure>
+&lt;/li>
+&lt;li>第三种是在键入内容时不会有任何交互，必须要点击一下搜索按钮或按下回车键之后才开始搜索，此时一般会跳转到一个单独页面用来陈列搜索结果（举例：&lt;a href='https://github.com/'
+target='_blank' rel='noreferrer noopener'
+>GitHub&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>、&lt;a href='https://www.qbitai.com/'
+target='_blank' rel='noreferrer noopener'
+>量子位&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>、&lt;a href='https://segmentfault.com/'
+target='_blank' rel='noreferrer noopener'
+>思否&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>、&lt;a href='https://www.jianshu.com/'
+target='_blank' rel='noreferrer noopener'
+>简书&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>）.
+&lt;figure>
+&lt;img loading='lazy' src='https://zerovip.github.io/zh/41675/github-search.png' alt='Github 的搜索功能展示'/>
+&lt;figcaption>◉ 图. Github 的搜索功能展示&lt;/figcaption>
+&lt;/figure>
+&lt;/li>
+&lt;/ol>
+&lt;hr>
+&lt;p>在 UI 设计上，这个搜索框可能只显示为一个搜索按钮，单击后才展开成为一个搜索框（举例：&lt;a href='https://hugoloveit.com/'
+target='_blank' rel='noreferrer noopener'
+>LoveIt 主题&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>、&lt;a href='https://io-oi.me/hugo-theme-meme/'
+target='_blank' rel='noreferrer noopener'
+>MemE 主题&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>）；或者单击后弹出一个搜索区域，里面囊括更多高级搜索的功能（举例：&lt;a href='https://www.quantamagazine.org/'
+target='_blank' rel='noreferrer noopener'
+>Quanta Magazine&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>、&lt;a href='https://sspai.com/'
+target='_blank' rel='noreferrer noopener'
+>少数派&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>）. 它们的后续交互还是要归结于上面的那三种，相当于是多了一个操作步骤.&lt;/p>
+&lt;p>我认为：直接显示搜索框，且键入内容之后马上就能看到搜索结果的交互设计才是最方便的，体验也是最好的，其中又属第一种交互模式最为优雅、合理，不破坏整体布局. 但是如何在我这个左右两栏布局的网页里实现第一种交互模式就成了新的问题：按道理，搜索功能是每个页面都有的公共的功能，应该放在左边的公共的导航栏里；然而左边本来就空间狭小、信息密集，如果再将搜索结果悬浮于左边的导航文字之上，会显得十分逼仄，感觉也破坏了左栏的导航功能.&lt;/p>
+&lt;p>经过仔细考虑，我决定借鉴 Quanta Magazine 的设计模式：写一个单独的搜索区域，但把它先给隐藏起来，只在左边的导航区留下一个小小的放大镜符号作为搜索入口. 当读者点击搜索按钮时，使用纯前端的技术，将整个左边栏完全替换为那个单独的搜索区域. 正因为不是悬浮于导航栏之上而是覆盖掉整个导航栏，视觉上会干净、清爽得多，同时后续搜索流程上的交互模式也可以完全按照第一种办法来实现，搜索体验也会是相当不错的.&lt;/p>
+&lt;p>对于小屏幕来说，先点开左栏才能看到搜索按钮，再点击搜索按钮才能看到搜索区域，这无疑是过于麻烦的. 因此可以直接把搜索按钮放在顶栏里，点击后把下面整个页面都用搜索区域替换掉.&lt;/p>
+&lt;h1>前端实现&lt;/h1>
+&lt;p>既然是所有页面都共有的功能，那自然是要写到 &lt;code>base.html&lt;/code> 里的. 但由于宽屏幕和小屏幕的搜索区域位置不同，里面的功能却完全一致，所以如果直接写进对应的位置就要写两遍，无法复用代码；而且最开始这个搜索区域应该是隐藏起来的，读者点击搜索按钮后才会出现，这就导致，如果把代码直接写进对应的位置，页面渲染时会先渲染出搜索区域，然后马上才应用 CSS 样式表将其隐藏，观感就是搜索区域整个一闪而过了一下，非常不美观. 我的解决方案就是，将搜索区域写成一个 HTML 的 &lt;a href='https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template'
+target='_blank' rel='noreferrer noopener'
+>template&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>，等整个页面加载完成后（样式表已经应用后）再用 JavaScript 把它装载进相应的位置. 代码结构与原理如下：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">&lt;span class="c">&amp;lt;!-- layouts/_default/baseof.html --&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&amp;lt;!DOCTYPE html&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">html&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">head&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">head&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">body&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="na">id&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;left&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;search-box&amp;#34;&lt;/span> &lt;span class="na">onclick&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;showSearch(&amp;#39;left&amp;#39;)&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Search Icon here
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c">&amp;lt;!-- here needs a search page (for bigger width device) to be loaded--&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="na">id&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;right&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;search-box&amp;#34;&lt;/span> &lt;span class="na">onclick&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;showSearch(&amp;#39;right&amp;#39;)&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Search Icon here
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c">&amp;lt;!-- here needs a search page (for phone) to be loaded --&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">template&lt;/span> &lt;span class="na">id&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;search-template&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="na">id&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;search-zone&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">input&lt;/span> &lt;span class="na">type&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;search&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;close-sign&amp;#34;&lt;/span> &lt;span class="na">onclick&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;hideSearch(this)&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Close Icon here
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;search-results&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">template&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">script&lt;/span> &lt;span class="na">src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;main.js&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">script&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">body&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">html&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// main.js
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="kr">const&lt;/span> &lt;span class="nx">search_template&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getElementById&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;search-template&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">function&lt;/span> &lt;span class="nx">loadTemplate&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">prefix&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">var&lt;/span> &lt;span class="nx">container&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getElementById&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">prefix&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">var&lt;/span> &lt;span class="nx">search_clone&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">search_template&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">content&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">cloneNode&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kc">true&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// can do something here depending on the `prefix` variable
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="nx">search_clone&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getElementById&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;search-zone&amp;#34;&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">id&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">prefix&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="s2">&amp;#34;_search-zone&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">container&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">appendChild&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">search_clone&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">loadTemplate&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;left&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">loadTemplate&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;right&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">function&lt;/span> &lt;span class="nx">showSearch&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">prefix&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getElementById&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">prefix&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="s2">&amp;#34;_search-zone&amp;#34;&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">classList&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">add&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;search_show&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">function&lt;/span> &lt;span class="nx">hideSearch&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">x&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">x&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">parentNode&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">classList&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">remove&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;search_show&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>这里利用这个 &lt;code>prefix&lt;/code> 变量，可以精确地将左右两个搜索区域分开，为了放便起见可以直接在 JavaScript 中更改对应的 id 字段. 调整样式则是根据 &lt;code>search_show&lt;/code> 这个 class 完成隐藏与显示，具体的代码不再赘写. 这样一来，搜索入口、整个搜索区域、搜索框、关闭搜索的按钮以及对应的打开搜索区域、关闭搜索区域的功能，在这里就算是完成了.&lt;/p>
+&lt;h1>接入 Pagefind&lt;/h1>
+&lt;p>Pagefind 只做两件事：索引和搜索. 索引是 Hugo 每次生成完 &lt;code>public/&lt;/code> 静态文件之后，Pagefind 将其作为输入，按照相应的规则，把相应的内容编进索引，最后输出成一个单独的 &lt;code>_pagefind/&lt;/code> 文件夹；搜索则是关于读者在网站上具体搜索时的展示. 打个非常不恰当的比方：索引是后端，搜索是前端.&lt;/p>
+&lt;h2>索引&lt;/h2>
+&lt;p>按照上面的解释，在索引这一块儿，我们要做的就是根据自己的需要，编写相应的索引规则，确定需要索引的内容以及应该排除在外的内容.&lt;/p>
+&lt;p>首先是利用 &lt;code>data-pagefind-body&lt;/code> 框定索引范围（&lt;a href='https://pagefind.app/docs/indexing/'
+target='_blank' rel='noreferrer noopener'
+>参考&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>）. 在我这个博客里，我希望把索引范围框定在文章页的右边区域，也就是说，主页和列表页不参与索引，文章页的左侧导航区也不参与索引. 因此我这样写：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">&lt;span class="c">&amp;lt;!-- layouts/_default/baseof.html --&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&amp;lt;!DOCTYPE html&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">html&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">head&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">head&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">body&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="na">id&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;left&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c">&amp;lt;!-- something --&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="err">{{&lt;/span> &lt;span class="na">if&lt;/span> &lt;span class="err">.&lt;/span>&lt;span class="na">IsPage&lt;/span> &lt;span class="err">}}&lt;/span>&lt;span class="na">data-pagefind-body&lt;/span>&lt;span class="err">{{&lt;/span> &lt;span class="na">end&lt;/span> &lt;span class="err">}}&lt;/span> &lt;span class="na">id&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;right&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c">&amp;lt;!-- something --&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">body&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">html&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;hr>
+&lt;p>接着把一些边边角角的不想被索引到的东西用 &lt;code>data-pagefind-ignore&lt;/code> 指定一下. 在我的博客里，我考虑到的有：发表时间、字数统计、同栏目下的友情链接、数学笔记的 PDF 区域、评论区（生成的 &lt;code>public/&lt;/code> 目录中这个位置本来也是空的，但还是写进去了）、目录. 书影音记录页面，我只索引了“书名”、“电影名”、“我的评价”三个板块的内容，其余内容全部忽略掉了. 接着考虑几个 render hooks：标题忽略章节符号“¶”，链接忽略外链符号“⧉”，图片不需要额外添加索引，因为我有 &lt;code>&amp;lt;figcaption&amp;gt;&lt;/code> 标签，已经可以被索引到了.&lt;/p>
+&lt;p>这里还有加密区域也应该忽略掉索引，在 &lt;code>layouts/shortcodes/hugo-encrypt.html&lt;/code> 里，有一个专门的 &lt;code>&amp;lt;hugo-encrypt&amp;gt;&lt;/code> 标签，在它后面也添加上 &lt;code>data-pagefind-ignore&lt;/code> 就行了. 不过我的加密功能是写在博客源码里而非主题源码里的，这里其实已经不完全是主题的更改了.&lt;/p>
+&lt;hr>
+&lt;p>Pagefind 还提供了&lt;a href='https://pagefind.app/docs/filtering/'
+target='_blank' rel='noreferrer noopener'
+>过滤器&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>功能，十分强大. 针对我这个博客，我则是用它把所有的索引结果打上了所属的 section 的标签，这样一来在展示搜索结果时就可以对文章所属的两级 section 进行展示. 我这个主题在左边栏判断 section 的选中状态（&lt;code>class=&amp;quot;active&amp;quot;&lt;/code>）时就已经写好了相关的逻辑，这里为了代码复用，把原来的逻辑提炼出来，存成两个新的变量（&lt;code>$if_1_on&lt;/code> 和 &lt;code>$if_2_on&lt;/code>）即可.&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">&lt;span class="c">&amp;lt;!-- layouts/_default/baseof.html --&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">{{ range .Site.Menus.main }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{ $if_1_on := 0 }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{ if eq .Identifier (path.Base $currentNode.RelPermalink) |
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> or (eq .Identifier $currentNode.Section) }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{ $if_1_on = 1 }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{ end }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="err">{{&lt;/span> &lt;span class="na">if&lt;/span> &lt;span class="err">$&lt;/span>&lt;span class="na">if_1_on&lt;/span> &lt;span class="err">}}&lt;/span>&lt;span class="na">data-pagefind-filter&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#39;1st-section&amp;#39;&lt;/span>&lt;span class="err">{{&lt;/span> &lt;span class="na">end&lt;/span> &lt;span class="err">}}&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#39;h1 {{ if $if_1_on }}active{{ end }}&amp;#39;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">a&lt;/span> &lt;span class="na">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#39;{{ .URL }}&amp;#39;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>{{ .Name }}&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">a&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{ if .HasChildren }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{ range .Children }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{ if ne .Identifier &amp;#34;&amp;#34; }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{ $if_2_on := 0 }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{ if eq .Identifier (path.Base $currentNode.RelPermalink) |
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> or (eq .Identifier $currentNode.Params.section) }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{ $if_2_on = 1 }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{ end }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="err">{{&lt;/span> &lt;span class="na">if&lt;/span> &lt;span class="err">$&lt;/span>&lt;span class="na">if_2_on&lt;/span> &lt;span class="err">}}&lt;/span>&lt;span class="na">data-pagefind-filter&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#39;2nd-section&amp;#39;&lt;/span>&lt;span class="err">{{&lt;/span> &lt;span class="na">end&lt;/span> &lt;span class="err">}}&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#39;h2 {{ if $if_2_on }}active{{ end }}&amp;#39;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">a&lt;/span> &lt;span class="na">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#39;{{ .URL }}&amp;#39;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>{{ .Name }} &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">a&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{ end }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{ end }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{ end }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">{{end}}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>注意到这里 &lt;code>data-pagefind-filter&lt;/code> 标签并不需要一定在 &lt;code>&amp;lt;body&amp;gt;&lt;/code> 中或 &lt;code>data-pagefind-body&lt;/code> 标签下，所以我能够在这里把它写在左边的导航区，省了不少事儿. 感谢 Pagefind 开发者的周到考虑.&lt;/p>
+&lt;hr>
+&lt;p>Pagefind 还有 &lt;a href='https://pagefind.app/docs/metadata/'
+target='_blank' rel='noreferrer noopener'
+>metadata&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a> 也需要额外配置一下，主要就是文章标题和日期. Pagefind 默认会取第一个 &lt;code>&amp;lt;h1&amp;gt;&lt;/code> 标签作为 metadata 标题，我这个主题中文章标题是单独一个容器，&lt;code>&amp;lt;h1&amp;gt;&lt;/code> 标签并不归文章标题所使用（&lt;code>startLevel&lt;/code> 为 1，&lt;a href='https://gohugo.io/getting-started/configuration-markup/#table-of-contents'
+target='_blank' rel='noreferrer noopener'
+>Hugo 文档&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>），所以这里需要重写；Pagefind 的默认 metadata 中也没有日期字段，这里也给它添加上：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">&lt;span class="c">&amp;lt;!-- layouts/_default/single.html --&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="na">data-pagefind-meta&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;title&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{- .Title -}}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">span&lt;/span> &lt;span class="na">data-pagefind-meta&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;date&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>{{ .Date | time.Format &amp;#34;:date_long&amp;#34; }}&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">span&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>标题那里在双大括号里使用了&lt;a href='https://gohugo.io/templates/introduction/#whitespace'
+target='_blank' rel='noreferrer noopener'
+>短横线&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>，以免取到的题目左右有空格或回车.&lt;/p>
+&lt;hr>
+&lt;p>Pagefind 在索引这件事上还有&lt;a href='https://pagefind.app/docs/multilingual/'
+target='_blank' rel='noreferrer noopener'
+>多语言&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>以及&lt;a href='https://pagefind.app/docs/sorts/'
+target='_blank' rel='noreferrer noopener'
+>搜索顺序&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>可供配置，我这个博客不需要配置这些，它提供的默认选项已经则够好.&lt;/p>
+&lt;h2>搜索&lt;/h2>
+&lt;p>搜索是读者那边的前端交互模块了，Pagefind 自带了一个开箱即用的 Pagefind UI，好看且功能强大，刚开始建站写主题的话可以直接拿过来用. 不过我的前端设计以及交互模式完全是我自己设计的，难以把它这套东西强行塞进去，所以我完全放弃了它提供的这一套 Pagefind UI，转而全都自己写. 好在 Pagefind 也提供了强大的&lt;a href='https://pagefind.app/docs/api/'
+target='_blank' rel='noreferrer noopener'
+>搜索接口&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>，写起来反而是更加容易的.&lt;/p>
+&lt;p>其实这里的[搜索功能的实现]本质上就是定义了下面这个 &lt;code>PagefindSearch(text, canvas)&lt;/code> 函数，它的入参 &lt;code>text&lt;/code> 是读者在搜索框里所打的文字，&lt;code>canvas&lt;/code> 是展示搜索结果的区域，这个函数的功能就是去调用 Pagefind 接口搜索 &lt;code>text&lt;/code> 字段，并将结果渲染到 &lt;code>canvas&lt;/code> 里面. 这段代码只是一个示例，没有详细展示渲染的逻辑，不过其最佳实践仍然是使用 template 技术.&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// main.js
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="kr">async&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="nx">PagefindSearch&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">text&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">canvas&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">const&lt;/span> &lt;span class="nx">pagefind&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kr">await&lt;/span> &lt;span class="kr">import&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;/_pagefind/pagefind.js&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">const&lt;/span> &lt;span class="nx">search&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kr">await&lt;/span> &lt;span class="nx">pagefind&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">search&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">text&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="kr">const&lt;/span> &lt;span class="nx">result&lt;/span> &lt;span class="k">of&lt;/span> &lt;span class="nx">search&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">results&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">let&lt;/span> &lt;span class="nx">result_data&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kr">await&lt;/span> &lt;span class="nx">result&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">data&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">result_data&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// 可以自由发挥来处理 pagefind 返回的结果
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="c1">// 比如想办法渲染到 canvas 这个区域
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;hr>
+&lt;p>前面&lt;a href='https://zerovip.github.io/zh/41675/#%e5%89%8d%e7%ab%af%e5%ae%9e%e7%8e%b0'
+>前端实现&lt;/a>那个小节写过一个 &lt;code>showSearch&lt;/code> 函数，这里稍微扩充一下，以监听用户的输入，并利用&lt;a href='https://schier.co/blog/wait-for-user-to-stop-typing-using-javascript'
+target='_blank' rel='noreferrer noopener'
+>函数防抖（debounce）&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>延迟 600 毫秒把读者的输入传进我们刚刚写的那个 &lt;code>PagefindSearch(text)&lt;/code> 函数中：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// main.js
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="nx">showSearch&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">prefix&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getElementById&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">prefix&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="s2">&amp;#34;_search-zone&amp;#34;&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">classList&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">add&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;search_show&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// 以下为扩充内容
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="kd">let&lt;/span> &lt;span class="nx">search_timeout&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">let&lt;/span> &lt;span class="nx">search_input&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">xxxxxxxx&lt;/span> &lt;span class="c1">// 选中输入框
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="nx">search_input&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">addEventListener&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;keyup&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">e&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">clearTimeout&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">search_timeout&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">search_timeout&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">setTimeout&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">search_input&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">value&lt;/span> &lt;span class="o">!==&lt;/span> &lt;span class="s2">&amp;#34;&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">let&lt;/span> &lt;span class="nx">render_canvas&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">search_input&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">nextElementSibling&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">nextElementSibling&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// 想办法选到 search-results 那个搜索结果展示区域即可
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="nx">PagefindSearch&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">search_input&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">value&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">render_canvas&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span> &lt;span class="mi">600&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">});&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>这样一来，整个前端的搜索工作就也完成了. 这里写得比较简略，实际上还要单独设计搜索结果的展示区域的样式等等.&lt;/p>
+&lt;h2>调试&lt;/h2>
+&lt;p>最后再提一下调试的流程. 因为 Pagefind 是在 Hugo 生成了所有静态文件之后才去建立索引的，所以调试起来稍微有一点麻烦. 每当做了一点改动之后，我会先关掉 Pagefind 自带的 HTTP 服务，删除 &lt;code>public&lt;/code> 文件夹下的所有内容：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">rm -rf ./public/*
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>然后重新生成静态文件：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">hugo
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>最后重新利用 Pagefind 建立索引并开启新的 HTTP 服务：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">./pagefind_extended --serve
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>刷新一下网页（&lt;code>127.0.0.1:1414&lt;/code>），就可以对刚刚修改的内容做个测试了.&lt;/p>
+&lt;p>最后的搜索效果如下：&lt;/p>
+&lt;video width="700" controls>
+&lt;source src="search.mp4" type="video/mp4">
+&lt;/video>
+&lt;h1>其他问题&lt;/h1>
+&lt;p>这里有两个问题也该说明一下. 一是 Pagefind 也是有自己的&lt;a href='https://pagefind.app/docs/config-sources/'
+target='_blank' rel='noreferrer noopener'
+>配置文件&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>的. 像我在终端里可以直接运行 &lt;code>./pagefind_extended&lt;/code> 而不用带 &lt;code>--source public&lt;/code> 这个 flag 就是因为我把 &lt;code>source&lt;/code> 定义在配置文件里面了.&lt;/p>
+&lt;p>二是，引入 Pagefind 所需要的关键模块时使用的语句是 &lt;code>import(&amp;quot;/_pagefind/pagefind.js&amp;quot;);&lt;/code>，而在 Hugo 生成静态文件的过程中，这个模块是不存在的，也就是说，这个 &lt;code>/_pagefind/pagefind.js&lt;/code> 文件是 Pagefind 建立索引时才自动生成的. 这就导致了 Hugo 主题里是没法对 &lt;code>main.js&lt;/code> 做 &lt;a href='https://gohugo.io/hugo-pipes/introduction/#method-aliases'
+target='_blank' rel='noreferrer noopener'
+>minify&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a> 的. 我认为解决办法有二：要么就把 Pagefind 相关的 JavaScript 代码（包含 import 的最小代码单位）单独拿出去独立为一个新的脚本；要么就应该由 Pagefind 项目组考虑到这个问题，release 出一个单独的 &lt;code>pagefind.js&lt;/code> 文件（我自己从生成的文件夹里拷贝也应该可行），放在主题的 &lt;code>assets/&lt;/code> 文件夹里.&lt;/p></description></item><item><title>语言是文化的钥匙</title><link>https://zerovip.github.io/zh/93488/</link><pubDate>Wed, 05 Oct 2022 00:00:00 CST</pubDate><guid isPermaLink="false">/zh/93488/</guid><description>&lt;h1>起因&lt;/h1>
 &lt;p>最近做了一些语言学的奥赛题，对语言产生了一点点思考. 下文将会拿我做过的两道题举例子详细阐述，如果想要做题的话建议在继续阅读之前先去做题，以免被剧透，破坏第一次做题时的美妙体验. 这两道题分别是：&lt;/p>
 &lt;ol>
 &lt;li>&lt;a href='http://www.ioling.org.cn/wp-content/uploads/2018/08/%E3%80%90%E8%AF%95%E9%A2%98%E3%80%912017%E5%85%A8%E5%9B%BD%E8%AF%AD%E8%A8%80%E5%AD%A6%E5%A5%A5%E6%9E%97%E5%8C%B9%E5%85%8B%E7%AB%9E%E8%B5%9B_%E5%86%B3%E8%B5%9B0529.pdf'
@@ -10205,488 +10638,4 @@ target='_blank' rel='noreferrer noopener'
 >【每周一爆】豆瓣读书搜索页的window.__DATA__的解密&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>.&lt;/p>
 &lt;p>最后写好的代码见&lt;a href='https://github.com/zerovip/backup/blob/master/.bin/add_record_execute.py'
 target='_blank' rel='noreferrer noopener'
->这里&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>.&lt;/p></description></item><item><title>bspwm 入门</title><link>https://zerovip.github.io/zh/63233/</link><pubDate>Thu, 10 Jun 2021 00:00:00 CST</pubDate><guid isPermaLink="false">/zh/63233/</guid><description>&lt;div style='background-color:#FDE763;'>
-&lt;p>本文首发于 bilibili：&lt;a href='https://www.bilibili.com/read/cv7417123'
-target='_blank' rel='noreferrer noopener'
->bspwm 入门&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>. 考虑到 b 站的专栏格式非常差，链接不支持、代码格式也不支持. 另外自己写的东西放在一个商业公司的平台上不如放在自己手里，所以在这里也发一份.&lt;/p>
-&lt;/div>
-&lt;p>在&lt;a href='https://www.bilibili.com/video/BV1kZ4y1u7dw'
-target='_blank' rel='noreferrer noopener'
->我之前的视频（BV1kZ4y1u7dw）&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>中我简单介绍了 bspwm 并展示了一些它自带的例子中的功能. 但那个视频只是一个简单介绍，其本质是一个安利，目标观众是使用其他 wm 或不使用 wm 的路人；那么针对被我成功安利决定来体验体验 bspwm 的新用户呢，我决定写这样一篇专栏，帮助大家入门 bspwm. 因此这篇文章的目标读者是&lt;strong>正在使用或准备使用 bspwm 的用户&lt;/strong>，需要的前置知识为&lt;strong>我上个视频中讲到的基本概念&lt;/strong>.&lt;/p>
-&lt;p>在这篇文章中，我会先对之前的视频做一些补充说明；然后我会举三个例子讲解一下怎么写简单的 bspc 语句来实现简单的功能，帮助大家巩固练习阅读文档的能力；接着我会讲一下 bspwm 自带的例子中的其他有趣的东西，包括 rules（规则）、panel（面板） 和 receptacle（容器）等；最后再随便谈点哲学.&lt;/p>
-&lt;p>&lt;span style='background-color:#FDE763;'>这种带高亮的文字是对读者的建议或指示，可以作为练习.&lt;/span>&lt;/p>
-&lt;h1>对之前视频的补充说明&lt;/h1>
-&lt;h2>那个视频是有时效性的，当时所用的版本为 0.9.7&lt;/h2>
-&lt;p>bspwm 是一个正在开发中的软件，因此有一些功能上的调整是非常正常的事，自带的例子有一些变化也是正常的. 比如这一个月过去了，版本号升级到了 0.9.10，我在视频中演示的两个文件 bspwmrc 和 sxhkdrc 分别有了小小的变化（2020.08.31）：&lt;/p>
-&lt;ul>
-&lt;li>bspwmrc 的变化见&lt;a href='https://github.com/baskerville/bspwm/commit/8f41d7989fcb0b62cf756c84b8ad6e3f9c24c31d#diff-1423a51810e9d20b9942a42d927482a1'
-target='_blank' rel='noreferrer noopener'
->这里&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>&lt;/li>
-&lt;li>sxhkdrc 的变化见&lt;a href='https://github.com/baskerville/bspwm/commit/d87e6c0f773e189a3a62b2d066b982b3a4e2bd56#diff-3be5a0247ad88793531ac5fbb8e3acb1'
-target='_blank' rel='noreferrer noopener'
->这里&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;p>这提醒我们：bspwm 是没有默认配置的，任何时候你都可以放心地使用包管理器升级软件而不用担心你设置好的操作发生变化；另一方面，当软件有升级时，我们可以到 GitHub 上去看一看新的提交，看一看这些变化是否适合自己，不错的变化可以同步到自己的配置里. 如果嫌麻烦就一直用最开始配置也没有任何问题.&lt;/p>
-&lt;h2>其他发行版可能有自己的默认配置&lt;/h2>
-&lt;p>这点我不是很确定，但我看 &lt;a href='https://wiki.sparkylinux.org/doku.php/bspwm'
-target='_blank' rel='noreferrer noopener'
->SparkyWiki&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a> 好像就有一些并不是它自带的例子中的配置. 可能有些发行版是做了自己的更改的，请使用其他发行版的用户自己留意一下.&lt;/p>
-&lt;h2>关于登录时启动 bspwm&lt;/h2>
-&lt;p>当时视频里没有细说，但其实很简单. 如果你不使用显示管理器（display manager），比如你使用 xinit 启动 Xorg，那么在 &lt;code>~/.xinitrc&lt;/code> 中写一句 &lt;code>exec bspwm&lt;/code> 就好；如果你使用显示管理器（比如：GDM、LightDM、LXDM、SDDM、XDM、Entrance、Ly、Nodm 之类的），那么只要检查一下有 &lt;code>/usr/share/xsessions/bspwm.desktop&lt;/code> 这样一个路径下的文件就好了，登录时显示管理器就会让你选择了，一般情况下你在安装时安装脚本都会自动帮你把这个文件放好的. （没有的话看&lt;a href='https://github.com/baskerville/bspwm/blob/master/contrib/freedesktop/bspwm.desktop'
-target='_blank' rel='noreferrer noopener'
->这里&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>）&lt;/p>
-&lt;h2>可以参考的其他阅读材料&lt;/h2>
-&lt;p>bspwm 的文档是出了名的难读：它冗长、简练、格式又不是很规范. 因此我们可以参考些别的. 在这里列举一些：&lt;/p>
-&lt;ol>
-&lt;li>GitHub 主页上的 &lt;a href='https://github.com/baskerville/bspwm'
-target='_blank' rel='noreferrer noopener'
->README&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>，就是我在视频中演示 parent、children 和 brother 关系的图时的那个地方. 这份文档在本地也是有的，例如在 Arch Linux 下，它在：&lt;code>/usr/share/doc/bspwm/README.md&lt;/code>.&lt;/li>
-&lt;li>GitHub 上的 &lt;a href='https://github.com/baskerville/bspwm/wiki'
-target='_blank' rel='noreferrer noopener'
->wiki 页&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>，这也是一份“人话”的介绍，目录在右边 Pages 那里，现在它有 5 页，分别是起始页、命令语法的重写、窗口（window）命令的简要介绍、在 fish （另一个 shell）下需要额外注意的地方、窗口规则的属性 flag.&lt;/li>
-&lt;li>&lt;a href='https://wiki.archlinux.org/index.php/Bspwm'
-target='_blank' rel='noreferrer noopener'
->ArchWiki&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>，非常强大的、非常人性化的“人话”说明书！尤其是其中疑难解答的部分非常精华. 最后的 See also 也很有用.&lt;/li>
-&lt;li>&lt;a href='https://wiki.gentoo.org/wiki/Bspwm'
-target='_blank' rel='noreferrer noopener'
->GentooWiki&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>；&lt;a href='https://wiki.voidlinux.org/Bspwm'
-target='_blank' rel='noreferrer noopener'
->VoidLinux wiki&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>，供参考.&lt;/li>
-&lt;li>&lt;a href='https://github.com/baskerville/bspwm/issues'
-target='_blank' rel='noreferrer noopener'
->GitHub Issue 页&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>，可以把浏览 issue（不仅仅是这一个项目的）培养成一个爱好，从中学习解决问题的思路.&lt;/li>
-&lt;li>&lt;a href='https://www.reddit.com/r/bspwm'
-target='_blank' rel='noreferrer noopener'
->reddit 论坛&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>，一个可以经常浏览的交流平台.&lt;/li>
-&lt;li>Angad Sharma，&lt;a href='https://dev.to/l04db4l4nc3r/bspwm-a-bare-bones-window-manager-44di'
-target='_blank' rel='noreferrer noopener'
->Bspwm: A Bare-Bones Window Manager&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>，一个很系统的教学，带着读者安装，一边写一点配置一边简单讲一讲，还包括了使用 nitrogen 更换壁纸、使用 compton 增加透明效果、polybar 的部分，以及我的视频没有讲到的：怎么用 bspc 写 node 和 window 的动作指令，四种布局方案（自动、手动、长边、螺旋），怎么写脚本切换这四种方案. 这是一份非常有用、写得非常好的、非常好理解的、全面的、系统的教程，非常建议阅读.&lt;/li>
-&lt;li>&lt;a href='http://thedarnedestthing.com/bspwm'
-target='_blank' rel='noreferrer noopener'
->The Darnedest Thing&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>，2015 年的一篇文章，有点年头了，写得不系统，可作为课外读物.&lt;/li>
-&lt;li>My Take on Tech，&lt;a href='https://my-take-on.tech/2020/07/03/some-tricks-for-sxhkd-and-bspwm/'
-target='_blank' rel='noreferrer noopener'
->Some Tricks For sxhkd (and bspwm)&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>，和上面的一样，基础的东西默认你是知道的，有阅读门槛，不系统，作为课外读物会非常非常有帮助，你绝对能从中有所收获和启发.&lt;/li>
-&lt;li>&lt;strong>最最重要的一点，好好利用搜索引擎.&lt;/strong> bspwm 有其他 wm 所不具备的一个优势就是它的名字非常有辨识度（对比 awesome 这种常用的英文形容词），因此只要你在搜索引擎中简单地打出 “bspwm” 五个字母，你就能完美命中你想找的东西，在 google、bing 甚至百度，在 YouTube 搜索栏，在 GitHub 搜索栏，在任何一个论坛的搜索栏…… 没事的时候搜索一下，说不定又有新出炉的、说人话的好文章.&lt;/li>
-&lt;/ol>
-&lt;h1>bspc 语句&lt;/h1>
-&lt;p>&lt;span style='background-color:#FDE763;'>强烈建议阅读我在 &lt;strong>1.4 小节&lt;/strong> 中列举的第 &lt;strong>7&lt;/strong> 个参考材料中 The bspwm client 部分，尤其是其中的前两小节，即 Node Actions（节点操作）和 Window State Actions（窗口状态操作）.&lt;/span>&lt;/p>
-&lt;p>这里讲三个例子，来帮助大家巩固练习阅读文档的流程，因为我上一个视频的后半部分只讲了理论，没有演示实践，这里补一下.&lt;/p>
-&lt;h2>例一：旋转&lt;/h2>
-&lt;p>有这样一个需求：我们想把某个节点下的两个 children 窗口旋转一下，如果它是上下平分的我想把它旋转成左右平分，如果是左右平分的我想把它旋转成上下平分. 这是自带的例子中所没有的，怎么办呢？&lt;/p>
-&lt;p>我们在谷歌中以关键词 “bspwm rotate windows” 搜索一下，能找到&lt;a href='https://www.reddit.com/r/bspwm/comments/4ih2o5/rotating_windows_split_orientation/d2y1cj0'
-target='_blank' rel='noreferrer noopener'
->一个 reddit 上的帖子&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>，它里面有一个网友表示可以用 &lt;code>bspc node @/ -R 90&lt;/code> 来旋转整个桌面下的所有窗口，或者通过 &lt;code>bspc node -f @parent&lt;/code> 选择当前焦点的 parent 节点，然后再用 &lt;code>bspc node -R 90&lt;/code> 来旋转. 在终端里按照他给的方法执行一下，我们发现是可以满足需求的. （注意：当执行了 &lt;code>bspc node -f @parent&lt;/code> 后焦点同时含有了多个窗口，这时鼠标在哪个窗口，真正的焦点就在哪个窗口. ）&lt;/p>
-&lt;p>我们往 sxhkdrc 中给这些操作绑定上快捷键：&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;span class="lnt">2
-&lt;/span>&lt;span class="lnt">3
-&lt;/span>&lt;span class="lnt">4
-&lt;/span>&lt;span class="lnt">5
-&lt;/span>&lt;span class="lnt">6
-&lt;/span>&lt;span class="lnt">7
-&lt;/span>&lt;span class="lnt">8
-&lt;/span>&lt;span class="lnt">9
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># .config/sxhkd/sxhkdrc&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># rotate the whole desktop&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">super + &lt;span class="nb">shift&lt;/span> + r
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> bspc node @/ -R &lt;span class="m">90&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># rotate the parent of current focused&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">super + r
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> bspc node -f @parent&lt;span class="p">;&lt;/span> &lt;span class="se">\
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> bspc node -R &lt;span class="m">90&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>然后重新载入这份配置后一试——就发现了一个 bug：&lt;code>super + r&lt;/code> 的两条指令结束后焦点内含有两个窗口，如果重复执行 super + r ，焦点中的窗口会越来越多，参与旋转的窗口也越来越多.&lt;/p>
-&lt;p>为了解决这个问题，我们来看看这三条指令具体是什么意思. 看上去对于旋转来说最重要的应该是 &lt;code>-R&lt;/code> 命令，我们 &lt;code>man bspwm&lt;/code> 打开文档（在线文档在&lt;a href='https://github.com/baskerville/bspwm/blob/master/doc/bspwm.1.asciidoc'
-target='_blank' rel='noreferrer noopener'
->这里&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>），使用 / 键搜索 -R，可以看到这样两行：&lt;/p>
-&lt;blockquote>
-&lt;p>&lt;code>-R, --rotate 90|270|180&lt;/code>&lt;/p>
-&lt;p>Rotate the tree rooted at the selected node.&lt;/p>
-&lt;/blockquote>
-&lt;p>从这里开始上下翻一翻，看一看这两行在整个文档中处于一个什么样的位置，它的上下文语境是什么样的. 我们把整份文档简化成这种样子：&lt;/p>
-&lt;p>&lt;figure>
-&lt;img loading='lazy' src='https://zerovip.github.io/zh/63233/bspwm-manpage.i.png' alt='BSPWM(1) 文档大纲'/>
-&lt;figcaption>◉ 图. BSPWM(1) 文档大纲&lt;/figcaption>
-&lt;/figure>
-&lt;/p>
-&lt;p>可以看到 &lt;code>-R&lt;/code> 是一个 node 指令中的 &lt;code>COMMAND&lt;/code> 部分，node 指令的通用的格式（General Syntax）为（见上面大纲图中第 20 行）：&lt;code>node [NODE_SEL] COMMANDS&lt;/code>. 我在上一个视频中讲过，&lt;code>node&lt;/code> 是小写字母，是终结符，是必须有的而且不能替换的. 后面的 &lt;code>[NODE_SEL]&lt;/code> 和 &lt;code>COMMANDS&lt;/code> 都是非终结符，要进行替换.&lt;/p>
-&lt;p>先说 &lt;code>[NODE_SEL]&lt;/code>，它的含义很好理解：select a node，即这是一个节点选择器（node selector），我们在这个位置要选择一个用来执行后面 &lt;code>COMMAND&lt;/code> 的对象节点. 它被一对中括号括起来，表示 &lt;code>NODE_SEL&lt;/code> 是可选的. 从 reddit 网友给出的三条 node 指令中确实能看出它是可选的：指令 &lt;code>bspc node @/ -R 90&lt;/code> 中含有 &lt;code>NODE_SEL&lt;/code> ，并且在这个指令中将其替换为了 &lt;code>@/&lt;/code> ；而指令 &lt;code>bspc node -f @parent&lt;/code> 和指令 &lt;code>bspc node -R 90&lt;/code> 中就不含有 &lt;code>NODE_SEL&lt;/code>. 再读一下文档：If &lt;code>NODE_SEL&lt;/code> is omitted, focused is assumed，意思是如果不含有 &lt;code>NODE_SEL&lt;/code>，就默认把当前的焦点窗口作为后面 &lt;code>COMMAND&lt;/code> 的对象节点.&lt;/p>
-&lt;p>再说后面的 &lt;code>COMMANDS&lt;/code>，它没有被中括号括起来，说明它是必写的，而且它也是非终结符，需要进行替换，下面列出了 &lt;code>COMMANDS&lt;/code> 可以被替换成哪些东西，一共有 22 种可能性，而且每种的格式和说明也都写得很详细，reddit 网友给出的三条指令中，两条 &lt;code>-R&lt;/code> 和一条 &lt;code>-f&lt;/code> 都在其中，我也把这两条列在了上面的大纲里（见上面大纲图中第 22 - 23 行）. 在这里只带着大家看一下 &lt;code>-R&lt;/code> 命令，也就是我们最开始搜索 &lt;code>-R&lt;/code> 时看到的那两行：&lt;/p>
-&lt;blockquote>
-&lt;p>&lt;code>-R, --rotate 90|270|180&lt;/code>&lt;/p>
-&lt;p>Rotate the tree rooted at the selected node.&lt;/p>
-&lt;/blockquote>
-&lt;p>如果想用 &lt;code>-R&lt;/code> 的话，它的格式是：把 &lt;code>COMMANDS&lt;/code> 替换为 &lt;code>-R 90&lt;/code> 或 &lt;code>-R 270&lt;/code> 或 &lt;code>-R 180&lt;/code> 三选一，含义分别是：以刚刚选择的 &lt;code>NODE_SEL&lt;/code> 节点为根，对它下面的所有子树进行顺时针 90 或 270 或 180 度的旋转.&lt;/p>
-&lt;p>剩下的问题就是 &lt;code>NODE_SEL&lt;/code> 到底能替换成什么了，它的语法格式是怎么样的. 我们在这几行附近并没有看到说明，那就再用 / 键搜索 &lt;code>NODE_SEL&lt;/code>，就找到了我上个视频的结尾处仔细分析过的一大串语法格式（见上面大纲图中第 10 行）：&lt;/p>
-&lt;blockquote>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">NODE_SEL := [NODE_SEL#](DIR|CYCLE_DIR|PATH|any|first_ancestor|last|newest|
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> older|newer|focused|pointed|biggest|smallest|
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;lt;node_id&amp;gt;)[.[!]focused][.[!]active][.[!]automatic][.[!]local]
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> [.[!]leaf][.[!]window][.[!]STATE][.[!]FLAG][.[!]LAYER][.[!]SPLIT_TYPE]
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> [.[!]same_class][.[!]descendant_of][.[!]ancestor_of]
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/blockquote>
-&lt;p>网友给出的 &lt;code>@/&lt;/code> 是怎么来的呢？它表示什么意思呢？&lt;/p>
-&lt;ul>
-&lt;li>第一步：不选前面的 &lt;code>NODE_SEL#&lt;/code>；也不选后面的一大堆中括号里的东西；小括号里的 13 选 1 选择 &lt;code>PATH&lt;/code>. 现在 &lt;code>NODE_SEL&lt;/code> 被替换变成了 &lt;code>PATH&lt;/code>.&lt;/li>
-&lt;li>第二步：查找下面 &lt;code>PATH&lt;/code> 的定义，也就是：&lt;code>PATH := @[DESKTOP_SEL:][[/]JUMP](/JUMP)*&lt;/code>. 这里 &lt;code>@&lt;/code> 必选，第二个 &lt;code>DESKTOP_SEL&lt;/code>: 不选，第三个 &lt;code>[[/]JUMP]&lt;/code> 选 &lt;code>/JUMP&lt;/code>，后面的 &lt;code>(/JUMP)*&lt;/code> 选 0 个. 现在 &lt;code>PATH&lt;/code> 被替换变成了 &lt;code>@/JUMP&lt;/code>.&lt;/li>
-&lt;li>第三步：查找下面 &lt;code>JUMP&lt;/code> 的定义，也就是：&lt;code>JUMP := first|1|second|2|brother|parent|DIR&lt;/code>. 这按理来说是一个 7 选 1，但是注意，这是这个文档写得不太规范的一个地方，在 Path Jumps 的描述中我们看到这样一句话：&lt;/li>
-&lt;/ul>
-&lt;blockquote>
-&lt;p>The initial node is the focused node (or the root if the path starts with /) of the reference desktop (or the selected desktop if the path has a DESKTOP_SEL prefix).&lt;/p>
-&lt;/blockquote>
-&lt;p>这就把第二步中 &lt;code>PATH&lt;/code> 的含义解释清楚了. 我们想通过一些路径来选择我们想要的节点，这大体上可以类比在微软 windows 系统中选择一个文件：先指定一个盘符，是 C 盘还是 D 盘，再进行路径的跳转，也就是打开一个文件夹再打开一个文件夹；这里是用 &lt;code>@[DESKTOP_SEL:]&lt;/code> 先指定桌面（不写 &lt;code>DESKTOP_SEL&lt;/code> 就是指定当前桌面），再用 &lt;code>JUMP&lt;/code> 进行跳转，需要多次跳转的话后面就再写好多个 &lt;code>/JUMP&lt;/code>. 那么只有一个 &lt;code>/&lt;/code> 就表示选择了根节点，不再进行跳转了——这当然也是可以的，就好比我打开 C 盘后就停止了，不再打开下面的文件夹了. 所以我们这里 &lt;code>JUMP&lt;/code> 就取空值，表示不再跳转，这是 7 选 1 之外的做法，显然是不符合 BNF 语法规范的.&lt;/p>
-&lt;p>无论如何，我们用 &lt;code>@/&lt;/code> 就选择了当前桌面的根节点，也就是当前桌面下的所有窗口，对它执行 &lt;code>-R&lt;/code> 就完成了对当前桌面的所有窗口执行旋转操作，整条语句就是网友给出的 &lt;code>bspc node @/ -R 90&lt;/code>.&lt;/p>
-&lt;p>那么同理，我们可以精确地选择当前节点的 parent 节点，即用 &lt;code>@parent&lt;/code> 替换 &lt;code>NODE_SEL&lt;/code>. 具体的流程为：&lt;code>NODE_SEL&lt;/code> 替换为 &lt;code>PATH&lt;/code>，&lt;code>PATH&lt;/code> 替换成 &lt;code>@JUMP&lt;/code>（不选 &lt;code>DESKTOP_SEL&lt;/code> 表示当前桌面；不选 &lt;code>/&lt;/code> 表示初始节点从当前焦点所在的节点开始，而不是从当前桌面的根节点开始），&lt;code>JUMP&lt;/code> 7 选 1 替换成 &lt;code>parent&lt;/code>. 整条语句就变成了 &lt;code>bspc node @parent -R 90&lt;/code>.&lt;/p>
-&lt;p>最后我们就可以写出我们想要的代码了：&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;span class="lnt">2
-&lt;/span>&lt;span class="lnt">3
-&lt;/span>&lt;span class="lnt">4
-&lt;/span>&lt;span class="lnt">5
-&lt;/span>&lt;span class="lnt">6
-&lt;/span>&lt;span class="lnt">7
-&lt;/span>&lt;span class="lnt">8
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># .config/sxhkd/sxhkdrc&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># rotate the whole desktop&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">super + &lt;span class="nb">shift&lt;/span> + r
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> bspc node @/ -R &lt;span class="m">90&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># rotate the parent of current focused&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">super + r
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> bspc node @parent -R &lt;span class="m">90&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>还记得我们用两条语句完成 super + r 时的 bug 么？&lt;span style='background-color:#FDE763;'>请读者们仿照我讲解的流程自行对照文档理解 reddit 网友给的指令中 -f 的含义，并尝试直接解决这个 bug.&lt;/span>&lt;/p>
-&lt;p>&lt;strong>这个例子我讲得比较细致，但希望读者朋友们能耐心搞明白它，作为阅读文档的实践练习. 这个搞明白了，就没有不会读的文档了.&lt;/strong>&lt;/p>
-&lt;h2>例二：隐藏&lt;/h2>
-&lt;p>有时我们想实现类似最小化的功能，这需要用到 bspwm 的隐藏. 这也是自带的例子中没有的，怎么办呢？&lt;/p>
-&lt;p>这里就直接揭晓答案了，在 &lt;strong>1.4 小节&lt;/strong>中列举的第 &lt;strong>4&lt;/strong> 个参考材料，即 GentooWiki 中就有这个功能的实现：见&lt;a href='https://wiki.gentoo.org/wiki/Bspwm#Hide.2FShow_windows'
-target='_blank' rel='noreferrer noopener'
->这里&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>.&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;span class="lnt">2
-&lt;/span>&lt;span class="lnt">3
-&lt;/span>&lt;span class="lnt">4
-&lt;/span>&lt;span class="lnt">5
-&lt;/span>&lt;span class="lnt">6
-&lt;/span>&lt;span class="lnt">7
-&lt;/span>&lt;span class="lnt">8
-&lt;/span>&lt;span class="lnt">9
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># .config/sxhkd/sxhkdrc&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># hide window&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">super + v
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> bspc node -g hidden
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># unhide window&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">super + &lt;span class="nb">shift&lt;/span> + v
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> bspc node &lt;span class="o">{&lt;/span>,&lt;span class="k">$(&lt;/span>bspc query -N -n .hidden &lt;span class="p">|&lt;/span> tail -n1&lt;span class="k">)&lt;/span>&lt;span class="o">}&lt;/span> -g &lt;span class="nv">hidden&lt;/span>&lt;span class="o">=&lt;/span>off
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>&lt;span style='background-color:#FDE763;'>请读者们用类似例一中的工作流程对照文档理解一下其中的 &lt;code>-g&lt;/code> 命令，更关键地，请大家自己学习理解 &lt;code>bspc query&lt;/code> 命令，把这两行完完全全搞明白. 如果你对 Linux 基础命令不熟悉，可能也要简单地学习一下，比如关于管道的知识、 &lt;code>tail&lt;/code> 的用法等.&lt;/span>&lt;/p>
-&lt;p>一个问题：最后一行的那个大括号有必要么？直接使用 &lt;code>bspc node $(bspc query -N -n .hidden | tail -n1) -g hidden=off&lt;/code> 可以么？&lt;/p>
-&lt;h2>例三：把焦点从平铺窗口移动到浮动窗口&lt;/h2>
-&lt;p>这是一位观众咨询我的问题：当焦点在平铺窗口上时，按 super + h/j/k/l 是不能移动焦点到浮动窗口上的，使用 super + c/o/i 之类的并不能让他满意，怎么办呢？自己写就好了.&lt;/p>
-&lt;p>如果读者们在上面两个例子中按照我最后的高亮字体进行了阅读学习，那么你现在一定对 &lt;code>bspc query&lt;/code> 和 &lt;code>bspc node -f&lt;/code> 有了一定的认识. 这样的话，你目前的知识就足够解决这个问题了，不妨先自己试一试. 当然如果你对 shell 脚本语言不熟悉也要临时学一点点，比如可以到&lt;a href='https://www.runoob.com/linux/linux-shell.html'
-target='_blank' rel='noreferrer noopener'
->菜鸟教程&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>这里看一看，解决这个问题需要用到 shell 流程控制请看&lt;a href='https://www.runoob.com/linux/linux-shell-process-control.html'
-target='_blank' rel='noreferrer noopener'
->这里&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>.&lt;/p>
-&lt;p>这是我写的方法，仅供参考：&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;span class="lnt">2
-&lt;/span>&lt;span class="lnt">3
-&lt;/span>&lt;span class="lnt">4
-&lt;/span>&lt;span class="lnt">5
-&lt;/span>&lt;span class="lnt">6
-&lt;/span>&lt;span class="lnt">7
-&lt;/span>&lt;span class="lnt">8
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># .config/sxhkd/sxhkdrc&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># focus a floating window from a tiled window&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">super + a
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="o">[&lt;/span> &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="k">$(&lt;/span>bspc query -N -n focused.floating&lt;span class="k">)&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span> &lt;span class="o">]&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="k">then&lt;/span> &lt;span class="se">\
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> bspc node -f last.tiled.local&lt;span class="p">;&lt;/span> &lt;span class="se">\
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="se">\
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> bspc node -f last.floating.local&lt;span class="p">;&lt;/span> &lt;span class="se">\
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> &lt;span class="k">fi&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>希望大家能从这个例子中理解 &lt;code>NODE_SEL&lt;/code> 后面那一大堆中括号的作用，叹号是表示取否定哦~&lt;/p>
-&lt;h2>一个小技巧&lt;/h2>
-&lt;p>分享一个我经常用的、很多人可能会忽视的、能快速帮你梳理文档结构的一个小技巧，那就是把自动补全打开，然后经常按按 tab 键. 比如打下 bspc ，按一下 tab 键会出现 9 个候选的 command 或 domain，然后随便选一个比如 bspc node，再按一下 tab 键，等等.&lt;/p>
-&lt;p>&lt;figure>
-&lt;img loading='lazy' src='https://zerovip.github.io/zh/63233/bspc_trick1.png' alt='补全小技巧的示意效果图：bspc &amp;lt;TAB&amp;gt;'/>
-&lt;figcaption>◉ 图. 补全小技巧的示意效果图：bspc &amp;lt;TAB&amp;gt;&lt;/figcaption>
-&lt;/figure>
-&lt;figure>
-&lt;img loading='lazy' src='https://zerovip.github.io/zh/63233/bspc_trick2.png' alt='补全小技巧的示意效果图：bspc node &amp;lt;TAB&amp;gt;'/>
-&lt;figcaption>◉ 图. 补全小技巧的示意效果图：bspc node &amp;lt;TAB&amp;gt;&lt;/figcaption>
-&lt;/figure>
-&lt;figure>
-&lt;img loading='lazy' src='https://zerovip.github.io/zh/63233/bspc_trick3.png' alt='补全小技巧的示意效果图：bspc node &amp;lt;TAB&amp;gt;&amp;lt;TAB&amp;gt;'/>
-&lt;figcaption>◉ 图. 补全小技巧的示意效果图：bspc node &amp;lt;TAB&amp;gt;&amp;lt;TAB&amp;gt;&lt;/figcaption>
-&lt;/figure>
-&lt;/p>
-&lt;p>上面三张图展示的是我的 zsh 补全效果，bash 或 fish 也都是有的，安装 bspwm 时安装脚本应该会把它们处理好，一般情况下打开补全就能用了. 如果没有的话可以自己弄，以我的 Arch Linux 为例，补全脚本分别在这里：&lt;/p>
-&lt;ul>
-&lt;li>zsh. 本地：&lt;code>/usr/share/zsh/site-functions/_bspc&lt;/code>；&lt;a href='https://github.com/baskerville/bspwm/blob/master/contrib/zsh_completion'
-target='_blank' rel='noreferrer noopener'
->项目中&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>.&lt;/li>
-&lt;li>bash. 本地：&lt;code>/usr/share/bash-completion/completions/bspc&lt;/code>；&lt;a href='https://github.com/baskerville/bspwm/blob/master/contrib/bash_completion'
-target='_blank' rel='noreferrer noopener'
->项目中&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>.&lt;/li>
-&lt;li>fish. 本地：&lt;code>/usr/share/fish/vendor_completions.d/bspc.fish&lt;/code>；&lt;a href='https://github.com/baskerville/bspwm/blob/master/contrib/fish_completion'
-target='_blank' rel='noreferrer noopener'
->项目中&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>.&lt;/li>
-&lt;/ul>
-&lt;p>看代码量的话好像 bash 和 fish 不如 zsh 的补全代码多，不知道使用起来能不能达到我上面截图中 zsh 的补全效果.&lt;/p>
-&lt;h1>添加规则的两种方式&lt;/h1>
-&lt;h2>内建 rule 指令&lt;/h2>
-&lt;p>&lt;span style='background-color:#FDE763;'>建议详细阅读我在 &lt;strong>1.4 小节&lt;/strong>中列举的&lt;a href='https://dev.to/l04db4l4nc3r/bspwm-a-bare-bones-window-manager-44di'
-target='_blank' rel='noreferrer noopener'
->第 &lt;strong>7&lt;/strong> 个参考材料&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>中 The bspwm client 部分的第三小节：Window Rules，搞明白规则是用来干什么的，并学习用 &lt;code>xprop&lt;/code> 命令查询一个程序窗口的 WM_CLASS.&lt;/span>&lt;/p>
-&lt;p>关于规则的部分，文档里也只有寥寥不到 15 行的东西，只有 &lt;code>-a&lt;/code>、&lt;code>-r&lt;/code>、&lt;code>-l&lt;/code> 三个 &lt;code>COMMANDS&lt;/code>，而且基本上只用得到 &lt;code>-a&lt;/code> 这一个，非常好读. &lt;span style='background-color:#FDE763;'>建议 &lt;code>man bspwm&lt;/code> 后用 / 键搜索 Rule 进行阅读.&lt;/span> 它的位置在上面的大纲中也能看到，Rule 是作为一个 &lt;code>DOMAIN&lt;/code> 出现的.&lt;/p>
-&lt;p>关于规则指令后面可以加的属性（&lt;code>[(hidden|sticky|private|locked|marked|center|follow|manage|focus|border)=(on|off)]&lt;/code>）可以参考我在 &lt;strong>1.4 小节&lt;/strong>中列举的&lt;a href='https://github.com/baskerville/bspwm/wiki/window-rules---attribute-flags'
-target='_blank' rel='noreferrer noopener'
->第 &lt;strong>2&lt;/strong> 个参考材料即 GitHub 上的 wiki&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a> 中的 window rules attribute flags. 现在一共有 10 个是可以使用的，它们的意思是非常好理解的，我在上一个视频中也有讲到.&lt;/p>
-&lt;h2>external rules&lt;/h2>
-&lt;p>在 &lt;strong>1.4 小节&lt;/strong>中列举的&lt;a href='https://wiki.archlinux.org/index.php/Bspwm#Rules'
-target='_blank' rel='noreferrer noopener'
->第 &lt;strong>3&lt;/strong> 个参考材料也就是 Arch Wiki&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a> 中有一小节是关于规则的说明，它说 external rules （外部的规则）写起来更复杂，但也能处理更复杂的窗口规则（This is more complex, but can allow you to craft more complex window rules），并说我们可以看一下例子中的写法，除此以外就没有说更多了. 这是对新手入门十分不友好的，而且除此以外，在网上也找不到更全面的介绍了，那我们就来自己动手丰衣足食吧！&lt;/p>
-&lt;p>在线的例子在&lt;a href='https://github.com/baskerville/bspwm/tree/master/examples/external_rules'
-target='_blank' rel='noreferrer noopener'
->这里&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>；本地也是有的：&lt;code>/usr/share/doc/bspwm/examples/external_rules&lt;/code>. 里面有两个文件，分别是 bspwmrc 和 external_rules，我们对 bspwmrc 更熟悉，我们先打开它.&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;span class="lnt">2
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#! /bin/sh
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>bspc config external_rules_command &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="k">$(&lt;/span>which external_rules&lt;span class="k">)&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>里面只有一行，但有个 &lt;code>external_rules_command&lt;/code> 是我们不理解的，&lt;code>man bspwm&lt;/code> 打开文档，用 / 键搜索一下 &lt;code>external_rules_command&lt;/code>，找到它在文档中的位置，是位于 &lt;code>SETTINGS&lt;/code> 里面的 &lt;code>Globle Settings&lt;/code>，看上下文，和它平等地位的还有我们在上个视频中讲到的 &lt;code>normal_border_color&lt;/code>、&lt;code>focused_border_color&lt;/code>、自带的 bspwmrc 例子中有的 &lt;code>split_ratio&lt;/code>、&lt;code>borderless_monocle&lt;/code>、&lt;code>gapless_monocle&lt;/code> 等，这下我们心里就有底了，我们可以把这一行复制到 &lt;code>~/.config/bspwm/bspwmrc&lt;/code> 中，就像我们在上个视频中改边框颜色一样. 现在我们静下心来读一读文档中对 external_rules_command 的解释：&lt;/p>
-&lt;blockquote>
-&lt;p>Absolute path to the command used to retrieve rule consequences. The command will receive the following arguments: window ID, class name, instance name, and intermediate consequences. The output of that command must have the following format: key1=value1 key2=value2 &amp;hellip; (the valid key/value pairs are given in the description of the rule command).&lt;/p>
-&lt;p>（一个命令的绝对路径，这个命令是用来查找规则结果的. 这个命令要接收如下的参数：window ID、class name、instance name、intermediate consequences. 这个命令的输出结果必须是键值对的格式，合法的键值对在 rule 命令的描述中给出. ）&lt;/p>
-&lt;/blockquote>
-&lt;p>如果在上一节中你按照我的指示去读了文档中关于 Rule 的部分那不到 15 行的内容，那你现在看到它最后一句说的键值对时一定能够会心一笑了.&lt;/p>
-&lt;p>现在我们知道了这短短的一行 &lt;code>bspc config&lt;/code> 语句中最后的 &lt;code>&amp;quot;$(which external_rules)&amp;quot;&lt;/code> 就是这里说的绝对路径了，再结合我们对 Linux 基本语句 &lt;code>which&lt;/code> 的知识，我们就明白了另一份文件 external_rules 一定是一份脚本文件，而且要把它加到环境变量中以便我们能直接调用它，就像使用 &lt;code>ls&lt;/code>、&lt;code>cd&lt;/code> 一样直接使用 &lt;code>external_rules&lt;/code> 作为一个命令，而且这个命令必须带四个参数，输出必须是键值对.&lt;/p>
-&lt;div style='background-color:#FDE763;'>
-&lt;p>写自己的命令的方法：&lt;/p>
-&lt;p>（这一段是 Linux 使用基础中的基础，因为 Linux 的灵魂就是自己写脚本，如果你连这都不知道的话，就要加强 Linux 基础知识的学习了）&lt;/p>
-&lt;p>完成这件事有很多种做法，我个人的做法是建一个 &lt;code>~/.bin/&lt;/code> 文件夹，然后在里面写脚本，shell 脚本也行，python 脚本也行，比如：&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;span class="lnt">2
-&lt;/span>&lt;span class="lnt">3
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="ch">#!/usr/bin/env python &lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># ~/.bin/hello-world &lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;hello!&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>然后别忘了每次启动时把它自动加载到环境变量中：&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;span class="lnt">2
-&lt;/span>&lt;span class="lnt">3
-&lt;/span>&lt;span class="lnt">4
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># .xprofile or .xinitrc or .zprofile or …… &lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">if&lt;/span> &lt;span class="o">[&lt;/span> -d &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="nv">$HOME&lt;/span>&lt;span class="s2">/.bin&amp;#34;&lt;/span> &lt;span class="o">]&lt;/span> &lt;span class="p">;&lt;/span> &lt;span class="k">then&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">PATH&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="nv">$HOME&lt;/span>&lt;span class="s2">/.bin:&lt;/span>&lt;span class="nv">$PATH&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">fi&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>这样就能在终端中像执行 &lt;code>ls&lt;/code> 一样执行 &lt;code>hello-world&lt;/code> 了.&lt;/p>
-&lt;/div>
-&lt;p>带着这些认识，我们打开 external_rules 看一看：&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
-&lt;/span>&lt;span class="lnt"> 2
-&lt;/span>&lt;span class="lnt"> 3
-&lt;/span>&lt;span class="lnt"> 4
-&lt;/span>&lt;span class="lnt"> 5
-&lt;/span>&lt;span class="lnt"> 6
-&lt;/span>&lt;span class="lnt"> 7
-&lt;/span>&lt;span class="lnt"> 8
-&lt;/span>&lt;span class="lnt"> 9
-&lt;/span>&lt;span class="lnt">10
-&lt;/span>&lt;span class="lnt">11
-&lt;/span>&lt;span class="lnt">12
-&lt;/span>&lt;span class="lnt">13
-&lt;/span>&lt;span class="lnt">14
-&lt;/span>&lt;span class="lnt">15
-&lt;/span>&lt;span class="lnt">16
-&lt;/span>&lt;span class="lnt">17
-&lt;/span>&lt;span class="lnt">18
-&lt;/span>&lt;span class="lnt">19
-&lt;/span>&lt;span class="lnt">20
-&lt;/span>&lt;span class="lnt">21
-&lt;/span>&lt;span class="lnt">22
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#! /bin/sh
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">wid&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="nv">$1&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="nv">$2&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">instance&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="nv">$3&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">consequences&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="nv">$4&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">if&lt;/span> &lt;span class="o">[&lt;/span> &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="nv">$instance&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span> &lt;span class="o">=&lt;/span> fontforge &lt;span class="o">]&lt;/span> &lt;span class="p">;&lt;/span> &lt;span class="k">then&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">title&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="k">$(&lt;/span>xtitle &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="nv">$wid&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="k">)&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">case&lt;/span> &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="nv">$title&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span> in
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Layers&lt;span class="p">|&lt;/span>Tools&lt;span class="p">|&lt;/span>Warning&lt;span class="o">)&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;focus=off&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">;;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">esac&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">fi&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">case&lt;/span> &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="nv">$class&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span> in
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Lutris&lt;span class="p">|&lt;/span>Liferea&lt;span class="o">)&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">eval&lt;/span> &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="nv">$consequences&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">[&lt;/span> &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="nv">$state&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span> &lt;span class="o">]&lt;/span> &lt;span class="o">||&lt;/span> &lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;state=pseudo_tiled&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">;;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">esac&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>（如果不会读 shell 语句，一定要自己去学习一下啊！在这里最起码得读得懂中括号、case 语句、eval 语句、双竖线才行. ）&lt;/p>
-&lt;p>可以看到，和我们预想的一样，这是一份脚本，分为三个段落，第一段是接收四个参数，这没什么好说的；第二段是在第 3 个参数 instance name 是 fontforge 的情况下，通过 window ID 获取 window 的 title（标题），并对 title 的三种可能情况返回了一组键值对；第三段对 class name 的两种情况执行了第四个参数，并在 $state 变量为空时返回另一组键值对.&lt;/p>
-&lt;p>如果你认真阅读了这 22 行代码，你首先产生的一个疑问一定会是：xtitle （第 9 行）是什么命令？我们在搜索引擎中以“xtitle”为关键词进行搜索，发现了这样一个工具：&lt;a href='https://github.com/baskerville/xtitle'
-target='_blank' rel='noreferrer noopener'
->baskerville/xtitle&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>. 注意到这个工具的作者了么？他 GitHub 的用户名是 baskerville 哎！这不正是 bspwm 的作者么？！这下就不奇怪了吧，这个作者写的 bspwm 自带的例子中的 external rules 里含有另一个他写的小工具！就像 bspwm 需要用到的快捷键精灵 sxhkd 一样，sxhkd 也是他专门为 bspwm 写的呢！这个 xtitle 并不在 Arch Linux 的官方源中，我们需要自行编译它. 不过 Arch Linux 的 &lt;a href='https://aur.archlinux.org/packages/xtitle/'
-target='_blank' rel='noreferrer noopener'
->AUR 里是有的&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>，我就直接从这上面克隆然后 makepkg 一下了.&lt;/p>
-&lt;p>把每条语句都理解清楚以后我们还是对这份文件本身一头雾水：这个脚本由谁来执行？什么时候执行？怎么执行？执行的时候怎么传递参数？那四个参数（window ID、class name、instance name、intermediate consequences）是什么？谁来决定？&lt;code>fontforge&lt;/code>、&lt;code>Layers|Tools|Warning&lt;/code>、&lt;code>Lutris|Liferea&lt;/code> 这些都是什么意思？哪些程序的窗口会是这样的标题？&lt;/p>
-&lt;p>别急，我们来试验一番. 这里我们并不采用上面提到的环境变量的方法，我们直接在 .config/bspwm/bspwmrc 中的最后一行加上：&lt;code>bspc config external_rules_command &amp;quot;${HOME}/.config/bspwm/try_e_r&amp;quot;&lt;/code>，并用类似 external_rules 的格式创建 try_e_r 文件：&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
-&lt;/span>&lt;span class="lnt"> 2
-&lt;/span>&lt;span class="lnt"> 3
-&lt;/span>&lt;span class="lnt"> 4
-&lt;/span>&lt;span class="lnt"> 5
-&lt;/span>&lt;span class="lnt"> 6
-&lt;/span>&lt;span class="lnt"> 7
-&lt;/span>&lt;span class="lnt"> 8
-&lt;/span>&lt;span class="lnt"> 9
-&lt;/span>&lt;span class="lnt">10
-&lt;/span>&lt;span class="lnt">11
-&lt;/span>&lt;span class="lnt">12
-&lt;/span>&lt;span class="lnt">13
-&lt;/span>&lt;span class="lnt">14
-&lt;/span>&lt;span class="lnt">15
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#! /bin/sh
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># ~/.config/bspwm/try_e_r&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">wid&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="nv">$1&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="nv">$2&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">instance&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="nv">$3&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">consequences&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="nv">$4&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">echo&lt;/span> -e &lt;span class="s2">&amp;#34;One group: \n \
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2"> window ID : &lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nv">wid&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="s2">,\n \
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2"> title : &lt;/span>&lt;span class="k">$(&lt;/span>xtitle &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nv">wid&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="k">)&lt;/span>&lt;span class="s2">,\n \
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2"> class name : &lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nv">class&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="s2">,\n \
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2"> instance name : &lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nv">instance&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="s2">,\n \
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2"> intermediate consequences : &lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nv">consequences&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="s2">\n\n&amp;#34;&lt;/span> &lt;span class="se">\
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> &amp;gt;&amp;gt; /tmp/try_e_r.log
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>然后我们按 &lt;code>super + Alt + r&lt;/code> 重启 bspwm，在终端下使用 &lt;code>tail -f /tmp/try_e_r.log&lt;/code> 来监听日志文件变化. 我们对窗口进行一些操作，看看 try_e_r.log 里什么时候会有新的变化，并看看这四个参数以及使用 xtitle 得到的结果分别都是什么. 贴一下我这里的测试结果：&lt;/p>
-&lt;p>&lt;figure>
-&lt;img loading='lazy' src='https://zerovip.github.io/zh/63233/ext_rule1.png' alt='external_rules 的测试结果'/>
-&lt;figcaption>◉ 图. external_rules 的测试结果&lt;/figcaption>
-&lt;/figure>
-&lt;figure>
-&lt;img loading='lazy' src='https://zerovip.github.io/zh/63233/ext_rule2.png' alt='external_rules 的测试结果'/>
-&lt;figcaption>◉ 图. external_rules 的测试结果&lt;/figcaption>
-&lt;/figure>
-&lt;/p>
-&lt;p>打开监听变化的日志文件以后，我分别打开了一个终端，一个 firefox 浏览器，一个 SMPlayer. 当然第一个 Polybar 是我重启 bspwm 之后马上打开的第一个窗口，这无需多言，只是&lt;span style='background-color:#FDE763;'>我有点不明白我明明把 &lt;code>bspc config external_rules_command &amp;quot;${HOME}/.config/bspwm/try_e_r&amp;quot;&lt;/code> 写到 bspwmrc 的最后一行了，竟然还能在日志里看到 Polybar ？难道 shell 脚本不是从上到下一行一行执行的么？希望得到各位读者的指点.&lt;/span>（那些日志中的输出你可能会对 Polybar 的 &lt;code>layer=above&lt;/code> 不太熟悉，可以自己再额外看一看关于 layer 的信息.）&lt;/p>
-&lt;p>通过试验，我们明白了 external_rules 的工作流程：如果我们写了 external_rules 脚本，并在 bspwmrc 中写明了这个脚本的绝对路径，那么 bspwm 在每打开一个窗口时都会自动执行这个命令，并把这个窗口的信息通过那四个参数告诉给这个命令，然后根据得到的返回值也就是一些键值对来决定窗口的样貌与模式.&lt;/p>
-&lt;p>打个比方，external_rules 是我们创造的一位负责管理学生进入学校（负责管理窗口打开）的看门大爷（一个命令），我们有任何规则都可以告诉他（用脚本语言写进去），然后他就躺在传达室里默默无闻（它只是一个命令而已，你不调用，它就不会理你），一旦有一个学生要进入学校（一个窗口要被打开），送学生来的家长（bspwm）就会把看门大爷叫起来（调用这个命令），告诉看门大爷（向这个命令传参）这个学生的学号（这个窗口的 window ID）、他是哪个班的（class name）、他叫什么名字（instance name）、他来学校干什么（intermediate consequences），看门大爷就把他的学号输入到电脑里查一下（xtitle）他的小名（title）叫什么，然后根据这些信息和你告诉给他的规则来决定这个学生进入学校以后有什么额外要做的事情（这个窗口应该有什么额外的规则）.&lt;/p>
-&lt;p>external_rules 的部分我觉得写到这里就足够了，它确确实实能写出非常复杂的规则出来. 关于 &lt;code>fontforge&lt;/code>、&lt;code>Layers|Tools|Warning&lt;/code>、&lt;code>Lutris|Liferea&lt;/code> 的事情我觉得反而不是很重要，因为 Lutris 和 Liferea 的这两个软件你不一定会用得到，你只要知道怎么自己写规则，怎么利用好这个功能就足够了.&lt;/p>
-&lt;p>如果感兴趣或者想完整地体验一下 external_rules 的读者可以自行安装这两个软件，这两个软件在 Arch Linux 下的官方源中都有：&lt;/p>
-&lt;ul>
-&lt;li>&lt;a href='https://lzone.de/liferea/'
-target='_blank' rel='noreferrer noopener'
->Liferea&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>，一个信息汇总聚合平台，我猜是某种 RSS 阅读器.&lt;/li>
-&lt;li>&lt;a href='https://lutris.net/'
-target='_blank' rel='noreferrer noopener'
->Lutris&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>，一个游戏平台，我猜是类似 steam 那种.&lt;/li>
-&lt;/ul>
-&lt;p>&lt;span style='background-color:#FDE763;'>关于这份脚本，还有一个 &lt;code>$state&lt;/code> 没有讲. 读者们可以用类似的方法看看它是什么.&lt;/span>&lt;/p>
-&lt;h1>四种布局方案&lt;/h1>
-&lt;p>&lt;span style='background-color:#FDE763;'>建议详细阅读我在 &lt;strong>1.4 小节&lt;/strong>中列举的&lt;a href='https://dev.to/l04db4l4nc3r/bspwm-a-bare-bones-window-manager-44di'
-target='_blank' rel='noreferrer noopener'
->第 &lt;strong>7&lt;/strong> 个参考材料&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>中 Layouts 部分. 它里面还包括了一段快速切换布局方案的脚本.&lt;/span>&lt;/p>
-&lt;p>待补充.&lt;/p>
-&lt;h1>关于 panel&lt;/h1>
-&lt;p>第三方的 panel 选择很多，比如 polybar、lemonbar、yabar，&lt;span style='background-color:#FDE763;'>可以阅读我在 &lt;strong>1.4 小节&lt;/strong>中列举的第 &lt;strong>3&lt;/strong> 个参考材料即 Arch Wiki 中的相关部分.&lt;/span>&lt;/p>
-&lt;p>这里想讲一下它的例子中自带的 panel ，待补充.&lt;/p>
-&lt;h1>关于容器&lt;/h1>
-&lt;p>待补充.&lt;/p>
-&lt;h1>谈一点哲学&lt;/h1>
-&lt;p>就是我自己有一些想法，随便满足一下表达欲.&lt;/p>
-&lt;h2>阅读文档与解决问题&lt;/h2>
-&lt;p>我虽然在之前的视频里简单说了说怎么阅读文档——会了语法之后只要耐心就好了，但我并没有很鼓励大家都去啃文档，因为这并不高效. 哪怕我很认真我很耐心地在视频中演示了一些东西，我也仅仅是希望中文的 Linux 社区少一点点浮躁、多一点点耐心，仅此而已.&lt;/p>
-&lt;p>那么更高效、也更符合现实的对待文档的态度是什么呢？我想用英语的阅读理解做个简单的类比.&lt;/p>
-&lt;p>在初中/高中的英语考试中有一类题型叫做阅读理解，试卷上会有一篇文章，然后文章后面有一些题目，每个题目有四个选项，考生需要阅读文章，然后做题. 面对这种阅读理解题，大体是有两种解题策略的：一是先读文章再做题；二是先读题目再到文章中去找相关的句子. 前者能让你真正读懂这篇文章，但是会有点慢；后者能让你快速把题目做出来，但你可能并不知道文章讲了什么. 选取那种策略主要还是看你怎么对待考试：如果你享受读英语的过程、好奇文章讲了什么，那么你可能会采取前者；如果你只是为了获得分数，其他的都不重要，那么你可能会采取后者.&lt;/p>
-&lt;p>照搬到 Linux 使用上也是差不多的. 文档相当于文章，你的需求相当于文章后面的问题，要不要读文档、怎么读文档，完全取决于你为什么要用 Linux，你的心态是怎么样的. 你在做事情的时候经常会有新的需求提出来么？你是一个需求很多的人还是一个需求很少的人？大体情况下，阅读文档能让你解决问题、完成需求的时间变短，但阅读文档本身需要大量的时间. 我个人的看法是，如果你的需求不太多，那就不需要阅读文档，遇到问题解决问题就好；如果你的需求比较多，那可能磨刀不误砍柴工了. 到底还是一个平衡的问题.&lt;/p>
-&lt;p>我个人是不会从头到尾阅读文档的，我的习惯几乎就是在 2.1 小节 例一：旋转 那里的工作流程：当我有需求时，我会通过搜索引擎寻找解决方案，然后我会对照文档理解别人的解决方案，最后适当做出改进或直接使用. 为了安全起见，我绝不会看都不看就把别人的代码复制下来直接执行.&lt;/p>
-&lt;h2>Unix 哲学&lt;/h2>
-&lt;p>我在上一个视频中讲到 bspwm 的优点时，有很多网友就说到了 bspwm 符合 Unix 哲学. 那么 Unix 的哲学是什么呢？在&lt;a href='https://en.wikipedia.org/wiki/Unix_philosophy'
-target='_blank' rel='noreferrer noopener'
->维基百科&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>中可以找到 1978 年 Doug Mcllroy 最原始四句表述，我们这里单取出第一条来看：&lt;/p>
-&lt;blockquote>
-&lt;p>Make each program do one thing well. To do a new job, build afresh rather than complicate old programs by adding new &amp;ldquo;features&amp;rdquo;.&lt;/p>
-&lt;/blockquote>
-&lt;p>简单地说就是一个程序只应该做一件事并把它做好. 其实我说到这里大家应该就明白了，bspwm 就单纯地只负责窗口管理的部分，那么键盘输入的部分怎么办呢？bspwm 的作者又为了这个任务创造了一个新的工具 sxhkd. 这样做的好处是我们可以使用其他工具来进行快捷键绑定的工作；或者反过来：在不用 bspwm 的情况下，单纯只安装 sxhkd 来处理键盘输入，比如使用键盘调整音量、调整屏幕亮度的工作都可以由 sxhkd 来完成.&lt;/p>
-&lt;p>这样的 Unix 哲学在 bspwm 的身上体现得淋漓尽致：&lt;/p>
-&lt;ul>
-&lt;li>在 external_rules 的部分，为了根据窗口的 window id 获取窗口的标题（title），作者又额外创造了 &lt;a href='https://github.com/baskerville/xtitle'
-target='_blank' rel='noreferrer noopener'
->xtitle&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>. 见本文第 3.2 小节；&lt;/li>
-&lt;li>在 panel 部分，为了判断是否存在一个 bar，作者又额外创造了一个对窗口进行操作的工具 &lt;a href='https://github.com/baskerville/xdo'
-target='_blank' rel='noreferrer noopener'
->xdo&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>. &lt;del>见本文第 5 章，&lt;/del> 别见了，第 5 章没写，看一下&lt;a href='https://github.com/baskerville/bspwm/blob/master/examples/panel/panel'
-target='_blank' rel='noreferrer noopener'
->这份代码&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>的第 3 行你就明白了.&lt;/li>
-&lt;/ul>
-&lt;p>这是不是能激发我们对 Unix 哲学的一些思考呢？&lt;/p>
-&lt;h2>社区&lt;/h2>
-&lt;p>bspwm 是一个文档写得很难读的软件，&lt;a href='https://github.com/baskerville/bspwm/tree/master/examples'
-target='_blank' rel='noreferrer noopener'
->它自带的 examples&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a> 里有好多内容缺乏系统的介绍，像这里面的 external_rules、overlapping_borders、panel、receptacles 都缺少很好的文章来介绍它们的功能和使用方法.&lt;/p>
-&lt;p>我在这篇文章中对 external_rules 做了一点简单的介绍，本来其他的内容我也计划写一写的，但实在是累了，而且这个 b 站专栏的富文本编辑器用起来太费劲了……所以其他的内容我就不再写了，但是依然列在这里，希望我这块砖头能引到良玉. 大佬们请一定不要吝啬你们的知识啊，稍微分享分享就是好的；像我们普通用户可以把自己使用 bspwm 中遇到的问题和做出的努力稍微力所能及地随便记录一下，这对于中文的 bspwm 社区绝对是一件好事.&lt;/p>
-&lt;hr>
-&lt;p>虽然好多东西没写，这篇文章还是太长了. 希望读完此文的读者能从中学习到：bspc 语句的使用、阅读文档的方法、解决问题的流程、面对陌生事物（以 external_rules 为例）时的手段、调试的方法（写入 log，实时监测变化）以及我想传达的对软件的轻视、对技能的重视——因为随着技术的快速迭代，任何一个软件最终都会被更好的软件所替代，而那些解决问题的方法、面对问题时的耐心与踏实，却是我们使用 Linux 中、甚至是平时生活中一直都需要的.&lt;/p></description></item></channel></rss>
+>这里&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>.&lt;/p></description></item></channel></rss>
