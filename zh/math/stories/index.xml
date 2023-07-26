@@ -226,7 +226,7 @@ class="math inline">\(p(n)\)&lt;/span> 也类似地定义即可.&lt;/p>
 numbers I. Expansions in integer bases, Annals of Mathematics 165-2,
 (2007), 547–565.&lt;/p>
 &lt;p>&lt;span style="background-color:#FDE763;">深入学习待补充.&lt;/span>&lt;/p>
-&lt;section id="footnotes" class="footnotes footnotes-end-of-document"
+&lt;aside id="footnotes" class="footnotes footnotes-end-of-document"
 role="doc-endnotes">
 &lt;hr />
 &lt;ol>
@@ -235,7 +235,7 @@ numbers with a low complexity expansion. J.Number Theory 67(2), 146–161
 (1997).&lt;a href="#fnref1" class="footnote-back"
 role="doc-backlink">↩︎&lt;/a>&lt;/p>&lt;/li>
 &lt;/ol>
-&lt;/section></description></item><item><title>二元生成群的子群定理 - 21 世纪的定理</title><link>https://zerovip.github.io/zh/02874/</link><pubDate>Sun, 30 Jun 2019 00:00:00 CST</pubDate><guid isPermaLink="false">/zh/02874/</guid><description>&lt;p>这是我这个系列的第一篇文章，因此先简单介绍一下这个系列.&lt;/p>
+&lt;/aside></description></item><item><title>二元生成群的子群定理 - 21 世纪的定理</title><link>https://zerovip.github.io/zh/02874/</link><pubDate>Sun, 30 Jun 2019 00:00:00 CST</pubDate><guid isPermaLink="false">/zh/02874/</guid><description>&lt;p>这是我这个系列的第一篇文章，因此先简单介绍一下这个系列.&lt;/p>
 &lt;p>我于几天前在知乎上看到了&lt;a
 href="https://zhuanlan.zhihu.com/p/69063049">对 Bogdan Grechuk,
 &lt;em>Theorems of the 21st Century&lt;/em>
@@ -453,7 +453,7 @@ class="math inline">\(B\)&lt;/span> 并不是有限生成的. 同时，1949
 除此之外，还有一个定理和一个推论，这些其实都是可以好好介绍的.&lt;/p>
 &lt;h2 id="方法概述内容来自原文第二节">方法概述（内容来自原文第二节）&lt;/h2>
 &lt;p>待更新…（并不知道还会不会更新）&lt;/p>
-&lt;section id="footnotes" class="footnotes footnotes-end-of-document"
+&lt;aside id="footnotes" class="footnotes footnotes-end-of-document"
 role="doc-endnotes">
 &lt;hr />
 &lt;ol>
@@ -470,4 +470,4 @@ class="math inline">\(\mathbb{Z}/2\mathbb{Z}\)&lt;/span>
 个共轭类都是一个开放问题！（原注）&lt;a href="#fnref3"
 class="footnote-back" role="doc-backlink">↩︎&lt;/a>&lt;/p>&lt;/li>
 &lt;/ol>
-&lt;/section></description></item></channel></rss>
+&lt;/aside></description></item></channel></rss>
