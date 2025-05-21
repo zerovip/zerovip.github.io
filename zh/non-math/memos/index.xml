@@ -197,8 +197,7 @@ target='_blank' rel='noreferrer noopener'
 &lt;p>（七）驾驶未按规定定期进行安全技术检验的公路客运汽车、旅游客运汽车、危险物品运输车辆以外的机动车上道路行驶的；&lt;/p>
 &lt;p>（八）驾驶擅自改变已登记的结构、构造或者特征的载货汽车上道路行驶的；&lt;/p>
 &lt;p>（九）驾驶机动车在道路上行驶时，机动车驾驶人未按规定系安全带的；&lt;/p>
-&lt;p>（十）驾驶摩托车，不戴安全头盔的。&lt;/p>
-&lt;/blockquote></description></item><item><title>利用 Pagefind 给静态博客添加搜索功能 - 自写主题</title><link>https://zerovip.github.io/zh/41675/</link><pubDate>Tue, 29 Nov 2022 00:00:00 CST</pubDate><guid isPermaLink="false">/zh/41675/</guid><description>&lt;h1>前言&lt;/h1>
+&lt;p>（十）驾驶摩托车，不戴安全头盔的。&lt;/p>&lt;/blockquote></description></item><item><title>利用 Pagefind 给静态博客添加搜索功能 - 自写主题</title><link>https://zerovip.github.io/zh/41675/</link><pubDate>Tue, 29 Nov 2022 00:00:00 CST</pubDate><guid isPermaLink="false">/zh/41675/</guid><description>&lt;h1>前言&lt;/h1>
 &lt;p>我&lt;a href='https://github.com/zerovip/zerovip.github.io/commit/a0e5595ddbc17c6fb5ec10a732d536b2eea0e8ba#diff-aa481d6e71487ff6b05f479cc7d6958e492757e0ccd6a634dc84f32ffe42545cR396'
 target='_blank' rel='noreferrer noopener'
 >早就&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>想要给自己这个博客站添加站内搜索功能了，前前后后也考察过非常多的工具，&lt;a href='https://gohugo.io/tools/search/'
@@ -719,16 +718,13 @@ target='_blank' rel='noreferrer noopener'
 &lt;p>下面再举一些例子，说明如何把被动动词变成主动动词.&lt;/p>
 &lt;blockquote>
 &lt;p>This matter will be considered by us shortly.（此事将尽快被我们考虑.）（被动）&lt;/p>
-&lt;p>&lt;strong>We will consider this matter shortly.（我们将尽快考虑此事.）（主动）&lt;/strong>&lt;/p>
-&lt;/blockquote>
+&lt;p>&lt;strong>We will consider this matter shortly.（我们将尽快考虑此事.）（主动）&lt;/strong>&lt;/p>&lt;/blockquote>
 &lt;blockquote>
 &lt;p>The riot was stopped by the police.（暴动被警察制止.）（被动）&lt;/p>
-&lt;p>&lt;strong>The police stopped the riot.（警察制止了暴动.）（主动）&lt;/strong>&lt;/p>
-&lt;/blockquote>
+&lt;p>&lt;strong>The police stopped the riot.（警察制止了暴动.）（主动）&lt;/strong>&lt;/p>&lt;/blockquote>
 &lt;blockquote>
 &lt;p>The mine had to be closed by the authority.（这个矿场不得不被当局关闭.）（被动）&lt;/p>
-&lt;p>&lt;strong>The authority had to close the mine.（当局不得不关闭了这个矿场.）（主动）&lt;/strong>&lt;/p>
-&lt;/blockquote>
+&lt;p>&lt;strong>The authority had to close the mine.（当局不得不关闭了这个矿场.）（主动）&lt;/strong>&lt;/p>&lt;/blockquote>
 &lt;p>被动动词会带来许多问题.&lt;/p>
 &lt;ul>
 &lt;li>它们会让人感到困惑.&lt;/li>
@@ -751,16 +747,13 @@ target='_blank' rel='noreferrer noopener'
 &lt;p>以下是一些例子.&lt;/p>
 &lt;blockquote>
 &lt;p>Applicants must send us…（申请人必须给我们……）&lt;/p>
-&lt;p>&lt;strong>You must send us…（你必须给我们……）&lt;/strong>&lt;/p>
-&lt;/blockquote>
+&lt;p>&lt;strong>You must send us…（你必须给我们……）&lt;/strong>&lt;/p>&lt;/blockquote>
 &lt;blockquote>
 &lt;p>We always tell customers before we…（我们会先告诉客户，然后再……）&lt;/p>
-&lt;p>&lt;strong>We will tell you before we…（我们会先告诉你，然后再……）&lt;/strong>&lt;/p>
-&lt;/blockquote>
+&lt;p>&lt;strong>We will tell you before we…（我们会先告诉你，然后再……）&lt;/strong>&lt;/p>&lt;/blockquote>
 &lt;blockquote>
 &lt;p>Advice is available from…（建议可以从以下地方获得：……）&lt;/p>
-&lt;p>&lt;strong>You can get advice from…（你可以从以下地方获得建议：……）&lt;/strong>&lt;/p>
-&lt;/blockquote>
+&lt;p>&lt;strong>You can get advice from…（你可以从以下地方获得建议：……）&lt;/strong>&lt;/p>&lt;/blockquote>
 &lt;p>类似地，要称你的组织为“we（我们）”. 另外在同一封信中同时使用“we（我们）”和“I（我）”是没有问题的.&lt;/p>
 &lt;hr>
 &lt;h2>使用对读者来说适当的单词&lt;/h2>
@@ -786,21 +779,17 @@ target='_blank' rel='noreferrer noopener'
 &lt;p>下面是一些啰哩啰嗦的表达，以及使用命令的短一点的版本的例子.&lt;/p>
 &lt;blockquote>
 &lt;p>You should just think of it as a complete statement.（你应该只把它当作一个完整的陈述.）&lt;/p>
-&lt;p>&lt;strong>Just think of it as a complete statement.（只要把它当作一个完整的陈述就好了.）&lt;/strong>&lt;/p>
-&lt;/blockquote>
+&lt;p>&lt;strong>Just think of it as a complete statement.（只要把它当作一个完整的陈述就好了.）&lt;/strong>&lt;/p>&lt;/blockquote>
 &lt;blockquote>
 &lt;p>Writers should aim to be punchy.（作家应该以言简意赅为目标.）&lt;/p>
-&lt;p>&lt;strong>Be punchy. 要言简意赅.&lt;/strong>&lt;/p>
-&lt;/blockquote>
+&lt;p>&lt;strong>Be punchy. 要言简意赅.&lt;/strong>&lt;/p>&lt;/blockquote>
 &lt;blockquote>
 &lt;p>They should be split where suitable.（它们应该在合适的地方被拆开.）&lt;/p>
-&lt;p>&lt;strong>Split them where suitable.（在合适的地方拆开它们.）&lt;/strong>&lt;/p>
-&lt;/blockquote>
+&lt;p>&lt;strong>Split them where suitable.（在合适的地方拆开它们.）&lt;/strong>&lt;/p>&lt;/blockquote>
 &lt;p>最后一个例子可能是最差的，因为它使用了一个被动动词——“should be split（应该被拆开）”. 不幸的是，这在指令中非常常见. 例如：&lt;/p>
 &lt;blockquote>
 &lt;p>The packet should be removed from the box. The contents should then be placed in the oven.（包装应该被从盒子里取出来，然后里面的东西应该被放进烤箱.）&lt;/p>
-&lt;p>&lt;strong>Remove the packet from the box. Then place the contents in the oven. （取出盒子里的包装，再把里面的东西放进烤箱.）&lt;/strong>&lt;/p>
-&lt;/blockquote>
+&lt;p>&lt;strong>Remove the packet from the box. Then place the contents in the oven. （取出盒子里的包装，再把里面的东西放进烤箱.）&lt;/strong>&lt;/p>&lt;/blockquote>
 &lt;hr>
 &lt;h2>避免名词化&lt;/h2>
 &lt;p>名词化（nominalisation）是抽象名词的一种类型. （这是简明英语吗？）换句话说，它是一种非物理对象的事物的名字，比如 process（过程）、technique（技术）或 emotion（情感）.&lt;/p>
@@ -845,16 +834,13 @@ target='_blank' rel='noreferrer noopener'
 &lt;p>下面是一些例子.&lt;/p>
 &lt;blockquote>
 &lt;p>We had a discussion about the matter.（我们对此事做了讨论.）&lt;/p>
-&lt;p>&lt;strong>We discussed the matter.（我们讨论了此事.）&lt;/strong>&lt;/p>
-&lt;/blockquote>
+&lt;p>&lt;strong>We discussed the matter.（我们讨论了此事.）&lt;/strong>&lt;/p>&lt;/blockquote>
 &lt;blockquote>
 &lt;p>There will be a stoppage of trains by drivers.（这里会有火车司机的停车.）&lt;/p>
-&lt;p>&lt;strong>Drivers will stop the trains.（司机会停下火车.）&lt;/strong>&lt;/p>
-&lt;/blockquote>
+&lt;p>&lt;strong>Drivers will stop the trains.（司机会停下火车.）&lt;/strong>&lt;/p>&lt;/blockquote>
 &lt;blockquote>
 &lt;p>The implementation of the method has been done by a team.（该方法的实现已经由一个团队完成.）&lt;/p>
-&lt;p>&lt;strong>A team has implemented the method.（一个团队已经实现了该方法.）&lt;/strong>&lt;/p>
-&lt;/blockquote>
+&lt;p>&lt;strong>A team has implemented the method.（一个团队已经实现了该方法.）&lt;/strong>&lt;/p>&lt;/blockquote>
 &lt;hr>
 &lt;h2>在合适的地方使用列表&lt;/h2>
 &lt;p>列表是分解信息的绝佳办法.&lt;/p>
@@ -868,8 +854,7 @@ target='_blank' rel='noreferrer noopener'
 &lt;ul>
 &lt;li>A list that is a continuous sentence with several listed points picked out at the beginning, middle or end.&lt;/li>
 &lt;li>A list of separate points with an introductory statement (like this list).&lt;/li>
-&lt;/ul>
-&lt;/blockquote>
+&lt;/ul>&lt;/blockquote>
 &lt;p>在上面的列表中，每个要点都是一个完整的句子，所以它们每一句都以大写字母开头，以句号结尾.&lt;/p>
 &lt;p>如果列表是一个连续句子的一部分，则在每个要点后面加上分号（；），并以小写字母开头.&lt;/p>
 &lt;blockquote>
@@ -887,8 +872,7 @@ target='_blank' rel='noreferrer noopener'
 &lt;li>你和 Mary 没有关系；以及&lt;/li>
 &lt;li>你已经超过 21 岁；&lt;/li>
 &lt;/ul>
-&lt;p>那就没问题.&lt;/p>
-&lt;/blockquote>
+&lt;p>那就没问题.&lt;/p>&lt;/blockquote>
 &lt;p>正如你所看到的，倒数第二个要点在分号之后有个“and（以及）”. 如果你只需要证明三点中的一点而不是全部，这个词就是“or（或者）”.&lt;/p>
 &lt;p>要确保每一个要点在逻辑和语法上都与前面的引言部分能连得上. 例如，如果你把第二个要点和第三个要点中的“you（你）”去掉，它仍然流畅得像是一个句子，但那就不是一个列表了，因为引言部分和第三个要点拼凑到一起就变成了“If you can prove that are over 21（如果你能证明已经超过 21 岁）”，这显然是读不通的.&lt;/p>
 &lt;p>对于要点很短的列表，最好用以下的一种方式来写.&lt;/p>
@@ -906,8 +890,7 @@ target='_blank' rel='noreferrer noopener'
 &lt;li>一些线&lt;/li>
 &lt;li>一张纸&lt;/li>
 &lt;li>一支笔&lt;/li>
-&lt;/ul>
-&lt;/blockquote>
+&lt;/ul>&lt;/blockquote>
 &lt;blockquote>
 &lt;p>&lt;strong>Kevin needed to take:&lt;/strong>&lt;/p>
 &lt;ul>
@@ -922,8 +905,7 @@ target='_blank' rel='noreferrer noopener'
 &lt;li>一些线&lt;/li>
 &lt;li>一张纸；以及&lt;/li>
 &lt;li>一支笔.&lt;/li>
-&lt;/ul>
-&lt;/blockquote>
+&lt;/ul>&lt;/blockquote>
 &lt;p>你应该在列表中使用圆点，它比数字或字母更好. 因为圆点能让你注意每一个要点，而不会给你额外的信息.&lt;/p>
 &lt;hr>
 &lt;h2>道歉&lt;/h2>
@@ -4233,8 +4215,7 @@ target='_blank' rel='noreferrer noopener'
 target='_blank' rel='noreferrer noopener'
 >官方宣传的两代产品的不同&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>来看，reMarkable 2 比 reMarkable 1 具有的优势有：更薄，4.7 mm；手写延迟更低，21 ms；电池使用时间更长，2 周；新一代手写笔（Marker）有一个支持橡皮的高级款 Marker Plus；新一代保护套（Folio）有一个翻页式的高级款 Book Folio；有 USB Type C 接口，充电和传文件更快.&lt;/p>
 &lt;blockquote>
-&lt;p>预订 reMarkable 2 只要399 刀，而且预订的话可以直接免去 49 刀笔 (Marker) 钱，和 69 刀皮套 (Folio) 钱，以及 DHL 的 19 刀运费，只不过笔和皮套都是基础款，带橡皮的笔 Marker Plus 要额外加 50 刀，像书一样的翻页保护套 Book Folio 要额外加 30 刀，更高级的皮质翻页保护套要额外加 80 刀. 现在预订要等到 7 月才发货，当然可以随时取消，到货后 30 天内也可以退货. 可以发货的国家有 39 个，集中在欧洲、美洲和澳洲，中国香港可以，中国其他地方不行，还要找朋友帮忙.&lt;/p>
-&lt;/blockquote>
+&lt;p>预订 reMarkable 2 只要399 刀，而且预订的话可以直接免去 49 刀笔 (Marker) 钱，和 69 刀皮套 (Folio) 钱，以及 DHL 的 19 刀运费，只不过笔和皮套都是基础款，带橡皮的笔 Marker Plus 要额外加 50 刀，像书一样的翻页保护套 Book Folio 要额外加 30 刀，更高级的皮质翻页保护套要额外加 80 刀. 现在预订要等到 7 月才发货，当然可以随时取消，到货后 30 天内也可以退货. 可以发货的国家有 39 个，集中在欧洲、美洲和澳洲，中国香港可以，中国其他地方不行，还要找朋友帮忙.&lt;/p>&lt;/blockquote>
 &lt;p>上面这段是 2020 年 3 月时我写的关于 reMarkable 2 的预订情况，刚刚（2021.07）看了一下，没有涨价，只是 49 刀笔钱和 69 刀皮套钱优惠没有了.&lt;/p>
 &lt;p>他们的两代产品使用的是同一套软件，更新也是平行的（&lt;a href='https://support.remarkable.com/hc/en-us/articles/360004429337-Here-s-how-reMarkable-rolls-out-software-updates'
 target='_blank' rel='noreferrer noopener'
@@ -4359,8 +4340,7 @@ target='_blank' rel='noreferrer noopener'
 &lt;p>本製品は、国内での使用を前提に作られています。海外での使用につきましては、お客様の責任で行っていただくようお願いいたします。&lt;/p>
 &lt;p>翻译：&lt;/p>
 &lt;p>本产品为日本国内规格，我们不提供海外的维修服务或技术支持.&lt;/p>
-&lt;p>本产品是以在国内使用为前提制作的. 关于在海外的使用，请客人自行负责.&lt;/p>
-&lt;/blockquote>
+&lt;p>本产品是以在国内使用为前提制作的. 关于在海外的使用，请客人自行负责.&lt;/p>&lt;/blockquote>
 &lt;p>具体来说就是随产品附赠的纸质说明书和保修卡都是日语的，系统可以选择日语或英语. 对中文字体的支持可能不够. 另外需要注意的就是日本的标准电压是 110 V 左右，中国则是 220 V，可能充电时需要留意一下电池的情况.&lt;/p>
 &lt;p>它的第一代产品是作为 Sony DPT-RP1 的白牌出现的，无论是外观、硬件参数还是软件、功能，都和 Sony DPT-RP1 保持一致，不过多了一个日程的功能，还是非常让人眼前一亮. 另外它非常便宜的价格也让很多人纷纷入手，我在某个社交平台上认识的 100 多位网友里就看到了有 3 个人购入了 Quaderno 第一代产品并且时不时地分享一些使用体验. 这里是 Bilibili 上友情搬运的一个&lt;a href='https://www.bilibili.com/video/BV1va4y1p7Fp'
 target='_blank' rel='noreferrer noopener'
@@ -4390,8 +4370,7 @@ target='_blank' rel='noreferrer noopener'
 &lt;blockquote>
 &lt;p>Do you have a PDF manual which describes the device and its features?&lt;/p>
 &lt;p>Yes, as this is updated frequently, please contact &lt;a href='https://zerovip.github.iomailto:success@quirklogic.com'
->success@quirklogic.com&lt;/a> for the most recent version.&lt;/p>
-&lt;/blockquote>
+>success@quirklogic.com&lt;/a> for the most recent version.&lt;/p>&lt;/blockquote>
 &lt;p>所以我只好写了一封邮件向他们索要最新版的用户手册，几个小时后才收到回复. 我根本就不能理解他们的这种做法，“经常更新”根本就不是不把用户手册放上网供下载的理由，因为在网站上更新自己的手册是非常方便的事情！他们回复的邮件末尾有小字写着不要把邮件内容传播出去，我更是觉得匪夷所思，不知道这家公司这么做是出于什么考量，难道他们的用户手册构成了对其他人的侵权吗？&lt;/p>
 &lt;p>由于硬件和 Sony DPT-RP1 完全是一样的，笔也是电容笔，所以我不会考虑它. 不过看一看他们自己定制的软件和功能还是很有意思的.&lt;/p>
 &lt;h4>功能&lt;/h4>
@@ -4735,8 +4714,7 @@ target='_blank' rel='noreferrer noopener'
 target='_blank' rel='noreferrer noopener'
 >来源&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>），那些小鹤音形另包含进来的字我没有找到一个列表，因此只考虑《通用规范汉字表》中的 8105 字.&lt;/p>
 &lt;blockquote>
-&lt;p>《通用规范汉字表》共收字 8105 个，分为三级：【&lt;strong>一级字&lt;/strong>】表为常用字集，收字 3500 个，主要满足基础教育和文化普及的基本用字需要. 【&lt;strong>二级字&lt;/strong>】表收字 3000 个，使用度仅次于一级字. 一、二级字表合计 6500 字，主要满足出版印刷、辞书编纂和信息处理等方面的一般用字需要. 【&lt;strong>三级字&lt;/strong>】表收字 1605 个，是姓氏人名、地名、科学技术术语和中小学语文教材文言文用字中未进入一、二级字表的较通用的字，主要满足信息化时代与大众生活密切相关的专门领域的用字需要.&lt;/p>
-&lt;/blockquote>
+&lt;p>《通用规范汉字表》共收字 8105 个，分为三级：【&lt;strong>一级字&lt;/strong>】表为常用字集，收字 3500 个，主要满足基础教育和文化普及的基本用字需要. 【&lt;strong>二级字&lt;/strong>】表收字 3000 个，使用度仅次于一级字. 一、二级字表合计 6500 字，主要满足出版印刷、辞书编纂和信息处理等方面的一般用字需要. 【&lt;strong>三级字&lt;/strong>】表收字 1605 个，是姓氏人名、地名、科学技术术语和中小学语文教材文言文用字中未进入一、二级字表的较通用的字，主要满足信息化时代与大众生活密切相关的专门领域的用字需要.&lt;/p>&lt;/blockquote>
 &lt;p>关于字符集的适用性问题，在官方的学习指引中有&lt;a href='http://xhrm.flypy.com/1960619'
 target='_blank' rel='noreferrer noopener'
 >一篇说明&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>，里面统计了这些汉字在日常使用中的覆盖率，从中可以知道这 8105 个字在简体中文环境下已经足够使用了. 因此，小鹤音形这个输入方案的目标用户就是使用简体中文、不输入奇异字符的普通人. 这 8105 字可以在&lt;a href='https://github.com/rime-aca/character_set/blob/master/%e9%80%9a%e7%94%a8%e8%a6%8f%e7%af%84%e6%bc%a2%e5%ad%97%e8%a1%a8.txt'
@@ -4972,8 +4950,7 @@ target='_blank' rel='noreferrer noopener'
 &lt;p>那么一共的全码码数有多少呢？经过统计，它一共有 7963 个不同的全码，也就是说，在 26 × 26 × 26 × 26 = 456976 种四按键组合中，只有 7963 个四按键组合可以打出字来，其余的 449013 个四按键组合并不合法，合法率只有 1.74%.&lt;/p>
 &lt;p>作为对比，小鹤双拼的合法码数有 406 个，合法率有 406 / (26 × 26) = 60%.（感谢 @zzhirong 指正！）&lt;/p>
 &lt;blockquote>
-&lt;p>406 个合法的小鹤双拼码：&amp;lsquo;yi&amp;rsquo;, &amp;rsquo;er&amp;rsquo;, &amp;lsquo;ui&amp;rsquo;, &amp;lsquo;dk&amp;rsquo;, &amp;lsquo;ih&amp;rsquo;, &amp;lsquo;qi&amp;rsquo;, &amp;lsquo;bu&amp;rsquo;, &amp;lsquo;ba&amp;rsquo;, &amp;lsquo;rf&amp;rsquo;, &amp;lsquo;ru&amp;rsquo;, &amp;lsquo;bi&amp;rsquo;, &amp;lsquo;ji&amp;rsquo;, &amp;lsquo;jq&amp;rsquo;, &amp;lsquo;dn&amp;rsquo;, &amp;rsquo;le&amp;rsquo;, &amp;lsquo;dc&amp;rsquo;, &amp;rsquo;li&amp;rsquo;, &amp;rsquo;nd&amp;rsquo;, &amp;lsquo;yz&amp;rsquo;, &amp;lsquo;sj&amp;rsquo;, &amp;lsquo;gj&amp;rsquo;, &amp;lsquo;yu&amp;rsquo;, &amp;lsquo;kv&amp;rsquo;, &amp;lsquo;gs&amp;rsquo;, &amp;rsquo;tu&amp;rsquo;, &amp;lsquo;cd&amp;rsquo;, &amp;lsquo;xx&amp;rsquo;, &amp;lsquo;cy&amp;rsquo;, &amp;lsquo;da&amp;rsquo;, &amp;lsquo;vh&amp;rsquo;, &amp;lsquo;wj&amp;rsquo;, &amp;lsquo;uh&amp;rsquo;, &amp;lsquo;xn&amp;rsquo;, &amp;lsquo;kz&amp;rsquo;, &amp;lsquo;uj&amp;rsquo;, &amp;lsquo;jb&amp;rsquo;, &amp;lsquo;qm&amp;rsquo;, &amp;lsquo;ir&amp;rsquo;, &amp;lsquo;ge&amp;rsquo;, &amp;lsquo;xi&amp;rsquo;, &amp;lsquo;me&amp;rsquo;, &amp;lsquo;uc&amp;rsquo;, &amp;lsquo;fj&amp;rsquo;, &amp;lsquo;gl&amp;rsquo;, &amp;lsquo;wh&amp;rsquo;, &amp;lsquo;mf&amp;rsquo;, &amp;lsquo;ya&amp;rsquo;, &amp;lsquo;vi&amp;rsquo;, &amp;lsquo;si&amp;rsquo;, &amp;lsquo;zi&amp;rsquo;, &amp;lsquo;ww&amp;rsquo;, &amp;lsquo;ye&amp;rsquo;, &amp;rsquo;nv&amp;rsquo;, &amp;lsquo;fw&amp;rsquo;, &amp;lsquo;ia&amp;rsquo;, &amp;lsquo;ma&amp;rsquo;, &amp;lsquo;xl&amp;rsquo;, &amp;lsquo;fg&amp;rsquo;, &amp;lsquo;kd&amp;rsquo;, &amp;lsquo;jk&amp;rsquo;, &amp;rsquo;tm&amp;rsquo;, &amp;lsquo;fu&amp;rsquo;, &amp;lsquo;yr&amp;rsquo;, &amp;lsquo;wu&amp;rsquo;, &amp;lsquo;yy&amp;rsquo;, &amp;lsquo;vr&amp;rsquo;, &amp;lsquo;gd&amp;rsquo;, &amp;lsquo;va&amp;rsquo;, &amp;lsquo;mu&amp;rsquo;, &amp;rsquo;tk&amp;rsquo;, &amp;lsquo;qr&amp;rsquo;, &amp;rsquo;td&amp;rsquo;, &amp;lsquo;qu&amp;rsquo;, &amp;lsquo;dd&amp;rsquo;, &amp;lsquo;pi&amp;rsquo;, &amp;lsquo;ie&amp;rsquo;, &amp;lsquo;ju&amp;rsquo;, &amp;rsquo;ty&amp;rsquo;, &amp;lsquo;hu&amp;rsquo;, &amp;lsquo;qp&amp;rsquo;, &amp;lsquo;wa&amp;rsquo;, &amp;lsquo;yt&amp;rsquo;, &amp;lsquo;ri&amp;rsquo;, &amp;lsquo;vs&amp;rsquo;, &amp;lsquo;bw&amp;rsquo;, &amp;lsquo;gh&amp;rsquo;, &amp;rsquo;nw&amp;rsquo;, &amp;lsquo;uv&amp;rsquo;, &amp;lsquo;jm&amp;rsquo;, &amp;rsquo;nq&amp;rsquo;, &amp;lsquo;uz&amp;rsquo;, &amp;lsquo;mc&amp;rsquo;, &amp;lsquo;ug&amp;rsquo;, &amp;lsquo;yc&amp;rsquo;, &amp;lsquo;pm&amp;rsquo;, &amp;lsquo;pu&amp;rsquo;, &amp;lsquo;hx&amp;rsquo;, &amp;lsquo;iz&amp;rsquo;, &amp;lsquo;rg&amp;rsquo;, &amp;lsquo;vc&amp;rsquo;, &amp;lsquo;jp&amp;rsquo;, &amp;lsquo;cs&amp;rsquo;, &amp;rsquo;ly&amp;rsquo;, &amp;lsquo;xs&amp;rsquo;, &amp;lsquo;ff&amp;rsquo;, &amp;lsquo;fa&amp;rsquo;, &amp;lsquo;ch&amp;rsquo;, &amp;lsquo;dj&amp;rsquo;, &amp;lsquo;gz&amp;rsquo;, &amp;rsquo;lq&amp;rsquo;, &amp;lsquo;wf&amp;rsquo;, &amp;lsquo;kh&amp;rsquo;, &amp;lsquo;fh&amp;rsquo;, &amp;lsquo;ho&amp;rsquo;, &amp;lsquo;dz&amp;rsquo;, &amp;lsquo;rs&amp;rsquo;, &amp;lsquo;xb&amp;rsquo;, &amp;lsquo;ii&amp;rsquo;, &amp;lsquo;yb&amp;rsquo;, &amp;lsquo;ks&amp;rsquo;, &amp;lsquo;dv&amp;rsquo;, &amp;lsquo;bj&amp;rsquo;, &amp;lsquo;dg&amp;rsquo;, &amp;lsquo;ul&amp;rsquo;, &amp;lsquo;uu&amp;rsquo;, &amp;lsquo;hr&amp;rsquo;, &amp;lsquo;kj&amp;rsquo;, &amp;lsquo;mo&amp;rsquo;, &amp;lsquo;qn&amp;rsquo;, &amp;lsquo;vg&amp;rsquo;, &amp;lsquo;hv&amp;rsquo;, &amp;lsquo;ai&amp;rsquo;, &amp;lsquo;gu&amp;rsquo;, &amp;lsquo;bf&amp;rsquo;, &amp;lsquo;ke&amp;rsquo;, &amp;lsquo;bk&amp;rsquo;, &amp;lsquo;zo&amp;rsquo;, &amp;lsquo;hh&amp;rsquo;, &amp;rsquo;ls&amp;rsquo;, &amp;lsquo;pk&amp;rsquo;, &amp;lsquo;mp&amp;rsquo;, &amp;lsquo;ga&amp;rsquo;, &amp;lsquo;ds&amp;rsquo;, &amp;lsquo;ka&amp;rsquo;, &amp;lsquo;vj&amp;rsquo;, &amp;rsquo;lu&amp;rsquo;, &amp;lsquo;uk&amp;rsquo;, &amp;lsquo;gv&amp;rsquo;, &amp;lsquo;jx&amp;rsquo;, &amp;lsquo;uf&amp;rsquo;, &amp;lsquo;dm&amp;rsquo;, &amp;lsquo;hc&amp;rsquo;, &amp;lsquo;yh&amp;rsquo;, &amp;lsquo;jn&amp;rsquo;, &amp;rsquo;lk&amp;rsquo;, &amp;rsquo;tj&amp;rsquo;, &amp;lsquo;rj&amp;rsquo;, &amp;lsquo;mb&amp;rsquo;, &amp;lsquo;ao&amp;rsquo;, &amp;lsquo;qq&amp;rsquo;, &amp;lsquo;he&amp;rsquo;, &amp;lsquo;xm&amp;rsquo;, &amp;lsquo;bd&amp;rsquo;, &amp;lsquo;zd&amp;rsquo;, &amp;rsquo;ta&amp;rsquo;, &amp;lsquo;gx&amp;rsquo;, &amp;lsquo;ys&amp;rsquo;, &amp;lsquo;ce&amp;rsquo;, &amp;lsquo;wd&amp;rsquo;, &amp;lsquo;iu&amp;rsquo;, &amp;rsquo;nn&amp;rsquo;, &amp;lsquo;bc&amp;rsquo;, &amp;lsquo;vu&amp;rsquo;, &amp;lsquo;xr&amp;rsquo;, &amp;rsquo;lj&amp;rsquo;, &amp;rsquo;tz&amp;rsquo;, &amp;lsquo;hj&amp;rsquo;, &amp;rsquo;nk&amp;rsquo;, &amp;lsquo;xt&amp;rsquo;, &amp;rsquo;tc&amp;rsquo;, &amp;lsquo;xp&amp;rsquo;, &amp;lsquo;rh&amp;rsquo;, &amp;lsquo;xy&amp;rsquo;, &amp;rsquo;ni&amp;rsquo;, &amp;lsquo;hs&amp;rsquo;, &amp;rsquo;ln&amp;rsquo;, &amp;rsquo;nu&amp;rsquo;, &amp;lsquo;bm&amp;rsquo;, &amp;lsquo;bh&amp;rsquo;, &amp;lsquo;xk&amp;rsquo;, &amp;lsquo;kc&amp;rsquo;, &amp;rsquo;to&amp;rsquo;, &amp;rsquo;lc&amp;rsquo;, &amp;lsquo;ko&amp;rsquo;, &amp;lsquo;sc&amp;rsquo;, &amp;lsquo;di&amp;rsquo;, &amp;lsquo;mh&amp;rsquo;, &amp;lsquo;xq&amp;rsquo;, &amp;lsquo;go&amp;rsquo;, &amp;lsquo;if&amp;rsquo;, &amp;lsquo;yj&amp;rsquo;, &amp;lsquo;xu&amp;rsquo;, &amp;lsquo;jl&amp;rsquo;, &amp;lsquo;kx&amp;rsquo;, &amp;lsquo;do&amp;rsquo;, &amp;rsquo;lp&amp;rsquo;, &amp;lsquo;ig&amp;rsquo;, &amp;lsquo;md&amp;rsquo;, &amp;lsquo;ci&amp;rsquo;, &amp;lsquo;vf&amp;rsquo;, &amp;lsquo;dh&amp;rsquo;, &amp;lsquo;zc&amp;rsquo;, &amp;lsquo;is&amp;rsquo;, &amp;rsquo;tr&amp;rsquo;, &amp;rsquo;lv&amp;rsquo;, &amp;rsquo;ts&amp;rsquo;, &amp;lsquo;sv&amp;rsquo;, &amp;lsquo;ze&amp;rsquo;, &amp;lsquo;rz&amp;rsquo;, &amp;rsquo;nm&amp;rsquo;, &amp;lsquo;dq&amp;rsquo;, &amp;lsquo;ue&amp;rsquo;, &amp;lsquo;ph&amp;rsquo;, &amp;lsquo;hz&amp;rsquo;, &amp;lsquo;vz&amp;rsquo;, &amp;lsquo;ua&amp;rsquo;, &amp;lsquo;il&amp;rsquo;, &amp;lsquo;za&amp;rsquo;, &amp;lsquo;mk&amp;rsquo;, &amp;lsquo;se&amp;rsquo;, &amp;lsquo;vl&amp;rsquo;, &amp;lsquo;qk&amp;rsquo;, &amp;lsquo;ij&amp;rsquo;, &amp;lsquo;jt&amp;rsquo;, &amp;lsquo;hd&amp;rsquo;, &amp;lsquo;gr&amp;rsquo;, &amp;lsquo;mi&amp;rsquo;, &amp;rsquo;th&amp;rsquo;, &amp;lsquo;vd&amp;rsquo;, &amp;lsquo;an&amp;rsquo;, &amp;lsquo;jy&amp;rsquo;, &amp;rsquo;ee&amp;rsquo;, &amp;lsquo;ss&amp;rsquo;, &amp;rsquo;ns&amp;rsquo;, &amp;rsquo;na&amp;rsquo;, &amp;lsquo;sy&amp;rsquo;, &amp;lsquo;hk&amp;rsquo;, &amp;lsquo;rc&amp;rsquo;, &amp;lsquo;zz&amp;rsquo;, &amp;lsquo;ic&amp;rsquo;, &amp;rsquo;ve&amp;rsquo;, &amp;lsquo;vx&amp;rsquo;, &amp;lsquo;ql&amp;rsquo;, &amp;lsquo;pc&amp;rsquo;, &amp;lsquo;kg&amp;rsquo;, &amp;lsquo;kk&amp;rsquo;, &amp;lsquo;qt&amp;rsquo;, &amp;lsquo;qb&amp;rsquo;, &amp;lsquo;su&amp;rsquo;, &amp;lsquo;du&amp;rsquo;, &amp;lsquo;gg&amp;rsquo;, &amp;rsquo;ll&amp;rsquo;, &amp;lsquo;fz&amp;rsquo;, &amp;rsquo;ld&amp;rsquo;, &amp;rsquo;lm&amp;rsquo;, &amp;lsquo;ou&amp;rsquo;, &amp;lsquo;kl&amp;rsquo;, &amp;lsquo;dy&amp;rsquo;, &amp;lsquo;zu&amp;rsquo;, &amp;rsquo;nj&amp;rsquo;, &amp;lsquo;ky&amp;rsquo;, &amp;lsquo;iv&amp;rsquo;, &amp;lsquo;bp&amp;rsquo;, &amp;lsquo;uy&amp;rsquo;, &amp;lsquo;gc&amp;rsquo;, &amp;lsquo;wo&amp;rsquo;, &amp;rsquo;lr&amp;rsquo;, &amp;lsquo;mw&amp;rsquo;, &amp;rsquo;ti&amp;rsquo;, &amp;lsquo;fo&amp;rsquo;, &amp;rsquo;lb&amp;rsquo;, &amp;lsquo;mm&amp;rsquo;, &amp;rsquo;tn&amp;rsquo;, &amp;lsquo;yk&amp;rsquo;, &amp;lsquo;ku&amp;rsquo;, &amp;rsquo;lg&amp;rsquo;, &amp;lsquo;ry&amp;rsquo;, &amp;lsquo;pj&amp;rsquo;, &amp;lsquo;cj&amp;rsquo;, &amp;lsquo;vo&amp;rsquo;, &amp;lsquo;pw&amp;rsquo;, &amp;lsquo;qs&amp;rsquo;, &amp;lsquo;cg&amp;rsquo;, &amp;lsquo;aa&amp;rsquo;, &amp;lsquo;vv&amp;rsquo;, &amp;lsquo;mn&amp;rsquo;, &amp;lsquo;iy&amp;rsquo;, &amp;lsquo;bo&amp;rsquo;, &amp;lsquo;zs&amp;rsquo;, &amp;lsquo;bn&amp;rsquo;, &amp;lsquo;gk&amp;rsquo;, &amp;lsquo;pd&amp;rsquo;, &amp;lsquo;id&amp;rsquo;, &amp;rsquo;la&amp;rsquo;, &amp;lsquo;po&amp;rsquo;, &amp;lsquo;ro&amp;rsquo;, &amp;lsquo;sh&amp;rsquo;, &amp;lsquo;rr&amp;rsquo;, &amp;lsquo;kf&amp;rsquo;, &amp;lsquo;ah&amp;rsquo;, &amp;rsquo;ne&amp;rsquo;, &amp;rsquo;tp&amp;rsquo;, &amp;rsquo;lo&amp;rsquo;, &amp;lsquo;pa&amp;rsquo;, &amp;lsquo;dp&amp;rsquo;, &amp;lsquo;de&amp;rsquo;, &amp;lsquo;so&amp;rsquo;, &amp;lsquo;pb&amp;rsquo;, &amp;lsquo;pg&amp;rsquo;, &amp;lsquo;hy&amp;rsquo;, &amp;rsquo;nt&amp;rsquo;, &amp;rsquo;nc&amp;rsquo;, &amp;lsquo;jr&amp;rsquo;, &amp;rsquo;lw&amp;rsquo;, &amp;rsquo;lh&amp;rsquo;, &amp;lsquo;ux&amp;rsquo;, &amp;lsquo;mg&amp;rsquo;, &amp;rsquo;lz&amp;rsquo;, &amp;lsquo;vk&amp;rsquo;, &amp;lsquo;ur&amp;rsquo;, &amp;rsquo;no&amp;rsquo;, &amp;lsquo;mz&amp;rsquo;, &amp;lsquo;cc&amp;rsquo;, &amp;lsquo;hl&amp;rsquo;, &amp;lsquo;bg&amp;rsquo;, &amp;lsquo;zj&amp;rsquo;, &amp;lsquo;ha&amp;rsquo;, &amp;lsquo;yo&amp;rsquo;, &amp;lsquo;zf&amp;rsquo;, &amp;lsquo;dr&amp;rsquo;, &amp;rsquo;lx&amp;rsquo;, &amp;lsquo;cu&amp;rsquo;, &amp;lsquo;hf&amp;rsquo;, &amp;lsquo;pf&amp;rsquo;, &amp;lsquo;uo&amp;rsquo;, &amp;lsquo;sa&amp;rsquo;, &amp;lsquo;qx&amp;rsquo;, &amp;lsquo;hg&amp;rsquo;, &amp;rsquo;tv&amp;rsquo;, &amp;lsquo;gw&amp;rsquo;, &amp;rsquo;np&amp;rsquo;, &amp;lsquo;co&amp;rsquo;, &amp;rsquo;re&amp;rsquo;, &amp;lsquo;gf&amp;rsquo;, &amp;lsquo;ud&amp;rsquo;, &amp;lsquo;oo&amp;rsquo;, &amp;rsquo;en&amp;rsquo;, &amp;lsquo;zw&amp;rsquo;, &amp;lsquo;zh&amp;rsquo;, &amp;lsquo;zr&amp;rsquo;, &amp;rsquo;te&amp;rsquo;, &amp;lsquo;wg&amp;rsquo;, &amp;lsquo;cv&amp;rsquo;, &amp;lsquo;vy&amp;rsquo;, &amp;rsquo;tg&amp;rsquo;, &amp;lsquo;pz&amp;rsquo;, &amp;lsquo;kr&amp;rsquo;, &amp;lsquo;bb&amp;rsquo;, &amp;lsquo;uw&amp;rsquo;, &amp;rsquo;nl&amp;rsquo;, &amp;rsquo;ng&amp;rsquo;, &amp;rsquo;lt&amp;rsquo;, &amp;lsquo;pn&amp;rsquo;, &amp;lsquo;mj&amp;rsquo;, &amp;rsquo;nb&amp;rsquo;, &amp;lsquo;cz&amp;rsquo;, &amp;lsquo;io&amp;rsquo;, &amp;lsquo;ik&amp;rsquo;, &amp;lsquo;sz&amp;rsquo;, &amp;lsquo;sf&amp;rsquo;, &amp;lsquo;gy&amp;rsquo;, &amp;lsquo;zv&amp;rsquo;, &amp;lsquo;hw&amp;rsquo;, &amp;lsquo;rv&amp;rsquo;, &amp;lsquo;zy&amp;rsquo;, &amp;lsquo;cr&amp;rsquo;, &amp;lsquo;js&amp;rsquo;, &amp;lsquo;qy&amp;rsquo;, &amp;lsquo;sr&amp;rsquo;, &amp;rsquo;nr&amp;rsquo;, &amp;lsquo;sd&amp;rsquo;, &amp;lsquo;mq&amp;rsquo;, &amp;lsquo;pp&amp;rsquo;, &amp;lsquo;sg&amp;rsquo;, &amp;rsquo;nf&amp;rsquo;, &amp;lsquo;zg&amp;rsquo;, &amp;lsquo;ca&amp;rsquo;, &amp;rsquo;nh&amp;rsquo;, &amp;lsquo;cf&amp;rsquo;, &amp;lsquo;kw&amp;rsquo;, &amp;rsquo;ei&amp;rsquo;, &amp;lsquo;og&amp;rsquo;, &amp;lsquo;dx&amp;rsquo;, &amp;rsquo;nz&amp;rsquo;, &amp;lsquo;df&amp;rsquo;, &amp;lsquo;ix&amp;rsquo;&lt;/p>
-&lt;/blockquote>
+&lt;p>406 个合法的小鹤双拼码：&amp;lsquo;yi&amp;rsquo;, &amp;rsquo;er&amp;rsquo;, &amp;lsquo;ui&amp;rsquo;, &amp;lsquo;dk&amp;rsquo;, &amp;lsquo;ih&amp;rsquo;, &amp;lsquo;qi&amp;rsquo;, &amp;lsquo;bu&amp;rsquo;, &amp;lsquo;ba&amp;rsquo;, &amp;lsquo;rf&amp;rsquo;, &amp;lsquo;ru&amp;rsquo;, &amp;lsquo;bi&amp;rsquo;, &amp;lsquo;ji&amp;rsquo;, &amp;lsquo;jq&amp;rsquo;, &amp;lsquo;dn&amp;rsquo;, &amp;rsquo;le&amp;rsquo;, &amp;lsquo;dc&amp;rsquo;, &amp;rsquo;li&amp;rsquo;, &amp;rsquo;nd&amp;rsquo;, &amp;lsquo;yz&amp;rsquo;, &amp;lsquo;sj&amp;rsquo;, &amp;lsquo;gj&amp;rsquo;, &amp;lsquo;yu&amp;rsquo;, &amp;lsquo;kv&amp;rsquo;, &amp;lsquo;gs&amp;rsquo;, &amp;rsquo;tu&amp;rsquo;, &amp;lsquo;cd&amp;rsquo;, &amp;lsquo;xx&amp;rsquo;, &amp;lsquo;cy&amp;rsquo;, &amp;lsquo;da&amp;rsquo;, &amp;lsquo;vh&amp;rsquo;, &amp;lsquo;wj&amp;rsquo;, &amp;lsquo;uh&amp;rsquo;, &amp;lsquo;xn&amp;rsquo;, &amp;lsquo;kz&amp;rsquo;, &amp;lsquo;uj&amp;rsquo;, &amp;lsquo;jb&amp;rsquo;, &amp;lsquo;qm&amp;rsquo;, &amp;lsquo;ir&amp;rsquo;, &amp;lsquo;ge&amp;rsquo;, &amp;lsquo;xi&amp;rsquo;, &amp;lsquo;me&amp;rsquo;, &amp;lsquo;uc&amp;rsquo;, &amp;lsquo;fj&amp;rsquo;, &amp;lsquo;gl&amp;rsquo;, &amp;lsquo;wh&amp;rsquo;, &amp;lsquo;mf&amp;rsquo;, &amp;lsquo;ya&amp;rsquo;, &amp;lsquo;vi&amp;rsquo;, &amp;lsquo;si&amp;rsquo;, &amp;lsquo;zi&amp;rsquo;, &amp;lsquo;ww&amp;rsquo;, &amp;lsquo;ye&amp;rsquo;, &amp;rsquo;nv&amp;rsquo;, &amp;lsquo;fw&amp;rsquo;, &amp;lsquo;ia&amp;rsquo;, &amp;lsquo;ma&amp;rsquo;, &amp;lsquo;xl&amp;rsquo;, &amp;lsquo;fg&amp;rsquo;, &amp;lsquo;kd&amp;rsquo;, &amp;lsquo;jk&amp;rsquo;, &amp;rsquo;tm&amp;rsquo;, &amp;lsquo;fu&amp;rsquo;, &amp;lsquo;yr&amp;rsquo;, &amp;lsquo;wu&amp;rsquo;, &amp;lsquo;yy&amp;rsquo;, &amp;lsquo;vr&amp;rsquo;, &amp;lsquo;gd&amp;rsquo;, &amp;lsquo;va&amp;rsquo;, &amp;lsquo;mu&amp;rsquo;, &amp;rsquo;tk&amp;rsquo;, &amp;lsquo;qr&amp;rsquo;, &amp;rsquo;td&amp;rsquo;, &amp;lsquo;qu&amp;rsquo;, &amp;lsquo;dd&amp;rsquo;, &amp;lsquo;pi&amp;rsquo;, &amp;lsquo;ie&amp;rsquo;, &amp;lsquo;ju&amp;rsquo;, &amp;rsquo;ty&amp;rsquo;, &amp;lsquo;hu&amp;rsquo;, &amp;lsquo;qp&amp;rsquo;, &amp;lsquo;wa&amp;rsquo;, &amp;lsquo;yt&amp;rsquo;, &amp;lsquo;ri&amp;rsquo;, &amp;lsquo;vs&amp;rsquo;, &amp;lsquo;bw&amp;rsquo;, &amp;lsquo;gh&amp;rsquo;, &amp;rsquo;nw&amp;rsquo;, &amp;lsquo;uv&amp;rsquo;, &amp;lsquo;jm&amp;rsquo;, &amp;rsquo;nq&amp;rsquo;, &amp;lsquo;uz&amp;rsquo;, &amp;lsquo;mc&amp;rsquo;, &amp;lsquo;ug&amp;rsquo;, &amp;lsquo;yc&amp;rsquo;, &amp;lsquo;pm&amp;rsquo;, &amp;lsquo;pu&amp;rsquo;, &amp;lsquo;hx&amp;rsquo;, &amp;lsquo;iz&amp;rsquo;, &amp;lsquo;rg&amp;rsquo;, &amp;lsquo;vc&amp;rsquo;, &amp;lsquo;jp&amp;rsquo;, &amp;lsquo;cs&amp;rsquo;, &amp;rsquo;ly&amp;rsquo;, &amp;lsquo;xs&amp;rsquo;, &amp;lsquo;ff&amp;rsquo;, &amp;lsquo;fa&amp;rsquo;, &amp;lsquo;ch&amp;rsquo;, &amp;lsquo;dj&amp;rsquo;, &amp;lsquo;gz&amp;rsquo;, &amp;rsquo;lq&amp;rsquo;, &amp;lsquo;wf&amp;rsquo;, &amp;lsquo;kh&amp;rsquo;, &amp;lsquo;fh&amp;rsquo;, &amp;lsquo;ho&amp;rsquo;, &amp;lsquo;dz&amp;rsquo;, &amp;lsquo;rs&amp;rsquo;, &amp;lsquo;xb&amp;rsquo;, &amp;lsquo;ii&amp;rsquo;, &amp;lsquo;yb&amp;rsquo;, &amp;lsquo;ks&amp;rsquo;, &amp;lsquo;dv&amp;rsquo;, &amp;lsquo;bj&amp;rsquo;, &amp;lsquo;dg&amp;rsquo;, &amp;lsquo;ul&amp;rsquo;, &amp;lsquo;uu&amp;rsquo;, &amp;lsquo;hr&amp;rsquo;, &amp;lsquo;kj&amp;rsquo;, &amp;lsquo;mo&amp;rsquo;, &amp;lsquo;qn&amp;rsquo;, &amp;lsquo;vg&amp;rsquo;, &amp;lsquo;hv&amp;rsquo;, &amp;lsquo;ai&amp;rsquo;, &amp;lsquo;gu&amp;rsquo;, &amp;lsquo;bf&amp;rsquo;, &amp;lsquo;ke&amp;rsquo;, &amp;lsquo;bk&amp;rsquo;, &amp;lsquo;zo&amp;rsquo;, &amp;lsquo;hh&amp;rsquo;, &amp;rsquo;ls&amp;rsquo;, &amp;lsquo;pk&amp;rsquo;, &amp;lsquo;mp&amp;rsquo;, &amp;lsquo;ga&amp;rsquo;, &amp;lsquo;ds&amp;rsquo;, &amp;lsquo;ka&amp;rsquo;, &amp;lsquo;vj&amp;rsquo;, &amp;rsquo;lu&amp;rsquo;, &amp;lsquo;uk&amp;rsquo;, &amp;lsquo;gv&amp;rsquo;, &amp;lsquo;jx&amp;rsquo;, &amp;lsquo;uf&amp;rsquo;, &amp;lsquo;dm&amp;rsquo;, &amp;lsquo;hc&amp;rsquo;, &amp;lsquo;yh&amp;rsquo;, &amp;lsquo;jn&amp;rsquo;, &amp;rsquo;lk&amp;rsquo;, &amp;rsquo;tj&amp;rsquo;, &amp;lsquo;rj&amp;rsquo;, &amp;lsquo;mb&amp;rsquo;, &amp;lsquo;ao&amp;rsquo;, &amp;lsquo;qq&amp;rsquo;, &amp;lsquo;he&amp;rsquo;, &amp;lsquo;xm&amp;rsquo;, &amp;lsquo;bd&amp;rsquo;, &amp;lsquo;zd&amp;rsquo;, &amp;rsquo;ta&amp;rsquo;, &amp;lsquo;gx&amp;rsquo;, &amp;lsquo;ys&amp;rsquo;, &amp;lsquo;ce&amp;rsquo;, &amp;lsquo;wd&amp;rsquo;, &amp;lsquo;iu&amp;rsquo;, &amp;rsquo;nn&amp;rsquo;, &amp;lsquo;bc&amp;rsquo;, &amp;lsquo;vu&amp;rsquo;, &amp;lsquo;xr&amp;rsquo;, &amp;rsquo;lj&amp;rsquo;, &amp;rsquo;tz&amp;rsquo;, &amp;lsquo;hj&amp;rsquo;, &amp;rsquo;nk&amp;rsquo;, &amp;lsquo;xt&amp;rsquo;, &amp;rsquo;tc&amp;rsquo;, &amp;lsquo;xp&amp;rsquo;, &amp;lsquo;rh&amp;rsquo;, &amp;lsquo;xy&amp;rsquo;, &amp;rsquo;ni&amp;rsquo;, &amp;lsquo;hs&amp;rsquo;, &amp;rsquo;ln&amp;rsquo;, &amp;rsquo;nu&amp;rsquo;, &amp;lsquo;bm&amp;rsquo;, &amp;lsquo;bh&amp;rsquo;, &amp;lsquo;xk&amp;rsquo;, &amp;lsquo;kc&amp;rsquo;, &amp;rsquo;to&amp;rsquo;, &amp;rsquo;lc&amp;rsquo;, &amp;lsquo;ko&amp;rsquo;, &amp;lsquo;sc&amp;rsquo;, &amp;lsquo;di&amp;rsquo;, &amp;lsquo;mh&amp;rsquo;, &amp;lsquo;xq&amp;rsquo;, &amp;lsquo;go&amp;rsquo;, &amp;lsquo;if&amp;rsquo;, &amp;lsquo;yj&amp;rsquo;, &amp;lsquo;xu&amp;rsquo;, &amp;lsquo;jl&amp;rsquo;, &amp;lsquo;kx&amp;rsquo;, &amp;lsquo;do&amp;rsquo;, &amp;rsquo;lp&amp;rsquo;, &amp;lsquo;ig&amp;rsquo;, &amp;lsquo;md&amp;rsquo;, &amp;lsquo;ci&amp;rsquo;, &amp;lsquo;vf&amp;rsquo;, &amp;lsquo;dh&amp;rsquo;, &amp;lsquo;zc&amp;rsquo;, &amp;lsquo;is&amp;rsquo;, &amp;rsquo;tr&amp;rsquo;, &amp;rsquo;lv&amp;rsquo;, &amp;rsquo;ts&amp;rsquo;, &amp;lsquo;sv&amp;rsquo;, &amp;lsquo;ze&amp;rsquo;, &amp;lsquo;rz&amp;rsquo;, &amp;rsquo;nm&amp;rsquo;, &amp;lsquo;dq&amp;rsquo;, &amp;lsquo;ue&amp;rsquo;, &amp;lsquo;ph&amp;rsquo;, &amp;lsquo;hz&amp;rsquo;, &amp;lsquo;vz&amp;rsquo;, &amp;lsquo;ua&amp;rsquo;, &amp;lsquo;il&amp;rsquo;, &amp;lsquo;za&amp;rsquo;, &amp;lsquo;mk&amp;rsquo;, &amp;lsquo;se&amp;rsquo;, &amp;lsquo;vl&amp;rsquo;, &amp;lsquo;qk&amp;rsquo;, &amp;lsquo;ij&amp;rsquo;, &amp;lsquo;jt&amp;rsquo;, &amp;lsquo;hd&amp;rsquo;, &amp;lsquo;gr&amp;rsquo;, &amp;lsquo;mi&amp;rsquo;, &amp;rsquo;th&amp;rsquo;, &amp;lsquo;vd&amp;rsquo;, &amp;lsquo;an&amp;rsquo;, &amp;lsquo;jy&amp;rsquo;, &amp;rsquo;ee&amp;rsquo;, &amp;lsquo;ss&amp;rsquo;, &amp;rsquo;ns&amp;rsquo;, &amp;rsquo;na&amp;rsquo;, &amp;lsquo;sy&amp;rsquo;, &amp;lsquo;hk&amp;rsquo;, &amp;lsquo;rc&amp;rsquo;, &amp;lsquo;zz&amp;rsquo;, &amp;lsquo;ic&amp;rsquo;, &amp;rsquo;ve&amp;rsquo;, &amp;lsquo;vx&amp;rsquo;, &amp;lsquo;ql&amp;rsquo;, &amp;lsquo;pc&amp;rsquo;, &amp;lsquo;kg&amp;rsquo;, &amp;lsquo;kk&amp;rsquo;, &amp;lsquo;qt&amp;rsquo;, &amp;lsquo;qb&amp;rsquo;, &amp;lsquo;su&amp;rsquo;, &amp;lsquo;du&amp;rsquo;, &amp;lsquo;gg&amp;rsquo;, &amp;rsquo;ll&amp;rsquo;, &amp;lsquo;fz&amp;rsquo;, &amp;rsquo;ld&amp;rsquo;, &amp;rsquo;lm&amp;rsquo;, &amp;lsquo;ou&amp;rsquo;, &amp;lsquo;kl&amp;rsquo;, &amp;lsquo;dy&amp;rsquo;, &amp;lsquo;zu&amp;rsquo;, &amp;rsquo;nj&amp;rsquo;, &amp;lsquo;ky&amp;rsquo;, &amp;lsquo;iv&amp;rsquo;, &amp;lsquo;bp&amp;rsquo;, &amp;lsquo;uy&amp;rsquo;, &amp;lsquo;gc&amp;rsquo;, &amp;lsquo;wo&amp;rsquo;, &amp;rsquo;lr&amp;rsquo;, &amp;lsquo;mw&amp;rsquo;, &amp;rsquo;ti&amp;rsquo;, &amp;lsquo;fo&amp;rsquo;, &amp;rsquo;lb&amp;rsquo;, &amp;lsquo;mm&amp;rsquo;, &amp;rsquo;tn&amp;rsquo;, &amp;lsquo;yk&amp;rsquo;, &amp;lsquo;ku&amp;rsquo;, &amp;rsquo;lg&amp;rsquo;, &amp;lsquo;ry&amp;rsquo;, &amp;lsquo;pj&amp;rsquo;, &amp;lsquo;cj&amp;rsquo;, &amp;lsquo;vo&amp;rsquo;, &amp;lsquo;pw&amp;rsquo;, &amp;lsquo;qs&amp;rsquo;, &amp;lsquo;cg&amp;rsquo;, &amp;lsquo;aa&amp;rsquo;, &amp;lsquo;vv&amp;rsquo;, &amp;lsquo;mn&amp;rsquo;, &amp;lsquo;iy&amp;rsquo;, &amp;lsquo;bo&amp;rsquo;, &amp;lsquo;zs&amp;rsquo;, &amp;lsquo;bn&amp;rsquo;, &amp;lsquo;gk&amp;rsquo;, &amp;lsquo;pd&amp;rsquo;, &amp;lsquo;id&amp;rsquo;, &amp;rsquo;la&amp;rsquo;, &amp;lsquo;po&amp;rsquo;, &amp;lsquo;ro&amp;rsquo;, &amp;lsquo;sh&amp;rsquo;, &amp;lsquo;rr&amp;rsquo;, &amp;lsquo;kf&amp;rsquo;, &amp;lsquo;ah&amp;rsquo;, &amp;rsquo;ne&amp;rsquo;, &amp;rsquo;tp&amp;rsquo;, &amp;rsquo;lo&amp;rsquo;, &amp;lsquo;pa&amp;rsquo;, &amp;lsquo;dp&amp;rsquo;, &amp;lsquo;de&amp;rsquo;, &amp;lsquo;so&amp;rsquo;, &amp;lsquo;pb&amp;rsquo;, &amp;lsquo;pg&amp;rsquo;, &amp;lsquo;hy&amp;rsquo;, &amp;rsquo;nt&amp;rsquo;, &amp;rsquo;nc&amp;rsquo;, &amp;lsquo;jr&amp;rsquo;, &amp;rsquo;lw&amp;rsquo;, &amp;rsquo;lh&amp;rsquo;, &amp;lsquo;ux&amp;rsquo;, &amp;lsquo;mg&amp;rsquo;, &amp;rsquo;lz&amp;rsquo;, &amp;lsquo;vk&amp;rsquo;, &amp;lsquo;ur&amp;rsquo;, &amp;rsquo;no&amp;rsquo;, &amp;lsquo;mz&amp;rsquo;, &amp;lsquo;cc&amp;rsquo;, &amp;lsquo;hl&amp;rsquo;, &amp;lsquo;bg&amp;rsquo;, &amp;lsquo;zj&amp;rsquo;, &amp;lsquo;ha&amp;rsquo;, &amp;lsquo;yo&amp;rsquo;, &amp;lsquo;zf&amp;rsquo;, &amp;lsquo;dr&amp;rsquo;, &amp;rsquo;lx&amp;rsquo;, &amp;lsquo;cu&amp;rsquo;, &amp;lsquo;hf&amp;rsquo;, &amp;lsquo;pf&amp;rsquo;, &amp;lsquo;uo&amp;rsquo;, &amp;lsquo;sa&amp;rsquo;, &amp;lsquo;qx&amp;rsquo;, &amp;lsquo;hg&amp;rsquo;, &amp;rsquo;tv&amp;rsquo;, &amp;lsquo;gw&amp;rsquo;, &amp;rsquo;np&amp;rsquo;, &amp;lsquo;co&amp;rsquo;, &amp;rsquo;re&amp;rsquo;, &amp;lsquo;gf&amp;rsquo;, &amp;lsquo;ud&amp;rsquo;, &amp;lsquo;oo&amp;rsquo;, &amp;rsquo;en&amp;rsquo;, &amp;lsquo;zw&amp;rsquo;, &amp;lsquo;zh&amp;rsquo;, &amp;lsquo;zr&amp;rsquo;, &amp;rsquo;te&amp;rsquo;, &amp;lsquo;wg&amp;rsquo;, &amp;lsquo;cv&amp;rsquo;, &amp;lsquo;vy&amp;rsquo;, &amp;rsquo;tg&amp;rsquo;, &amp;lsquo;pz&amp;rsquo;, &amp;lsquo;kr&amp;rsquo;, &amp;lsquo;bb&amp;rsquo;, &amp;lsquo;uw&amp;rsquo;, &amp;rsquo;nl&amp;rsquo;, &amp;rsquo;ng&amp;rsquo;, &amp;rsquo;lt&amp;rsquo;, &amp;lsquo;pn&amp;rsquo;, &amp;lsquo;mj&amp;rsquo;, &amp;rsquo;nb&amp;rsquo;, &amp;lsquo;cz&amp;rsquo;, &amp;lsquo;io&amp;rsquo;, &amp;lsquo;ik&amp;rsquo;, &amp;lsquo;sz&amp;rsquo;, &amp;lsquo;sf&amp;rsquo;, &amp;lsquo;gy&amp;rsquo;, &amp;lsquo;zv&amp;rsquo;, &amp;lsquo;hw&amp;rsquo;, &amp;lsquo;rv&amp;rsquo;, &amp;lsquo;zy&amp;rsquo;, &amp;lsquo;cr&amp;rsquo;, &amp;lsquo;js&amp;rsquo;, &amp;lsquo;qy&amp;rsquo;, &amp;lsquo;sr&amp;rsquo;, &amp;rsquo;nr&amp;rsquo;, &amp;lsquo;sd&amp;rsquo;, &amp;lsquo;mq&amp;rsquo;, &amp;lsquo;pp&amp;rsquo;, &amp;lsquo;sg&amp;rsquo;, &amp;rsquo;nf&amp;rsquo;, &amp;lsquo;zg&amp;rsquo;, &amp;lsquo;ca&amp;rsquo;, &amp;rsquo;nh&amp;rsquo;, &amp;lsquo;cf&amp;rsquo;, &amp;lsquo;kw&amp;rsquo;, &amp;rsquo;ei&amp;rsquo;, &amp;lsquo;og&amp;rsquo;, &amp;lsquo;dx&amp;rsquo;, &amp;rsquo;nz&amp;rsquo;, &amp;lsquo;df&amp;rsquo;, &amp;lsquo;ix&amp;rsquo;&lt;/p>&lt;/blockquote>
 &lt;p>（顺带一提，汉语普通话中的音节数（不含声调）有 418 种，带声调的音节数有 1327 种. &lt;a href='https://www.zhihu.com/question/23171928/answer/29322918'
 target='_blank' rel='noreferrer noopener'
 >来源：知乎.&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>）&lt;/p>
@@ -5378,14 +5355,12 @@ target='_blank' rel='noreferrer noopener'
 &lt;td style="text-align: center">txyv&lt;/td>
 &lt;/tr>
 &lt;/tbody>
-&lt;/table>
-&lt;/blockquote>
+&lt;/table>&lt;/blockquote>
 &lt;p>从这个规则中我们能够看出，“词”对象的全码已经和形码没有任何关系了，它只利用了小鹤双拼.&lt;/p>
 &lt;h2>重新阐释重码问题&lt;/h2>
 &lt;p>我们把小鹤音形的输入对象从单纯的 8105 &lt;strong>字&lt;/strong>扩充到了&lt;strong>字和词&lt;/strong>，于是所谓“重码”问题就不再是“一码多字”而是“一码多对象”了——我们暂且用“对象”这个概念来指代小鹤音形码表中的字和词. 随之改变的就是我们在上一节得到的结论，我们当时的措辞是：&lt;/p>
 &lt;blockquote>
-&lt;p>在一码多字的情况下，这些字的全码种类会影响打字效果. 如果其中只有一个纯粹全码，那么键入此全码会上屏这个字；如果其中有两个纯粹全码，那么键入此全码，这两个字会进入候选；而如果其中没有纯粹全码，那么键入此全码，好像会上屏一个词语.&lt;/p>
-&lt;/blockquote>
+&lt;p>在一码多字的情况下，这些字的全码种类会影响打字效果. 如果其中只有一个纯粹全码，那么键入此全码会上屏这个字；如果其中有两个纯粹全码，那么键入此全码，这两个字会进入候选；而如果其中没有纯粹全码，那么键入此全码，好像会上屏一个词语.&lt;/p>&lt;/blockquote>
 &lt;p>现在我们可以这样说：&lt;/p>
 &lt;ul>
 &lt;li>&lt;strong>在一码多对象的情况下，这些对象的全码种类会影响输入效果. 如果其中只有一个纯粹全码，那么键入此全码会上屏这个对象；如果其中有两个纯粹全码，那么键入此全码，这两个对象会进入候选.&lt;/strong>&lt;/li>
@@ -5395,8 +5370,7 @@ target='_blank' rel='noreferrer noopener'
 target='_blank' rel='noreferrer noopener'
 >常见问题解答&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>中可以得到验证：&lt;/p>
 &lt;blockquote>
-&lt;p>小鹤音形的码表是按准无重码来设计的，基本都是首选上屏，少量次选上屏. 空格为首选上屏键，分号为次选上屏键.&lt;/p>
-&lt;/blockquote>
+&lt;p>小鹤音形的码表是按准无重码来设计的，基本都是首选上屏，少量次选上屏. 空格为首选上屏键，分号为次选上屏键.&lt;/p>&lt;/blockquote>
 &lt;p>通过理解小鹤音形的“词”对象我们搞明白了输入四键全码会上屏一个词语的问题，我们再看一下这个表格中与之相关的最后 3 行：&lt;/p>
 &lt;table>
 &lt;thead>
@@ -5448,19 +5422,16 @@ target='_blank' rel='noreferrer noopener'
 target='_blank' rel='noreferrer noopener'
 >小鹤音形编码查询&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>网上有注明，&lt;/p>
 &lt;blockquote>
-&lt;p>&lt;code>-&lt;/code> 号表示已有简码避让全码，&lt;code>*&lt;/code> 号表示生僻字 &amp;amp; 音，win 版启用 oqm 可输入.&lt;/p>
-&lt;/blockquote>
+&lt;p>&lt;code>-&lt;/code> 号表示已有简码避让全码，&lt;code>*&lt;/code> 号表示生僻字 &amp;amp; 音，win 版启用 oqm 可输入.&lt;/p>&lt;/blockquote>
 &lt;p>“简码”的含义在文章的开头已经定义过了：&lt;/p>
 &lt;blockquote>
-&lt;p>在【小鹤音形】中，不到 4 个键位的【码】称为简码. 1 个键位的码叫【一简码】，2 个键位的码叫【二简码】，3 个键位的码叫【三简码】.&lt;/p>
-&lt;/blockquote>
+&lt;p>在【小鹤音形】中，不到 4 个键位的【码】称为简码. 1 个键位的码叫【一简码】，2 个键位的码叫【二简码】，3 个键位的码叫【三简码】.&lt;/p>&lt;/blockquote>
 &lt;p>而“已有简码避让全码”的意思还是很好理解的，或者来看&lt;a href='http://xhrm.flypy.com/1960620'
 target='_blank' rel='noreferrer noopener'
 >官方的解释&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>：&lt;/p>
 &lt;blockquote>
 &lt;p>什么叫 “出简让全” ？&lt;/p>
-&lt;p>有的字因为已经有简码而其四码全码和别的字词全码重码，这时则让出全码排前的位置，我称之为“出简让全”，并把这类字的全码单独放到一个码表分类项“出简让全”中，从而达到“让全”的两种效果：①不启用这个分类，候选不显示；②启用这个分类，候选居后. 输入法默认设置为①的效果，使用组合键 ctrl+alt+q 或直通车 oqm 切换，也可通过单引号引导临时启用.&lt;/p>
-&lt;/blockquote>
+&lt;p>有的字因为已经有简码而其四码全码和别的字词全码重码，这时则让出全码排前的位置，我称之为“出简让全”，并把这类字的全码单独放到一个码表分类项“出简让全”中，从而达到“让全”的两种效果：①不启用这个分类，候选不显示；②启用这个分类，候选居后. 输入法默认设置为①的效果，使用组合键 ctrl+alt+q 或直通车 oqm 切换，也可通过单引号引导临时启用.&lt;/p>&lt;/blockquote>
 &lt;p>举例来说，“伸”这个字在打 “ufru” 这个四键全码时打不出来，就是因为它已经让出了全码排前的位置——而之所以“伸”这个字让出了全码排前的位置，则是因为它&lt;/p>
 &lt;ul>
 &lt;li>已有简码，&lt;/li>
@@ -10739,8 +10710,7 @@ target='_blank' rel='noreferrer noopener'
 >这里&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>），使用 / 键搜索 -R，可以看到这样两行：&lt;/p>
 &lt;blockquote>
 &lt;p>&lt;code>-R, --rotate 90|270|180&lt;/code>&lt;/p>
-&lt;p>Rotate the tree rooted at the selected node.&lt;/p>
-&lt;/blockquote>
+&lt;p>Rotate the tree rooted at the selected node.&lt;/p>&lt;/blockquote>
 &lt;p>从这里开始上下翻一翻，看一看这两行在整个文档中处于一个什么样的位置，它的上下文语境是什么样的. 我们把整份文档简化成这种样子：&lt;/p>
 &lt;p>&lt;figure>
 &lt;img loading='lazy' src='https://zerovip.github.io/zh/63233/bspwm-manpage.i.png' alt='BSPWM(1) 文档大纲'/>
@@ -10752,8 +10722,7 @@ target='_blank' rel='noreferrer noopener'
 &lt;p>再说后面的 &lt;code>COMMANDS&lt;/code>，它没有被中括号括起来，说明它是必写的，而且它也是非终结符，需要进行替换，下面列出了 &lt;code>COMMANDS&lt;/code> 可以被替换成哪些东西，一共有 22 种可能性，而且每种的格式和说明也都写得很详细，reddit 网友给出的三条指令中，两条 &lt;code>-R&lt;/code> 和一条 &lt;code>-f&lt;/code> 都在其中，我也把这两条列在了上面的大纲里（见上面大纲图中第 22 - 23 行）. 在这里只带着大家看一下 &lt;code>-R&lt;/code> 命令，也就是我们最开始搜索 &lt;code>-R&lt;/code> 时看到的那两行：&lt;/p>
 &lt;blockquote>
 &lt;p>&lt;code>-R, --rotate 90|270|180&lt;/code>&lt;/p>
-&lt;p>Rotate the tree rooted at the selected node.&lt;/p>
-&lt;/blockquote>
+&lt;p>Rotate the tree rooted at the selected node.&lt;/p>&lt;/blockquote>
 &lt;p>如果想用 &lt;code>-R&lt;/code> 的话，它的格式是：把 &lt;code>COMMANDS&lt;/code> 替换为 &lt;code>-R 90&lt;/code> 或 &lt;code>-R 270&lt;/code> 或 &lt;code>-R 180&lt;/code> 三选一，含义分别是：以刚刚选择的 &lt;code>NODE_SEL&lt;/code> 节点为根，对它下面的所有子树进行顺时针 90 或 270 或 180 度的旋转.&lt;/p>
 &lt;p>剩下的问题就是 &lt;code>NODE_SEL&lt;/code> 到底能替换成什么了，它的语法格式是怎么样的. 我们在这几行附近并没有看到说明，那就再用 / 键搜索 &lt;code>NODE_SEL&lt;/code>，就找到了我上个视频的结尾处仔细分析过的一大串语法格式（见上面大纲图中第 10 行）：&lt;/p>
 &lt;blockquote>
@@ -10770,8 +10739,7 @@ target='_blank' rel='noreferrer noopener'
 &lt;li>第三步：查找下面 &lt;code>JUMP&lt;/code> 的定义，也就是：&lt;code>JUMP := first|1|second|2|brother|parent|DIR&lt;/code>. 这按理来说是一个 7 选 1，但是注意，这是这个文档写得不太规范的一个地方，在 Path Jumps 的描述中我们看到这样一句话：&lt;/li>
 &lt;/ul>
 &lt;blockquote>
-&lt;p>The initial node is the focused node (or the root if the path starts with /) of the reference desktop (or the selected desktop if the path has a DESKTOP_SEL prefix).&lt;/p>
-&lt;/blockquote>
+&lt;p>The initial node is the focused node (or the root if the path starts with /) of the reference desktop (or the selected desktop if the path has a DESKTOP_SEL prefix).&lt;/p>&lt;/blockquote>
 &lt;p>这就把第二步中 &lt;code>PATH&lt;/code> 的含义解释清楚了. 我们想通过一些路径来选择我们想要的节点，这大体上可以类比在微软 windows 系统中选择一个文件：先指定一个盘符，是 C 盘还是 D 盘，再进行路径的跳转，也就是打开一个文件夹再打开一个文件夹；这里是用 &lt;code>@[DESKTOP_SEL:]&lt;/code> 先指定桌面（不写 &lt;code>DESKTOP_SEL&lt;/code> 就是指定当前桌面），再用 &lt;code>JUMP&lt;/code> 进行跳转，需要多次跳转的话后面就再写好多个 &lt;code>/JUMP&lt;/code>. 那么只有一个 &lt;code>/&lt;/code> 就表示选择了根节点，不再进行跳转了——这当然也是可以的，就好比我打开 C 盘后就停止了，不再打开下面的文件夹了. 所以我们这里 &lt;code>JUMP&lt;/code> 就取空值，表示不再跳转，这是 7 选 1 之外的做法，显然是不符合 BNF 语法规范的.&lt;/p>
 &lt;p>无论如何，我们用 &lt;code>@/&lt;/code> 就选择了当前桌面的根节点，也就是当前桌面下的所有窗口，对它执行 &lt;code>-R&lt;/code> 就完成了对当前桌面的所有窗口执行旋转操作，整条语句就是网友给出的 &lt;code>bspc node @/ -R 90&lt;/code>.&lt;/p>
 &lt;p>那么同理，我们可以精确地选择当前节点的 parent 节点，即用 &lt;code>@parent&lt;/code> 替换 &lt;code>NODE_SEL&lt;/code>. 具体的流程为：&lt;code>NODE_SEL&lt;/code> 替换为 &lt;code>PATH&lt;/code>，&lt;code>PATH&lt;/code> 替换成 &lt;code>@JUMP&lt;/code>（不选 &lt;code>DESKTOP_SEL&lt;/code> 表示当前桌面；不选 &lt;code>/&lt;/code> 表示初始节点从当前焦点所在的节点开始，而不是从当前桌面的根节点开始），&lt;code>JUMP&lt;/code> 7 选 1 替换成 &lt;code>parent&lt;/code>. 整条语句就变成了 &lt;code>bspc node @parent -R 90&lt;/code>.&lt;/p>
@@ -10919,8 +10887,7 @@ target='_blank' rel='noreferrer noopener'
 &lt;/div>&lt;p>里面只有一行，但有个 &lt;code>external_rules_command&lt;/code> 是我们不理解的，&lt;code>man bspwm&lt;/code> 打开文档，用 / 键搜索一下 &lt;code>external_rules_command&lt;/code>，找到它在文档中的位置，是位于 &lt;code>SETTINGS&lt;/code> 里面的 &lt;code>Globle Settings&lt;/code>，看上下文，和它平等地位的还有我们在上个视频中讲到的 &lt;code>normal_border_color&lt;/code>、&lt;code>focused_border_color&lt;/code>、自带的 bspwmrc 例子中有的 &lt;code>split_ratio&lt;/code>、&lt;code>borderless_monocle&lt;/code>、&lt;code>gapless_monocle&lt;/code> 等，这下我们心里就有底了，我们可以把这一行复制到 &lt;code>~/.config/bspwm/bspwmrc&lt;/code> 中，就像我们在上个视频中改边框颜色一样. 现在我们静下心来读一读文档中对 external_rules_command 的解释：&lt;/p>
 &lt;blockquote>
 &lt;p>Absolute path to the command used to retrieve rule consequences. The command will receive the following arguments: window ID, class name, instance name, and intermediate consequences. The output of that command must have the following format: key1=value1 key2=value2 &amp;hellip; (the valid key/value pairs are given in the description of the rule command).&lt;/p>
-&lt;p>（一个命令的绝对路径，这个命令是用来查找规则结果的. 这个命令要接收如下的参数：window ID、class name、instance name、intermediate consequences. 这个命令的输出结果必须是键值对的格式，合法的键值对在 rule 命令的描述中给出. ）&lt;/p>
-&lt;/blockquote>
+&lt;p>（一个命令的绝对路径，这个命令是用来查找规则结果的. 这个命令要接收如下的参数：window ID、class name、instance name、intermediate consequences. 这个命令的输出结果必须是键值对的格式，合法的键值对在 rule 命令的描述中给出. ）&lt;/p>&lt;/blockquote>
 &lt;p>如果在上一节中你按照我的指示去读了文档中关于 Rule 的部分那不到 15 行的内容，那你现在看到它最后一句说的键值对时一定能够会心一笑了.&lt;/p>
 &lt;p>现在我们知道了这短短的一行 &lt;code>bspc config&lt;/code> 语句中最后的 &lt;code>&amp;quot;$(which external_rules)&amp;quot;&lt;/code> 就是这里说的绝对路径了，再结合我们对 Linux 基本语句 &lt;code>which&lt;/code> 的知识，我们就明白了另一份文件 external_rules 一定是一份脚本文件，而且要把它加到环境变量中以便我们能直接调用它，就像使用 &lt;code>ls&lt;/code>、&lt;code>cd&lt;/code> 一样直接使用 &lt;code>external_rules&lt;/code> 作为一个命令，而且这个命令必须带四个参数，输出必须是键值对.&lt;/p>
 &lt;div style='background-color:#FDE763;'>
@@ -11099,8 +11066,7 @@ target='_blank' rel='noreferrer noopener'
 target='_blank' rel='noreferrer noopener'
 >维基百科&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>中可以找到 1978 年 Doug Mcllroy 最原始四句表述，我们这里单取出第一条来看：&lt;/p>
 &lt;blockquote>
-&lt;p>Make each program do one thing well. To do a new job, build afresh rather than complicate old programs by adding new &amp;ldquo;features&amp;rdquo;.&lt;/p>
-&lt;/blockquote>
+&lt;p>Make each program do one thing well. To do a new job, build afresh rather than complicate old programs by adding new &amp;ldquo;features&amp;rdquo;.&lt;/p>&lt;/blockquote>
 &lt;p>简单地说就是一个程序只应该做一件事并把它做好. 其实我说到这里大家应该就明白了，bspwm 就单纯地只负责窗口管理的部分，那么键盘输入的部分怎么办呢？bspwm 的作者又为了这个任务创造了一个新的工具 sxhkd. 这样做的好处是我们可以使用其他工具来进行快捷键绑定的工作；或者反过来：在不用 bspwm 的情况下，单纯只安装 sxhkd 来处理键盘输入，比如使用键盘调整音量、调整屏幕亮度的工作都可以由 sxhkd 来完成.&lt;/p>
 &lt;p>这样的 Unix 哲学在 bspwm 的身上体现得淋漓尽致：&lt;/p>
 &lt;ul>
