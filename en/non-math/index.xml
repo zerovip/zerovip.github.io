@@ -3,317 +3,317 @@
 Recent Content |
 NON-MATHMATICS
 | Zero's Ivory Tower</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>
-Sat, 28 Aug 2021 00:00:00 CST</lastBuildDate><item><title>Make Hugo Invert Color for Images when Using a Dark Mode - Build a Theme</title><link>https://zerovip.github.io/en/15738/</link><pubDate>Sat, 28 Aug 2021 00:00:00 CST</pubDate><guid isPermaLink="false">/en/15738/</guid><description>&lt;p>This post will discuss the display problem of images in light / dark mode, and there are some sample images as examples. You can test their display by manually switch the theme of this site. The switcher is in the upper right corner of the left menu bar, and if you are using a phone you can tap the burger button in the upper left corner to call out the menu bar.&lt;/p>
-&lt;h1>The problem&lt;/h1>
-&lt;p>Some images have black text on a white background, which is harsh when using the dark mode:&lt;/p>
-&lt;p>&lt;figure>
-&lt;img loading='lazy' src='https://zerovip.github.io/en/15738/lorem.jpg' alt='A sample image have black text on a white background'/>
-&lt;figcaption>◉ Figure. A sample image have black text on a white background&lt;/figcaption>
-&lt;/figure>
-&lt;/p>
-&lt;p>While some images have black text on a transparent background, which is not visible when using the dark mode:&lt;/p>
-&lt;p>&lt;figure>
-&lt;img loading='lazy' src='https://zerovip.github.io/en/15738/lorem.png' alt='A sample image have black text on a transparent background'/>
-&lt;figcaption>◉ Figure. A sample image have black text on a transparent background&lt;/figcaption>
-&lt;/figure>
-&lt;/p>
-&lt;p>Both of these cases need the image to be inverted when the reader selects the dark mode.&lt;/p>
-&lt;h1>How to deal with&lt;/h1>
-&lt;p>The approach is using the CSS filters technique. For example, in the following code, &lt;code>.normal&lt;/code> is for the normal color and &lt;code>.inverted&lt;/code> is for the inverted color.&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;span class="lnt">2
-&lt;/span>&lt;span class="lnt">3
-&lt;/span>&lt;span class="lnt">4
-&lt;/span>&lt;span class="lnt">5
-&lt;/span>&lt;span class="lnt">6
-&lt;/span>&lt;span class="lnt">7
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-CSS" data-lang="CSS">&lt;span class="line">&lt;span class="cl">&lt;span class="p">.&lt;/span>&lt;span class="nc">normal&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">filter&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">invert&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="kt">%&lt;/span>&lt;span class="p">);&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">.&lt;/span>&lt;span class="nc">inverted&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">filter&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">invert&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">100&lt;/span>&lt;span class="kt">%&lt;/span>&lt;span class="p">);&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>We can put the above code into a CSS variable, together with the dark mode switch part. Then we edit &lt;a href='https://gohugo.io/getting-started/configuration-markup/#markdown-render-hooks'
+Sat, 28 Aug 2021 00:00:00 CST</lastBuildDate><item><title>Make Hugo Invert Color for Images when Using a Dark Mode - Build a Theme</title><link>https://zerovip.github.io/en/15738/</link><pubDate>Sat, 28 Aug 2021 00:00:00 CST</pubDate><guid isPermaLink="false">/en/15738/</guid><description>&lt;p&gt;This post will discuss the display problem of images in light / dark mode, and there are some sample images as examples. You can test their display by manually switch the theme of this site. The switcher is in the upper right corner of the left menu bar, and if you are using a phone you can tap the burger button in the upper left corner to call out the menu bar.&lt;/p&gt;
+&lt;h1&gt;The problem&lt;/h1&gt;
+&lt;p&gt;Some images have black text on a white background, which is harsh when using the dark mode:&lt;/p&gt;
+&lt;p&gt;&lt;figure&gt;
+&lt;img loading='lazy' src='https://zerovip.github.io/en/15738/lorem.jpg' alt='A sample image have black text on a white background'/&gt;
+&lt;figcaption&gt;◉ Figure. A sample image have black text on a white background&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;While some images have black text on a transparent background, which is not visible when using the dark mode:&lt;/p&gt;
+&lt;p&gt;&lt;figure&gt;
+&lt;img loading='lazy' src='https://zerovip.github.io/en/15738/lorem.png' alt='A sample image have black text on a transparent background'/&gt;
+&lt;figcaption&gt;◉ Figure. A sample image have black text on a transparent background&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;Both of these cases need the image to be inverted when the reader selects the dark mode.&lt;/p&gt;
+&lt;h1&gt;How to deal with&lt;/h1&gt;
+&lt;p&gt;The approach is using the CSS filters technique. For example, in the following code, &lt;code&gt;.normal&lt;/code&gt; is for the normal color and &lt;code&gt;.inverted&lt;/code&gt; is for the inverted color.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;span class="lnt"&gt;6
+&lt;/span&gt;&lt;span class="lnt"&gt;7
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSS" data-lang="CSS"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;normal&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;filter&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;invert&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="kt"&gt;%&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;inverted&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;filter&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;invert&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="kt"&gt;%&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;We can put the above code into a CSS variable, together with the dark mode switch part. Then we edit &lt;a href='https://gohugo.io/getting-started/configuration-markup/#markdown-render-hooks'
 target='_blank' rel='noreferrer noopener'
->render hooks&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a> in the Hugo template, one of which is for image processing, just add appropriate style to the image there.&lt;/p>
-&lt;p>About the dark mode switching function I refer to &lt;a href='https://dev.to/lampewebdev/css-quickies-css-variables-or-how-you-create-a-white-dark-theme-easily-1i0i'
+&gt;render hooks&lt;b&gt;&lt;sub&gt;⧉&lt;/sub&gt;&lt;/b&gt;&lt;/a&gt; in the Hugo template, one of which is for image processing, just add appropriate style to the image there.&lt;/p&gt;
+&lt;p&gt;About the dark mode switching function I refer to &lt;a href='https://dev.to/lampewebdev/css-quickies-css-variables-or-how-you-create-a-white-dark-theme-easily-1i0i'
 target='_blank' rel='noreferrer noopener'
->this article&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a> in the practice. Roughly speaking, when the reader switch the site theme to dark mode, the whole &lt;code>&amp;lt;html&amp;gt;&lt;/code> container will be added a class to indicate that the page in dark mode now (&lt;code>.classList.add(&amp;quot;dark&amp;quot;)&lt;/code>); and when the reader switch to light mode, this class will be deleted (&lt;code>.classList.remove(&amp;quot;dark&amp;quot;)&lt;/code>). On the CSS’ hand, we assign different values to a same variable depending on whether the container has the &lt;code>dark&lt;/code> class. While this variable will be used for HTML elements’ styles. See the code below for details.&lt;/p>
-&lt;h1>The code&lt;/h1>
-&lt;p>Here is the HTML code. Give a class to the whole &lt;code>&amp;lt;html&amp;gt;&lt;/code> container:&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;span class="lnt">2
-&lt;/span>&lt;span class="lnt">3
-&lt;/span>&lt;span class="lnt">4
-&lt;/span>&lt;span class="lnt">5
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">html&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;theme-container&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">body&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c">&amp;lt;!--Something…--&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">body&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">html&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>Define the same variable &lt;code>--c-img-filter&lt;/code> in two different cases, depending on whether the container has the &lt;code>dark&lt;/code> class:&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;span class="lnt">2
-&lt;/span>&lt;span class="lnt">3
-&lt;/span>&lt;span class="lnt">4
-&lt;/span>&lt;span class="lnt">5
-&lt;/span>&lt;span class="lnt">6
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-css" data-lang="css">&lt;span class="line">&lt;span class="cl">&lt;span class="p">.&lt;/span>&lt;span class="nc">theme-container&lt;/span>&lt;span class="p">{&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">--c-img-filter&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">invert&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="kt">%&lt;/span>&lt;span class="p">);&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">.&lt;/span>&lt;span class="nc">theme-container&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nc">dark&lt;/span>&lt;span class="p">{&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">--c-img-filter&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">invert&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">100&lt;/span>&lt;span class="kt">%&lt;/span>&lt;span class="p">);&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>Finally let’s deal with the Hugo template:&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
-&lt;/span>&lt;span class="lnt"> 2
-&lt;/span>&lt;span class="lnt"> 3
-&lt;/span>&lt;span class="lnt"> 4
-&lt;/span>&lt;span class="lnt"> 5
-&lt;/span>&lt;span class="lnt"> 6
-&lt;/span>&lt;span class="lnt"> 7
-&lt;/span>&lt;span class="lnt"> 8
-&lt;/span>&lt;span class="lnt"> 9
-&lt;/span>&lt;span class="lnt">10
-&lt;/span>&lt;span class="lnt">11
-&lt;/span>&lt;span class="lnt">12
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">&lt;span class="c">&amp;lt;!-- layouts/_default/_markup/render-image.html --&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">{{ $url := .Destination | safeURL }}
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">figure&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">img&lt;/span> &lt;span class="na">src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;{{ $url }}&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="err">{{&lt;/span> &lt;span class="err">$&lt;/span>&lt;span class="na">file_name_array&lt;/span> &lt;span class="na">:&lt;/span>&lt;span class="o">=&lt;/span> &lt;span class="s">split&lt;/span> &lt;span class="err">$&lt;/span>&lt;span class="na">url&lt;/span> &lt;span class="err">&amp;#34;.&amp;#34;&lt;/span> &lt;span class="err">}}&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="err">{{&lt;/span> &lt;span class="err">$&lt;/span>&lt;span class="na">file_name_len&lt;/span> &lt;span class="na">:&lt;/span>&lt;span class="o">=&lt;/span> &lt;span class="s">len&lt;/span> &lt;span class="err">$&lt;/span>&lt;span class="na">file_name_array&lt;/span> &lt;span class="err">}}&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="err">{{&lt;/span> &lt;span class="na">if&lt;/span> &lt;span class="na">eq&lt;/span> &lt;span class="err">(&lt;/span>&lt;span class="na">index&lt;/span> &lt;span class="err">$&lt;/span>&lt;span class="na">file_name_array&lt;/span> &lt;span class="err">(&lt;/span>&lt;span class="na">sub&lt;/span> &lt;span class="err">$&lt;/span>&lt;span class="na">file_name_len&lt;/span> &lt;span class="na">2&lt;/span>&lt;span class="err">))&lt;/span> &lt;span class="err">&amp;#34;&lt;/span>&lt;span class="na">i&lt;/span>&lt;span class="err">&amp;#34;&lt;/span> &lt;span class="err">}}&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">style&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;filter: var(--c-img-filter);&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="err">{{&lt;/span> &lt;span class="na">end&lt;/span> &lt;span class="err">}}&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">figure&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>We didn’t simply add &lt;code>style=&amp;quot;filter: var(--c-img-filter);&amp;quot;&lt;/code> to all the images. Instead, we analyze file name first. The effect we achieved is: Invert the color of images named as &lt;code>xxx.i.{png|jpg|gif|jpeg|webp|…}&lt;/code> when the reader switch to dark mode, while keep as it is for others. For example:&lt;/p>
-&lt;ul>
-&lt;li>This image is named as &lt;code>lorem.i.jpg&lt;/code>, which is black text on a white background for light mode, and white text on a black background for dark mode.&lt;/li>
-&lt;/ul>
-&lt;p>&lt;figure>
-&lt;img loading='lazy' src='https://zerovip.github.io/en/15738/lorem.i.jpg' alt='lorem.i.jpg'/>
-&lt;figcaption>◉ Figure. lorem.i.jpg&lt;/figcaption>
-&lt;/figure>
-&lt;/p>
-&lt;hr>
-&lt;ul>
-&lt;li>This image is named as &lt;code>lorem.i.png&lt;/code>, which is black text on a transparent background for light mode, and white text for dark mode.&lt;/li>
-&lt;/ul>
-&lt;p>&lt;figure>
-&lt;img loading='lazy' src='https://zerovip.github.io/en/15738/lorem.i.png' alt='lorem.i.png'/>
-&lt;figcaption>◉ Figure. lorem.i.png&lt;/figcaption>
-&lt;/figure>
-&lt;/p>
-&lt;hr>
-&lt;ul>
-&lt;li>This image is named as &lt;code>cat.jpg&lt;/code>, its color is normal for both light and dark mode.&lt;/li>
-&lt;/ul>
-&lt;p>&lt;figure>
-&lt;img loading='lazy' src='https://zerovip.github.io/en/15738/cat.jpg' alt='cat.jpg'/>
-&lt;figcaption>◉ Figure. cat.jpg&lt;/figcaption>
-&lt;/figure>
-&lt;/p>
-&lt;hr></description></item><item><title>Fix the White Flash on Page Load When Using a Dark Mode on a Static Site - Build a Theme</title><link>https://zerovip.github.io/en/01901/</link><pubDate>Fri, 27 Aug 2021 00:00:00 CST</pubDate><guid isPermaLink="false">/en/01901/</guid><description>&lt;h1>The problem&lt;/h1>
-&lt;p>This Hugo theme I wrote have had a problem. It defaults to the light mode, but if you switch to the dark mode&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>, then when loading a new page it will first render the light mode and then automatically switch to the dark, looks like it flashes white a little bit. I thought all the static sites have to face this problem, until one day I found some healthy themes, for instance, &lt;a href='https://adityatelange.github.io/hugo-PaperMod/'
+&gt;this article&lt;b&gt;&lt;sub&gt;⧉&lt;/sub&gt;&lt;/b&gt;&lt;/a&gt; in the practice. Roughly speaking, when the reader switch the site theme to dark mode, the whole &lt;code&gt;&amp;lt;html&amp;gt;&lt;/code&gt; container will be added a class to indicate that the page in dark mode now (&lt;code&gt;.classList.add(&amp;quot;dark&amp;quot;)&lt;/code&gt;); and when the reader switch to light mode, this class will be deleted (&lt;code&gt;.classList.remove(&amp;quot;dark&amp;quot;)&lt;/code&gt;). On the CSS’ hand, we assign different values to a same variable depending on whether the container has the &lt;code&gt;dark&lt;/code&gt; class. While this variable will be used for HTML elements’ styles. See the code below for details.&lt;/p&gt;
+&lt;h1&gt;The code&lt;/h1&gt;
+&lt;p&gt;Here is the HTML code. Give a class to the whole &lt;code&gt;&amp;lt;html&amp;gt;&lt;/code&gt; container:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-html" data-lang="html"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;html&lt;/span&gt; &lt;span class="na"&gt;class&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;theme-container&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;body&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c"&gt;&amp;lt;!--Something…--&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;body&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;html&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Define the same variable &lt;code&gt;--c-img-filter&lt;/code&gt; in two different cases, depending on whether the container has the &lt;code&gt;dark&lt;/code&gt; class:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;span class="lnt"&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-css" data-lang="css"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;theme-container&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nv"&gt;--c-img-filter&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;invert&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="kt"&gt;%&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;theme-container&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;dark&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nv"&gt;--c-img-filter&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;invert&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="kt"&gt;%&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Finally let’s deal with the Hugo template:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-html" data-lang="html"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c"&gt;&amp;lt;!-- layouts/_default/_markup/render-image.html --&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;{{ $url := .Destination | safeURL }}
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;figure&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;img&lt;/span&gt; &lt;span class="na"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;{{ $url }}&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="err"&gt;{{&lt;/span&gt; &lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="na"&gt;file_name_array&lt;/span&gt; &lt;span class="na"&gt;:&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;split&lt;/span&gt; &lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="na"&gt;url&lt;/span&gt; &lt;span class="err"&gt;&amp;#34;.&amp;#34;&lt;/span&gt; &lt;span class="err"&gt;}}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="err"&gt;{{&lt;/span&gt; &lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="na"&gt;file_name_len&lt;/span&gt; &lt;span class="na"&gt;:&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;len&lt;/span&gt; &lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="na"&gt;file_name_array&lt;/span&gt; &lt;span class="err"&gt;}}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="err"&gt;{{&lt;/span&gt; &lt;span class="na"&gt;if&lt;/span&gt; &lt;span class="na"&gt;eq&lt;/span&gt; &lt;span class="err"&gt;(&lt;/span&gt;&lt;span class="na"&gt;index&lt;/span&gt; &lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="na"&gt;file_name_array&lt;/span&gt; &lt;span class="err"&gt;(&lt;/span&gt;&lt;span class="na"&gt;sub&lt;/span&gt; &lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="na"&gt;file_name_len&lt;/span&gt; &lt;span class="na"&gt;2&lt;/span&gt;&lt;span class="err"&gt;))&lt;/span&gt; &lt;span class="err"&gt;&amp;#34;&lt;/span&gt;&lt;span class="na"&gt;i&lt;/span&gt;&lt;span class="err"&gt;&amp;#34;&lt;/span&gt; &lt;span class="err"&gt;}}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="na"&gt;style&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;filter: var(--c-img-filter);&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="err"&gt;{{&lt;/span&gt; &lt;span class="na"&gt;end&lt;/span&gt; &lt;span class="err"&gt;}}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;figure&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;We didn’t simply add &lt;code&gt;style=&amp;quot;filter: var(--c-img-filter);&amp;quot;&lt;/code&gt; to all the images. Instead, we analyze file name first. The effect we achieved is: Invert the color of images named as &lt;code&gt;xxx.i.{png|jpg|gif|jpeg|webp|…}&lt;/code&gt; when the reader switch to dark mode, while keep as it is for others. For example:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;This image is named as &lt;code&gt;lorem.i.jpg&lt;/code&gt;, which is black text on a white background for light mode, and white text on a black background for dark mode.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;figure&gt;
+&lt;img loading='lazy' src='https://zerovip.github.io/en/15738/lorem.i.jpg' alt='lorem.i.jpg'/&gt;
+&lt;figcaption&gt;◉ Figure. lorem.i.jpg&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;This image is named as &lt;code&gt;lorem.i.png&lt;/code&gt;, which is black text on a transparent background for light mode, and white text for dark mode.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;figure&gt;
+&lt;img loading='lazy' src='https://zerovip.github.io/en/15738/lorem.i.png' alt='lorem.i.png'/&gt;
+&lt;figcaption&gt;◉ Figure. lorem.i.png&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;This image is named as &lt;code&gt;cat.jpg&lt;/code&gt;, its color is normal for both light and dark mode.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;figure&gt;
+&lt;img loading='lazy' src='https://zerovip.github.io/en/15738/cat.jpg' alt='cat.jpg'/&gt;
+&lt;figcaption&gt;◉ Figure. cat.jpg&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;hr&gt;</description></item><item><title>Fix the White Flash on Page Load When Using a Dark Mode on a Static Site - Build a Theme</title><link>https://zerovip.github.io/en/01901/</link><pubDate>Fri, 27 Aug 2021 00:00:00 CST</pubDate><guid isPermaLink="false">/en/01901/</guid><description>&lt;h1&gt;The problem&lt;/h1&gt;
+&lt;p&gt;This Hugo theme I wrote have had a problem. It defaults to the light mode, but if you switch to the dark mode&lt;sup id="fnref:1"&gt;&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref"&gt;1&lt;/a&gt;&lt;/sup&gt;, then when loading a new page it will first render the light mode and then automatically switch to the dark, looks like it flashes white a little bit. I thought all the static sites have to face this problem, until one day I found some healthy themes, for instance, &lt;a href='https://adityatelange.github.io/hugo-PaperMod/'
 target='_blank' rel='noreferrer noopener'
->PaperMod&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>. So, there must be a way to solve this.&lt;/p>
-&lt;p>I searched this on the internet. There is an article &lt;a href='https://zwbetz.com/fix-the-white-flash-on-page-load-when-using-a-dark-theme-on-a-static-site/'
+&gt;PaperMod&lt;b&gt;&lt;sub&gt;⧉&lt;/sub&gt;&lt;/b&gt;&lt;/a&gt;. So, there must be a way to solve this.&lt;/p&gt;
+&lt;p&gt;I searched this on the internet. There is an article &lt;a href='https://zwbetz.com/fix-the-white-flash-on-page-load-when-using-a-dark-theme-on-a-static-site/'
 target='_blank' rel='noreferrer noopener'
->Fix the White Flash on Page Load When Using a Dark Theme on a Static Site&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a> by the maintainer of &lt;a href='https://github.com/zwbetz-gh/cupper-hugo-theme'
+&gt;Fix the White Flash on Page Load When Using a Dark Theme on a Static Site&lt;b&gt;&lt;sub&gt;⧉&lt;/sub&gt;&lt;/b&gt;&lt;/a&gt; by the maintainer of &lt;a href='https://github.com/zwbetz-gh/cupper-hugo-theme'
 target='_blank' rel='noreferrer noopener'
->theme Cupper&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a>. I tried their solution. In Chrome, it indeed works; but in Firefox it doesn’t. Firefox will render &lt;code>visibility: hidden; opacity: 0;&lt;/code> to a whole blank page, and only after &lt;code>DOMContentLoaded&lt;/code> happens &lt;code>showContent()&lt;/code> function will show the content. Means: the page still flashes. Before it flashes the &lt;strong>light mode&lt;/strong>, now it flashes the &lt;strong>blank page&lt;/strong>. Just as bad as before.&lt;/p>
-&lt;p>I think the difference between Firefox and Chrome is because the developers of Chrome used magic, they tried their best to bring Chrome users a better experience. And this covers up the real problem for the Hugo theme developers who use Chrome.&lt;/p>
-&lt;h1>Find the cause&lt;/h1>
-&lt;p>The main idea is still to understand the process of how the browser render a page. Simply put:&lt;/p>
-&lt;ul>
-&lt;li>You request for a page;&lt;/li>
-&lt;li>The browser download the entire HTML and save as DOM, then parse and render the page from top to bottom;&lt;/li>
-&lt;li>Stop parsing when encountering an external CSS or JavaScript file. Download it and then continue;&lt;/li>
-&lt;li>When encountering &lt;code>&amp;lt;style&amp;gt;&amp;lt;/style&amp;gt;&lt;/code> or just loaded external styles, store them as CSSOM and re-render the influential part;&lt;/li>
-&lt;li>When encountering &lt;code>&amp;lt;script&amp;gt;&amp;lt;/script&amp;gt;&lt;/code> or just loaded external scripts, stop parsing and run the scripts. Continue parsing and rendering after finish running them;&lt;/li>
-&lt;li>So on and so on until all the works are done.&lt;/li>
-&lt;/ul>
-&lt;p>The cause to the white flash problem is that I put the JavaScript for theme’s mode switching at the end of &lt;code>&amp;lt;body&amp;gt;&lt;/code>, like this:&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;span class="lnt">2
-&lt;/span>&lt;span class="lnt">3
-&lt;/span>&lt;span class="lnt">4
-&lt;/span>&lt;span class="lnt">5
-&lt;/span>&lt;span class="lnt">6
-&lt;/span>&lt;span class="lnt">7
-&lt;/span>&lt;span class="lnt">8
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&amp;lt;!DOCTYPE html&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">html&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">body&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c">&amp;lt;!-- lots of stuff…… --&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">script&lt;/span> &lt;span class="na">src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;changeTheme.js&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">script&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">body&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">html&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h1>The solution&lt;/h1>
-&lt;p>The solution to this problem is quite simple, with two points:&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;ol>
-&lt;li>Put the script for theme’s mode switching into &lt;code>&amp;lt;head&amp;gt;&lt;/code>, in order to determine the theme currently selected by the user before rendering the body;&lt;/li>
-&lt;/ol>
-&lt;/li>
-&lt;li>
-&lt;ol start="2">
-&lt;li>Upgrade the container for the theme to the entire &lt;code>&amp;lt;html&amp;gt;&lt;/code>, i.e., from&lt;/li>
-&lt;/ol>
-&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;span class="lnt">2
-&lt;/span>&lt;span class="lnt">3
-&lt;/span>&lt;span class="lnt">4
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">html&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">body&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;theme-container&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">body&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">html&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>to&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;span class="lnt">2
-&lt;/span>&lt;span class="lnt">3
-&lt;/span>&lt;span class="lnt">4
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">html&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;theme-container&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">body&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">body&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">html&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>This is because &lt;code>&amp;lt;body&amp;gt;&lt;/code> has not been rendered at this time, and the only object that can be manipulated by the script in &lt;code>&amp;lt;head&amp;gt;&lt;/code> is &lt;code>&amp;lt;html&amp;gt;&lt;/code>.&lt;/p>
-&lt;hr>
-&lt;p>Now the problem is completely solved, the complete code is as follows:&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
-&lt;/span>&lt;span class="lnt"> 2
-&lt;/span>&lt;span class="lnt"> 3
-&lt;/span>&lt;span class="lnt"> 4
-&lt;/span>&lt;span class="lnt"> 5
-&lt;/span>&lt;span class="lnt"> 6
-&lt;/span>&lt;span class="lnt"> 7
-&lt;/span>&lt;span class="lnt"> 8
-&lt;/span>&lt;span class="lnt"> 9
-&lt;/span>&lt;span class="lnt">10
-&lt;/span>&lt;span class="lnt">11
-&lt;/span>&lt;span class="lnt">12
-&lt;/span>&lt;span class="lnt">13
-&lt;/span>&lt;span class="lnt">14
-&lt;/span>&lt;span class="lnt">15
-&lt;/span>&lt;span class="lnt">16
-&lt;/span>&lt;span class="lnt">17
-&lt;/span>&lt;span class="lnt">18
-&lt;/span>&lt;span class="lnt">19
-&lt;/span>&lt;span class="lnt">20
-&lt;/span>&lt;span class="lnt">21
-&lt;/span>&lt;span class="lnt">22
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&amp;lt;!DOCTYPE html&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">html&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;theme-container&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">head&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c">&amp;lt;!-- lots of stuff…… --&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">script&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">const&lt;/span> &lt;span class="nx">themeContainer&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">querySelector&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;.theme-container&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">var&lt;/span> &lt;span class="nx">theme&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">localStorage&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getItem&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;theme&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">theme&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="s2">&amp;#34;dark&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">themeContainer&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">classList&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">add&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;dark&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">theme&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="s2">&amp;#34;light&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">themeContainer&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">classList&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">remove&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;dark&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">script&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">head&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">body&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c">&amp;lt;!-- lots of stuff…… --&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">script&lt;/span> &lt;span class="na">src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;others.js&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">script&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">body&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">html&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;div class="footnotes" role="doc-endnotes">
-&lt;hr>
-&lt;ol>
-&lt;li id="fn:1">
-&lt;p>The approach to dark mode in this theme is CSS variable, see &lt;a href='https://dev.to/lampewebdev/css-quickies-css-variables-or-how-you-create-a-white-dark-theme-easily-1i0i'
+&gt;theme Cupper&lt;b&gt;&lt;sub&gt;⧉&lt;/sub&gt;&lt;/b&gt;&lt;/a&gt;. I tried their solution. In Chrome, it indeed works; but in Firefox it doesn’t. Firefox will render &lt;code&gt;visibility: hidden; opacity: 0;&lt;/code&gt; to a whole blank page, and only after &lt;code&gt;DOMContentLoaded&lt;/code&gt; happens &lt;code&gt;showContent()&lt;/code&gt; function will show the content. Means: the page still flashes. Before it flashes the &lt;strong&gt;light mode&lt;/strong&gt;, now it flashes the &lt;strong&gt;blank page&lt;/strong&gt;. Just as bad as before.&lt;/p&gt;
+&lt;p&gt;I think the difference between Firefox and Chrome is because the developers of Chrome used magic, they tried their best to bring Chrome users a better experience. And this covers up the real problem for the Hugo theme developers who use Chrome.&lt;/p&gt;
+&lt;h1&gt;Find the cause&lt;/h1&gt;
+&lt;p&gt;The main idea is still to understand the process of how the browser render a page. Simply put:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;You request for a page;&lt;/li&gt;
+&lt;li&gt;The browser download the entire HTML and save as DOM, then parse and render the page from top to bottom;&lt;/li&gt;
+&lt;li&gt;Stop parsing when encountering an external CSS or JavaScript file. Download it and then continue;&lt;/li&gt;
+&lt;li&gt;When encountering &lt;code&gt;&amp;lt;style&amp;gt;&amp;lt;/style&amp;gt;&lt;/code&gt; or just loaded external styles, store them as CSSOM and re-render the influential part;&lt;/li&gt;
+&lt;li&gt;When encountering &lt;code&gt;&amp;lt;script&amp;gt;&amp;lt;/script&amp;gt;&lt;/code&gt; or just loaded external scripts, stop parsing and run the scripts. Continue parsing and rendering after finish running them;&lt;/li&gt;
+&lt;li&gt;So on and so on until all the works are done.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The cause to the white flash problem is that I put the JavaScript for theme’s mode switching at the end of &lt;code&gt;&amp;lt;body&amp;gt;&lt;/code&gt;, like this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;span class="lnt"&gt;6
+&lt;/span&gt;&lt;span class="lnt"&gt;7
+&lt;/span&gt;&lt;span class="lnt"&gt;8
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-html" data-lang="html"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cp"&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;html&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;body&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c"&gt;&amp;lt;!-- lots of stuff…… --&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt; &lt;span class="na"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;changeTheme.js&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;body&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;html&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h1&gt;The solution&lt;/h1&gt;
+&lt;p&gt;The solution to this problem is quite simple, with two points:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;ol&gt;
+&lt;li&gt;Put the script for theme’s mode switching into &lt;code&gt;&amp;lt;head&amp;gt;&lt;/code&gt;, in order to determine the theme currently selected by the user before rendering the body;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;ol start="2"&gt;
+&lt;li&gt;Upgrade the container for the theme to the entire &lt;code&gt;&amp;lt;html&amp;gt;&lt;/code&gt;, i.e., from&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-html" data-lang="html"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;html&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;body&lt;/span&gt; &lt;span class="na"&gt;class&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;theme-container&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;body&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;html&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;to&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-html" data-lang="html"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;html&lt;/span&gt; &lt;span class="na"&gt;class&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;theme-container&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;body&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;body&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;html&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;This is because &lt;code&gt;&amp;lt;body&amp;gt;&lt;/code&gt; has not been rendered at this time, and the only object that can be manipulated by the script in &lt;code&gt;&amp;lt;head&amp;gt;&lt;/code&gt; is &lt;code&gt;&amp;lt;html&amp;gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Now the problem is completely solved, the complete code is as follows:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;span class="lnt"&gt;13
+&lt;/span&gt;&lt;span class="lnt"&gt;14
+&lt;/span&gt;&lt;span class="lnt"&gt;15
+&lt;/span&gt;&lt;span class="lnt"&gt;16
+&lt;/span&gt;&lt;span class="lnt"&gt;17
+&lt;/span&gt;&lt;span class="lnt"&gt;18
+&lt;/span&gt;&lt;span class="lnt"&gt;19
+&lt;/span&gt;&lt;span class="lnt"&gt;20
+&lt;/span&gt;&lt;span class="lnt"&gt;21
+&lt;/span&gt;&lt;span class="lnt"&gt;22
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-html" data-lang="html"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cp"&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;html&lt;/span&gt; &lt;span class="na"&gt;class&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;theme-container&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;head&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c"&gt;&amp;lt;!-- lots of stuff…… --&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="kr"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;themeContainer&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;document&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;querySelector&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;.theme-container&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;theme&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;localStorage&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;getItem&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;theme&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;theme&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;dark&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nx"&gt;themeContainer&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;classList&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;add&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;dark&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;theme&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;light&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nx"&gt;themeContainer&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;classList&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;remove&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;dark&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;head&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;body&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c"&gt;&amp;lt;!-- lots of stuff…… --&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt; &lt;span class="na"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;others.js&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;body&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;html&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class="footnotes" role="doc-endnotes"&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id="fn:1"&gt;
+&lt;p&gt;The approach to dark mode in this theme is CSS variable, see &lt;a href='https://dev.to/lampewebdev/css-quickies-css-variables-or-how-you-create-a-white-dark-theme-easily-1i0i'
 target='_blank' rel='noreferrer noopener'
->this tutorial&lt;b>&lt;sub>⧉&lt;/sub>&lt;/b>&lt;/a> for reference.&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
-&lt;/li>
-&lt;/ol>
-&lt;/div></description></item><item><title>A Test for Hugo Encryptor</title><link>https://zerovip.github.io/en/62772/</link><pubDate>Mon, 23 Dec 2019 00:00:00 CST</pubDate><guid isPermaLink="false">/en/62772/</guid><description>&lt;p>In this case, I want to test about the i18n text in English version. Plus, this time I didn’t use a password. It passes the test only if the password fall back to default password: qwertyu.&lt;/p>
-&lt;hugo-encrypt data-pagefind-ignore>
-&lt;div id="hugo-encrypt-encryption-notice">
-&lt;p>The following content is protected.&lt;/p>
-&lt;noscript>&lt;span id="hugo-encrypt-enable-js">Javascript needs to be enabled to decrypt content&lt;/span>&lt;/noscript>
-&lt;div class='hugo-encrypt-form'>
+&gt;this tutorial&lt;b&gt;&lt;sub&gt;⧉&lt;/sub&gt;&lt;/b&gt;&lt;/a&gt; for reference.&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;</description></item><item><title>A Test for Hugo Encryptor</title><link>https://zerovip.github.io/en/62772/</link><pubDate>Mon, 23 Dec 2019 00:00:00 CST</pubDate><guid isPermaLink="false">/en/62772/</guid><description>&lt;p&gt;In this case, I want to test about the i18n text in English version. Plus, this time I didn’t use a password. It passes the test only if the password fall back to default password: qwertyu.&lt;/p&gt;
+&lt;hugo-encrypt data-pagefind-ignore&gt;
+&lt;div id="hugo-encrypt-encryption-notice"&gt;
+&lt;p&gt;The following content is protected.&lt;/p&gt;
+&lt;noscript&gt;&lt;span id="hugo-encrypt-enable-js"&gt;Javascript needs to be enabled to decrypt content&lt;/span&gt;&lt;/noscript&gt;
+&lt;div class='hugo-encrypt-form'&gt;
 &lt;input
 class="hugo-encrypt-input"
 id="hugo-encrypt-password"
 placeholder='Please enter the password.'
-/>
+/&gt;
 &lt;input
 class="hugo-encrypt-button"
 type="button"
 value='Decrypt'
 id="button" onclick="hugoDecrypt(document.getElementById('hugo-encrypt-password').value,'input')"
-/>
-&lt;div id="hugo-encrypt-input-response">&lt;/div>
-&lt;/div>
-&lt;/div>
-&lt;cipher-text data-password='qwertyu' style="display:none;">
-&lt;p>This sentence should be encrypted.&lt;/p>
-&lt;/cipher-text>
-&lt;style type="text/css">div#hugo-encrypt-sha1sum {display: none;}&lt;/style>
-&lt;script>
+/&gt;
+&lt;div id="hugo-encrypt-input-response"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;cipher-text data-password='qwertyu' style="display:none;"&gt;
+&lt;p&gt;This sentence should be encrypted.&lt;/p&gt;
+&lt;/cipher-text&gt;
+&lt;style type="text/css"&gt;div#hugo-encrypt-sha1sum {display: none;}&lt;/style&gt;
+&lt;script&gt;
 const storageKey = location.pathname + "password";
 const userStorage = window['sessionStorage'] ;
 function str2buf(str) {
@@ -323,13 +323,13 @@ function buf2str(buffer) {
 return new TextDecoder("utf-8").decode(buffer);
 }
 function hex2buf(hexStr) {
-return new Uint8Array(hexStr.match(/.{2}/g).map(h => parseInt(h, 16)));
+return new Uint8Array(hexStr.match(/.{2}/g).map(h =&gt; parseInt(h, 16)));
 }
 function deriveKey(passphrase, salt) {
 salt = salt || crypto.getRandomValues(new Uint8Array(8));
 return crypto.subtle
 .importKey("raw", str2buf(passphrase), "PBKDF2", false, ["deriveKey"])
-.then(key =>
+.then(key =&gt;
 crypto.subtle.deriveKey(
 { name: "PBKDF2", salt, iterations: 1000, hash: "SHA-256" },
 key,
@@ -338,19 +338,19 @@ false,
 ["encrypt", "decrypt"],
 ),
 )
-.then(key => [key, salt]);
+.then(key =&gt; [key, salt]);
 }
 function decrypt(passphrase, saltIvCipherHex) {
 const [salt, iv, data] = saltIvCipherHex.split("-").map(hex2buf);
 return deriveKey(passphrase, salt)
-.then(([key]) => crypto.subtle.decrypt({ name: "AES-GCM", iv }, key, data))
-.then(v => buf2str(new Uint8Array(v)));
+.then(([key]) =&gt; crypto.subtle.decrypt({ name: "AES-GCM", iv }, key, data))
+.then(v =&gt; buf2str(new Uint8Array(v)));
 }
 async function digestMessage(message) {
 const msgUint8 = new TextEncoder().encode(message);
 const hashBuffer = await crypto.subtle.digest('SHA-1', msgUint8);
 const hashArray = Array.from(new Uint8Array(hashBuffer));
-const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+const hashHex = hashArray.map(b =&gt; b.toString(16).padStart(2, '0')).join('');
 return hashHex;
 }
 const hugoDecrypt = function(password, type) {
@@ -376,40 +376,40 @@ console.log("Password changed. Clearing userStorage.", error);
 });
 }
 };
-&lt;/script>
-&lt;script>
-window.onload = () => {
+&lt;/script&gt;
+&lt;script&gt;
+window.onload = () =&gt; {
 ciphers = Array.from(document.querySelectorAll("cipher-text"));
 if (userStorage.getItem(storageKey)) {
 console.log("Found storageKey in userStorage. Attemtping decryption");
 hugoDecrypt(userStorage.getItem(storageKey), "storage");
 }
 };
-&lt;/script>
-&lt;/hugo-encrypt>
-&lt;hr>
-&lt;p>What about encrypt two part? This time the password is “PASSWORD”.
-&lt;hugo-encrypt data-pagefind-ignore>
-&lt;div id="hugo-encrypt-encryption-notice">
-&lt;p>The following content is protected.&lt;/p>
-&lt;noscript>&lt;span id="hugo-encrypt-enable-js">Javascript needs to be enabled to decrypt content&lt;/span>&lt;/noscript>
-&lt;div class='hugo-encrypt-form'>
+&lt;/script&gt;
+&lt;/hugo-encrypt&gt;
+&lt;hr&gt;
+&lt;p&gt;What about encrypt two part? This time the password is “PASSWORD”.
+&lt;hugo-encrypt data-pagefind-ignore&gt;
+&lt;div id="hugo-encrypt-encryption-notice"&gt;
+&lt;p&gt;The following content is protected.&lt;/p&gt;
+&lt;noscript&gt;&lt;span id="hugo-encrypt-enable-js"&gt;Javascript needs to be enabled to decrypt content&lt;/span&gt;&lt;/noscript&gt;
+&lt;div class='hugo-encrypt-form'&gt;
 &lt;input
 class="hugo-encrypt-input"
 id="hugo-encrypt-password"
 placeholder='Please enter the password.'
-/>
+/&gt;
 &lt;input
 class="hugo-encrypt-button"
 type="button"
 value='Decrypt'
 id="button" onclick="hugoDecrypt(document.getElementById('hugo-encrypt-password').value,'input')"
-/>
-&lt;div id="hugo-encrypt-input-response">&lt;/div>
-&lt;/div>
-&lt;/div>
-&lt;cipher-text data-password='PASSWORD' style="display:none;">
-&lt;p>This is the second sentence that should be encrypted.&lt;/p>
-&lt;/cipher-text>
-&lt;/hugo-encrypt>
-&lt;/p></description></item></channel></rss>
+/&gt;
+&lt;div id="hugo-encrypt-input-response"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;cipher-text data-password='PASSWORD' style="display:none;"&gt;
+&lt;p&gt;This is the second sentence that should be encrypted.&lt;/p&gt;
+&lt;/cipher-text&gt;
+&lt;/hugo-encrypt&gt;
+&lt;/p&gt;</description></item></channel></rss>
