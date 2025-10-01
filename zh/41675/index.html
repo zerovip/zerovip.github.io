@@ -1,265 +1,265 @@
-<!doctype html><html lang=zh class=theme-container><head><meta charset=utf-8><meta name=viewport content='width=divice-width,initial-scale=1'><meta name=generator content="Hugo 0.150.1"><title>利用 Pagefind 给静态博客添加搜索功能 - 自写主题
-| 赤赤的象牙塔</title><link rel=stylesheet type=text/css href=../../css/base.min.77b5736a81ec178b46cb581d1318f5aee784504170c67bf68d9e3c729b7fff42.css><link rel=stylesheet media='screen and (max-width: 1200px)' type=text/css href=../../css/small.min.3b39abcf5074cbb0bd712da27c43d1c5f11a85f597da9f07a0d600e53eec7d24.css><link rel=stylesheet media='screen and (min-width: 1201px)' type=text/css href=../../css/normal.min.ac1ee5c0e20afb15107d14583eece7d76c7fb36009c07be3f3447c299209ca53.css><link rel=stylesheet type=text/css href=../../css/syntax.min.ed5b37c3a50997d5ccd8b81bf0d00a7ac1f92c82985623c2dbf0cb422596726a.css><script src=../../js/ctheme.min.23d42d00e692299bcf2b5832c28a8a1582346c7c45d8bc4f70280fcdbf146872.js></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-6CF2JBMYH3"></script><script>var dnt,doNotTrack=!1;if(!1&&(dnt=navigator.doNotTrack||window.doNotTrack||navigator.msDoNotTrack,doNotTrack=dnt=="1"||dnt=="yes"),!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-6CF2JBMYH3")}</script><script data-goatcounter=https://zerovip.goatcounter.com/count async src=//gc.zgo.at/count.js></script></head><body><nav class=bar_for_phone><div class=bar_left_button><div class=left_button_for_bar onclick=ChangeClassLeft()><div class=bar1></div><div class=bar2></div><div class=bar3></div></div></div><div class=bar_search-box onclick='startSearch("right")'><div class=magnifying-glass></div></div><div class=bar_title><a href=../../zh/>赤赤的象牙塔</a></div><div class=bar_right_button><button class=toc_title_for_bar onclick=ChangeClassTOC()>目录</button></div></nav><div class=body_for_pc><aside class=left id=left><div class=left_non-footer id=left_non-footer><div class=left_non-footer_option><div class=left_non-footer_option_search-icon onclick='startSearch("left_non-footer")'><div class=magnifying-glass></div></div><div role=checkbox aria-checked=true class=left_non-footer_option_theme-switch><label class=switch><input type=checkbox class=theme-switcher onchange=themeSwitch()>
-<span class='slider round'></span></label></div><ul role=listbox class=left_non-footer_option_language><li role=option aria-selected=true class=left_non-footer_option_active>简体中文 ⦿</li><li role=option class=left_non-footer_option_non-active>English ⨂</li><li role=option class=left_non-footer_option_non-active>Français ⨂</li></ul><div class=left_non-footer_option_rss><div class=left_non-footer_option_non-active>RSS 订阅 ⊠</div></div></div><header class=left_non-footer_head><div class=left_non-footer_head_title><a href=../../zh/>赤赤的象牙塔</a></div><div class=left_non-footer_head_subtitle>(●’◡’●)ﾉ</div></header><nav class=left_non-footer_main><div class=h1><a href=../../zh/math/>数学</a></div><div class=h2><a href=../../zh/math/notes/>数学笔记</a></div><div class=h2><a href=../../zh/math/stories/>数学科普</a></div><div data-pagefind-filter=1st-section class='h1 active'><a href=../../zh/non-math/>非数学</a></div><div class=h2><a href=../../zh/non-math/journal/>日志</a></div><div class=h2><a href=../../zh/non-math/literature/>写作</a></div><div data-pagefind-filter=2nd-section class='h2 active'><a href=../../zh/non-math/memos/>备忘</a></div><div class=h1><a href=../../zh/record/>记录</a></div><div class=h2><a href=../../zh/record/book/>读过的书</a></div><div class=h2><a href=../../zh/record/film/>看过的电影</a></div><div class=h1><a href=../../zh/about/>关于</a></div><div class=h2><a href=../../zh/about/me/>关于我</a></div><div class=h2><a href=../../zh/about/site/>关于本站</a></div></nav></div><footer class=left_footer><div class=copyright>©2019-2025 版权所有.</div></footer></aside><div data-pagefind-body class=right id=right onclick=HideBothSide()><header class=right_head><div data-pagefind-meta=title class=right_head_title>利用 Pagefind 给静态博客添加搜索功能 - 自写主题</div><div data-pagefind-ignore class=right_head_des><span data-pagefind-meta=date>2022年11月29日</span> - 4523 字</div></header><div class=right_main><article class=right_main_article><h1 id=前言>前言
-<a href=#%e5%89%8d%e8%a8%80><small data-pagefind-ignore>¶</small></a></h1><p>我<a href=https://github.com/zerovip/zerovip.github.io/commit/a0e5595ddbc17c6fb5ec10a732d536b2eea0e8ba#diff-aa481d6e71487ff6b05f479cc7d6958e492757e0ccd6a634dc84f32ffe42545cR396 target=_blank rel='noreferrer noopener'>早就<b><sub data-pagefind-ignore>⧉</sub></b></a>想要给自己这个博客站添加站内搜索功能了，前前后后也考察过非常多的工具，<a href=https://gohugo.io/tools/search/ target=_blank rel='noreferrer noopener'>官方列出的选择<b><sub data-pagefind-ignore>⧉</sub></b></a>就非常之多，但没有令我满意的：如果想要开箱即用，就要用 npm 安装 Nodejs 的一些工具；稍微简单点办法的就是利用 hugo 能够生成 json 的能力（<a href=https://makewithhugo.com/add-search-to-a-hugo-site/ target=_blank rel='noreferrer noopener'>教程一<b><sub data-pagefind-ignore>⧉</sub></b></a>、<a href=https://palant.info/2020/06/04/the-easier-way-to-use-lunr-search-with-hugo/ target=_blank rel='noreferrer noopener'>教程二<b><sub data-pagefind-ignore>⧉</sub></b></a>），但需要引入第三方搜索库，自己还要写不少的代码来实现. 所以我就一直拖着没有弄.</p><p>直到上个月我在读阮一峰的<a href=https://www.ruanyifeng.com/blog/2022/10/weekly-issue-226.html target=_blank rel='noreferrer noopener'>科技爱好者周刊（第 226 期）<b><sub data-pagefind-ignore>⧉</sub></b></a>的时候才偶然看到这么一个工具：<a href=https://pagefind.app/ target=_blank rel='noreferrer noopener'>Pagefind<b><sub data-pagefind-ignore>⧉</sub></b></a>. 我花了半个小时仔细考察了它，几乎是立刻就确定了它正是我恰好想要、且一直在等待的那个工具. 它吸引到我的有 5 点：</p><ol><li>它上了 <a href='https://www.youtube.com/watch?v=74lsEXqRQys' target=_blank rel='noreferrer noopener'>HugoConf 2022<b><sub data-pagefind-ignore>⧉</sub></b></a>，得到了 Hugo 社区的认可. 阅读它的文档时也能感受得到，这个工具一开始就是为了 Hugo 而设计的；</li><li>它的开发语言是 Rust，最后所提供出来的产品就是一个简单的二进制可执行文件，不需要安装环境或配置依赖，开箱即用，非常方便；</li><li>它的<a href=https://pagefind.app/docs/multilingual/ target=_blank rel='noreferrer noopener'>多语言<b><sub data-pagefind-ignore>⧉</sub></b></a>支持做得不错：有专门对中文的分词索引支持. 虽然暂不支持查询字段分词，但正努力开发中；</li><li>它自带了一个简单的 HTTP server，本地调试起来很是方便. 如果是从头建站，它提供了十分钟就能用上的还很好看的 Pagefind UI；即便要自己写，它也提供了简单易用的接口；</li><li>它充分考虑了大型网站的搜索，将索引分成了不同的小 chunks，节省读者的网络流量，比起用 hugo 直接生成 json 要简洁、优雅得多.</li></ol><h1 id=交互设计>交互设计
-<a href=#%e4%ba%a4%e4%ba%92%e8%ae%be%e8%ae%a1><small data-pagefind-ignore>¶</small></a></h1><p>第一个问题是如何设计交互：搜索框应该放在哪里？搜索的流程与步骤该是什么样？宽屏幕怎么做，小屏幕又怎么做？</p><p>我仔细考察了很多包含搜索功能的网站，现在大家都已经是竖版的布局了，在页面的最上面有一个横着的顶栏，搜索框就放在这里. 当读者键入一些内容之后，交互上的做法大致可以分成三类：</p><ol><li>第一种是会出现一个专门的区域存放搜索结果，悬浮于整个页面的最顶层（举例：<a href=https://gohugo.io/documentation/ target=_blank rel='noreferrer noopener'>Hugo 的官方文档<b><sub data-pagefind-ignore>⧉</sub></b></a>、<a href=https://en.wikipedia.org/wiki/Main_Page target=_blank rel='noreferrer noopener'>维基百科<b><sub data-pagefind-ignore>⧉</sub></b></a>）；<figure><img loading=lazy src=hugo-search.png alt='Hugo 的搜索功能示例' style=filter:var(--c-img-filter2)><figcaption>◉ 图. Hugo 的搜索功能示例</figcaption></figure></li><li>第二种是把搜索结果直接渲染到页面上，把当前网页上的其他内容往下挤（举例：<a href=https://xkcd.pagefind.app/ target=_blank rel='noreferrer noopener'>Pagefind 的示例站点<b><sub data-pagefind-ignore>⧉</sub></b></a>）；<figure><img loading=lazy src=pagefind-search.png alt='Pagefind Demo 页的搜索功能示例' style=filter:var(--c-img-filter2)><figcaption>◉ 图. Pagefind Demo 页的搜索功能示例</figcaption></figure></li><li>第三种是在键入内容时不会有任何交互，必须要点击一下搜索按钮或按下回车键之后才开始搜索，此时一般会跳转到一个单独页面用来陈列搜索结果（举例：<a href=https://github.com/ target=_blank rel='noreferrer noopener'>GitHub<b><sub data-pagefind-ignore>⧉</sub></b></a>、<a href=https://www.qbitai.com/ target=_blank rel='noreferrer noopener'>量子位<b><sub data-pagefind-ignore>⧉</sub></b></a>、<a href=https://segmentfault.com/ target=_blank rel='noreferrer noopener'>思否<b><sub data-pagefind-ignore>⧉</sub></b></a>、<a href=https://www.jianshu.com/ target=_blank rel='noreferrer noopener'>简书<b><sub data-pagefind-ignore>⧉</sub></b></a>）.<figure><img loading=lazy src=github-search.png alt='Github 的搜索功能展示' style=filter:var(--c-img-filter2)><figcaption>◉ 图. Github 的搜索功能展示</figcaption></figure></li></ol><hr><p>在 UI 设计上，这个搜索框可能只显示为一个搜索按钮，单击后才展开成为一个搜索框（举例：<a href=https://hugoloveit.com/ target=_blank rel='noreferrer noopener'>LoveIt 主题<b><sub data-pagefind-ignore>⧉</sub></b></a>、<a href=https://io-oi.me/hugo-theme-meme/ target=_blank rel='noreferrer noopener'>MemE 主题<b><sub data-pagefind-ignore>⧉</sub></b></a>）；或者单击后弹出一个搜索区域，里面囊括更多高级搜索的功能（举例：<a href=https://www.quantamagazine.org/ target=_blank rel='noreferrer noopener'>Quanta Magazine<b><sub data-pagefind-ignore>⧉</sub></b></a>、<a href=https://sspai.com/ target=_blank rel='noreferrer noopener'>少数派<b><sub data-pagefind-ignore>⧉</sub></b></a>）. 它们的后续交互还是要归结于上面的那三种，相当于是多了一个操作步骤.</p><p>我认为：直接显示搜索框，且键入内容之后马上就能看到搜索结果的交互设计才是最方便的，体验也是最好的，其中又属第一种交互模式最为优雅、合理，不破坏整体布局. 但是如何在我这个左右两栏布局的网页里实现第一种交互模式就成了新的问题：按道理，搜索功能是每个页面都有的公共的功能，应该放在左边的公共的导航栏里；然而左边本来就空间狭小、信息密集，如果再将搜索结果悬浮于左边的导航文字之上，会显得十分逼仄，感觉也破坏了左栏的导航功能.</p><p>经过仔细考虑，我决定借鉴 Quanta Magazine 的设计模式：写一个单独的搜索区域，但把它先给隐藏起来，只在左边的导航区留下一个小小的放大镜符号作为搜索入口. 当读者点击搜索按钮时，使用纯前端的技术，将整个左边栏完全替换为那个单独的搜索区域. 正因为不是悬浮于导航栏之上而是覆盖掉整个导航栏，视觉上会干净、清爽得多，同时后续搜索流程上的交互模式也可以完全按照第一种办法来实现，搜索体验也会是相当不错的.</p><p>对于小屏幕来说，先点开左栏才能看到搜索按钮，再点击搜索按钮才能看到搜索区域，这无疑是过于麻烦的. 因此可以直接把搜索按钮放在顶栏里，点击后把下面整个页面都用搜索区域替换掉.</p><h1 id=前端实现>前端实现
-<a href=#%e5%89%8d%e7%ab%af%e5%ae%9e%e7%8e%b0><small data-pagefind-ignore>¶</small></a></h1><p>既然是所有页面都共有的功能，那自然是要写到 <code>base.html</code> 里的. 但由于宽屏幕和小屏幕的搜索区域位置不同，里面的功能却完全一致，所以如果直接写进对应的位置就要写两遍，无法复用代码；而且最开始这个搜索区域应该是隐藏起来的，读者点击搜索按钮后才会出现，这就导致，如果把代码直接写进对应的位置，页面渲染时会先渲染出搜索区域，然后马上才应用 CSS 样式表将其隐藏，观感就是搜索区域整个一闪而过了一下，非常不美观. 我的解决方案就是，将搜索区域写成一个 HTML 的 <a href=https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template target=_blank rel='noreferrer noopener'>template<b><sub data-pagefind-ignore>⧉</sub></b></a>，等整个页面加载完成后（样式表已经应用后）再用 JavaScript 把它装载进相应的位置. 代码结构与原理如下：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
-</span><span class=lnt> 2
-</span><span class=lnt> 3
-</span><span class=lnt> 4
-</span><span class=lnt> 5
-</span><span class=lnt> 6
-</span><span class=lnt> 7
-</span><span class=lnt> 8
-</span><span class=lnt> 9
-</span><span class=lnt>10
-</span><span class=lnt>11
-</span><span class=lnt>12
-</span><span class=lnt>13
-</span><span class=lnt>14
-</span><span class=lnt>15
-</span><span class=lnt>16
-</span><span class=lnt>17
-</span><span class=lnt>18
-</span><span class=lnt>19
-</span><span class=lnt>20
-</span><span class=lnt>21
-</span><span class=lnt>22
-</span><span class=lnt>23
-</span><span class=lnt>24
-</span><span class=lnt>25
-</span><span class=lnt>26
-</span><span class=lnt>27
-</span><span class=lnt>28
-</span><span class=lnt>29
-</span><span class=lnt>30
-</span><span class=lnt>31
-</span><span class=lnt>32
-</span><span class=lnt>33
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=line><span class=cl><span class=c>&lt;!-- layouts/_default/baseof.html --&gt;</span>
-</span></span><span class=line><span class=cl><span class=cp>&lt;!DOCTYPE html&gt;</span>
-</span></span><span class=line><span class=cl><span class=p>&lt;</span><span class=nt>html</span><span class=p>&gt;</span>
-</span></span><span class=line><span class=cl>    <span class=p>&lt;</span><span class=nt>head</span><span class=p>&gt;&lt;/</span><span class=nt>head</span><span class=p>&gt;</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=p>&lt;</span><span class=nt>body</span><span class=p>&gt;</span>
-</span></span><span class=line><span class=cl>        <span class=p>&lt;</span><span class=nt>div</span> <span class=na>id</span><span class=o>=</span><span class=s>&#34;left&#34;</span><span class=p>&gt;</span>
-</span></span><span class=line><span class=cl>            <span class=p>&lt;</span><span class=nt>div</span> <span class=na>class</span><span class=o>=</span><span class=s>&#34;search-box&#34;</span> <span class=na>onclick</span><span class=o>=</span><span class=s>&#34;showSearch(&#39;left&#39;)&#34;</span><span class=p>&gt;</span>
-</span></span><span class=line><span class=cl>                Search Icon here
-</span></span><span class=line><span class=cl>            <span class=p>&lt;/</span><span class=nt>div</span><span class=p>&gt;</span>
-</span></span><span class=line><span class=cl>            <span class=c>&lt;!-- here needs a search page (for bigger width device) to be loaded--&gt;</span>
-</span></span><span class=line><span class=cl>        <span class=p>&lt;/</span><span class=nt>div</span><span class=p>&gt;</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>        <span class=p>&lt;</span><span class=nt>div</span> <span class=na>id</span><span class=o>=</span><span class=s>&#34;right&#34;</span><span class=p>&gt;</span>
-</span></span><span class=line><span class=cl>            <span class=p>&lt;</span><span class=nt>div</span> <span class=na>class</span><span class=o>=</span><span class=s>&#34;search-box&#34;</span> <span class=na>onclick</span><span class=o>=</span><span class=s>&#34;showSearch(&#39;right&#39;)&#34;</span><span class=p>&gt;</span>
-</span></span><span class=line><span class=cl>                Search Icon here
-</span></span><span class=line><span class=cl>            <span class=p>&lt;/</span><span class=nt>div</span><span class=p>&gt;</span>
-</span></span><span class=line><span class=cl>            <span class=c>&lt;!-- here needs a search page (for phone) to be loaded --&gt;</span>
-</span></span><span class=line><span class=cl>        <span class=p>&lt;/</span><span class=nt>div</span><span class=p>&gt;</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>        <span class=p>&lt;</span><span class=nt>template</span> <span class=na>id</span><span class=o>=</span><span class=s>&#34;search-template&#34;</span><span class=p>&gt;</span>
-</span></span><span class=line><span class=cl>            <span class=p>&lt;</span><span class=nt>div</span> <span class=na>id</span><span class=o>=</span><span class=s>&#34;search-zone&#34;</span><span class=p>&gt;</span>
-</span></span><span class=line><span class=cl>                <span class=p>&lt;</span><span class=nt>input</span> <span class=na>type</span><span class=o>=</span><span class=s>&#34;search&#34;</span><span class=p>&gt;</span>
-</span></span><span class=line><span class=cl>                <span class=p>&lt;</span><span class=nt>div</span> <span class=na>class</span><span class=o>=</span><span class=s>&#34;close-sign&#34;</span> <span class=na>onclick</span><span class=o>=</span><span class=s>&#34;hideSearch(this)&#34;</span><span class=p>&gt;</span>
-</span></span><span class=line><span class=cl>                    Close Icon here
-</span></span><span class=line><span class=cl>                <span class=p>&lt;/</span><span class=nt>div</span><span class=p>&gt;</span>
-</span></span><span class=line><span class=cl>                <span class=p>&lt;</span><span class=nt>div</span> <span class=na>class</span><span class=o>=</span><span class=s>&#34;search-results&#34;</span><span class=p>&gt;&lt;/</span><span class=nt>div</span><span class=p>&gt;</span>
-</span></span><span class=line><span class=cl>            <span class=p>&lt;/</span><span class=nt>div</span><span class=p>&gt;</span>
-</span></span><span class=line><span class=cl>        <span class=p>&lt;/</span><span class=nt>template</span><span class=p>&gt;</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>        <span class=p>&lt;</span><span class=nt>script</span> <span class=na>src</span><span class=o>=</span><span class=s>&#34;main.js&#34;</span><span class=p>&gt;&lt;/</span><span class=nt>script</span><span class=p>&gt;</span>
-</span></span><span class=line><span class=cl>    <span class=p>&lt;/</span><span class=nt>body</span><span class=p>&gt;</span>
-</span></span><span class=line><span class=cl><span class=p>&lt;/</span><span class=nt>html</span><span class=p>&gt;</span>
-</span></span></code></pre></td></tr></table></div></div><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
-</span><span class=lnt> 2
-</span><span class=lnt> 3
-</span><span class=lnt> 4
-</span><span class=lnt> 5
-</span><span class=lnt> 6
-</span><span class=lnt> 7
-</span><span class=lnt> 8
-</span><span class=lnt> 9
-</span><span class=lnt>10
-</span><span class=lnt>11
-</span><span class=lnt>12
-</span><span class=lnt>13
-</span><span class=lnt>14
-</span><span class=lnt>15
-</span><span class=lnt>16
-</span><span class=lnt>17
-</span><span class=lnt>18
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=c1>// main.js
-</span></span></span><span class=line><span class=cl><span class=c1></span><span class=kr>const</span> <span class=nx>search_template</span> <span class=o>=</span> <span class=nb>document</span><span class=p>.</span><span class=nx>getElementById</span><span class=p>(</span><span class=s2>&#34;search-template&#34;</span><span class=p>);</span>
-</span></span><span class=line><span class=cl><span class=kd>function</span> <span class=nx>loadTemplate</span><span class=p>(</span><span class=nx>prefix</span><span class=p>)</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>    <span class=kd>var</span> <span class=nx>container</span> <span class=o>=</span> <span class=nb>document</span><span class=p>.</span><span class=nx>getElementById</span><span class=p>(</span><span class=nx>prefix</span><span class=p>);</span>
-</span></span><span class=line><span class=cl>    <span class=kd>var</span> <span class=nx>search_clone</span> <span class=o>=</span> <span class=nx>search_template</span><span class=p>.</span><span class=nx>content</span><span class=p>.</span><span class=nx>cloneNode</span><span class=p>(</span><span class=kc>true</span><span class=p>);</span>
-</span></span><span class=line><span class=cl>    <span class=c1>// can do something here depending on the `prefix` variable
-</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=nx>search_clone</span><span class=p>.</span><span class=nx>getElementById</span><span class=p>(</span><span class=s2>&#34;search-zone&#34;</span><span class=p>).</span><span class=nx>id</span> <span class=o>=</span> <span class=nx>prefix</span> <span class=o>+</span> <span class=s2>&#34;_search-zone&#34;</span><span class=p>;</span>
-</span></span><span class=line><span class=cl>    <span class=nx>container</span><span class=p>.</span><span class=nx>appendChild</span><span class=p>(</span><span class=nx>search_clone</span><span class=p>);</span>
-</span></span><span class=line><span class=cl><span class=p>}</span>
-</span></span><span class=line><span class=cl><span class=nx>loadTemplate</span><span class=p>(</span><span class=s2>&#34;left&#34;</span><span class=p>);</span>
-</span></span><span class=line><span class=cl><span class=nx>loadTemplate</span><span class=p>(</span><span class=s2>&#34;right&#34;</span><span class=p>);</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl><span class=kd>function</span> <span class=nx>showSearch</span><span class=p>(</span><span class=nx>prefix</span><span class=p>)</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>    <span class=nb>document</span><span class=p>.</span><span class=nx>getElementById</span><span class=p>(</span><span class=nx>prefix</span> <span class=o>+</span> <span class=s2>&#34;_search-zone&#34;</span><span class=p>).</span><span class=nx>classList</span><span class=p>.</span><span class=nx>add</span><span class=p>(</span><span class=s2>&#34;search_show&#34;</span><span class=p>);</span>
-</span></span><span class=line><span class=cl><span class=p>}</span>
-</span></span><span class=line><span class=cl><span class=kd>function</span> <span class=nx>hideSearch</span><span class=p>(</span><span class=nx>x</span><span class=p>)</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>    <span class=nx>x</span><span class=p>.</span><span class=nx>parentNode</span><span class=p>.</span><span class=nx>classList</span><span class=p>.</span><span class=nx>remove</span><span class=p>(</span><span class=s2>&#34;search_show&#34;</span><span class=p>);</span>
-</span></span><span class=line><span class=cl><span class=p>}</span>
-</span></span></code></pre></td></tr></table></div></div><p>这里利用这个 <code>prefix</code> 变量，可以精确地将左右两个搜索区域分开，为了放便起见可以直接在 JavaScript 中更改对应的 id 字段. 调整样式则是根据 <code>search_show</code> 这个 class 完成隐藏与显示，具体的代码不再赘写. 这样一来，搜索入口、整个搜索区域、搜索框、关闭搜索的按钮以及对应的打开搜索区域、关闭搜索区域的功能，在这里就算是完成了.</p><h1 id=接入-pagefind>接入 Pagefind
-<a href=#%e6%8e%a5%e5%85%a5-pagefind><small data-pagefind-ignore>¶</small></a></h1><p>Pagefind 只做两件事：索引和搜索. 索引是 Hugo 每次生成完 <code>public/</code> 静态文件之后，Pagefind 将其作为输入，按照相应的规则，把相应的内容编进索引，最后输出成一个单独的 <code>_pagefind/</code> 文件夹；搜索则是关于读者在网站上具体搜索时的展示. 打个非常不恰当的比方：索引是后端，搜索是前端.</p><h2 id=索引>索引
-<a href=#%e7%b4%a2%e5%bc%95><small data-pagefind-ignore>¶</small></a></h2><p>按照上面的解释，在索引这一块儿，我们要做的就是根据自己的需要，编写相应的索引规则，确定需要索引的内容以及应该排除在外的内容.</p><p>首先是利用 <code>data-pagefind-body</code> 框定索引范围（<a href=https://pagefind.app/docs/indexing/ target=_blank rel='noreferrer noopener'>参考<b><sub data-pagefind-ignore>⧉</sub></b></a>）. 在我这个博客里，我希望把索引范围框定在文章页的右边区域，也就是说，主页和列表页不参与索引，文章页的左侧导航区也不参与索引. 因此我这样写：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
-</span><span class=lnt> 2
-</span><span class=lnt> 3
-</span><span class=lnt> 4
-</span><span class=lnt> 5
-</span><span class=lnt> 6
-</span><span class=lnt> 7
-</span><span class=lnt> 8
-</span><span class=lnt> 9
-</span><span class=lnt>10
-</span><span class=lnt>11
-</span><span class=lnt>12
-</span><span class=lnt>13
-</span><span class=lnt>14
-</span><span class=lnt>15
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=line><span class=cl><span class=c>&lt;!-- layouts/_default/baseof.html --&gt;</span>
-</span></span><span class=line><span class=cl><span class=cp>&lt;!DOCTYPE html&gt;</span>
-</span></span><span class=line><span class=cl><span class=p>&lt;</span><span class=nt>html</span><span class=p>&gt;</span>
-</span></span><span class=line><span class=cl>    <span class=p>&lt;</span><span class=nt>head</span><span class=p>&gt;&lt;/</span><span class=nt>head</span><span class=p>&gt;</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=p>&lt;</span><span class=nt>body</span><span class=p>&gt;</span>
-</span></span><span class=line><span class=cl>        <span class=p>&lt;</span><span class=nt>div</span> <span class=na>id</span><span class=o>=</span><span class=s>&#34;left&#34;</span><span class=p>&gt;</span>
-</span></span><span class=line><span class=cl>            <span class=c>&lt;!-- something --&gt;</span>
-</span></span><span class=line><span class=cl>        <span class=p>&lt;/</span><span class=nt>div</span><span class=p>&gt;</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>        <span class=p>&lt;</span><span class=nt>div</span> <span class=err>{{</span> <span class=na>if</span> <span class=err>.</span><span class=na>IsPage</span> <span class=err>}}</span><span class=na>data-pagefind-body</span><span class=err>{{</span> <span class=na>end</span> <span class=err>}}</span> <span class=na>id</span><span class=o>=</span><span class=s>&#34;right&#34;</span><span class=p>&gt;</span>
-</span></span><span class=line><span class=cl>            <span class=c>&lt;!-- something --&gt;</span>
-</span></span><span class=line><span class=cl>        <span class=p>&lt;/</span><span class=nt>div</span><span class=p>&gt;</span>
-</span></span><span class=line><span class=cl>    <span class=p>&lt;/</span><span class=nt>body</span><span class=p>&gt;</span>
-</span></span><span class=line><span class=cl><span class=p>&lt;/</span><span class=nt>html</span><span class=p>&gt;</span>
-</span></span></code></pre></td></tr></table></div></div><hr><p>接着把一些边边角角的不想被索引到的东西用 <code>data-pagefind-ignore</code> 指定一下. 在我的博客里，我考虑到的有：发表时间、字数统计、同栏目下的友情链接、数学笔记的 PDF 区域、评论区（生成的 <code>public/</code> 目录中这个位置本来也是空的，但还是写进去了）、目录. 书影音记录页面，我只索引了“书名”、“电影名”、“我的评价”三个板块的内容，其余内容全部忽略掉了. 接着考虑几个 render hooks：标题忽略章节符号“¶”，链接忽略外链符号“⧉”，图片不需要额外添加索引，因为我有 <code>&lt;figcaption></code> 标签，已经可以被索引到了.</p><p>这里还有加密区域也应该忽略掉索引，在 <code>layouts/shortcodes/hugo-encrypt.html</code> 里，有一个专门的 <code>&lt;hugo-encrypt></code> 标签，在它后面也添加上 <code>data-pagefind-ignore</code> 就行了. 不过我的加密功能是写在博客源码里而非主题源码里的，这里其实已经不完全是主题的更改了.</p><hr><p>Pagefind 还提供了<a href=https://pagefind.app/docs/filtering/ target=_blank rel='noreferrer noopener'>过滤器<b><sub data-pagefind-ignore>⧉</sub></b></a>功能，十分强大. 针对我这个博客，我则是用它把所有的索引结果打上了所属的 section 的标签，这样一来在展示搜索结果时就可以对文章所属的两级 section 进行展示. 我这个主题在左边栏判断 section 的选中状态（<code>class="active"</code>）时就已经写好了相关的逻辑，这里为了代码复用，把原来的逻辑提炼出来，存成两个新的变量（<code>$if_1_on</code> 和 <code>$if_2_on</code>）即可.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
-</span><span class=lnt> 2
-</span><span class=lnt> 3
-</span><span class=lnt> 4
-</span><span class=lnt> 5
-</span><span class=lnt> 6
-</span><span class=lnt> 7
-</span><span class=lnt> 8
-</span><span class=lnt> 9
-</span><span class=lnt>10
-</span><span class=lnt>11
-</span><span class=lnt>12
-</span><span class=lnt>13
-</span><span class=lnt>14
-</span><span class=lnt>15
-</span><span class=lnt>16
-</span><span class=lnt>17
-</span><span class=lnt>18
-</span><span class=lnt>19
-</span><span class=lnt>20
-</span><span class=lnt>21
-</span><span class=lnt>22
-</span><span class=lnt>23
-</span><span class=lnt>24
-</span><span class=lnt>25
-</span><span class=lnt>26
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=line><span class=cl><span class=c>&lt;!-- layouts/_default/baseof.html --&gt;</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>{{ range .Site.Menus.main }}
-</span></span><span class=line><span class=cl>    {{ $if_1_on :=  0 }}
-</span></span><span class=line><span class=cl>    {{ if eq .Identifier (path.Base $currentNode.RelPermalink) |
-</span></span><span class=line><span class=cl>    or (eq .Identifier $currentNode.Section) }}
-</span></span><span class=line><span class=cl>        {{ $if_1_on = 1 }}
-</span></span><span class=line><span class=cl>    {{ end }}
-</span></span><span class=line><span class=cl>    <span class=p>&lt;</span><span class=nt>div</span> <span class=err>{{</span> <span class=na>if</span> <span class=err>$</span><span class=na>if_1_on</span> <span class=err>}}</span><span class=na>data-pagefind-filter</span><span class=o>=</span><span class=s>&#39;1st-section&#39;</span><span class=err>{{</span> <span class=na>end</span> <span class=err>}}</span> <span class=na>class</span><span class=o>=</span><span class=s>&#39;h1 {{ if $if_1_on }}active{{ end }}&#39;</span><span class=p>&gt;</span>
-</span></span><span class=line><span class=cl>        <span class=p>&lt;</span><span class=nt>a</span> <span class=na>href</span><span class=o>=</span><span class=s>&#39;{{ .URL }}&#39;</span><span class=p>&gt;</span>{{ .Name }}<span class=p>&lt;/</span><span class=nt>a</span><span class=p>&gt;</span>
-</span></span><span class=line><span class=cl>    <span class=p>&lt;/</span><span class=nt>div</span><span class=p>&gt;</span>
-</span></span><span class=line><span class=cl>    {{ if .HasChildren }}
-</span></span><span class=line><span class=cl>        {{ range .Children }}
-</span></span><span class=line><span class=cl>            {{ if ne .Identifier &#34;&#34; }}
-</span></span><span class=line><span class=cl>                {{ $if_2_on := 0 }}
-</span></span><span class=line><span class=cl>                {{ if eq .Identifier (path.Base $currentNode.RelPermalink) |
-</span></span><span class=line><span class=cl>                or (eq .Identifier $currentNode.Params.section) }}
-</span></span><span class=line><span class=cl>                    {{ $if_2_on = 1 }}
-</span></span><span class=line><span class=cl>                {{ end }}
-</span></span><span class=line><span class=cl>                <span class=p>&lt;</span><span class=nt>div</span> <span class=err>{{</span> <span class=na>if</span> <span class=err>$</span><span class=na>if_2_on</span> <span class=err>}}</span><span class=na>data-pagefind-filter</span><span class=o>=</span><span class=s>&#39;2nd-section&#39;</span><span class=err>{{</span> <span class=na>end</span> <span class=err>}}</span> <span class=na>class</span><span class=o>=</span><span class=s>&#39;h2 {{ if $if_2_on }}active{{ end }}&#39;</span><span class=p>&gt;</span>
-</span></span><span class=line><span class=cl>                    <span class=p>&lt;</span><span class=nt>a</span> <span class=na>href</span><span class=o>=</span><span class=s>&#39;{{ .URL }}&#39;</span><span class=p>&gt;</span>{{ .Name }} <span class=p>&lt;/</span><span class=nt>a</span><span class=p>&gt;</span>
-</span></span><span class=line><span class=cl>                <span class=p>&lt;/</span><span class=nt>div</span><span class=p>&gt;</span>
-</span></span><span class=line><span class=cl>            {{ end }}
-</span></span><span class=line><span class=cl>        {{ end }}
-</span></span><span class=line><span class=cl>    {{ end }}
-</span></span><span class=line><span class=cl>{{end}}
-</span></span></code></pre></td></tr></table></div></div><p>注意到这里 <code>data-pagefind-filter</code> 标签并不需要一定在 <code>&lt;body></code> 中或 <code>data-pagefind-body</code> 标签下，所以我能够在这里把它写在左边的导航区，省了不少事儿. 感谢 Pagefind 开发者的周到考虑.</p><hr><p>Pagefind 还有 <a href=https://pagefind.app/docs/metadata/ target=_blank rel='noreferrer noopener'>metadata<b><sub data-pagefind-ignore>⧉</sub></b></a> 也需要额外配置一下，主要就是文章标题和日期. Pagefind 默认会取第一个 <code>&lt;h1></code> 标签作为 metadata 标题，我这个主题中文章标题是单独一个容器，<code>&lt;h1></code> 标签并不归文章标题所使用（<code>startLevel</code> 为 1，<a href=https://gohugo.io/getting-started/configuration-markup/#table-of-contents target=_blank rel='noreferrer noopener'>Hugo 文档<b><sub data-pagefind-ignore>⧉</sub></b></a>），所以这里需要重写；Pagefind 的默认 metadata 中也没有日期字段，这里也给它添加上：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
-</span><span class=lnt>2
-</span><span class=lnt>3
-</span><span class=lnt>4
-</span><span class=lnt>5
-</span><span class=lnt>6
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=line><span class=cl><span class=c>&lt;!-- layouts/_default/single.html --&gt;</span>
-</span></span><span class=line><span class=cl><span class=p>&lt;</span><span class=nt>div</span> <span class=na>data-pagefind-meta</span><span class=o>=</span><span class=s>&#34;title&#34;</span><span class=p>&gt;</span>
-</span></span><span class=line><span class=cl>    {{- .Title -}}
-</span></span><span class=line><span class=cl><span class=p>&lt;/</span><span class=nt>div</span><span class=p>&gt;</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl><span class=p>&lt;</span><span class=nt>span</span> <span class=na>data-pagefind-meta</span><span class=o>=</span><span class=s>&#34;date&#34;</span><span class=p>&gt;</span>{{ .Date | time.Format &#34;:date_long&#34; }}<span class=p>&lt;/</span><span class=nt>span</span><span class=p>&gt;</span>
-</span></span></code></pre></td></tr></table></div></div><p>标题那里在双大括号里使用了<a href=https://gohugo.io/templates/introduction/#whitespace target=_blank rel='noreferrer noopener'>短横线<b><sub data-pagefind-ignore>⧉</sub></b></a>，以免取到的题目左右有空格或回车.</p><hr><p>Pagefind 在索引这件事上还有<a href=https://pagefind.app/docs/multilingual/ target=_blank rel='noreferrer noopener'>多语言<b><sub data-pagefind-ignore>⧉</sub></b></a>以及<a href=https://pagefind.app/docs/sorts/ target=_blank rel='noreferrer noopener'>搜索顺序<b><sub data-pagefind-ignore>⧉</sub></b></a>可供配置，我这个博客不需要配置这些，它提供的默认选项已经则够好.</p><h2 id=搜索>搜索
-<a href=#%e6%90%9c%e7%b4%a2><small data-pagefind-ignore>¶</small></a></h2><p>搜索是读者那边的前端交互模块了，Pagefind 自带了一个开箱即用的 Pagefind UI，好看且功能强大，刚开始建站写主题的话可以直接拿过来用. 不过我的前端设计以及交互模式完全是我自己设计的，难以把它这套东西强行塞进去，所以我完全放弃了它提供的这一套 Pagefind UI，转而全都自己写. 好在 Pagefind 也提供了强大的<a href=https://pagefind.app/docs/api/ target=_blank rel='noreferrer noopener'>搜索接口<b><sub data-pagefind-ignore>⧉</sub></b></a>，写起来反而是更加容易的.</p><p>其实这里的[搜索功能的实现]本质上就是定义了下面这个 <code>PagefindSearch(text, canvas)</code> 函数，它的入参 <code>text</code> 是读者在搜索框里所打的文字，<code>canvas</code> 是展示搜索结果的区域，这个函数的功能就是去调用 Pagefind 接口搜索 <code>text</code> 字段，并将结果渲染到 <code>canvas</code> 里面. 这段代码只是一个示例，没有详细展示渲染的逻辑，不过其最佳实践仍然是使用 template 技术.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
-</span><span class=lnt> 2
-</span><span class=lnt> 3
-</span><span class=lnt> 4
-</span><span class=lnt> 5
-</span><span class=lnt> 6
-</span><span class=lnt> 7
-</span><span class=lnt> 8
-</span><span class=lnt> 9
-</span><span class=lnt>10
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=c1>// main.js
-</span></span></span><span class=line><span class=cl><span class=c1></span><span class=kr>async</span> <span class=kd>function</span> <span class=nx>PagefindSearch</span><span class=p>(</span><span class=nx>text</span><span class=p>,</span> <span class=nx>canvas</span><span class=p>)</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>    <span class=kr>const</span> <span class=nx>pagefind</span> <span class=o>=</span> <span class=kr>await</span> <span class=kr>import</span><span class=p>(</span><span class=s2>&#34;/_pagefind/pagefind.js&#34;</span><span class=p>);</span>
-</span></span><span class=line><span class=cl>    <span class=kr>const</span> <span class=nx>search</span> <span class=o>=</span> <span class=kr>await</span> <span class=nx>pagefind</span><span class=p>.</span><span class=nx>search</span><span class=p>(</span><span class=nx>text</span><span class=p>);</span>
-</span></span><span class=line><span class=cl>    <span class=k>for</span> <span class=p>(</span><span class=kr>const</span> <span class=nx>result</span> <span class=k>of</span> <span class=nx>search</span><span class=p>.</span><span class=nx>results</span><span class=p>)</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>        <span class=kd>let</span> <span class=nx>result_data</span> <span class=o>=</span> <span class=kr>await</span> <span class=nx>result</span><span class=p>.</span><span class=nx>data</span><span class=p>();</span>
-</span></span><span class=line><span class=cl>        <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>result_data</span><span class=p>);</span> <span class=c1>// 可以自由发挥来处理 pagefind 返回的结果
-</span></span></span><span class=line><span class=cl><span class=c1></span>        <span class=c1>// 比如想办法渲染到 canvas 这个区域
-</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=p>}</span>
-</span></span><span class=line><span class=cl><span class=p>}</span>
-</span></span></code></pre></td></tr></table></div></div><hr><p>前面<a href=#%e5%89%8d%e7%ab%af%e5%ae%9e%e7%8e%b0>前端实现</a>那个小节写过一个 <code>showSearch</code> 函数，这里稍微扩充一下，以监听用户的输入，并利用<a href=https://schier.co/blog/wait-for-user-to-stop-typing-using-javascript target=_blank rel='noreferrer noopener'>函数防抖（debounce）<b><sub data-pagefind-ignore>⧉</sub></b></a>延迟 600 毫秒把读者的输入传进我们刚刚写的那个 <code>PagefindSearch(text)</code> 函数中：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
-</span><span class=lnt> 2
-</span><span class=lnt> 3
-</span><span class=lnt> 4
-</span><span class=lnt> 5
-</span><span class=lnt> 6
-</span><span class=lnt> 7
-</span><span class=lnt> 8
-</span><span class=lnt> 9
-</span><span class=lnt>10
-</span><span class=lnt>11
-</span><span class=lnt>12
-</span><span class=lnt>13
-</span><span class=lnt>14
-</span><span class=lnt>15
-</span><span class=lnt>16
-</span><span class=lnt>17
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=c1>// main.js
-</span></span></span><span class=line><span class=cl><span class=c1></span><span class=kd>function</span> <span class=nx>showSearch</span><span class=p>(</span><span class=nx>prefix</span><span class=p>)</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>    <span class=nb>document</span><span class=p>.</span><span class=nx>getElementById</span><span class=p>(</span><span class=nx>prefix</span> <span class=o>+</span> <span class=s2>&#34;_search-zone&#34;</span><span class=p>).</span><span class=nx>classList</span><span class=p>.</span><span class=nx>add</span><span class=p>(</span><span class=s2>&#34;search_show&#34;</span><span class=p>);</span>
-</span></span><span class=line><span class=cl>    <span class=c1>// 以下为扩充内容
-</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=kd>let</span> <span class=nx>search_timeout</span> <span class=o>=</span> <span class=kc>null</span><span class=p>;</span>
-</span></span><span class=line><span class=cl>    <span class=kd>let</span> <span class=nx>search_input</span> <span class=o>=</span> <span class=nx>xxxxxxxx</span> <span class=c1>// 选中输入框
-</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=nx>search_input</span><span class=p>.</span><span class=nx>addEventListener</span><span class=p>(</span><span class=s2>&#34;keyup&#34;</span><span class=p>,</span> <span class=kd>function</span> <span class=p>(</span><span class=nx>e</span><span class=p>)</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>        <span class=nx>clearTimeout</span><span class=p>(</span><span class=nx>search_timeout</span><span class=p>);</span>
-</span></span><span class=line><span class=cl>        <span class=nx>search_timeout</span> <span class=o>=</span> <span class=nx>setTimeout</span><span class=p>(</span><span class=kd>function</span> <span class=p>()</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>            <span class=k>if</span> <span class=p>(</span><span class=nx>search_input</span><span class=p>.</span><span class=nx>value</span> <span class=o>!==</span> <span class=s2>&#34;&#34;</span><span class=p>)</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>                <span class=kd>let</span> <span class=nx>render_canvas</span> <span class=o>=</span> <span class=nx>search_input</span><span class=p>.</span><span class=nx>nextElementSibling</span><span class=p>.</span><span class=nx>nextElementSibling</span><span class=p>;</span>
-</span></span><span class=line><span class=cl>                <span class=c1>// 想办法选到 search-results 那个搜索结果展示区域即可
-</span></span></span><span class=line><span class=cl><span class=c1></span>                <span class=nx>PagefindSearch</span><span class=p>(</span><span class=nx>search_input</span><span class=p>.</span><span class=nx>value</span><span class=p>,</span> <span class=nx>render_canvas</span><span class=p>);</span>
-</span></span><span class=line><span class=cl>            <span class=p>}</span>
-</span></span><span class=line><span class=cl>        <span class=p>},</span> <span class=mi>600</span><span class=p>);</span>
-</span></span><span class=line><span class=cl>    <span class=p>});</span>
-</span></span><span class=line><span class=cl><span class=p>}</span>
-</span></span></code></pre></td></tr></table></div></div><p>这样一来，整个前端的搜索工作就也完成了. 这里写得比较简略，实际上还要单独设计搜索结果的展示区域的样式等等.</p><h2 id=调试>调试
-<a href=#%e8%b0%83%e8%af%95><small data-pagefind-ignore>¶</small></a></h2><p>最后再提一下调试的流程. 因为 Pagefind 是在 Hugo 生成了所有静态文件之后才去建立索引的，所以调试起来稍微有一点麻烦. 每当做了一点改动之后，我会先关掉 Pagefind 自带的 HTTP 服务，删除 <code>public</code> 文件夹下的所有内容：</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl>rm -rf ./public/*
-</span></span></code></pre></div><p>然后重新生成静态文件：</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl>hugo
-</span></span></code></pre></div><p>最后重新利用 Pagefind 建立索引并开启新的 HTTP 服务：</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl>./pagefind_extended --serve
-</span></span></code></pre></div><p>刷新一下网页（<code>127.0.0.1:1414</code>），就可以对刚刚修改的内容做个测试了.</p><p>最后的搜索效果如下：</p><video width=700 controls>
-<source src=search.mp4 type=video/mp4></video><h1 id=其他问题>其他问题
-<a href=#%e5%85%b6%e4%bb%96%e9%97%ae%e9%a2%98><small data-pagefind-ignore>¶</small></a></h1><p>这里有两个问题也该说明一下. 一是 Pagefind 也是有自己的<a href=https://pagefind.app/docs/config-sources/ target=_blank rel='noreferrer noopener'>配置文件<b><sub data-pagefind-ignore>⧉</sub></b></a>的. 像我在终端里可以直接运行 <code>./pagefind_extended</code> 而不用带 <code>--source public</code> 这个 flag 就是因为我把 <code>source</code> 定义在配置文件里面了.</p><p>二是，引入 Pagefind 所需要的关键模块时使用的语句是 <code>import("/_pagefind/pagefind.js");</code>，而在 Hugo 生成静态文件的过程中，这个模块是不存在的，也就是说，这个 <code>/_pagefind/pagefind.js</code> 文件是 Pagefind 建立索引时才自动生成的. 这就导致了 Hugo 主题里是没法对 <code>main.js</code> 做 <a href=https://gohugo.io/hugo-pipes/introduction/#method-aliases target=_blank rel='noreferrer noopener'>minify<b><sub data-pagefind-ignore>⧉</sub></b></a> 的. 我认为解决办法有二：要么就把 Pagefind 相关的 JavaScript 代码（包含 import 的最小代码单位）单独拿出去独立为一个新的脚本；要么就应该由 Pagefind 项目组考虑到这个问题，release 出一个单独的 <code>pagefind.js</code> 文件（我自己从生成的文件夹里拷贝也应该可行），放在主题的 <code>assets/</code> 文件夹里.</p><p></p><p></p><p></p><p></p><p></p><p></p><h1 data-pagefind-ignore>友情链接（该栏目下的其他文章）</h1><ol data-pagefind-ignore><li>第 1 期：<a href=../../zh/18284/>Hugo 静态博客建站记 - 自写主题</a></li><li>第 2 期：<a href=../../zh/82988/>博客记录书影音——Hugo 的 Data Templates - 自写主题</a></li><li>第 3 期：<a href=../../zh/01901/>如何让静态网站的暗色主题换页不闪烁 - 自写主题</a></li><li>第 4 期：<a href=../../zh/15738/>Hugo 如何让图片在暗色主题下反色 - 自写主题</a></li><li>第 5 期：利用 Pagefind 给静态博客添加搜索功能 - 自写主题（就是这篇！）</li></ol><p></p><p></p><p></p><p></p></article></div><div data-pagefind-ignore class=right_comments><script src=https://utteranc.es/client.js repo=zerovip/bcsu issue-term=pathname theme=github-light crossorigin=anonymous async></script></div></div><aside data-pagefind-ignore class=toc id=toc><button class=toc_title>目录</button><div class=toc_content><nav id=TableOfContents><ul><li><a href=#前言>前言</a></li><li><a href=#交互设计>交互设计</a></li><li><a href=#前端实现>前端实现</a></li><li><a href=#接入-pagefind>接入 Pagefind</a><ul><li><a href=#索引>索引</a></li><li><a href=#搜索>搜索</a></li><li><a href=#调试>调试</a></li></ul></li><li><a href=#其他问题>其他问题</a></li></ul></nav></div></aside></div><template id=search-zone-template><div id=search-zone><div class=search_bar><input type=search id=search-input-box class=search_bar_search-box placeholder=搜索…… autocomplete=off><div class=search_bar_close-sign onclick=closeSearch(this)><div class=close-sign></div></div></div><div class=search_results></div></div></template><template id=search-result><div class=search_results_item><div class=search_results_item_title></div><div class=search_results_item_content></div><div class=search_results_item_tags><div class=search_results_item_tags_date></div><div class=search_results_item_tags_sections></div></div></div></template><script src=../../js/main.07644855453ea3563fc25b36d91f32b4aa952cd60ebafb6fad77cf9c74baea47.js></script></body></html>
+<!DOCTYPE html><html lang="zh" class="theme-container"><head><meta charset="utf-8"/><meta name="viewport" content="width=divice-width,initial-scale=1"/><meta name="generator" content="Hugo 0.150.1"/><title>利用 Pagefind 给静态博客添加搜索功能 - 自写主题
+| 赤赤的象牙塔</title><link rel="stylesheet" type="text/css" href="../../css/base.min.77b5736a81ec178b46cb581d1318f5aee784504170c67bf68d9e3c729b7fff42.css"/><link rel="stylesheet" media="screen and (max-width: 1200px)" type="text/css" href="../../css/small.min.3b39abcf5074cbb0bd712da27c43d1c5f11a85f597da9f07a0d600e53eec7d24.css"/><link rel="stylesheet" media="screen and (min-width: 1201px)" type="text/css" href="../../css/normal.min.ac1ee5c0e20afb15107d14583eece7d76c7fb36009c07be3f3447c299209ca53.css"/><link rel="stylesheet" type="text/css" href="../../css/syntax.min.ed5b37c3a50997d5ccd8b81bf0d00a7ac1f92c82985623c2dbf0cb422596726a.css"/><script src="../../js/ctheme.min.23d42d00e692299bcf2b5832c28a8a1582346c7c45d8bc4f70280fcdbf146872.js"></script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-6CF2JBMYH3"></script><script>var dnt,doNotTrack=!1;if(!1&&(dnt=navigator.doNotTrack||window.doNotTrack||navigator.msDoNotTrack,doNotTrack=dnt=="1"||dnt=="yes"),!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-6CF2JBMYH3")}</script><script data-goatcounter="https://zerovip.goatcounter.com/count" async="" src="//gc.zgo.at/count.js"></script></head><body><nav class="bar_for_phone"><div class="bar_left_button"><div class="left_button_for_bar" onclick="ChangeClassLeft()"><div class="bar1"></div><div class="bar2"></div><div class="bar3"></div></div></div><div class="bar_search-box" onclick="startSearch(&#34;right&#34;)"><div class="magnifying-glass"></div></div><div class="bar_title"><a href="../../zh/">赤赤的象牙塔</a></div><div class="bar_right_button"><button class="toc_title_for_bar" onclick="ChangeClassTOC()">目录</button></div></nav><div class="body_for_pc"><aside class="left" id="left"><div class="left_non-footer" id="left_non-footer"><div class="left_non-footer_option"><div class="left_non-footer_option_search-icon" onclick="startSearch(&#34;left_non-footer&#34;)"><div class="magnifying-glass"></div></div><div role="checkbox" aria-checked="true" class="left_non-footer_option_theme-switch"><label class="switch"><input type="checkbox" class="theme-switcher" onchange="themeSwitch()"/>
+<span class="slider round"></span></label></div><ul role="listbox" class="left_non-footer_option_language"><li role="option" aria-selected="true" class="left_non-footer_option_active">简体中文 ⦿</li><li role="option" class="left_non-footer_option_non-active">English ⨂</li><li role="option" class="left_non-footer_option_non-active">Français ⨂</li></ul><div class="left_non-footer_option_rss"><div class="left_non-footer_option_non-active">RSS 订阅 ⊠</div></div></div><header class="left_non-footer_head"><div class="left_non-footer_head_title"><a href="../../zh/">赤赤的象牙塔</a></div><div class="left_non-footer_head_subtitle">(●’◡’●)ﾉ</div></header><nav class="left_non-footer_main"><div class="h1"><a href="../../zh/math/">数学</a></div><div class="h2"><a href="../../zh/math/notes/">数学笔记</a></div><div class="h2"><a href="../../zh/math/stories/">数学科普</a></div><div data-pagefind-filter="1st-section" class="h1 active"><a href="../../zh/non-math/">非数学</a></div><div class="h2"><a href="../../zh/non-math/journal/">日志</a></div><div class="h2"><a href="../../zh/non-math/literature/">写作</a></div><div data-pagefind-filter="2nd-section" class="h2 active"><a href="../../zh/non-math/memos/">备忘</a></div><div class="h1"><a href="../../zh/record/">记录</a></div><div class="h2"><a href="../../zh/record/book/">读过的书</a></div><div class="h2"><a href="../../zh/record/film/">看过的电影</a></div><div class="h1"><a href="../../zh/about/">关于</a></div><div class="h2"><a href="../../zh/about/me/">关于我</a></div><div class="h2"><a href="../../zh/about/site/">关于本站</a></div></nav></div><footer class="left_footer"><div class="copyright">©2019-2025 版权所有.</div></footer></aside><div data-pagefind-body="" class="right" id="right" onclick="HideBothSide()"><header class="right_head"><div data-pagefind-meta="title" class="right_head_title">利用 Pagefind 给静态博客添加搜索功能 - 自写主题</div><div data-pagefind-ignore="" class="right_head_des"><span data-pagefind-meta="date">2022年11月29日</span> - 4523 字</div></header><div class="right_main"><article class="right_main_article"><h1 id="前言">前言
+<a href="#%e5%89%8d%e8%a8%80"><small data-pagefind-ignore="">¶</small></a></h1><p>我<a href="https://github.com/zerovip/zerovip.github.io/commit/a0e5595ddbc17c6fb5ec10a732d536b2eea0e8ba#diff-aa481d6e71487ff6b05f479cc7d6958e492757e0ccd6a634dc84f32ffe42545cR396" target="_blank" rel="noreferrer noopener">早就<b><sub data-pagefind-ignore="">⧉</sub></b></a>想要给自己这个博客站添加站内搜索功能了，前前后后也考察过非常多的工具，<a href="https://gohugo.io/tools/search/" target="_blank" rel="noreferrer noopener">官方列出的选择<b><sub data-pagefind-ignore="">⧉</sub></b></a>就非常之多，但没有令我满意的：如果想要开箱即用，就要用 npm 安装 Nodejs 的一些工具；稍微简单点办法的就是利用 hugo 能够生成 json 的能力（<a href="https://makewithhugo.com/add-search-to-a-hugo-site/" target="_blank" rel="noreferrer noopener">教程一<b><sub data-pagefind-ignore="">⧉</sub></b></a>、<a href="https://palant.info/2020/06/04/the-easier-way-to-use-lunr-search-with-hugo/" target="_blank" rel="noreferrer noopener">教程二<b><sub data-pagefind-ignore="">⧉</sub></b></a>），但需要引入第三方搜索库，自己还要写不少的代码来实现. 所以我就一直拖着没有弄.</p><p>直到上个月我在读阮一峰的<a href="https://www.ruanyifeng.com/blog/2022/10/weekly-issue-226.html" target="_blank" rel="noreferrer noopener">科技爱好者周刊（第 226 期）<b><sub data-pagefind-ignore="">⧉</sub></b></a>的时候才偶然看到这么一个工具：<a href="https://pagefind.app/" target="_blank" rel="noreferrer noopener">Pagefind<b><sub data-pagefind-ignore="">⧉</sub></b></a>. 我花了半个小时仔细考察了它，几乎是立刻就确定了它正是我恰好想要、且一直在等待的那个工具. 它吸引到我的有 5 点：</p><ol><li>它上了 <a href="https://www.youtube.com/watch?v=74lsEXqRQys" target="_blank" rel="noreferrer noopener">HugoConf 2022<b><sub data-pagefind-ignore="">⧉</sub></b></a>，得到了 Hugo 社区的认可. 阅读它的文档时也能感受得到，这个工具一开始就是为了 Hugo 而设计的；</li><li>它的开发语言是 Rust，最后所提供出来的产品就是一个简单的二进制可执行文件，不需要安装环境或配置依赖，开箱即用，非常方便；</li><li>它的<a href="https://pagefind.app/docs/multilingual/" target="_blank" rel="noreferrer noopener">多语言<b><sub data-pagefind-ignore="">⧉</sub></b></a>支持做得不错：有专门对中文的分词索引支持. 虽然暂不支持查询字段分词，但正努力开发中；</li><li>它自带了一个简单的 HTTP server，本地调试起来很是方便. 如果是从头建站，它提供了十分钟就能用上的还很好看的 Pagefind UI；即便要自己写，它也提供了简单易用的接口；</li><li>它充分考虑了大型网站的搜索，将索引分成了不同的小 chunks，节省读者的网络流量，比起用 hugo 直接生成 json 要简洁、优雅得多.</li></ol><h1 id="交互设计">交互设计
+<a href="#%e4%ba%a4%e4%ba%92%e8%ae%be%e8%ae%a1"><small data-pagefind-ignore="">¶</small></a></h1><p>第一个问题是如何设计交互：搜索框应该放在哪里？搜索的流程与步骤该是什么样？宽屏幕怎么做，小屏幕又怎么做？</p><p>我仔细考察了很多包含搜索功能的网站，现在大家都已经是竖版的布局了，在页面的最上面有一个横着的顶栏，搜索框就放在这里. 当读者键入一些内容之后，交互上的做法大致可以分成三类：</p><ol><li>第一种是会出现一个专门的区域存放搜索结果，悬浮于整个页面的最顶层（举例：<a href="https://gohugo.io/documentation/" target="_blank" rel="noreferrer noopener">Hugo 的官方文档<b><sub data-pagefind-ignore="">⧉</sub></b></a>、<a href="https://en.wikipedia.org/wiki/Main_Page" target="_blank" rel="noreferrer noopener">维基百科<b><sub data-pagefind-ignore="">⧉</sub></b></a>）；<figure><img loading="lazy" src="hugo-search.png" alt="Hugo 的搜索功能示例" style="filter:var(--c-img-filter2)"/><figcaption>◉ 图. Hugo 的搜索功能示例</figcaption></figure></li><li>第二种是把搜索结果直接渲染到页面上，把当前网页上的其他内容往下挤（举例：<a href="https://xkcd.pagefind.app/" target="_blank" rel="noreferrer noopener">Pagefind 的示例站点<b><sub data-pagefind-ignore="">⧉</sub></b></a>）；<figure><img loading="lazy" src="pagefind-search.png" alt="Pagefind Demo 页的搜索功能示例" style="filter:var(--c-img-filter2)"/><figcaption>◉ 图. Pagefind Demo 页的搜索功能示例</figcaption></figure></li><li>第三种是在键入内容时不会有任何交互，必须要点击一下搜索按钮或按下回车键之后才开始搜索，此时一般会跳转到一个单独页面用来陈列搜索结果（举例：<a href="https://github.com/" target="_blank" rel="noreferrer noopener">GitHub<b><sub data-pagefind-ignore="">⧉</sub></b></a>、<a href="https://www.qbitai.com/" target="_blank" rel="noreferrer noopener">量子位<b><sub data-pagefind-ignore="">⧉</sub></b></a>、<a href="https://segmentfault.com/" target="_blank" rel="noreferrer noopener">思否<b><sub data-pagefind-ignore="">⧉</sub></b></a>、<a href="https://www.jianshu.com/" target="_blank" rel="noreferrer noopener">简书<b><sub data-pagefind-ignore="">⧉</sub></b></a>）.<figure><img loading="lazy" src="github-search.png" alt="Github 的搜索功能展示" style="filter:var(--c-img-filter2)"/><figcaption>◉ 图. Github 的搜索功能展示</figcaption></figure></li></ol><hr/><p>在 UI 设计上，这个搜索框可能只显示为一个搜索按钮，单击后才展开成为一个搜索框（举例：<a href="https://hugoloveit.com/" target="_blank" rel="noreferrer noopener">LoveIt 主题<b><sub data-pagefind-ignore="">⧉</sub></b></a>、<a href="https://io-oi.me/hugo-theme-meme/" target="_blank" rel="noreferrer noopener">MemE 主题<b><sub data-pagefind-ignore="">⧉</sub></b></a>）；或者单击后弹出一个搜索区域，里面囊括更多高级搜索的功能（举例：<a href="https://www.quantamagazine.org/" target="_blank" rel="noreferrer noopener">Quanta Magazine<b><sub data-pagefind-ignore="">⧉</sub></b></a>、<a href="https://sspai.com/" target="_blank" rel="noreferrer noopener">少数派<b><sub data-pagefind-ignore="">⧉</sub></b></a>）. 它们的后续交互还是要归结于上面的那三种，相当于是多了一个操作步骤.</p><p>我认为：直接显示搜索框，且键入内容之后马上就能看到搜索结果的交互设计才是最方便的，体验也是最好的，其中又属第一种交互模式最为优雅、合理，不破坏整体布局. 但是如何在我这个左右两栏布局的网页里实现第一种交互模式就成了新的问题：按道理，搜索功能是每个页面都有的公共的功能，应该放在左边的公共的导航栏里；然而左边本来就空间狭小、信息密集，如果再将搜索结果悬浮于左边的导航文字之上，会显得十分逼仄，感觉也破坏了左栏的导航功能.</p><p>经过仔细考虑，我决定借鉴 Quanta Magazine 的设计模式：写一个单独的搜索区域，但把它先给隐藏起来，只在左边的导航区留下一个小小的放大镜符号作为搜索入口. 当读者点击搜索按钮时，使用纯前端的技术，将整个左边栏完全替换为那个单独的搜索区域. 正因为不是悬浮于导航栏之上而是覆盖掉整个导航栏，视觉上会干净、清爽得多，同时后续搜索流程上的交互模式也可以完全按照第一种办法来实现，搜索体验也会是相当不错的.</p><p>对于小屏幕来说，先点开左栏才能看到搜索按钮，再点击搜索按钮才能看到搜索区域，这无疑是过于麻烦的. 因此可以直接把搜索按钮放在顶栏里，点击后把下面整个页面都用搜索区域替换掉.</p><h1 id="前端实现">前端实现
+<a href="#%e5%89%8d%e7%ab%af%e5%ae%9e%e7%8e%b0"><small data-pagefind-ignore="">¶</small></a></h1><p>既然是所有页面都共有的功能，那自然是要写到 <code>base.html</code> 里的. 但由于宽屏幕和小屏幕的搜索区域位置不同，里面的功能却完全一致，所以如果直接写进对应的位置就要写两遍，无法复用代码；而且最开始这个搜索区域应该是隐藏起来的，读者点击搜索按钮后才会出现，这就导致，如果把代码直接写进对应的位置，页面渲染时会先渲染出搜索区域，然后马上才应用 CSS 样式表将其隐藏，观感就是搜索区域整个一闪而过了一下，非常不美观. 我的解决方案就是，将搜索区域写成一个 HTML 的 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template" target="_blank" rel="noreferrer noopener">template<b><sub data-pagefind-ignore="">⧉</sub></b></a>，等整个页面加载完成后（样式表已经应用后）再用 JavaScript 把它装载进相应的位置. 代码结构与原理如下：</p><div class="highlight"><div class="chroma"><table class="lntable"><tbody><tr><td class="lntd"><pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span></code></pre></td><td class="lntd"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="c">&lt;!-- layouts/_default/baseof.html --&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;left&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;search-box&#34;</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&#34;showSearch(&#39;left&#39;)&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                Search Icon here
+</span></span><span class="line"><span class="cl">            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="c">&lt;!-- here needs a search page (for bigger width device) to be loaded--&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;right&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;search-box&#34;</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&#34;showSearch(&#39;right&#39;)&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                Search Icon here
+</span></span><span class="line"><span class="cl">            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="c">&lt;!-- here needs a search page (for phone) to be loaded --&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">template</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;search-template&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;search-zone&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;search&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;close-sign&#34;</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&#34;hideSearch(this)&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                    Close Icon here
+</span></span><span class="line"><span class="cl">                <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;search-results&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;main.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></tbody></table></div></div><div class="highlight"><div class="chroma"><table class="lntable"><tbody><tr><td class="lntd"><pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre></td><td class="lntd"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// main.js
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">const</span> <span class="nx">search_template</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&#34;search-template&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">loadTemplate</span><span class="p">(</span><span class="nx">prefix</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nx">container</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="nx">prefix</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nx">search_clone</span> <span class="o">=</span> <span class="nx">search_template</span><span class="p">.</span><span class="nx">content</span><span class="p">.</span><span class="nx">cloneNode</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// can do something here depending on the `prefix` variable
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">search_clone</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&#34;search-zone&#34;</span><span class="p">).</span><span class="nx">id</span> <span class="o">=</span> <span class="nx">prefix</span> <span class="o">+</span> <span class="s2">&#34;_search-zone&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">container</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">search_clone</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="nx">loadTemplate</span><span class="p">(</span><span class="s2">&#34;left&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">loadTemplate</span><span class="p">(</span><span class="s2">&#34;right&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">showSearch</span><span class="p">(</span><span class="nx">prefix</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="nx">prefix</span> <span class="o">+</span> <span class="s2">&#34;_search-zone&#34;</span><span class="p">).</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s2">&#34;search_show&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">hideSearch</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">x</span><span class="p">.</span><span class="nx">parentNode</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="s2">&#34;search_show&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></tbody></table></div></div><p>这里利用这个 <code>prefix</code> 变量，可以精确地将左右两个搜索区域分开，为了放便起见可以直接在 JavaScript 中更改对应的 id 字段. 调整样式则是根据 <code>search_show</code> 这个 class 完成隐藏与显示，具体的代码不再赘写. 这样一来，搜索入口、整个搜索区域、搜索框、关闭搜索的按钮以及对应的打开搜索区域、关闭搜索区域的功能，在这里就算是完成了.</p><h1 id="接入-pagefind">接入 Pagefind
+<a href="#%e6%8e%a5%e5%85%a5-pagefind"><small data-pagefind-ignore="">¶</small></a></h1><p>Pagefind 只做两件事：索引和搜索. 索引是 Hugo 每次生成完 <code>public/</code> 静态文件之后，Pagefind 将其作为输入，按照相应的规则，把相应的内容编进索引，最后输出成一个单独的 <code>_pagefind/</code> 文件夹；搜索则是关于读者在网站上具体搜索时的展示. 打个非常不恰当的比方：索引是后端，搜索是前端.</p><h2 id="索引">索引
+<a href="#%e7%b4%a2%e5%bc%95"><small data-pagefind-ignore="">¶</small></a></h2><p>按照上面的解释，在索引这一块儿，我们要做的就是根据自己的需要，编写相应的索引规则，确定需要索引的内容以及应该排除在外的内容.</p><p>首先是利用 <code>data-pagefind-body</code> 框定索引范围（<a href="https://pagefind.app/docs/indexing/" target="_blank" rel="noreferrer noopener">参考<b><sub data-pagefind-ignore="">⧉</sub></b></a>）. 在我这个博客里，我希望把索引范围框定在文章页的右边区域，也就是说，主页和列表页不参与索引，文章页的左侧导航区也不参与索引. 因此我这样写：</p><div class="highlight"><div class="chroma"><table class="lntable"><tbody><tr><td class="lntd"><pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td><td class="lntd"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="c">&lt;!-- layouts/_default/baseof.html --&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;left&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="c">&lt;!-- something --&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">div</span> <span class="err">{{</span> <span class="na">if</span> <span class="err">.</span><span class="na">IsPage</span> <span class="err">}}</span><span class="na">data-pagefind-body</span><span class="err">{{</span> <span class="na">end</span> <span class="err">}}</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;right&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="c">&lt;!-- something --&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></tbody></table></div></div><hr/><p>接着把一些边边角角的不想被索引到的东西用 <code>data-pagefind-ignore</code> 指定一下. 在我的博客里，我考虑到的有：发表时间、字数统计、同栏目下的友情链接、数学笔记的 PDF 区域、评论区（生成的 <code>public/</code> 目录中这个位置本来也是空的，但还是写进去了）、目录. 书影音记录页面，我只索引了“书名”、“电影名”、“我的评价”三个板块的内容，其余内容全部忽略掉了. 接着考虑几个 render hooks：标题忽略章节符号“¶”，链接忽略外链符号“⧉”，图片不需要额外添加索引，因为我有 <code>&lt;figcaption&gt;</code> 标签，已经可以被索引到了.</p><p>这里还有加密区域也应该忽略掉索引，在 <code>layouts/shortcodes/hugo-encrypt.html</code> 里，有一个专门的 <code>&lt;hugo-encrypt&gt;</code> 标签，在它后面也添加上 <code>data-pagefind-ignore</code> 就行了. 不过我的加密功能是写在博客源码里而非主题源码里的，这里其实已经不完全是主题的更改了.</p><hr/><p>Pagefind 还提供了<a href="https://pagefind.app/docs/filtering/" target="_blank" rel="noreferrer noopener">过滤器<b><sub data-pagefind-ignore="">⧉</sub></b></a>功能，十分强大. 针对我这个博客，我则是用它把所有的索引结果打上了所属的 section 的标签，这样一来在展示搜索结果时就可以对文章所属的两级 section 进行展示. 我这个主题在左边栏判断 section 的选中状态（<code>class=&#34;active&#34;</code>）时就已经写好了相关的逻辑，这里为了代码复用，把原来的逻辑提炼出来，存成两个新的变量（<code>$if_1_on</code> 和 <code>$if_2_on</code>）即可.</p><div class="highlight"><div class="chroma"><table class="lntable"><tbody><tr><td class="lntd"><pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span></code></pre></td><td class="lntd"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="c">&lt;!-- layouts/_default/baseof.html --&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">{{ range .Site.Menus.main }}
+</span></span><span class="line"><span class="cl">    {{ $if_1_on :=  0 }}
+</span></span><span class="line"><span class="cl">    {{ if eq .Identifier (path.Base $currentNode.RelPermalink) |
+</span></span><span class="line"><span class="cl">    or (eq .Identifier $currentNode.Section) }}
+</span></span><span class="line"><span class="cl">        {{ $if_1_on = 1 }}
+</span></span><span class="line"><span class="cl">    {{ end }}
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="err">{{</span> <span class="na">if</span> <span class="err">$</span><span class="na">if_1_on</span> <span class="err">}}</span><span class="na">data-pagefind-filter</span><span class="o">=</span><span class="s">&#39;1st-section&#39;</span><span class="err">{{</span> <span class="na">end</span> <span class="err">}}</span> <span class="na">class</span><span class="o">=</span><span class="s">&#39;h1 {{ if $if_1_on }}active{{ end }}&#39;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;{{ .URL }}&#39;</span><span class="p">&gt;</span>{{ .Name }}<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    {{ if .HasChildren }}
+</span></span><span class="line"><span class="cl">        {{ range .Children }}
+</span></span><span class="line"><span class="cl">            {{ if ne .Identifier &#34;&#34; }}
+</span></span><span class="line"><span class="cl">                {{ $if_2_on := 0 }}
+</span></span><span class="line"><span class="cl">                {{ if eq .Identifier (path.Base $currentNode.RelPermalink) |
+</span></span><span class="line"><span class="cl">                or (eq .Identifier $currentNode.Params.section) }}
+</span></span><span class="line"><span class="cl">                    {{ $if_2_on = 1 }}
+</span></span><span class="line"><span class="cl">                {{ end }}
+</span></span><span class="line"><span class="cl">                <span class="p">&lt;</span><span class="nt">div</span> <span class="err">{{</span> <span class="na">if</span> <span class="err">$</span><span class="na">if_2_on</span> <span class="err">}}</span><span class="na">data-pagefind-filter</span><span class="o">=</span><span class="s">&#39;2nd-section&#39;</span><span class="err">{{</span> <span class="na">end</span> <span class="err">}}</span> <span class="na">class</span><span class="o">=</span><span class="s">&#39;h2 {{ if $if_2_on }}active{{ end }}&#39;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;{{ .URL }}&#39;</span><span class="p">&gt;</span>{{ .Name }} <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">            {{ end }}
+</span></span><span class="line"><span class="cl">        {{ end }}
+</span></span><span class="line"><span class="cl">    {{ end }}
+</span></span><span class="line"><span class="cl">{{end}}
+</span></span></code></pre></td></tr></tbody></table></div></div><p>注意到这里 <code>data-pagefind-filter</code> 标签并不需要一定在 <code>&lt;body&gt;</code> 中或 <code>data-pagefind-body</code> 标签下，所以我能够在这里把它写在左边的导航区，省了不少事儿. 感谢 Pagefind 开发者的周到考虑.</p><hr/><p>Pagefind 还有 <a href="https://pagefind.app/docs/metadata/" target="_blank" rel="noreferrer noopener">metadata<b><sub data-pagefind-ignore="">⧉</sub></b></a> 也需要额外配置一下，主要就是文章标题和日期. Pagefind 默认会取第一个 <code>&lt;h1&gt;</code> 标签作为 metadata 标题，我这个主题中文章标题是单独一个容器，<code>&lt;h1&gt;</code> 标签并不归文章标题所使用（<code>startLevel</code> 为 1，<a href="https://gohugo.io/getting-started/configuration-markup/#table-of-contents" target="_blank" rel="noreferrer noopener">Hugo 文档<b><sub data-pagefind-ignore="">⧉</sub></b></a>），所以这里需要重写；Pagefind 的默认 metadata 中也没有日期字段，这里也给它添加上：</p><div class="highlight"><div class="chroma"><table class="lntable"><tbody><tr><td class="lntd"><pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td><td class="lntd"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="c">&lt;!-- layouts/_default/single.html --&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">data-pagefind-meta</span><span class="o">=</span><span class="s">&#34;title&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    {{- .Title -}}
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">span</span> <span class="na">data-pagefind-meta</span><span class="o">=</span><span class="s">&#34;date&#34;</span><span class="p">&gt;</span>{{ .Date | time.Format &#34;:date_long&#34; }}<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></tbody></table></div></div><p>标题那里在双大括号里使用了<a href="https://gohugo.io/templates/introduction/#whitespace" target="_blank" rel="noreferrer noopener">短横线<b><sub data-pagefind-ignore="">⧉</sub></b></a>，以免取到的题目左右有空格或回车.</p><hr/><p>Pagefind 在索引这件事上还有<a href="https://pagefind.app/docs/multilingual/" target="_blank" rel="noreferrer noopener">多语言<b><sub data-pagefind-ignore="">⧉</sub></b></a>以及<a href="https://pagefind.app/docs/sorts/" target="_blank" rel="noreferrer noopener">搜索顺序<b><sub data-pagefind-ignore="">⧉</sub></b></a>可供配置，我这个博客不需要配置这些，它提供的默认选项已经则够好.</p><h2 id="搜索">搜索
+<a href="#%e6%90%9c%e7%b4%a2"><small data-pagefind-ignore="">¶</small></a></h2><p>搜索是读者那边的前端交互模块了，Pagefind 自带了一个开箱即用的 Pagefind UI，好看且功能强大，刚开始建站写主题的话可以直接拿过来用. 不过我的前端设计以及交互模式完全是我自己设计的，难以把它这套东西强行塞进去，所以我完全放弃了它提供的这一套 Pagefind UI，转而全都自己写. 好在 Pagefind 也提供了强大的<a href="https://pagefind.app/docs/api/" target="_blank" rel="noreferrer noopener">搜索接口<b><sub data-pagefind-ignore="">⧉</sub></b></a>，写起来反而是更加容易的.</p><p>其实这里的[搜索功能的实现]本质上就是定义了下面这个 <code>PagefindSearch(text, canvas)</code> 函数，它的入参 <code>text</code> 是读者在搜索框里所打的文字，<code>canvas</code> 是展示搜索结果的区域，这个函数的功能就是去调用 Pagefind 接口搜索 <code>text</code> 字段，并将结果渲染到 <code>canvas</code> 里面. 这段代码只是一个示例，没有详细展示渲染的逻辑，不过其最佳实践仍然是使用 template 技术.</p><div class="highlight"><div class="chroma"><table class="lntable"><tbody><tr><td class="lntd"><pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td><td class="lntd"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// main.js
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">async</span> <span class="kd">function</span> <span class="nx">PagefindSearch</span><span class="p">(</span><span class="nx">text</span><span class="p">,</span> <span class="nx">canvas</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">pagefind</span> <span class="o">=</span> <span class="kr">await</span> <span class="kr">import</span><span class="p">(</span><span class="s2">&#34;/_pagefind/pagefind.js&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">search</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">pagefind</span><span class="p">.</span><span class="nx">search</span><span class="p">(</span><span class="nx">text</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="p">(</span><span class="kr">const</span> <span class="nx">result</span> <span class="k">of</span> <span class="nx">search</span><span class="p">.</span><span class="nx">results</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">let</span> <span class="nx">result_data</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">result</span><span class="p">.</span><span class="nx">data</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result_data</span><span class="p">);</span> <span class="c1">// 可以自由发挥来处理 pagefind 返回的结果
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="c1">// 比如想办法渲染到 canvas 这个区域
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></tbody></table></div></div><hr/><p>前面<a href="#%e5%89%8d%e7%ab%af%e5%ae%9e%e7%8e%b0">前端实现</a>那个小节写过一个 <code>showSearch</code> 函数，这里稍微扩充一下，以监听用户的输入，并利用<a href="https://schier.co/blog/wait-for-user-to-stop-typing-using-javascript" target="_blank" rel="noreferrer noopener">函数防抖（debounce）<b><sub data-pagefind-ignore="">⧉</sub></b></a>延迟 600 毫秒把读者的输入传进我们刚刚写的那个 <code>PagefindSearch(text)</code> 函数中：</p><div class="highlight"><div class="chroma"><table class="lntable"><tbody><tr><td class="lntd"><pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td><td class="lntd"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// main.js
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">function</span> <span class="nx">showSearch</span><span class="p">(</span><span class="nx">prefix</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="nx">prefix</span> <span class="o">+</span> <span class="s2">&#34;_search-zone&#34;</span><span class="p">).</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s2">&#34;search_show&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 以下为扩充内容
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kd">let</span> <span class="nx">search_timeout</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">let</span> <span class="nx">search_input</span> <span class="o">=</span> <span class="nx">xxxxxxxx</span> <span class="c1">// 选中输入框
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">search_input</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&#34;keyup&#34;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">clearTimeout</span><span class="p">(</span><span class="nx">search_timeout</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">search_timeout</span> <span class="o">=</span> <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(</span><span class="nx">search_input</span><span class="p">.</span><span class="nx">value</span> <span class="o">!==</span> <span class="s2">&#34;&#34;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="kd">let</span> <span class="nx">render_canvas</span> <span class="o">=</span> <span class="nx">search_input</span><span class="p">.</span><span class="nx">nextElementSibling</span><span class="p">.</span><span class="nx">nextElementSibling</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">                <span class="c1">// 想办法选到 search-results 那个搜索结果展示区域即可
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                <span class="nx">PagefindSearch</span><span class="p">(</span><span class="nx">search_input</span><span class="p">.</span><span class="nx">value</span><span class="p">,</span> <span class="nx">render_canvas</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">},</span> <span class="mi">600</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">});</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></tbody></table></div></div><p>这样一来，整个前端的搜索工作就也完成了. 这里写得比较简略，实际上还要单独设计搜索结果的展示区域的样式等等.</p><h2 id="调试">调试
+<a href="#%e8%b0%83%e8%af%95"><small data-pagefind-ignore="">¶</small></a></h2><p>最后再提一下调试的流程. 因为 Pagefind 是在 Hugo 生成了所有静态文件之后才去建立索引的，所以调试起来稍微有一点麻烦. 每当做了一点改动之后，我会先关掉 Pagefind 自带的 HTTP 服务，删除 <code>public</code> 文件夹下的所有内容：</p><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">rm -rf ./public/*
+</span></span></code></pre></div><p>然后重新生成静态文件：</p><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">hugo
+</span></span></code></pre></div><p>最后重新利用 Pagefind 建立索引并开启新的 HTTP 服务：</p><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">./pagefind_extended --serve
+</span></span></code></pre></div><p>刷新一下网页（<code>127.0.0.1:1414</code>），就可以对刚刚修改的内容做个测试了.</p><p>最后的搜索效果如下：</p><video width="700" controls="">
+<source src="search.mp4" type="video/mp4"/></video><h1 id="其他问题">其他问题
+<a href="#%e5%85%b6%e4%bb%96%e9%97%ae%e9%a2%98"><small data-pagefind-ignore="">¶</small></a></h1><p>这里有两个问题也该说明一下. 一是 Pagefind 也是有自己的<a href="https://pagefind.app/docs/config-sources/" target="_blank" rel="noreferrer noopener">配置文件<b><sub data-pagefind-ignore="">⧉</sub></b></a>的. 像我在终端里可以直接运行 <code>./pagefind_extended</code> 而不用带 <code>--source public</code> 这个 flag 就是因为我把 <code>source</code> 定义在配置文件里面了.</p><p>二是，引入 Pagefind 所需要的关键模块时使用的语句是 <code>import(&#34;/_pagefind/pagefind.js&#34;);</code>，而在 Hugo 生成静态文件的过程中，这个模块是不存在的，也就是说，这个 <code>/_pagefind/pagefind.js</code> 文件是 Pagefind 建立索引时才自动生成的. 这就导致了 Hugo 主题里是没法对 <code>main.js</code> 做 <a href="https://gohugo.io/hugo-pipes/introduction/#method-aliases" target="_blank" rel="noreferrer noopener">minify<b><sub data-pagefind-ignore="">⧉</sub></b></a> 的. 我认为解决办法有二：要么就把 Pagefind 相关的 JavaScript 代码（包含 import 的最小代码单位）单独拿出去独立为一个新的脚本；要么就应该由 Pagefind 项目组考虑到这个问题，release 出一个单独的 <code>pagefind.js</code> 文件（我自己从生成的文件夹里拷贝也应该可行），放在主题的 <code>assets/</code> 文件夹里.</p><p></p><p></p><p></p><p></p><p></p><p></p><h1 data-pagefind-ignore="">友情链接（该栏目下的其他文章）</h1><ol data-pagefind-ignore=""><li>第 1 期：<a href="../../zh/18284/">Hugo 静态博客建站记 - 自写主题</a></li><li>第 2 期：<a href="../../zh/82988/">博客记录书影音——Hugo 的 Data Templates - 自写主题</a></li><li>第 3 期：<a href="../../zh/01901/">如何让静态网站的暗色主题换页不闪烁 - 自写主题</a></li><li>第 4 期：<a href="../../zh/15738/">Hugo 如何让图片在暗色主题下反色 - 自写主题</a></li><li>第 5 期：利用 Pagefind 给静态博客添加搜索功能 - 自写主题（就是这篇！）</li></ol><p></p><p></p><p></p><p></p></article></div><div data-pagefind-ignore="" class="right_comments"><script src="https://utteranc.es/client.js" repo="zerovip/bcsu" issue-term="pathname" theme="github-light" crossorigin="anonymous" async=""></script></div></div><aside data-pagefind-ignore="" class="toc" id="toc"><button class="toc_title">目录</button><div class="toc_content"><nav id="TableOfContents"><ul><li><a href="#前言">前言</a></li><li><a href="#交互设计">交互设计</a></li><li><a href="#前端实现">前端实现</a></li><li><a href="#接入-pagefind">接入 Pagefind</a><ul><li><a href="#索引">索引</a></li><li><a href="#搜索">搜索</a></li><li><a href="#调试">调试</a></li></ul></li><li><a href="#其他问题">其他问题</a></li></ul></nav></div></aside></div><template id="search-zone-template"><div id="search-zone"><div class="search_bar"><input type="search" id="search-input-box" class="search_bar_search-box" placeholder="搜索……" autocomplete="off"/><div class="search_bar_close-sign" onclick="closeSearch(this)"><div class="close-sign"></div></div></div><div class="search_results"></div></div></template><template id="search-result"><div class="search_results_item"><div class="search_results_item_title"></div><div class="search_results_item_content"></div><div class="search_results_item_tags"><div class="search_results_item_tags_date"></div><div class="search_results_item_tags_sections"></div></div></div></template><script src="../../js/main.07644855453ea3563fc25b36d91f32b4aa952cd60ebafb6fad77cf9c74baea47.js"></script></body></html>
