@@ -96,18 +96,21 @@ target='_blank' rel='noreferrer noopener'
 &lt;blockquote&gt;
 &lt;p&gt;不管是线上还是线下，我们很容易会被和我们相似的人所吸引。我们也倾向于认为，两个人的共同点越多，在一起的可能就越大。&lt;/p&gt;
 &lt;p&gt;……&lt;/p&gt;
-&lt;p&gt;但其实，事实可能并不完全是这样。心理学家 Finkel （2017）通过实验发现，&lt;strong&gt;相似性对两个人相处是否合适并没有显著影响&lt;/strong&gt;。这种对「相似性」的过度痴迷可能会阻碍我们找到「真爱」。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;但其实，事实可能并不完全是这样。心理学家 Finkel （2017）通过实验发现，&lt;strong&gt;相似性对两个人相处是否合适并没有显著影响&lt;/strong&gt;。这种对「相似性」的过度痴迷可能会阻碍我们找到「真爱」。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;我非常好奇这里面“合适”的含义是怎么定义的，便拉到最后找到了这篇论文：&lt;a href='https://www.researchgate.net/publication/319381288_Is_Romantic_Desire_Predictable_Machine_Learning_Applied_to_Initial_Romantic_Attraction'
 target='_blank' rel='noreferrer noopener'
 &gt;Joel, S., Eastwick, P. W., &amp;amp; Finkel, E. J. (2017). Is romantic desire predictable? Machine learning applied to initial romantic attraction. Psychological science, 28(10), 1478-1489.&lt;b&gt;&lt;sub&gt;⧉&lt;/sub&gt;&lt;/b&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;论文的摘要是这么说的：&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Matchmaking companies and theoretical perspectives on close relationships suggest that initial attraction is, to some extent, a product of two people&amp;rsquo;s self-reported traits and preferences. We used machine learning to test how well such measures predict people&amp;rsquo;s overall tendencies to romantically desire other people (actor variance) and to be desired by other people (partner variance), as well as people&amp;rsquo;s desire for specific partners above and beyond actor and partner variance (relationship variance). In two speed-dating studies, romantically unattached individuals completed more than 100 self-report measures about traits and preferences that past researchers have identified as being relevant to mate selection. Each participant met each opposite-sex participant attending a speed-dating event for a 4-min speed date. Random forests models predicted 4% to 18% of actor variance and 7% to 27% of partner variance; crucially, however, they were unable to predict relationship variance using any combination of traits and preferences reported before the dates. These results suggest that compatibility elements of human mating are challenging to predict before two people meet.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;Matchmaking companies and theoretical perspectives on close relationships suggest that initial attraction is, to some extent, a product of two people&amp;rsquo;s self-reported traits and preferences. We used machine learning to test how well such measures predict people&amp;rsquo;s overall tendencies to romantically desire other people (actor variance) and to be desired by other people (partner variance), as well as people&amp;rsquo;s desire for specific partners above and beyond actor and partner variance (relationship variance). In two speed-dating studies, romantically unattached individuals completed more than 100 self-report measures about traits and preferences that past researchers have identified as being relevant to mate selection. Each participant met each opposite-sex participant attending a speed-dating event for a 4-min speed date. Random forests models predicted 4% to 18% of actor variance and 7% to 27% of partner variance; crucially, however, they were unable to predict relationship variance using any combination of traits and preferences reported before the dates. These results suggest that compatibility elements of human mating are challenging to predict before two people meet.&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;人家摘要说得挺清楚的，每个人都会对自己的特征是什么样的以及自己喜欢什么样的人有个想法，有理论认为这两点结合起来，就可以决定两个人在最一开始能不能互相吸引. 这篇论文就找来一堆人，做了一大堆题目（回答自己的特征和偏好），这些题目在过去被认为和伴侣选择是有关的，然后用机器学习预测每个人会被谁吸引、对谁有吸引力. 然后这些人真的开始进行快速约会，检验一下机器学习是不是预测对了. 最后的结论是：在真正见面之前，是很难预测俩人是不是合适的. 这里面 compatibility elements of human mating 的含义应该是指 actor variance（渴望另一个人，被别人吸引）和 partner variance（被另一个人渴望，吸引别人）.&lt;/p&gt;
 &lt;p&gt;而在公众号的这篇文章里，这篇论文就被概括为了：“相似性对两个人相处是否合适并没有显著影响”，我认为这是极其错误的概括. 如果实验是找来一群人，只记录每个人的特征，仅用这一个数据预测，那这么概括还说得通. 因为只有特征的话似乎只能看相似性了. 但这篇论文还包括了每个人的偏好呢！虽然不排除这里面会有相似性的影响，但是不是更有可能是看——比方说我喜欢蓝眼睛的人，你有蓝色的眼睛——机器学习就会预测我会喜欢你？直接写成“相似性”这绝对是有问题的吧！&lt;/p&gt;
 &lt;p&gt;那有没有可能是我只看了摘要，而摘要并不全面，在论文里面某个细枝末节的地方有这样的表述呢？我又下载了这篇论文，直接搜索“similarity”，除去参考文献，全文只有一处使用了这个词：&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Empirical efforts to predict relationship-level vari-ance in initial attraction from variables assessed before two people meet have also tended to fare poorly. For example, initial attraction in face-to-face contexts is negligibly related to &lt;strong&gt;similarity&lt;/strong&gt; (e.g., the fact that Laura and Ben share similar interests makes them no more or less likely to be attracted to each other; Luo &amp;amp; Zhang, 2009; Tidwell, Eastwick, &amp;amp; Finkel, 2013).&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;Empirical efforts to predict relationship-level vari-ance in initial attraction from variables assessed before two people meet have also tended to fare poorly. For example, initial attraction in face-to-face contexts is negligibly related to &lt;strong&gt;similarity&lt;/strong&gt; (e.g., the fact that Laura and Ben share similar interests makes them no more or less likely to be attracted to each other; Luo &amp;amp; Zhang, 2009; Tidwell, Eastwick, &amp;amp; Finkel, 2013).&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;首先，这句话出现在文章的开头，这一小节的标题叫做“Prior Perspectives on the Predictability of Romantic Attraction”，看这一小节的内容也看得出来，这是在做文献综述，作者正在介绍前人的研究成果. 所以，如果要介绍这个成果，也应该引用 Luo &amp;amp; Zhang 的成果吧，而公众号里的措辞为，“心理学家 Finkel （2017）通过实验发现”. 其次，我们来看这句话想说的结论，无论是前一句总述，还是这一句的 for example，都着重强调了“initial attraction”，即“初始吸引”. 而公众号里的措辞是“两个人相处是否合适”，后面也在补充说“这种对「相似性」的过度痴迷可能会阻碍我们找到「真爱」”，那么显然初始吸引和“真爱”是完完全全两个不同的概念. 所以公众号的措辞明显不是对这一句话的改写.&lt;/p&gt;
 &lt;p&gt;那有没有可能是在论文的其它地方有写到“相似性与两人相处是否合适”的内容呢？我没有时间通读这个论文，但觉得可能性不大. 一是论文摘要绝对是对论文最好的概括与总结，从摘要中就没看出来这篇文章想要探讨这个问题；二是我不相信写这个公众号的人会为了这么一个结论通读了整篇论文. 这个公众号文章给我的感觉就是，写公众号的人先有了一个理论，然后 ta 到网上搜索论文来“佐证”自己的理论，结果找来找去都没有找到非常合适的铁证，便随便找了这么一篇论文，匆匆读了摘要，然后牵强附会地给引用上了.&lt;/p&gt;
 &lt;p&gt;这篇文章包括这个公众号的其它文章中的其它类似的引用我都没有精力这样一一去查证，但我大胆猜测这个公众号写文章的流程就是这样的，装模作样，东拼西凑. 打着心理学科普的旗号，装出严谨的态度（毫不羞愧地在文章末尾附上参考文献），生产着这样粗制滥造、一点水平都没有的文章，骗取流量（几乎都是 10 万+ 的阅读量）. 这不就是营销号吗？而且不得不说，心理学真是这种无良营销号的重灾区.&lt;/p&gt;
@@ -171,13 +174,15 @@ target='_blank' rel='noreferrer noopener'
 &lt;/p&gt;
 &lt;p&gt;王小波的信都很短，很简单，有点不正经，但是感情很充沛，我已经不再去想他没逻辑什么的了，我开始觉得他很可爱. 比如有这么一段：&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;今天我累死啦！烦死啦！我整天在洗试管，洗烧杯，洗漏斗，洗该死的坛坛罐罐。我顶腻的就是这个，可是该死的老师还说洗得不干净，又重洗。他们还说，洗不干净实验做不成就是不及格，这可把我吓坏了。洗完我垂头丧气，好像做贼被抓一样不痛快。我多倒霉，上这个劳什子大学。更倒霉的是星期天和你出去又碰上了哭丧脸天气。我更倒霉的是一星期只能见你一次，其他时间只能和我不爱见的人一起。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;今天我累死啦！烦死啦！我整天在洗试管，洗烧杯，洗漏斗，洗该死的坛坛罐罐。我顶腻的就是这个，可是该死的老师还说洗得不干净，又重洗。他们还说，洗不干净实验做不成就是不及格，这可把我吓坏了。洗完我垂头丧气，好像做贼被抓一样不痛快。我多倒霉，上这个劳什子大学。更倒霉的是星期天和你出去又碰上了哭丧脸天气。我更倒霉的是一星期只能见你一次，其他时间只能和我不爱见的人一起。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;哈哈哈哈这一段看得我哈哈大笑！那一刻就觉得无论是什么人，伟人也好，普通人也罢，出名的人，或不出名的人，都是在浓烈地过自己的生活呢！我正坐在墓园里，这里有成千上万的墓碑，葬着成千上万的死去的灵魂，说真的，王小波和我们又有什么区别呢？&lt;/p&gt;
 &lt;p&gt;读到王小波讲自己洗试管的事情，我突然回忆起来，我并不是没有读过王小波，两个月前我还读过他的三篇杂文.&lt;/p&gt;
 &lt;p&gt;二月份的时候我和我姐姐聊天，我姐姐对王小波很感兴趣，给我推荐了三篇王小波的杂文：《思维的乐趣》《科学的美好》《我为什么写作》. 我马上就去读了它们. 我现在想起来了，我那个时候真的是对他喜欢不起来，这三篇杂文给我的最大感受就是王小波说话没逻辑，读完之后不记得自己读了什么！怪不得我一直不记得自己读过他. 今天试着回想这三篇杂文，更是完全不记得了，只记得他说过学化学的女孩子好看，学数学的女孩子不好看. 查了一下，是在《科学的美好》中，原文是这样：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;我对这门科学一直恋恋不舍：学化学的女孩很多，有不少长得很漂亮。&lt;/p&gt;
-&lt;p&gt;后来我去学数学，在这方面我很有天分。……学数学的女孩少，长得也一般。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;后来我去学数学，在这方面我很有天分。……学数学的女孩少，长得也一般。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;不过今天的话，我想我更了解王小波这个人了，我也不说他没逻辑了. 我可以说，他的文字是那种未经整理的天然的文字，带着思想的纯真，不加掩饰，浑然天成，汩汩流淌着.&lt;/p&gt;
 &lt;p&gt;嗯，我对这个评价很满意，毕竟他是搞文学的，不能用理科生的思维要求他. 要是他还活着，能和他一起聊聊天，应该是极好的吧！&lt;/p&gt;
 &lt;hr&gt;
@@ -205,7 +210,8 @@ target='_blank' rel='noreferrer noopener'
 &lt;p&gt;这本书的鸟类知识主要集中在第三章的四篇鸟类调查中，前面访谈部分鸟类知识极少，但也不是没有，而且非常难能可贵的是，只要出现了专业的知识，就一定是那种非常细节的知识，在讲具体的东西，而不是概括出来泛泛而谈. 比如，第 156 页，讲到了 Per Alström 关于鸟类演化的研究：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;在物种分类的研究里，鸟类确实是一个挺特别的物种，由于它们会做长途迁徙，相比起很多种动物来说，其演化历史发生过很多有趣的变化，甚至经常演变出不同的地理亚种. 例如，属于印度尼西亚小岛布鲁（Buru）的特有种马丹绣眼鸟（Rufous-throated White-eye, Madanga ruficolis），2014 年由佩尔经分子鉴定确认为鹡鸰亚科（Motacillidae，包括鹡鸰与鹨)，最接近的亲属是林鹨. 这完全出乎众人的意料，因为无论从外形、叫声还是生境来看，马丹绣眼鸟跟鹨，甚至鹡鸰都风马牛不相及，但原来二者竟然来自共同的祖先，这就是趋异演化（divergent evolution）的好例子. 佩尔估计，马丹绣眼鸟的祖先跟鹨一样也是长途迁徙鸟，有一部分来到小岛后，便在这里落地生根. 小岛的生境是森林，而鹨的生境是田野、平原，马丹绣眼鸟的祖先来到这里，为了适应截然不同的生境，在觅食与繁殖行为,甚至外表形态上也渐渐变得面目全非，就像变魔术那样令人啧啧称奇.&lt;/p&gt;
-&lt;p&gt;跟趋异演化同样有趣的掩眼魔法，便是趋同演化（convergent evolution），而最佳例子便是深受中国鸟人宠爱的丽星鹩鹛（Spotted Elachura, Elachura formosa）. 丽星鹩鹛的外形、行为和生境跟鹩鹛类十分相似，所以一直“掩人耳目”地隐藏在鹩鹛家族里，但佩尔于 2014 年经分子鉴定，发现这个小家伙的祖先不但跟鹩鹛毫无关系，而且其直属近亲都已统统灭绝，只剩它一种，所以现被归类自成一科，丽星鹩鹛科（Elachuridae）. “毫无血缘关系的鸟种，身处在相同的生境，吃着相同的食物，久而久之演变出了相似的外形和行为，这印证了演化力量的存在，也是我觉得非常有趣的地方.”&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;跟趋异演化同样有趣的掩眼魔法，便是趋同演化（convergent evolution），而最佳例子便是深受中国鸟人宠爱的丽星鹩鹛（Spotted Elachura, Elachura formosa）. 丽星鹩鹛的外形、行为和生境跟鹩鹛类十分相似，所以一直“掩人耳目”地隐藏在鹩鹛家族里，但佩尔于 2014 年经分子鉴定，发现这个小家伙的祖先不但跟鹩鹛毫无关系，而且其直属近亲都已统统灭绝，只剩它一种，所以现被归类自成一科，丽星鹩鹛科（Elachuridae）. “毫无血缘关系的鸟种，身处在相同的生境，吃着相同的食物，久而久之演变出了相似的外形和行为，这印证了演化力量的存在，也是我觉得非常有趣的地方.”&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;我最近同时在学习植物和鸟类，所以在生物学分类这块有点自己的感受，同样的一个物种在不同的生境下稍稍有那么一点点差别，久而久之它们就产生了生殖隔离，也就是说演化就发生在我们身边，我们其实正在目睹一些演化的发生！高中学习这里时因为知道演化是需要成千上万年的，所以会觉得它离我很遥远，最近我越来越意识到，其实在人类短暂的生命里，也是能够看到演化的痕迹.&lt;/p&gt;
 &lt;h1&gt;人、事、物&lt;/h1&gt;
 &lt;p&gt;这本书最有价值的一点是，它访谈的这 26 个人都不是什么无名小卒，他们各个都是成就斐然，在圈子里有响当当名号的那种“大”人物. 大家可能有所不知，观鸟在中国的发展才 30 年左右的时间（截至 2021 年），所以在我们短暂的发展历史中那种非常重要的、改变历史走向的大事件可能也就不到 10 件（比如第一本中国本土图鉴的出版、北戴河的“剑桥鸟类考察团”、“塱原事件”等），这本书里的访谈对象其实大多都是某一个事件的主要推动者或参与者，不少事件还是他们合力完成的. 在某一篇人物访谈中谈到一个事件，下面往往就会有一个脚注，写着“请参考本书对某某某的访谈”，意思是那个人在这个事件中有更重要的贡献或者是更加知情的人士，这种前后照应给这本书带来了愉悦的阅读体验.&lt;/p&gt;
@@ -370,7 +376,8 @@ target='_blank' rel='noreferrer noopener'
 target='_blank' rel='noreferrer noopener'
 &gt;查询·统计&lt;b&gt;&lt;sub&gt;⧉&lt;/sub&gt;&lt;/b&gt;&lt;/a&gt;栏目中的“观测地点”内输入“圆明园”，就找到了 300 多份圆明园的观鸟记录. 点击“鸟种数量”，再点击“记录次数”按降序排序，就能看到其他观鸟者在圆明园记录到的各种鸟类了. 但我担心这里面很多鸟类是夏天才能看到的，现在才二月份啊！所以我点击“报告数量”，再按“观测时间”降序排列，然后随便挑了几份这些天的观鸟报告. 将它们取并集就得到了考试范围：&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;鸳鸯、绿头鸭、斑嘴鸭、罗纹鸭、普通秋沙鸭、雀鹰、苍鹭、小䴙（pì）䴘（tī）、红隼（sǔn）、黑水鸡、白骨顶、山斑鸠、珠颈斑鸠、星头啄木鸟、大斑啄木鸟、灰头绿啄木鸟、灰喜鹊、红嘴蓝雀、喜鹊、达乌里寒鸦、小嘴乌鸦、煤山雀、大山雀、北长尾山雀、沼泽山雀、远东山雀、银喉长尾山雀、白头鹎（bēi）、棕头鸦雀、戴菊、灰椋（liáng）鸟、黑头䴓（shī）、乌鸫（dōng）、麻雀、燕雀、树鹨（liù）、小鹀（wú）、黄雀、黑尾蜡嘴雀、金翅雀……&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;鸳鸯、绿头鸭、斑嘴鸭、罗纹鸭、普通秋沙鸭、雀鹰、苍鹭、小䴙（pì）䴘（tī）、红隼（sǔn）、黑水鸡、白骨顶、山斑鸠、珠颈斑鸠、星头啄木鸟、大斑啄木鸟、灰头绿啄木鸟、灰喜鹊、红嘴蓝雀、喜鹊、达乌里寒鸦、小嘴乌鸦、煤山雀、大山雀、北长尾山雀、沼泽山雀、远东山雀、银喉长尾山雀、白头鹎（bēi）、棕头鸦雀、戴菊、灰椋（liáng）鸟、黑头䴓（shī）、乌鸫（dōng）、麻雀、燕雀、树鹨（liù）、小鹀（wú）、黄雀、黑尾蜡嘴雀、金翅雀……&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;天啊！这足足有 40 种了！这完完全全超过了我的能力范围，而且距离 2 月 17 日只有五天了. 聪明如我，我再把那几份报告取了个交集，这样就得到了考试重点，一共有 23 种（页码为《中国鸟类观察手册》的页码）：&lt;/p&gt;
 &lt;small&gt;
 &lt;ol&gt;
@@ -523,7 +530,8 @@ target='_blank' rel='noreferrer noopener'
 &gt;圆明园的黑天鹅出现了 H5N8 禽流感&lt;b&gt;&lt;sub&gt;⧉&lt;/sub&gt;&lt;/b&gt;&lt;/a&gt;：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;农业农村部新闻办公室2月1日发布，北京市发生野生天鹅H5N8亚型高致病性禽流感疫情。&lt;/p&gt;
-&lt;p&gt;2月1日，农业农村部接到中国动物疫病预防控制中心报告，经国家禽流感参考实验室确诊，海淀区圆明园遗址公园发生野生天鹅H5N8亚型高致病性禽流感疫情。疫点栖息野生禽类15只，发病3只，死亡3只。疫情发生后，当地立即启动应急响应机制，开展应急处置工作，对周边环境进行消毒，全部病死野禽均已无害化处理。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;2月1日，农业农村部接到中国动物疫病预防控制中心报告，经国家禽流感参考实验室确诊，海淀区圆明园遗址公园发生野生天鹅H5N8亚型高致病性禽流感疫情。疫点栖息野生禽类15只，发病3只，死亡3只。疫情发生后，当地立即启动应急响应机制，开展应急处置工作，对周边环境进行消毒，全部病死野禽均已无害化处理。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;那个时候我刚开始学习鸟类，自然就想在图鉴里把黑天鹅给找出来看一看，结果我发现我的图鉴里没有黑天鹅！我上网查了一下才知道，黑天鹅不是本土物种，是澳大利亚的，它们自己不可能飞到北半球来，是公园人为引入的. 黑天鹅的引入，一定程度上影响了我们本土的鸟类物种，里面有很大的隐患. 我又想到我家附近的一个公园里也有黑天鹅，不知道那些黑天鹅是公园引入的，还是从圆明园飞过去的.
 &lt;small&gt;&lt;/p&gt;
 &lt;p&gt;来源：&lt;a href='https://www.zhihu.com/question/442386130/answer/1710894243'
@@ -576,10 +584,12 @@ target='_blank' rel='noreferrer noopener'
 &lt;p&gt;微博可以说是互联网最彻底的地方了，你可以公开搜索到任何东西，任何一个人的微博你都能点开查看，他的个人信息、他发过的微博都能看到. 然而微博对我来说好像还是少了点什么. 具体少了点什么居然是在我离开微博之后才可以真正说清楚的.&lt;/p&gt;
 &lt;p&gt;2019 年 3 月 4 日，我因发表了关于游戏《还愿》的评论而遭到微博的删除. 我那条被删的微博只是在说“《还愿》剧情好一般啊，游戏性还好，……”之类，只是在谈游戏而已，对游戏内的影射之类完全没有提到. 结果那条微博被删除，理由是：&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;因违反相关法律法规和《微博举报投诉操作细则》&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;因违反相关法律法规和《微博举报投诉操作细则》&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;这件事有太多让我生气的点. 第一，我认为游戏本身和游戏的内涵应该坚定的区分开，就像人的业务水平和人品应该坚定的区分开一样. 一个游戏即便影射了国家领导人习近平，这就妨碍它成为一个游戏了么？作品讽刺的东西是你讨厌的，你就说这个作品有内涵、是伟大的作品；作品讽刺的东西是你热爱的，你就说这个作品阴阳怪气、是垃圾——双标真的是玩得溜啊. 微博上的人永远都是意识形态作为第一位，他们会觉得一个人人品不好，专业能力再强都不行：一个明星吸毒了，就必须封杀他；一个品牌辱华了，就必须封杀它. 第二，我发的东西哪一点违反了相关法律？违反了哪一条法律？这个问题往深了说其实是整个中文互联网的问题. 言论审查里的“相关法律”永远都是一个口袋，觉得什么不该出现就往里装，审查的规则与标准永远不能透明、公开，就是要让中国人人人自危，发言之前先自我审查一遍. 网信办真是高明啊. 第三，看它提到《微博举报投诉操作细则》，我不禁猜测，是有人举报了我的微博. 举报在我看来是一种陋习，看不惯的东西就举报它，借助铁拳的力量将它干掉，而铁拳往往会帮忙，这实在是一种悲哀. 肖站粉丝看 AO3 不爽就举报了 AO3；有人看漫画家 JM 的《帝国社会》不爽就举报他；有人不爽杨笠讽刺男性的脱口秀就举报她……现在网络环境举报成风，在我看来这就是文化大革命的思维. 在这种情况下，微博甚至没有给我一个自我辩护的机会，就直接把我的微博删除了，我感到不被尊重，在微博里没有人权. 我对自由有着偏执的追求，我对统一标准不双标有着极高的要求. 我作出决定，永久退出微博.&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;那些哭着喊着要走的人，从来都不会真正离开；真正想要离开的人，挑一个风和日丽的下午，披上一件大衣出门，消失在冬日的阳光里，再也没有回来.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;那些哭着喊着要走的人，从来都不会真正离开；真正想要离开的人，挑一个风和日丽的下午，披上一件大衣出门，消失在冬日的阳光里，再也没有回来.&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;微博的缺点有很多很多，比如娱乐新闻太多、营销号太多、水军太多、饭圈太多……其实这些缺点都不是“最后一根稻草”，但它们却真的让我在离开微博后不曾感到一丝后悔. 离开微博后，我短暂地玩了半年推特，搭了这个博客，又玩了一年豆瓣. 玩豆瓣的时候，我终于体会到了在微博看似彻底的互联网下，它到底少了点什么.&lt;/p&gt;
 &lt;p&gt;豆瓣我是 2016 年注册的，但主要是用来标记书影音，一直都是单机版. 离开微博后我在豆瓣上试着发了些广播，也参与到和其他人广播的互动当中. 我对豆瓣最深刻的印象便是，我与他人的互动总是能收到礼貌的回应. 我有一次在一个[去博物馆拒绝使用美团预约的维权广播]下面详细写了一些维权的建议，那一天我获得了两个关注，而且一看就是真实的豆瓣用户，不是机器人，不是僵尸号. 我玩微博 6 年，这 6 年在微博上我一共也只和两个完全不认识的微博网友互相关注了. 我偶尔在微博某个评论区能看到一个有趣的灵魂，但只要 ta 不是粉丝非常多的大 V，我都不敢贸然关注 ta，怕打扰到人家. 这个时候我开始思考起豆瓣和微博的差异. 微博看似的开放是真的开放么？微博的“互联网”是真正的互联网么？&lt;/p&gt;
 &lt;p&gt;回想我的微博经历，我自己的原创微博几乎只能得到和我互相关注的人的互动——除非我对热点事件进行评论，或者直接带上标签，这样搜索热点或标签的人可能会看到我的微博，其中有很少一部分人会与我互动. 我又是如何与其他陌生网友互动的呢？两个途径：一是通过搜索关键词或热搜，二是到我关注的头部用户（如名人、新闻媒体帐号）的评论区参与评论互动. 但那些生活中的小事、完全不热点的评论、很随机的思考，则完完全全得不到陌生网友的互动. 一来除了关注我的人别人根本就看不到；二来微博有一种氛围，就是自我封闭. 在微博有一种约定俗成，评论区是博主自己的“地盘”，博主不喜欢的评论可以随意删掉. 很多博主也不喜欢得到陌生人的评论，好像这很不礼貌. 如果你真的想发表意见，安全的做法是转评，或者是截图后发表意见，反正不要让博主知道，人家也不想知道. ——这真的是互联网么？&lt;/p&gt;
@@ -608,7 +618,8 @@ target='_blank' rel='noreferrer noopener'
 &lt;p&gt;我高中时确实写作文对自己要求比较高，但我一直以为我追求的是完美的形式. 其实我从很小的时候，就对完美的形式非常欣赏. 我喜欢那些结构精巧的古诗，我喜欢藏头诗，我喜欢回文诗，我喜欢骈文. 我还经常自己写一些藏头诗、回文诗等，这种文字的游戏给了我巨大的快感，我还记得刚上高中时有一次语文老师留了一篇周记，我最后就写了一首回文诗，正反是两件事，错落有致，虽然有点瑕疵，但我非常满意. 这首诗还在我的 QQ 空间里挂着，等以后有机会搬运到这个博客站上来. 对形式的追求也让我喜欢短小有趣的小说，比如欧·亨利的小说就是我最欣赏的. 我在高三的时候有一阵子就沉迷于小说的创作，有一篇挂在新浪博客上，以后有机会也往这里搬运一下.&lt;/p&gt;
 &lt;p&gt;我最喜欢辛弃疾的《丑奴儿·书博山道中壁》，觉得它形式也好，主题也深刻：&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;少年不识愁滋味，爱上层楼. 爱上层楼，为赋新词强说愁. 而今识尽愁滋味，欲说还休. 欲说还休，却道天凉好个秋.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;少年不识愁滋味，爱上层楼. 爱上层楼，为赋新词强说愁. 而今识尽愁滋味，欲说还休. 欲说还休，却道天凉好个秋.&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;我喜欢《滕王阁序》，我喜欢《阿房宫赋》，在很长的一段时间里，我都觉得只有形式好且内容好的文字才是好的文字，[只有内容没有形式的文字]是和[只有形式没有内容的文字]一样糟糕的，我把形式和内容看得同等重要，并不觉得内容就天然比形式更高端，更值得追求. 直到我高二学习了古文运动.&lt;/p&gt;
 &lt;p&gt;人类历史的长河中什么没有发生过呢？对形式的追求也不是我独一无二的个性，六朝以来的文人们就尤其讲究排偶、辞藻、音律、典故，骈文在南北朝极其盛行. 但对形式的追求导致出现了很多只注重形式的空洞的文章，韩愈等人的批评在一定程度上动摇了我的观念，也许内容就是比形式天然更加高级，如果两者不可兼得，那么首先要放弃的应该是形式，而不是形式或内容随便哪一个. 后来对八股文的批判也都是差不多同样的原因. 从那个时候开始，我其实在努力地转变自己了，我变得没有那么注重形式了，虽然我依然对形式好的文字天然有一种好感，但我觉得自己已经和形式说再见了. 我把曾经注重形式的自己贴了标签叫做形式主义，这正是在语文老师看来我完美主义的一部分.&lt;/p&gt;
 &lt;h1&gt;有些完美主义是装逼&lt;/h1&gt;
@@ -659,11 +670,14 @@ target='_blank' rel='noreferrer noopener'
 &gt;问题&lt;b&gt;&lt;sub&gt;⧉&lt;/sub&gt;&lt;/b&gt;&lt;/a&gt;：Arch Linux 的用户都有理想主义（完美主义）倾向吗？&lt;/p&gt;
 &lt;p&gt;下面几位 Arch Linux 使用者的回答很能说明问题：&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;与题主的感觉恰恰相反，Arch完全不是&amp;quot;理想主义&amp;quot;，更多的是&amp;quot;实用主义&amp;quot;&amp;hellip;对于大多数Arch用户来说，用Arch不是“理想主义”，而仅仅是图个方便.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;与题主的感觉恰恰相反，Arch完全不是&amp;quot;理想主义&amp;quot;，更多的是&amp;quot;实用主义&amp;quot;&amp;hellip;对于大多数Arch用户来说，用Arch不是“理想主义”，而仅仅是图个方便.&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;blockquote&gt;
-&lt;p&gt;在可定制性这一点上, 没有哪个发行版是可值得炫耀或者批判的, 大家都是一样的定制性. 只不过要在&amp;quot;定制是否方便&amp;quot;和&amp;quot;日常使用是否方便&amp;quot;之间做一个tradeoff.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;在可定制性这一点上, 没有哪个发行版是可值得炫耀或者批判的, 大家都是一样的定制性. 只不过要在&amp;quot;定制是否方便&amp;quot;和&amp;quot;日常使用是否方便&amp;quot;之间做一个tradeoff.&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;blockquote&gt;
-&lt;p&gt;取决于怎么定义“实用”&amp;hellip;Arch Linux 的仓库中包含大量的软件包和编译脚本. 用户可以按照需要进行自由选择. 仓库中既提供了开源、自由的软件，也提供了闭源软件. 实用性大于意识形态.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;取决于怎么定义“实用”&amp;hellip;Arch Linux 的仓库中包含大量的软件包和编译脚本. 用户可以按照需要进行自由选择. 仓库中既提供了开源、自由的软件，也提供了闭源软件. 实用性大于意识形态.&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;可见，其实对于大多数所谓“完美主义”者来说，完美主义才是常态，每个人都应该是完美主义，你不是完美主义我才觉得奇怪呢？嘿，你怎么妥协啦？&lt;/p&gt;
 &lt;div class="footnotes" role="doc-endnotes"&gt;
 &lt;hr&gt;
@@ -912,10 +926,12 @@ target='_blank' rel='noreferrer noopener'
 target='_blank' rel='noreferrer noopener'
 &gt;这篇帖子&lt;b&gt;&lt;sub&gt;⧉&lt;/sub&gt;&lt;/b&gt;&lt;/a&gt;中，是在 1 月 30 日 10:17.&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;其中一个“谣言者”李文亮的……&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;其中一个“谣言者”李文亮的……&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;关于 8 个人都是医生的说法，最早好像是 1 月 29 日 20:16，博主 @凌晨刚醒 说：&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;武汉所谓造谣的 8 个人分别属于三个群：武汉大学临床医学04级群，武汉协和医院红会神经内科群，肿瘤中心群.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;武汉所谓造谣的 8 个人分别属于三个群：武汉大学临床医学04级群，武汉协和医院红会神经内科群，肿瘤中心群.&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;这句话还没找到来源，这 8 个人的身份我认为还不能盲目下结论（截至 2020 年 2 月 7 日）.&lt;/p&gt;
 &lt;p&gt;如果我来为李文亮医生的去世而引发的愤怒提出诉求，那么至少警方不能随便监控聊天记录；对谣言的判定与处罚必须等到有确凿证据之后才能做出，这点必须尊重科学而不是尊重维稳的意愿；被怀疑是造谣者的人应该有权力对自己发出的信息进行辩护；判定为谣言并进行惩罚这件事应该有专人来做并承担责任；人们应该有自由表达而不被删除的权力；政府官员应由人民选举产生.&lt;/p&gt;
 &lt;div style='background-color:#FDE763;'&gt;
