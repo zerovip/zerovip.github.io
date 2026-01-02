@@ -3,7 +3,7 @@
 近期内容 |
 数学科普
 | 赤赤的象牙塔</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>
-Wed, 06 Jan 2021 00:00:00 CST</lastBuildDate><item><title>代数无理数的小数展开 - 21 世纪的定理</title><link>https://zerovip.github.io/zh/47093/</link><pubDate>Sun, 14 Jul 2019 00:00:00 CST</pubDate><guid isPermaLink="false">/zh/47093/</guid><description>&lt;p&gt;今天介绍的是第 7.2 节，有关代数无理数小数展开的一个定理.&lt;/p&gt;
+Sun, 14 Jul 2019 00:00:00 CST</lastBuildDate><item><title>代数无理数的小数展开 - 21 世纪的定理</title><link>https://zerovip.github.io/zh/47093/</link><pubDate>Sun, 14 Jul 2019 00:00:00 CST</pubDate><guid isPermaLink="false">/zh/47093/</guid><description>&lt;p&gt;今天介绍的是第 7.2 节，有关代数无理数小数展开的一个定理.&lt;/p&gt;
 &lt;h1 id="前置知识"&gt;前置知识&lt;/h1&gt;
 &lt;p&gt;了解极限语言的含义. 测试题：下面这个式子是什么意思？ &lt;span
 class="math display"&gt;\[\lim_{n\to\infty}\frac{2n^2-n+1}{n^2+n-2}=2\]&lt;/span&gt;.&lt;/p&gt;

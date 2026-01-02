@@ -1,0 +1,443 @@
+<!DOCTYPE html><html lang="zh" class="theme-container"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant="" defer=""></script>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=divice-width, initial-scale=1.0"/>
+    
+    
+
+    <meta name="generator" content="Hugo 0.153.3"/>
+    <title>
+        
+    超立方体的导出子图与敏感度猜想
+ | 赤赤的象牙塔
+    </title>
+
+    
+    
+    
+    
+    
+    <link rel="stylesheet" type="text/css" href="../../css/base.min.77b5736a81ec178b46cb581d1318f5aee784504170c67bf68d9e3c729b7fff42.css"/>
+    <link rel="stylesheet" media="screen and (max-width: 1200px)" type="text/css" href="../../css/small.min.3b39abcf5074cbb0bd712da27c43d1c5f11a85f597da9f07a0d600e53eec7d24.css"/>
+    <link rel="stylesheet" media="screen and (min-width: 1201px)" type="text/css" href="../../css/normal.min.ac1ee5c0e20afb15107d14583eece7d76c7fb36009c07be3f3447c299209ca53.css"/>
+
+    
+    
+    <link rel="stylesheet" type="text/css" href="../../css/syntax.min.ed5b37c3a50997d5ccd8b81bf0d00a7ac1f92c82985623c2dbf0cb422596726a.css"/>
+
+    
+    
+    
+    <script src="../../js/ctheme.min.23d42d00e692299bcf2b5832c28a8a1582346c7c45d8bc4f70280fcdbf146872.js"></script>
+
+    
+    
+        
+        
+        <link rel="stylesheet" type="text/css" href="../../katex/katex.min.6950e59dbd8dfddd111390d85888bb5f9dc2e9c334da7ac1c3bacc92a695610d.css"/>
+        
+        <script defer="" src="../../katex/katex.min.bd704146a03c55a5da1f8102758780699387d04417f561331cfcd493285a1362.js"></script>
+
+        
+        
+        <script defer="" src="../../katex/auto-render.min.80b946175571596ef70004225dd69d90876a5b752289cd856d01fa0e20376015.js" onload="renderMathInElement(document.body);"></script>
+
+        
+        
+        <link rel="stylesheet" type="text/css" href="../../katex/copy-tex.min.cf8e3e934d92a839d209ffdac331fa693da5958a6dff2c8788a4713cc1f50a47.css"/>
+        
+        <script defer="" src="../../katex/copy-tex.min.7cd0ec07ddc81c9967c4a04b21a5d8ae6fbc662f4a3fbdb375434c62312539f9.js"></script>
+    
+
+    
+    
+</head>
+
+<body>
+
+<nav class="bar_for_phone">
+    <div class="bar_left_button">
+        <div class="left_button_for_bar" onclick="ChangeClassLeft()">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+    </div>
+    <div class="bar_search-box" onclick="startSearch(&#34;right&#34;)">
+        
+        
+        <div class="magnifying-glass"></div>
+    </div>
+    <div class="bar_title">
+        <a href="../../zh/">赤赤的象牙塔</a>
+    </div>
+    <div class="bar_right_button">
+        
+    <button class="toc_title_for_bar" onclick="ChangeClassTOC()">目录</button>
+
+    </div>
+</nav>
+
+
+<div class="body_for_pc">
+    
+    <aside class="left" id="left">
+        
+        <div class="left_non-footer" id="left_non-footer">
+            
+            <div class="left_non-footer_option">
+                
+                <div class="left_non-footer_option_search-icon" onclick="startSearch(&#34;left_non-footer&#34;)">
+                    
+                    
+                    <div class="magnifying-glass"></div>
+                </div>
+
+                
+                <div role="checkbox" aria-checked="true" class="left_non-footer_option_theme-switch">
+                    <label class="switch">
+                        <input type="checkbox" class="theme-switcher" onchange="themeSwitch()"/>
+                        
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+
+                
+                <ul role="listbox" class="left_non-footer_option_language">
+                    
+                    
+                    
+                    
+                    
+                        
+                            <li role="option" aria-selected="true" class="left_non-footer_option_active">
+                                简体中文 ⦿ 
+                            </li>
+                        
+                    
+                        
+                            
+                                <li role="option" class="left_non-footer_option_non-active">
+                                    English ⨂ 
+                                </li>
+                            
+                        
+                    
+                        
+                            
+                                <li role="option" class="left_non-footer_option_non-active">
+                                    Français ⨂ 
+                                </li>
+                            
+                        
+                    
+                </ul>
+
+                
+                <div class="left_non-footer_option_rss">
+                    
+                        <div class="left_non-footer_option_non-active">
+                            RSS 订阅 ⊠ 
+                        </div>
+                    
+                </div>
+            </div>
+                
+            
+            <header class="left_non-footer_head">
+                <div class="left_non-footer_head_title">
+                    <a href="../../zh/">
+                        赤赤的象牙塔
+                    </a>
+                </div>
+                <div class="left_non-footer_head_subtitle">(●’◡’●)ﾉ</div>
+            </header>
+
+            
+            
+            <nav class="left_non-footer_main">
+                
+                 
+                    
+                    
+                        
+                    
+                    <div data-pagefind-filter="1st-section" class="h1 active">
+                        <a href="../../zh/math/">数学</a>
+                    </div>
+                    
+                        
+                            
+                                
+                                
+                                <div class="h2 ">
+                                    <a href="../../zh/math/notes/">数学笔记 </a>
+                                </div>
+                            
+                        
+                            
+                                
+                                
+                                    
+                                
+                                <div data-pagefind-filter="2nd-section" class="h2 active">
+                                    <a href="../../zh/math/stories/">数学科普 </a>
+                                </div>
+                            
+                        
+                    
+                 
+                    
+                    
+                    <div class="h1 ">
+                        <a href="../../zh/non-math/">非数学</a>
+                    </div>
+                    
+                        
+                            
+                                
+                                
+                                <div class="h2 ">
+                                    <a href="../../zh/non-math/journal/">日志 </a>
+                                </div>
+                            
+                        
+                            
+                                
+                                
+                                <div class="h2 ">
+                                    <a href="../../zh/non-math/literature/">写作 </a>
+                                </div>
+                            
+                        
+                            
+                                
+                                
+                                <div class="h2 ">
+                                    <a href="../../zh/non-math/memos/">备忘 </a>
+                                </div>
+                            
+                        
+                    
+                 
+                    
+                    
+                    <div class="h1 ">
+                        <a href="../../zh/record/">记录</a>
+                    </div>
+                    
+                        
+                            
+                                
+                                
+                                <div class="h2 ">
+                                    <a href="../../zh/record/book/">读过的书 </a>
+                                </div>
+                            
+                        
+                            
+                                
+                                
+                                <div class="h2 ">
+                                    <a href="../../zh/record/film/">看过的电影 </a>
+                                </div>
+                            
+                        
+                    
+                 
+                    
+                    
+                    <div class="h1 ">
+                        <a href="../../zh/about/">关于</a>
+                    </div>
+                    
+                        
+                            
+                                
+                                
+                                <div class="h2 ">
+                                    <a href="../../zh/about/me/">关于我 </a>
+                                </div>
+                            
+                        
+                            
+                                
+                                
+                                <div class="h2 ">
+                                    <a href="../../zh/about/site/">关于本站 </a>
+                                </div>
+                            
+                        
+                    
+                
+            </nav>
+        </div>
+
+        
+        <footer class="left_footer">
+            <div class="copyright">©2019-2026 版权所有.</div>
+        </footer>
+    </aside>
+
+    
+    <div data-pagefind-body="" class="right" id="right" onclick="HideBothSide()">
+        
+    <header class="right_head">
+        <div data-pagefind-meta="title" class="right_head_title">超立方体的导出子图与敏感度猜想</div>
+        <div data-pagefind-ignore="" class="right_head_des">
+            <span data-pagefind-meta="date">2021年1月6日</span> - 1220 字
+        </div>
+    </header>
+
+        
+    <div class="right_main">
+        <article class="right_main_article">
+            
+            <p>突然想学习并介绍这个定理，起源是 2019 年 7 月 27
+日看到别人转发的公众号“机器之心”的一篇文章<a href="https://mp.weixin.qq.com/s/D0iIcsaZUnpStpM8JG1_Kw">七年思考，两页证明，华人学者解开计算机领域30年难题：布尔函数敏感度猜想</a>；2019
+年 7 月 28 日又读到另一个转发的公众号“量子位”的文章<a href="https://mp.weixin.qq.com/s/cdc8lyss226jnruQii6Zkw">只用2页纸，北大数学校友攻破计算机30年难题！过程浅显直白，看懂仅需线性代数基础</a>，这个标题更给了我足够的信心.
+把论文找来看了一下，收获非常大，非常真切地感受到了数学的研究是如何做的：像这篇文章，它里面包含了大量的前人的研究结论，像图论与理论计算机理论的联系就是前人完成的；另外这篇文章要用到很多数学领域的知识，里面有组合（图论）、有代数（Cauchy
+交错定理）、有分析（图论与计算机理论的联系的证明用到了 Fourier
+分析）；而且这篇文章还非常短，一共只有 5
+页，非常适合快速学习掌握；它还有一个重大的意义就是它解决了一个将近 30
+年的开放问题，证实了一个重要的猜想.</p>
+<!-- 我只用不到一小时就把文章的整体思路梳理明白了，主要定理的证明也很快就看完了；我又找到里面引用的前人结论，看了几个，终于觉得算是对这个问题有了点理解. 于是尽量罗嗦地写下来，希望给其他读者一个数学研究的直观的样子——前提是从头到尾认真跟着学完. -->
+<h1 id="前置知识">前置知识</h1>
+<h1 id="定义与准备">定义与准备</h1>
+<h2 id="图论相关">图论相关</h2>
+<h3 id="图">图</h3>
+<p>一个<strong>图（graph）</strong> <span class="math inline">\(G\)</span> 是指一个<strong>对（pair）</strong>
+<span class="math inline">\(G=(V, E)\)</span>. 其中 <span class="math inline">\(V\)</span> 和 <span class="math inline">\(E\)</span> 是两个集合.
+前者是<strong>顶点集</strong>，里面的元素称为<strong>图</strong>的<strong>顶点（vertex）</strong>；后者是<strong>边集</strong>，里面的元素都是[<strong>顶点集</strong>中的两个元素组成的<strong>对</strong>]，称为<strong>图</strong>的<strong>边（edge）</strong>.</p>
+<p>举例：</p>
+<figure>
+<img src="square.i.png" alt="正方形的图 A"/>
+<figcaption aria-hidden="true">正方形的图 <span class="math inline">\(A\)</span></figcaption>
+</figure>
+<p>一个正方形图 <span class="math inline">\(A=(V_A, E_A)\)</span>，其中
+<span class="math inline">\(V_A=\left\{ A_{00}, A_{10}, A_{11},
+A_{01}\right\}\)</span> 为图 <span class="math inline">\(A\)</span>
+的顶点集，<span class="math inline">\(E_A=\left\{ A_{00}A_{10},
+A_{10}A_{11}, A_{11}A_{01}, A_{01}A_{00}\right\}\)</span> 为图 <span class="math inline">\(A\)</span> 的边集.</p>
+<p>同理，一个立方体图 <span class="math inline">\(B=(V_B,
+E_B)\)</span>，其中 <span class="math inline">\(V_B\)</span> 是图 <span class="math inline">\(B\)</span> 的顶点集，这个集合中有 <span class="math inline">\(8\)</span> 个元素；而 <span class="math inline">\(E_B\)</span> 是图 <span class="math inline">\(B\)</span> 的边集，这个集合中有 <span class="math inline">\(12\)</span> 个元素.</p>
+<figure>
+<img src="cube.i.png" alt="立方体的图 B"/>
+<figcaption aria-hidden="true">立方体的图 <span class="math inline">\(B\)</span></figcaption>
+</figure>
+<h3 id="顶点的度">顶点的度</h3>
+<p>给定一张图 <span class="math inline">\(G=(V,
+E)\)</span>，对于它的任何一个顶点 <span class="math inline">\(v\in
+V\)</span>，我们数一数这个顶点连着几条边. 得到的数量称为这个顶点 <span class="math inline">\(v\)</span> 的<strong>度（degree）</strong>，记作
+<span class="math inline">\(\deg(v)\)</span>. 例如，<span class="math inline">\(\deg(A_{00})=2\)</span>，<span class="math inline">\(\deg(B_{ijk})=3, \forall i,j,k\in\left\{
+0,1\right\}\)</span>.</p>
+<h3 id="图的最大度">图的最大度</h3>
+<p>给定一张图 <span class="math inline">\(G=(V,
+E)\)</span>，则这张图中所有顶点的度的最大值称为图 <span class="math inline">\(G\)</span> 的<strong>最大度（maximum
+degree）</strong>，记为 <span class="math inline">\(\Delta(G)\)</span>.
+即，<span class="math inline">\(\Delta(G)=\max_{v\in V}\deg(v)\)</span>.
+例如，<span class="math inline">\(\Delta(A)=2\)</span>，<span class="math inline">\(\Delta(B)=3\)</span>.</p>
+<h3 id="导出子图">导出子图</h3>
+<p>给定一张图 <span class="math inline">\(G=(V, E)\)</span>，<span class="math inline">\(S\subset V\)</span> 是图 <span class="math inline">\(G\)</span> 顶点集 <span class="math inline">\(V\)</span> 的一个子集. 于是，以 <span class="math inline">\(S\)</span> 为顶点集，以[两端点都在 <span class="math inline">\(S\)</span> 中所有 <span class="math inline">\(E\)</span> 中的边]的集合为边集，得到一个子图，称为
+<span class="math inline">\(G\)</span> 的由 <span class="math inline">\(S\)</span> 诱导的导出子图，记为 <span class="math inline">\(G[S]\)</span>. 如果顶点集 <span class="math inline">\(V\)</span> 的子集 <span class="math inline">\(S\)</span> 已经给定，那么导出子图是唯一确定的.</p>
+<p>例如，在图 <span class="math inline">\(A\)</span> 中，如果给定 <span class="math inline">\(V_A\)</span> 的子集 <span class="math inline">\(S_A=\left\{ A_{00}, A_{10},
+A_{11}\right\}\)</span>，则导出子图为 <span class="math inline">\(A[S_A]=(S_A, \{A_{00}A_{10},
+A_{10}A_{11}\})\)</span>；如果给定 <span class="math inline">\(V_A\)</span> 的子集 <span class="math inline">\(T_A=\left\{ A_{00},
+A_{11}\right\}\)</span>，那么它的导出子图的边集就是空集，即 <span class="math inline">\(A[T_A]=(T_A, \{\})\)</span>.</p>
+<p>类似地，图 <span class="math inline">\(B\)</span>
+也有这样的两个导出子图（所有红色的点和红色的边分别作为顶点集和边集的红色导出子图，以及所有蓝色的点和蓝色的边分别作为顶点集和边集的蓝色导出子图.
+这里蓝色导出子图的边集是空集.）：</p>
+<figure>
+<img src="subgraph_of_cube.i.png" alt="立方体的图 B 的两个导出子图"/>
+<figcaption aria-hidden="true">立方体的图 <span class="math inline">\(B\)</span> 的两个导出子图</figcaption>
+</figure>
+<h2 id="敏感度相关">敏感度相关</h2>
+<h3 id="布尔函数">布尔函数</h3>
+<h1 id="思路">思路</h1>
+<h1 id="主要定理的证明">主要定理的证明</h1>
+<h1 id="section"></h1>
+<h1 id="附录">附录</h1>
+
+            
+            
+            
+            
+            
+            
+            <p></p><p></p><p></p><p></p>
+        </article>
+        
+        
+        
+        
+
+    
+
+    
+
+    
+
+        
+
+    
+
+
+
+    </div>
+    
+
+    </div>
+
+    
+    
+    
+        <aside data-pagefind-ignore="" class="toc" id="toc">
+            <button class="toc_title">目录</button>
+            <div class="toc_content">
+                
+            </div>
+        </aside>
+    
+
+</div>
+
+
+<template id="search-zone-template">
+    
+    <div class="" id="search-zone">
+        
+        <div class="search_bar">
+            
+            <input type="search" id="search-input-box" class="search_bar_search-box" placeholder="搜索……" autocomplete="off"/>
+
+            
+            <div class="search_bar_close-sign" onclick="closeSearch(this)">
+                
+                <div class="close-sign"></div>
+            </div>
+        </div>
+
+        
+        <div class="search_results"></div>
+    </div>
+</template>
+
+
+<template id="search-result">
+    <div class="search_results_item">
+        <div class="search_results_item_title"></div>
+        <div class="search_results_item_content"></div>
+        <div class="search_results_item_tags">
+            <div class="search_results_item_tags_date"></div>
+            <div class="search_results_item_tags_sections"></div>
+        </div>
+    </div>
+</template>
+
+
+
+
+<script src="../../js/main.07644855453ea3563fc25b36d91f32b4aa952cd60ebafb6fad77cf9c74baea47.js"></script>
+
+
+
+</body></html>
