@@ -51,7 +51,7 @@ target='_blank' rel='noreferrer noopener'
 &lt;h1&gt;技术&lt;/h1&gt;
 &lt;p&gt;本站为静态博客，由 Hugo 生成，部署在 GitHub Pages 上. 有关建站的技术细节请参考我的文章：&lt;a href='https://zerovip.github.io/zh/18284'
 &gt;建站记&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;本站特意把一切资源（网站样式、文章、评论、图床）都托管在 GitHub 上，且不另设域名，为的是方便统一管理，不用对不同的组件操不同的心. 为了照顾 GitHub 有时被中国大陆地区的防火墙限制的情况发生，又单独部署了一份在 Netlify 和 Vercel 上，但其中的评论与图床依旧是 GitHub 上的——所以无论如何，访问本站的体验都与访问 GitHub 的体验息息相关，而访问 Github 体验的问题还需要读者自行解决.&lt;/p&gt;</description></item><item><title>关于我</title><link>https://zerovip.github.io/zh/about/me/</link><pubDate>Sat, 01 Jan 2000 00:00:00 CST</pubDate><guid isPermaLink="false">/zh/about/me/</guid><description>&lt;p&gt;通过邮件联系我：&lt;span style='background-color:#FDE763;'&gt;zer0zero-blog [AT] yahoo [DOT] com&lt;/span&gt; 或 &lt;span style='background-color:#FDE763;'&gt;zer0zero [AT] sina [DOT] cn&lt;/span&gt;. 如需要给我发送加密邮件：&lt;/p&gt;
+&lt;p&gt;本站特意把一切资源（网站样式、文章、评论、图床）都托管在 GitHub 上，且不另设域名，为的是方便统一管理，不用对不同的组件操不同的心. 为了照顾 GitHub 有时被中国大陆地区的防火墙限制的情况发生，又单独部署了一份在 Netlify 和 Vercel 上，但其中的评论与图床依旧是 GitHub 上的——所以无论如何，访问本站的体验都与访问 GitHub 的体验息息相关，而访问 Github 体验的问题还需要读者自行解决.&lt;/p&gt;</description></item><item><title>关于我</title><link>https://zerovip.github.io/zh/about/me/</link><pubDate>Sat, 01 Jan 2000 00:00:00 CST</pubDate><guid isPermaLink="false">/zh/about/me/</guid><description>&lt;p&gt;通过邮件联系我：&lt;span style='background-color:#FDE763;'&gt;zer0zero-blog [AT] yahoo [DOT] com&lt;/span&gt;. 如需要给我发送加密邮件：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;uid: &lt;code&gt;A551B8F6A13D8A90&lt;/code&gt; (zer0zero &amp;lt;zer0zero@yahoo.com&amp;gt;)；&lt;/li&gt;
 &lt;li&gt;fingerprint: &lt;code&gt;AD3F 2207 E311 7C13 155D 40D1 A551 B8F6 A13D 8A90&lt;/code&gt;；&lt;/li&gt;
